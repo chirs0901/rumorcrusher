@@ -55,9 +55,95 @@
   agent_notes: ""
 ```
 
-## 四、本日新增方法论（自动追加区）
+## 四、Benchmark-Driven QA 评估框架（自我评估）
+
+> 借鉴 AVeriTeC（学界标杆）+ RealFactBench（LLM 实战 + 不确定性）+ MultiCW（多语言筛查）+ TSVer（时序声明）的方法论组合。每日运行后，对自己的判定进行打分，追踪能力进化曲线。
+
+### 4.1 采用 AVeriTeC 的 4 级官方标签（替代原 pass/warn/fail 三档的简化）
+
+每个 claim 必须用以下四个之一：
+
+| 标签 | 含义 | 触发场景 |
+|---|---|---|
+| **Supported** | 有充分证据支持 | 至少 2 个独立可信信源（或 1 个官方源 + 1 个第三方）确认；数据可在权威源（GSMArena、官方）查到 |
+| **Refuted** | 有证据反驳 | 找到反例、物理违和、原始信源被歪曲 |
+| **Not Enough Evidence** | 证据不足 | 单一弱信源、未被验证、无法在 24 小时内交叉确认 |
+| **Conflicting Evidence (Cherry-picking)** | 证据冲突或选择性引用 | 不同信源给出矛盾结论；或厂商引用最有利数据而忽略不利数据 |
+
+→ 在 `synthesis.json` 中新增字段 `averitec_label`
+
+### 4.2 借用 RealFactBench 的 Unknown Rate（UnR）—— 允许"我不知道"
+
+**不要强行 pass/fail**。当出现以下任一情况，主动给 `verdict: unknown`：
+- 信源单一且无法在 24 小时内交叉验证
+- 涉及内部测试数据（如厂商"实验室数据"），但无法获取测试方法
+- 时间窗超出（如 2028 年的预测）
+
+**每日跟踪 UnR**：当日 Unknown 数 / 总条数 = UnR
+- **健康区间：5%~25%**
+- UnR < 5%：可能"过度自信"，对模糊数据强行判断 → 警示
+- UnR > 25%：可能"过度保守"，缺少深度核查 → 警示
+
+### 4.3 借用 MultiCW 的"check-worthiness 上游筛查"
+
+**采集后、深度核查前，先对每条素材打 check-worthiness 分（0-1）**：
+
+| 分数 | 处理方式 |
+|---|---|
+| **≥ 0.7** | 高争议/高影响 → 全流程多 Agent 核查（包括视频源转录） |
+| **0.4 ~ 0.7** | 中等 → 标准多 Agent 核查 |
+| **0.2 ~ 0.4** | 偏低 → 只跑 fact-check + sentiment 两个 Agent（节省预算） |
+| **< 0.2** | 太低（如纯定价公告） → 只标记不深查，作为"背景信息"列在干净报告 |
+
+**check-worthiness 高分的特征**：
+- 涉及性能数据/对比/排名
+- 涉及"全球首发"、"突破性"、"颠覆"等绝对化用词
+- 涉及尚未发布的产品（爆料/泄露）
+- 涉及社会争议（涨价、隐私、安全）
+
+### 4.4 借用 TSVer 的时间序列声明核查
+
+凡是声明里出现 **"同比"、"环比"、"提升 X%"、"突破 Y"** 这类数值时序对比，自动触发：
+1. 锚定**对比基准时间点**（去年同月？上代旗舰？哪个 Benchmark？）
+2. 锚定**测量方法**（GeekBench？AnTuTu？哪个版本？同温度同电量？）
+3. 任一锚定无法回填 → 标记为 `Cherry-picking` 或 `Not Enough Evidence`
+
+### 4.5 借用 RealFactBench 的 4 维评分（解释质量）
+
+每个 verdict 不只是标签，还要给一个简短的 **explanation_quality** 自评（1-5）：
+- 1：仅一个标签，无理由
+- 2：一句话理由
+- 3：有理由 + 一个证据链接
+- 4：有理由 + 多证据 + 反方证据
+- 5：有理由 + 多证据 + 反方证据 + 物理/工程常识对照
+
+→ 每日均值 < 3 视为质量回退，触发方法论补强
+
+### 4.6 每日自评卡（写入 `YYYY-MM-DD/06-self-eval.md`）
+
+每日运行完，输出一份简短自评，6 个指标，方便趋势追踪：
+
+```yaml
+date: 2026-05-15
+total_items: N
+averitec_distribution:
+  supported: N1
+  refuted: N2
+  not_enough_evidence: N3
+  conflicting: N4
+unknown_rate: 0.XX        # 健康区间 0.05~0.25
+avg_explanation_quality: X.X   # 目标 >= 3.5
+check_worthiness_high_pct: 0.XX  # 高争议素材占比
+time_series_claims_caught: N    # 时序声明触发数
+methodology_delta_count: N      # 本日新沉淀方法论数
+```
+
+每周写一篇 `wiki/topics/qa-trend-week-N.md` 复盘 7 日 UnR、解释质量、AVeriTeC 标签分布的趋势。
+
+## 五、本日新增方法论（自动追加区）
 
 <!-- 每次质检完成后，由 methodology-extractor Agent 在此区追加 -->
 
 ### 2026-05-14
-- （首日初始化）
+- 首日初始化
+- 引入 Benchmark-Driven QA 框架（AVeriTeC 4级标签 + RealFactBench UnR + MultiCW check-worthiness + TSVer 时序）
