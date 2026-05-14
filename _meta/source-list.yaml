@@ -1,0 +1,334 @@
+# RumorCrusher 信源清单
+# 最近更新：2026-05-14
+# 字段说明：
+#   priority: 1-5, 5为最高（每日必查）
+#   credibility_baseline: 初始可信度（0.0-1.0），后续由质检流水线动态调整
+#   tags: 用于Agent分类与去重
+#   notes: 特殊说明（历史问题/偏好/限制）
+
+sources:
+
+  # ────────────────────────────────
+  # 中文主流科技媒体
+  # ────────────────────────────────
+  - id: ithome
+    name: IT之家
+    url: https://www.ithome.com/
+    lang: zh-CN
+    priority: 5
+    credibility_baseline: 0.75
+    tags: [news, mobile, hardware]
+    notes: 速度快、覆盖全，但标题党倾向偏强，需重点核查
+
+  - id: ifanr
+    name: 爱范儿
+    url: https://www.ifanr.com/
+    lang: zh-CN
+    priority: 4
+    credibility_baseline: 0.80
+    tags: [news, mobile, lifestyle]
+
+  - id: sspai
+    name: 少数派
+    url: https://sspai.com/
+    lang: zh-CN
+    priority: 3
+    credibility_baseline: 0.85
+    tags: [review, lifestyle, software]
+    notes: 评测质量高，但偏软件/使用层面
+
+  - id: pingwest
+    name: 品玩 PingWest
+    url: https://www.pingwest.com/
+    lang: zh-CN
+    priority: 3
+    credibility_baseline: 0.78
+    tags: [news, industry]
+
+  - id: huxiu
+    name: 虎嗅
+    url: https://www.huxiu.com/
+    lang: zh-CN
+    priority: 3
+    credibility_baseline: 0.75
+    tags: [analysis, industry]
+
+  # ────────────────────────────────
+  # 中文 AI / 科技深度
+  # ────────────────────────────────
+  - id: jiqizhixin
+    name: 机器之心
+    url: https://www.jiqizhixin.com/
+    lang: zh-CN
+    priority: 4
+    credibility_baseline: 0.88
+    tags: [ai, research, deep]
+    notes: AI研究新闻准确度较高
+
+  - id: qbitai
+    name: 量子位
+    url: https://www.qbitai.com/
+    lang: zh-CN
+    priority: 4
+    credibility_baseline: 0.82
+    tags: [ai, research]
+
+  - id: 36kr
+    name: 36氪
+    url: https://www.36kr.com/
+    lang: zh-CN
+    priority: 4
+    credibility_baseline: 0.75
+    tags: [news, business, industry]
+
+  - id: xinzhiyuan
+    name: 新智元
+    url: https://www.aiera.com.cn/
+    lang: zh-CN
+    priority: 3
+    credibility_baseline: 0.72
+    tags: [ai, news]
+    notes: 部分标题偏煽动性，需注意核查
+
+  # ────────────────────────────────
+  # 英文科技媒体（手机/数码）
+  # ────────────────────────────────
+  - id: gsmarena
+    name: GSMArena
+    url: https://www.gsmarena.com/
+    lang: en
+    priority: 5
+    credibility_baseline: 0.92
+    tags: [mobile, spec, review]
+    notes: 参数权威源，事实核查时优先引用
+
+  - id: cnet
+    name: CNET
+    url: https://www.cnet.com/
+    lang: en
+    priority: 4
+    credibility_baseline: 0.85
+    tags: [news, review, consumer]
+
+  - id: techradar
+    name: TechRadar
+    url: https://www.techradar.com/
+    lang: en
+    priority: 4
+    credibility_baseline: 0.82
+    tags: [news, review, consumer]
+
+  - id: the-verge
+    name: The Verge
+    url: https://www.theverge.com/
+    lang: en
+    priority: 5
+    credibility_baseline: 0.88
+    tags: [news, review, opinion]
+
+  - id: ars-technica
+    name: Ars Technica
+    url: https://arstechnica.com/
+    lang: en
+    priority: 4
+    credibility_baseline: 0.92
+    tags: [deep, technical]
+    notes: 技术深度高、事实核查严
+
+  - id: anandtech
+    name: AnandTech (archived)
+    url: https://www.anandtech.com/
+    lang: en
+    priority: 3
+    credibility_baseline: 0.95
+    tags: [deep, technical, semi]
+    notes: 2024年起停止运营，仅作历史参考
+
+  - id: 9to5
+    name: 9to5Mac / 9to5Google
+    url: https://9to5mac.com/
+    lang: en
+    priority: 4
+    credibility_baseline: 0.80
+    tags: [apple, google, leaks]
+
+  - id: android-authority
+    name: Android Authority
+    url: https://www.androidauthority.com/
+    lang: en
+    priority: 3
+    credibility_baseline: 0.78
+    tags: [android, review]
+
+  # ────────────────────────────────
+  # 前沿科技/AI 媒体（宏观风向）
+  # ────────────────────────────────
+  - id: mit-tech-review
+    name: MIT Technology Review
+    url: https://www.technologyreview.com/
+    lang: en
+    priority: 4
+    credibility_baseline: 0.93
+    tags: [research, ai, frontier]
+    notes: 偏前沿研究而非纯手机，作为"宏观技术风向"信源
+
+  - id: techcrunch-ai
+    name: TechCrunch AI
+    url: https://techcrunch.com/category/artificial-intelligence/
+    lang: en
+    priority: 3
+    credibility_baseline: 0.80
+    tags: [ai, startup, news]
+
+  # ────────────────────────────────
+  # 学术 / 硬核技术源
+  # ────────────────────────────────
+  - id: arxiv-cs
+    name: arXiv (cs.AR/cs.AI)
+    url: https://arxiv.org/list/cs.AR/recent
+    lang: en
+    priority: 3
+    credibility_baseline: 0.90
+    tags: [academic, paper]
+    notes: arXiv是预印本，质量参差，需结合引用与作者
+
+  - id: semianalysis
+    name: SemiAnalysis
+    url: https://www.semianalysis.com/
+    lang: en
+    priority: 4
+    credibility_baseline: 0.92
+    tags: [semi, supply-chain, deep]
+
+  - id: ieee-spectrum
+    name: IEEE Spectrum
+    url: https://spectrum.ieee.org/
+    lang: en
+    priority: 3
+    credibility_baseline: 0.93
+    tags: [academic, engineering]
+
+  # ────────────────────────────────
+  # 官方一手信源
+  # ────────────────────────────────
+  - id: apple-newsroom
+    name: Apple Newsroom
+    url: https://www.apple.com/newsroom/
+    lang: en
+    priority: 5
+    credibility_baseline: 1.00
+    tags: [official, apple]
+
+  - id: samsung-newsroom
+    name: Samsung Newsroom
+    url: https://news.samsung.com/global/
+    lang: en
+    priority: 5
+    credibility_baseline: 1.00
+    tags: [official, samsung]
+
+  - id: xiaomi-mwc
+    name: 小米官方
+    url: https://www.mi.com/
+    lang: zh-CN
+    priority: 5
+    credibility_baseline: 1.00
+    tags: [official, xiaomi]
+
+  - id: huawei-news
+    name: 华为官方
+    url: https://consumer.huawei.com/cn/press/news/
+    lang: zh-CN
+    priority: 5
+    credibility_baseline: 1.00
+    tags: [official, huawei]
+
+  - id: google-blog
+    name: Google The Keyword
+    url: https://blog.google/
+    lang: en
+    priority: 4
+    credibility_baseline: 1.00
+    tags: [official, google]
+
+  - id: qualcomm-news
+    name: Qualcomm Newsroom
+    url: https://www.qualcomm.com/news
+    lang: en
+    priority: 4
+    credibility_baseline: 1.00
+    tags: [official, soc]
+
+  - id: mediatek-news
+    name: MediaTek Newsroom
+    url: https://www.mediatek.com/news
+    lang: en
+    priority: 4
+    credibility_baseline: 1.00
+    tags: [official, soc]
+
+  # ────────────────────────────────
+  # 视频内容（默认只读元信息，重点视频转录）
+  # ────────────────────────────────
+  - id: yt-mkbhd
+    name: Marques Brownlee (MKBHD)
+    url: https://www.youtube.com/@mkbhd
+    lang: en
+    priority: 4
+    credibility_baseline: 0.85
+    tags: [video, review, youtube]
+    extract: metadata_only_unless_flagged
+
+  - id: yt-dave2d
+    name: Dave2D
+    url: https://www.youtube.com/@Dave2D
+    lang: en
+    priority: 3
+    credibility_baseline: 0.82
+    tags: [video, review, youtube]
+    extract: metadata_only_unless_flagged
+
+  - id: yt-jerryrig
+    name: JerryRigEverything
+    url: https://www.youtube.com/@JerryRigEverything
+    lang: en
+    priority: 3
+    credibility_baseline: 0.88
+    tags: [video, durability, youtube]
+    extract: metadata_only_unless_flagged
+
+  - id: bili-geekerwan
+    name: 极客湾 Geekerwan
+    url: https://space.bilibili.com/5365740
+    lang: zh-CN
+    priority: 4
+    credibility_baseline: 0.90
+    tags: [video, soc, benchmark, bilibili]
+    extract: metadata_only_unless_flagged
+    notes: SoC实测权威，是事实核查的重要参照
+
+  - id: bili-xiaobaicepin
+    name: 小白测评
+    url: https://space.bilibili.com/3493080034772201
+    lang: zh-CN
+    priority: 3
+    credibility_baseline: 0.80
+    tags: [video, review, bilibili]
+    extract: metadata_only_unless_flagged
+
+# 黑名单（默认排除，引用时需特别标注）
+blacklist:
+  # 示例：
+  # - id: example-rumor-blog
+  #   name: 某频繁发软文的小站
+  #   reason: 过往多次软文/未标注广告
+  #   added: 2026-05-14
+  # 等用户后续投喂
+
+# 信源动态调整规则
+adjustment_rules:
+  - 每次质检发现该信源发布错误信息：credibility -0.05
+  - 该信源被其他源交叉验证为准确：credibility +0.02
+  - 连续30天无错误：自动 +0.05（上限0.98，官方源除外）
+  - credibility 跌破 0.4：自动加入观察名单
+  - credibility 跌破 0.2：建议人工审核是否加入黑名单

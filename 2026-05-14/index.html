@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RumorCrusher · 2026-05-14 · 手机硬件每日洞察</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+    .card { transition: transform .15s ease, box-shadow .15s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .badge-pass { background: #d1fae5; color: #065f46; }
+    .badge-warn { background: #fef3c7; color: #92400e; }
+    .badge-fail { background: #fee2e2; color: #991b1b; }
+    .badge-official { background: #dbeafe; color: #1e40af; }
+    .badge-leak { background: #ede9fe; color: #5b21b6; }
+    .graph-svg { background: #fafafa; border-radius: 12px; }
+    .source-dot { font-size: 0.75rem; opacity: 0.7; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+<!-- 顶部品牌区 -->
+<header class="bg-white border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+    <div>
+      <h1 class="text-2xl font-bold tracking-tight">
+        <span class="text-rose-600">Rumor</span><span class="text-slate-900">Crusher</span>
+      </h1>
+      <p class="text-sm text-slate-500 mt-1">粉碎谣言，侦测事实真伪 · 手机硬件 &amp; 智能硬件每日洞察</p>
+    </div>
+    <div class="text-right text-sm text-slate-500">
+      <div>2026-05-14（北京时间 22:10）</div>
+      <a href="../index.html" class="text-rose-600 hover:underline">← 历史归档</a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-8 space-y-8">
+
+  <!-- 摘要卡片区 -->
+  <section class="grid grid-cols-2 md:grid-cols-5 gap-4">
+    <div class="card bg-white rounded-xl p-5 shadow-sm">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">总采集</div>
+      <div class="text-3xl font-bold text-slate-900 mt-1">20</div>
+      <div class="text-xs text-slate-500 mt-1">条素材</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm border-l-4 border-emerald-500">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">通过 Pass</div>
+      <div class="text-3xl font-bold text-emerald-600 mt-1">9</div>
+      <div class="text-xs text-slate-500 mt-1">直接进干净报告</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm border-l-4 border-amber-500">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">警告 Warn</div>
+      <div class="text-3xl font-bold text-amber-600 mt-1">9</div>
+      <div class="text-xs text-slate-500 mt-1">保留但带标注</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm border-l-4 border-rose-500">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">剔除 Fail</div>
+      <div class="text-3xl font-bold text-rose-600 mt-1">2</div>
+      <div class="text-xs text-slate-500 mt-1">完全不进干净报告</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">事实核查通过率</div>
+      <div class="text-3xl font-bold text-slate-900 mt-1">45%</div>
+      <div class="text-xs text-slate-500 mt-1">9/20 完全无瑕疵</div>
+    </div>
+  </section>
+
+  <!-- 主体两栏：左侧报告卡片，右侧Wiki图谱+变更日志 -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+    <!-- 左侧主内容 -->
+    <section class="lg:col-span-2 space-y-6">
+
+      <!-- 失败/剔除项 高亮显示 -->
+      <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-rose-500">
+        <h2 class="text-lg font-bold text-rose-700 mb-3">🔴 已剔除内容 (Fail)</h2>
+        <div class="space-y-4">
+          <div class="border-l-2 border-rose-300 pl-4">
+            <h3 class="font-semibold text-slate-900">F1. "75 TOPS 可本地跑 7B 大模型" — TOPS 数字游戏</h3>
+            <p class="text-sm text-slate-600 mt-1">TOPS 脱离精度（INT4/INT8/FP16）无意义；"可本地跑"未定义任何延迟/持续 token/s 指标。典型 pseudoscience 模式。</p>
+          </div>
+          <div class="border-l-2 border-rose-300 pl-4">
+            <h3 class="font-semibold text-slate-900">F2. "OpenAI 联合高通+联发科开发处理器，2028量产" — 叙事矛盾</h3>
+            <p class="text-sm text-slate-600 mt-1">高通和联发科是手机 SoC 直接竞争对手，"同时合作"逻辑可疑。缺少专利/招聘/订单等任何二阶证据。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 主题分组 -->
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-4">🔧 SoC 与处理器</h2>
+        <div class="space-y-4">
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">Snapdragon 6 Gen 5 / 4 Gen 5 发布</h3>
+              <span class="px-2 py-1 rounded text-xs badge-pass">PASS</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">高通发布中低端两款新芯片，4 Gen 5 GPU 提升 77%，最高 90fps。OEM 签约 Honor/Oppo/Realme/Redmi。</p>
+            <div class="mt-2 flex items-center gap-2">
+              <span class="badge-official px-2 py-0.5 rounded text-xs">官方</span>
+              <a href="https://www.qualcomm.com/news/releases/2026/05/qualcomm-unveils-two-new-snapdragon-mobile-platforms--delivering" class="text-xs text-rose-600 hover:underline">来源 ↗</a>
+            </div>
+          </article>
+
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">联发科天玑开发者大会 2026</h3>
+              <span class="px-2 py-1 rounded text-xs badge-warn">WARN</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">9月推天玑 9600（2nm）+ 双 NPU AI 智能体引擎 2.0；165Hz 倍帧 3.0；"10亿三角面"为 demo 条件。</p>
+            <p class="text-xs text-amber-700 mt-2">⚠ 渲染数据未给稳态条件；"2nm"为台积电营销命名，与三星/Intel 同代不可线性比较</p>
+            <a href="https://finance.sina.com.cn/tech/mobile/n/n/2026-05-13/doc-inhxtqxn9355055.shtml" class="text-xs text-rose-600 hover:underline mt-2 inline-block">来源 ↗</a>
+          </article>
+
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">Snapdragon 8 Elite Gen 5 · NPU +37%</h3>
+              <span class="px-2 py-1 rounded text-xs badge-pass">PASS</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">Hexagon NPU 较上代提升 37%，端侧 LLM 推理可行；具体用户体验待量产机实测。</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-4">📷 影像旗舰矩阵</h2>
+        <div class="space-y-4">
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">vivo X300 Ultra</h3>
+              <span class="px-2 py-1 rounded text-xs badge-warn">WARN</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">蔡司T*镀膜 + 200MP 双潜望 + 宣称"CIPA 7.0级云台防抖"。</p>
+            <p class="text-xs text-amber-700 mt-2">⚠ CIPA 国际标准 2024 年最新版编号为 CIPA DC-X011-2024（业内通称 8.0），"CIPA 7.0"对应版本待 vivo 官方说明。"影像旗舰之王"属营销 puffery。</p>
+          </article>
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">OPPO Find X9 Ultra</h3>
+              <span class="px-2 py-1 rounded text-xs badge-warn">WARN</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">2亿像素主摄 + 10倍光变潜望 + 7050mAh 电池。营销定位"口袋哈苏"。</p>
+            <p class="text-xs text-amber-700 mt-2">⚠ "口袋哈苏"未充分披露哈苏实际技术贡献；10倍光变是单段连续还是多段切换待确认。</p>
+          </article>
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">小米 17 Max</h3>
+              <span class="px-2 py-1 rounded text-xs badge-pass">PASS</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">数字系列首次 2 亿像素主摄 + 3X 潜望长焦。</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-4">🔋 电池续航</h2>
+        <div class="space-y-4">
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">硅碳负极 10% → 16% 撑起 7000mAh 旗舰</h3>
+              <span class="px-2 py-1 rounded text-xs badge-pass">PASS</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">硅含量升级是 2026 旗舰主流。小米17 Pro 用 16% 实现 7000mAh。</p>
+          </article>
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">小米/vivo 10000mAh 极值机型 (双爆料)</h3>
+              <span class="px-2 py-1 rounded text-xs badge-warn">WARN</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">单一英文站 Android Headlines 爆料，存在循环引用风险。</p>
+            <p class="text-xs text-amber-700 mt-2">⚠ 10000mAh 在合理厚度下要求硅含量 &gt;20%（远超当前主流），需国内独立爆料源确认。</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-4">📐 折叠形态进展</h2>
+        <div class="space-y-4">
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">Samsung Galaxy Z Fold 7 · 50万次折叠耐久</h3>
+              <span class="px-2 py-1 rounded text-xs badge-warn">WARN</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">上代 20万 → 本代 50万，单代 2.5 倍跃升。三星宣称"10 年耐久"。</p>
+            <p class="text-xs text-amber-700 mt-2">⚠ 厂商自报数据，未披露第三方实验室（SGS / Bureau Veritas）认证及测试环境。建议等独立测试机构验证。</p>
+          </article>
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">Apple 折叠 iPhone · 液态金属铰链 + 5400-5800mAh</h3>
+              <span class="px-2 py-1 rounded text-xs badge-warn">WARN</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">2026 上市目标。供应链来源 TrendForce。强调"无折痕"。</p>
+            <span class="badge-leak px-2 py-0.5 rounded text-xs mt-2 inline-block">供应链爆料</span>
+            <p class="text-xs text-amber-700 mt-2">⚠ "无折痕"未量化（深度 &lt; μm？反射 ΔE？）。</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-4">🏷️ 品牌动态</h2>
+        <div class="space-y-4">
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">华为 Mate 80 · 麒麟 9030 + 鸿蒙 6 + 性能 +42%</h3>
+              <span class="px-2 py-1 rounded text-xs badge-warn">WARN</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">"全球首发 700MHz 无网应急通信"+ 第二代红枫影像系统。</p>
+            <p class="text-xs text-amber-700 mt-2">⚠ "+42%"未指明对比基准（Mate 70？哪个 Benchmark？）；"全球首发"需加边界。</p>
+          </article>
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">iPhone 17e 正式发布 · A19 芯片</h3>
+              <span class="px-2 py-1 rounded text-xs badge-pass">PASS</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">A19（疑似降频）+ MagSafe + 更快充电。</p>
+          </article>
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">iPhone 18 Pro · 9月发布 10 项新特性</h3>
+              <span class="px-2 py-1 rounded text-xs badge-warn">WARN</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">MacRumors 聚合爆料，含 A20 Pro / 120Hz LTPO 全系下放 / 改进散热等。</p>
+            <p class="text-xs text-amber-700 mt-2">⚠ 聚合爆料各项可信度不同，应拆条独立核查。</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-4">👓 新形态：AR/智能眼镜 &amp; 手持影像</h2>
+        <div class="space-y-4">
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">Google I/O 2026 · Android XR 眼镜将成主角</h3>
+              <span class="px-2 py-1 rounded text-xs badge-pass">PASS</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">5/19-20 keynote 预计公布 5 款 XR 设备。Google AI Glasses 内嵌显示 + Gemini，对标 Ray-Ban Meta。</p>
+          </article>
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">Samsung Jinju AI 眼镜 · $380-500</h3>
+              <span class="px-2 py-1 rounded text-xs badge-pass">PASS</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">无显示屏 + AI 助理为卖点，定位中端。</p>
+          </article>
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">OPPO 官宣进军手持影像设备</h3>
+              <span class="px-2 py-1 rounded text-xs badge-pass">PASS</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">新形态产品 2026 年内发布，疑似相机/手机融合形态。</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-4">📊 行业观察</h2>
+        <article class="card border border-slate-200 rounded-lg p-4">
+          <div class="flex items-start justify-between">
+            <h3 class="font-semibold text-slate-900">Android Authority 4500 票民调 · "AI 当幌子"最该消失</h3>
+            <span class="px-2 py-1 rounded text-xs badge-pass">PASS</span>
+          </div>
+          <p class="text-sm text-slate-600 mt-2">最多读者认为"AI as smokescreen"掩盖硬件升级少是最该终结的趋势。印证近三年厂商集体把 AI 当 buzzword 的反弹。</p>
+        </article>
+      </div>
+
+    </section>
+
+    <!-- 右侧 Wiki 图谱 + 变更日志 -->
+    <aside class="space-y-6">
+
+      <!-- Wiki 关系图谱 -->
+      <div class="bg-white rounded-xl shadow-sm p-5">
+        <h2 class="text-base font-bold text-slate-900 mb-3">🕸 Wiki 关系图谱</h2>
+        <svg id="graph" class="graph-svg" width="100%" height="320"></svg>
+        <p class="text-xs text-slate-500 mt-2">本日新增实体节点 5、主题节点 4。点击节点可跳转 Wiki 详情。</p>
+      </div>
+
+      <!-- 信源可信度变化 -->
+      <div class="bg-white rounded-xl shadow-sm p-5">
+        <h2 class="text-base font-bold text-slate-900 mb-3">📈 信源可信度调整</h2>
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="text-slate-500 text-xs">
+              <th class="text-left py-1">信源</th>
+              <th class="text-right py-1">变化</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-slate-100">
+              <td class="py-1.5">stcn</td>
+              <td class="text-right text-rose-600">−0.05</td>
+            </tr>
+            <tr class="border-t border-slate-100">
+              <td class="py-1.5">ifanr</td>
+              <td class="text-right text-rose-600">−0.02</td>
+            </tr>
+            <tr class="border-t border-slate-100">
+              <td class="py-1.5">qualcomm-news</td>
+              <td class="text-right text-emerald-600">+0.01</td>
+            </tr>
+            <tr class="border-t border-slate-100">
+              <td class="py-1.5">android-headlines (新建)</td>
+              <td class="text-right text-slate-600">0.65 (初始)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 新增方法论 -->
+      <div class="bg-white rounded-xl shadow-sm p-5">
+        <h2 class="text-base font-bold text-slate-900 mb-3">🧠 本日新增方法论</h2>
+        <ol class="text-sm space-y-2 list-decimal pl-4 text-slate-700">
+          <li>"CIPA X.0 级"自定义标准命名陷阱</li>
+          <li>"全球首发"边界条件缺失检测</li>
+          <li>耐久度单代 &gt;2× 跃升须第三方认证</li>
+          <li>品牌借光营销技术贡献披露要求</li>
+          <li>直接竞争对手同时合作反常识检测</li>
+          <li>聚合爆料拆条核查规则</li>
+        </ol>
+        <p class="text-xs text-slate-500 mt-3">↗ 自动合并进个人技能库</p>
+      </div>
+
+      <!-- 报告下载 -->
+      <div class="bg-white rounded-xl shadow-sm p-5">
+        <h2 class="text-base font-bold text-slate-900 mb-3">📥 报告全文</h2>
+        <div class="space-y-2 text-sm">
+          <a href="03-quality-report.md" class="block text-rose-600 hover:underline">📋 质检报告（含问题清单）</a>
+          <a href="04-clean-report.md" class="block text-rose-600 hover:underline">✨ 干净分析报告</a>
+          <a href="05-methodology-delta.md" class="block text-rose-600 hover:underline">🧠 方法论增量</a>
+          <a href="01-raw/items.json" class="block text-slate-500 hover:underline">📦 原始素材 JSON</a>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <footer class="mt-12 pt-6 border-t border-slate-200 text-center text-xs text-slate-500">
+    RumorCrusher v0.1 trial · 多 Agent 审核委员会 · 项目主页：
+    <a href="https://github.com/chirs0901/rumorcrusher" class="text-rose-600 hover:underline">github.com/chirs0901/rumorcrusher</a>
+    · 下次更新 2026-05-15 22:00
+  </footer>
+
+</main>
+
+<script>
+// D3 力导向关系图谱
+const data = {
+  nodes: [
+    { id: "SoC", group: "category", r: 18 },
+    { id: "影像", group: "category", r: 18 },
+    { id: "折叠", group: "category", r: 18 },
+    { id: "AR眼镜", group: "category", r: 18 },
+    { id: "电池", group: "category", r: 18 },
+
+    { id: "Snapdragon 8 Elite Gen 5", group: "entity", r: 10 },
+    { id: "Snapdragon 6/4 Gen 5", group: "entity", r: 10 },
+    { id: "天玑 9600", group: "entity", r: 10 },
+    { id: "麒麟 9030", group: "entity", r: 10 },
+
+    { id: "vivo X300 Ultra", group: "entity", r: 10 },
+    { id: "OPPO Find X9 Ultra", group: "entity", r: 10 },
+    { id: "小米 17 Max", group: "entity", r: 10 },
+    { id: "iPhone 17e", group: "entity", r: 10 },
+    { id: "iPhone 18 Pro", group: "entity", r: 10 },
+    { id: "Galaxy Z Fold 7", group: "entity", r: 10 },
+    { id: "Apple Fold", group: "entity", r: 10 },
+    { id: "Mate 80", group: "entity", r: 10 },
+
+    { id: "Google AI Glasses", group: "entity", r: 10 },
+    { id: "Samsung Jinju", group: "entity", r: 10 },
+
+    { id: "硅碳负极", group: "tech", r: 8 },
+    { id: "10000mAh爆料", group: "warn", r: 8 }
+  ],
+  links: [
+    { source: "SoC", target: "Snapdragon 8 Elite Gen 5" },
+    { source: "SoC", target: "Snapdragon 6/4 Gen 5" },
+    { source: "SoC", target: "天玑 9600" },
+    { source: "SoC", target: "麒麟 9030" },
+    { source: "麒麟 9030", target: "Mate 80" },
+
+    { source: "影像", target: "vivo X300 Ultra" },
+    { source: "影像", target: "OPPO Find X9 Ultra" },
+    { source: "影像", target: "小米 17 Max" },
+    { source: "影像", target: "Mate 80" },
+
+    { source: "折叠", target: "Galaxy Z Fold 7" },
+    { source: "折叠", target: "Apple Fold" },
+
+    { source: "AR眼镜", target: "Google AI Glasses" },
+    { source: "AR眼镜", target: "Samsung Jinju" },
+
+    { source: "电池", target: "硅碳负极" },
+    { source: "电池", target: "10000mAh爆料" },
+    { source: "硅碳负极", target: "小米 17 Max" },
+    { source: "硅碳负极", target: "OPPO Find X9 Ultra" },
+
+    { source: "iPhone 17e", target: "SoC" },
+    { source: "iPhone 18 Pro", target: "SoC" }
+  ]
+};
+
+const svg = d3.select("#graph");
+const width = svg.node().clientWidth;
+const height = 320;
+
+const colorByGroup = {
+  category: "#e11d48",
+  entity: "#3b82f6",
+  tech: "#10b981",
+  warn: "#f59e0b"
+};
+
+const simulation = d3.forceSimulation(data.nodes)
+  .force("link", d3.forceLink(data.links).id(d => d.id).distance(60))
+  .force("charge", d3.forceManyBody().strength(-180))
+  .force("center", d3.forceCenter(width / 2, height / 2))
+  .force("collide", d3.forceCollide(d => d.r + 4));
+
+const link = svg.append("g")
+  .attr("stroke", "#cbd5e1")
+  .attr("stroke-opacity", 0.6)
+  .selectAll("line")
+  .data(data.links)
+  .join("line")
+  .attr("stroke-width", 1.2);
+
+const node = svg.append("g")
+  .selectAll("g")
+  .data(data.nodes)
+  .join("g")
+  .call(d3.drag()
+    .on("start", (event, d) => { if (!event.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+    .on("drag", (event, d) => { d.fx = event.x; d.fy = event.y; })
+    .on("end", (event, d) => { if (!event.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }));
+
+node.append("circle")
+  .attr("r", d => d.r)
+  .attr("fill", d => colorByGroup[d.group])
+  .attr("fill-opacity", 0.85)
+  .attr("stroke", "#fff")
+  .attr("stroke-width", 1.5);
+
+node.append("text")
+  .attr("x", d => d.r + 4)
+  .attr("y", 4)
+  .attr("font-size", 11)
+  .attr("fill", "#334155")
+  .text(d => d.id);
+
+simulation.on("tick", () => {
+  link
+    .attr("x1", d => d.source.x)
+    .attr("y1", d => d.source.y)
+    .attr("x2", d => d.target.x)
+    .attr("y2", d => d.target.y);
+  node.attr("transform", d => `translate(${d.x},${d.y})`);
+});
+</script>
+</body>
+</html>

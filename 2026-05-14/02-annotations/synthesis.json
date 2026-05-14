@@ -1,0 +1,295 @@
+{
+  "annotated_at": "2026-05-14T22:05:00+08:00",
+  "annotator": "RumorCrusher Multi-Agent Committee v0.1 (trial)",
+  "items": [
+    {
+      "id": "20260514-01",
+      "title": "Qualcomm 发布 Snapdragon 6 Gen 5 与 Snapdragon 4 Gen 5",
+      "fact_check": {"verdict": "pass", "confidence": 0.95, "note": "源自高通官方Newsroom，数据为厂商自报"},
+      "pseudo_science": {"verdict": "pass", "matched_patterns": []},
+      "logic": {"verdict": "pass", "fallacies": []},
+      "sentiment": {"clickbait_index": 0.10, "value_concerns": []},
+      "synthesis": "pass",
+      "in_quality_report": false,
+      "in_clean_report": true,
+      "tags": ["官方", "中低端SoC"]
+    },
+    {
+      "id": "20260514-02",
+      "title": "联发科天玑开发者大会：押注全场景智能体化",
+      "fact_check": {
+        "verdict": "warn",
+        "confidence": 0.70,
+        "note": "'10亿级三角面'是dev event演示，需核实是否同负载下持续渲染；'1.5K分辨率持续1小时满帧'缺SoC型号、温度、电量条件"
+      },
+      "pseudo_science": {"verdict": "warn", "matched_patterns": ["未量化承诺：'押注全场景智能体化'"]},
+      "logic": {"verdict": "pass"},
+      "sentiment": {"clickbait_index": 0.20},
+      "synthesis": "warn",
+      "in_quality_report": true,
+      "in_clean_report": true,
+      "tags": ["SoC", "AI", "条件不明"]
+    },
+    {
+      "id": "20260514-03",
+      "title": "vivo X300 Ultra：CIPA 7.0级云台防抖",
+      "fact_check": {
+        "verdict": "warn",
+        "confidence": 0.75,
+        "note": "CIPA 是国际标准，2024 年发布的最新版本为 CIPA DC-X011-2024（俗称CIPA 8.0级体系），'CIPA 7.0' 命名需核实是 vivo 自定义还是国际标准；'200MP双潜望'参数惊人需厂商发布会确认"
+      },
+      "pseudo_science": {"verdict": "warn", "matched_patterns": ["绝对化用词：'影像旗舰之王'、'重新定义手机摄影'"]},
+      "logic": {"verdict": "pass"},
+      "sentiment": {"clickbait_index": 0.55, "value_concerns": ["营销标题党"]},
+      "synthesis": "warn",
+      "in_quality_report": true,
+      "in_clean_report": true,
+      "tags": ["影像", "营销puffery"]
+    },
+    {
+      "id": "20260514-04",
+      "title": "OPPO Find X9 Ultra：'光学至上，口袋哈苏'",
+      "fact_check": {
+        "verdict": "warn",
+        "confidence": 0.78,
+        "note": "10倍光学变焦潜望长焦在2025-2026年是行业前沿但有先例（vivo X100 Ultra已做到4.3倍光变 + 100倍数码），10倍纯光变需厂商确认是单段连续光变还是切换；2亿像素+7050mAh电池数据合理"
+      },
+      "pseudo_science": {"verdict": "fail", "matched_patterns": ["营销品牌借光：'口袋哈苏'", "未充分披露与哈苏品牌合作的实际技术贡献"]},
+      "logic": {"verdict": "pass"},
+      "sentiment": {"clickbait_index": 0.45},
+      "synthesis": "warn",
+      "in_quality_report": true,
+      "in_clean_report": true,
+      "tags": ["影像", "品牌联名营销"]
+    },
+    {
+      "id": "20260514-05",
+      "title": "小米17 Max：数字系列首次2亿像素主摄",
+      "fact_check": {"verdict": "pass", "confidence": 0.92, "note": "'数字系列首次'可历史核对，2亿像素CMOS（疑似HP9或HP1后继）"},
+      "pseudo_science": {"verdict": "pass"},
+      "logic": {"verdict": "pass"},
+      "sentiment": {"clickbait_index": 0.10},
+      "synthesis": "pass",
+      "in_quality_report": false,
+      "in_clean_report": true,
+      "tags": ["小米", "影像"]
+    },
+    {
+      "id": "20260514-06",
+      "title": "小米7英寸10000mAh电池机型（爆料）",
+      "fact_check": {
+        "verdict": "warn",
+        "confidence": 0.50,
+        "note": "单一英文站爆料，未见小米官方或国内主流媒体跟进确认；10000mAh在7英寸机身下要求硅碳负极硅含量极高（>20%）或厚度大幅增加，工程可行性需进一步验证"
+      },
+      "pseudo_science": {"verdict": "pass"},
+      "logic": {"verdict": "pass"},
+      "sentiment": {"clickbait_index": 0.40},
+      "synthesis": "warn",
+      "in_quality_report": true,
+      "in_clean_report": true,
+      "tags": ["爆料", "单源", "电池极值"]
+    },
+    {
+      "id": "20260514-07",
+      "title": "vivo 测试10000mAh硅基电池手机（爆料）",
+      "fact_check": {
+        "verdict": "warn",
+        "confidence": 0.50,
+        "note": "同样为单英文站爆料，与#06存在'循环互相佐证'风险，需独立第二信源"
+      },
+      "pseudo_science": {"verdict": "pass"},
+      "logic": {"verdict": "warn", "fallacies": ["可能存在循环引用风险：vivo和小米10000mAh爆料源头疑为同一信息流"]},
+      "sentiment": {"clickbait_index": 0.40},
+      "synthesis": "warn",
+      "in_quality_report": true,
+      "in_clean_report": true,
+      "tags": ["爆料", "单源", "电池极值"]
+    },
+    {
+      "id": "20260514-08",
+      "title": "Apple 折叠 iPhone 2026：液态金属铰链+无折痕",
+      "fact_check": {
+        "verdict": "warn",
+        "confidence": 0.55,
+        "note": "供应链报道来自 TrendForce 等机构具有一定可信度，但'无折痕设计'是 Apple 风格的工程目标而非已验证产品。液态金属铰链与5400-5800mAh电池为合理范围"
+      },
+      "pseudo_science": {"verdict": "warn", "matched_patterns": ["未量化承诺：'无折痕'未给量化指标（如折痕深度<μm）"]},
+      "logic": {"verdict": "pass"},
+      "sentiment": {"clickbait_index": 0.35},
+      "synthesis": "warn",
+      "in_quality_report": true,
+      "in_clean_report": true,
+      "tags": ["Apple", "折叠", "供应链爆料"]
+    },
+    {
+      "id": "20260514-09",
+      "title": "Samsung Galaxy Z Fold 7：可承受 500,000 次折叠",
+      "fact_check": {
+        "verdict": "warn",
+        "confidence": 0.65,
+        "note": "三星官方声明，但 200,000→500,000 是 2.5 倍单代提升，工程上极为激进。需第三方实验室（如 Bureau Veritas, SGS）出报告。'10年耐久'是按平均每日137次折叠（500000/3650）反推，未披露用户行为基线调查"
+      },
+      "pseudo_science": {"verdict": "warn", "matched_patterns": ["未充分披露测试方法和环境（温度/湿度/折叠角速度）"]},
+      "logic": {"verdict": "warn", "fallacies": ["从单一耐久度数字推断'10年耐久'是隐含假设，需声明前提"]},
+      "sentiment": {"clickbait_index": 0.40},
+      "synthesis": "warn",
+      "in_quality_report": true,
+      "in_clean_report": true,
+      "tags": ["三星", "折叠", "耐久极值"]
+    },
+    {
+      "id": "20260514-10",
+      "title": "华为 Mate 80：麒麟9030 + 700MHz无网应急通信 + 性能提升42%",
+      "fact_check": {
+        "verdict": "warn",
+        "confidence": 0.72,
+        "note": "'整机性能提升42%'未指明对比基准（GeekBench? AnTuTu? 哪一代Mate？哪个版本？）；'700MHz无网应急通信'频段属于低频段广覆盖，技术可行但'全球首发'需横向核对（手机端可能首发，但低频段应急通信非全新概念）"
+      },
+      "pseudo_science": {"verdict": "warn", "matched_patterns": ["'全球首发'类绝对化用词缺少边界条件"]},
+      "logic": {"verdict": "pass"},
+      "sentiment": {"clickbait_index": 0.30},
+      "synthesis": "warn",
+      "in_quality_report": true,
+      "in_clean_report": true,
+      "tags": ["华为", "麒麟", "卫星通信"]
+    },
+    {
+      "id": "20260514-11",
+      "title": "2026 旗舰 NPU 75 TOPS 可本地跑 7B 大模型",
+      "fact_check": {
+        "verdict": "fail",
+        "confidence": 0.85,
+        "note": "TOPS 数字脱离精度无意义（INT4/INT8/FP16 差异巨大）；'本地跑7B'通常需 INT4 量化+约 4GB 内存占用，但首token延迟和持续 token/s 才是用户体验核心。原文未提任何延迟/带宽指标"
+      },
+      "pseudo_science": {"verdict": "fail", "matched_patterns": ["典型TOPS堆数字模式（pseudoscience-patterns.md 已收录）"]},
+      "logic": {"verdict": "warn", "fallacies": ["未量化承诺：'可本地跑'未定义'可'的标准"]},
+      "sentiment": {"clickbait_index": 0.50},
+      "synthesis": "fail",
+      "in_quality_report": true,
+      "in_clean_report": false,
+      "tags": ["AI", "TOPS陷阱"]
+    },
+    {
+      "id": "20260514-12",
+      "title": "Snapdragon 8 Elite Gen 5：NPU 比上代快 37%",
+      "fact_check": {"verdict": "pass", "confidence": 0.85, "note": "数据来自高通发布会，与多家分析媒体引用一致"},
+      "pseudo_science": {"verdict": "warn", "matched_patterns": ["'让端侧LLM处理成为现实'属过度泛化"]},
+      "logic": {"verdict": "pass"},
+      "sentiment": {"clickbait_index": 0.20},
+      "synthesis": "pass",
+      "in_quality_report": false,
+      "in_clean_report": true,
+      "tags": ["SoC", "NPU"]
+    },
+    {
+      "id": "20260514-13",
+      "title": "iPhone 17e 正式发布：搭载 A19 芯片",
+      "fact_check": {"verdict": "pass", "confidence": 0.95, "note": "Apple 官方 + MacRumors/AppleInsider 多源确认"},
+      "pseudo_science": {"verdict": "pass"},
+      "logic": {"verdict": "pass"},
+      "sentiment": {"clickbait_index": 0.10},
+      "synthesis": "pass",
+      "in_quality_report": false,
+      "in_clean_report": true,
+      "tags": ["Apple", "中端"]
+    },
+    {
+      "id": "20260514-14",
+      "title": "Google I/O 2026 智能眼镜将主导 keynote",
+      "fact_check": {"verdict": "pass", "confidence": 0.85, "note": "I/O 2026 时间 5月19-20 与 Google 历史时间表一致；Android XR 已是 Google 公开战略"},
+      "pseudo_science": {"verdict": "pass"},
+      "logic": {"verdict": "pass"},
+      "sentiment": {"clickbait_index": 0.15},
+      "synthesis": "pass",
+      "in_quality_report": false,
+      "in_clean_report": true,
+      "tags": ["Google", "AR眼镜", "前瞻"]
+    },
+    {
+      "id": "20260514-15",
+      "title": "Samsung 'Jinju' AI Glasses：$380-500，无显示屏",
+      "fact_check": {"verdict": "warn", "confidence": 0.60, "note": "定价为爆料估计，未官方确认；'无显示屏+只靠AI'路线与 Meta Ray-Ban 类似，技术上合理"},
+      "pseudo_science": {"verdict": "pass"},
+      "logic": {"verdict": "pass"},
+      "sentiment": {"clickbait_index": 0.25},
+      "synthesis": "pass",
+      "in_quality_report": false,
+      "in_clean_report": true,
+      "tags": ["三星", "AR眼镜", "中端"]
+    },
+    {
+      "id": "20260514-16",
+      "title": "硅碳电池：硅含量 10%→16%，撑起 7000mAh 旗舰",
+      "fact_check": {"verdict": "pass", "confidence": 0.88, "note": "硅含量升级路径与多个供应链报告一致；小米17 Pro 7000mAh已发布可交叉验证"},
+      "pseudo_science": {"verdict": "pass"},
+      "logic": {"verdict": "pass"},
+      "sentiment": {"clickbait_index": 0.15},
+      "synthesis": "pass",
+      "in_quality_report": false,
+      "in_clean_report": true,
+      "tags": ["电池", "硅碳", "技术解读"]
+    },
+    {
+      "id": "20260514-17",
+      "title": "Android Authority 民调：'AI 当幌子' 是最该消失的趋势",
+      "fact_check": {"verdict": "pass", "confidence": 0.85, "note": "民调样本量约4500、方法透明"},
+      "pseudo_science": {"verdict": "pass"},
+      "logic": {"verdict": "pass"},
+      "sentiment": {"clickbait_index": 0.20},
+      "synthesis": "pass",
+      "in_quality_report": false,
+      "in_clean_report": true,
+      "tags": ["行业趋势", "用户调研"]
+    },
+    {
+      "id": "20260514-18",
+      "title": "OpenAI 联合高通+联发科开发处理器，2028量产手机（爆料）",
+      "fact_check": {
+        "verdict": "fail",
+        "confidence": 0.75,
+        "note": "'OpenAI同时联合高通和联发科'存在内在矛盾——两家是直接竞争对手，同时合作的可能性极低；2028量产手机时间线过于具体，缺少专利/招聘/晶圆订单等任何二阶证据"
+      },
+      "pseudo_science": {"verdict": "warn"},
+      "logic": {"verdict": "fail", "fallacies": ["叙事矛盾：高通与联发科是直接竞争对手，'同时联合'缺合理解释"]},
+      "sentiment": {"clickbait_index": 0.65},
+      "synthesis": "fail",
+      "in_quality_report": true,
+      "in_clean_report": false,
+      "tags": ["爆料", "逻辑可疑", "OpenAI"]
+    },
+    {
+      "id": "20260514-19",
+      "title": "iPhone 18 Pro 9月发布：10项新特性曝光",
+      "fact_check": {"verdict": "warn", "confidence": 0.65, "note": "MacRumors 整合多源爆料，单项分别有不同可信度。建议引用时按单条特性拆分核查"},
+      "pseudo_science": {"verdict": "pass"},
+      "logic": {"verdict": "pass"},
+      "sentiment": {"clickbait_index": 0.30},
+      "synthesis": "warn",
+      "in_quality_report": true,
+      "in_clean_report": true,
+      "tags": ["Apple", "爆料聚合"]
+    },
+    {
+      "id": "20260514-20",
+      "title": "OPPO 官宣进军手持影像设备",
+      "fact_check": {"verdict": "pass", "confidence": 0.85, "note": "OPPO 官宣可信，新形态产品定义尚需等正式发布"},
+      "pseudo_science": {"verdict": "pass"},
+      "logic": {"verdict": "pass"},
+      "sentiment": {"clickbait_index": 0.20},
+      "synthesis": "pass",
+      "in_quality_report": false,
+      "in_clean_report": true,
+      "tags": ["OPPO", "影像", "跨界"]
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "pass": 9,
+    "warn": 9,
+    "fail": 2,
+    "in_quality_report": 11,
+    "in_clean_report": 18,
+    "removed_completely": 2
+  }
+}

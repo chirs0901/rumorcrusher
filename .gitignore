@@ -1,0 +1,30 @@
+# 密钥 / 凭证（绝对不要进入git）
+_meta/secrets.local.yaml
+_meta/secrets.yaml
+_meta/*.local.*
+**/*.secret
+**/.env
+**/.env.*
+# 显式保留模板文件（不可被密钥规则误伤）
+!_meta/secrets.example.yaml
+
+# 中间产物（按需保留）
+*/01-raw/cache/
+*/02-annotations/.tmp/
+
+# 系统/编辑器
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python/Node 临时
+__pycache__/
+*.pyc
+node_modules/
+.venv/
+
+# 大文件视频
+*.mp4
+*.webm
+*.mkv

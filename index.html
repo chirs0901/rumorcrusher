@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RumorCrusher · 手机硬件每日洞察归档</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+    .card { transition: transform .15s ease, box-shadow .15s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+<header class="bg-white border-b border-slate-200">
+  <div class="max-w-5xl mx-auto px-6 py-8 text-center">
+    <h1 class="text-4xl font-bold tracking-tight">
+      <span class="text-rose-600">Rumor</span><span class="text-slate-900">Crusher</span>
+    </h1>
+    <p class="text-slate-500 mt-2">粉碎谣言，侦测事实真伪 · 手机硬件 &amp; 智能硬件每日洞察</p>
+    <p class="text-xs text-slate-400 mt-3">由多 Agent 审核委员会驱动 · 每日 22:00 自动更新 · 完全公开</p>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 py-10">
+
+  <section class="bg-white rounded-xl shadow-sm p-6 mb-8">
+    <h2 class="text-xl font-bold mb-4">这是什么？</h2>
+    <p class="text-slate-700 leading-relaxed">
+      RumorCrusher 是一个每日运行的手机硬件类资讯<strong>事实核查 + 知识沉淀</strong>系统。每天 22:00（北京时间）自动采集中英文+官方+学术+视频多源内容，由多 Agent 审核委员会做<strong>事实/伪科学/逻辑/三观</strong>核查，产出两份报告：
+    </p>
+    <ul class="mt-4 space-y-2 text-slate-700 list-disc pl-6">
+      <li><strong>质检报告</strong>：本日发现的有问题内容清单 + 证据 + 方法论</li>
+      <li><strong>干净分析报告</strong>：剔除问题内容后的洞察分析（可视化仪表盘）</li>
+    </ul>
+    <p class="text-slate-700 mt-4">
+      同时驱动两个知识飞轮：<strong>个人核查方法论库</strong>（每日新发现的核查方法持续追加）+ <strong>LLM Wiki</strong>（Karpathy 风格的实体/主题混合图谱）。
+    </p>
+  </section>
+
+  <section>
+    <h2 class="text-xl font-bold mb-4">📅 每日报告归档</h2>
+    <div class="space-y-3">
+      <a href="2026-05-14/index.html" class="card block bg-white rounded-xl shadow-sm p-5 border-l-4 border-rose-500">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-lg font-semibold text-slate-900">2026-05-14（首日试运行）</div>
+            <div class="text-sm text-slate-600 mt-1">20 条素材 · 9 通过 · 9 警告 · 2 剔除 · 新增 5 实体 + 4 主题</div>
+          </div>
+          <div class="text-rose-600">→</div>
+        </div>
+      </a>
+      <!-- 未来每日会自动追加 -->
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="text-xl font-bold mb-4">🛠 项目结构</h2>
+    <div class="bg-white rounded-xl shadow-sm p-5">
+      <ul class="text-sm space-y-2 text-slate-700">
+        <li><a href="_meta/scope.md" class="text-rose-600 hover:underline">采集范围定义</a></li>
+        <li><a href="_meta/source-list.yaml" class="text-rose-600 hover:underline">信源清单与可信度</a></li>
+        <li><a href="_meta/agents-architecture.md" class="text-rose-600 hover:underline">多 Agent 架构</a></li>
+        <li><a href="skills/fact-check-playbook.md" class="text-rose-600 hover:underline">事实核查方法论</a></li>
+        <li><a href="skills/pseudoscience-patterns.md" class="text-rose-600 hover:underline">伪科学模式库</a></li>
+        <li><a href="skills/logical-fallacy-catalog.md" class="text-rose-600 hover:underline">逻辑谬误案例库</a></li>
+        <li><a href="skills/source-credibility.md" class="text-rose-600 hover:underline">信源可信度档案</a></li>
+        <li><a href="wiki/_index.md" class="text-rose-600 hover:underline">LLM Wiki 图谱索引</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="mt-12 pt-6 border-t border-slate-200 text-center text-xs text-slate-500">
+    项目主页：<a href="https://github.com/chirs0901/rumorcrusher" class="text-rose-600 hover:underline">github.com/chirs0901/rumorcrusher</a>
+  </footer>
+
+</main>
+</body>
+</html>

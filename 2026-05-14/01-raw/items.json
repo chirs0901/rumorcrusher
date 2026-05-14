@@ -1,0 +1,287 @@
+{
+  "collected_at": "2026-05-14T22:00:00+08:00",
+  "items_count": 20,
+  "items": [
+    {
+      "id": "20260514-01",
+      "title": "Qualcomm 发布 Snapdragon 6 Gen 5 与 Snapdragon 4 Gen 5",
+      "source_id": "qualcomm-news",
+      "url": "https://www.qualcomm.com/news/releases/2026/05/qualcomm-unveils-two-new-snapdragon-mobile-platforms--delivering",
+      "type": "official",
+      "summary": "高通发布两款中低端芯片，将搭载于Honor、Oppo、Realme、Redmi等品牌2026下半年的机型。Snapdragon 4 Gen 5 相比上代GPU提升77%，最高支持90fps渲染。八核架构。",
+      "primary_claims": [
+        "Snapdragon 4 Gen 5 GPU相比上代提升77%",
+        "支持90fps渲染",
+        "八核架构",
+        "已签约 Honor/Oppo/Realme/Redmi"
+      ],
+      "fetched_lang": "en"
+    },
+    {
+      "id": "20260514-02",
+      "title": "联发科天玑开发者大会 2026：押注全场景智能体化",
+      "source_id": "36kr",
+      "url": "https://finance.sina.com.cn/tech/mobile/n/n/2026-05-13/doc-inhxtqxn9355055.shtml",
+      "type": "industry-news",
+      "summary": "联发科和团结引擎适配虚拟几何体技术，移动端渲染超过10亿级三角面，能在1.5K分辨率下持续输出1小时满帧画面。天玑倍帧3.0最高支持165帧。推出天玑AI智能体化引擎2.0，与OPPO/小米/传音合作系统原生Claw。今年9月将推天玑9600（2nm工艺）。",
+      "primary_claims": [
+        "移动端渲染超过10亿三角面",
+        "1.5K分辨率持续1小时满帧",
+        "天玑倍帧3.0支持165Hz",
+        "天玑9600采用台积电2nm",
+        "高通将推骁龙8 Elite Gen 6 和 Gen 6 Pro 双旗舰"
+      ],
+      "fetched_lang": "zh-CN"
+    },
+    {
+      "id": "20260514-03",
+      "title": "vivo X300 Ultra：CIPA 7.0级云台防抖 + 蔡司T*镀膜",
+      "source_id": "ifanr",
+      "url": "https://field.10jqka.com.cn/20260506/c676471418.shtml",
+      "type": "review",
+      "summary": "vivo X300 Ultra 主打专业影像，搭载蔡司T*镀膜、CIPA 7.0级云台防抖。被宣传为'影像旗舰之王'，'重新定义手机摄影'。",
+      "primary_claims": [
+        "CIPA 7.0级云台防抖",
+        "蔡司T*镀膜",
+        "200MP 双潜望镜头"
+      ],
+      "fetched_lang": "zh-CN"
+    },
+    {
+      "id": "20260514-04",
+      "title": "OPPO Find X9 Ultra：'光学至上，口袋哈苏'",
+      "source_id": "pingwest",
+      "url": "https://www.pingwest.com/",
+      "type": "review",
+      "summary": "Find X9 Ultra 主打'全大底五摄'，2亿像素超大底主摄+10倍光变天眼长焦。电池7050mAh。营销口号：'口袋哈苏'。",
+      "primary_claims": [
+        "全大底五摄系统",
+        "2亿像素主摄",
+        "10倍光学变焦潜望长焦",
+        "电池7050mAh"
+      ],
+      "fetched_lang": "zh-CN"
+    },
+    {
+      "id": "20260514-05",
+      "title": "小米17 Max：2亿像素主摄 + 3X潜望",
+      "source_id": "ithome",
+      "url": "https://mobile.pconline.com.cn/2145/21451471.html",
+      "type": "review",
+      "summary": "小米数字系列首次采用2亿像素主摄+3X潜望长焦。",
+      "primary_claims": [
+        "数字系列首次2亿像素主摄",
+        "3X潜望长焦"
+      ],
+      "fetched_lang": "zh-CN"
+    },
+    {
+      "id": "20260514-06",
+      "title": "传闻：小米正在做7英寸+10000mAh电池机型",
+      "source_id": "android-authority",
+      "url": "https://www.androidheadlines.com/2026/05/xiaomi-is-building-a-7-inch-phone-with-a-10000mah-battery-and-its-coming-this-year.html",
+      "type": "leak",
+      "summary": "据 Android Headlines 报道，小米正在研发一款7英寸2K屏幕+10000mAh电池的新机，预计2026年内发布。",
+      "primary_claims": [
+        "7英寸 2K 屏",
+        "10000mAh 电池",
+        "2026年内发布"
+      ],
+      "fetched_lang": "en"
+    },
+    {
+      "id": "20260514-07",
+      "title": "传闻：vivo 测试10000mAh硅基电池手机",
+      "source_id": "android-authority",
+      "url": "https://www.androidheadlines.com/2026/02/vivo-may-launch-a-phone-with-a-whopping-10000mah-battery.html",
+      "type": "leak",
+      "summary": "vivo 据传也在测试10000mAh硅基大电池手机，与 Honor/Realme 的高容量产品对抗。",
+      "primary_claims": [
+        "10000mAh 硅基电池",
+        "目标对标 Honor/Realme 大电池"
+      ],
+      "fetched_lang": "en"
+    },
+    {
+      "id": "20260514-08",
+      "title": "Apple 折叠 iPhone 2026：液态金属铰链+5400-5800mAh",
+      "source_id": "trendforce",
+      "url": "https://www.trendforce.com/news/2025/08/25/news-apples-first-foldable-iphone-set-for-2026-as-hinge-suppliers-from-korea-u-s-and-china-compete/",
+      "type": "leak",
+      "summary": "传闻 Apple 首款折叠 iPhone 2026 上市。铰链含液态金属组件+金属板分散弯曲应力。电池容量5400-5800mAh。强调'无折痕'。",
+      "primary_claims": [
+        "液态金属铰链",
+        "电池5400-5800mAh",
+        "无折痕设计",
+        "2026年上市"
+      ],
+      "fetched_lang": "en"
+    },
+    {
+      "id": "20260514-09",
+      "title": "Samsung Galaxy Z Fold 7：宣称可承受 500,000 次折叠",
+      "source_id": "samsung-newsroom",
+      "url": "https://news.samsung.com/global/introducing-galaxy-z-trifold-the-shape-of-whats-next-in-mobile-innovation",
+      "type": "official",
+      "summary": "三星称 Galaxy Z Fold 7 通过材料和铰链升级，可承受 50万次折叠（上一代 20万次）。'平均用户10年耐久性'。",
+      "primary_claims": [
+        "50万次折叠耐久（上代20万次）",
+        "10年耐久性",
+        "材料+铰链升级"
+      ],
+      "fetched_lang": "en"
+    },
+    {
+      "id": "20260514-10",
+      "title": "华为 Mate 80 系列：麒麟9030 + 鸿蒙6 + 700MHz无网应急通信",
+      "source_id": "ithome",
+      "url": "https://www.21jingji.com/article/20251125/herald/ca162b383c5d34bfb837aac102c36e3a.html",
+      "type": "official",
+      "summary": "华为发布 Mate 80 和 Mate X7。麒麟9030+HarmonyOS 6。整机性能相比上代提升42%，RS非凡大师版提升45%。首发'700MHz无网应急通信'+第二代红枫影像。",
+      "primary_claims": [
+        "麒麟9030 SoC",
+        "整机性能提升42%（RS版45%）",
+        "全球首发 700MHz 无网应急通信",
+        "第二代红枫影像系统"
+      ],
+      "fetched_lang": "zh-CN"
+    },
+    {
+      "id": "20260514-11",
+      "title": "2026 旗舰 NPU 跑到 75 TOPS，可本地跑 7B 大模型",
+      "source_id": "techtalkclub",
+      "url": "https://techtalkclub.com/on-device-ai-small-language-models-2026-2/",
+      "type": "analysis",
+      "summary": "声称 2026 早期旗舰 NPU 达 75 TOPS（注：未明确精度），足以本地运行 7B 参数语言模型。",
+      "primary_claims": [
+        "旗舰 NPU 75 TOPS",
+        "可本地运行 7B 模型"
+      ],
+      "fetched_lang": "en"
+    },
+    {
+      "id": "20260514-12",
+      "title": "Snapdragon 8 Elite Gen 5：Hexagon NPU 比上代快37%",
+      "source_id": "tech-news-am",
+      "url": "https://tech.news.am/eng/news/6838/qualcomm-mediatek-apple-and-samsung-how-do-the-top-smartphone-processors-of-2026-differ.html",
+      "type": "analysis",
+      "summary": "高通的 Hexagon NPU 在骁龙8 Elite Gen 5 相比上代提升 37%，让端侧 LLM 处理'成为现实'。",
+      "primary_claims": [
+        "Hexagon NPU 性能提升 37%",
+        "端侧 LLM 处理可行"
+      ],
+      "fetched_lang": "en"
+    },
+    {
+      "id": "20260514-13",
+      "title": "iPhone 17e 正式发布：使用 A19 芯片",
+      "source_id": "9to5",
+      "url": "https://www.macrumors.com/2026/03/02/apple-announces-iphone-17e-with-a19-chip-magsafe-and-more/",
+      "type": "official",
+      "summary": "Apple 发布 iPhone 17e，搭载 A19 芯片（疑似降频版）、MagSafe、更快充电。",
+      "primary_claims": [
+        "搭载 A19 芯片",
+        "支持 MagSafe",
+        "充电速度更快"
+      ],
+      "fetched_lang": "en"
+    },
+    {
+      "id": "20260514-14",
+      "title": "Google I/O 2026 智能眼镜将主导：Android XR + 5款新设备",
+      "source_id": "the-verge",
+      "url": "https://vr.org/articles/android-show-may-12-2026-xr-glasses-preview",
+      "type": "preview",
+      "summary": "Google 5月12日 Android Show + 5月19-20日 I/O 主keynote 预计聚焦 Android XR 眼镜。预告今年至少5款设备发布，含 Gemini 集成、AI Glasses 内嵌显示+实时翻译/导航。",
+      "primary_claims": [
+        "Android XR 眼镜将于 5月19-20日 keynote 公布",
+        "今年至少5款新设备",
+        "Google AI Glasses 内嵌显示 + Gemini + 实时翻译/导航"
+      ],
+      "fetched_lang": "en"
+    },
+    {
+      "id": "20260514-15",
+      "title": "Samsung 'Jinju' AI Glasses：$380-500，无显示屏",
+      "source_id": "glassalmanac",
+      "url": "https://glassalmanac.com/7-smart-glasses-and-ar-moves-in-2026-that-could-shift-wearables-fast/",
+      "type": "leak",
+      "summary": "三星'Jinju'智能眼镜定位中端：$380-500、无显示屏、聚焦 AI 功能（语音助理、拍照、翻译）。",
+      "primary_claims": [
+        "定价 $380-$500",
+        "无显示屏设计",
+        "AI 助理为主要卖点"
+      ],
+      "fetched_lang": "en"
+    },
+    {
+      "id": "20260514-16",
+      "title": "硅碳电池：从10%到16%硅含量，撑起 7000mAh 旗舰",
+      "source_id": "neware",
+      "url": "https://www.technerdo.com/post/silicon-carbon-batteries-smartphones-2026",
+      "type": "analysis",
+      "summary": "硅碳负极电池硅含量从 2025 年 10% 提升至 16%（小米17 Pro），实现 7000mAh 容量。2026 主流旗舰普遍采用。",
+      "primary_claims": [
+        "硅含量从10%提升到16%",
+        "小米17 Pro用16%硅含量实现7000mAh",
+        "硅碳负极是2026旗舰主流"
+      ],
+      "fetched_lang": "en"
+    },
+    {
+      "id": "20260514-17",
+      "title": "Android Authority 民调：'AI 当幌子的硬件升级' 是最该消失的趋势",
+      "source_id": "android-authority",
+      "url": "https://www.androidauthority.com/smartphone-trend-die-2026-poll-results-3632731/",
+      "type": "opinion",
+      "summary": "Android Authority 调查约 4500 名读者，最多人选'AI 当幌子掩盖硬件升级少'为最该消失的智能手机趋势。",
+      "primary_claims": [
+        "约 4500 名受访者",
+        "'AI as smokescreen' 票数最高"
+      ],
+      "fetched_lang": "en"
+    },
+    {
+      "id": "20260514-18",
+      "title": "传闻：OpenAI 联合高通、联发科开发手机芯片，2028 量产",
+      "source_id": "stcn",
+      "url": "https://www.stcn.com/article/detail/3822342.html",
+      "type": "leak",
+      "summary": "据报道，OpenAI 计划联合高通和联发科开发自有处理器并出品手机，目标2028年量产。",
+      "primary_claims": [
+        "OpenAI 联合高通+联发科",
+        "自研处理器",
+        "2028 量产手机"
+      ],
+      "fetched_lang": "zh-CN"
+    },
+    {
+      "id": "20260514-19",
+      "title": "iPhone 18 Pro 9月发布：10 项新特性已曝光",
+      "source_id": "9to5",
+      "url": "https://www.macrumors.com/2026/05/09/iphone-18-pro-10-new-features/",
+      "type": "leak",
+      "summary": "MacRumors 5月9日整理：iPhone 18 Pro 9月发布，10项新特性，含 A20 Pro、改进散热、120Hz LTPO 全系下放等。",
+      "primary_claims": [
+        "9月发布",
+        "10项新特性",
+        "A20 Pro 芯片",
+        "120Hz LTPO 全系下放"
+      ],
+      "fetched_lang": "en"
+    },
+    {
+      "id": "20260514-20",
+      "title": "OPPO 官宣进军手持影像设备市场",
+      "source_id": "pconline",
+      "url": "https://mobile.pconline.com.cn/1990/19903693.html",
+      "type": "news",
+      "summary": "OPPO 正式官宣进军手持影像设备市场，新形态产品（疑似类似相机/手机融合形态）预计 2026 年发布。",
+      "primary_claims": [
+        "OPPO 进军手持影像设备",
+        "2026 年发布新形态产品"
+      ],
+      "fetched_lang": "zh-CN"
+    }
+  ]
+}
