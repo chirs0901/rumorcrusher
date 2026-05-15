@@ -1,0 +1,262 @@
+{
+  "run_meta": {
+    "date": "2026-05-15",
+    "timestamp": "220330",
+    "total_items": 40,
+    "tiers": {
+      "高": 15,
+      "中": 17,
+      "低": 6,
+      "极低": 2
+    },
+    "items_above_threshold": 40
+  },
+  "tier_definition": {
+    "高": "score >= 0.7, 直接进入4-agent全审",
+    "中": "score 0.4-0.69, 进入4-agent审核",
+    "低": "score 0.2-0.39, 仅做基础Fact-Check",
+    "极低": "score < 0.2, 跳过深度审核"
+  },
+  "scores": [
+    {
+      "item_id": "RC20260515-001",
+      "check_worthiness": 0.55,
+      "tier": "中",
+      "reason": "meta-claim about AI rumor patterns, important but more analytical"
+    },
+    {
+      "item_id": "RC20260515-002",
+      "check_worthiness": 0.92,
+      "tier": "高",
+      "reason": "specific policy claim falsely attributed to official source, widely circulated"
+    },
+    {
+      "item_id": "RC20260515-003",
+      "check_worthiness": 0.45,
+      "tier": "中",
+      "reason": "WEF risk report - factual, well-sourced, low hoax risk"
+    },
+    {
+      "item_id": "RC20260515-004",
+      "check_worthiness": 0.95,
+      "tier": "高",
+      "reason": "falsified political event with AI images, high harm potential"
+    },
+    {
+      "item_id": "RC20260515-005",
+      "check_worthiness": 0.78,
+      "tier": "高",
+      "reason": "specific corporate behavior claim, verifiable, ongoing harm"
+    },
+    {
+      "item_id": "RC20260515-006",
+      "check_worthiness": 0.38,
+      "tier": "低",
+      "reason": "factual policy announcement, well-sourced"
+    },
+    {
+      "item_id": "RC20260515-007",
+      "check_worthiness": 0.82,
+      "tier": "高",
+      "reason": "pseudoscience product claims with health/financial harm potential"
+    },
+    {
+      "item_id": "RC20260515-008",
+      "check_worthiness": 0.9,
+      "tier": "高",
+      "reason": "specific dangerous health claim, widely spread, high harm"
+    },
+    {
+      "item_id": "RC20260515-009",
+      "check_worthiness": 0.62,
+      "tier": "中",
+      "reason": "research finding claim, but needs verification of 'indistinguishable'"
+    },
+    {
+      "item_id": "RC20260515-010",
+      "check_worthiness": 0.55,
+      "tier": "中",
+      "reason": "research result claim, specific and verifiable"
+    },
+    {
+      "item_id": "RC20260515-011",
+      "check_worthiness": 0.93,
+      "tier": "高",
+      "reason": "industry-wide false accusation causing business harm, high impact"
+    },
+    {
+      "item_id": "RC20260515-012",
+      "check_worthiness": 0.72,
+      "tier": "高",
+      "reason": "specific product behavior claim, privacy implications"
+    },
+    {
+      "item_id": "RC20260515-013",
+      "check_worthiness": 0.95,
+      "tier": "高",
+      "reason": "AI lottery fraud claim, directly harms vulnerable users"
+    },
+    {
+      "item_id": "RC20260515-014",
+      "check_worthiness": 0.94,
+      "tier": "高",
+      "reason": "false crime report using AI, causes public panic"
+    },
+    {
+      "item_id": "RC20260515-015",
+      "check_worthiness": 0.96,
+      "tier": "高",
+      "reason": "scam QR code claim, direct financial harm"
+    },
+    {
+      "item_id": "RC20260515-016",
+      "check_worthiness": 0.94,
+      "tier": "高",
+      "reason": "fake disaster video cross-labeled, causes unnecessary panic"
+    },
+    {
+      "item_id": "RC20260515-017",
+      "check_worthiness": 0.91,
+      "tier": "高",
+      "reason": "institution impersonation for fraud"
+    },
+    {
+      "item_id": "RC20260515-018",
+      "check_worthiness": 0.58,
+      "tier": "中",
+      "reason": "benchmark claim, specific numbers, could be contested"
+    },
+    {
+      "item_id": "RC20260515-019",
+      "check_worthiness": 0.65,
+      "tier": "中",
+      "reason": "research result with specific numbers, verifiable"
+    },
+    {
+      "item_id": "RC20260515-020",
+      "check_worthiness": 0.62,
+      "tier": "中",
+      "reason": "benchmark paradox claim, counter-intuitive"
+    },
+    {
+      "item_id": "RC20260515-021",
+      "check_worthiness": 0.68,
+      "tier": "中",
+      "reason": "broad claim about all AI models, important safety implication"
+    },
+    {
+      "item_id": "RC20260515-022",
+      "check_worthiness": 0.75,
+      "tier": "高",
+      "reason": "media initially reported wrong, caused confusion - information quality issue"
+    },
+    {
+      "item_id": "RC20260515-023",
+      "check_worthiness": 0.45,
+      "tier": "中",
+      "reason": "verified public statement by named CEO"
+    },
+    {
+      "item_id": "RC20260515-024",
+      "check_worthiness": 0.55,
+      "tier": "中",
+      "reason": "business status claim, verifiable through earnings reports"
+    },
+    {
+      "item_id": "RC20260515-025",
+      "check_worthiness": 0.96,
+      "tier": "高",
+      "reason": "political deepfake targeting sitting president, high harm"
+    },
+    {
+      "item_id": "RC20260515-026",
+      "check_worthiness": 0.6,
+      "tier": "中",
+      "reason": "survey-based statistic, plausible, needs source verification"
+    },
+    {
+      "item_id": "RC20260515-027",
+      "check_worthiness": 0.4,
+      "tier": "低",
+      "reason": "business announcement, widely verified"
+    },
+    {
+      "item_id": "RC20260515-028",
+      "check_worthiness": 0.35,
+      "tier": "低",
+      "reason": "legal testimony, court record, verifiable"
+    },
+    {
+      "item_id": "RC20260515-029",
+      "check_worthiness": 0.52,
+      "tier": "中",
+      "reason": "security threat claim from authoritative source"
+    },
+    {
+      "item_id": "RC20260515-030",
+      "check_worthiness": 0.3,
+      "tier": "低",
+      "reason": "official corporate/government announcement"
+    },
+    {
+      "item_id": "RC20260515-031",
+      "check_worthiness": 0.82,
+      "tier": "高",
+      "reason": "dramatic corporate dissolution claim, needs verification"
+    },
+    {
+      "item_id": "RC20260515-032",
+      "check_worthiness": 0.35,
+      "tier": "低",
+      "reason": "official government statistics"
+    },
+    {
+      "item_id": "RC20260515-033",
+      "check_worthiness": 0.6,
+      "tier": "中",
+      "reason": "risk assessment claim, research-based"
+    },
+    {
+      "item_id": "RC20260515-034",
+      "check_worthiness": 0.58,
+      "tier": "中",
+      "reason": "policy analysis claim, needs factual backing"
+    },
+    {
+      "item_id": "RC20260515-035",
+      "check_worthiness": 0.55,
+      "tier": "中",
+      "reason": "research finding, broad claim"
+    },
+    {
+      "item_id": "RC20260515-036",
+      "check_worthiness": 0.38,
+      "tier": "低",
+      "reason": "legislative proposal, verifiable"
+    },
+    {
+      "item_id": "RC20260515-037",
+      "check_worthiness": 0.3,
+      "tier": "极低",
+      "reason": "official platform statistics"
+    },
+    {
+      "item_id": "RC20260515-038",
+      "check_worthiness": 0.5,
+      "tier": "中",
+      "reason": "analysis of rumor patterns"
+    },
+    {
+      "item_id": "RC20260515-039",
+      "check_worthiness": 0.28,
+      "tier": "极低",
+      "reason": "official regulatory action announcement"
+    },
+    {
+      "item_id": "RC20260515-040",
+      "check_worthiness": 0.45,
+      "tier": "中",
+      "reason": "classification/analysis, not a specific rumor claim"
+    }
+  ]
+}

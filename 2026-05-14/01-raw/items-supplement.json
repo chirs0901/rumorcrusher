@@ -1,0 +1,147 @@
+{
+  "collected_at": "2026-05-14T08:35:00+08:00",
+  "collection_type": "manual_supplement_for_missed_22pm",
+  "note": "原 22:00 定时任务因首次会话权限/网络问题未真实采集，本批为人工补跑，使用 2026-05-14 上午的新鲜素材。下次自动运行为 2026-05-14 22:03。",
+  "items_count": 10,
+  "items": [
+    {
+      "id": "20260514s-01",
+      "title": "Google Pixel 11 / Tensor G6 完整规格曝光",
+      "source_id": "9to5",
+      "url": "https://9to5google.com/2026/05/04/google-pixel-11-specs-cameras-tensor-g6-leak/",
+      "type": "leak",
+      "summary": "9to5Google 5月4日大爆料：Tensor G6 用台积电 2nm，1×ARM C1-Ultra@4.11GHz + 4×C1-Pro@3.38GHz + 2×C1-Pro@2.65GHz；PowerVR C-Series CXTP-48-1536 GPU；MediaTek M90 基带；Pixel 11 标准版 6.3寸 OLED 1080×2424 120Hz / 50MP 主摄 / 4840mAh（标称 5000）；Pro 系列移除温度计，改为 RGB LED 阵列（类似 Nothing Glyph）",
+      "primary_claims": [
+        "Tensor G6 采用台积电 2nm",
+        "1+4+2 异构 CPU 架构",
+        "PowerVR C-Series GPU（首次 Google 用 PowerVR）",
+        "MediaTek M90 基带",
+        "Pro 移除温度计加 RGB LED 阵列",
+        "IR face unlock 不会出现在 2026 Pixel"
+      ],
+      "fetched_lang": "en"
+    },
+    {
+      "id": "20260514s-02",
+      "title": "iPhone 18 Pro Max 大改版 + A20 + 分批发布策略",
+      "source_id": "9to5",
+      "url": "https://easternherald.com/2026/05/12/iphone-18-pro-max-leak-2026-apple-flagship/",
+      "type": "leak",
+      "summary": "Eastern Herald 5月12日报道：iPhone 18 系列将分两批发布，Pro 系列优先，标准款延期；A20 性能提升，相机升级，价格预计上涨。",
+      "primary_claims": [
+        "iPhone 18 Pro 优先发布",
+        "A20 芯片",
+        "标准版 iPhone 18 延期"
+      ],
+      "fetched_lang": "en"
+    },
+    {
+      "id": "20260514s-03",
+      "title": "Motorola 2026 全产品线泄露",
+      "source_id": "the-verge",
+      "url": "https://www.phonearena.com/news/motorolas-2026-smartphone-lineup-leaks_id177010",
+      "type": "leak",
+      "summary": "PhoneArena 综合泄露：Motorola 2026 全年产品线，包括 Edge / G / Razr 多个系列的关键规格、定价区间和发布窗口。",
+      "primary_claims": [
+        "Motorola 2026 全产品线"
+      ],
+      "fetched_lang": "en"
+    },
+    {
+      "id": "20260514s-04",
+      "title": "极客湾 SOCPK 实测：骁龙 8 Elite Gen 5 安兔兔 425万+",
+      "source_id": "bili-geekerwan",
+      "url": "https://www.socpk.com/",
+      "type": "review",
+      "summary": "极客湾 SOCPK 排行：骁龙 8 Elite Gen 5 安兔兔 v11 跑分 425万~450万，Geekbench 6.5 单核 3825-3900 / 多核 12200-12350，刷新安卓阵营纪录。",
+      "primary_claims": [
+        "骁龙 8 Elite Gen 5 安兔兔 425-450 万",
+        "Geekbench 6.5 单核 3825-3900",
+        "多核 12200-12350"
+      ],
+      "fetched_lang": "zh-CN"
+    },
+    {
+      "id": "20260514s-05",
+      "title": "天玑 9500 单核性能较 9400 提升 32%、多核 17%",
+      "source_id": "mediatek-news",
+      "url": "https://k.sina.com.cn/article_7857141524_1d452771401901qy9s.html",
+      "type": "review",
+      "summary": "联发科天玑 9500 基于台积电第三代 3nm，'1+3+4' 全大核 CPU 架构，单核性能相比 9400 提升 32%、多核提升 17%。",
+      "primary_claims": [
+        "台积电第三代 3nm 工艺",
+        "1+3+4 全大核架构",
+        "单核 +32%、多核 +17%（相比 9400）"
+      ],
+      "fetched_lang": "zh-CN"
+    },
+    {
+      "id": "20260514s-06",
+      "title": "iPhone 20（2027 上市）泄露：'全面屏' + 隐藏摄像头",
+      "source_id": "easternherald",
+      "url": "https://easternherald.com/2026/05/14/apple-iphone-20-leak-radical-redesign-2027/",
+      "type": "leak",
+      "summary": "Eastern Herald 5月14日：iPhone 20 将采用 Apple 历史上最激进的设计——全屏（无前置开孔）、相机隐藏在屏下、AI 硬件加强。",
+      "primary_claims": [
+        "iPhone 20 真全面屏（无开孔）",
+        "屏下隐藏相机",
+        "2027 上市"
+      ],
+      "fetched_lang": "en"
+    },
+    {
+      "id": "20260514s-07",
+      "title": "小米因 DRAM 涨价 4 倍，2026 年 4 月起上调部分机型售价",
+      "source_id": "ithome",
+      "url": "https://mobile.zol.com.cn/1158/11585757.html",
+      "type": "industry-news",
+      "summary": "中关村在线报道：DRAM 价格暴涨 4 倍，小米从 2026 年 4 月起上调部分机型售价。整个 2026 年中国手机市场首次全品类普涨。",
+      "primary_claims": [
+        "DRAM 价格暴涨 4 倍",
+        "小米 4 月起涨价",
+        "中国手机市场 2026 全品类普涨"
+      ],
+      "fetched_lang": "zh-CN"
+    },
+    {
+      "id": "20260514s-08",
+      "title": "OnePlus Nord CE 6 五月首发：被称'同段最快'",
+      "source_id": "phonearena",
+      "url": "https://www.msn.com/en-us/news/technology/top-5-upcoming-smartphone-launches-in-may-2026/ar-AA21TZEr",
+      "type": "review",
+      "summary": "OnePlus Nord CE 6 5 月首周发布，定价 INR 20000-25000，宣传'同段最快'。",
+      "primary_claims": [
+        "INR 20000-25000 定价",
+        "'同段最快' 营销宣称"
+      ],
+      "fetched_lang": "en"
+    },
+    {
+      "id": "20260514s-09",
+      "title": "2026 Q1 全球手机出货：小米 OPPO vivo 前五",
+      "source_id": "eet-china",
+      "url": "https://www.eet-china.com/mp/a487200.html",
+      "type": "industry-news",
+      "summary": "EE Times China 2026 Q1 全球手机出货量榜：小米、OPPO、vivo 进入前五。具体出货数据需查 Canalys/IDC 正式报告。",
+      "primary_claims": [
+        "2026 Q1 全球出货榜前五",
+        "中国厂商小米/OPPO/vivo 入围"
+      ],
+      "fetched_lang": "zh-CN"
+    },
+    {
+      "id": "20260514s-10",
+      "title": "Apple 2026 总产品线大泄露：M5 MacBook Pro 之后 18 款新品",
+      "source_id": "geeky-gadgets",
+      "url": "https://www.geeky-gadgets.com/massive-2026-apple-leak/",
+      "type": "leak",
+      "summary": "Geeky Gadgets 综合 Mark Gurman 等多源泄露：Apple 2026 后续 18 款新产品时间表（含 iPhone 18、iPhone Fold、Vision Pro 2、新 iPad、新 Mac、新 AirPods 等）。",
+      "primary_claims": [
+        "Apple 2026 18 款新品",
+        "M5 MacBook Pro 后续路线图",
+        "iPhone Fold 在列"
+      ],
+      "fetched_lang": "en"
+    }
+  ]
+}

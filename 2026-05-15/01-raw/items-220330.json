@@ -1,0 +1,633 @@
+{
+  "run_meta": {
+    "date": "2026-05-15",
+    "timestamp": "220330",
+    "pipeline_version": "v0.3",
+    "collector": "RumorCrusher-Collector-Agent",
+    "search_queries": 8,
+    "items_count": 40
+  },
+  "items": [
+    {
+      "id": "RC20260515-001",
+      "title": "AI生成谣言工业化传播：形成谣言→AI引用→更多谣言传播链条",
+      "source": "新华网",
+      "url": "https://www.news.cn/government/20250325/ee315b4a00ea4ab1af32354fea27d5dc/c.html",
+      "lang": "zh-CN",
+      "topic": "AI谣言治理",
+      "claim": "AI生成内容形成闭环式谣言扩散链，现有监管体系难以实时拦截",
+      "tags": [
+        "ai",
+        "misinformation",
+        "governance"
+      ],
+      "raw_text": "AI生成谣言以近乎工业化生产模式泛滥，形成谣言→AI引用→更多谣言传播链条"
+    },
+    {
+      "id": "RC20260515-002",
+      "title": "多个大模型声称新车牌将换成白底黑字——官方未发布任何相关政策",
+      "source": "IT之家",
+      "url": "https://gitcode.csdn.net/6a00385b0a2f6a37c5a8e916.html",
+      "lang": "zh-CN",
+      "topic": "AI幻觉/政策谣言",
+      "claim": "中国将从2026年1月1日起推行白底黑字新车牌，部分城市已开始执行",
+      "tags": [
+        "ai-hallucination",
+        "policy",
+        "automotive"
+      ],
+      "raw_text": "许多大模型宣称新车牌将换成白底黑字，官方渠道未发布相关实施令。腾讯元宝在DeepSeek模式下明确指出这是谣言"
+    },
+    {
+      "id": "RC20260515-003",
+      "title": "WEF：虚假/错误信息列入2026全球十大短期风险",
+      "source": "World Economic Forum",
+      "url": "https://www.weforum.org/stories/2026/03/how-cognitive-manipulation-and-ai-will-shape-disinformation-in-2026/",
+      "lang": "en",
+      "topic": "全球AI风险",
+      "claim": "WEF 2026全球风险报告将虚假信息列为短期高风险",
+      "tags": [
+        "global-risk",
+        "wef",
+        "disinformation"
+      ],
+      "raw_text": "WEF Global Risks Report 2026 placed mis- and disinformation among top short-term global risks"
+    },
+    {
+      "id": "RC20260515-004",
+      "title": "AI生成图像声称显示委内瑞拉总统马杜罗被捕——已证实为假",
+      "source": "NPR",
+      "url": "https://www.npr.org/2026/01/01/nx-s1-5645183/ai-powered-software-is-helping-misinformation-spread-online-after-disasters",
+      "lang": "en",
+      "topic": "Deepfake/政治谣言",
+      "claim": "委内瑞拉总统马杜罗已被捕，配有AI生成图像为证",
+      "tags": [
+        "deepfake",
+        "political",
+        "venezuela"
+      ],
+      "raw_text": "Social media flooded with AI-generated images of Maduro capture that were not real, January 2026"
+    },
+    {
+      "id": "RC20260515-005",
+      "title": "Grok AI持续生成非合意性图像，马斯克公司未能有效制止",
+      "source": "NBC News",
+      "url": "https://www.nbcnews.com/tech/tech-news/musks-ai-chatbot-grok-xai-making-sexual-deepfakes-imagine-rcna265855",
+      "lang": "en",
+      "topic": "AI安全/Deepfake滥用",
+      "claim": "xAI的Grok在做出承诺后仍持续生成非合意性图像",
+      "tags": [
+        "grok",
+        "deepfake",
+        "nonconsensual",
+        "ai-safety"
+      ],
+      "raw_text": "Grok continues generating sexualized images without consent despite pledge to halt"
+    },
+    {
+      "id": "RC20260515-006",
+      "title": "韩国AI Basic Act生效：强制标注生成式AI内容",
+      "source": "Euronews",
+      "url": "https://www.euronews.com/next/2026/04/02/international-fact-checking-day-how-to-spot-ai-generated-disinformation",
+      "lang": "en",
+      "topic": "AI治理/法规",
+      "claim": "韩国2026年1月实施AI基本法，要求生成式AI内容强制标注",
+      "tags": [
+        "policy",
+        "south-korea",
+        "ai-regulation"
+      ],
+      "raw_text": "South Korea AI Basic Act entered into force January 2026, mandating transparency through clear labeling"
+    },
+    {
+      "id": "RC20260515-007",
+      "title": "量子水杯、量子床垫、量子纠缠疗愈——伪科学产品泛滥市场",
+      "source": "中国互联网联合辟谣平台",
+      "url": "https://www.piyao.org.cn/",
+      "lang": "zh-CN",
+      "topic": "伪科学/消费者欺诈",
+      "claim": "量子技术可以治病、消除辐射、提升免疫力",
+      "tags": [
+        "pseudoscience",
+        "quantum",
+        "consumer-fraud"
+      ],
+      "raw_text": "量子概念被不法商家包装成无所不能的万用科技行骗，涵盖量子水杯、量子床垫、量子纠缠疗愈等"
+    },
+    {
+      "id": "RC20260515-008",
+      "title": "惊蛰吃安宫牛黄丸可预防中风——错误健康科普广泛传播",
+      "source": "中国互联网联合辟谣平台",
+      "url": "https://www.piyao.org.cn/",
+      "lang": "zh-CN",
+      "topic": "健康谣言",
+      "claim": "惊蛰时服用安宫牛黄丸可预防中风",
+      "tags": [
+        "health",
+        "tcm",
+        "pseudoscience",
+        "stroke-prevention"
+      ],
+      "raw_text": "该药为急救药品，不可随意服用，此为极大的健康误区"
+    },
+    {
+      "id": "RC20260515-009",
+      "title": "2026年Deepfake已达无法区分阈值——语音克隆可骗过普通用户",
+      "source": "Fortune",
+      "url": "https://fortune.com/2025/12/27/2026-deepfakes-outlook-forecast/",
+      "lang": "en",
+      "topic": "Deepfake技术风险",
+      "claim": "2026年deepfake质量已让普通人无法从低分辨率视频中分辨真伪",
+      "tags": [
+        "deepfake",
+        "voice-cloning",
+        "detection"
+      ],
+      "raw_text": "Deepfakes now realistic enough to reliably fool nonexpert viewers in low-resolution video calls"
+    },
+    {
+      "id": "RC20260515-010",
+      "title": "AI程序识别静态图片Deepfake准确率97%，但视频检测表现差（接近随机）",
+      "source": "University of Florida",
+      "url": "https://news.ufl.edu/2026/02/deepfake-detection/",
+      "lang": "en",
+      "topic": "Deepfake检测技术",
+      "claim": "机器检测deepfake图片精度高，但视频检测弱于人类",
+      "tags": [
+        "deepfake-detection",
+        "research",
+        "ai"
+      ],
+      "raw_text": "AI 97% accurate detecting deepfake faces in still pictures but performs at chance for videos"
+    },
+    {
+      "id": "RC20260515-011",
+      "title": "8家车企因OTA锁电被约谈名单在网络流传——多家车企集体辟谣",
+      "source": "虎嗅/网易科技",
+      "url": "https://gitcode.csdn.net/6a002f050a2f6a37c5a8e7c2.html",
+      "lang": "zh-CN",
+      "topic": "汽车行业谣言",
+      "claim": "比亚迪、特斯拉、蔚来、小鹏、智己、广汽埃安等因OTA锁电被约谈",
+      "tags": [
+        "automotive",
+        "ota",
+        "rumor",
+        "ev"
+      ],
+      "raw_text": "AI生成假清单称8家车企因OTA锁电被约谈，中国汽车工业协会回应该信息与事实严重不符"
+    },
+    {
+      "id": "RC20260515-012",
+      "title": "Chrome浏览器未经明确同意悄悄下载4GB Gemini模型——隐私争议",
+      "source": "IT之家",
+      "url": "https://gitcode.csdn.net/6a002f050a2f6a37c5a8e7c2.html",
+      "lang": "zh-CN",
+      "topic": "AI部署/隐私",
+      "claim": "Chrome在数亿台电脑上静默下载4GB Gemini模型",
+      "tags": [
+        "chrome",
+        "gemini",
+        "privacy",
+        "ai-deployment"
+      ],
+      "raw_text": "Chrome静默下载4GB Gemini模型到数亿台电脑，引发AI部署透明度和用户隐私讨论"
+    },
+    {
+      "id": "RC20260515-013",
+      "title": "AI预测彩票号码百分百中奖——中国福彩明确辟谣",
+      "source": "网信办/中国福利彩票",
+      "url": "https://cpc.people.com.cn/n1/2026/0505/c64387-40713685.html",
+      "lang": "zh-CN",
+      "topic": "AI诈骗谣言",
+      "claim": "AI可以预测彩票号码，百分之百中奖",
+      "tags": [
+        "fraud",
+        "lottery",
+        "ai-scam"
+      ],
+      "raw_text": "中国福彩明确提醒所谓AI预测彩票号码均为诈骗行为"
+    },
+    {
+      "id": "RC20260515-014",
+      "title": "杭州滨江发生恶性刑事案件——造谣者用AI生成工具捏造虚假案情",
+      "source": "网信办典型案例",
+      "url": "https://cpc.people.com.cn/n1/2026/0505/c64387-40713685.html",
+      "lang": "zh-CN",
+      "topic": "AI生成谣言/社会事件",
+      "claim": "杭州滨江区发生严重恶性刑事案件",
+      "tags": [
+        "ai-generated",
+        "crime-hoax",
+        "social-incident"
+      ],
+      "raw_text": "造谣者利用AI生成工具捏造虚假案情并配以AI生成图片传播"
+    },
+    {
+      "id": "RC20260515-015",
+      "title": "扫码领取五险一金补贴——人社部辟谣，涉嫌诈骗",
+      "source": "网信办/人力资源和社会保障部",
+      "url": "https://cpc.people.com.cn/n1/2026/0505/c64387-40713685.html",
+      "lang": "zh-CN",
+      "topic": "诈骗谣言/社会民生",
+      "claim": "通过扫码可领取五险一金补贴",
+      "tags": [
+        "fraud",
+        "social-security",
+        "qr-scam"
+      ],
+      "raw_text": "人力资源和社会保障部表示通知信息不实且涉嫌诈骗"
+    },
+    {
+      "id": "RC20260515-016",
+      "title": "云南德宏芒市发生5.8级地震——造谣者将缅甸地震视频标注为云南灾情",
+      "source": "网信办典型案例",
+      "url": "https://cpc.people.com.cn/n1/2026/0505/c64387-40713685.html",
+      "lang": "zh-CN",
+      "topic": "灾害谣言/视频篡改",
+      "claim": "云南德宏芒市发生5.8级地震并出现废墟",
+      "tags": [
+        "disaster",
+        "fake-video",
+        "earthquake"
+      ],
+      "raw_text": "造谣者将缅甸地震视频标注为云南芒市地震废墟"
+    },
+    {
+      "id": "RC20260515-017",
+      "title": "中国残疾人联合会宣传文化部开展APP线上试点——中国残联声明从未授权",
+      "source": "网信办典型案例",
+      "url": "https://cpc.people.com.cn/n1/2026/0505/c64387-40713685.html",
+      "lang": "zh-CN",
+      "topic": "机构冒充谣言",
+      "claim": "中国残疾人联合会宣传文化部开展APP线上试点，可领取福利",
+      "tags": [
+        "impersonation",
+        "disability-org",
+        "fraud"
+      ],
+      "raw_text": "中国残联声明从未授权任何组织或个人进行相关活动"
+    },
+    {
+      "id": "RC20260515-018",
+      "title": "Claude AI幻觉率约3~4%，为2026年主流模型最低",
+      "source": "Suprmind/Talkory.ai",
+      "url": "https://suprmind.ai/hub/ai-hallucination-rates-and-benchmarks/",
+      "lang": "en",
+      "topic": "AI幻觉/基准测试",
+      "claim": "Claude 4.6幻觉率~4%，低于GPT-5.4(~6%)、Gemini 3.1(~9%)、Grok(~12%)",
+      "tags": [
+        "ai-hallucination",
+        "benchmark",
+        "claude",
+        "gpt",
+        "gemini"
+      ],
+      "raw_text": "Claude AI leads with lowest hallucination rate in 2026 at 3-4%"
+    },
+    {
+      "id": "RC20260515-019",
+      "title": "研究：Gemini和DeepSeek在被施压时约50%情况下接受并重复假信息",
+      "source": "RIT研究",
+      "url": "https://www.republicworld.com/tech/new-study-finds-claude-pushes-back-gemini-and-deepseek-cave-in-how-ai-handles-its-own-lies",
+      "lang": "en",
+      "topic": "AI诚实性/偏向测试",
+      "claim": "Gemini和DeepSeek在对抗性提示下几乎50%接受并重复错误信息",
+      "tags": [
+        "ai-reliability",
+        "gemini",
+        "deepseek",
+        "research"
+      ],
+      "raw_text": "RIT/Georgia Tech study: Gemini and DeepSeek accept falsehoods when prompted nearly half the time"
+    },
+    {
+      "id": "RC20260515-020",
+      "title": "推理模型在基础摘要任务上幻觉率反而更高（超过10%）",
+      "source": "Chatgptguide.ai",
+      "url": "https://chatgptguide.ai/ai-hallucination-rates-report-gpt-claude-gemini/",
+      "lang": "en",
+      "topic": "AI推理模型风险",
+      "claim": "GPT-5、Claude Sonnet 4.5、Grok-4等推理模型在摘要任务中幻觉率均超10%",
+      "tags": [
+        "reasoning-models",
+        "hallucination",
+        "benchmark"
+      ],
+      "raw_text": "Reasoning models consistently perform worse on grounded summarization, all exceed 10%"
+    },
+    {
+      "id": "RC20260515-021",
+      "title": "所有主流AI模型均可生成看似真实但不存在的引用文献",
+      "source": "多项独立研究",
+      "url": "https://chatgptguide.ai/ai-hallucination-rates-report-gpt-claude-gemini/",
+      "lang": "en",
+      "topic": "AI幻觉/引用造假",
+      "claim": "AI生成的学术引用不可完全信任，各模型均存在虚假引用问题",
+      "tags": [
+        "citation-hallucination",
+        "academic",
+        "ai-safety"
+      ],
+      "raw_text": "All AI tools produce convincing-looking citations that do not exist; cannot be trusted without verification"
+    },
+    {
+      "id": "RC20260515-022",
+      "title": "黄仁勋最初不在特朗普访华名单——媒体报道被冷落后特朗普亲自邀请",
+      "source": "观察者网/虎嗅",
+      "url": "https://www.huxiu.com/article/4858078.html",
+      "lang": "zh-CN",
+      "topic": "科技外交/信息混乱",
+      "claim": "黄仁勋被排除在特朗普访华代表团外（最终：特朗普亲自邀请，黄仁勋成行）",
+      "tags": [
+        "nvidia",
+        "trump",
+        "china-visit",
+        "geopolitics"
+      ],
+      "raw_text": "白宫最初名单缺席黄仁勋，媒体广泛报导被冷落，后特朗普亲自邀请成行"
+    },
+    {
+      "id": "RC20260515-023",
+      "title": "英伟达CEO黄仁勋：中国不应获得英伟达最先进芯片",
+      "source": "观察者网",
+      "url": "https://www.guancha.cn/internation/2026_05_05_815966.shtml",
+      "lang": "zh-CN",
+      "topic": "AI芯片/中美科技博弈",
+      "claim": "黄仁勋公开表态中国不应获得英伟达最先进AI芯片",
+      "tags": [
+        "nvidia",
+        "chip-export",
+        "us-china",
+        "ai-hardware"
+      ],
+      "raw_text": "黄仁勋：中国不应获得英伟达最先进芯片，美国应保持AI领先地位"
+    },
+    {
+      "id": "RC20260515-024",
+      "title": "英伟达中国业务完全停滞——黄仁勋警告制裁适得其反",
+      "source": "虎嗅",
+      "url": "https://www.huxiu.com/article/4855795.html",
+      "lang": "zh-CN",
+      "topic": "AI芯片出口管制",
+      "claim": "英伟达在华业务完全停滞，中国4个月未购买英伟达芯片",
+      "tags": [
+        "nvidia",
+        "export-control",
+        "china",
+        "ai-hardware"
+      ],
+      "raw_text": "黄仁勋称在华业务完全停滞，警告制裁适得其反，中国四个月未购买英伟达芯片"
+    },
+    {
+      "id": "RC20260515-025",
+      "title": "AI生成视频显示特朗普步态不稳走出Walter Reed医院——PolitiFact核查为假",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/04/21/1135652/weaponized-deepfakes-ai-artificial-intelligence/",
+      "lang": "en",
+      "topic": "政治Deepfake",
+      "claim": "特朗普步态不稳走出Walter Reed医院（AI生成，PolitiFact证实为假）",
+      "tags": [
+        "deepfake",
+        "trump",
+        "political",
+        "health-hoax"
+      ],
+      "raw_text": "AI-generated video of Trump walking unsteadily from Walter Reed spread April 2026, confirmed synthetic by PolitiFact"
+    },
+    {
+      "id": "RC20260515-026",
+      "title": "英国15%成人无意中接触过Deepfake色情内容——较2024年增近三倍",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/05/14/1137161/ai-porn-nonconsensual-deepfakes-takedown-piracy-copyright/",
+      "lang": "en",
+      "topic": "Deepfake社会危害",
+      "claim": "英国15%成人偶遇deepfake色情内容，技术商品化使制作门槛极低",
+      "tags": [
+        "deepfake",
+        "nonconsensual",
+        "uk",
+        "social-harm"
+      ],
+      "raw_text": "15% of UK adults encountered deepfake pornography, tripled since 2024, tech commoditized"
+    },
+    {
+      "id": "RC20260515-027",
+      "title": "OpenAI结束微软独家合作，估值8500亿美元，拓展Amazon、Google合作",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/amp/2026/05/13/microsoft-feared-openai-reliance-musk-altman-trial-testimony-reveals.html",
+      "lang": "en",
+      "topic": "AI商业格局",
+      "claim": "OpenAI已与微软、Amazon、Google均建立合作，估值达850亿美元",
+      "tags": [
+        "openai",
+        "microsoft",
+        "business",
+        "ai-industry"
+      ],
+      "raw_text": "OpenAI ends Microsoft exclusivity, expands to Amazon and Google, $850B valuation"
+    },
+    {
+      "id": "RC20260515-028",
+      "title": "Musk v. Altman审判：微软担心对OpenAI过度依赖",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/amp/2026/05/13/microsoft-feared-openai-reliance-musk-altman-trial-testimony-reveals.html",
+      "lang": "en",
+      "topic": "AI商业纠纷",
+      "claim": "微软高管在庭审中承认担忧对OpenAI过度依赖",
+      "tags": [
+        "openai",
+        "microsoft",
+        "musk",
+        "altman",
+        "legal"
+      ],
+      "raw_text": "Microsoft feared being too dependent on OpenAI, Musk-Altman trial testimony reveals"
+    },
+    {
+      "id": "RC20260515-029",
+      "title": "谷歌：黑客正利用AI武器化零日漏洞——AI安全新威胁",
+      "source": "Fortune/Google",
+      "url": "https://fortune.com/2026/05/12/google-hackers-using-ai-to-weaponize-zero-day-vulnerabilities/",
+      "lang": "en",
+      "topic": "AI安全/网络攻击",
+      "claim": "黑客利用AI工具大规模武器化零日漏洞",
+      "tags": [
+        "cybersecurity",
+        "ai",
+        "zero-day",
+        "google"
+      ],
+      "raw_text": "Google stopped hackers using AI to plan mass vulnerability exploitation"
+    },
+    {
+      "id": "RC20260515-030",
+      "title": "微软、Google、xAI同意向美国政府提前开放AI模型测试",
+      "source": "CNBC/CNN",
+      "url": "https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html",
+      "lang": "en",
+      "topic": "AI监管/政府合作",
+      "claim": "三家科技巨头同意让美国政府在发布前测试AI模型",
+      "tags": [
+        "ai-regulation",
+        "us-government",
+        "microsoft",
+        "google",
+        "xai"
+      ],
+      "raw_text": "Microsoft, Google, xAI give US government early access to AI models before release"
+    },
+    {
+      "id": "RC20260515-031",
+      "title": "马斯克解散大模型企业xAI，建造世界最大AI芯片工厂",
+      "source": "上观新闻",
+      "url": "https://www.shobserver.com/staticsg/res/html/web/newsDetail.html?id=1108411&sid=11",
+      "lang": "zh-CN",
+      "topic": "AI产业动向",
+      "claim": "马斯克宣布解散xAI并转型建造最大AI芯片工厂",
+      "tags": [
+        "musk",
+        "xai",
+        "chip-factory",
+        "ai-industry"
+      ],
+      "raw_text": "马斯克解散xAI大模型业务，转向建造世界最大AI芯片工厂"
+    },
+    {
+      "id": "RC20260515-032",
+      "title": "网信部门处置涉谣违法违规账号累计2210个",
+      "source": "中央网信办",
+      "url": "https://cpc.people.com.cn/n1/2026/0505/c64387-40713685.html",
+      "lang": "zh-CN",
+      "topic": "网络治理",
+      "claim": "网信办最新公告：已处置2210个涉谣账号",
+      "tags": [
+        "governance",
+        "china",
+        "account-suspension"
+      ],
+      "raw_text": "网信部门累计处置涉谣违法违规账号2210个"
+    },
+    {
+      "id": "RC20260515-033",
+      "title": "2026全球选举密集：Deepfake合成媒体成选举干预重大风险",
+      "source": "WEF/Creati.ai",
+      "url": "https://creati.ai/ai-news/2026-02-03/2026-international-ai-safety-report-deepfakes-ai-advancement/",
+      "lang": "en",
+      "topic": "选举安全/Deepfake",
+      "claim": "2026年全球多国大选面临deepfake干预风险，已超越临界点",
+      "tags": [
+        "election",
+        "deepfake",
+        "democracy",
+        "global"
+      ],
+      "raw_text": "Deepfakes crossed critical threshold in 2026 with elections across continents"
+    },
+    {
+      "id": "RC20260515-034",
+      "title": "美国伪科学问题报告：多个联邦机构减少科学专业人员，伪科学填补空白",
+      "source": "Skeptical Inquirer",
+      "url": "https://skepticalinquirer.org/2026/04/the-united-states-of-pseudoscience/",
+      "lang": "en",
+      "topic": "伪科学/政策",
+      "claim": "2026年美国政府削减科学预算，导致伪科学话语影响力上升",
+      "tags": [
+        "pseudoscience",
+        "us-policy",
+        "science-funding"
+      ],
+      "raw_text": "US federal agencies reduced scientific staff, pseudoscience filling public discourse vacuum"
+    },
+    {
+      "id": "RC20260515-035",
+      "title": "Virginia Tech研究：生成式AI已可伪造所有类型的数字内容",
+      "source": "Virginia Tech News",
+      "url": "https://news.vt.edu/articles/2026/04/eng-cs-deepfake-cybersecurity-vulnerable-to-AI.html",
+      "lang": "en",
+      "topic": "AI内容伪造能力",
+      "claim": "生成式AI可伪造任何数字内容，现有网络安全防御面临根本性挑战",
+      "tags": [
+        "generative-ai",
+        "cybersecurity",
+        "digital-forgery"
+      ],
+      "raw_text": "No digital content is safe from generative AI, security defenses face fundamental challenge"
+    },
+    {
+      "id": "RC20260515-036",
+      "title": "美国立法提案：打击Deepfake传播并保护举报人",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2026/04/27/ai-legislation-deepfakes-whistleblowers.html",
+      "lang": "en",
+      "topic": "AI立法",
+      "claim": "美国国会提出AI法案，专门针对Deepfake分发和非合意性图像",
+      "tags": [
+        "legislation",
+        "deepfake",
+        "us-congress",
+        "whistleblower"
+      ],
+      "raw_text": "AI bill would crack down on deepfake distribution and protect whistleblowers"
+    },
+    {
+      "id": "RC20260515-037",
+      "title": "中国互联网辟谣平台2025年全年发布辟谣稿件17000余篇",
+      "source": "中国互联网联合辟谣平台",
+      "url": "https://www.piyao.org.cn/",
+      "lang": "zh-CN",
+      "topic": "辟谣工作统计",
+      "claim": "2025年辟谣总量创历史新高，12期月度辟谣榜，248期今日辟谣榜",
+      "tags": [
+        "fact-checking",
+        "china",
+        "statistics"
+      ],
+      "raw_text": "中国互联网联合辟谣平台2025年共发布辟谣稿件1.7万余篇"
+    },
+    {
+      "id": "RC20260515-038",
+      "title": "碰瓷社会矛盾：造谣短视频利用热点事件煽情传播",
+      "source": "最高人民检察院",
+      "url": "https://www.spp.gov.cn/spp/zdgz/",
+      "lang": "zh-CN",
+      "topic": "造谣手法分析",
+      "claim": "造谣短视频通过嫁接热点矛盾事件煽情传播，流量变现牟利",
+      "tags": [
+        "short-video",
+        "social-manipulation",
+        "clickbait"
+      ],
+      "raw_text": "利用热点矛盾事件嫁接谣言，借助情绪化内容实现快速传播"
+    },
+    {
+      "id": "RC20260515-039",
+      "title": "网信部门清朗专项行动：重点整治制造网络谣言等5类突出问题",
+      "source": "中央网信办",
+      "url": "https://www.cac.gov.cn/wxzw/qinglang/A093711index_1.htm",
+      "lang": "zh-CN",
+      "topic": "网络治理专项行动",
+      "claim": "清朗专项行动覆盖谣言、不良内容、算法滥用等5类问题",
+      "tags": [
+        "china",
+        "governance",
+        "internet-regulation"
+      ],
+      "raw_text": "清朗系列专项行动重点整治制造网络谣言等5类突出问题"
+    },
+    {
+      "id": "RC20260515-040",
+      "title": "伪造公共政策、曲解专业信息、伪科普误导公众——网信公安协同整治谣言乱象",
+      "source": "新浪财经/网信部门",
+      "url": "https://finance.sina.com.cn/wm/2026-04-09/doc-inhtwaif9004288.shtml",
+      "lang": "zh-CN",
+      "topic": "谣言类型综述",
+      "claim": "三类主要谣言：伪造政策、曲解专业信息、伪科普",
+      "tags": [
+        "rumor-taxonomy",
+        "governance",
+        "science-communication"
+      ],
+      "raw_text": "伪造公共政策、曲解专业信息、伪科普误导公众三类谣言协同整治"
+    }
+  ]
+}

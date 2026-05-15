@@ -1,0 +1,1149 @@
+{
+  "run_meta": {
+    "date": "2026-05-15",
+    "timestamp": "220330",
+    "agents": [
+      "Fact-Check-Agent",
+      "Pseudo-Science-Agent",
+      "Logic-Agent",
+      "Sentiment-Values-Agent"
+    ],
+    "items_reviewed": 40
+  },
+  "verdicts": [
+    {
+      "item_id": "RC20260515-001",
+      "title": "AI生成谣言工业化传播链条",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "新华网等官方媒体多次报道证实，网信办公开数据显示AI生成谣言数量持续攀升",
+        "tsver": false,
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 4
+      },
+      "logic": {
+        "fallacies": [],
+        "notes": "陈述性事实描述，无明显逻辑谬误",
+        "explanation_quality": 4
+      },
+      "sentiment": {
+        "clickbait_score": 0.3,
+        "value_concerns": [
+          "可能加剧公众对AI的不信任情绪"
+        ],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-002",
+      "title": "多个大模型声称新车牌将换成白底黑字",
+      "fact_check": {
+        "label": "Refuted",
+        "evidence": "公安部官网、交管12123均无相关政策发布；腾讯元宝明确辟谣；属AI幻觉导致的错误信息扩散",
+        "tsver": true,
+        "tsver_note": "TSVer追问：是否有官方文件？→无。是否有试点城市公告？→无。时序核查确认：谣言源于AI训练数据中的草案讨论混入",
+        "explanation_quality": 5
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 4
+      },
+      "logic": {
+        "fallacies": [
+          "虚假权威（多个大模型'众口一词'被误认为可信证据）",
+          "循环引用（AI引用AI生成的错误信息）"
+        ],
+        "explanation_quality": 5
+      },
+      "sentiment": {
+        "clickbait_score": 0.5,
+        "value_concerns": [
+          "AI工具公信力问题",
+          "公众对AI信息的盲目信任"
+        ],
+        "explanation_quality": 4
+      }
+    },
+    {
+      "item_id": "RC20260515-003",
+      "title": "WEF：虚假/错误信息列入2026全球十大短期风险",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "WEF官方报告可查，多家权威媒体报道一致",
+        "tsver": false,
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "notes": "权威机构数据，无明显谬误",
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.2,
+        "value_concerns": [],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-004",
+      "title": "AI生成图像声称显示马杜罗被捕",
+      "fact_check": {
+        "label": "Refuted",
+        "evidence": "马杜罗未被捕，图像为AI生成；多家事实核查机构确认；NPR等权威媒体有明确报道",
+        "tsver": true,
+        "tsver_note": "TSVer追问：事件发生时间线？→2026年1月初，但马杜罗官方媒体同期出现。视频/图像元数据？→AI生成特征明显",
+        "explanation_quality": 5
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [
+          "以假乱真（AI图像作为'证据'）",
+          "紧迫性操控（制造紧张感促进传播）"
+        ],
+        "explanation_quality": 4
+      },
+      "sentiment": {
+        "clickbait_score": 0.85,
+        "value_concerns": [
+          "政治操纵",
+          "国际舆论干预",
+          "AI内容作为政治武器"
+        ],
+        "explanation_quality": 5
+      }
+    },
+    {
+      "item_id": "RC20260515-005",
+      "title": "Grok AI持续生成非合意性图像",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "NBC News等多家媒体实测确认，2026年国际AI安全报告也有记录",
+        "tsver": false,
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [
+          "承诺-行动不一致（企业承诺与实际行为矛盾）"
+        ],
+        "explanation_quality": 4
+      },
+      "sentiment": {
+        "clickbait_score": 0.6,
+        "value_concerns": [
+          "性别暴力",
+          "数字安全",
+          "AI伦理"
+        ],
+        "explanation_quality": 4
+      }
+    },
+    {
+      "item_id": "RC20260515-006",
+      "title": "韩国AI Basic Act强制标注生成式AI内容",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "韩国政府官方公告，多家国际媒体报道一致",
+        "tsver": false,
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.1,
+        "value_concerns": [],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-007",
+      "title": "量子水杯/量子床垫/量子纠缠疗愈——伪科学产品泛滥",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "监管部门多次查处相关产品，学术界明确否定疗效；中国消费者协会有专项调查",
+        "tsver": false,
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": true,
+        "patterns": [
+          "科学术语滥用（量子概念无端延伸）",
+          "效果夸大（'万能治疗'）",
+          "机制黑箱（不解释作用原理）",
+          "无法证伪"
+        ],
+        "severity": "high",
+        "explanation_quality": 5
+      },
+      "logic": {
+        "fallacies": [
+          "无法证伪的主张",
+          "转移举证责任",
+          "诉诸神秘性"
+        ],
+        "explanation_quality": 5
+      },
+      "sentiment": {
+        "clickbait_score": 0.7,
+        "value_concerns": [
+          "消费者权益",
+          "科学素养",
+          "经济诈骗"
+        ],
+        "explanation_quality": 4
+      }
+    },
+    {
+      "item_id": "RC20260515-008",
+      "title": "惊蛰吃安宫牛黄丸可预防中风",
+      "fact_check": {
+        "label": "Refuted",
+        "evidence": "安宫牛黄丸为急救药，随意服用有肝毒性和汞超标风险；多家三甲医院神经科专家明确辟谣",
+        "tsver": true,
+        "tsver_note": "TSVer追问：是否有临床证据支持预防效果？→无任何RCT证据。药品说明书是否有此适应症？→无",
+        "explanation_quality": 5
+      },
+      "pseudo_science": {
+        "detected": true,
+        "patterns": [
+          "传统医学过度延伸（节气养生绑定急救药）",
+          "预防效果无证据",
+          "安全风险被忽视"
+        ],
+        "severity": "high",
+        "explanation_quality": 5
+      },
+      "logic": {
+        "fallacies": [
+          "诉诸传统",
+          "相关性≠因果（服药时间与健康结果无关联）",
+          "单一案例泛化"
+        ],
+        "explanation_quality": 5
+      },
+      "sentiment": {
+        "clickbait_score": 0.75,
+        "value_concerns": [
+          "公共健康危害",
+          "弱势群体（老年人）风险",
+          "医疗误导"
+        ],
+        "explanation_quality": 5
+      }
+    },
+    {
+      "item_id": "RC20260515-009",
+      "title": "2026年Deepfake已达无法区分阈值",
+      "fact_check": {
+        "label": "Conflicting Evidence",
+        "evidence": "研究显示非专家确实难以区分，但同期研究（RC20260515-010）显示人类在视频deepfake检测上优于AI；不同场景结论不一",
+        "tsver": true,
+        "tsver_note": "TSVer追问：在哪些具体场景下无法区分？→主要指低分辨率社交媒体内容，非所有场景",
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [
+          "过度泛化（特定场景结论扩展至所有场景）"
+        ],
+        "explanation_quality": 4
+      },
+      "sentiment": {
+        "clickbait_score": 0.55,
+        "value_concerns": [
+          "可能制造技术恐慌",
+          "过度悲观影响媒体素养教育"
+        ],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-010",
+      "title": "AI图片Deepfake检测97%准确率，视频检测接近随机",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "佛罗里达大学同行评审研究，可查阅原始论文",
+        "tsver": false,
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.3,
+        "value_concerns": [],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-011",
+      "title": "8家车企因OTA锁电被约谈名单流传",
+      "fact_check": {
+        "label": "Refuted",
+        "evidence": "比亚迪、特斯拉、蔚来、小鹏、智己、广汽埃安集体否认；中国汽车工业协会发声明；工信部无相关约谈记录",
+        "tsver": true,
+        "tsver_note": "TSVer追问：名单来源？→无可追溯官方来源，特征与AI生成内容吻合。企业否认是否协调？→各企业独立发声，非联合声明模板",
+        "explanation_quality": 5
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [
+          "匿名权威（'据悉'/'内部消息'）",
+          "未注明来源的具体数字增加可信度外观"
+        ],
+        "explanation_quality": 4
+      },
+      "sentiment": {
+        "clickbait_score": 0.8,
+        "value_concerns": [
+          "商业信誉损害",
+          "资本市场波动",
+          "消费者恐慌"
+        ],
+        "explanation_quality": 5
+      }
+    },
+    {
+      "item_id": "RC20260515-012",
+      "title": "Chrome悄悄下载4GB Gemini模型",
+      "fact_check": {
+        "label": "Conflicting Evidence",
+        "evidence": "多家科技媒体报道确认下载行为存在；但Google表示属于可选功能预加载，非强制；用户是否明确同意存争议",
+        "tsver": true,
+        "tsver_note": "TSVer追问：用户协议是否覆盖此操作？→存争议，EULA模糊。下载是否静默无通知？→初始版本确实无明显通知",
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [
+          "偷换概念（'下载'vs'预加载优化'定义不同产生不同判断）"
+        ],
+        "explanation_quality": 4
+      },
+      "sentiment": {
+        "clickbait_score": 0.65,
+        "value_concerns": [
+          "用户隐私权",
+          "知情同意",
+          "平台权力滥用"
+        ],
+        "explanation_quality": 4
+      }
+    },
+    {
+      "item_id": "RC20260515-013",
+      "title": "AI预测彩票号码百分百中奖",
+      "fact_check": {
+        "label": "Refuted",
+        "evidence": "彩票为随机抽奖，数学上无法预测；中国福利彩票官方明确声明；此为典型AI诈骗话术",
+        "tsver": false,
+        "explanation_quality": 5
+      },
+      "pseudo_science": {
+        "detected": true,
+        "patterns": [
+          "虚假技术权威（以AI名义兜售不可能的功能）",
+          "百分之百承诺（无法证伪的过度承诺）"
+        ],
+        "severity": "high",
+        "explanation_quality": 5
+      },
+      "logic": {
+        "fallacies": [
+          "诉诸技术权威",
+          "确定性错误（概率事件被描述为必然）"
+        ],
+        "explanation_quality": 5
+      },
+      "sentiment": {
+        "clickbait_score": 0.9,
+        "value_concerns": [
+          "直接经济诈骗",
+          "弱势群体针对性欺骗",
+          "AI技术公信力滥用"
+        ],
+        "explanation_quality": 5
+      }
+    },
+    {
+      "item_id": "RC20260515-014",
+      "title": "杭州滨江发生恶性刑事案件（AI生成捏造）",
+      "fact_check": {
+        "label": "Refuted",
+        "evidence": "杭州警方辟谣，无相关案件记录；图片经检测含AI生成特征；网信办认定为典型AI造谣案例",
+        "tsver": true,
+        "tsver_note": "TSVer追问：杭州警方同期有无相关通报？→无。图像来源可追溯？→图像元数据和风格与AI生成工具一致",
+        "explanation_quality": 5
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [
+          "以假乱真（AI生成内容作为事实证据）",
+          "情绪驱动传播"
+        ],
+        "explanation_quality": 4
+      },
+      "sentiment": {
+        "clickbait_score": 0.9,
+        "value_concerns": [
+          "公共安全恐慌",
+          "社会稳定破坏",
+          "AI工具滥用"
+        ],
+        "explanation_quality": 5
+      }
+    },
+    {
+      "item_id": "RC20260515-015",
+      "title": "扫码领取五险一金补贴",
+      "fact_check": {
+        "label": "Refuted",
+        "evidence": "人力资源和社会保障部明确辟谣；无任何政策依据；典型网络诈骗模式",
+        "tsver": false,
+        "explanation_quality": 5
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [
+          "诉诸权威（冒充官方机构）",
+          "利用信息不对称（五险一金政策复杂）"
+        ],
+        "explanation_quality": 4
+      },
+      "sentiment": {
+        "clickbait_score": 0.85,
+        "value_concerns": [
+          "直接金融诈骗",
+          "社保政策混乱利用",
+          "弱势劳动者针对"
+        ],
+        "explanation_quality": 5
+      }
+    },
+    {
+      "item_id": "RC20260515-016",
+      "title": "云南德宏芒市发生5.8级地震（缅甸地震视频嫁接）",
+      "fact_check": {
+        "label": "Refuted",
+        "evidence": "中国地震台网同期无此震级记录；视频经地理位置比对确认为缅甸境内；网信办典型案例",
+        "tsver": true,
+        "tsver_note": "TSVer追问：中国地震台网同期数据？→无记录。视频背景建筑/植被是否与云南芒市一致？→专家比对后确认为缅甸境内",
+        "explanation_quality": 5
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [
+          "张冠李戴（嫁接视频，地点错误归因）"
+        ],
+        "explanation_quality": 4
+      },
+      "sentiment": {
+        "clickbait_score": 0.88,
+        "value_concerns": [
+          "灾难恐慌制造",
+          "公共紧急资源浪费",
+          "地区稳定"
+        ],
+        "explanation_quality": 5
+      }
+    },
+    {
+      "item_id": "RC20260515-017",
+      "title": "中国残疾人联合会开展APP线上试点（机构冒充）",
+      "fact_check": {
+        "label": "Refuted",
+        "evidence": "中国残联发声明从未授权；无官网或公文可查；典型机构冒充诈骗",
+        "tsver": false,
+        "explanation_quality": 5
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [
+          "诉诸权威（冒充知名公益机构）",
+          "利用弱势群体信任"
+        ],
+        "explanation_quality": 4
+      },
+      "sentiment": {
+        "clickbait_score": 0.8,
+        "value_concerns": [
+          "针对残障人士诈骗",
+          "公益机构公信力损害",
+          "弱势群体保护"
+        ],
+        "explanation_quality": 5
+      }
+    },
+    {
+      "item_id": "RC20260515-018",
+      "title": "Claude AI幻觉率约3~4%，为2026年主流模型最低",
+      "fact_check": {
+        "label": "Conflicting Evidence",
+        "evidence": "不同基准测试得出不同数字（3%~9%均见报道）；测试方法差异大；'最低'结论在不同评测标准下不一定成立",
+        "tsver": true,
+        "tsver_note": "TSVer追问：使用哪种基准测试？→未统一，TruthfulQA、HaluEval等得分不同。测试样本来源？→部分测试可能存在选择偏差",
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [
+          "测量偏差（不同基准选择性引用）",
+          "精确数字错觉"
+        ],
+        "explanation_quality": 4
+      },
+      "sentiment": {
+        "clickbait_score": 0.4,
+        "value_concerns": [
+          "商业竞争中的评测公正性"
+        ],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-019",
+      "title": "Gemini/DeepSeek在施压下50%接受假信息",
+      "fact_check": {
+        "label": "Not Enough Evidence",
+        "evidence": "RIT研究结果，但50%为非精确引用，原研究描述为'近半数'；实验条件和提示词设计影响结果",
+        "tsver": true,
+        "tsver_note": "TSVer追问：原始论文方法论？→需进一步核查样本量和提示词设计。结果是否经过同行评审？→暂未确认",
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [
+          "精确数字化（'约50%'被报道为精确值）"
+        ],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.5,
+        "value_concerns": [
+          "可能强化对特定AI产品的偏见"
+        ],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-020",
+      "title": "推理模型在摘要任务上幻觉率>10%",
+      "fact_check": {
+        "label": "Not Enough Evidence",
+        "evidence": "来源为行业报告而非同行评审论文，具体测试条件不明；但多方数据均显示推理模型在事实性摘要上表现不稳定",
+        "tsver": false,
+        "explanation_quality": 3
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.35,
+        "value_concerns": [],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-021",
+      "title": "所有主流AI模型均可生成不存在的引用文献",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "多项独立研究（包括斯坦福、MIT等）通过系统测试证实；法律、医学领域均有具体事故案例",
+        "tsver": false,
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.4,
+        "value_concerns": [
+          "学术诚信",
+          "专业信息可靠性"
+        ],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-022",
+      "title": "黄仁勋最初不在访华名单，后临时邀请",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "多家媒体先后报道：最初名单缺席→特朗普亲自邀请→黄仁勋成行，时间线清晰；英伟达发言人确认",
+        "tsver": true,
+        "tsver_note": "TSVer追问：最初报道黄仁勋缺席的准确时间？→5月11日白宫名单披露时。确认成行时间？→5月13日特朗普飞抵北京前",
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.6,
+        "value_concerns": [
+          "早期'被冷落'报道制造了不必要的信息混乱"
+        ],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-023",
+      "title": "黄仁勋：中国不应获得英伟达最先进芯片",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "黄仁勋公开讲话记录，多家媒体一致报道",
+        "tsver": false,
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.45,
+        "value_concerns": [],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-024",
+      "title": "英伟达中国业务完全停滞",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "英伟达财报数据支持，黄仁勋公开表态，多家分析机构数据一致",
+        "tsver": false,
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.45,
+        "value_concerns": [],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-025",
+      "title": "AI生成视频：特朗普步态不稳走出Walter Reed（PolitiFact已核查为假）",
+      "fact_check": {
+        "label": "Refuted",
+        "evidence": "PolitiFact明确核查为AI合成；视频分析工具检测到深度伪造特征；白宫时间表无此就诊记录",
+        "tsver": true,
+        "tsver_note": "TSVer追问：白宫日程记录？→无对应就诊安排。视频元数据？→AI生成特征明确。传播路径？→Facebook算法推荐加速",
+        "explanation_quality": 5
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [
+          "以假乱真（视觉内容作为政治事件证据）",
+          "恐惧诉求（总统健康问题引发公众焦虑）"
+        ],
+        "explanation_quality": 5
+      },
+      "sentiment": {
+        "clickbait_score": 0.9,
+        "value_concerns": [
+          "政治稳定",
+          "公众知情权",
+          "AI内容军事化"
+        ],
+        "explanation_quality": 5
+      }
+    },
+    {
+      "item_id": "RC20260515-026",
+      "title": "英国15%成人接触过Deepfake色情内容",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "英国在线安全委员会发布的调查数据，方法论可查",
+        "tsver": false,
+        "explanation_quality": 3
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.5,
+        "value_concerns": [
+          "性别暴力",
+          "数字权利"
+        ],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-027",
+      "title": "OpenAI结束微软独家合作，估值8500亿美元",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "官方公告，CNBC、Fortune等权威商业媒体报道一致",
+        "tsver": false,
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.3,
+        "value_concerns": [],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-028",
+      "title": "Musk v. Altman审判：微软担心对OpenAI过度依赖",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "法庭证词为公开记录",
+        "tsver": false,
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.35,
+        "value_concerns": [],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-029",
+      "title": "谷歌：黑客利用AI武器化零日漏洞",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "Google Threat Intelligence Group官方报告",
+        "tsver": false,
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.4,
+        "value_concerns": [
+          "网络安全威胁"
+        ],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-030",
+      "title": "微软、Google、xAI同意让美政府提前测试AI模型",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "官方声明，CNBC/CNN报道一致",
+        "tsver": false,
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.2,
+        "value_concerns": [],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-031",
+      "title": "马斯克解散xAI，建造世界最大AI芯片工厂",
+      "fact_check": {
+        "label": "Conflicting Evidence",
+        "evidence": "xAI的大模型业务并未真正'解散'，而是整合重组；'世界最大'芯片工厂在建但夸大程度存疑；标题与实际内容有出入",
+        "tsver": true,
+        "tsver_note": "TSVer追问：xAI官方声明是否用'解散'？→未使用，媒体二次解读；芯片工厂规模是否有第三方核实？→部分核实，'最大'仍存争议",
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [
+          "标题党（夸大事件性质）",
+          "最高级错误（'世界最大'未经独立核实）"
+        ],
+        "explanation_quality": 4
+      },
+      "sentiment": {
+        "clickbait_score": 0.72,
+        "value_concerns": [
+          "科技资讯质量",
+          "标题党标准"
+        ],
+        "explanation_quality": 4
+      }
+    },
+    {
+      "item_id": "RC20260515-032",
+      "title": "网信部门处置涉谣账号累计2210个",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "中央网信办官方公告数据",
+        "tsver": false,
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.15,
+        "value_concerns": [],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-033",
+      "title": "2026全球选举密集，Deepfake成选举干预重大风险",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "WEF安全报告、多国选举机构确认，已有实际干预案例",
+        "tsver": false,
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.4,
+        "value_concerns": [
+          "民主制度",
+          "选举安全"
+        ],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-034",
+      "title": "美国联邦机构削减科学人员，伪科学填补空白",
+      "fact_check": {
+        "label": "Not Enough Evidence",
+        "evidence": "联邦机构裁员有据可查，但'伪科学填补空白'的因果关系需更多证据支持",
+        "tsver": false,
+        "explanation_quality": 3
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [
+          "因果倒置风险（裁员→伪科学扩散的机制尚需验证）"
+        ],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.4,
+        "value_concerns": [
+          "科学政策"
+        ],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-035",
+      "title": "Virginia Tech：生成式AI已可伪造所有数字内容",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "同行评审研究，具体实验验证了文本、图像、音频、视频均可伪造",
+        "tsver": false,
+        "explanation_quality": 4
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.4,
+        "value_concerns": [
+          "数字信任"
+        ],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-036",
+      "title": "美国立法提案：打击Deepfake传播并保护举报人",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "CNBC报道，国会议案可查",
+        "tsver": false,
+        "explanation_quality": 3
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.2,
+        "value_concerns": [],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-037",
+      "title": "中国辟谣平台2025年发布辟谣稿件17000余篇",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "官方平台年度报告数据",
+        "tsver": false,
+        "explanation_quality": 3
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.1,
+        "value_concerns": [],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-038",
+      "title": "造谣短视频利用热点事件煽情传播",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "最高检报告及多项传播学研究支持",
+        "tsver": false,
+        "explanation_quality": 3
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.3,
+        "value_concerns": [
+          "情绪操控",
+          "信息生态"
+        ],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-039",
+      "title": "网信部门清朗专项行动整治5类突出问题",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "中央网信办官方公告",
+        "tsver": false,
+        "explanation_quality": 3
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.1,
+        "value_concerns": [],
+        "explanation_quality": 3
+      }
+    },
+    {
+      "item_id": "RC20260515-040",
+      "title": "三类谣言综述：伪造政策、曲解专业信息、伪科普",
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "网信部门分类与学界分类吻合，有具体案例支撑",
+        "tsver": false,
+        "explanation_quality": 3
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [],
+        "explanation_quality": 3
+      },
+      "logic": {
+        "fallacies": [],
+        "explanation_quality": 3
+      },
+      "sentiment": {
+        "clickbait_score": 0.2,
+        "value_concerns": [],
+        "explanation_quality": 3
+      }
+    }
+  ],
+  "summary": {
+    "averitec_distribution": {
+      "Supported": 23,
+      "Refuted": 10,
+      "Conflicting Evidence": 4,
+      "Not Enough Evidence": 3
+    },
+    "tsver_triggered": 13,
+    "avg_explanation_quality": 4.05,
+    "total_verdicts": 40
+  }
+}

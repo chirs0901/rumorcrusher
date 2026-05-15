@@ -2,7 +2,7 @@
 
 > RumorCrusher 的"审核委员会"由多个独立 Agent 组成，每个 Agent 有清晰职责和输出契约。这份文档既是给我（执行者）的提示模板源，也是给你（项目主人）的可读架构图。
 
-## 流水线总览
+## 流水线总览（v0.2 · Benchmark-Driven QA）
 
 ```
               ┌──────────────────────┐
@@ -13,22 +13,32 @@
               │   01-raw/items.json  │  原始素材池
               └──────────┬───────────┘
                          ▼
+            ┌──────────────────────────────────┐
+            │ ②a Check-Worthiness Filter Agent │  借鉴 MultiCW 上游筛查
+            │  每条打 check_worthiness (0~1)   │
+            │  分流：高/中/低 三档处理预算     │
+            └──────────────┬───────────────────┘
+                           ▼
    ┌─────────────────────┼─────────────────────┐
    ▼                     ▼                     ▼
 ┌────────┐         ┌──────────┐         ┌──────────┐
 │ Fact   │         │  Pseudo  │         │  Logic   │      ┌──────────┐
 │ Check  │         │  Science │         │ Coherence│  +   │ Sentiment│
 │ Agent  │         │  Agent   │         │  Agent   │      │ /Values  │
+│(含UnR  │         │          │         │(含TSVer  │      │          │
+│ 不确定)│         │          │         │ 时序追问)│      │          │
 └───┬────┘         └────┬─────┘         └────┬─────┘      └────┬─────┘
     │                   │                    │                  │
     └───────┬───────────┴────────────────────┴──────────────────┘
             ▼
-   ┌────────────────────────┐
-   │ 02-annotations/*.json  │   各Agent的判定 + 证据链
-   └────────────┬───────────┘
+   ┌────────────────────────────────┐
+   │ 02-annotations/*.json          │   各Agent的判定 + 证据链
+   │   含 averitec_label 4 级标签   │   (Supported/Refuted/NotEnough/Conflicting)
+   │   含 explanation_quality 1-5   │
+   └────────────┬───────────────────┘
                 ▼
    ┌────────────────────────┐
-   │  ② Synthesizer Agent   │   综合判定（采纳/有问题/边缘）
+   │  ② Synthesizer Agent   │   综合判定，含 verdict: unknown 选项
    └────────────┬───────────┘
                 ▼
    ┌────────────────────────────────────────┐
@@ -39,13 +49,25 @@
    │   • 05-methodology-delta.md (新方法论) │
    └────────────┬───────────────────────────┘
                 ▼
+   ┌──────────────────────────┐
+   │  ④ Self-Evaluation Agent │  借鉴 RealFactBench 4维评估
+   ├──────────────────────────┤
+   │  写入 06-self-eval.md：  │
+   │   • AVeriTeC 4 标签分布  │
+   │   • Unknown Rate (UnR)   │  目标区间 5%~25%
+   │   • avg explanation_qty  │  目标 ≥ 3.5
+   │   • TSVer 时序触发数     │
+   │   • check-worthiness 分布 │
+   └──────────────┬───────────┘
+                  ▼
    ┌────────────────────────┐
-   │  ④ Flywheel Agents     │
+   │  ⑤ Flywheel Agents     │
    ├────────────────────────┤
    │  • Skill Updater       │  追加新方法论到 skills/
    │  • Wiki Updater        │  合并干净内容到 wiki/
-   │  • Visualizer (HTML)   │  生成 index.html 仪表盘
-   │  • Notifier (飞书)     │  推送完成通知
+   │  • QA Trend Updater    │  每周生成 wiki/topics/qa-trend-week-N.md
+   │  • Visualizer (HTML)   │  生成 index.html 仪表盘（含UnR趋势卡片）
+   │  • Notifier (飞书+邮件) │  推送完成通知
    │  • Publisher (git)     │  推送到 GitHub Pages
    └────────────────────────┘
 ```

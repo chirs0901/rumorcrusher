@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RumorCrusher · 2026-05-15 · AI谣言与Deepfake每日洞察</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"
+          onerror="this.onerror=null;this.src='https://unpkg.com/d3@7/dist/d3.min.js'"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+    .card { transition: transform .15s ease, box-shadow .15s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .badge-supported { background: #d1fae5; color: #065f46; }
+    .badge-refuted   { background: #fee2e2; color: #991b1b; }
+    .badge-conflict  { background: #fef3c7; color: #92400e; }
+    .badge-nee       { background: #ede9fe; color: #5b21b6; }
+    .badge-pseudo    { background: #fce7f3; color: #9d174d; }
+    .graph-svg { background: #fafafa; border-radius: 12px; }
+    .tag { font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; background: #f1f5f9; color: #475569; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+<!-- 顶部品牌区 -->
+<header class="bg-white border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+    <div>
+      <h1 class="text-2xl font-bold tracking-tight">
+        <span class="text-rose-600">Rumor</span><span class="text-slate-900">Crusher</span>
+      </h1>
+      <p class="text-sm text-slate-500 mt-1">粉碎谣言，侦测事实真伪 · AI虚假信息 &amp; Deepfake 每日洞察</p>
+    </div>
+    <div class="text-right text-sm text-slate-500">
+      <div>2026-05-15（北京时间 22:03）</div>
+      <a href="../index.html" class="text-rose-600 hover:underline">← 历史归档</a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-8 space-y-8">
+
+  <!-- 摘要卡片区 -->
+  <section class="grid grid-cols-2 md:grid-cols-5 gap-4">
+    <div class="card bg-white rounded-xl p-5 shadow-sm">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">总采集</div>
+      <div class="text-3xl font-bold text-slate-900 mt-1">40</div>
+      <div class="text-xs text-slate-500 mt-1">条素材</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm border-l-4 border-emerald-500">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">Supported</div>
+      <div class="text-3xl font-bold text-emerald-600 mt-1">23</div>
+      <div class="text-xs text-slate-500 mt-1">57.5%</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm border-l-4 border-amber-500">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">Warn / Conflict</div>
+      <div class="text-3xl font-bold text-amber-600 mt-1">7</div>
+      <div class="text-xs text-slate-500 mt-1">Conflicting+NEE</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm border-l-4 border-rose-500">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">Refuted</div>
+      <div class="text-3xl font-bold text-rose-600 mt-1">10</div>
+      <div class="text-xs text-slate-500 mt-1">已辟谣剔除</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">avg EQ / TSVer</div>
+      <div class="text-3xl font-bold text-slate-900 mt-1">4.05</div>
+      <div class="text-xs text-slate-500 mt-1">TSVer 13条</div>
+    </div>
+  </section>
+
+  <!-- 主体两栏 -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+    <!-- 左侧：报告卡片 -->
+    <section class="lg:col-span-2 space-y-6">
+
+      <!-- 已辟谣（Refuted）高亮 -->
+      <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-rose-500">
+        <h2 class="text-lg font-bold text-rose-700 mb-4">🔴 已辟谣内容 · Refuted（10条）</h2>
+        <div class="space-y-4">
+
+          <div class="border-l-2 border-rose-300 pl-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">F1. 多个大模型声称新车牌将换白底黑字</h3>
+              <span class="px-2 py-1 rounded text-xs badge-refuted ml-2 shrink-0">Refuted</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">AI幻觉导致的政策谣言。公安部官网、交管12123均无相关政策。TSVer追问：无官方文件编号→确认属于AI→AI循环引用型谣言（新型！）</p>
+            <div class="mt-1 flex gap-2 flex-wrap"><span class="tag">ai-hallucination</span><span class="tag">policy</span><span class="tag">automotive</span></div>
+          </div>
+
+          <div class="border-l-2 border-rose-300 pl-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">F2. AI生成图像声称马杜罗被捕（2026-01）</h3>
+              <span class="px-2 py-1 rounded text-xs badge-refuted ml-2 shrink-0">Refuted</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">AI合成图像混入真实视频，委内瑞拉政治谣言。数百万人看到时已完成传播闭环，马杜罗同期仍在官方媒体出现。</p>
+            <div class="mt-1 flex gap-2 flex-wrap"><span class="tag">deepfake</span><span class="tag">political</span><span class="tag">venezuela</span></div>
+          </div>
+
+          <div class="border-l-2 border-rose-300 pl-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">F3. 惊蛰吃安宫牛黄丸预防中风 ⚠️ 高危</h3>
+              <span class="px-2 py-1 rounded text-xs badge-refuted ml-2 shrink-0">Refuted</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">无任何RCT证据，药品说明书无此适应症；该药含汞，随意服用有肝毒性和汞超标风险。节气+急救药物错误绑定的典型模式。</p>
+            <div class="mt-1 flex gap-2"><span class="tag">health</span><span class="tag badge-pseudo">⚗️ pseudoscience</span></div>
+          </div>
+
+          <div class="border-l-2 border-rose-300 pl-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">F4. "8家车企因OTA锁电被约谈"假名单</h3>
+              <span class="px-2 py-1 rounded text-xs badge-refuted ml-2 shrink-0">Refuted</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">AI生成的假名单包含比亚迪、特斯拉、蔚来、小鹏等，中国汽车工业协会声明"与事实严重不符"。可能引发资本市场波动。</p>
+            <div class="mt-1 flex gap-2"><span class="tag">automotive</span><span class="tag">ev</span><span class="tag">ai-generated</span></div>
+          </div>
+
+          <div class="border-l-2 border-rose-300 pl-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">F5. AI预测彩票号码百分百中奖</h3>
+              <span class="px-2 py-1 rounded text-xs badge-refuted ml-2 shrink-0">Refuted</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">数学不可能。彩票为随机抽奖，中国福彩明确认定为AI诈骗话术，精准针对中老年群体。</p>
+            <div class="mt-1 flex gap-2"><span class="tag">fraud</span><span class="tag badge-pseudo">⚗️ pseudoscience</span><span class="tag">lottery</span></div>
+          </div>
+
+          <div class="border-l-2 border-rose-300 pl-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">F6. 杭州滨江发生恶性刑事案件（AI捏造）</h3>
+              <span class="px-2 py-1 rounded text-xs badge-refuted ml-2 shrink-0">Refuted</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">造谣者利用AI生成工具捏造案情+AI图片，杭州警方无相关记录。网信办第五批典型案例。</p>
+            <div class="mt-1 flex gap-2"><span class="tag">crime-hoax</span><span class="tag">ai-generated</span></div>
+          </div>
+
+          <div class="border-l-2 border-rose-300 pl-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">F7. 扫码领取五险一金补贴</h3>
+              <span class="px-2 py-1 rounded text-xs badge-refuted ml-2 shrink-0">Refuted</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">人社部明确辟谣，涉嫌诈骗。利用社保政策信息不对称实施欺诈，针对外来务工群体。</p>
+            <div class="mt-1 flex gap-2"><span class="tag">fraud</span><span class="tag">social-security</span></div>
+          </div>
+
+          <div class="border-l-2 border-rose-300 pl-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">F8. 云南德宏芒市5.8级地震（缅甸视频嫁接）</h3>
+              <span class="px-2 py-1 rounded text-xs badge-refuted ml-2 shrink-0">Refuted</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">将缅甸地震视频标注为"云南芒市地震废墟"，中国地震台网同期无相关记录。地理特征比对（建筑、植被）确认错误归属。</p>
+            <div class="mt-1 flex gap-2"><span class="tag">disaster</span><span class="tag">fake-video</span></div>
+          </div>
+
+          <div class="border-l-2 border-rose-300 pl-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">F9. 中国残联APP线上试点（机构冒充）</h3>
+              <span class="px-2 py-1 rounded text-xs badge-refuted ml-2 shrink-0">Refuted</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">中国残联声明从未授权，典型机构冒充诈骗，利用公众对公益机构的信任。</p>
+            <div class="mt-1 flex gap-2"><span class="tag">impersonation</span><span class="tag">fraud</span></div>
+          </div>
+
+          <div class="border-l-2 border-rose-300 pl-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">F10. AI视频：特朗普步态不稳走出Walter Reed</h3>
+              <span class="px-2 py-1 rounded text-xs badge-refuted ml-2 shrink-0">Refuted</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">PolitiFact核查确认为AI合成视频，经Facebook算法加速传播。白宫日程无对应就诊安排，视频元数据含AI生成特征。</p>
+            <div class="mt-1 flex gap-2"><span class="tag">deepfake</span><span class="tag">political</span><span class="tag">trump</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 警告/存疑内容 -->
+      <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-amber-500">
+        <h2 class="text-lg font-bold text-amber-700 mb-4">⚠️ 待验证 / 证据冲突（7条）</h2>
+        <div class="space-y-3">
+
+          <article class="card border border-amber-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">W1. Deepfake已达"无法区分阈值"</h3>
+              <span class="px-2 py-1 rounded text-xs badge-conflict ml-2 shrink-0">Conflicting</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">在低分辨率社交媒体场景下部分成立，但高质量视频人类仍可辨别约67%。泛化说法存在过度解读。</p>
+          </article>
+
+          <article class="card border border-amber-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">W2. Chrome悄悄下载4GB Gemini模型</h3>
+              <span class="px-2 py-1 rounded text-xs badge-conflict ml-2 shrink-0">Conflicting</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">下载行为属实，但Google称属于可选功能预加载；EULA覆盖范围存争议。隐私关切有实质依据。</p>
+          </article>
+
+          <article class="card border border-amber-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">W3. Claude AI幻觉率3~4%为全球最低</h3>
+              <span class="px-2 py-1 rounded text-xs badge-conflict ml-2 shrink-0">Conflicting</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">不同基准测试（TruthfulQA/HaluEval等）结论差异显著，3%~9%均见于不同报告。"最低"结论依赖于基准选择。</p>
+          </article>
+
+          <article class="card border border-amber-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">W4. Gemini/DeepSeek施压下50%接受假信息</h3>
+              <span class="px-2 py-1 rounded text-xs badge-nee ml-2 shrink-0">NEE</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">RIT研究结果，但原研究描述为"近半数"而非精确50%；实验方法论和样本量待同行评审确认。</p>
+          </article>
+
+          <article class="card border border-amber-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">W5. 推理模型摘要幻觉率>10%（悖论发现）</h3>
+              <span class="px-2 py-1 rounded text-xs badge-nee ml-2 shrink-0">NEE</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">来源为行业报告非同行评审论文，但多方数据一致显示推理模型在事实性摘要任务中不稳定。</p>
+          </article>
+
+          <article class="card border border-amber-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">W6. 马斯克"解散xAI建世界最大AI芯片工厂"</h3>
+              <span class="px-2 py-1 rounded text-xs badge-conflict ml-2 shrink-0">Conflicting</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">"解散"用词不准确（实为整合重组）；"世界最大"未经第三方独立核实。标题党导致信息失真。</p>
+          </article>
+
+          <article class="card border border-amber-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">W7. 美国削减科学人员导致伪科学填补空白</h3>
+              <span class="px-2 py-1 rounded text-xs badge-nee ml-2 shrink-0">NEE</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">联邦机构裁员有据可查，但裁员→伪科学扩散的因果机制尚需验证，相关性≠因果性。</p>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- 洁净洞察 -->
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-4">✅ 今日核心洞察（Supported）</h2>
+        <div class="space-y-4">
+
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">🌐 WEF：虚假信息列入2026全球十大短期风险</h3>
+              <span class="px-2 py-1 rounded text-xs badge-supported ml-2 shrink-0">Supported</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">与地缘经济对抗、社会极化并列，是2026年最受关注的系统性风险之一。</p>
+            <a href="https://www.weforum.org/stories/2026/03/how-cognitive-manipulation-and-ai-will-shape-disinformation-in-2026/" class="text-xs text-rose-600 hover:underline mt-2 inline-block">来源 ↗</a>
+          </article>
+
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">📊 AI检测静态图片Deepfake达97%，视频检测接近随机</h3>
+              <span class="px-2 py-1 rounded text-xs badge-supported ml-2 shrink-0">Supported</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">佛罗里达大学同行评审研究。关键发现：人类在视频Deepfake检测上反而优于AI（约67%正确率）。</p>
+            <a href="https://news.ufl.edu/2026/02/deepfake-detection/" class="text-xs text-rose-600 hover:underline mt-2 inline-block">来源 ↗</a>
+          </article>
+
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">🇰🇷 韩国AI Basic Act生效：强制标注生成式AI内容</h3>
+              <span class="px-2 py-1 rounded text-xs badge-supported ml-2 shrink-0">Supported</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">2026年1月生效，目前最具操作性的国家级AI内容治理框架之一。</p>
+          </article>
+
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">🏛️ 微软/Google/xAI同意让美政府提前测试AI模型</h3>
+              <span class="px-2 py-1 rounded text-xs badge-supported ml-2 shrink-0">Supported</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">AI监管从事后审查转向前置关口，标志性政策进展（2026-05）。</p>
+          </article>
+
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">⚗️ 量子水杯/床垫/纠缠疗愈——伪科学产品持续泛滥</h3>
+              <span class="px-2 py-1 rounded text-xs badge-pseudo ml-2 shrink-0">Pseudoscience</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">2026年未见改善。量子概念被不法商家包装为"万能科技"行骗，涵盖健康、消费电子等多个领域。</p>
+          </article>
+
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">🎯 黄仁勋访华：信息混乱与最终成行</h3>
+              <span class="px-2 py-1 rounded text-xs badge-supported ml-2 shrink-0">Supported</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">初始报道"被冷落"（5月11日），特朗普亲自邀请（5月12日），最终登上空军一号（5月13日）。科技地缘政治叙事中的信息混乱典型案例。</p>
+            <a href="https://www.huxiu.com/article/4858078.html" class="text-xs text-rose-600 hover:underline mt-2 inline-block">来源 ↗</a>
+          </article>
+
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">🔒 谷歌：黑客用AI武器化零日漏洞，已拦截一次大规模攻击尝试</h3>
+              <span class="px-2 py-1 rounded text-xs badge-supported ml-2 shrink-0">Supported</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">Google Threat Intelligence Group官方报告，AI正在同时成为攻防两端的核心工具。</p>
+            <a href="https://fortune.com/2026/05/12/google-hackers-using-ai-to-weaponize-zero-day-vulnerabilities/" class="text-xs text-rose-600 hover:underline mt-2 inline-block">来源 ↗</a>
+          </article>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 右侧：图谱 + 统计 + 自评 -->
+    <aside class="space-y-6">
+
+      <!-- AVeriTeC 分布可视化 -->
+      <div class="bg-white rounded-xl shadow-sm p-5">
+        <h3 class="font-bold text-slate-900 mb-3 text-sm uppercase tracking-wide">AVeriTeC 分布</h3>
+        <div id="averitec-chart" style="height:220px;"></div>
+      </div>
+
+      <!-- 自评健康打分 -->
+      <div class="bg-white rounded-xl shadow-sm p-5">
+        <h3 class="font-bold text-slate-900 mb-3 text-sm uppercase tracking-wide">流水线健康</h3>
+        <div class="space-y-2 text-sm">
+          <div class="flex justify-between">
+            <span class="text-slate-500">采集量</span>
+            <span class="font-bold text-emerald-600">40 ✅</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-500">avg EQ</span>
+            <span class="font-bold text-emerald-600">4.05 ✅</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-500">TSVer触发</span>
+            <span class="font-bold text-emerald-600">13条 ✅</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-500">UnR</span>
+            <span class="font-bold text-amber-600">0.0% ⚠️</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-500">伪科学检出</span>
+            <span class="font-bold text-rose-600">2条 ✅</span>
+          </div>
+          <div class="flex justify-between border-t border-slate-100 pt-2 mt-2">
+            <span class="text-slate-700 font-medium">综合健康</span>
+            <span class="font-bold text-slate-900">7.5/10</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- D3 关系图谱 -->
+      <div class="bg-white rounded-xl shadow-sm p-5">
+        <h3 class="font-bold text-slate-900 mb-3 text-sm uppercase tracking-wide">今日谣言主题关系图</h3>
+        <div id="graph" class="graph-svg" style="height:300px;"></div>
+      </div>
+
+      <!-- 方法论 Delta -->
+      <div class="bg-white rounded-xl shadow-sm p-5">
+        <h3 class="font-bold text-slate-900 mb-3 text-sm uppercase tracking-wide">📐 方法论 Delta</h3>
+        <div class="space-y-2 text-sm text-slate-600">
+          <div class="border-l-2 border-rose-400 pl-3">
+            <span class="font-semibold text-rose-700">新型！</span> AI→AI循环引用谣言：多模型"众口一词"但无官方文件
+          </div>
+          <div class="border-l-2 border-rose-400 pl-3">
+            <span class="font-semibold text-rose-700">新型！</span> 节气+急救药物错误绑定：预防性使用伪合理性
+          </div>
+          <div class="border-l-2 border-amber-400 pl-3">
+            推理模型摘要幻觉悖论：越强的推理模型在事实性摘要上幻觉率更高
+          </div>
+          <div class="border-l-2 border-slate-300 pl-3">
+            TSVer扩展：增加"数字来源追踪"三问
+          </div>
+        </div>
+      </div>
+
+      <!-- 今日行动要点 -->
+      <div class="bg-rose-50 rounded-xl p-5">
+        <h3 class="font-bold text-rose-800 mb-2 text-sm">🚨 高危谣言追踪</h3>
+        <ul class="text-sm text-rose-700 space-y-1">
+          <li>• 安宫牛黄丸健康谣言——节气期间传播高峰</li>
+          <li>• 车企OTA假名单——资本市场敏感</li>
+          <li>• AI彩票预测诈骗——持续活跃</li>
+          <li>• 政治Deepfake——2026选举周期高风险</li>
+        </ul>
+      </div>
+
+    </aside>
+  </div>
+
+</main>
+
+<footer class="border-t border-slate-200 mt-12 py-6 text-center text-xs text-slate-400">
+  RumorCrusher v0.3 · 2026-05-15 22:03:30 CST ·
+  <a href="../index.html" class="text-rose-500 hover:underline">历史归档</a> ·
+  <a href="https://chirs0901.github.io/rumorcrusher/2026-05-15/" class="text-rose-500 hover:underline">公开链接</a>
+</footer>
+
+<script>
+// AVeriTeC 饼图
+const avData = [
+  { label: "Supported", value: 23, color: "#10b981" },
+  { label: "Refuted",   value: 10, color: "#ef4444" },
+  { label: "Conflicting", value: 4, color: "#f59e0b" },
+  { label: "NEE",       value: 3,  color: "#8b5cf6" }
+];
+
+(function() {
+  const w = document.getElementById('averitec-chart').offsetWidth || 280;
+  const h = 220, r = Math.min(w, h) / 2 - 20;
+  const svg = d3.select("#averitec-chart").append("svg")
+    .attr("width", w).attr("height", h);
+  const g = svg.append("g").attr("transform", `translate(${w/2-40},${h/2})`);
+  const pie = d3.pie().value(d => d.value);
+  const arc = d3.arc().innerRadius(r*0.5).outerRadius(r);
+  const arcs = g.selectAll("path").data(pie(avData)).enter().append("path")
+    .attr("d", arc).attr("fill", d => d.data.color).attr("stroke","white").attr("stroke-width",2);
+  // Legend
+  const legend = svg.append("g").attr("transform", `translate(${w-85},20)`);
+  avData.forEach((d, i) => {
+    const row = legend.append("g").attr("transform", `translate(0,${i*28})`);
+    row.append("rect").attr("width",12).attr("height",12).attr("fill",d.color).attr("rx",3);
+    row.append("text").attr("x",16).attr("y",10).text(`${d.label} ${d.value}`)
+      .style("font-size","11px").style("fill","#475569");
+  });
+  // Center total
+  g.append("text").attr("text-anchor","middle").attr("dy","0.35em")
+    .text("40").style("font-size","22px").style("font-weight","700").style("fill","#1e293b");
+  g.append("text").attr("text-anchor","middle").attr("dy","1.8em")
+    .text("条").style("font-size","11px").style("fill","#94a3b8");
+})();
+
+// D3 关系图谱
+(function() {
+  const w = document.getElementById('graph').offsetWidth || 280;
+  const h = 300;
+  const nodes = [
+    { id: "AI谣言", group: 1 }, { id: "Deepfake", group: 1 },
+    { id: "车企OTA", group: 2 }, { id: "健康谣言", group: 2 },
+    { id: "政治操纵", group: 3 }, { id: "AI诈骗", group: 2 },
+    { id: "地理嫁接", group: 2 }, { id: "机构冒充", group: 2 },
+    { id: "伪科学", group: 2 }
+  ];
+  const links = [
+    { source: "AI谣言", target: "车企OTA" }, { source: "AI谣言", target: "健康谣言" },
+    { source: "AI谣言", target: "AI诈骗" }, { source: "AI谣言", target: "地理嫁接" },
+    { source: "AI谣言", target: "机构冒充" }, { source: "Deepfake", target: "政治操纵" },
+    { source: "Deepfake", target: "AI谣言" }, { source: "健康谣言", target: "伪科学" },
+    { source: "AI诈骗", target: "伪科学" }
+  ];
+  const colors = { 1: "#ef4444", 2: "#f59e0b", 3: "#8b5cf6" };
+  const svg = d3.select("#graph").append("svg").attr("width", w).attr("height", h);
+  const sim = d3.forceSimulation(nodes)
+    .force("link", d3.forceLink(links).id(d => d.id).distance(65))
+    .force("charge", d3.forceManyBody().strength(-120))
+    .force("center", d3.forceCenter(w/2, h/2))
+    .force("collision", d3.forceCollide(30));
+  const link = svg.append("g").selectAll("line").data(links).enter().append("line")
+    .attr("stroke","#cbd5e1").attr("stroke-width",1.5);
+  const node = svg.append("g").selectAll("circle").data(nodes).enter().append("circle")
+    .attr("r", d => d.group===1?18:13).attr("fill", d => colors[d.group])
+    .attr("opacity",0.85).call(d3.drag()
+      .on("start", (event,d)=>{ if(!event.active)sim.alphaTarget(0.3).restart(); d.fx=d.x; d.fy=d.y; })
+      .on("drag", (event,d)=>{ d.fx=event.x; d.fy=event.y; })
+      .on("end", (event,d)=>{ if(!event.active)sim.alphaTarget(0); d.fx=null; d.fy=null; }));
+  const label = svg.append("g").selectAll("text").data(nodes).enter().append("text")
+    .text(d => d.id).attr("text-anchor","middle").attr("dy","0.35em")
+    .style("font-size","9px").style("fill","white").style("font-weight","600")
+    .style("pointer-events","none");
+  sim.on("tick", () => {
+    link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y)
+        .attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
+    node.attr("cx",d=>Math.max(18,Math.min(w-18,d.x)))
+        .attr("cy",d=>Math.max(13,Math.min(h-13,d.y)));
+    label.attr("x",d=>Math.max(18,Math.min(w-18,d.x)))
+         .attr("y",d=>Math.max(13,Math.min(h-13,d.y)));
+  });
+})();
+</script>
+
+</body>
+</html>
