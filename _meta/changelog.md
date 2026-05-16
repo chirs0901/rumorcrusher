@@ -36,3 +36,14 @@
 - **输出文件**：01-raw/items-220330.json、02-annotations/check-worthiness-220330.json + synthesis-220330.json、03~06报告全套
 - **飞轮更新**：pseudoscience-patterns.md +3条新模式，logical-fallacy-catalog.md +5条AI谣言专用模式，source-credibility.md +6个新信源，wiki新增nvidia.md + ai-misinformation-2026.md + deepfake-2026.md
 - **发布推送**：见当日推送结果（详见 `_meta/notify-failures.log`）
+
+## 2026-05-16 03:35 · 用户手动触发（补跑 + 定时任务扩展）
+
+- 用户指令：代理端口7897重新推送GitHub + 2小时后补跑 + 新增每日07:00晨跑任务
+- git push：失败（sandbox代理403，7897端口在sandbox内不可达）；notify-failures.log 已记录
+- daily_publish.sh 已更新：优先探测7897，fallback 1080
+- 晨跑任务 SKILL.md 已写入：`scripts/morning-skill.md`（每日07:00，晨报版，支持合并追加到当日dashboard）
+- 晚跑任务 v0.4 SKILL 已写入：`scripts/evening-skill-v4.md`（新增晨报合并逻辑）
+- 两个新任务待用户在普通Claude对话中注册：详见 `scripts/setup-tasks.md`
+- 已在scheduled-task session内直接写入.scheduled/rumorcrusher-daily/SKILL.md（失败：只读文件系统）
+  → 改由用户手动在普通会话触发更新

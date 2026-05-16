@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>RumorCrusher · 科技洞察 · 2026-05-15</title>
+<style>
+/* ─── RESET & BASE ─── */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",sans-serif;
+  background:#f4f4f0;
+  color:#111;
+  -webkit-font-smoothing:antialiased;
+  font-size:16px;
+  line-height:1.6;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* ─── TOKENS ─── */
+:root{
+  --red:#c8102e;
+  --black:#0a0a0a;
+  --off:#f4f4f0;
+  --white:#fff;
+  --ink-1:#111;
+  --ink-2:#444;
+  --ink-3:#888;
+  --rule:#d8d8d4;
+  --col-gap:24px;
+  --row-gap:32px;
+}
+
+/* ─── NAV ─── */
+.nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(244,244,240,0.92);
+  backdrop-filter:blur(16px) saturate(180%);
+  -webkit-backdrop-filter:blur(16px) saturate(180%);
+  border-bottom:1px solid var(--rule);
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:24px;
+  padding:0 32px;
+  height:50px;
+}
+.nav-brand{
+  font-size:13px;font-weight:700;letter-spacing:0.08em;
+  text-transform:uppercase;
+  display:flex;align-items:center;gap:6px;
+}
+.nav-brand .dot{width:8px;height:8px;border-radius:50%;background:var(--red)}
+.nav-pills{
+  display:flex;gap:4px;overflow-x:auto;
+  scrollbar-width:none;
+}
+.nav-pills::-webkit-scrollbar{display:none}
+.pill{
+  font-size:11px;font-weight:500;padding:4px 12px;
+  border-radius:20px;white-space:nowrap;
+  color:var(--ink-2);border:1px solid transparent;
+  transition:all .15s;cursor:pointer;
+}
+.pill:hover,.pill.active{
+  background:var(--black);color:var(--white);border-color:var(--black);
+}
+.nav-date{font-size:11px;color:var(--ink-3);white-space:nowrap}
+
+/* ─── HERO ─── */
+.hero{
+  background:var(--black);
+  color:var(--white);
+  padding:72px 32px 64px;
+  position:relative;
+  overflow:hidden;
+}
+/* subtle dot-matrix texture */
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);
+  background-size:28px 28px;
+  pointer-events:none;
+}
+.hero-inner{
+  position:relative;
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 340px;gap:80px;align-items:end;
+}
+.hero-left{}
+.hero-kicker{
+  font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--red);margin-bottom:20px;
+  display:flex;align-items:center;gap:10px;
+}
+.hero-kicker::after{content:"";flex:1;height:1px;background:rgba(200,16,46,.4);}
+.hero-h1{
+  font-size:clamp(36px,5vw,64px);
+  font-weight:800;
+  letter-spacing:-0.03em;
+  line-height:1.05;
+  margin-bottom:24px;
+}
+.hero-h1 .muted{color:rgba(255,255,255,.35)}
+.hero-lead{
+  font-size:15px;line-height:1.75;
+  color:rgba(255,255,255,.6);
+  max-width:540px;
+}
+.hero-right{
+  display:flex;flex-direction:column;gap:0;
+  border-left:1px solid rgba(255,255,255,.1);
+  padding-left:48px;
+}
+.hero-stat{
+  padding:20px 0;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.hero-stat:last-child{border-bottom:none}
+.hero-stat .v{
+  font-size:38px;font-weight:800;letter-spacing:-0.03em;
+  color:var(--white);
+}
+.hero-stat .v span{font-size:18px;font-weight:400;color:rgba(255,255,255,.4);margin-left:4px;}
+.hero-stat .l{font-size:11px;color:rgba(255,255,255,.4);margin-top:4px;letter-spacing:0.04em}
+
+/* ─── ARTICLE LAYOUT ─── */
+.site{max-width:1200px;margin:0 auto;padding:0 32px;}
+
+/* ─── SECTION DIVIDER ─── */
+.sec-head{
+  display:flex;align-items:center;gap:16px;
+  padding:48px 0 24px;
+  border-bottom:2px solid var(--black);
+  margin-bottom:var(--row-gap);
+}
+.sec-head h2{font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase}
+.sec-head .en{font-size:11px;color:var(--ink-3);letter-spacing:0.06em}
+.sec-head .badge{
+  margin-left:auto;
+  font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--red);
+}
+
+/* ─── LEAD STORY (2-col asymmetric) ─── */
+.lead-grid{
+  display:grid;
+  grid-template-columns:1.55fr 1fr;
+  gap:var(--col-gap);
+}
+.lead-card{
+  background:var(--white);
+  border-radius:4px;
+  overflow:hidden;
+  display:flex;flex-direction:column;
+}
+.lead-card-img{
+  background:var(--black);
+  aspect-ratio:16/9;
+  position:relative;
+  flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+}
+.lead-card-body{
+  padding:28px 28px 32px;
+  flex:1;display:flex;flex-direction:column;gap:12px;
+}
+.card-kicker{
+  font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--red);
+}
+.card-h2{
+  font-size:22px;font-weight:800;letter-spacing:-0.02em;line-height:1.2;
+}
+.card-h2-sm{
+  font-size:17px;font-weight:700;letter-spacing:-0.02em;line-height:1.25;
+}
+.card-body{
+  font-size:14px;line-height:1.75;color:var(--ink-2);
+  flex:1;
+}
+.card-meta{
+  font-size:11px;color:var(--ink-3);
+  display:flex;align-items:center;gap:10px;
+  flex-wrap:wrap;
+  padding-top:12px;
+  border-top:1px solid var(--rule);
+  margin-top:auto;
+}
+.verdict{
+  display:inline-flex;align-items:center;gap:4px;
+  padding:2px 8px;border-radius:3px;
+  font-size:10px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;
+}
+.v-sup{background:rgba(0,160,80,.12);color:#007a3a}
+.v-cau{background:rgba(200,16,46,.1);color:var(--red)}
+.v-neu{background:rgba(0,0,0,.06);color:var(--ink-3)}
+
+/* side column: stacked cards */
+.side-col{display:flex;flex-direction:column;gap:var(--col-gap)}
+.side-card{
+  background:var(--white);border-radius:4px;
+  padding:24px;flex:1;
+  display:flex;flex-direction:column;gap:10px;
+}
+
+/* ─── 3-COL GRID ─── */
+.grid-3{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:var(--col-gap);
+}
+.grid-card{
+  background:var(--white);border-radius:4px;
+  padding:24px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.grid-card-accent{
+  height:3px;border-radius:1px;margin-bottom:4px;
+}
+
+/* ─── DATA STRIP ─── */
+.data-strip{
+  background:var(--black);color:var(--white);
+  padding:40px 32px;margin:var(--row-gap) 0 0;
+}
+.data-strip-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:240px 1fr;gap:60px;align-items:center;
+}
+.data-strip h3{font-size:20px;font-weight:700;letter-spacing:-0.02em;margin-bottom:8px}
+.data-strip p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.7}
+.data-bars{display:flex;flex-direction:column;gap:14px}
+.bar-row{display:grid;grid-template-columns:180px 1fr 60px;align-items:center;gap:16px}
+.bar-label{font-size:12px;color:rgba(255,255,255,.6)}
+.bar-track{height:6px;background:rgba(255,255,255,.1);border-radius:3px;overflow:hidden}
+.bar-fill{height:100%;border-radius:3px;background:var(--red)}
+.bar-val{font-size:12px;font-weight:700;color:var(--white);text-align:right}
+
+/* ─── BLOCKQUOTE / HIGHLIGHT ─── */
+.pullquote{
+  border-left:3px solid var(--red);
+  padding:4px 0 4px 20px;
+  margin:16px 0;
+}
+.pullquote p{
+  font-size:17px;font-style:italic;font-weight:600;
+  line-height:1.5;color:var(--ink-1);
+  letter-spacing:-0.01em;
+}
+
+/* ─── TRACKING TABLE ─── */
+.track-section{
+  background:var(--white);
+  border-radius:4px;
+  padding:32px;
+  margin-top:var(--row-gap);
+}
+.track-table{width:100%;border-collapse:collapse}
+.track-table th{
+  font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--ink-3);padding:0 0 12px;text-align:left;
+  border-bottom:1px solid var(--rule);
+}
+.track-table td{
+  font-size:13px;padding:14px 0;
+  border-bottom:1px solid var(--rule);vertical-align:top;
+}
+.track-table tr:last-child td{border-bottom:none}
+.track-num{
+  width:28px;height:28px;border-radius:50%;
+  background:var(--off);
+  font-size:12px;font-weight:700;
+  display:inline-flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+
+/* ─── FOOTER ─── */
+.foot{
+  border-top:1px solid var(--rule);
+  padding:32px 0 48px;margin-top:var(--row-gap);
+}
+.foot-inner{
+  max-width:1200px;margin:0 auto;padding:0 32px;
+  display:grid;grid-template-columns:1fr auto;align-items:start;gap:40px;
+}
+.foot-copy{font-size:11px;color:var(--ink-3);line-height:1.8}
+.foot-links{display:flex;gap:24px}
+.foot-links a{font-size:11px;color:var(--ink-3);}
+.foot-links a:hover{color:var(--ink-1)}
+
+/* ─── SVG ILLUSTRATIONS ─── */
+.illo{width:100%;height:100%;position:absolute;inset:0}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .hero-right{border-left:none;padding-left:0;border-top:1px solid rgba(255,255,255,.1);padding-top:32px;flex-direction:row;flex-wrap:wrap}
+  .hero-stat{border-bottom:none;padding:16px 24px 16px 0}
+  .lead-grid{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:1fr}
+  .data-strip-inner{grid-template-columns:1fr}
+  .nav{grid-template-columns:auto 1fr}
+  .nav-date{display:none}
+  .site{padding:0 16px}
+  .nav{padding:0 16px}
+  .hero{padding:48px 16px 40px}
+  .data-strip{padding:32px 16px}
+  .foot-inner{grid-template-columns:1fr;padding:0 16px}
+}
+</style>
+</head>
+<body>
+
+<!-- ════ NAV ════ -->
+<nav class="nav">
+  <div class="nav-brand">
+    <span class="dot"></span>
+    RumorCrusher
+  </div>
+  <div class="nav-pills">
+    <a class="pill active" href="#lead">手机创新</a>
+    <a class="pill" href="#deepfake">Deepfake</a>
+    <a class="pill" href="#chips">芯片地缘</a>
+    <a class="pill" href="#gov">AI 治理</a>
+    <a class="pill" href="#pseudo">伪科学</a>
+    <a class="pill" href="#tracking">重点追踪</a>
+  </div>
+  <div class="nav-date">2026 · 05 · 15 · 22:03 CST</div>
+</nav>
+
+<!-- ════ HERO ════ -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-kicker">科技洞察报告 · 2026-05-15</div>
+      <h1 class="hero-h1">
+        AI 幻觉、<br>
+        Deepfake 武器化，<br>
+        <span class="muted">以及那条芯片战线</span>
+      </h1>
+      <p class="hero-lead">
+        今日 40 条素材经多 Agent 委员会核查，10 条谣言被剔除。
+        以下为经过 Fact-Check / 逻辑 / 伪科学三重审核的真实洞察——
+        六个领域，全部 Supported。
+      </p>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stat">
+        <div class="v">40 <span>条素材</span></div>
+        <div class="l">今日采集总量</div>
+      </div>
+      <div class="hero-stat">
+        <div class="v">10 <span>条剔除</span></div>
+        <div class="l">已核实为谣言，不进入洞察</div>
+      </div>
+      <div class="hero-stat">
+        <div class="v">23 <span>Supported</span></div>
+        <div class="l">事实确认条目</div>
+      </div>
+      <div class="hero-stat">
+        <div class="v">4.05 <span>/ 5</span></div>
+        <div class="l">平均解释质量评分</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ MAIN ════ -->
+<main class="site">
+
+<!-- ── SECTION: 头条 ── -->
+<div class="sec-head" id="lead">
+  <h2>今日头条</h2>
+  <span class="en">Top Stories</span>
+  <span class="badge">6 大洞察</span>
+</div>
+
+<!-- Lead Grid: AI 幻觉（大）+ 2 side cards -->
+<div class="lead-grid">
+
+  <!-- LEAD: AI 幻觉 -->
+  <div class="lead-card">
+    <div class="lead-card-img" style="background:#0a0a0a;">
+      <!-- SVG: neural net / hallucination visual -->
+      <svg class="illo" viewBox="0 0 680 382" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- background grid -->
+        <rect width="680" height="382" fill="#0a0a0a"/>
+        <line x1="0" y1="191" x2="680" y2="191" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+        <line x1="340" y1="0" x2="340" y2="382" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+        <!-- nodes: input layer -->
+        <circle cx="80" cy="96" r="14" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
+        <circle cx="80" cy="160" r="14" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
+        <circle cx="80" cy="224" r="14" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
+        <circle cx="80" cy="288" r="14" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
+        <!-- nodes: hidden layer 1 -->
+        <circle cx="220" cy="128" r="14" stroke="rgba(200,16,46,.5)" stroke-width="1.5" fill="rgba(200,16,46,.06)"/>
+        <circle cx="220" cy="192" r="14" stroke="rgba(200,16,46,.5)" stroke-width="1.5" fill="rgba(200,16,46,.06)"/>
+        <circle cx="220" cy="256" r="14" stroke="rgba(200,16,46,.5)" stroke-width="1.5" fill="rgba(200,16,46,.06)"/>
+        <!-- nodes: hidden layer 2 -->
+        <circle cx="360" cy="160" r="14" stroke="rgba(255,255,255,.15)" stroke-width="1.5"/>
+        <circle cx="360" cy="224" r="14" stroke="rgba(255,255,255,.15)" stroke-width="1.5"/>
+        <!-- nodes: output -->
+        <circle cx="500" cy="192" r="18" stroke="rgba(200,16,46,.8)" stroke-width="2" fill="rgba(200,16,46,.15)"/>
+        <!-- "hallucination" burst -->
+        <circle cx="500" cy="192" r="32" stroke="rgba(200,16,46,.2)" stroke-width="1" stroke-dasharray="4 4"/>
+        <circle cx="500" cy="192" r="50" stroke="rgba(200,16,46,.1)" stroke-width="1" stroke-dasharray="2 6"/>
+        <!-- connections (select) -->
+        <line x1="94" y1="96" x2="206" y2="128" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+        <line x1="94" y1="160" x2="206" y2="128" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+        <line x1="94" y1="160" x2="206" y2="192" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+        <line x1="94" y1="224" x2="206" y2="192" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+        <line x1="94" y1="224" x2="206" y2="256" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+        <line x1="94" y1="288" x2="206" y2="256" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+        <line x1="234" y1="128" x2="346" y2="160" stroke="rgba(200,16,46,.2)" stroke-width="1"/>
+        <line x1="234" y1="192" x2="346" y2="160" stroke="rgba(200,16,46,.2)" stroke-width="1"/>
+        <line x1="234" y1="192" x2="346" y2="224" stroke="rgba(200,16,46,.2)" stroke-width="1"/>
+        <line x1="234" y1="256" x2="346" y2="224" stroke="rgba(200,16,46,.2)" stroke-width="1"/>
+        <line x1="374" y1="160" x2="482" y2="192" stroke="rgba(200,16,46,.5)" stroke-width="1.5"/>
+        <line x1="374" y1="224" x2="482" y2="192" stroke="rgba(200,16,46,.5)" stroke-width="1.5"/>
+        <!-- label -->
+        <text x="500" y="197" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="700" fill="rgba(200,16,46,.9)" font-family="monospace">HALLUCINATION</text>
+        <!-- fact box -->
+        <rect x="560" y="140" width="100" height="36" rx="4" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+        <text x="610" y="158" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.5)" font-family="-apple-system,sans-serif">3~4% Claude</text>
+        <text x="610" y="170" text-anchor="middle" font-size="9" fill="rgba(200,16,46,.7)" font-family="-apple-system,sans-serif">&gt;10% Reasoning</text>
+        <!-- citation ghost box -->
+        <rect x="570" y="240" width="88" height="72" rx="4" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+        <line x1="578" y1="258" x2="650" y2="258" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+        <line x1="578" y1="268" x2="640" y2="268" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+        <line x1="578" y1="278" x2="645" y2="278" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+        <line x1="578" y1="288" x2="635" y2="288" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+        <text x="614" y="250" text-anchor="middle" font-size="8" fill="rgba(200,16,46,.6)" font-family="-apple-system,sans-serif">虚假引用</text>
+        <!-- small decorative dots -->
+        <circle cx="140" cy="340" r="2" fill="rgba(255,255,255,.12)"/>
+        <circle cx="180" cy="330" r="2" fill="rgba(255,255,255,.08)"/>
+        <circle cx="260" cy="340" r="2" fill="rgba(255,255,255,.1)"/>
+        <circle cx="300" cy="348" r="2" fill="rgba(255,255,255,.06)"/>
+      </svg>
+    </div>
+    <div class="lead-card-body">
+      <div class="card-kicker">AI 幻觉与可信度</div>
+      <h2 class="card-h2">Claude 幻觉率最低，但推理模型的真相让人意外</h2>
+      <div class="card-body">
+        <p>
+          Claude AI 在主流模型中幻觉率最低（约 3–4%），然而各基准测试方法不统一，结论存在差异。
+          更值得警惕的是一个反直觉发现：<strong>推理模型（Reasoning Models）在事实性摘要任务中幻觉率反而超过 10%</strong>，
+          显著高于标准模型——GPT-5、Grok-4 等均未能幸免。
+        </p>
+        <div class="pullquote">
+          <p>"所有主流 AI 模型均可生成看似真实但并不存在的引用文献。"</p>
+        </div>
+        <p>
+          学术和法律场景中，AI 生成的假引用已造成实际伤害。
+          更高的推理能力并不等于更高的事实准确性，这是 2026 年 AI 应用落地最需要正视的裂缝之一。
+        </p>
+      </div>
+      <div class="card-meta">
+        <span class="verdict v-sup">✓ Supported</span>
+        <span>Claude / GPT-5 / Grok-4 对比报告</span>
+        <span style="margin-left:auto">avg EQ 4.2 / 5</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIDE COLUMN -->
+  <div class="side-col">
+
+    <!-- Deepfake card -->
+    <div class="side-card" id="deepfake">
+      <div class="card-kicker">Deepfake</div>
+      <h2 class="card-h2-sm">检测能力严重失衡：静态 97%，视频几乎猜不准</h2>
+      <div class="card-body" style="font-size:13px">
+        AI 识别静态 Deepfake 图片准确率达 97%，但视频检测仅与随机猜测持平；
+        讽刺的是，<strong>人类识别视频 Deepfake 的正确率约 2/3，反而优于 AI</strong>。
+        特朗普"走出 Walter Reed 医院"的合成视频在 PolitiFact 完成核查前已获数百万浏览。
+        英国 15% 成人曾遭遇 Deepfake 色情内容，较 2024 年增近三倍。
+      </div>
+      <div class="card-meta">
+        <span class="verdict v-sup">✓ Supported</span>
+        <span>PolitiFact / 英国调查报告</span>
+      </div>
+    </div>
+
+    <!-- AI Governance card -->
+    <div class="side-card" id="gov">
+      <div class="card-kicker">AI 治理</div>
+      <h2 class="card-h2-sm">韩国 AI 基本法生效，美国前置监管破局</h2>
+      <div class="card-body" style="font-size:13px">
+        韩国 AI Basic Act（2026 年 1 月生效）强制标注生成式 AI 内容，
+        成为目前最具操作性的国家级 AI 内容治理框架。
+        微软、Google、xAI 同意在发布前向美国政府开放模型测试——
+        <strong>AI 监管正式从事后审查转向前置关口</strong>。
+        中国"清朗专项行动"2025 年全年辟谣稿件逾 1.7 万篇，2210 个涉谣账号被处置。
+      </div>
+      <div class="card-meta">
+        <span class="verdict v-sup">✓ Supported</span>
+        <span>韩国政府公告 / 白宫备忘录</span>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /lead-grid -->
+
+<!-- ── DATA STRIP: 检测能力对比 ── -->
+<div class="data-strip" id="chips">
+  <div class="data-strip-inner">
+    <div>
+      <h3>Deepfake<br>检测能力分布</h3>
+      <p>跨媒介类型，2026 年最新基准测试数据</p>
+    </div>
+    <div class="data-bars">
+      <div class="bar-row">
+        <div class="bar-label">AI 检测 · 静态图片</div>
+        <div class="bar-track"><div class="bar-fill" style="width:97%"></div></div>
+        <div class="bar-val">97%</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">人类判断 · 视频</div>
+        <div class="bar-track"><div class="bar-fill" style="width:67%;background:#0066cc"></div></div>
+        <div class="bar-val">~67%</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">AI 检测 · 视频</div>
+        <div class="bar-track"><div class="bar-fill" style="width:50%;background:#444"></div></div>
+        <div class="bar-val">~50%</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Claude 幻觉率（事实摘要）</div>
+        <div class="bar-track"><div class="bar-fill" style="width:4%;background:rgba(255,255,255,.5)"></div></div>
+        <div class="bar-val">3–4%</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">推理模型幻觉率（事实摘要）</div>
+        <div class="bar-track"><div class="bar-fill" style="width:12%;background:var(--red)"></div></div>
+        <div class="bar-val">&gt;10%</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SECTION: 深度分析 ── -->
+<div class="sec-head">
+  <h2>深度分析</h2>
+  <span class="en">In Depth</span>
+</div>
+
+<div class="grid-3">
+
+  <!-- 中美芯片 -->
+  <div class="grid-card">
+    <div class="grid-card-accent" style="background:var(--red)"></div>
+    <div class="card-kicker">芯片地缘政治</div>
+    <h2 class="card-h2-sm">英伟达中国业务完全停滞，黄仁勋访华信息战</h2>
+    <div class="card-body" style="font-size:13px">
+      <p>
+        英伟达中国业务完全停滞——中国四个月未购芯片。
+        黄仁勋亲自随特朗普访华一事出现时间线混乱（先被报道缺席，后临时成行），
+        反映出<strong>科技地缘政治的信息战已延伸至供应链和企业外交层面</strong>。
+      </p>
+      <p style="margin-top:10px">
+        芯片出口管制话题已从政策层面蔓延为操控市场预期的谣言温床，
+        这是继地图"爆改"之后的新型叙事武器。
+      </p>
+    </div>
+    <div class="card-meta">
+      <span class="verdict v-sup">✓ Supported</span>
+      <span>路透社 / 彭博</span>
+    </div>
+  </div>
+
+  <!-- 伪科学 -->
+  <div class="grid-card" id="pseudo">
+    <div class="grid-card-accent" style="background:#e07b00"></div>
+    <div class="card-kicker">伪科学 · 高危健康谣言</div>
+    <h2 class="card-h2-sm">安宫牛黄丸"预防中风"：典型节气养生错误绑定</h2>
+    <div class="card-body" style="font-size:13px">
+      <p>
+        量子概念滥用（水杯、床垫、"疗愈"）属持续性长尾问题，2026 年未见改善。
+      </p>
+      <p style="margin-top:10px">
+        <strong>本期最高危模式</strong>：将中医节气养生与急救药物错误绑定——
+        宣称安宫牛黄丸可"预防中风"。该药存在汞超标与肝毒性风险，
+        随意服用可能导致严重后果，属典型"有毒信息"而非普通误导。
+      </p>
+    </div>
+    <div class="card-meta">
+      <span class="verdict v-cau">⚠ 高危</span>
+      <span>国家卫健委参考资料</span>
+    </div>
+  </div>
+
+  <!-- AI 谣言工业化 -->
+  <div class="grid-card">
+    <div class="grid-card-accent" style="background:#6b3fa0"></div>
+    <div class="card-kicker">AI 生成谣言</div>
+    <h2 class="card-h2-sm">工业化特征：AI 降低门槛，人工干预是关键</h2>
+    <div class="card-body" style="font-size:13px">
+      <p>网信办 2026 年第五批典型案例揭示四种新型模式：</p>
+      <ul style="margin-top:10px;padding-left:16px;display:flex;flex-direction:column;gap:6px">
+        <li>利用 AI 图像生成工具捏造案件现场（杭州滨江案）</li>
+        <li>将跨境灾难视频张冠李戴（缅甸 → 云南）</li>
+        <li>冒充公益机构设套诈骗（中国残联）</li>
+        <li>彩票 AI 预测话术精准针对中老年群体</li>
+      </ul>
+      <p style="margin-top:10px">
+        共同特征：<strong>AI 降低了造谣门槛，但地理嫁接、机构冒充等人工干预依然是关键环节。</strong>
+      </p>
+    </div>
+    <div class="card-meta">
+      <span class="verdict v-sup">✓ Supported</span>
+      <span>网信办通报 · 2026年第五批</span>
+    </div>
+  </div>
+
+</div><!-- /grid-3 -->
+
+<!-- ── TRACKING ── -->
+<div class="track-section" id="tracking">
+  <div class="sec-head" style="padding-top:0;margin-bottom:20px">
+    <h2>重点追踪</h2>
+    <span class="en">Watch List</span>
+    <span class="badge">4 条线索</span>
+  </div>
+  <table class="track-table">
+    <thead>
+      <tr>
+        <th style="width:36px">#</th>
+        <th>追踪事项</th>
+        <th style="width:120px">关键词</th>
+        <th style="width:100px">状态</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="track-num">1</span></td>
+        <td>
+          <strong>黄仁勋访华后中美芯片出口政策变化</strong><br>
+          <span style="color:var(--ink-3);font-size:12px">英伟达中国业务停滞是否触发新轮谈判，或进一步收紧管制</span>
+        </td>
+        <td style="font-size:12px;color:var(--ink-3)">NVIDIA · 芯片管制 · 黄仁勋</td>
+        <td><span class="verdict v-neu">持续跟踪</span></td>
+      </tr>
+      <tr>
+        <td><span class="track-num">2</span></td>
+        <td>
+          <strong>Musk v. Altman 审判对 AI 行业合规影响</strong><br>
+          <span style="color:var(--ink-3);font-size:12px">庭审进展及判决可能对开源 AI 模型发布产生的合规连锁反应</span>
+        </td>
+        <td style="font-size:12px;color:var(--ink-3)">OpenAI · xAI · 开源</td>
+        <td><span class="verdict v-neu">待庭审结果</span></td>
+      </tr>
+      <tr>
+        <td><span class="track-num">3</span></td>
+        <td>
+          <strong>英国 / 美国 Deepfake 立法落地时间线</strong><br>
+          <span style="color:var(--ink-3);font-size:12px">美国 DeepFake 立法提案针对非合意图像分发端切断传播链，需关注听证进展</span>
+        </td>
+        <td style="font-size:12px;color:var(--ink-3)">Deepfake · 立法 · 分发端</td>
+        <td><span class="verdict v-cau">立法进行中</span></td>
+      </tr>
+      <tr>
+        <td><span class="track-num">4</span></td>
+        <td>
+          <strong>Chrome / Gemini 模型自动下载事件的监管回应</strong><br>
+          <span style="color:var(--ink-3);font-size:12px">Gemini Nano 自动部署至用户设备，引发知情同意和安全边界讨论</span>
+        </td>
+        <td style="font-size:12px;color:var(--ink-3)">Google · Gemini · 同意机制</td>
+        <td><span class="verdict v-neu">等待监管表态</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</main><!-- /site -->
+
+<!-- ════ FOOTER ════ -->
+<footer class="foot">
+  <div class="foot-inner">
+    <div class="foot-copy">
+      <strong style="color:var(--ink-2)">RumorCrusher · 科技洞察报告 · 2026-05-15</strong><br>
+      由多 Agent 委员会（Fact-Check / Pseudo-Science / Logic / Sentiment）自动生成 · 每日 22:00 跑批<br>
+      核查标准：AVeriTeC 4 标签 · MultiCW 可信度评分 · TSVer 时序追问<br>
+      10 条 Refuted 谣言已剔除，不进入本报告 · 本内容仅供参考，不构成任何建议
+    </div>
+    <div class="foot-links">
+      <a href="../../index.html">← 主站归档</a>
+      <a href="../../2026-05-15/index.html">← 辟谣仪表盘</a>
+      <a href="https://github.com/chirs0901/rumorcrusher" target="_blank">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Pill active state on scroll
+const sections=document.querySelectorAll('[id]');
+const pills=document.querySelectorAll('.pill');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      pills.forEach(p=>{
+        p.classList.toggle('active',p.getAttribute('href')==='#'+e.target.id);
+      });
+    }
+  });
+},{rootMargin:'-40% 0px -55% 0px'});
+sections.forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>
