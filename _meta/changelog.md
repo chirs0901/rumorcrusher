@@ -47,3 +47,34 @@
 - 两个新任务待用户在普通Claude对话中注册：详见 `scripts/setup-tasks.md`
 - 已在scheduled-task session内直接写入.scheduled/rumorcrusher-daily/SKILL.md（失败：只读文件系统）
   → 改由用户手动在普通会话触发更新
+
+## 2026-05-16 14:11 UTC · 定时晚报（scheduled daily）
+
+### 本次运行统计
+- 采集条目：26条（11轮 WebSearch）
+- Check-Worthy：22条
+- 精审条目：14条
+- AVeriTeC分布：Refuted×11, Misleading×3, Supported×1, NEE×1, Conflicting×1
+- 综合健康打分：83/100
+- avg EQ：6.79 | UnR：4.5% | avg 置信度：0.94
+
+### 今日核心事件
+- MV Hondius汉坦病毒疫情引发Critical级谣言爆发（伊维菌素谣言、疫苗阴谋论、以色列阴谋论）
+- RFK Jr疫苗误导声明（政界人物医学谬误放大模式首次精确记录）
+- 特朗普气候否认声明
+- 国内：驾考谣言、山西地震谣言、新能源养路费谣言已被辟谣
+
+### 飞轮更新
+- skills/pseudoscience-patterns.md：追加3条新模式（脚本化大流行、跨病毒疗法复用、政界医学谬误放大）
+- skills/logical-fallacy-catalog.md：追加3条新谬误（无法证伪框架、地理嫁接、紧急窗口滥用）
+- CW评分模型：引入紧迫系数（Urgency Multiplier）
+
+### 产出文件
+- 01-raw/items-140910.json（26条原始数据）
+- 02-annotations/check-worthiness-140910.json
+- 02-annotations/synthesis-140910.json
+- 03-quality-report-140910.md
+- 04-clean-report-140910.md
+- 05-methodology-delta-140910.md
+- 06-self-eval-140910.md
+- 2026-05-16/index.html（仪表盘，见步骤7）

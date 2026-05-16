@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "date": "2026-05-16",
+    "timestamp": "140910",
+    "total_input": 26,
+    "check_worthy_count": 22,
+    "priority_high": 6,
+    "priority_medium": 11,
+    "priority_low": 5,
+    "skipped": 4
+  },
+  "scoring_criteria": {
+    "verifiability": "可通过公开信息核实",
+    "harm_potential": "传播后可能造成实际伤害（健康、财产、社会稳定）",
+    "virality": "当前热度/传播规模",
+    "novelty": "是否有新的谣言变体值得记录"
+  },
+  "tier_high": [
+    {
+      "id": "RC-20260516-001",
+      "claim_short": "伊维菌素可治汉坦病毒",
+      "cw_score": 9.5,
+      "reason": "直接威胁患者生命安全；多个机构已发布反驳；高度病毒式传播；遵循COVID伊维菌素谣言同一剧本",
+      "selected": true
+    },
+    {
+      "id": "RC-20260516-002",
+      "claim_short": "MV Hondius疫情='脚本化大流行'/'以色列阴谋'",
+      "cw_score": 9.0,
+      "reason": "制造公众恐慌+民族歧视；传播极快；影响公共卫生响应",
+      "selected": true
+    },
+    {
+      "id": "RC-20260516-003",
+      "claim_short": "汉坦病毒疫情由新冠疫苗引起",
+      "cw_score": 8.8,
+      "reason": "政界人士放大；加剧疫苗犹豫；健康危害高",
+      "selected": true
+    },
+    {
+      "id": "RC-20260516-021",
+      "claim_short": "伊维菌素粉丝复用COVID剧本攻击汉坦病毒防控",
+      "cw_score": 8.5,
+      "reason": "模式性谣言，说明谣言'基础设施'的系统性危害",
+      "selected": true
+    },
+    {
+      "id": "RC-20260516-009",
+      "claim_short": "特朗普：地球在'降温'",
+      "cw_score": 8.2,
+      "reason": "权威人物传播科学谬误；影响气候政策公众理解",
+      "selected": true
+    },
+    {
+      "id": "RC-20260516-010",
+      "claim_short": "RFK Jr：疫苗对儿童'深度风险'",
+      "cw_score": 8.5,
+      "reason": "政府部长级人物；直接影响疫苗接种率；mRNA安全性有大量证据",
+      "selected": true
+    }
+  ],
+  "tier_medium": [
+    {"id": "RC-20260516-004", "claim_short": "驾考'科目二变八项'", "cw_score": 7.0, "selected": true},
+    {"id": "RC-20260516-005", "claim_short": "山西清徐/尧都虚假地震信息", "cw_score": 7.2, "selected": true},
+    {"id": "RC-20260516-006", "claim_short": "新能源车养路费谣言", "cw_score": 7.5, "selected": true},
+    {"id": "RC-20260516-007", "claim_short": "S26 Ultra 1/1.1英寸传感器+可变光圈", "cw_score": 6.5, "selected": true},
+    {"id": "RC-20260516-011", "claim_short": "加州石油只够6周", "cw_score": 6.8, "selected": true},
+    {"id": "RC-20260516-013", "claim_short": "存款计息5月新规", "cw_score": 7.0, "selected": true},
+    {"id": "RC-20260516-015", "claim_short": "多地UFO（实为火箭过境）", "cw_score": 6.0, "selected": true},
+    {"id": "RC-20260516-018", "claim_short": "AI 100%预测彩票", "cw_score": 7.8, "selected": true},
+    {"id": "RC-20260516-020", "claim_short": "AI生成视频未标注AI标识", "cw_score": 6.5, "selected": true},
+    {"id": "RC-20260516-022", "claim_short": "咖啡'零添加'实含添加剂", "cw_score": 7.0, "selected": true},
+    {"id": "RC-20260516-026", "claim_short": "剧情摆拍不标注当真实事件传播", "cw_score": 6.5, "selected": true}
+  ],
+  "tier_low": [
+    {"id": "RC-20260516-008", "claim_short": "S26 Qi2磁吸谣言", "cw_score": 4.5, "selected": true},
+    {"id": "RC-20260516-014", "claim_short": "腾讯高管AI职位离职谣言", "cw_score": 4.0, "selected": true},
+    {"id": "RC-20260516-017", "claim_short": "GaN=秒充（伪科学营销）", "cw_score": 4.5, "selected": true},
+    {"id": "RC-20260516-023", "claim_short": "特朗普Walter Reed视频", "cw_score": 5.5, "selected": true},
+    {"id": "RC-20260516-024", "claim_short": "OnePlus Nord CE 6预测规格", "cw_score": 3.5, "selected": true}
+  ],
+  "excluded": [
+    {"id": "RC-20260516-016", "reason": "研究发现而非谣言本身，不参与AVeriTeC审核"},
+    {"id": "RC-20260516-019", "reason": "历史案例，已有定论，不计入本日新增"},
+    {"id": "RC-20260516-012", "reason": "背景信息/AI谣言生产基础设施说明，非独立谣言"},
+    {"id": "RC-20260516-025", "reason": "ongoing类，缺乏具体可核查事件"}
+  ]
+}

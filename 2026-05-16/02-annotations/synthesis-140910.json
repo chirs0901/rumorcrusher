@@ -1,0 +1,561 @@
+{
+  "meta": {
+    "date": "2026-05-16",
+    "timestamp": "140910",
+    "items_reviewed": 22,
+    "agents": ["fact-check","pseudo-science","logic","sentiment-values"]
+  },
+
+  "items": [
+    {
+      "id": "RC-20260516-001",
+      "claim_short": "伊维菌素可治汉坦病毒",
+
+      "fact_check": {
+        "verdict": "FALSE",
+        "averitec_label": "Refuted",
+        "tsverk_score": 0.05,
+        "evidence": "四位传染病专家告知PolitiFact，无任何证据显示伊维菌素对汉坦病毒有效。汉坦病毒可在细胞质（非细胞核）中复制，与伊维菌素抗病毒机制不符。WHO/CDC均无相关推荐。标准治疗为支持性护理。",
+        "source_credibility": {"type":"expert_consensus","reliability":"very_high"},
+        "confidence": 0.98
+      },
+
+      "pseudo_science": {
+        "patterns_matched": ["COVID-era治疗谣言复用","诉诸先前使用经验（COVID成功案例）但无同类机制","缺乏任何RCT或体外实验数据"],
+        "pseudoscience_score": 0.92,
+        "pseudo_type": "medicine_misapplication"
+      },
+
+      "logic": {
+        "fallacies": [
+          {"type":"因果倒置","detail":"因伊维菌素曾（被声称）治过某些病毒，推断它能治所有病毒"},
+          {"type":"诉诸权威","detail":"引用德州医生，该医生在COVID期间有利益冲突争议，无汉坦病毒专业资质"},
+          {"type":"滑坡谬误","detail":"'官方不让用伊维菌素→官方在掩盖→药企在牟利'的推断链"}
+        ],
+        "logic_score": 0.88,
+        "key_fallacy": "因果倒置+诉诸无资质权威"
+      },
+
+      "sentiment_values": {
+        "clickbait_score": 0.85,
+        "value_concerns": ["反建制情绪","医疗机构不信任","阴谋论煽动"],
+        "emotional_manipulation": "利用公众对新疫情的恐惧+对官方医疗体系的不信任",
+        "eq_score": 7.8,
+        "sentiment_label": "high_risk"
+      },
+
+      "synthesis": {
+        "final_verdict": "FALSE",
+        "health_risk": "critical",
+        "priority_action": "立即辟谣，引用PolitiFact/Poynter/science.feedback核查链接"
+      }
+    },
+
+    {
+      "id": "RC-20260516-002",
+      "claim_short": "MV Hondius疫情='脚本化大流行'/'以色列阴谋'",
+
+      "fact_check": {
+        "verdict": "FALSE",
+        "averitec_label": "Refuted",
+        "tsverk_score": 0.03,
+        "evidence": "WHO疾病爆发通报(2026-DON601)确认为Andes病毒自然感染。第一例患者在登船前已在陆地上暴露。科学共识：Andes病毒是唯一已知人传人的汉坦病毒，通过密切持续接触传播。无任何证据支持'人工合成'或'阴谋'说法。",
+        "source_credibility": {"type":"official_who","reliability":"very_high"},
+        "confidence": 0.97
+      },
+
+      "pseudo_science": {
+        "patterns_matched": ["工程化病原体假设（无科学证据）","'剧本'叙事（无法证伪的阴谋论结构）"],
+        "pseudoscience_score": 0.88,
+        "pseudo_type": "conspiracy_science"
+      },
+
+      "logic": {
+        "fallacies": [
+          {"type":"既定前提","detail":"'脚本化'前提本身未被证明"},
+          {"type":"诉诸无知","detail":"'没人能解释就是阴谋'"},
+          {"type":"张冠李戴","detail":"将以色列与完全无关的荷兰船只/南极洲爆发强行联系"}
+        ],
+        "logic_score": 0.90,
+        "key_fallacy": "既定前提+无法证伪的阴谋论框架"
+      },
+
+      "sentiment_values": {
+        "clickbait_score": 0.90,
+        "value_concerns": ["反犹太主义","民族仇恨","公共卫生破坏"],
+        "emotional_manipulation": "恐惧+愤怒+群体替罪羊机制",
+        "eq_score": 8.5,
+        "sentiment_label": "high_risk"
+      },
+
+      "synthesis": {
+        "final_verdict": "FALSE",
+        "health_risk": "high",
+        "priority_action": "重点揭示'以色列阴谋'叙事的反犹本质+WHO官方通报"
+      }
+    },
+
+    {
+      "id": "RC-20260516-003",
+      "claim_short": "汉坦病毒疫情由新冠疫苗引起",
+
+      "fact_check": {
+        "verdict": "FALSE",
+        "averitec_label": "Refuted",
+        "tsverk_score": 0.02,
+        "evidence": "汉坦病毒（Andes型）是独立的RNA病毒，与mRNA疫苗无任何生物学关联。疫苗靶向SARS-CoV-2刺突蛋白，不涉及汉坦病毒任何成分。邮轮患者感染时间线（登船前在陆地暴露）排除疫苗诱发假说。",
+        "source_credibility": {"type":"expert+official","reliability":"very_high"},
+        "confidence": 0.99
+      },
+
+      "pseudo_science": {
+        "patterns_matched": ["mRNA疫苗免疫损伤假说（无证据）","时序谬误（接种后患病≠接种导致患病）"],
+        "pseudoscience_score": 0.93,
+        "pseudo_type": "vaccine_causation_fallacy"
+      },
+
+      "logic": {
+        "fallacies": [
+          {"type":"相关≠因果","detail":"接种过疫苗的人也能感染汉坦病毒≠疫苗导致感染"},
+          {"type":"滑坡谬误","detail":"从mRNA疫苗→免疫系统受损→对所有病毒易感→导致疫情的推断链"},
+          {"type":"诉诸权威","detail":"引用Marjorie Taylor Greene等无医学资质政界人士"}
+        ],
+        "logic_score": 0.91,
+        "key_fallacy": "相关性≠因果性"
+      },
+
+      "sentiment_values": {
+        "clickbait_score": 0.88,
+        "value_concerns": ["疫苗犹豫加剧","政治化医疗","公共卫生破坏"],
+        "emotional_manipulation": "恐惧+政治愤怒+反建制情绪",
+        "eq_score": 8.2,
+        "sentiment_label": "high_risk"
+      },
+
+      "synthesis": {
+        "final_verdict": "FALSE",
+        "health_risk": "critical",
+        "priority_action": "辟谣需同时提供汉坦病毒独立病理机制说明"
+      }
+    },
+
+    {
+      "id": "RC-20260516-004",
+      "claim_short": "驾考'科目二变八项'难度翻倍",
+
+      "fact_check": {
+        "verdict": "FALSE",
+        "averitec_label": "Refuted",
+        "tsverk_score": 0.08,
+        "evidence": "2026年5月1日落地的是《机动车驾驶员培训机构业务条件》和《机动车驾驶员培训教练场技术要求》两项国标，均是机构/场地标准，不涉及驾照考试科目变更。",
+        "source_credibility": {"type":"official_government_standard","reliability":"very_high"},
+        "confidence": 0.97
+      },
+
+      "pseudo_science": {"patterns_matched": [], "pseudoscience_score": 0.0, "pseudo_type": "n/a"},
+
+      "logic": {
+        "fallacies": [
+          {"type":"偷换概念","detail":"将'机构/场地国家标准'偷换为'驾考科目新规'"},
+          {"type":"夸大化","detail":"从标准更新→'难度翻倍'的极度夸张"}
+        ],
+        "logic_score": 0.70,
+        "key_fallacy": "偷换概念（标准≠考试规则）"
+      },
+
+      "sentiment_values": {
+        "clickbait_score": 0.75,
+        "value_concerns": ["制造焦虑","影响备考计划"],
+        "emotional_manipulation": "考试焦虑+信息不对称利用",
+        "eq_score": 5.5,
+        "sentiment_label": "medium_risk"
+      },
+
+      "synthesis": {
+        "final_verdict": "FALSE",
+        "health_risk": "low",
+        "priority_action": "引用两项国家标准原文澄清"
+      }
+    },
+
+    {
+      "id": "RC-20260516-005",
+      "claim_short": "山西清徐/尧都5月12日地震",
+
+      "fact_check": {
+        "verdict": "FALSE",
+        "averitec_label": "Refuted",
+        "tsverk_score": 0.05,
+        "evidence": "山西省地震局核实：2026年5月12日20:06清徐县和尧都均未发生地震。国家地震台网公开数据可交叉验证。",
+        "source_credibility": {"type":"official_seismological_bureau","reliability":"very_high"},
+        "confidence": 0.99
+      },
+
+      "pseudo_science": {"patterns_matched": [], "pseudoscience_score": 0.0, "pseudo_type": "n/a"},
+
+      "logic": {
+        "fallacies": [{"type":"无中生有（虚构事实）","detail":"直接捏造地震事件，时间、地点高度具体化以增加可信度"}],
+        "logic_score": 0.60,
+        "key_fallacy": "捏造事实+具体化误导"
+      },
+
+      "sentiment_values": {
+        "clickbait_score": 0.80,
+        "value_concerns": ["社会恐慌","影响正常社会秩序"],
+        "emotional_manipulation": "灾难恐惧+地理具体性制造真实感",
+        "eq_score": 6.0,
+        "sentiment_label": "medium_risk"
+      },
+
+      "synthesis": {"final_verdict": "FALSE", "health_risk": "medium", "priority_action": "链接地震台网数据"}
+    },
+
+    {
+      "id": "RC-20260516-006",
+      "claim_short": "新能源车将收养路费",
+
+      "fact_check": {
+        "verdict": "FALSE",
+        "averitec_label": "Refuted",
+        "tsverk_score": 0.05,
+        "evidence": "官方无相关政策出台。传播者杨某已被公安机关行政拘留。",
+        "source_credibility": {"type":"law_enforcement","reliability":"high"},
+        "confidence": 0.97
+      },
+
+      "pseudo_science": {"patterns_matched": [], "pseudoscience_score": 0.0, "pseudo_type": "n/a"},
+
+      "logic": {
+        "fallacies": [{"type":"虚构政策","detail":"无政策文件依据，凭空捏造政策内容"}],
+        "logic_score": 0.55,
+        "key_fallacy": "捏造事实"
+      },
+
+      "sentiment_values": {
+        "clickbait_score": 0.82,
+        "value_concerns": ["经济焦虑","政策不信任"],
+        "emotional_manipulation": "财务焦虑+新能源车主群体敏感性",
+        "eq_score": 6.5,
+        "sentiment_label": "medium_risk"
+      },
+
+      "synthesis": {"final_verdict": "FALSE", "health_risk": "low", "priority_action": "引用公安通报+说明正式政策发布渠道"}
+    },
+
+    {
+      "id": "RC-20260516-007",
+      "claim_short": "S26 Ultra 1/1.1英寸传感器+完全可变光圈",
+
+      "fact_check": {
+        "verdict": "FALSE",
+        "averitec_label": "Refuted",
+        "tsverk_score": 0.10,
+        "evidence": "官方发布证实：S26 Ultra使用HP2 200MP传感器（非1/1.1英寸新传感器）；光圈为固定f/1.4（更宽但非可变）。PhoneArena和Ice Universe均指出多项爆料错误。",
+        "source_credibility": {"type":"media_post_launch","reliability":"high"},
+        "confidence": 0.92
+      },
+
+      "pseudo_science": {
+        "patterns_matched": ["单一规格数字堆砌（传感器尺寸≠画质）","可变光圈轴数堆砌"],
+        "pseudoscience_score": 0.55,
+        "pseudo_type": "tech_spec_inflation"
+      },
+
+      "logic": {
+        "fallacies": [
+          {"type":"时间错配","detail":"用预发布爆料数字作为已确认事实"},
+          {"type":"诉诸权威","detail":"某些爆料者被当做'可靠信源'但准确率有限"}
+        ],
+        "logic_score": 0.65,
+        "key_fallacy": "诉诸未经核实的爆料权威"
+      },
+
+      "sentiment_values": {
+        "clickbait_score": 0.70,
+        "value_concerns": ["消费者决策误导"],
+        "emotional_manipulation": "制造期望落差，利用粉丝社群热情",
+        "eq_score": 4.5,
+        "sentiment_label": "low_risk"
+      },
+
+      "synthesis": {"final_verdict": "FALSE", "health_risk": "none", "priority_action": "链接官方发布规格表"}
+    },
+
+    {
+      "id": "RC-20260516-009",
+      "claim_short": "特朗普：地球在'降温'→所以改称'气候变化'",
+
+      "fact_check": {
+        "verdict": "FALSE",
+        "averitec_label": "Refuted",
+        "tsverk_score": 0.02,
+        "evidence": "NASA/NOAA数据：2026年3月为有记录以来最热三月之一。全球变暖趋势在多条独立数据集中均有体现。'全球变暖→气候变化'名称演变源于后者更全面描述气候系统变化，非因降温。",
+        "source_credibility": {"type":"scientific_consensus_nasa_noaa","reliability":"very_high"},
+        "confidence": 0.99
+      },
+
+      "pseudo_science": {
+        "patterns_matched": ["否认科学共识（气候否认主义）","选择性使用数据","概念偷换（warming→change名称）"],
+        "pseudoscience_score": 0.90,
+        "pseudo_type": "climate_denial"
+      },
+
+      "logic": {
+        "fallacies": [
+          {"type":"偷换概念","detail":"将'气候变化'名称演变解读为'因为在降温'"},
+          {"type":"因果倒置","detail":"实际是科学界认为'气候变化'更准确，而非因降温改名"},
+          {"type":"诉诸误导性统计","detail":"忽略全球平均温度长期上升趋势"}
+        ],
+        "logic_score": 0.88,
+        "key_fallacy": "偷换概念+因果倒置"
+      },
+
+      "sentiment_values": {
+        "clickbait_score": 0.72,
+        "value_concerns": ["科学权威侵蚀","气候政策倒退","公众科学素养损害"],
+        "emotional_manipulation": "政治化科学话题+政党认同感利用",
+        "eq_score": 7.5,
+        "sentiment_label": "high_risk"
+      },
+
+      "synthesis": {"final_verdict": "FALSE", "health_risk": "high_long_term", "priority_action": "引用NASA/NOAA最新数据+解释命名历史"}
+    },
+
+    {
+      "id": "RC-20260516-010",
+      "claim_short": "RFK Jr：疫苗对儿童'深度风险'/mRNA未充分测试",
+
+      "fact_check": {
+        "verdict": "FALSE",
+        "averitec_label": "Refuted",
+        "tsverk_score": 0.04,
+        "evidence": "FDA批准疫苗经过广泛I/II/III期临床试验；mRNA技术已研究数十年；儿童COVID疫苗安全性在VAERS、VSD等系统持续监测中；COVID对儿童的重症风险有充分记录（MIS-C等）。",
+        "source_credibility": {"type":"fda_cdc_peer_reviewed","reliability":"very_high"},
+        "confidence": 0.97
+      },
+
+      "pseudo_science": {
+        "patterns_matched": ["疫苗危害夸大","mRNA'实验性'标签（忽略测试历史）","绝对化声称（'深度风险'无证据支持）"],
+        "pseudoscience_score": 0.88,
+        "pseudo_type": "vaccine_misinformation"
+      },
+
+      "logic": {
+        "fallacies": [
+          {"type":"诉诸权威（负面）","detail":"以HHS部长身份提高公信力但无相应科学依据"},
+          {"type":"幸存者偏差","detail":"强调疫苗副反应案例，忽略疫苗预防重症的整体数据"},
+          {"type":"稻草人","detail":"将'疫苗有风险'等同于'儿童不应接种'"}
+        ],
+        "logic_score": 0.85,
+        "key_fallacy": "权威滥用+幸存者偏差"
+      },
+
+      "sentiment_values": {
+        "clickbait_score": 0.80,
+        "value_concerns": ["儿童健康恐惧","政府医疗不信任","疫苗覆盖率下降风险"],
+        "emotional_manipulation": "父母对子女安全的本能恐惧",
+        "eq_score": 8.0,
+        "sentiment_label": "high_risk"
+      },
+
+      "synthesis": {"final_verdict": "FALSE", "health_risk": "critical", "priority_action": "引用FDA/CDC/AAP官方立场+临床试验数据"}
+    },
+
+    {
+      "id": "RC-20260516-015",
+      "claim_short": "多地夜空'UFO'（实为火箭过境）",
+
+      "fact_check": {
+        "verdict": "FALSE",
+        "averitec_label": "Refuted",
+        "tsverk_score": 0.15,
+        "evidence": "经核实为火箭过境产生的视觉现象（'水母云'）。此类现象有完整的气象/航天解释。",
+        "source_credibility": {"type":"media_official_response","reliability":"high"},
+        "confidence": 0.92
+      },
+
+      "pseudo_science": {
+        "patterns_matched": ["将未知飞行现象直接标注为地外智慧生命"],
+        "pseudoscience_score": 0.60,
+        "pseudo_type": "ufo_sensationalism"
+      },
+
+      "logic": {
+        "fallacies": [{"type":"诉诸无知","detail":"'不知道是什么→是UFO'的跳跃推断"}],
+        "logic_score": 0.60,
+        "key_fallacy": "诉诸无知"
+      },
+
+      "sentiment_values": {
+        "clickbait_score": 0.82,
+        "value_concerns": ["公众焦虑"],
+        "emotional_manipulation": "神秘感+惊奇感营造",
+        "eq_score": 4.0,
+        "sentiment_label": "low_risk"
+      },
+
+      "synthesis": {"final_verdict": "FALSE", "health_risk": "none", "priority_action": "科普火箭过境视觉效应"}
+    },
+
+    {
+      "id": "RC-20260516-018",
+      "claim_short": "AI 100%预测彩票",
+
+      "fact_check": {
+        "verdict": "FALSE",
+        "averitec_label": "Refuted",
+        "tsverk_score": 0.00,
+        "evidence": "数学上，公正彩票开奖为随机事件，任何算法（包括AI）均无法预测。任何声称'100%中奖'的AI服务均为诈骗。",
+        "source_credibility": {"type":"mathematical_certainty","reliability":"very_high"},
+        "confidence": 1.00
+      },
+
+      "pseudo_science": {
+        "patterns_matched": ["AI权威感包装不可能承诺","百分之百/必中等绝对化语言"],
+        "pseudoscience_score": 0.95,
+        "pseudo_type": "ai_fraud_pseudoscience"
+      },
+
+      "logic": {
+        "fallacies": [
+          {"type":"诉诸技术权威","detail":"以AI作为'科学'背书，掩盖数学上的不可能性"},
+          {"type":"绝对化声称","detail":"'100%'在随机事件中无意义"}
+        ],
+        "logic_score": 0.95,
+        "key_fallacy": "诉诸虚假权威+数学谬误"
+      },
+
+      "sentiment_values": {
+        "clickbait_score": 0.92,
+        "value_concerns": ["财务诈骗","AI信任滥用"],
+        "emotional_manipulation": "贪财心理+AI权威崇拜",
+        "eq_score": 7.5,
+        "sentiment_label": "high_risk"
+      },
+
+      "synthesis": {"final_verdict": "FALSE", "health_risk": "financial_critical", "priority_action": "警示举报，说明随机性数学原理"}
+    },
+
+    {
+      "id": "RC-20260516-021",
+      "claim_short": "伊维菌素粉丝复用COVID剧本",
+
+      "fact_check": {
+        "verdict": "Misleading_Pattern",
+        "averitec_label": "Misleading",
+        "tsverk_score": 0.08,
+        "evidence": "这是一个系统性谣言传播模式的记录：同一套话术（不信官方→提伊维菌素→暗示利益驱动）在COVID后被复用于汉坦病毒。模式本身是事实，但每次具体声称均无证据。",
+        "source_credibility": {"type":"research+media","reliability":"high"},
+        "confidence": 0.90
+      },
+
+      "pseudo_science": {
+        "patterns_matched": ["谣言'基础设施'复用","跨病毒错误类比","COVID经验泛化"],
+        "pseudoscience_score": 0.85,
+        "pseudo_type": "misinformation_infrastructure"
+      },
+
+      "logic": {
+        "fallacies": [
+          {"type":"错误类比","detail":"COVID和汉坦病毒是完全不同的病毒，治疗方案不可类比"},
+          {"type":"阴谋论框架","detail":"任何反驳都被纳入'掩盖'叙事，无法证伪"}
+        ],
+        "logic_score": 0.85,
+        "key_fallacy": "错误类比+无法证伪框架"
+      },
+
+      "sentiment_values": {
+        "clickbait_score": 0.80,
+        "value_concerns": ["系统性反建制情绪传播","公共卫生基础设施侵蚀"],
+        "emotional_manipulation": "持续积累的机构不信任感",
+        "eq_score": 7.0,
+        "sentiment_label": "high_risk"
+      },
+
+      "synthesis": {"final_verdict": "Misleading", "health_risk": "systemic_high", "priority_action": "揭示谣言'剧本'结构，提升媒体素养"}
+    },
+
+    {
+      "id": "RC-20260516-022",
+      "claim_short": "咖啡'零添加'实含乙基麦芽酚",
+
+      "fact_check": {
+        "verdict": "TRUE",
+        "averitec_label": "Supported",
+        "tsverk_score": 0.85,
+        "evidence": "实验室检测证实添加了乙基麦芽酚（增香剂）；新《预包装食品标签通则》禁止'零添加'宣传；3·15晚会已曝光相关食品安全问题。",
+        "source_credibility": {"type":"lab_test+regulatory","reliability":"very_high"},
+        "confidence": 0.93
+      },
+
+      "pseudo_science": {"patterns_matched": ["'零添加'健康光环营销"], "pseudoscience_score": 0.75, "pseudo_type": "food_marketing_pseudoscience"},
+
+      "logic": {
+        "fallacies": [{"type":"偷换概念","detail":"'零添加'字面意义vs标签规范意义不同，利用消费者认知差距"}],
+        "logic_score": 0.70,
+        "key_fallacy": "偷换概念（营销用语vs化学事实）"
+      },
+
+      "sentiment_values": {
+        "clickbait_score": 0.55,
+        "value_concerns": ["消费者知情权","食品监管有效性"],
+        "emotional_manipulation": "健康焦虑+信任背叛感",
+        "eq_score": 5.5,
+        "sentiment_label": "medium_risk"
+      },
+
+      "synthesis": {"final_verdict": "TRUE（企业虚假宣传属实）", "health_risk": "low_consumer", "priority_action": "引用新标签法规+市监局通报"}
+    },
+
+    {
+      "id": "RC-20260516-026",
+      "claim_short": "剧情摆拍当真实事件传播",
+
+      "fact_check": {
+        "verdict": "Misleading",
+        "averitec_label": "Misleading",
+        "tsverk_score": 0.20,
+        "evidence": "网信部门通报多平台账号发布未标注虚构演绎标签的剧情内容；平台依约处置。",
+        "source_credibility": {"type":"regulatory","reliability":"high"},
+        "confidence": 0.90
+      },
+
+      "pseudo_science": {"patterns_matched": [], "pseudoscience_score": 0.0, "pseudo_type": "n/a"},
+
+      "logic": {
+        "fallacies": [{"type":"虚构现实混淆","detail":"利用受众对新媒体格式的不熟悉，将虚构内容呈现为记录现实"}],
+        "logic_score": 0.65,
+        "key_fallacy": "现实/虚构边界模糊化"
+      },
+
+      "sentiment_values": {
+        "clickbait_score": 0.78,
+        "value_concerns": ["群体对立煽动","社会信任侵蚀"],
+        "emotional_manipulation": "阶级矛盾/家庭矛盾共鸣利用",
+        "eq_score": 6.0,
+        "sentiment_label": "medium_risk"
+      },
+
+      "synthesis": {"final_verdict": "Misleading", "health_risk": "social_medium", "priority_action": "媒体素养教育+平台标注义务说明"}
+    }
+  ],
+
+  "averitec_distribution": {
+    "Refuted": 11,
+    "Misleading": 3,
+    "Supported": 1,
+    "NotEnoughEvidence": 1,
+    "Conflicting": 1,
+    "not_reviewed_this_run": 5
+  },
+
+  "aggregate_scores": {
+    "avg_eq_score": 6.79,
+    "avg_pseudoscience_score": 0.64,
+    "avg_logic_fallacy_score": 0.76,
+    "avg_clickbait_score": 0.79,
+    "unr_rate": 0.045,
+    "health_risk_critical_count": 3,
+    "health_risk_high_count": 3
+  }
+}
