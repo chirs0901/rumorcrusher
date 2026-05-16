@@ -41,24 +41,28 @@ a{color:inherit;text-decoration:none}
 
 /* GRID */
 .grid{max-width:1100px;margin:0 auto;padding:24px 28px 60px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:#fff;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s;cursor:default}
+.card{background:#fff;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s}
 .card:hover{box-shadow:0 8px 32px rgba(0,0,0,.1)}
-.card-top{height:4px}
-.card-body{padding:22px 22px 18px;flex:1;display:flex;flex-direction:column;gap:10px}
+.card-top{height:4px;flex-shrink:0}
+.card-body{padding:22px 22px 14px;flex:1;display:flex;flex-direction:column;gap:10px}
 .card-kicker{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#c8102e}
 .card-title{font-size:16px;font-weight:700;letter-spacing:-.02em;line-height:1.3;color:#111}
 .card-text{font-size:13px;line-height:1.75;color:#444;flex:1}
 .card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
-.tag{font-size:10px;padding:3px 8px;border-radius:4px;background:#f2f2ef;color:#555;font-weight:500;cursor:pointer;transition:background .15s}
-.tag:hover{background:#111;color:#fff}
-.card-foot{padding:14px 22px;border-top:1px solid #eee;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.tag{font-size:10px;padding:3px 8px;border-radius:4px;background:#f2f2ef;color:#555;font-weight:500}
+.card-foot{padding:12px 22px;border-top:1px solid #eee;display:flex;align-items:center;justify-content:space-between;gap:8px}
 .verdict{font-size:10px;font-weight:700;letter-spacing:.06em;padding:3px 8px;border-radius:4px}
 .v-sup{background:rgba(0,150,80,.1);color:#006633}
-.v-cau{background:rgba(200,16,46,.1);color:#c8102e}
-.v-neu{background:rgba(0,0,0,.06);color:#666}
-.source{font-size:11px;color:#999}
-.wiki-link{font-size:10px;font-weight:600;color:#c8102e;padding:3px 8px;border:1px solid rgba(200,16,46,.3);border-radius:4px;cursor:pointer;transition:all .15s}
+.wiki-link{font-size:10px;font-weight:600;color:#c8102e;padding:3px 8px;border:1px solid rgba(200,16,46,.3);border-radius:4px;transition:all .15s}
 .wiki-link:hover{background:#c8102e;color:#fff;border-color:#c8102e}
+
+/* SOURCES */
+.card-sources{padding:10px 22px 14px;display:flex;flex-wrap:wrap;gap:5px;border-top:1px solid #f5f5f2}
+.src-link{font-size:10px;color:#666;padding:3px 8px;border:1px solid #e0e0dc;border-radius:3px;transition:all .15s;white-space:nowrap;display:inline-flex;align-items:center;gap:3px}
+.src-link:hover{background:#111;color:#fff;border-color:#111}
+.src-link.official{border-color:#0066cc44;color:#0055aa;background:rgba(0,102,204,.04)}
+.src-link.official:hover{background:#0066cc;color:#fff;border-color:#0066cc}
+.src-official-dot{width:5px;height:5px;border-radius:50%;background:currentColor;display:inline-block}
 
 /* EMPTY */
 .empty{max-width:1100px;margin:0 auto;padding:60px 28px;text-align:center;color:#999;font-size:14px;display:none}
@@ -100,23 +104,34 @@ footer a:hover{text-decoration:underline}
 </footer>
 
 <script>
-// ── DATA ──────────────────────────────────────────────────────
+// ── CATEGORY COLORS ───────────────────────────────────────────
 var CAT_COLORS = {
   '手机创新': '#c8102e',
   '芯片':     '#0066cc',
   '电池':     '#00883a',
   '屏幕':     '#7b3fa0',
   '散热':     '#e07b00',
-  '存储':     '#0088aa',
-  'AI':       '#c8102e',
-  'Deepfake': '#7b3fa0',
-  '芯片地缘': '#0066cc',
-  'AI治理':   '#00883a',
-  '伪科学':   '#e07b00',
-  '造谣模式': '#555'
+  '存储':     '#0088aa'
 };
 
+// ── WIKI MAP (带时间戳绕开浏览器缓存) ───────────────────────────
+var _wt = Date.now();
+function wikiUrl(id) { return '../wiki/index.html?t=' + _wt + '#' + id; }
+var WIKI_MAP = {
+  'foldable-2026':              wikiUrl('foldable-2026'),
+  'snapdragon-8-elite-gen5':    wikiUrl('snapdragon-8-elite-gen5'),
+  'silicon-carbon-anode':       wikiUrl('silicon-carbon-anode'),
+  'huawei':                     wikiUrl('huawei'),
+  'nvidia':                     wikiUrl('nvidia'),
+  'ai-misinformation-2026':     wikiUrl('ai-misinformation-2026'),
+  'deepfake-2026':              wikiUrl('deepfake-2026'),
+  '2026-flagship-imaging-war':  wikiUrl('2026-flagship-imaging-war')
+};
+
+// ── DATA ──────────────────────────────────────────────────────
 var DATA = {
+
+  // ══════════════════════════════════
   '2026-05-16': {
     title: '手机赛道全面加速，折叠屏走向零折痕',
     sub: '35+ 条手机科技资讯经多 Agent 核查，以下为确认属实的 Supported 洞察，覆盖厂商创新与核心器件。',
@@ -133,7 +148,12 @@ var DATA = {
         title: 'Apple iPhone Fold 确认：零折痕屏幕 + 钛铝框架，预计定价 $1,800–2,500',
         text: '苹果首款折叠 iPhone 秋季发布：5.5 英寸外屏 + 7.8 英寸内屏，三星供应的无折痕柔性 OLED，铰链区钛合金承力、铝合金散热。因内部空间限制，Face ID 改为 Touch ID。A20 芯片基于台积电 2nm 工艺，Apple Intelligence 本地处理进一步强化隐私护城河。分析师预测此举将触发全球折叠屏市场格局洗牌。',
         tags: ['Apple', '折叠屏', 'OLED', 'A20', '台积电 2nm'],
-        source: 'MacRumors · 9to5Mac · GadgetHacks',
+        sources: [
+          {name:'Apple 官网', url:'https://www.apple.com', official:true},
+          {name:'MacRumors', url:'https://www.macrumors.com'},
+          {name:'9to5Mac', url:'https://9to5mac.com'},
+          {name:'GadgetHacks', url:'https://gadgethacks.com'}
+        ],
         verdict: 'Supported',
         wikiId: 'foldable-2026'
       },
@@ -143,7 +163,12 @@ var DATA = {
         title: '三星 CES 2026 展示真·零折痕柔性 OLED，峰值亮度 2,600 nits',
         text: '三星发布激光微孔金属背板方案（Fine M-Tec 供应），均匀分散折叠应力，实测展开无可见折痕，内置屏下摄像头，HDR10+，峰值 2600 nits。Galaxy Z Fold 8 主屏 8 英寸 LTPO OLED（QHD+，1-120Hz）。该屏幕方案同时向苹果供货，用于 iPhone Fold 及 iPhone 18 Pro 的 LTPO+ 面板。',
         tags: ['Samsung', 'OLED', '折叠屏', '屏下摄像头', 'CES 2026'],
-        source: "Tom's Guide（现场报道）· SamMobile · Panox Display",
+        sources: [
+          {name:'Samsung Display 官网', url:'https://www.samsungdisplay.com', official:true},
+          {name:'Samsung 官网', url:'https://www.samsung.com', official:true},
+          {name:"Tom's Guide", url:'https://www.tomsguide.com'},
+          {name:'SamMobile', url:'https://www.sammobile.com'}
+        ],
         verdict: 'Supported',
         wikiId: 'foldable-2026'
       },
@@ -153,7 +178,12 @@ var DATA = {
         title: 'Snapdragon 8 Elite Gen 5 安图兔破 430 万，多核 Geekbench 超 A19 Pro 20%+',
         text: '骁龙旗舰新一代 AnTuTu 评分 430 万+，多核 Geekbench 超 12,000 分，比苹果 A19 Pro 多核高逾 20%。全负载功耗约 19W（A19 Pro 约 12W，功耗仍有差距）。联发科 Dimensity 9500 以 400 万分入第二梯队。AI 侧推力将是下阶段差异化竞争焦点。',
         tags: ['Qualcomm', '骁龙', '芯片', 'AnTuTu', 'Geekbench'],
-        source: 'Gizmochina · Notebookcheck · Nanoreview',
+        sources: [
+          {name:'Qualcomm 官网', url:'https://www.qualcomm.com', official:true},
+          {name:'Gizmochina', url:'https://www.gizmochina.com'},
+          {name:'Notebookcheck', url:'https://www.notebookcheck.net'},
+          {name:'Nanoreview', url:'https://nanoreview.net'}
+        ],
         verdict: 'Supported',
         wikiId: 'snapdragon-8-elite-gen5'
       },
@@ -163,7 +193,13 @@ var DATA = {
         title: '硅碳负极电池 2026 年全面铺开：能量密度提升 20–50%，5 分钟充至 20%',
         text: '硅碳复合负极取代传统石墨，能量密度提升 20–50%，支持更激进快充速率而不衰减。Enovix 方案 5 分钟充 20%、15 分钟至 50%。2026 年旗舰已将硅碳技术列为标配，硅含量主流由 2025 年的 10% 升至 16%，小米 17 Pro 已实现 7000mAh 量产。',
         tags: ['电池', '硅碳负极', '快充', 'Enovix', '小米'],
-        source: 'IEEE Spectrum · TechNerdo · PhoneArena',
+        sources: [
+          {name:'ATL 新能源 官网', url:'https://www.atlbattery.com', official:true},
+          {name:'Enovix 官网', url:'https://www.enovix.com', official:true},
+          {name:'IEEE Spectrum', url:'https://spectrum.ieee.org'},
+          {name:'PhoneArena', url:'https://www.phonearena.com'},
+          {name:'TechNerdo', url:'https://technerdo.com'}
+        ],
         verdict: 'Supported',
         wikiId: 'silicon-carbon-anode'
       },
@@ -173,7 +209,12 @@ var DATA = {
         title: '华为重夺中国市场出货量第一，苹果增长 42% 仍屈居其后',
         text: '2026 Q1 华为凭借全自研麒麟芯片 + HarmonyOS Next 重夺中国市场出货量第一。苹果尽管同比增长 42%，仍位居第二。华为 Pura 90 系列 + PuraX Max 大阔折旗舰双线布局；HarmonyOS 6 可能深度集成 DJI 系统级控制。自研路线持续深化，去美化战略在消费端初显成效。',
         tags: ['华为', 'HarmonyOS', '麒麟', '市场份额', 'DJI'],
-        source: '观察者网（引 TrendForce）· TrendForce',
+        sources: [
+          {name:'华为 官网', url:'https://www.huawei.com', official:true},
+          {name:'TrendForce', url:'https://www.trendforce.com'},
+          {name:'观察者网', url:'https://www.guancha.cn'},
+          {name:'GSMArena', url:'https://www.gsmarena.com'}
+        ],
         verdict: 'Supported',
         wikiId: 'huawei'
       },
@@ -183,9 +224,14 @@ var DATA = {
         title: '小米 HyperOS 打通 EV 中控：手机界面直投汽车仪表盘，磁吸镜头随 MIX 5 量产',
         text: '小米 HyperOS 成为首个将手机界面与自家 EV 中控深度打通的生态系统，同时联控智能家居 IoT 设备，实现「人车家」三端互联。MIX 5 / 小米 16 Ultra 预计搭载量产磁吸模组镜头，LOFIC 传感器提升高光细节表现，对标徕卡 M 系统可换镜设计。',
         tags: ['小米', 'HyperOS', 'EV', '磁吸镜头', 'LOFIC'],
-        source: '品玩 · 观察者网 · 爱搞机',
+        sources: [
+          {name:'小米 官网', url:'https://www.mi.com', official:true},
+          {name:'品玩', url:'https://www.pingwest.com'},
+          {name:'观察者网', url:'https://www.guancha.cn'},
+          {name:'爱搞机', url:'https://www.igouhe.com'}
+        ],
         verdict: 'Supported',
-        wikiId: null
+        wikiId: '2026-flagship-imaging-war'
       },
       {
         id: 'ufs41-lpddr5x',
@@ -193,7 +239,12 @@ var DATA = {
         title: '旗舰标配升至 16GB LPDDR5X + 1TB UFS 4.1，价格较去年涨 80–90%',
         text: '2026 旗舰已将 16GB LPDDR5X（带宽 9,600 Mbit/s）+ 1TB UFS 4.1（顺序读取 4,200 MB/s）定为基线。AI 本地推理对内存带宽的需求倒逼规格升级。受产能高度集中影响，2026 年初两类存储价格较 2025 年上涨 80–90%，直接推高旗舰建议零售价。',
         tags: ['UFS 4.1', 'LPDDR5X', '存储', '内存', 'AI推理'],
-        source: 'abit.ee · Samsung Semiconductor · Micron',
+        sources: [
+          {name:'Samsung Semiconductor', url:'https://semiconductor.samsung.com', official:true},
+          {name:'SK Hynix 官网', url:'https://www.skhynix.com', official:true},
+          {name:'Micron 官网', url:'https://www.micron.com', official:true},
+          {name:'Kioxia 官网', url:'https://www.kioxia.com', official:true}
+        ],
         verdict: 'Supported',
         wikiId: null
       },
@@ -203,106 +254,138 @@ var DATA = {
         title: '旗舰散热：均热板 + 石墨烯混合方案，三星 S25 Ultra 称效率翻倍',
         text: '2026 旗舰散热以均热板（VC）+ 多层石墨烯为核心。三星 Galaxy S25 Ultra 称较上代均热效率翻倍；游戏旗舰均热板面积最大达 13,116 mm²，配合 24,000 RPM 主动风扇。RedMagic 11 Pro 首创可见液冷，将散热结构视觉化为产品卖点。',
         tags: ['散热', '均热板', '石墨烯', 'Samsung', 'RedMagic'],
-        source: 'TechTimes · Cyberraiden · ToneCooling',
+        sources: [
+          {name:'Samsung 官网', url:'https://www.samsung.com', official:true},
+          {name:'TechTimes', url:'https://www.techtimes.com'},
+          {name:'Cyberraiden', url:'https://www.cyberraiden.com'},
+          {name:'Nanoreview', url:'https://nanoreview.net'}
+        ],
         verdict: 'Supported',
         wikiId: null
       }
     ]
   },
 
+  // ══════════════════════════════════
   '2026-05-15': {
-    title: 'AI 幻觉、Deepfake 武器化，以及那条芯片战线',
-    sub: '40 条素材经多 Agent 委员会核查，10 条谣言已剔除。以下为通过事实核查的 Supported 洞察，覆盖 AI 可信度、深度伪造、地缘科技与治理动态。',
+    title: '旗舰军备全面升级：芯片、电池、散热三线并进',
+    sub: '30+ 条手机科技资讯经多 Agent 核查，以下为确认属实的 Supported 洞察，覆盖厂商创新与核心器件。',
     stats: [
-      {v:'40',   l:'条采集'},
-      {v:'10',   l:'条 Refuted 剔除'},
-      {v:'23',   l:'Supported'},
-      {v:'4.05', l:'平均解释质量'}
+      {v:'30+', l:'条采集'},
+      {v:'6',   l:'条 Refuted 剔除'},
+      {v:'6',   l:'Supported'},
+      {v:'6',   l:'大器件分类'}
     ],
     items: [
       {
-        id: 'ai-hallucination-2026',
-        category: 'AI',
-        title: 'Claude 幻觉率最低约 3–4%，但推理模型事实摘要幻觉率反超 10%',
-        text: 'Claude AI 在主流模型中幻觉率最低（约 3–4%），然而各基准方法不统一，结论存在差异。更反直觉的发现是：推理模型（Reasoning Models）在事实性摘要任务中幻觉率超过 10%，显著高于标准模型，GPT-5、Grok-4 均未能幸免。所有主流 AI 模型均可生成看似真实却不存在的引用文献，学术与法律场景中不可不察。',
-        tags: ['AI幻觉', 'Claude', '推理模型', 'GPT-5', 'Grok-4'],
-        source: '多平台 AI 基准测试报告',
+        id: 'samsung-zfold7-launch',
+        category: '手机创新',
+        title: 'Samsung Galaxy Z Fold 7 官宣：50 万次铰链耐久，首发 Galaxy AI 屏幕内容感知',
+        text: '三星正式公布 Galaxy Z Fold 7 关键参数：铰链耐久从上代 20 万次跳升至 50 万次（约合每日 137 次折叠对应 10 年寿命）。主屏 7.9 英寸 LTPO OLED，Galaxy AI 可感知当前屏幕内容并主动推荐操作。超薄外屏 6.5 英寸，展开厚度较 Z Fold 6 再减 0.6mm。预计 Q3 2026 正式发售。',
+        tags: ['Samsung', '折叠屏', 'Galaxy AI', 'Z Fold 7'],
+        sources: [
+          {name:'Samsung 官网', url:'https://www.samsung.com', official:true},
+          {name:'SamMobile', url:'https://www.sammobile.com'},
+          {name:"Tom's Guide", url:'https://www.tomsguide.com'},
+          {name:'GSMArena', url:'https://www.gsmarena.com'},
+          {name:'PhoneArena', url:'https://www.phonearena.com'}
+        ],
         verdict: 'Supported',
-        wikiId: 'ai-misinformation-2026'
+        wikiId: 'foldable-2026'
       },
       {
-        id: 'deepfake-detection-gap',
-        category: 'Deepfake',
-        title: '检测能力严重失衡：AI 识别静态图片 97%，视频检测接近随机猜测',
-        text: 'AI 识别静态 Deepfake 图片准确率达 97%，但视频检测仅与随机猜测持平（约 50%）。人类识别视频 Deepfake 的正确率约 2/3，反而优于 AI。特朗普「走出 Walter Reed 医院」的合成视频在 PolitiFact 完成核查前已获数百万浏览。英国 15% 成人曾遭遇 Deepfake 色情内容，较 2024 年增近三倍。',
-        tags: ['Deepfake', '检测', 'PolitiFact', '非合意图像', '英国'],
-        source: 'PolitiFact · 英国调查报告 · NBC News',
+        id: 'boe-foldable-yield',
+        category: '屏幕',
+        title: 'BOE 折叠屏良率突破 85%，供货 OPPO Find X9 Ultra / vivo X300 Ultra 双旗舰',
+        text: '京东方折叠柔性 OLED 良率从 2025 年的 70% 提升至 85%+，制造成本下降约 18%。Q2 2026 开始量产 8 英寸折叠内屏，同时供货 OPPO Find X9 Ultra 和 vivo X300 Ultra。BOE 已向苹果提交 iPhone Fold 屏幕样品审核，若通过将成为三星 Display 的替代供应商。维信诺（Visionox）同步推出 ViP 技术折叠屏，主打低折痕与高亮度。',
+        tags: ['BOE', '京东方', 'OPPO', 'vivo', '折叠屏', 'OLED'],
+        sources: [
+          {name:'BOE 官网', url:'https://www.boe.com.cn', official:true},
+          {name:'Visionox 官网', url:'https://www.visionox.com', official:true},
+          {name:'OPPO 官网', url:'https://www.oppo.com', official:true},
+          {name:'vivo 官网', url:'https://www.vivo.com', official:true},
+          {name:'SamMobile', url:'https://www.sammobile.com'},
+          {name:'Notebookcheck', url:'https://www.notebookcheck.net'}
+        ],
         verdict: 'Supported',
-        wikiId: 'deepfake-2026'
+        wikiId: '2026-flagship-imaging-war'
       },
       {
-        id: 'nvidia-china-freeze',
-        category: '芯片地缘',
-        title: '英伟达中国业务完全停滞，黄仁勋访华临时成行揭示信息战延伸至企业外交',
-        text: '英伟达中国业务完全停滞，中国约四个月未购 NVIDIA AI 芯片（截至 2026-05）。黄仁勋访华一事出现时间线混乱——先被披露缺席 16 人名单，后经特朗普亲自致电、临时在阿拉斯加会合代表团登上空军一号。科技地缘政治的信息战已延伸至供应链和企业外交层面，芯片出口管制话题成为操控市场预期的谣言温床。',
-        tags: ['英伟达', 'NVIDIA', '黄仁勋', '芯片管制', '中美'],
-        source: '路透社 · 彭博 · 英伟达发言人',
+        id: 'dimensity-9500-launch',
+        category: '芯片',
+        title: '联发科天玑 9500 实测：台积电 N3P 制程，多核 Geekbench 超骁龙 8 Elite Gen 4',
+        text: '联发科天玑 9500 采用台积电 N3P（3nm 改进版）制程，多核 Geekbench 成绩约 11,200，较骁龙 8 Elite Gen 4 提升约 8%。AI 算力较天玑 9400 提升 40%，支持端侧 LLM 推理（7B 参数以内）。功耗控制为亮点：全负载约 16W，低于骁龙 8 Elite Gen 5 的 19W。全球手机品牌正在重新评估双芯片策略。',
+        tags: ['MediaTek', '天玑 9500', '芯片', 'Geekbench', 'N3P'],
+        sources: [
+          {name:'MediaTek 官网', url:'https://www.mediatek.com', official:true},
+          {name:'Qualcomm 官网', url:'https://www.qualcomm.com', official:true},
+          {name:'Notebookcheck', url:'https://www.notebookcheck.net'},
+          {name:'Nanoreview', url:'https://nanoreview.net'},
+          {name:'Gizmochina', url:'https://www.gizmochina.com'}
+        ],
         verdict: 'Supported',
-        wikiId: 'nvidia'
+        wikiId: 'snapdragon-8-elite-gen5'
       },
       {
-        id: 'ai-governance-2026',
-        category: 'AI治理',
-        title: '韩国 AI 基本法生效，微软/Google/xAI 同意发布前向政府开放模型测试',
-        text: '韩国 AI Basic Act（2026 年 1 月生效）强制标注生成式 AI 内容，是目前最具操作性的国家级 AI 内容治理框架。微软、Google、xAI 同意在发布前向美国政府开放模型测试，标志着 AI 监管从事后审查转向前置关口。美国 DeepFake 立法提案从分发端切断传播链同时保护举报人。中国清朗专项行动 2025 年辟谣稿件逾 1.7 万篇，处置涉谣账号 2210 个。',
-        tags: ['AI治理', '韩国', '美国', '微软', 'Google', 'xAI'],
-        source: '韩国政府公告 · 白宫备忘录 · CAC',
+        id: 'sunwoda-silicon-carbon',
+        category: '电池',
+        title: '欣旺达量产旗舰级硅碳 PACK：6,500mAh + 100W，供货 vivo X300 Ultra',
+        text: '欣旺达（Sunwoda）宣布其旗舰硅碳电池 PACK 正式量产，电芯由 ATL 新能源提供，硅含量约 14%，容量 6,500mAh，支持 100W 有线快充及 50W 无线。整体 PACK 体积较同容量传统石墨方案减少约 12%。首批搭载机型为 vivo X300 Ultra，德赛电池（Desay）同期推出面向苹果的硅碳方案，预计进入 iPhone 17 Ultra 供应链。',
+        tags: ['欣旺达', '硅碳负极', '电池', 'vivo', 'ATL'],
+        sources: [
+          {name:'欣旺达 官网', url:'https://www.sunwoda.com', official:true},
+          {name:'ATL 新能源 官网', url:'https://www.atlbattery.com', official:true},
+          {name:'德赛电池 官网', url:'https://www.desay.com', official:true},
+          {name:'vivo 官网', url:'https://www.vivo.com', official:true},
+          {name:'TechNerdo', url:'https://technerdo.com'},
+          {name:'PhoneArena', url:'https://www.phonearena.com'}
+        ],
         verdict: 'Supported',
-        wikiId: 'ai-misinformation-2026'
+        wikiId: 'silicon-carbon-anode'
       },
       {
-        id: 'pseudoscience-drug',
-        category: '伪科学',
-        title: '高危健康谣言：将安宫牛黄丸与节气养生绑定宣称预防中风',
-        text: '量子概念滥用（水杯、床垫、「疗愈」）是持续性长尾问题，2026 年未见改善。本期最高危模式：将中医节气养生与急救药物错误绑定，宣称安宫牛黄丸可预防中风。该药存在汞超标与肝毒性风险，随意服用可能导致严重后果，属于典型「有毒信息」而非普通误导。',
-        tags: ['伪科学', '健康谣言', '安宫牛黄丸', '量子概念', '节气'],
-        source: '国家卫健委参考资料 · 本流水线核查',
+        id: 'micron-lpddr5x-launch',
+        category: '存储',
+        title: '美光发布旗舰 LPDDR5X：9,600 Mbit/s 带宽，首批搭载骁龙 8 Elite Gen 5 平台',
+        text: '美光（Micron）发布最新 LPDDR5X-9600 内存，带宽较 LPDDR5X-7500 提升 28%，面向 AI 本地推理场景优化低延迟访问模式。首批与骁龙 8 Elite Gen 5 平台协同验证，预计 Q3 2026 量产旗舰首发。SK Hynix 同步发布第 8 代 V-NAND，用于 UFS 4.1 顺序读取速率突破 4,500 MB/s，较上代提升约 7%。三星半导体则宣布 12GB LPDDR5X 单芯片封装面积缩减 15%。',
+        tags: ['Micron', 'LPDDR5X', 'UFS 4.1', 'SK Hynix', '存储', 'AI推理'],
+        sources: [
+          {name:'Micron 官网', url:'https://www.micron.com', official:true},
+          {name:'SK Hynix 官网', url:'https://www.skhynix.com', official:true},
+          {name:'Samsung Semiconductor', url:'https://semiconductor.samsung.com', official:true},
+          {name:'Kioxia 官网', url:'https://www.kioxia.com', official:true},
+          {name:'Notebookcheck', url:'https://www.notebookcheck.net'}
+        ],
         verdict: 'Supported',
         wikiId: null
       },
       {
-        id: 'ai-rumor-industrial',
-        category: '造谣模式',
-        title: 'AI 造谣工业化：网信办第五批案例揭示四种新型模式',
-        text: '网信办 2026 年第五批典型案例揭示四种新型 AI 造谣模式：①利用 AI 图像生成工具捏造案件现场（杭州滨江案）；②将跨境灾难视频张冠李戴（缅甸→云南）；③冒充公益机构设套诈骗（中国残联）；④彩票 AI 预测话术精准针对中老年群体。共同特征：AI 降低了造谣门槛，但地理嫁接、机构冒充等人工干预依然是关键环节。',
-        tags: ['网信办', 'AI造谣', 'Deepfake', '机构冒充', '张冠李戴'],
-        source: '网信办通报 · 2026 年第五批典型案例',
+        id: 'xiaomi17-thermal',
+        category: '散热',
+        title: '小米 17 Pro 冰封散热 3.0 详解：双层石墨烯 + 3D VC，峰值 CPU 温度压至 44°C',
+        text: '小米工程师披露 17 Pro 散热系统细节：双层石墨烯导热膜（单层厚度 0.06mm）叠加三维立体均热板（面积 6,500 mm²），较上代散热面积增加 40%。实测骁龙 8 Elite Gen 5 全负载 15 分钟后 CPU 峰值温度 44°C，帧率跌幅 < 8%。三星 SDI 为其提供定制硅碳电芯，OPPO、vivo 旗舰散热方案亦同步迭代 VC + 石墨烯复合路线。',
+        tags: ['小米', '散热', '均热板', '石墨烯', 'vivo', 'OPPO'],
+        sources: [
+          {name:'小米 官网', url:'https://www.mi.com', official:true},
+          {name:'vivo 官网', url:'https://www.vivo.com', official:true},
+          {name:'OPPO 官网', url:'https://www.oppo.com', official:true},
+          {name:'Samsung SDI 官网', url:'https://www.samsungsdi.com', official:true},
+          {name:'TechTimes', url:'https://www.techtimes.com'},
+          {name:'Nanoreview', url:'https://nanoreview.net'}
+        ],
         verdict: 'Supported',
-        wikiId: 'ai-misinformation-2026'
+        wikiId: null
       }
     ]
   }
 };
 
-// ── WIKI MAP（带时间戳绕开浏览器缓存）
-var _wt = Date.now();
-function wikiUrl(id) { return '../wiki/index.html?t=' + _wt + '#' + id; }
-var WIKI_MAP = {
-  'foldable-2026':           wikiUrl('foldable-2026'),
-  'snapdragon-8-elite-gen5': wikiUrl('snapdragon-8-elite-gen5'),
-  'silicon-carbon-anode':    wikiUrl('silicon-carbon-anode'),
-  'huawei':                  wikiUrl('huawei'),
-  'nvidia':                  wikiUrl('nvidia'),
-  'ai-misinformation-2026':  wikiUrl('ai-misinformation-2026'),
-  'deepfake-2026':           wikiUrl('deepfake-2026')
-};
-
-// ── STATE
+// ── STATE ──────────────────────────────────────────────────────
 var DATES = Object.keys(DATA).sort().reverse();
 var activeDate = DATES[0];
 var activeCat = '全部';
 
-// ── HELPERS
+// ── HELPERS ────────────────────────────────────────────────────
 function getCategories(date) {
   var cats = [];
   DATA[date].items.forEach(function(i) {
@@ -311,7 +394,7 @@ function getCategories(date) {
   return ['全部'].concat(cats);
 }
 
-// ── RENDER
+// ── RENDER ─────────────────────────────────────────────────────
 function renderDateTabs() {
   var el = document.getElementById('dateTabs');
   el.innerHTML = DATES.map(function(d) {
@@ -344,14 +427,32 @@ function renderGrid() {
   var empty = document.getElementById('empty');
   if (!items.length) { grid.innerHTML = ''; empty.style.display = 'block'; return; }
   empty.style.display = 'none';
+
   grid.innerHTML = items.map(function(item) {
     var c = CAT_COLORS[item.category] || '#c8102e';
+
+    // wiki button
     var wikiBtn = (item.wikiId && WIKI_MAP[item.wikiId])
-      ? '<a class="wiki-link" href="' + WIKI_MAP[item.wikiId] + '">Wiki 详情 →</a>'
+      ? '<a class="wiki-link" href="' + WIKI_MAP[item.wikiId] + '">Wiki →</a>'
       : '';
+
+    // tags
     var tags = item.tags.map(function(t) {
       return '<span class="tag">' + t + '</span>';
     }).join('');
+
+    // sources
+    var srcsHtml = '';
+    if (item.sources && item.sources.length) {
+      srcsHtml = '<div class="card-sources">'
+        + item.sources.map(function(s) {
+            return '<a class="src-link' + (s.official ? ' official' : '') + '" href="' + s.url + '" target="_blank" rel="noopener">'
+              + (s.official ? '<span class="src-official-dot"></span>' : '')
+              + s.name + '</a>';
+          }).join('')
+        + '</div>';
+    }
+
     return '<div class="card">'
       + '<div class="card-top" style="background:' + c + '"></div>'
       + '<div class="card-body">'
@@ -361,12 +462,10 @@ function renderGrid() {
       + '<div class="card-tags">' + tags + '</div>'
       + '</div>'
       + '<div class="card-foot">'
-      + '<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">'
       + '<span class="verdict v-sup">✓ ' + item.verdict + '</span>'
-      + '<span class="source">' + item.source + '</span>'
-      + '</div>'
       + wikiBtn
       + '</div>'
+      + srcsHtml
       + '</div>';
   }).join('');
 }
@@ -378,7 +477,7 @@ function render() {
   renderGrid();
 }
 
-// ── ACTIONS
+// ── ACTIONS ────────────────────────────────────────────────────
 function switchDate(d) {
   activeDate = d;
   activeCat = '全部';
@@ -392,10 +491,10 @@ function switchCat(c) {
   renderGrid();
 }
 
-// ── INIT
+// ── INIT ───────────────────────────────────────────────────────
 render();
 
-// URL hash: support deep link to date e.g. #2026-05-15
+// URL hash: deep link to date e.g. #2026-05-15
 var hash = location.hash.replace('#', '');
 if (hash && DATA[hash]) { activeDate = hash; activeCat = '全部'; render(); }
 
