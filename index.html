@@ -42,7 +42,7 @@
   <section>
     <h2 class="text-xl font-bold mb-4">📅 每日报告归档</h2>
     <div class="space-y-3">
-      <a href="2026-05-14/index.html" class="card block bg-white rounded-xl shadow-sm p-5 border-l-4 border-rose-500">
+      <a href="2026-05-14/index.html" onclick="event.preventDefault();location.href='2026-05-14/index.html?t='+Date.now()" class="card block bg-white rounded-xl shadow-sm p-5 border-l-4 border-rose-500">
         <div class="flex items-center justify-between">
           <div>
             <div class="text-lg font-semibold text-slate-900">2026-05-14（首日试运行）</div>
@@ -51,7 +51,7 @@
           <div class="text-rose-600">→</div>
         </div>
       </a>
-      <a href="2026-05-15/index.html" class="card block bg-white rounded-xl shadow-sm p-5 border-l-4 border-rose-500">
+      <a href="2026-05-15/index.html" onclick="event.preventDefault();location.href='2026-05-15/index.html?t='+Date.now()" class="card block bg-white rounded-xl shadow-sm p-5 border-l-4 border-rose-500">
         <div class="flex items-center justify-between">
           <div>
             <div class="text-lg font-semibold text-slate-900">2026-05-15</div>
@@ -67,14 +67,24 @@
   <section class="mt-8">
     <h2 class="text-xl font-bold mb-4">📱 手机科技深度专题</h2>
     <div class="space-y-3">
-      <a href="tech-digest/2026-05-16/index.html" class="card block bg-white rounded-xl shadow-sm p-5 border-l-4 border-blue-500">
+      <a href="tech-digest/index.html" onclick="event.preventDefault();location.href='tech-digest/index.html?t='+Date.now()" class="card block bg-white rounded-xl shadow-sm p-5 border-l-4 border-blue-500">
         <div class="flex items-center justify-between">
           <div>
-            <div class="text-lg font-semibold text-slate-900">2026-05-16 · 手机科技深度报告</div>
-            <div class="text-sm text-slate-600 mt-1">35+ 条资讯 · 厂商创新 × 6 · 核心器件 × 5 · 精选头条 × 5 · 可信度核查表</div>
-            <div class="text-xs text-blue-500 mt-1">Apple / Samsung / 华为 / 小米 / OPPO / vivo · 芯片 / 电池 / 屏幕 / 散热 / 存储</div>
+            <div class="text-lg font-semibold text-slate-900">每日科技简报（永久链接）</div>
+            <div class="text-sm text-slate-600 mt-1">仅展示 Supported 已核查资讯 · 日期切换 · 默认最新日期 · 持续更新</div>
+            <div class="text-xs text-blue-500 mt-1">当前收录：2026-05-15 · 2026-05-16 · 手机创新 / AI / Deepfake / 芯片地缘 / 治理</div>
           </div>
           <div class="text-blue-600">→</div>
+        </div>
+      </a>
+      <a href="wiki/index.html" onclick="event.preventDefault();location.href='wiki/index.html?t='+Date.now()" class="card block bg-white rounded-xl shadow-sm p-5 border-l-4 border-purple-500">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-lg font-semibold text-slate-900">LLM Wiki · 知识图谱</div>
+            <div class="text-sm text-slate-600 mt-1">实体 × 4 · 主题 × 4 · 全部可点击下钻 · 关系可追踪 · 信源可溯源</div>
+            <div class="text-xs text-purple-500 mt-1">NVIDIA · 华为 · 骁龙芯片 · 硅碳电池 · AI谣言 · Deepfake · 折叠屏 · 影像旗舰战</div>
+          </div>
+          <div class="text-purple-600">→</div>
         </div>
       </a>
     </div>

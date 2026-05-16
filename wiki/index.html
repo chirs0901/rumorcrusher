@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>LLM Wiki · RumorCrusher 知识图谱</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,"Helvetica Neue",Arial,"PingFang SC",sans-serif;background:#f2f2ef;color:#111;-webkit-font-smoothing:antialiased;font-size:14px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:200;background:rgba(242,242,239,.94);backdrop-filter:blur(18px) saturate(180%);-webkit-backdrop-filter:blur(18px) saturate(180%);border-bottom:1px solid #d9d9d5;height:52px;display:flex;align-items:center;padding:0 24px;gap:16px}
+.nav-logo{font-size:13px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;display:flex;align-items:center;gap:6px}
+.logo-dot{width:8px;height:8px;border-radius:50%;background:#c8102e;display:inline-block}
+.nav-breadcrumb{font-size:12px;color:#999;display:flex;align-items:center;gap:8px}
+.nav-breadcrumb a{color:#c8102e;cursor:pointer}
+.nav-breadcrumb a:hover{text-decoration:underline}
+.nav-back{font-size:12px;color:#666;border:1px solid #ccc;border-radius:20px;padding:4px 12px;cursor:pointer;transition:all .15s;margin-left:auto}
+.nav-back:hover{background:#111;color:#fff;border-color:#111}
+
+/* LAYOUT */
+.layout{display:grid;grid-template-columns:260px 1fr;min-height:calc(100vh - 52px)}
+
+/* SIDEBAR */
+.sidebar{background:#fff;border-right:1px solid #e5e5e1;padding:24px 0;position:sticky;top:52px;height:calc(100vh - 52px);overflow-y:auto}
+.sidebar::-webkit-scrollbar{width:4px}
+.sidebar::-webkit-scrollbar-track{background:transparent}
+.sidebar::-webkit-scrollbar-thumb{background:#ddd;border-radius:2px}
+.sidebar-section{margin-bottom:8px}
+.sidebar-head{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#999;padding:12px 20px 6px}
+.sidebar-item{display:flex;align-items:center;gap:10px;padding:9px 20px;cursor:pointer;transition:background .12s;border-left:3px solid transparent}
+.sidebar-item:hover{background:rgba(0,0,0,.04)}
+.sidebar-item.active{background:rgba(200,16,46,.06);border-left-color:#c8102e}
+.sidebar-item.active .si-name{color:#c8102e;font-weight:600}
+.si-icon{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;color:#fff}
+.si-name{font-size:13px;color:#333;line-height:1.3}
+.si-type{font-size:10px;color:#aaa;line-height:1}
+
+/* MAIN DETAIL */
+.detail{padding:40px 48px 60px;max-width:860px}
+.detail-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;gap:16px;color:#bbb;text-align:center}
+.detail-placeholder svg{opacity:.3}
+.detail-kicker{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#c8102e;margin-bottom:12px}
+.detail-title{font-size:clamp(24px,3vw,36px);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-bottom:8px}
+.detail-subtitle{font-size:14px;color:#666;margin-bottom:32px;padding-bottom:24px;border-bottom:2px solid #111}
+
+/* DETAIL CONTENT BLOCKS */
+.d-section{margin-top:28px}
+.d-section h3{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#999;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid #e5e5e1}
+.d-section p{font-size:14px;line-height:1.8;color:#333;margin-bottom:10px}
+.d-section ul{padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.d-section li{font-size:14px;line-height:1.7;color:#333}
+
+/* KV TABLE */
+.kv-table{width:100%;border-collapse:collapse}
+.kv-table tr:first-child td{padding-top:0}
+.kv-table td{padding:8px 12px 8px 0;font-size:13px;vertical-align:top;border-bottom:1px solid #f0f0ec}
+.kv-table td:first-child{font-weight:600;color:#555;width:130px;white-space:nowrap}
+
+/* DATA TABLE */
+.data-table{width:100%;border-collapse:collapse;font-size:13px}
+.data-table th{text-align:left;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#999;padding:0 12px 8px 0;border-bottom:1px solid #e5e5e1}
+.data-table td{padding:10px 12px 10px 0;border-bottom:1px solid #f5f5f2;vertical-align:top;line-height:1.5}
+.data-table tr:last-child td{border-bottom:none}
+
+/* VERDICT BADGE */
+.vbadge{display:inline-block;padding:2px 7px;border-radius:3px;font-size:10px;font-weight:700}
+.vb-sup{background:rgba(0,140,60,.1);color:#006633}
+.vb-cau{background:rgba(200,16,46,.1);color:#c8102e}
+.vb-neu{background:rgba(0,0,0,.06);color:#666}
+.vb-conf{background:rgba(220,120,0,.1);color:#b36000}
+
+/* RELATION TAGS */
+.rel-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.rel-tag{font-size:12px;padding:5px 12px;border-radius:20px;border:1px solid #d5d5d0;cursor:pointer;transition:all .15s;color:#444;background:#fff;display:flex;align-items:center;gap:6px}
+.rel-tag:hover{background:#111;color:#fff;border-color:#111}
+.rel-tag .rt-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+.rel-tag.entity{border-color:#0066cc;color:#0055aa}
+.rel-tag.entity:hover{background:#0066cc;color:#fff;border-color:#0066cc}
+.rel-tag.topic{border-color:#c8102e;color:#c8102e}
+.rel-tag.topic:hover{background:#c8102e;color:#fff}
+
+/* TIMELINE */
+.timeline{display:flex;flex-direction:column;gap:0}
+.tl-item{display:flex;gap:16px;padding-bottom:20px;position:relative}
+.tl-item::before{content:"";position:absolute;left:7px;top:20px;bottom:0;width:1px;background:#e5e5e1}
+.tl-item:last-child::before{display:none}
+.tl-dot{width:15px;height:15px;border-radius:50%;border:2px solid #c8102e;background:#fff;flex-shrink:0;margin-top:3px;position:relative;z-index:1}
+.tl-dot.sup{background:#c8102e}
+.tl-content{}
+.tl-date{font-size:11px;color:#999;margin-bottom:2px}
+.tl-text{font-size:13px;line-height:1.65;color:#333}
+.tl-verdict{margin-top:4px}
+
+/* SEARCH */
+.search-wrap{padding:12px 20px 0}
+.search-input{width:100%;padding:8px 12px;border:1px solid #e0e0dc;border-radius:6px;font-size:12px;background:#f8f8f5;outline:none;transition:border .15s}
+.search-input:focus{border-color:#c8102e;background:#fff}
+
+/* FOOTER */
+.wiki-footer{padding:32px 48px;border-top:1px solid #e5e5e1;font-size:11px;color:#aaa;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.wiki-footer a{color:#c8102e}
+.wiki-footer a:hover{text-decoration:underline}
+
+@media(max-width:700px){.layout{grid-template-columns:1fr}.sidebar{position:static;height:auto;border-right:none;border-bottom:1px solid #e5e5e1}.detail{padding:24px 20px 40px}.wiki-footer{padding:20px}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo"><span class="logo-dot"></span>LLM Wiki</div>
+  <div class="nav-breadcrumb">
+    <a href="../index.html" onclick="event.preventDefault();location.href='../index.html?t='+Date.now()">RumorCrusher</a>
+    <span>›</span>
+    <span id="breadcrumbLabel">知识图谱</span>
+  </div>
+  <a class="nav-back" href="../tech-digest/index.html" onclick="event.preventDefault();location.href='../tech-digest/index.html?t='+Date.now()">← 返回每日简报</a>
+</nav>
+
+<div class="layout">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="search-wrap">
+      <input class="search-input" id="searchInput" placeholder="搜索实体或主题…" oninput="filterSidebar(this.value)"/>
+    </div>
+    <div class="sidebar-section" id="entitySection">
+      <div class="sidebar-head">实体 · Entities</div>
+    </div>
+    <div class="sidebar-section" id="topicSection">
+      <div class="sidebar-head">主题 · Topics</div>
+    </div>
+  </aside>
+
+  <!-- DETAIL -->
+  <main id="detailPane">
+    <div class="detail-placeholder">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="36" rx="8" stroke="#ccc" stroke-width="2"/><circle cx="24" cy="20" r="6" stroke="#ccc" stroke-width="2"/><path d="M12 38c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#ccc" stroke-width="2"/></svg>
+      <p>从左侧选择一个实体或主题<br/>查看详细知识卡片</p>
+    </div>
+  </main>
+</div>
+
+<div class="wiki-footer">
+  <span>RumorCrusher LLM Wiki · 知识飞轮每日更新 · 所有事实均有信源可追溯</span>
+  <span><a href="../tech-digest/index.html" onclick="event.preventDefault();location.href='../tech-digest/index.html?t='+Date.now()">每日简报</a> · <a href="../index.html" onclick="event.preventDefault();location.href='../index.html?t='+Date.now()">主站</a> · <a href="https://github.com/chirs0901/rumorcrusher" target="_blank">GitHub</a></span>
+</div>
+
+<script>
+// ══════════════════════════════════════
+// WIKI DATA
+// ══════════════════════════════════════
+var WIKI = {
+  entities: [
+    {
+      id: 'nvidia',
+      name: '英伟达 NVIDIA',
+      subtitle: 'Jensen Huang · CEO | AI 芯片领导者',
+      type: 'entity',
+      typeLabel: '品牌',
+      color: '#76b900',
+      icon: 'N',
+      verdict: 'Supported',
+      firstDate: '2026-05-15',
+      relations: [
+        {id: 'ai-misinformation-2026', label: '芯片出口管制→谣言传播', kind: 'topic'},
+        {id: 'snapdragon-8-elite-gen5', label: '竞争对手（AI芯片）', kind: 'entity'}
+      ],
+      sections: [
+        {
+          title: '2026 年关键动态',
+          type: 'kv',
+          rows: [
+            ['中国业务状态', '完全停滞——中国约 4 个月未购 NVIDIA AI 芯片（截至 2026-05）'],
+            ['黄仁勋公开立场', '「中国不应获得最先进 AI 芯片，美国应保持 AI 领先地位」（2026-05-05 讲话）'],
+            ['制裁影响', '黄仁勋警告：美国制裁适得其反，正在推动竞争对手加速自研']
+          ]
+        },
+        {
+          title: '黄仁勋访华事件时间线（2026-05-13）',
+          type: 'timeline',
+          items: [
+            {date: '2026-05-11', text: '白宫披露特朗普访华 16 人名单，黄仁勋缺席。媒体广泛报道黄仁勋被「冷落」。', verdict: 'Supported', sup: true},
+            {date: '随后', text: '特朗普亲自致电邀请黄仁勋加入访华代表团。', verdict: 'Supported', sup: true},
+            {date: '2026-05-13', text: '黄仁勋在阿拉斯加会合代表团，登上空军一号随行访华。英伟达发言人证实。', verdict: 'Supported', sup: true},
+            {date: '意义', text: '芯片出口管制可能成为中美贸易谈判的重要筹码；供应链地缘博弈延伸至企业外交层面。', verdict: 'Supported', sup: true}
+          ]
+        },
+        {
+          title: '信源历史',
+          type: 'sources',
+          rows: [
+            ['2026-05-15', '04-clean-report-220330.md', '初始建档：中国业务停滞、黄仁勋访华时间线', 'Supported']
+          ]
+        }
+      ]
+    },
+    {
+      id: 'huawei',
+      name: '华为 Huawei',
+      subtitle: '自研芯片 + HarmonyOS 全栈 | 中国市场第一',
+      type: 'entity',
+      typeLabel: '品牌',
+      color: '#cf0a2c',
+      icon: 'H',
+      verdict: 'Conflicting Evidence',
+      firstDate: '2026-05-14',
+      relations: [
+        {id: 'foldable-2026', label: '折叠旗舰 Mate X7', kind: 'topic'},
+        {id: 'ai-misinformation-2026', label: 'A2A AI 路线', kind: 'topic'}
+      ],
+      sections: [
+        {
+          title: '当前旗舰产品线',
+          type: 'kv',
+          rows: [
+            ['Mate 80 系列 SoC', '麒麟 9030（海思自研）'],
+            ['操作系统', 'HarmonyOS 6（鸿蒙 6）'],
+            ['影像系统', '第二代红枫影像系统'],
+            ['特色技术', '全球首发 700MHz 无网应急通信（无需运营商信号）'],
+            ['折叠旗舰', 'Mate X7，与 Mate 80 同期发布'],
+            ['新品动态（2026-05）', 'Pura 90 系列 + PuraX Max 大阔折旗舰']
+          ]
+        },
+        {
+          title: '2026 市场表现',
+          type: 'para',
+          text: '2026 Q1 华为重夺中国市场出货量第一。苹果尽管同比增长 42%，仍位居第二。华为的回归依赖全自研麒麟芯片 + HarmonyOS Next，彻底摆脱对 Android 和高通平台的依赖。\n\n据报道 HarmonyOS 6 可能深度集成 DJI 系统级控制，AI 路线采用 A2A（Agent-to-Agent）框架而非 GUI Agent。'
+        },
+        {
+          title: '存疑声明（待验证）',
+          type: 'table',
+          headers: ['声明', '标签', '质疑点'],
+          rows: [
+            ['Mate 80 整机性能较上代 +42%', 'Conflicting Evidence', '未指明对比基准（Mate 70？哪个 Benchmark？）'],
+            ['RS 非凡大师版 +45%', 'Conflicting Evidence', '同上，且缺乏第三方实验室独立测试']
+          ]
+        },
+        {
+          title: '信源历史',
+          type: 'sources',
+          rows: [
+            ['2026-05-14', '04-clean-report.md', 'Mate 80 发布后续报道（性能声明）', 'Conflicting Evidence'],
+            ['2026-05-15', '04-clean-report-220330.md', '中国市场出货量第一；HarmonyOS DJI 联动', 'Supported']
+          ]
+        }
+      ]
+    },
+    {
+      id: 'snapdragon-8-elite-gen5',
+      name: 'Snapdragon 8 Elite Gen 5',
+      subtitle: 'Qualcomm · TSMC N3P · 旗舰 SoC 2026',
+      type: 'entity',
+      typeLabel: '芯片',
+      color: '#c8102e',
+      icon: 'S',
+      verdict: 'Supported',
+      firstDate: '2026-05-14',
+      relations: [
+        {id: 'silicon-carbon-anode', label: '电池配套（高功耗 SoC 需大容量电池）', kind: 'entity'},
+        {id: 'nvidia', label: 'AI 芯片竞争（手机端 vs 数据中心）', kind: 'entity'}
+      ],
+      sections: [
+        {
+          title: '基本规格',
+          type: 'kv',
+          rows: [
+            ['厂商', 'Qualcomm'],
+            ['制程', '台积电 N3P（3nm 级）'],
+            ['NPU', 'Hexagon NPU，较骁龙 8 Elite Gen 4 提升 +37%'],
+            ['量产状态', '2025 H2 量产，2026 旗舰广泛搭载'],
+            ['主要竞争对手', 'MediaTek Dimensity 9500 · Apple A19 Pro · Kirin 9030']
+          ]
+        },
+        {
+          title: '基准测试数据（2026 参考机实测）',
+          type: 'table',
+          headers: ['测试项', '本代成绩', '对比', '状态'],
+          rows: [
+            ['AnTuTu 总分', '430 万+', 'Dimensity 9500 约 400 万', 'Supported'],
+            ['Geekbench 多核', '12,000+', 'A19 Pro 高逾 20%', 'Supported'],
+            ['全负载功耗', '约 19W', 'A19 Pro 约 12W（效率仍有差距）', 'Supported'],
+            ['端侧 LLM 推理', '高通声称支持', '量产机实测待 Geekerwan 等第三方', 'Not Enough Evidence']
+          ]
+        },
+        {
+          title: '搭载机型',
+          type: 'para',
+          text: 'vivo X300 Ultra（影像旗舰）、OPPO Find X9 Ultra、小米 17 Pro 等 2026 年主流旗舰均搭载本代骁龙芯片。'
+        },
+        {
+          title: '待验证',
+          type: 'list',
+          items: [
+            '量产机首 Token 延迟（端侧 LLM 实测）',
+            '持续 LLM 推理的稳态功耗和降频曲线',
+            '与 Dimensity 9500 在 INT4 量化下的 Token/s 对比'
+          ]
+        },
+        {
+          title: '信源历史',
+          type: 'sources',
+          rows: [
+            ['2026-05-14', 'qualcomm-news + tech.news.am', 'NPU +37%（官方数据）', 'Supported'],
+            ['2026-05-16', 'Gizmochina · Notebookcheck', 'AnTuTu 430万+，Geekbench 12000+', 'Supported']
+          ]
+        }
+      ]
+    },
+    {
+      id: 'silicon-carbon-anode',
+      name: '硅碳负极电池',
+      subtitle: 'Silicon-Carbon Anode · 2026 年旗舰标配',
+      type: 'entity',
+      typeLabel: '技术',
+      color: '#00883a',
+      icon: '⚡',
+      verdict: 'Supported',
+      firstDate: '2026-05-14',
+      relations: [
+        {id: 'snapdragon-8-elite-gen5', label: '高功耗 SoC 推动大容量需求', kind: 'entity'},
+        {id: 'foldable-2026', label: '折叠屏电池配套', kind: 'topic'}
+      ],
+      sections: [
+        {
+          title: '技术原理',
+          type: 'para',
+          text: '硅碳负极通过在传统石墨负极中添加纳米级硅颗粒（外层包碳），提升单位体积能量密度。硅的理论容量约为石墨的 10 倍，但膨胀收缩问题需通过纳米化和碳包覆解决。2026 年量产主流方案已将硅含量从 2025 年的 10% 提升至 16%。'
+        },
+        {
+          title: '硅含量演进（量产旗舰）',
+          type: 'table',
+          headers: ['年份', '主流硅含量', '代表机型', '典型容量'],
+          rows: [
+            ['2023', '3–5%', '早期试水机型', '约 5,000 mAh'],
+            ['2024', '6–8%', 'Redmi K70 系列等', '约 5,500 mAh'],
+            ['2025', '10%', '主流旗舰', '6,000–6,500 mAh'],
+            ['2026', '16%', '小米 17 Pro 等', '7,000 mAh（已量产）']
+          ]
+        },
+        {
+          title: '快充能力',
+          type: 'para',
+          text: '硅碳电池不仅容量更大，接受充电速率也更快。Enovix 方案实测：5 分钟充至 20%，15 分钟达 50%。固态电池消费电子落地预计 2027–2028 年，业界折中方案为「半固态」（混合 5–10% 液态电解质）。'
+        },
+        {
+          title: '信源历史',
+          type: 'sources',
+          rows: [
+            ['2026-05-14', 'technerdo + neware + 小米17 Pro 量产', '16% 硅含量主流化', 'Supported'],
+            ['2026-05-16', 'IEEE Spectrum · TechNerdo · PhoneArena', '快充数据（Enovix 方案）', 'Supported']
+          ]
+        }
+      ]
+    }
+  ],
+
+  topics: [
+    {
+      id: 'ai-misinformation-2026',
+      name: 'AI 生成虚假信息 2026',
+      subtitle: '工业化传播链 · 多模态伪造 · 闭环 AI 引用',
+      type: 'topic',
+      typeLabel: '主题',
+      color: '#c8102e',
+      icon: '⚠',
+      verdict: 'Supported',
+      firstDate: '2026-05-15',
+      relations: [
+        {id: 'deepfake-2026', label: '技术重叠（视频伪造）', kind: 'topic'},
+        {id: 'nvidia', label: '芯片出口管制→谣言温床', kind: 'entity'}
+      ],
+      sections: [
+        {
+          title: '概览',
+          type: 'para',
+          text: '2026 年，AI 生成虚假信息已从个案进入工业化阶段。核心特征：谣言→AI引用→更多谣言的闭环传播链、多模态伪造（图像+视频+音频）、跨平台算法放大。WEF 2026 全球风险报告将虚假/错误信息列为短期前十大风险，与地缘经济对抗、社会极化并列。'
+        },
+        {
+          title: '2026 重大事件时间线',
+          type: 'timeline',
+          items: [
+            {date: '2026-01', text: 'AI 生成图像声称马杜罗被捕，委内瑞拉政局谣言大范围传播。', verdict: 'Refuted', sup: false},
+            {date: '2026-04', text: 'AI 视频显示特朗普步态不稳走出 Walter Reed 医院，PolitiFact 核实为伪造。', verdict: 'Refuted', sup: false},
+            {date: '2026-04', text: '「8家车企因OTA锁电被约谈」AI 生成假名单。中国汽车工业协会辟谣。', verdict: 'Refuted', sup: false},
+            {date: '2026-05', text: '网信办公布第五批典型 AI 造谣案例，累计处置账号 2210 个。', verdict: 'Supported', sup: true},
+            {date: '2026-05-15', text: '多个大模型传播「新车牌将换白底黑字」（AI 幻觉闭环典型案例）。', verdict: 'Refuted', sup: false}
+          ]
+        },
+        {
+          title: '新型谣言模式（2026 年新发现）',
+          type: 'list',
+          items: [
+            'AI→AI 循环引用：大模型输出被截图→喂入另一大模型→形成「共识」外观',
+            '跨境视频地理嫁接：真实灾害视频配假地点字幕（缅甸→云南）',
+            '机构冒充深度欺诈：AI 生成官方样式公告，冒充政府/公益机构（中国残联案例）',
+            '节气+医疗伪科学绑定：借助传统文化权威推销危险用药建议（安宫牛黄丸案例）'
+          ]
+        },
+        {
+          title: '治理响应',
+          type: 'table',
+          headers: ['地区', '措施', '状态'],
+          rows: [
+            ['韩国', 'AI Basic Act：强制标注生成式 AI 内容', '✅ 2026-01 生效'],
+            ['美国', 'Deepfake 分发立法提案 + 举报人保护', '⏳ 立法进行中'],
+            ['美国', '微软/Google/xAI 向政府提前开放模型测试', '✅ 2026-05 实施'],
+            ['中国', '网信办清朗专项 + 月度辟谣榜', '✅ 持续运行，2025 年处理 17,000+ 稿件']
+          ]
+        },
+        {
+          title: '信源历史',
+          type: 'sources',
+          rows: [
+            ['2026-05-15', '04-clean-report-220330.md', '初始建档，涵盖 WEF 数据、CAC 案例、治理响应', 'Supported']
+          ]
+        }
+      ]
+    },
+    {
+      id: 'deepfake-2026',
+      name: 'Deepfake 技术与治理 2026',
+      subtitle: '静态 97% 检测率 · 视频检测人类优于 AI · 立法进展',
+      type: 'topic',
+      typeLabel: '主题',
+      color: '#7b3fa0',
+      icon: '🎭',
+      verdict: 'Supported',
+      firstDate: '2026-05-15',
+      relations: [
+        {id: 'ai-misinformation-2026', label: '技术基础重叠', kind: 'topic'},
+        {id: 'nvidia', label: '算力支撑生成能力', kind: 'entity'}
+      ],
+      sections: [
+        {
+          title: '检测能力现状（2026 数据）',
+          type: 'table',
+          headers: ['内容类型', 'AI 检测准确率', '人类检测准确率', '说明'],
+          rows: [
+            ['静态图片', '97%', '约 60%', 'AI 大幅领先，Deepfake 图片基本可识别'],
+            ['视频', '约 50%（接近随机）', '约 67%', '人类反而优于 AI，视频 Deepfake 是最大威胁']
+          ]
+        },
+        {
+          title: '2026 重要案例',
+          type: 'timeline',
+          items: [
+            {date: '2026-01', text: '委内瑞拉马杜罗「被捕」AI 图像引发政治风波。', verdict: 'Refuted', sup: false},
+            {date: '2026-04', text: '特朗普「步态不稳走出 Walter Reed」AI 视频，PolitiFact 核查前已数百万浏览。', verdict: 'Refuted', sup: false},
+            {date: '2026-04（持续）', text: 'Grok 持续生成非合意性图像，多次承诺后仍未有效制止（NBC 确认）。', verdict: 'Supported', sup: true},
+            {date: '2026-05', text: '英国调查：15% 成人曾接触 Deepfake 色情内容，较 2024 年增近三倍。', verdict: 'Supported', sup: true}
+          ]
+        },
+        {
+          title: '立法进展',
+          type: 'list',
+          items: [
+            '韩国：AI Basic Act（2026-01 生效），强制标注 AI 内容',
+            '美国：Deepfake 立法提案，打击非合意性图像分发端 + 保护举报人（立法中）',
+            '中国：网信办已将 AI 生成谣言纳入专项整治，月度通报机制运行'
+          ]
+        },
+        {
+          title: '生成能力',
+          type: 'para',
+          text: '语音克隆已越过「无法区分」阈值，在低分辨率场景下非专家无法辨别。图像、视频、音频均可伪造（Virginia Tech 2026 研究）。非合意性图像制作门槛已从专业黑客降至「一键手机应用」。'
+        },
+        {
+          title: '信源历史',
+          type: 'sources',
+          rows: [
+            ['2026-05-15', '04-clean-report-220330.md', '初始建档', 'Supported']
+          ]
+        }
+      ]
+    },
+    {
+      id: 'foldable-2026',
+      name: '2026 折叠形态',
+      subtitle: '三星 + Apple 入场 · 零折痕技术成熟 · 大众化拐点',
+      type: 'topic',
+      typeLabel: '主题',
+      color: '#0066cc',
+      icon: '📱',
+      verdict: 'Not Enough Evidence',
+      firstDate: '2026-05-14',
+      relations: [
+        {id: 'huawei', label: 'Mate X7 折叠旗舰', kind: 'entity'},
+        {id: 'silicon-carbon-anode', label: '折叠屏电池续航配套', kind: 'entity'}
+      ],
+      sections: [
+        {
+          title: '态势概览',
+          type: 'para',
+          text: '折叠屏从 2019 年三星首推到 2026 年，关键瓶颈（铰链耐久/折痕/续航/重量）逐步被工程解决。Android 阵营进入耐久度白热化竞争，Apple 首次入场打破「折叠不是 Apple 风格」的刻板印象。2026 年零折痕技术节点成熟，折叠屏从早期尝鲜品走向真正主流。'
+        },
+        {
+          title: '主要参战机型',
+          type: 'table',
+          headers: ['机型', '关键声明', 'AVeriTeC', '质疑点'],
+          rows: [
+            ['Samsung Galaxy Z Fold 8', '50 万次折叠耐久（上代 20 万，+2.5×）', 'Not Enough Evidence', '单代 2.5 倍跃升过激进；缺第三方实验室（SGS/BV）认证'],
+            ['Samsung CES 2026 面板', '激光微孔背板，零可见折痕，2600 nits', 'Supported', "Tom's Guide 记者现场实测，可信度高"],
+            ['Apple iPhone Fold', '无折痕 + 钛铝框架，定价 $1,800–2,500', 'Not Enough Evidence（传闻）', '供应链爆料，苹果官方未公布；「不计成本零折痕」未量化'],
+            ['华为 PuraX Max 大阔折', '华为双线布局，大阔折新形态', 'Not Enough Evidence', '未见详细规格，仍属传闻阶段']
+          ]
+        },
+        {
+          title: '三大厂商策略对比',
+          type: 'list',
+          items: [
+            '三星：耐久度营销路线，以数字说话（50 万次折叠）',
+            'Apple：工艺营销路线，液态金属铰链 + 零折痕（不计成本叙事）',
+            '中国厂商（华为/vivo/OPPO）：实用形态路线，轻薄 + 主屏体验优先'
+          ]
+        },
+        {
+          title: '信源历史',
+          type: 'sources',
+          rows: [
+            ['2026-05-14', 'Samsung 官方 + TrendForce', 'Z Fold 7 耐久声明；Apple 折叠供应链报道', 'Not Enough Evidence'],
+            ['2026-05-16', "Tom's Guide · SamMobile", 'CES 2026 零折痕面板现场报道', 'Supported']
+          ]
+        }
+      ]
+    },
+    {
+      id: '2026-flagship-imaging-war',
+      name: '2026 影像旗舰战',
+      subtitle: 'vivo X300 Ultra · OPPO Find X9 Ultra · 小米 17 Max',
+      type: 'topic',
+      typeLabel: '主题',
+      color: '#e07b00',
+      icon: '📷',
+      verdict: 'Supported',
+      firstDate: '2026-05-14',
+      relations: [
+        {id: 'snapdragon-8-elite-gen5', label: '核心 SoC 平台', kind: 'entity'},
+        {id: 'silicon-carbon-anode', label: '续航保障', kind: 'entity'}
+      ],
+      sections: [
+        {
+          title: '2026 年影像旗舰三强',
+          type: 'table',
+          headers: ['机型', '影像卖点', '配置亮点'],
+          rows: [
+            ['vivo X300 Ultra', '蔡司合作，1英寸主摄', 'Snapdragon 8 Elite Gen 5，硅碳电池'],
+            ['OPPO Find X9 Ultra', '哈苏合作，无感折痕设计', 'Snapdragon 8 Elite Gen 5，A2A AI 路线'],
+            ['小米 17 Max', '徕卡合作，LOFIC 传感器', '磁吸镜头模组，HyperOS EV 联动']
+          ]
+        },
+        {
+          title: '行业趋势',
+          type: 'para',
+          text: '2026 年影像旗舰战核心差异化点已从硬件堆料转向计算摄影与 AI 图像处理能力。蔡司、哈苏、徕卡的合作模式使色彩调教成为核心竞争力。vivo 同时立项 Vlog 相机，对标大疆 Pocket，拓展手机影像配件生态边界。'
+        },
+        {
+          title: '信源历史',
+          type: 'sources',
+          rows: [
+            ['2026-05-14', '2026-05-14 干净报告', '初始建档，三机集中评测', 'Supported'],
+            ['2026-05-16', '品玩 · 爱搞机', '小米磁吸镜头量产计划；vivo Vlog 相机立项', 'Supported']
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+// ══════════════════════════════════════
+// RENDER ENGINE
+// ══════════════════════════════════════
+var activeId = null;
+var allItems = WIKI.entities.concat(WIKI.topics);
+
+function verdictBadge(v) {
+  var map = {
+    'Supported': 'vb-sup',
+    'Refuted': 'vb-cau',
+    'Not Enough Evidence': 'vb-neu',
+    'Conflicting Evidence': 'vb-conf'
+  };
+  return '<span class="vbadge ' + (map[v] || 'vb-neu') + '">' + v + '</span>';
+}
+
+function renderSidebar(filter) {
+  filter = filter || '';
+  var low = filter.toLowerCase();
+
+  var matchEntity = WIKI.entities.filter(function(e) {
+    return !filter
+      || e.name.toLowerCase().indexOf(low) !== -1
+      || e.subtitle.toLowerCase().indexOf(low) !== -1
+      || e.typeLabel.indexOf(filter) !== -1;
+  });
+  var matchTopic = WIKI.topics.filter(function(t) {
+    return !filter
+      || t.name.toLowerCase().indexOf(low) !== -1
+      || t.subtitle.toLowerCase().indexOf(low) !== -1;
+  });
+
+  document.getElementById('entitySection').innerHTML =
+    '<div class="sidebar-head">实体 · Entities</div>' +
+    matchEntity.map(function(e) { return sidebarItem(e); }).join('');
+
+  document.getElementById('topicSection').innerHTML =
+    '<div class="sidebar-head">主题 · Topics</div>' +
+    matchTopic.map(function(t) { return sidebarItem(t); }).join('');
+}
+
+function sidebarItem(item) {
+  var isActive = item.id === activeId;
+  return '<div class="sidebar-item' + (isActive ? ' active' : '') + '" onclick="showDetail(\'' + item.id + '\')" id="si-' + item.id + '">'
+    + '<div class="si-icon" style="background:' + item.color + '">' + item.icon + '</div>'
+    + '<div>'
+    + '<div class="si-name">' + item.name + '</div>'
+    + '<div class="si-type">' + item.typeLabel + ' · ' + item.firstDate + '</div>'
+    + '</div>'
+    + '</div>';
+}
+
+function showDetail(id) {
+  activeId = id;
+  var item = null;
+  for (var i = 0; i < allItems.length; i++) {
+    if (allItems[i].id === id) { item = allItems[i]; break; }
+  }
+  if (!item) return;
+
+  // update sidebar active state
+  var sidebarItems = document.querySelectorAll('.sidebar-item');
+  for (var j = 0; j < sidebarItems.length; j++) {
+    sidebarItems[j].classList.remove('active');
+  }
+  var si = document.getElementById('si-' + id);
+  if (si) si.classList.add('active');
+
+  // update breadcrumb
+  document.getElementById('breadcrumbLabel').textContent = item.name;
+
+  // build detail HTML
+  var html = '<div class="detail">'
+    + '<div class="detail-kicker">' + item.typeLabel + ' · ' + verdictBadge(item.verdict) + '</div>'
+    + '<div class="detail-title">' + item.name + '</div>'
+    + '<div class="detail-subtitle">' + item.subtitle + '</div>';
+
+  // relations
+  if (item.relations && item.relations.length) {
+    html += '<div class="d-section"><h3>关联实体 / 主题</h3><div class="rel-tags">';
+    item.relations.forEach(function(r) {
+      html += '<button class="rel-tag ' + r.kind + '" onclick="showDetail(\'' + r.id + '\')">'
+        + '<span class="rt-dot"></span>' + r.label + '</button>';
+    });
+    html += '</div></div>';
+  }
+
+  // sections
+  item.sections.forEach(function(sec) {
+    html += '<div class="d-section"><h3>' + sec.title + '</h3>';
+
+    if (sec.type === 'kv') {
+      html += '<table class="kv-table">';
+      sec.rows.forEach(function(row) {
+        html += '<tr><td>' + row[0] + '</td><td>' + row[1] + '</td></tr>';
+      });
+      html += '</table>';
+
+    } else if (sec.type === 'para') {
+      sec.text.split('\n\n').forEach(function(p) {
+        html += '<p>' + p + '</p>';
+      });
+
+    } else if (sec.type === 'list') {
+      html += '<ul>';
+      sec.items.forEach(function(it) {
+        html += '<li>' + it + '</li>';
+      });
+      html += '</ul>';
+
+    } else if (sec.type === 'table') {
+      html += '<table class="data-table"><thead><tr>';
+      sec.headers.forEach(function(h) { html += '<th>' + h + '</th>'; });
+      html += '</tr></thead><tbody>';
+      sec.rows.forEach(function(row) {
+        html += '<tr>';
+        row.forEach(function(cell) {
+          var verdictStrings = ['Supported', 'Refuted', 'Not Enough Evidence', 'Conflicting Evidence'];
+          var isVerdict = verdictStrings.indexOf(cell) !== -1;
+          html += '<td>' + (isVerdict ? verdictBadge(cell) : cell) + '</td>';
+        });
+        html += '</tr>';
+      });
+      html += '</tbody></table>';
+
+    } else if (sec.type === 'timeline') {
+      html += '<div class="timeline">';
+      sec.items.forEach(function(tl) {
+        html += '<div class="tl-item">'
+          + '<div class="tl-dot' + (tl.sup ? ' sup' : '') + '"></div>'
+          + '<div class="tl-content">'
+          + '<div class="tl-date">' + tl.date + '</div>'
+          + '<div class="tl-text">' + tl.text + '</div>'
+          + '<div class="tl-verdict">' + verdictBadge(tl.verdict) + '</div>'
+          + '</div>'
+          + '</div>';
+      });
+      html += '</div>';
+
+    } else if (sec.type === 'sources') {
+      html += '<table class="data-table"><thead><tr><th>日期</th><th>来源</th><th>内容</th><th>标签</th></tr></thead><tbody>';
+      sec.rows.forEach(function(row) {
+        html += '<tr>'
+          + '<td>' + row[0] + '</td>'
+          + '<td><code style="font-size:11px;color:#888">' + row[1] + '</code></td>'
+          + '<td>' + row[2] + '</td>'
+          + '<td>' + verdictBadge(row[3]) + '</td>'
+          + '</tr>';
+      });
+      html += '</tbody></table>';
+    }
+
+    html += '</div>'; // /d-section
+  });
+
+  html += '</div>'; // /detail
+  document.getElementById('detailPane').innerHTML = html;
+  document.getElementById('detailPane').scrollTop = 0;
+
+  // update URL hash
+  history.replaceState(null, '', '#' + id);
+}
+
+function filterSidebar(val) {
+  renderSidebar(val);
+  if (activeId) {
+    var si = document.getElementById('si-' + activeId);
+    if (si) si.classList.add('active');
+  }
+}
+
+// ── INIT
+renderSidebar();
+
+// handle URL hash deep link
+var initHash = location.hash.replace('#', '');
+if (initHash) {
+  for (var k = 0; k < allItems.length; k++) {
+    if (allItems[k].id === initHash) { showDetail(initHash); break; }
+  }
+}
+
+// bfcache: 从浏览器前进/后退缓存恢复时重新初始化
+window.addEventListener('pageshow', function(e) {
+  if (e.persisted) {
+    activeId = null;
+    renderSidebar();
+    var h = location.hash.replace('#', '');
+    if (h) {
+      for (var i = 0; i < allItems.length; i++) {
+        if (allItems[i].id === h) { showDetail(h); break; }
+      }
+    }
+  }
+});
+</script>
+</body>
+</html>
