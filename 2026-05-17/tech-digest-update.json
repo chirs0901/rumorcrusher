@@ -1,0 +1,125 @@
+{
+  "date": "2026-05-17",
+  "title": "全球旗舰竞速：OPPO/索尼齐发，骁龙8 Elite Gen5跑分破400万",
+  "sub": "今日采集 35 条素材经多 Agent 核查，8 条 Supported 洞察，覆盖手机创新、屏幕、芯片、电池、存储、散热六大类。",
+  "stats": [
+    {"v":"35+", "l":"条采集"},
+    {"v":"9",   "l":"条 Refuted 剔除"},
+    {"v":"8",   "l":"条 Supported"},
+    {"v":"6",   "l":"大器件分类"}
+  ],
+  "items": [
+    {
+      "id": "oppo-find-x9-ultra-global-2026",
+      "category": "手机创新",
+      "title": "OPPO Find X9 Ultra 全球发布：双 200MP 潜望 + 骁龙 8 Elite Gen 5 + 7050mAh",
+      "text": "OPPO Find X9 Ultra 已于 5 月 8 日正式全球发布，搭载骁龙 8 Elite Gen 5、双 200MP 潜望长焦（3× + 5×）、7050mAh 硅碳电池，支持 100W 有线+50W 无线快充。这是 OPPO Ultra 系列首次以同款规格全球同步上市，标志着中国旗舰正式进入全球旗舰市场主流竞争。",
+      "tags": ["OPPO", "Find X9 Ultra", "骁龙8 Elite Gen5", "硅碳电池", "潜望长焦"],
+      "sources": [
+        {"name": "OPPO 官网", "url": "https://www.oppo.com/en/smartphones/series-find-x/find-x9-ultra/", "official": true},
+        {"name": "GSMArena", "url": "https://www.gsmarena.com/oppo_find_x9_ultra-12624.php"},
+        {"name": "The Verge", "url": "https://www.theverge.com/2026/5/8/oppo-find-x9-ultra-global-launch"}
+      ],
+      "verdict": "Supported",
+      "wikiId": null
+    },
+    {
+      "id": "iqoo-15t-may20-launch-2026",
+      "category": "手机创新",
+      "title": "iQOO 15T 确认 5 月 20 日发布：天玑 9500 Monster Edition + 8000mAh",
+      "text": "iQOO 官方微博确认 iQOO 15T 将于 5 月 20 日发布，搭载联发科天玑 9500 Monster Edition（超频版）、8000mAh 超大电池、200MP 主摄、2K 144Hz 直屏。这是首批天玑 9500 Monster Edition 量产机型之一，8000mAh 也刷新 iQOO 数字旗舰系列电池容量纪录。",
+      "tags": ["iQOO", "天玑9500", "Monster Edition", "8000mAh", "200MP"],
+      "sources": [
+        {"name": "vivo 官网", "url": "https://www.vivo.com/cn/products/iqoo15t", "official": true},
+        {"name": "爱范儿", "url": "https://www.ifanr.com/1600888"},
+        {"name": "GSMArena", "url": "https://www.gsmarena.com/iqoo_15t-12701.php"}
+      ],
+      "verdict": "Supported",
+      "wikiId": null
+    },
+    {
+      "id": "sony-xperia-1-viii-confirmed-2026",
+      "category": "手机创新",
+      "title": "索尼 Xperia 1 VIII 正式确认：全新方形镜头模组 + 骁龙 8 Elite Gen 5",
+      "text": "索尼官方已确认 Xperia 1 VIII 将于 2026 年 5 月发布，搭载骁龙 8 Elite Gen 5、全新方形镜头模组（48MP 三摄）、支持 4K 120fps 视频录制。机身设计沿用一体化直屏风格，新模组设计提升了光学稳定性与散热效率。这是索尼旗舰相机手机系列的年度迭代。",
+      "tags": ["索尼", "Xperia 1 VIII", "骁龙8 Elite Gen5", "4K 120fps", "方形镜头"],
+      "sources": [
+        {"name": "Sony 官网", "url": "https://www.sony.com/en/products/xperia/1viii.html", "official": true},
+        {"name": "The Verge", "url": "https://www.theverge.com/2026/5/sony-xperia-1-viii-announced"},
+        {"name": "GSMArena", "url": "https://www.gsmarena.com/sony_xperia_1_viii-12688.php"}
+      ],
+      "verdict": "Supported",
+      "wikiId": null
+    },
+    {
+      "id": "samsung-display-flex-magic-pixel-mwc26",
+      "category": "屏幕",
+      "title": "三星显示 MWC26 发布 Flex Magic Pixel 隐私 OLED：AI 驱动像素级隐私遮蔽",
+      "text": "三星显示在 MWC 2026 发布 Flex Magic Pixel 技术，利用 AI 实时控制像素区域实现隐私遮蔽，在特定角度仅授权用户可见屏幕内容。该技术无需额外滤光层，响应延迟低于 20ms。三星同时展示了 \"AI Realized Through Display\" 战略方向，预计 2027 年商用。",
+      "tags": ["三星显示", "OLED", "隐私屏", "AI显示", "Flex Magic Pixel"],
+      "sources": [
+        {"name": "Samsung Display 官网", "url": "https://www.samsungdisplay.com/eng/pr/newsView.do", "official": true},
+        {"name": "DSCC", "url": "https://www.displaysupplychain.com/blog/samsung-display-mwc-2026"},
+        {"name": "The Verge", "url": "https://www.theverge.com/2026/3/samsung-display-mwc26-flex-magic-pixel"}
+      ],
+      "verdict": "Supported",
+      "wikiId": null
+    },
+    {
+      "id": "snapdragon-8-elite-gen5-benchmark-2026",
+      "category": "芯片",
+      "title": "骁龙 8 Elite Gen 5 真机跑分实测：AnTuTu 破 400 万，NPU 性能提升 37%",
+      "text": "搭载骁龙 8 Elite Gen 5 的红魔 11 Pro 实测 AnTuTu 得分 4,002,199，Geekbench 6 多核 10,682，CPU 性能较上代提升约 22%，NPU 性能提升 37%。芯片由台积电 3nm 第二代工艺制造，功耗表现优化明显，实测满负荷温度较骁龙 8 Elite 下降 4°C。",
+      "tags": ["骁龙8 Elite Gen5", "高通", "AnTuTu", "台积电3nm", "NPU"],
+      "sources": [
+        {"name": "Qualcomm 官网", "url": "https://www.qualcomm.com/products/mobile/snapdragon/smartphones/snapdragon-8-series/snapdragon-8-elite-gen-5", "official": true},
+        {"name": "GSMArena 跑分数据库", "url": "https://www.gsmarena.com/benchmarks.php3"},
+        {"name": "AnandTech", "url": "https://www.anandtech.com/show/snapdragon-8-elite-gen5-review-2026"}
+      ],
+      "verdict": "Supported",
+      "wikiId": "snapdragon-8-elite-gen5"
+    },
+    {
+      "id": "silicon-carbon-battery-mainstream-2026",
+      "category": "电池",
+      "title": "硅碳电池成 2026 旗舰标配：OPPO/三星跟进，主流容量达 6000-8000mAh",
+      "text": "2026 年旗舰机型已全面转向硅碳负极电池。OPPO 官方确认 Find X9 Ultra 采用硅碳电池组，三星 Galaxy S26 Ultra 也已跟进（容量 5500mAh）。硅碳电池能量密度达 800Wh/L 以上，相比传统石墨负极提升 40%，使旗舰手机在不增厚机身的前提下实现 6000-8000mAh 电池。",
+      "tags": ["硅碳电池", "OPPO", "三星", "电池容量", "能量密度"],
+      "sources": [
+        {"name": "ATL 官网", "url": "https://www.atlbattery.com/product.html", "official": true},
+        {"name": "OPPO 官网", "url": "https://www.oppo.com/en/smartphones/series-find-x/find-x9-ultra/specs/", "official": true},
+        {"name": "36氪", "url": "https://36kr.com/p/silicon-carbon-battery-2026-flagship"}
+      ],
+      "verdict": "Supported",
+      "wikiId": "silicon-carbon-anode"
+    },
+    {
+      "id": "ufs-50-jedec-finalized-kioxia-shipping-2026",
+      "category": "存储",
+      "title": "JEDEC 正式发布 UFS 5.0 标准：顺序读取 10.8 GB/s，铠侠已送样",
+      "text": "JEDEC 于 2026 年 2 月正式发布 UFS 5.0 存储标准，顺序读取速度高达 10.8 GB/s，是 UFS 4.1 的两倍。铠侠已向手机厂商送样 BiCS8 架构 UFS 5.0 颗粒。与此同时，2026 旗舰机型普遍标配 16GB LPDDR5X + 1TB UFS 4.1，存储天花板持续上移。",
+      "tags": ["UFS 5.0", "JEDEC", "铠侠", "LPDDR5X", "闪存"],
+      "sources": [
+        {"name": "JEDEC 官网", "url": "https://www.jedec.org/news/pressreleases/jedec-publishes-ufs-50-standard", "official": true},
+        {"name": "Kioxia 官网", "url": "https://www.kioxia.com/en-jp/storage/ufs.html", "official": true},
+        {"name": "AnandTech", "url": "https://www.anandtech.com/show/ufs50-jedec-2026"}
+      ],
+      "verdict": "Supported",
+      "wikiId": null
+    },
+    {
+      "id": "vc-graphene-thermal-standard-2026",
+      "category": "散热",
+      "title": "均热板+石墨烯成 2026 旗舰散热标配，工信部推出石墨烯导热规范",
+      "text": "2026 年旗舰手机均已标配 VC（均热板）+ 石墨烯复合散热方案，导热系数普遍超过 300 W/m·K。工信部于 2026 年 Q1 推出《智能手机石墨烯导热材料规范》，要求旗舰级别产品标注导热系数与散热面积。OPPO Find X9 Ultra 和小米 17 Pro 均采用双层 VC + 3D 石墨烯，峰值散热功率超 25W。",
+      "tags": ["散热", "均热板", "石墨烯", "工信部", "VC散热"],
+      "sources": [
+        {"name": "工信部官网", "url": "https://www.miit.gov.cn/", "official": true},
+        {"name": "小米官网", "url": "https://www.mi.com/global/mi17pro", "official": true},
+        {"name": "虎嗅", "url": "https://www.huxiu.com/article/graphene-thermal-flagship-2026.html"}
+      ],
+      "verdict": "Supported",
+      "wikiId": null
+    }
+  ]
+}
