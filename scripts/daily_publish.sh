@@ -2,10 +2,7 @@
 # RumorCrusher 每日自动发布脚本
 # 由定时任务在 22:00 / 07:00 调用，发生在所有报告生成之后
 #
-# git push 使用用户本机路径执行（绕过沙箱代理限制）
-# 确认可用命令：git -C ~/Documents/Claude/Projects/RumorCrusher push origin main
-
-set -e
+# 注意：git push 在调度 sandbox 内可能因代理限制失败，脚本会记录失败并继续执行飞书/邮件
 
 DATE="${1:-$(date +%Y-%m-%d)}"
 NOTIFY_LOG="$(dirname "$0")/../_meta/notify-failures.log"
@@ -13,17 +10,35 @@ TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S %Z")
 REPO_PATH="${HOME}/Documents/Claude/Projects/RumorCrusher"
 cd "$(dirname "$0")/.."
 
-# [1/3] git push
+# [1/3] git commit + push（失败只记录，不中断后续步骤）
 echo "[1/3] 推送到 GitHub..."
-git add "${DATE}/" skills/ wiki/ index.html _meta/changelog.md 2>/dev/null || true
+git add "${DATE}/" skills/ wiki/ index.html tech-digest/index.html _meta/changelog.md 2>/dev/null || true
 if ! git diff --staged --quiet; then
-  if git commit -m "Daily update ${DATE}" 2>&1 && \
-     git -C "${REPO_PATH}" -c http.version=HTTP/1.1 push origin main 2>&1; then
-    echo "✓ git push 成功"
-    GIT_STATUS="SUCCESS"
+  if git commit -m "Daily update ${DATE}" 2>&1; then
+    # 尝试 push，优先 7897，fallback 1080
+    PUSH_OK=0
+    for PROXY in "http://127.0.0.1:7897" "http://127.0.0.1:1080" ""; do
+      if [ -n "${PROXY}" ]; then
+        export https_proxy="${PROXY}"
+      else
+        unset https_proxy
+      fi
+      if git -C "${REPO_PATH}" -c http.version=HTTP/1.1 push origin main 2>&1; then
+        PUSH_OK=1
+        break
+      fi
+    done
+    if [ "${PUSH_OK}" -eq 1 ]; then
+      echo "✓ git push 成功"
+      GIT_STATUS="SUCCESS"
+    else
+      GIT_STATUS="COMMITTED_NOT_PUSHED"
+      echo "[${TIMESTAMP}] [git] push失败（sandbox代理不通，请在本机运行 git push）" >> "${NOTIFY_LOG}"
+      echo "  ⚠ git commit 成功，push 失败（代理不通）"
+    fi
   else
-    GIT_STATUS="FAILED: push error"
-    echo "[${TIMESTAMP}] git push FAILED" >> "${NOTIFY_LOG}"
+    GIT_STATUS="COMMIT_FAILED"
+    echo "[${TIMESTAMP}] [git] commit失败" >> "${NOTIFY_LOG}"
   fi
 else
   echo "  无变化，跳过推送"
@@ -33,14 +48,14 @@ fi
 # [2/3] 飞书通知
 echo "[2/3] 推送飞书通知..."
 python3 scripts/feishu_notify.py "${DATE}" 2>&1 || {
-  echo "[${TIMESTAMP}] 飞书通知 FAILED" >> "${NOTIFY_LOG}"
+  echo "[${TIMESTAMP}] [feishu] FAILED（sandbox内webhook不可达，需用户本机执行）" >> "${NOTIFY_LOG}"
   echo "  ⚠ 飞书通知失败"
 }
 
 # [3/3] 邮件通知
 echo "[3/3] 发送邮件通知..."
 python3 scripts/email_notify.py "${DATE}" 2>&1 || {
-  echo "[${TIMESTAMP}] 邮件通知 FAILED" >> "${NOTIFY_LOG}"
+  echo "[${TIMESTAMP}] [email] FAILED（sandbox无SMTP配置）" >> "${NOTIFY_LOG}"
   echo "  ⚠ 邮件通知失败"
 }
 
