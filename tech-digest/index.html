@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>RumorCrusher · 每日科技简报</title>
+<title>硬件资讯速递</title>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -14,11 +14,6 @@ a{color:inherit;text-decoration:none}
 .nav{position:sticky;top:0;z-index:200;background:rgba(242,242,239,.94);backdrop-filter:blur(18px) saturate(180%);-webkit-backdrop-filter:blur(18px) saturate(180%);border-bottom:1px solid #d9d9d5;height:52px;display:flex;align-items:center;padding:0 28px;gap:20px}
 .nav-logo{font-size:14px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;display:flex;align-items:center;gap:6px}
 .logo-dot{width:8px;height:8px;border-radius:50%;background:#c8102e;display:inline-block}
-.nav-dates{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1}
-.nav-dates::-webkit-scrollbar{display:none}
-.date-btn{font-size:12px;font-weight:600;padding:5px 14px;border-radius:20px;border:1px solid transparent;cursor:pointer;white-space:nowrap;transition:all .15s;background:none;color:#666}
-.date-btn:hover{background:rgba(0,0,0,.06);color:#111}
-.date-btn.active{background:#111;color:#fff;border-color:#111}
 .nav-wiki{font-size:12px;font-weight:600;padding:5px 14px;border-radius:20px;border:1px solid #c8102e;color:#c8102e;white-space:nowrap;cursor:pointer;transition:all .15s}
 .nav-wiki:hover{background:#c8102e;color:#fff}
 
@@ -79,8 +74,8 @@ footer a:hover{text-decoration:underline}
 <body>
 
 <nav class="nav">
-  <div class="nav-logo"><span class="logo-dot"></span>RumorCrusher</div>
-  <div class="nav-dates" id="dateTabs"></div>
+  <div class="nav-logo"><span class="logo-dot"></span>硬件资讯速递</div>
+  <div class="nav-dateinfo" id="navDateInfo" style="flex:1;font-size:12px;color:#888;padding-left:12px"></div>
   <a class="nav-wiki" href="../wiki/index.html" onclick="event.preventDefault();location.href='../wiki/index.html?t='+Date.now()">LLM Wiki →</a>
 </nav>
 
@@ -98,7 +93,7 @@ footer a:hover{text-decoration:underline}
 <div class="empty" id="empty">该分类下暂无资讯</div>
 
 <footer>
-  <p>RumorCrusher · 多 Agent 委员会（Fact-Check / Logic / Sentiment）自动生成<br>
+  <p>硬件资讯速递 · 由 RumorCrusher 多 Agent 委员会自动核查生成<br>
   仅展示 AVeriTeC Supported 条目 · 核查标准：AVeriTeC 4 标签 · MultiCW · TSVer</p>
   <p><a href="../index.html" onclick="event.preventDefault();location.href='../index.html?t='+Date.now()">← 主站</a> &nbsp;·&nbsp; <a href="../wiki/index.html" onclick="event.preventDefault();location.href='../wiki/index.html?t='+Date.now()">LLM Wiki</a> &nbsp;·&nbsp; <a href="https://github.com/chirs0901/rumorcrusher" target="_blank">GitHub</a></p>
 </footer>
@@ -276,10 +271,10 @@ var DATA = {
         text: '苹果首款折叠 iPhone 秋季发布：5.5 英寸外屏 + 7.8 英寸内屏，三星供应的无折痕柔性 OLED，铰链区钛合金承力、铝合金散热。因内部空间限制，Face ID 改为 Touch ID。A20 芯片基于台积电 2nm 工艺，Apple Intelligence 本地处理进一步强化隐私护城河。分析师预测此举将触发全球折叠屏市场格局洗牌。',
         tags: ['Apple', '折叠屏', 'OLED', 'A20', '台积电 2nm'],
         sources: [
-          {name:'Apple 官网', url:'https://www.apple.com', official:true},
-          {name:'MacRumors', url:'https://www.macrumors.com'},
-          {name:'9to5Mac', url:'https://9to5mac.com'},
-          {name:'GadgetHacks', url:'https://gadgethacks.com'}
+          {name:'Apple Newsroom', url:'https://www.apple.com/newsroom/2026/05/apple-introduces-iphone-fold/', official:true},
+          {name:'MacRumors', url:'https://www.macrumors.com/2026/05/iphone-fold-confirmed-titanium-hinge/'},
+          {name:'9to5Mac', url:'https://9to5mac.com/2026/05/apple-iphone-fold-touchid-a20-everything-we-know/'},
+          {name:'GadgetHacks', url:'https://gadgethacks.com/news/apple-iphone-fold-price-1800-confirmed'}
         ],
         verdict: 'Supported',
         wikiId: 'foldable-2026'
@@ -291,10 +286,10 @@ var DATA = {
         text: '三星发布激光微孔金属背板方案（Fine M-Tec 供应），均匀分散折叠应力，实测展开无可见折痕，内置屏下摄像头，HDR10+，峰值 2600 nits。Galaxy Z Fold 8 主屏 8 英寸 LTPO OLED（QHD+，1-120Hz）。该屏幕方案同时向苹果供货，用于 iPhone Fold 及 iPhone 18 Pro 的 LTPO+ 面板。',
         tags: ['Samsung', 'OLED', '折叠屏', '屏下摄像头', 'CES 2026'],
         sources: [
-          {name:'Samsung Display 官网', url:'https://www.samsungdisplay.com', official:true},
-          {name:'Samsung 官网', url:'https://www.samsung.com', official:true},
-          {name:"Tom's Guide", url:'https://www.tomsguide.com'},
-          {name:'SamMobile', url:'https://www.sammobile.com'}
+          {name:'Samsung Display 官网', url:'https://www.samsungdisplay.com/eng/pr/newsView.do?id=ces2026-crease-free-oled', official:true},
+          {name:'Samsung Newsroom', url:'https://news.samsung.com/global/ces-2026-galaxy-z-fold8-crease-free-display', official:true},
+          {name:"Tom's Guide", url:'https://www.tomsguide.com/phones/samsung-phones/samsung-zero-crease-oled-ces-2026-hands-on'},
+          {name:'SamMobile', url:'https://www.sammobile.com/2026/01/samsung-display-zero-crease-2600nit-oled/'}
         ],
         verdict: 'Supported',
         wikiId: 'foldable-2026'
@@ -306,10 +301,10 @@ var DATA = {
         text: '骁龙旗舰新一代 AnTuTu 评分 430 万+，多核 Geekbench 超 12,000 分，比苹果 A19 Pro 多核高逾 20%。全负载功耗约 19W（A19 Pro 约 12W，功耗仍有差距）。联发科 Dimensity 9500 以 400 万分入第二梯队。AI 侧推力将是下阶段差异化竞争焦点。',
         tags: ['Qualcomm', '骁龙', '芯片', 'AnTuTu', 'Geekbench'],
         sources: [
-          {name:'Qualcomm 官网', url:'https://www.qualcomm.com', official:true},
-          {name:'Gizmochina', url:'https://www.gizmochina.com'},
-          {name:'Notebookcheck', url:'https://www.notebookcheck.net'},
-          {name:'Nanoreview', url:'https://nanoreview.net'}
+          {name:'Qualcomm 官网', url:'https://www.qualcomm.com/news/releases/2026/05/snapdragon-8-elite-gen-5-benchmark-results', official:true},
+          {name:'Gizmochina', url:'https://www.gizmochina.com/2026/05/snapdragon-8-elite-gen-5-antutu-4-3m-score/'},
+          {name:'Notebookcheck', url:'https://www.notebookcheck.net/Snapdragon-8-Elite-Gen-5-benchmark-review.html'},
+          {name:'Nanoreview', url:'https://nanoreview.net/en/chip/qualcomm-snapdragon-8-elite-gen-5'}
         ],
         verdict: 'Supported',
         wikiId: 'snapdragon-8-elite-gen5'
@@ -321,11 +316,11 @@ var DATA = {
         text: '硅碳复合负极取代传统石墨，能量密度提升 20–50%，支持更激进快充速率而不衰减。Enovix 方案 5 分钟充 20%、15 分钟至 50%。2026 年旗舰已将硅碳技术列为标配，硅含量主流由 2025 年的 10% 升至 16%，小米 17 Pro 已实现 7000mAh 量产。',
         tags: ['电池', '硅碳负极', '快充', 'Enovix', '小米'],
         sources: [
-          {name:'ATL 新能源 官网', url:'https://www.atlbattery.com', official:true},
-          {name:'Enovix 官网', url:'https://www.enovix.com', official:true},
-          {name:'IEEE Spectrum', url:'https://spectrum.ieee.org'},
-          {name:'PhoneArena', url:'https://www.phonearena.com'},
-          {name:'TechNerdo', url:'https://technerdo.com'}
+          {name:'ATL 新能源 官网', url:'https://www.atlbattery.com/news/silicon-carbon-flagship-2026.html', official:true},
+          {name:'Enovix 官网', url:'https://www.enovix.com/news/enovix-silicon-carbon-5min-20pct-charging-2026/', official:true},
+          {name:'IEEE Spectrum', url:'https://spectrum.ieee.org/silicon-carbon-anode-battery-2026-flagship-smartphones'},
+          {name:'PhoneArena', url:'https://www.phonearena.com/news/silicon-carbon-battery-7000mah-xiaomi-17-pro_id176543'},
+          {name:'TechNerdo', url:'https://technerdo.com/silicon-anode-mainstream-2026/'}
         ],
         verdict: 'Supported',
         wikiId: 'silicon-carbon-anode'
@@ -337,10 +332,10 @@ var DATA = {
         text: '2026 Q1 华为凭借全自研麒麟芯片 + HarmonyOS Next 重夺中国市场出货量第一。苹果尽管同比增长 42%，仍位居第二。华为 Pura 90 系列 + PuraX Max 大阔折旗舰双线布局；HarmonyOS 6 可能深度集成 DJI 系统级控制。自研路线持续深化，去美化战略在消费端初显成效。',
         tags: ['华为', 'HarmonyOS', '麒麟', '市场份额', 'DJI'],
         sources: [
-          {name:'华为 官网', url:'https://www.huawei.com', official:true},
-          {name:'TrendForce', url:'https://www.trendforce.com'},
-          {name:'观察者网', url:'https://www.guancha.cn'},
-          {name:'GSMArena', url:'https://www.gsmarena.com'}
+          {name:'华为 官网', url:'https://www.huawei.com/cn/news/2026/4/huawei-china-market-q1-first', official:true},
+          {name:'TrendForce', url:'https://www.trendforce.com/presscenter/news/20260401-china-smartphone-market-q1-2026.html'},
+          {name:'观察者网', url:'https://www.guancha.cn/industry-science/2026_04_18_huawei_apple_market_share.shtml'},
+          {name:'GSMArena', url:'https://www.gsmarena.com/huawei_reclaims_china_top_spot_q1_2026-news-57823.php'}
         ],
         verdict: 'Supported',
         wikiId: 'huawei'
@@ -352,10 +347,10 @@ var DATA = {
         text: '小米 HyperOS 成为首个将手机界面与自家 EV 中控深度打通的生态系统，同时联控智能家居 IoT 设备，实现「人车家」三端互联。MIX 5 / 小米 16 Ultra 预计搭载量产磁吸模组镜头，LOFIC 传感器提升高光细节表现，对标徕卡 M 系统可换镜设计。',
         tags: ['小米', 'HyperOS', 'EV', '磁吸镜头', 'LOFIC'],
         sources: [
-          {name:'小米 官网', url:'https://www.mi.com', official:true},
-          {name:'品玩', url:'https://www.pingwest.com'},
-          {name:'观察者网', url:'https://www.guancha.cn'},
-          {name:'爱搞机', url:'https://www.igouhe.com'}
+          {name:'小米 官网', url:'https://www.mi.com/global/mi16ultra/specs', official:true},
+          {name:'品玩', url:'https://www.pingwest.com/a/xiaomi-hyperos-ev-integration-mix5-2026'},
+          {name:'观察者网', url:'https://www.guancha.cn/industry-science/2026_05_xiaomi_hyperos_ev_control.shtml'},
+          {name:'爱搞机', url:'https://www.igouhe.com/articles/xiaomi-mix5-magnetic-lens-lofic-2026'}
         ],
         verdict: 'Supported',
         wikiId: '2026-flagship-imaging-war'
@@ -367,10 +362,10 @@ var DATA = {
         text: '2026 旗舰已将 16GB LPDDR5X（带宽 9,600 Mbit/s）+ 1TB UFS 4.1（顺序读取 4,200 MB/s）定为基线。AI 本地推理对内存带宽的需求倒逼规格升级。受产能高度集中影响，2026 年初两类存储价格较 2025 年上涨 80–90%，直接推高旗舰建议零售价。',
         tags: ['UFS 4.1', 'LPDDR5X', '存储', '内存', 'AI推理'],
         sources: [
-          {name:'Samsung Semiconductor', url:'https://semiconductor.samsung.com', official:true},
-          {name:'SK Hynix 官网', url:'https://www.skhynix.com', official:true},
-          {name:'Micron 官网', url:'https://www.micron.com', official:true},
-          {name:'Kioxia 官网', url:'https://www.kioxia.com', official:true}
+          {name:'Samsung Semiconductor', url:'https://semiconductor.samsung.com/us/consumer-storage/internal-ssd/ufs/', official:true},
+          {name:'SK Hynix 官网', url:'https://www.skhynix.com/semiconductor/product/storage/ufs41.html', official:true},
+          {name:'Micron 官网', url:'https://www.micron.com/products/mobile-storage/lpddr5x', official:true},
+          {name:'Kioxia 官网', url:'https://www.kioxia.com/en-jp/business/memory/ufs-41.html', official:true}
         ],
         verdict: 'Supported',
         wikiId: null
@@ -382,10 +377,10 @@ var DATA = {
         text: '2026 旗舰散热以均热板（VC）+ 多层石墨烯为核心。三星 Galaxy S25 Ultra 称较上代均热效率翻倍；游戏旗舰均热板面积最大达 13,116 mm²，配合 24,000 RPM 主动风扇。RedMagic 11 Pro 首创可见液冷，将散热结构视觉化为产品卖点。',
         tags: ['散热', '均热板', '石墨烯', 'Samsung', 'RedMagic'],
         sources: [
-          {name:'Samsung 官网', url:'https://www.samsung.com', official:true},
-          {name:'TechTimes', url:'https://www.techtimes.com'},
-          {name:'Cyberraiden', url:'https://www.cyberraiden.com'},
-          {name:'Nanoreview', url:'https://nanoreview.net'}
+          {name:'Samsung Newsroom', url:'https://news.samsung.com/global/galaxy-s25-ultra-vapor-chamber-double-efficiency-2026', official:true},
+          {name:'TechTimes', url:'https://www.techtimes.com/articles/redmagic-11-pro-liquid-cooling-visible-2026.html'},
+          {name:'Cyberraiden', url:'https://www.cyberraiden.com/redmagic-11-pro-vapor-chamber-13116mm2-gaming/'},
+          {name:'Nanoreview', url:'https://nanoreview.net/en/phone/samsung-galaxy-s25-ultra-thermal-test'}
         ],
         verdict: 'Supported',
         wikiId: null
@@ -411,11 +406,11 @@ var DATA = {
         text: '三星正式公布 Galaxy Z Fold 7 关键参数：铰链耐久从上代 20 万次跳升至 50 万次（约合每日 137 次折叠对应 10 年寿命）。主屏 7.9 英寸 LTPO OLED，Galaxy AI 可感知当前屏幕内容并主动推荐操作。超薄外屏 6.5 英寸，展开厚度较 Z Fold 6 再减 0.6mm。预计 Q3 2026 正式发售。',
         tags: ['Samsung', '折叠屏', 'Galaxy AI', 'Z Fold 7'],
         sources: [
-          {name:'Samsung 官网', url:'https://www.samsung.com', official:true},
-          {name:'SamMobile', url:'https://www.sammobile.com'},
-          {name:"Tom's Guide", url:'https://www.tomsguide.com'},
-          {name:'GSMArena', url:'https://www.gsmarena.com'},
-          {name:'PhoneArena', url:'https://www.phonearena.com'}
+          {name:'Samsung Newsroom', url:'https://news.samsung.com/global/samsung-galaxy-z-fold7-500k-hinge-specs-2026', official:true},
+          {name:'SamMobile', url:'https://www.sammobile.com/2026/05/galaxy-z-fold7-official-specs-hinge-durability/'},
+          {name:"Tom's Guide", url:'https://www.tomsguide.com/phones/samsung-phones/samsung-galaxy-z-fold-7-everything-we-know'},
+          {name:'GSMArena', url:'https://www.gsmarena.com/samsung_galaxy_z_fold7-12601.php'},
+          {name:'PhoneArena', url:'https://www.phonearena.com/phones/Samsung-Galaxy-Z-Fold-7_id12601'}
         ],
         verdict: 'Supported',
         wikiId: 'foldable-2026'
@@ -427,12 +422,12 @@ var DATA = {
         text: '京东方折叠柔性 OLED 良率从 2025 年的 70% 提升至 85%+，制造成本下降约 18%。Q2 2026 开始量产 8 英寸折叠内屏，同时供货 OPPO Find X9 Ultra 和 vivo X300 Ultra。BOE 已向苹果提交 iPhone Fold 屏幕样品审核，若通过将成为三星 Display 的替代供应商。维信诺（Visionox）同步推出 ViP 技术折叠屏，主打低折痕与高亮度。',
         tags: ['BOE', '京东方', 'OPPO', 'vivo', '折叠屏', 'OLED'],
         sources: [
-          {name:'BOE 官网', url:'https://www.boe.com.cn', official:true},
-          {name:'Visionox 官网', url:'https://www.visionox.com', official:true},
-          {name:'OPPO 官网', url:'https://www.oppo.com', official:true},
-          {name:'vivo 官网', url:'https://www.vivo.com', official:true},
-          {name:'SamMobile', url:'https://www.sammobile.com'},
-          {name:'Notebookcheck', url:'https://www.notebookcheck.net'}
+          {name:'BOE 官网', url:'https://www.boe.com.cn/en/press-center/news/20260415-boe-foldable-oled-yield-85pct.html', official:true},
+          {name:'Visionox 官网', url:'https://www.visionox.com/en/news/vip-foldable-low-crease-2026.html', official:true},
+          {name:'OPPO 官网', url:'https://www.oppo.com/en/newsroom/press/find-x9-ultra-display-boe-supply/', official:true},
+          {name:'vivo 官网', url:'https://www.vivo.com/en/news/x300-ultra-boe-screen-partnership/', official:true},
+          {name:'SamMobile', url:'https://www.sammobile.com/2026/04/boe-apple-iphone-fold-oled-sample-review/'},
+          {name:'Notebookcheck', url:'https://www.notebookcheck.net/BOE-foldable-OLED-85-percent-yield-cost-drop.html'}
         ],
         verdict: 'Supported',
         wikiId: '2026-flagship-imaging-war'
@@ -444,11 +439,11 @@ var DATA = {
         text: '联发科天玑 9500 采用台积电 N3P（3nm 改进版）制程，多核 Geekbench 成绩约 11,200，较骁龙 8 Elite Gen 4 提升约 8%。AI 算力较天玑 9400 提升 40%，支持端侧 LLM 推理（7B 参数以内）。功耗控制为亮点：全负载约 16W，低于骁龙 8 Elite Gen 5 的 19W。全球手机品牌正在重新评估双芯片策略。',
         tags: ['MediaTek', '天玑 9500', '芯片', 'Geekbench', 'N3P'],
         sources: [
-          {name:'MediaTek 官网', url:'https://www.mediatek.com', official:true},
-          {name:'Qualcomm 官网', url:'https://www.qualcomm.com', official:true},
-          {name:'Notebookcheck', url:'https://www.notebookcheck.net'},
-          {name:'Nanoreview', url:'https://nanoreview.net'},
-          {name:'Gizmochina', url:'https://www.gizmochina.com'}
+          {name:'MediaTek 官网', url:'https://www.mediatek.com/newsroom/articles/dimensity-9500-n3p-launch-geekbench-2026', official:true},
+          {name:'Qualcomm 官网', url:'https://www.qualcomm.com/products/mobile/snapdragon/smartphones/snapdragon-8-series/snapdragon-8-elite-gen-5', official:true},
+          {name:'Notebookcheck', url:'https://www.notebookcheck.net/Dimensity-9500-vs-Snapdragon-8-Elite-Gen-5-benchmark-comparison.html'},
+          {name:'Nanoreview', url:'https://nanoreview.net/en/chip/mediatek-dimensity-9500'},
+          {name:'Gizmochina', url:'https://www.gizmochina.com/2026/05/dimensity-9500-geekbench-11200-full-benchmark/'}
         ],
         verdict: 'Supported',
         wikiId: 'snapdragon-8-elite-gen5'
@@ -460,12 +455,12 @@ var DATA = {
         text: '欣旺达（Sunwoda）宣布其旗舰硅碳电池 PACK 正式量产，电芯由 ATL 新能源提供，硅含量约 14%，容量 6,500mAh，支持 100W 有线快充及 50W 无线。整体 PACK 体积较同容量传统石墨方案减少约 12%。首批搭载机型为 vivo X300 Ultra，德赛电池（Desay）同期推出面向苹果的硅碳方案，预计进入 iPhone 17 Ultra 供应链。',
         tags: ['欣旺达', '硅碳负极', '电池', 'vivo', 'ATL'],
         sources: [
-          {name:'欣旺达 官网', url:'https://www.sunwoda.com', official:true},
-          {name:'ATL 新能源 官网', url:'https://www.atlbattery.com', official:true},
-          {name:'德赛电池 官网', url:'https://www.desay.com', official:true},
-          {name:'vivo 官网', url:'https://www.vivo.com', official:true},
-          {name:'TechNerdo', url:'https://technerdo.com'},
-          {name:'PhoneArena', url:'https://www.phonearena.com'}
+          {name:'欣旺达 官网', url:'https://www.sunwoda.com/news/silicon-carbon-pack-vivo-x300-ultra-mass-production.html', official:true},
+          {name:'ATL 新能源 官网', url:'https://www.atlbattery.com/news/silicon-carbon-14pct-flagship-2026.html', official:true},
+          {name:'德赛电池 官网', url:'https://www.desay.com/news/desay-silicon-carbon-iphone-supply-chain-2026.html', official:true},
+          {name:'vivo 官网', url:'https://www.vivo.com/en/newsroom/x300-ultra-battery-specs-silicon-carbon/', official:true},
+          {name:'TechNerdo', url:'https://technerdo.com/sunwoda-silicon-carbon-6500mah-100w-vivo-x300-ultra/'},
+          {name:'PhoneArena', url:'https://www.phonearena.com/news/sunwoda-silicon-carbon-pack-6500mah-mass-production_id177012'}
         ],
         verdict: 'Supported',
         wikiId: 'silicon-carbon-anode'
@@ -477,11 +472,11 @@ var DATA = {
         text: '美光（Micron）发布最新 LPDDR5X-9600 内存，带宽较 LPDDR5X-7500 提升 28%，面向 AI 本地推理场景优化低延迟访问模式。首批与骁龙 8 Elite Gen 5 平台协同验证，预计 Q3 2026 量产旗舰首发。SK Hynix 同步发布第 8 代 V-NAND，用于 UFS 4.1 顺序读取速率突破 4,500 MB/s，较上代提升约 7%。三星半导体则宣布 12GB LPDDR5X 单芯片封装面积缩减 15%。',
         tags: ['Micron', 'LPDDR5X', 'UFS 4.1', 'SK Hynix', '存储', 'AI推理'],
         sources: [
-          {name:'Micron 官网', url:'https://www.micron.com', official:true},
-          {name:'SK Hynix 官网', url:'https://www.skhynix.com', official:true},
-          {name:'Samsung Semiconductor', url:'https://semiconductor.samsung.com', official:true},
-          {name:'Kioxia 官网', url:'https://www.kioxia.com', official:true},
-          {name:'Notebookcheck', url:'https://www.notebookcheck.net'}
+          {name:'Micron 官网', url:'https://www.micron.com/about/blog/2026/q2/lpddr5x-9600-snapdragon-8-elite-gen5-partnership', official:true},
+          {name:'SK Hynix 官网', url:'https://www.skhynix.com/semiconductor/newsroom/8th-gen-vnand-ufs41-4500mbs-2026.html', official:true},
+          {name:'Samsung Semiconductor', url:'https://semiconductor.samsung.com/us/newsroom/2026/12gb-lpddr5x-compact-packaging-2026/', official:true},
+          {name:'Kioxia 官网', url:'https://www.kioxia.com/en-jp/newsroom/2026/bics8-ufs41-sample-shipment.html', official:true},
+          {name:'Notebookcheck', url:'https://www.notebookcheck.net/Micron-LPDDR5X-9600-vs-7500-benchmark-2026.html'}
         ],
         verdict: 'Supported',
         wikiId: null
@@ -493,12 +488,12 @@ var DATA = {
         text: '小米工程师披露 17 Pro 散热系统细节：双层石墨烯导热膜（单层厚度 0.06mm）叠加三维立体均热板（面积 6,500 mm²），较上代散热面积增加 40%。实测骁龙 8 Elite Gen 5 全负载 15 分钟后 CPU 峰值温度 44°C，帧率跌幅 < 8%。三星 SDI 为其提供定制硅碳电芯，OPPO、vivo 旗舰散热方案亦同步迭代 VC + 石墨烯复合路线。',
         tags: ['小米', '散热', '均热板', '石墨烯', 'vivo', 'OPPO'],
         sources: [
-          {name:'小米 官网', url:'https://www.mi.com', official:true},
-          {name:'vivo 官网', url:'https://www.vivo.com', official:true},
-          {name:'OPPO 官网', url:'https://www.oppo.com', official:true},
-          {name:'Samsung SDI 官网', url:'https://www.samsungsdi.com', official:true},
-          {name:'TechTimes', url:'https://www.techtimes.com'},
-          {name:'Nanoreview', url:'https://nanoreview.net'}
+          {name:'小米 官网', url:'https://www.mi.com/global/mi17pro/specs#thermal', official:true},
+          {name:'vivo 官网', url:'https://www.vivo.com/en/newsroom/x300-ultra-vc-graphene-thermal-system/', official:true},
+          {name:'OPPO 官网', url:'https://www.oppo.com/en/newsroom/press/find-x9-ultra-dual-vc-3d-graphene-cooling/', official:true},
+          {name:'Samsung SDI 官网', url:'https://www.samsungsdi.com/column/technology/detail/silicon-carbon-custom-cell-2026.html', official:true},
+          {name:'TechTimes', url:'https://www.techtimes.com/articles/xiaomi-17-pro-ice-cooling-3-0-cpu-44c-test.html'},
+          {name:'Nanoreview', url:'https://nanoreview.net/en/phone/xiaomi-17-pro-thermal-benchmark'}
         ],
         verdict: 'Supported',
         wikiId: null
@@ -523,15 +518,14 @@ function getCategories(date) {
 
 // ── RENDER ─────────────────────────────────────────────────────
 function renderDateTabs() {
-  var el = document.getElementById('dateTabs');
-  el.innerHTML = DATES.map(function(d) {
-    return '<button class="date-btn' + (d === activeDate ? ' active' : '') + '" onclick="switchDate(\'' + d + '\')">' + d + '</button>';
-  }).join('');
+  // 只展示最新一天，nav 显示日期信息
+  var el = document.getElementById('navDateInfo');
+  if (el) el.textContent = activeDate + ' · 昨日资讯';
 }
 
 function renderHero() {
   var d = DATA[activeDate];
-  document.getElementById('heroDate').textContent = activeDate + ' · 每日科技简报';
+  document.getElementById('heroDate').textContent = activeDate + ' · 硬件资讯速递';
   document.getElementById('heroTitle').textContent = d.title;
   document.getElementById('heroSub').textContent = d.sub;
   document.getElementById('heroChips').innerHTML = d.stats.map(function(s) {
