@@ -70,7 +70,37 @@ ls ${RCPATH}/*/tech-digest-update.json 2>/dev/null | tail -7 | \
 `${TODAY}/06-self-eval-${TIMESTAMP}.md`（含 AVeriTeC 分布、UnR、avg EQ、健康打分）
 
 ### 第 6 步：飞轮更新
-合并进 skills/、wiki/、_meta/changelog.md
+
+#### 6a. 方法论库更新（skills/）
+将今日新发现的核查方法、伪科学模式、逻辑谬误案例追加到对应 md 文件。
+
+#### 6b. LLM Wiki 更新（**每日必做，与报告同步**）
+遍历今日 `synthesis-${TIMESTAMP}.json` 中的 Supported 条目，对每条判断：
+
+1. **已有实体/主题匹配**（wiki/ 目录中存在对应文件）：
+   - 追加"最新动态"小节，格式：`#### ${TODAY} 动态\n内容...`
+   - 更新该实体的"关联事件"或"证据时间线"
+   - 更新 `wiki/index.md` 中对应条目的 `updated` 字段
+
+2. **新实体或新主题**（首次出现，且证据 ≥ 2 条 Supported）：
+   - 创建 `wiki/entities/${id}.md` 或 `wiki/topics/${id}.md`（Karpathy 风格）
+   - 在 `wiki/index.html` 的 DATA 中追加新节点（参考现有节点格式）
+   - 在 `wiki/index.md` 添加索引行
+
+3. **Wiki 关系图谱同步**：
+   - 若新资讯揭示实体间新关系（如"A 为 B 供应商"、"X 技术首发于 Y 产品"），在 `wiki/index.html` 的 edges 数组中追加对应边
+
+4. **`_meta/changelog.md` 追加**：
+   ```
+   ## ${TODAY}
+   - 新增实体：X（若有）
+   - 新增主题：Y（若有）
+   - 更新实体：Z（列出今日有新动态的已有实体）
+   - Supported 条数：N，Refuted：M
+   ```
+
+#### 6c. 信源可信度更新
+若本次核查发现某信源有误报（Refuted 且来源明确），在 `_meta/source-list.yaml` 的对应信源下 `credibility_baseline -= 0.05` 并附注原因和日期。
 
 ### 第 7 步：HTML 仪表盘（晨报合并逻辑）
 - 若 `${TODAY}/index.html` 已存在（07:00 晨跑建立）：
