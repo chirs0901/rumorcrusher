@@ -12,6 +12,12 @@ cd "$(dirname "$0")/.."
 
 # [1/3] git commit + push（失败只记录，不中断后续步骤）
 echo "[1/3] 推送到 GitHub..."
+# 如果当日 tech-digest-update.json 存在，先注入
+if [ -f "${DATE}/tech-digest-update.json" ]; then
+  echo "[pre] 注入 tech-digest..."
+  python3 scripts/update_tech_digest.py "${DATE}/tech-digest-update.json" 2>&1 || true
+fi
+
 git add "${DATE}/" skills/ wiki/ index.html tech-digest/index.html _meta/changelog.md 2>/dev/null || true
 if ! git diff --staged --quiet; then
   if git commit -m "Daily update ${DATE}" 2>&1; then

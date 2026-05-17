@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>信源清单与可信度 · RumorCrusher</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f5f5f2;color:#111;font-size:14px;line-height:1.7}
+a{color:#c8102e;text-decoration:none}
+a:hover{text-decoration:underline}
+.nav{background:#fff;border-bottom:1px solid #e0e0dc;padding:0 28px;height:48px;display:flex;align-items:center;gap:16px;position:sticky;top:0;z-index:10}
+.nav-logo{font-size:13px;font-weight:800;letter-spacing:.04em;display:flex;align-items:center;gap:6px}
+.dot{width:7px;height:7px;border-radius:50%;background:#c8102e;display:inline-block}
+.nav-back{font-size:12px;color:#888}
+.container{max-width:960px;margin:0 auto;padding:40px 28px 60px}
+h1{font-size:22px;font-weight:800;margin-bottom:6px}
+.subtitle{font-size:13px;color:#888;margin-bottom:32px}
+.section{margin-bottom:36px}
+.section-title{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#c8102e;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid #e8e8e4}
+.source-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+.source-card{background:#fff;border-radius:6px;padding:14px 16px;border:1px solid #e8e8e4}
+.source-card:hover{border-color:#c8102e20;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.src-name{font-weight:700;font-size:14px;margin-bottom:4px}
+.src-url{font-size:11px;color:#888;margin-bottom:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.src-meta{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:6px}
+.badge{font-size:10px;padding:2px 7px;border-radius:3px;font-weight:600}
+.badge-priority{background:#111;color:#fff}
+.badge-cred{background:#e8f5ee;color:#006633}
+.badge-lang{background:#eef2ff;color:#3355cc}
+.tag{font-size:10px;padding:2px 7px;border-radius:3px;background:#f0f0ec;color:#555}
+.src-notes{font-size:11px;color:#888;font-style:italic;margin-top:4px;padding-top:4px;border-top:1px solid #f0f0ec}
+.rules-box{background:#fff;border-radius:6px;padding:20px 24px;border:1px solid #e8e8e4}
+.rules-box ul{padding-left:20px;margin-top:8px}
+.rules-box li{margin-bottom:6px;font-size:13px}
+.blacklist-box{background:#fff7f7;border-radius:6px;padding:16px 20px;border:1px solid #ffd0d0;color:#888;font-size:13px}
+footer{border-top:1px solid #e0e0dc;padding:24px 28px;max-width:960px;margin:0 auto;font-size:11px;color:#aaa}
+@media(max-width:600px){.container{padding:24px 16px}.source-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo"><span class="dot"></span>RumorCrusher</div>
+  <a class="nav-back" href="../index.html">← 主站</a>
+</nav>
+
+<div class="container">
+  <h1>信源清单与可信度</h1>
+  <div class="subtitle">最近更新：2026-05-17 · 优先级 5 = 每日必查 · 可信度基线由质检流水线动态调整</div>
+
+  <!-- 中文科技媒体 -->
+  <div class="section">
+    <div class="section-title">中文主流科技媒体</div>
+    <div class="source-grid">
+      <div class="source-card">
+        <div class="src-name">IT之家</div>
+        <div class="src-url"><a href="https://www.ithome.com/" target="_blank">ithome.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 5</span>
+          <span class="badge badge-cred">可信度 0.75</span>
+          <span class="badge badge-lang">中文</span>
+          <span class="tag">news</span><span class="tag">mobile</span><span class="tag">hardware</span>
+        </div>
+        <div class="src-notes">速度快、覆盖全，但标题党倾向偏强，需重点核查</div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">爱范儿</div>
+        <div class="src-url"><a href="https://www.ifanr.com/" target="_blank">ifanr.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 4</span>
+          <span class="badge badge-cred">可信度 0.80</span>
+          <span class="badge badge-lang">中文</span>
+          <span class="tag">news</span><span class="tag">mobile</span><span class="tag">lifestyle</span>
+        </div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">少数派</div>
+        <div class="src-url"><a href="https://sspai.com/" target="_blank">sspai.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 3</span>
+          <span class="badge badge-cred">可信度 0.85</span>
+          <span class="badge badge-lang">中文</span>
+          <span class="tag">review</span><span class="tag">lifestyle</span><span class="tag">software</span>
+        </div>
+        <div class="src-notes">评测质量高，但偏软件/使用层面</div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">品玩 PingWest</div>
+        <div class="src-url"><a href="https://www.pingwest.com/" target="_blank">pingwest.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 3</span>
+          <span class="badge badge-cred">可信度 0.78</span>
+          <span class="badge badge-lang">中文</span>
+          <span class="tag">news</span><span class="tag">industry</span>
+        </div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">虎嗅</div>
+        <div class="src-url"><a href="https://www.huxiu.com/" target="_blank">huxiu.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 3</span>
+          <span class="badge badge-cred">可信度 0.75</span>
+          <span class="badge badge-lang">中文</span>
+          <span class="tag">analysis</span><span class="tag">industry</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 中文 AI/科技深度 -->
+  <div class="section">
+    <div class="section-title">中文 AI / 科技深度</div>
+    <div class="source-grid">
+      <div class="source-card">
+        <div class="src-name">机器之心</div>
+        <div class="src-url"><a href="https://www.jiqizhixin.com/" target="_blank">jiqizhixin.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 4</span>
+          <span class="badge badge-cred">可信度 0.88</span>
+          <span class="badge badge-lang">中文</span>
+          <span class="tag">ai</span><span class="tag">research</span><span class="tag">deep</span>
+        </div>
+        <div class="src-notes">AI 研究新闻准确度较高</div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">量子位</div>
+        <div class="src-url"><a href="https://www.qbitai.com/" target="_blank">qbitai.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 4</span>
+          <span class="badge badge-cred">可信度 0.82</span>
+          <span class="badge badge-lang">中文</span>
+          <span class="tag">ai</span><span class="tag">research</span>
+        </div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">36氪</div>
+        <div class="src-url"><a href="https://www.36kr.com/" target="_blank">36kr.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 4</span>
+          <span class="badge badge-cred">可信度 0.75</span>
+          <span class="badge badge-lang">中文</span>
+          <span class="tag">news</span><span class="tag">business</span><span class="tag">industry</span>
+        </div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">新智元</div>
+        <div class="src-url"><a href="https://www.aiera.com.cn/" target="_blank">aiera.com.cn</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 3</span>
+          <span class="badge badge-cred">可信度 0.72</span>
+          <span class="badge badge-lang">中文</span>
+          <span class="tag">ai</span><span class="tag">news</span>
+        </div>
+        <div class="src-notes">部分标题偏煽动性，需注意核查</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 英文科技媒体 -->
+  <div class="section">
+    <div class="section-title">英文科技媒体（手机 / 数码）</div>
+    <div class="source-grid">
+      <div class="source-card">
+        <div class="src-name">GSMArena</div>
+        <div class="src-url"><a href="https://www.gsmarena.com/" target="_blank">gsmarena.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 5</span>
+          <span class="badge badge-cred">可信度 0.92</span>
+          <span class="badge badge-lang">EN</span>
+          <span class="tag">mobile</span><span class="tag">spec</span><span class="tag">review</span>
+        </div>
+        <div class="src-notes">参数权威源，事实核查时优先引用</div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">The Verge</div>
+        <div class="src-url"><a href="https://www.theverge.com/" target="_blank">theverge.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 5</span>
+          <span class="badge badge-cred">可信度 0.88</span>
+          <span class="badge badge-lang">EN</span>
+          <span class="tag">news</span><span class="tag">review</span><span class="tag">opinion</span>
+        </div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">CNET</div>
+        <div class="src-url"><a href="https://www.cnet.com/" target="_blank">cnet.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 4</span>
+          <span class="badge badge-cred">可信度 0.85</span>
+          <span class="badge badge-lang">EN</span>
+          <span class="tag">news</span><span class="tag">review</span><span class="tag">consumer</span>
+        </div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">TechRadar</div>
+        <div class="src-url"><a href="https://www.techradar.com/" target="_blank">techradar.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 4</span>
+          <span class="badge badge-cred">可信度 0.82</span>
+          <span class="badge badge-lang">EN</span>
+          <span class="tag">news</span><span class="tag">review</span>
+        </div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">Ars Technica</div>
+        <div class="src-url"><a href="https://arstechnica.com/" target="_blank">arstechnica.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 4</span>
+          <span class="badge badge-cred">可信度 0.92</span>
+          <span class="badge badge-lang">EN</span>
+          <span class="tag">deep</span><span class="tag">technical</span>
+        </div>
+        <div class="src-notes">技术深度高、事实核查严</div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">9to5Mac / 9to5Google</div>
+        <div class="src-url"><a href="https://9to5mac.com/" target="_blank">9to5mac.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 4</span>
+          <span class="badge badge-cred">可信度 0.80</span>
+          <span class="badge badge-lang">EN</span>
+          <span class="tag">apple</span><span class="tag">google</span><span class="tag">leaks</span>
+        </div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">Android Authority</div>
+        <div class="src-url"><a href="https://www.androidauthority.com/" target="_blank">androidauthority.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 3</span>
+          <span class="badge badge-cred">可信度 0.78</span>
+          <span class="badge badge-lang">EN</span>
+          <span class="tag">android</span><span class="tag">review</span>
+        </div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">AnandTech (archived)</div>
+        <div class="src-url"><a href="https://www.anandtech.com/" target="_blank">anandtech.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 3</span>
+          <span class="badge badge-cred">可信度 0.95</span>
+          <span class="badge badge-lang">EN</span>
+          <span class="tag">deep</span><span class="tag">technical</span><span class="tag">semi</span>
+        </div>
+        <div class="src-notes">2024年起停止运营，仅作历史参考</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 前沿科技/AI -->
+  <div class="section">
+    <div class="section-title">前沿科技 / AI 媒体（宏观风向）</div>
+    <div class="source-grid">
+      <div class="source-card">
+        <div class="src-name">MIT Technology Review</div>
+        <div class="src-url"><a href="https://www.technologyreview.com/" target="_blank">technologyreview.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 4</span>
+          <span class="badge badge-cred">可信度 0.93</span>
+          <span class="badge badge-lang">EN</span>
+          <span class="tag">research</span><span class="tag">ai</span><span class="tag">frontier</span>
+        </div>
+        <div class="src-notes">偏前沿研究而非纯手机，作为"宏观技术风向"信源</div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">SemiAnalysis</div>
+        <div class="src-url"><a href="https://www.semianalysis.com/" target="_blank">semianalysis.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 4</span>
+          <span class="badge badge-cred">可信度 0.92</span>
+          <span class="badge badge-lang">EN</span>
+          <span class="tag">semi</span><span class="tag">supply-chain</span><span class="tag">deep</span>
+        </div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">IEEE Spectrum</div>
+        <div class="src-url"><a href="https://spectrum.ieee.org/" target="_blank">spectrum.ieee.org</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 3</span>
+          <span class="badge badge-cred">可信度 0.93</span>
+          <span class="badge badge-lang">EN</span>
+          <span class="tag">academic</span><span class="tag">engineering</span>
+        </div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">TechCrunch AI</div>
+        <div class="src-url"><a href="https://techcrunch.com/category/artificial-intelligence/" target="_blank">techcrunch.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 3</span>
+          <span class="badge badge-cred">可信度 0.80</span>
+          <span class="badge badge-lang">EN</span>
+          <span class="tag">ai</span><span class="tag">startup</span><span class="tag">news</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 官方一手信源 -->
+  <div class="section">
+    <div class="section-title">官方一手信源（可信度 1.00）</div>
+    <div class="source-grid">
+      <div class="source-card">
+        <div class="src-name">Apple Newsroom</div>
+        <div class="src-url"><a href="https://www.apple.com/newsroom/" target="_blank">apple.com/newsroom</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 5</span>
+          <span class="badge badge-cred">可信度 1.00</span>
+          <span class="badge badge-lang">EN</span>
+          <span class="tag">official</span><span class="tag">apple</span>
+        </div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">Samsung Newsroom</div>
+        <div class="src-url"><a href="https://news.samsung.com/global/" target="_blank">news.samsung.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 5</span>
+          <span class="badge badge-cred">可信度 1.00</span>
+          <span class="badge badge-lang">EN</span>
+          <span class="tag">official</span><span class="tag">samsung</span>
+        </div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">小米官方</div>
+        <div class="src-url"><a href="https://www.mi.com/" target="_blank">mi.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 5</span>
+          <span class="badge badge-cred">可信度 1.00</span>
+          <span class="badge badge-lang">中文</span>
+          <span class="tag">official</span><span class="tag">xiaomi</span>
+        </div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">华为官方</div>
+        <div class="src-url"><a href="https://consumer.huawei.com/cn/press/news/" target="_blank">huawei.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 5</span>
+          <span class="badge badge-cred">可信度 1.00</span>
+          <span class="badge badge-lang">中文</span>
+          <span class="tag">official</span><span class="tag">huawei</span>
+        </div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">Qualcomm Newsroom</div>
+        <div class="src-url"><a href="https://www.qualcomm.com/news" target="_blank">qualcomm.com/news</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 4</span>
+          <span class="badge badge-cred">可信度 1.00</span>
+          <span class="badge badge-lang">EN</span>
+          <span class="tag">official</span><span class="tag">soc</span>
+        </div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">MediaTek Newsroom</div>
+        <div class="src-url"><a href="https://www.mediatek.com/news" target="_blank">mediatek.com/news</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 4</span>
+          <span class="badge badge-cred">可信度 1.00</span>
+          <span class="badge badge-lang">EN</span>
+          <span class="tag">official</span><span class="tag">soc</span>
+        </div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">Google The Keyword</div>
+        <div class="src-url"><a href="https://blog.google/" target="_blank">blog.google</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 4</span>
+          <span class="badge badge-cred">可信度 1.00</span>
+          <span class="badge badge-lang">EN</span>
+          <span class="tag">official</span><span class="tag">google</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 视频内容 -->
+  <div class="section">
+    <div class="section-title">视频内容（默认只读元信息）</div>
+    <div class="source-grid">
+      <div class="source-card">
+        <div class="src-name">极客湾 Geekerwan</div>
+        <div class="src-url"><a href="https://space.bilibili.com/5365740" target="_blank">bilibili.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 4</span>
+          <span class="badge badge-cred">可信度 0.90</span>
+          <span class="badge badge-lang">中文</span>
+          <span class="tag">video</span><span class="tag">soc</span><span class="tag">benchmark</span>
+        </div>
+        <div class="src-notes">SoC 实测权威，是事实核查的重要参照</div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">Marques Brownlee (MKBHD)</div>
+        <div class="src-url"><a href="https://www.youtube.com/@mkbhd" target="_blank">youtube.com/@mkbhd</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 4</span>
+          <span class="badge badge-cred">可信度 0.85</span>
+          <span class="badge badge-lang">EN</span>
+          <span class="tag">video</span><span class="tag">review</span>
+        </div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">JerryRigEverything</div>
+        <div class="src-url"><a href="https://www.youtube.com/@JerryRigEverything" target="_blank">youtube.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 3</span>
+          <span class="badge badge-cred">可信度 0.88</span>
+          <span class="badge badge-lang">EN</span>
+          <span class="tag">video</span><span class="tag">durability</span>
+        </div>
+      </div>
+      <div class="source-card">
+        <div class="src-name">小白测评</div>
+        <div class="src-url"><a href="https://space.bilibili.com/3493080034772201" target="_blank">bilibili.com</a></div>
+        <div class="src-meta">
+          <span class="badge badge-priority">优先级 3</span>
+          <span class="badge badge-cred">可信度 0.80</span>
+          <span class="badge badge-lang">中文</span>
+          <span class="tag">video</span><span class="tag">review</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 动态调整规则 -->
+  <div class="section">
+    <div class="section-title">可信度动态调整规则</div>
+    <div class="rules-box">
+      <ul>
+        <li>每次质检发现该信源发布错误信息：<strong>credibility − 0.05</strong></li>
+        <li>该信源被其他源交叉验证为准确：<strong>credibility + 0.02</strong></li>
+        <li>连续30天无错误：自动 <strong>+ 0.05</strong>（上限 0.98，官方源除外）</li>
+        <li>credibility 跌破 0.4：<strong>自动加入观察名单</strong></li>
+        <li>credibility 跌破 0.2：<strong>建议人工审核</strong>是否加入黑名单</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 黑名单 -->
+  <div class="section">
+    <div class="section-title">黑名单</div>
+    <div class="blacklist-box">暂无条目 · 等待后续投喂</div>
+  </div>
+
+</div>
+
+<footer>
+  RumorCrusher · <a href="../index.html">主站</a> &nbsp;·&nbsp; <a href="https://github.com/chirs0901/rumorcrusher" target="_blank">GitHub</a>
+</footer>
+
+</body>
+</html>
