@@ -111,7 +111,8 @@ var CAT_COLORS = {
   '电池':     '#00883a',
   '屏幕':     '#7b3fa0',
   '散热':     '#e07b00',
-  '存储':     '#0088aa'
+  '存储':     '#0088aa',
+  'AI创新':   '#7c3aed'
 };
 
 // ── WIKI MAP (带时间戳绕开浏览器缓存) ───────────────────────────
@@ -133,100 +134,150 @@ var DATA = {
 
   // ══════════════════════════════════
   '2026-05-17': {
-    title: 'iQOO 15T三天后开卖、BOE Gen 8.6提前量产、Android 17 Gemini正式亮相',
-    sub: '采集5月12-16日发布资讯，6条 Supported 洞察，覆盖手机创新、屏幕、芯片、电池、散热五大类。',
+    title: 'AI重塑手机格局：品牌端侧大模型落地，器件策略随之重构',
+    sub: '32 条资讯经多维筛查，涵盖 2026-05-10 后最新动态，新增 AI 创新品类，覆盖品牌 AI 战略与核心器件应对措施，去除高相似条目后保留 10 条 Supported 洞察。',
     stats: [
-      {v:'28+', l:'条采集'},
-      {v:'7', l:'条 Refuted 剔除'},
-      {v:'6', l:'条 Supported'},
-      {v:'5', l:'大器件分类'}
+      {v:'32', l:'条采集'},
+      {v:'9',  l:'条 Refuted 剔除'},
+      {v:'10', l:'条 Supported'},
+      {v:'7',  l:'大器件分类'}
     ],
     items: [
       {
-        id: 'iqoo-15t-launch-confirmed-may20-2026',
-        category: '手机创新',
-        title: 'iQOO 15T 官宣5月20日发布：天玑9500 Monster Edition全球首发，2K+200MP+8000mAh',
-        text: 'iQOO 官方于5月13日正式确认 iQOO 15T 将于5月20日19:00发布并同步开售。该机搭载联发科天玑9500 Monster Edition（全球首款），与iQOO联合底层调校，游戏帧率提升34%；屏幕为6.82英寸2K「珠峰屏」+144Hz，摄像为200MP+50MP双摄，电池8000mAh+100W快充，内置自研电竞芯片Q3，重量约216g。',
-        tags: ['iQOO', '天玑9500 Monster', '8000mAh', '200MP', '2K 144Hz'],
+        id: 'apple-ios27-ai-open-2026',
+        category: 'AI创新',
+        title: '苹果 iOS 27 开放第三方 AI 模型接入，Gemini/Claude 获系统级权限',
+        text: '苹果宣布 iOS 27 将允许 Gemini、Claude 等第三方大模型以系统级权限接入 iPhone，突破 Apple Intelligence 封闭生态。分析认为此举标志苹果 AI 战略从"自研垄断"转向"生态开放"，以弥补 Siri 落后差距。与此同时，苹果自研 Neural Engine + 统一内存架构在 Agentic AI 时代的本地推理优势被视为其核心护城河，首批支持机型仅限两款旗舰。',
+        tags: ['Apple', 'iOS 27', 'Apple Intelligence', 'Gemini', 'Claude', 'Neural Engine'],
         sources: [
-        {name:'iQOO 官网', url:'https://www.iqoo.com/cn/product/iqoo-15t.html', official:true},
-        {name:'Gizmochina', url:'https://www.gizmochina.com/2026/05/13/iqoo-15t-launch-date-confirmed/'},
-        {name:'91mobiles', url:'https://www.91mobiles.com/hub/iqoo-15t-launch-date-confirmed-dimensity-9500-monster-edition/'},
-        {name:'DoNews', url:'https://www.donews.com/news/detail/8/6540334.html'}
-      ],
+          {name:'MacTech', url:'https://www.mactech.com/2026/05/14/apples-introduction-of-an-agentic-ai-smartphone-could-significantly-reshape-the-market/'},
+          {name:'证券时报', url:'https://www.stcn.com/article/detail/1227961.html'}
+        ],
         verdict: 'Supported',
         wikiId: null
       },
       {
-        id: 'android-17-gemini-intelligence-android-show-2026',
-        category: '手机创新',
-        title: 'Android Show（5月12日）揭晓 Android 17：Gemini Intelligence 内置 + iOS↔Android 无线迁移',
-        text: 'Google 于5月12日举办 Android Show 发布会，正式预览 Android 17 核心功能：Gemini Intelligence 成为系统底层 AI 层，新增 Create My Widget（语音生成桌面小组件）、Rambler（去除口头禅的语音转文字）、Pause Point（分心 App 延迟10秒打开）；与苹果联合实现 iOS→Android 无线整体迁移（含密码、照片、eSIM）；Quick Share 将兼容 Apple AirDrop，适用三星/OPPO/vivo/小米/荣耀设备。',
-        tags: ['Android 17', 'Gemini Intelligence', 'Google', 'iOS互通', 'Quick Share'],
+        id: 'qualcomm-openai-secret-ai-devices-2026',
+        category: 'AI创新',
+        title: '高通 CEO：正与 OpenAI/Meta 联合研发机密 AI 终端，骁龙将统一承载端侧推理',
+        text: '高通 CEO 安蒙在 Fortune 专访中披露，2026 年是 AI Agent 主流化元年；高通正与 OpenAI、Meta 等几乎所有主流 AI 公司合作开发多款机密 AI 终端（涵盖手机与 AI 眼镜），骁龙平台将作为统一的端侧推理底座。OpenAI 首款 AI 手机已快速推进，预计 2027 年上半年量产，处理器或采用联发科天玑 9600 定制版（台积电 N2P 工艺），内置双 NPU 异构 AI 计算架构。',
+        tags: ['Qualcomm', '骁龙', 'AI Agent', 'OpenAI', 'Meta', '联发科', 'AI手机'],
         sources: [
-        {name:'Google Blog', url:'https://blog.google/products-and-platforms/platforms/android/android-show-io-edition-2026/', official:true},
-        {name:'TechCrunch', url:'https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/'},
-        {name:'Engadget', url:'https://www.engadget.com/2171038/everything-announced-at-android-show-google-io-2026/'},
-        {name:'Tom\'s Guide', url:'https://www.tomsguide.com/phones/android-phones/android-17-io-2026-upgrades'}
-      ],
+          {name:'Fortune', url:'https://fortune.com/2026/05/10/titans-and-disruptors-of-industry-qualcomm-ceo-cristiano-amon-ai-wearable-glasses-chips-6g/'},
+          {name:'9to5Mac', url:'https://9to5mac.com/2026/05/05/openais-new-phone-being-fast-tracked-to-launch-next-year-per-report/'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'xiaomi-milm2-android17-gemini-2026',
+        category: 'AI创新',
+        title: '小米 MiLM-2（30B）端侧落地 & Android 17 将 Gemini Intelligence 内置为系统底层',
+        text: '小米 HyperOS 3 搭载自研 MiLM-2（30B 参数）端侧大模型，支持本地 AI 推理，落地场景包括跨 App 智能体（自动点餐、AI 实景对话）和 AI 一键闪记。同期 Google 在 Android Show（5月12日）发布 Android 17，Gemini Intelligence 成为系统底层 AI 层，新增语音生成桌面组件（Create My Widget）、去口头禅语音转文字（Rambler）等功能；Quick Share 将兼容 Apple AirDrop，覆盖三星/OPPO/vivo/小米/荣耀设备。',
+        tags: ['小米', 'MiLM-2', 'HyperOS 3', 'Android 17', 'Gemini Intelligence', 'Google'],
+        sources: [
+          {name:'太平洋科技', url:'https://mobile.pconline.com.cn/2148/21484231.html'},
+          {name:'Google Blog', url:'https://blog.google/products-and-platforms/platforms/android/android-show-io-edition-2026/', official:true},
+          {name:'TechCrunch', url:'https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'iqoo-15t-launch-confirmed-may20-2026',
+        category: '手机创新',
+        title: 'iQOO 15T 官宣5月20日发布：天玑9500 Monster Edition全球首发，8000mAh+200MP',
+        text: 'iQOO 官方确认 iQOO 15T 将于5月20日发布。该机搭载联发科天玑9500 Monster Edition（全球首款厂商底层联合调校版），游戏帧率提升34%；屏幕为6.82英寸 2K「珠峰屏」144Hz，摄像 200MP+50MP 双摄，电池 8000mAh+100W 快充，内置自研电竞芯片 Q3 协同控温与帧率。',
+        tags: ['iQOO', '天玑9500 Monster', '8000mAh', '200MP', '2K 144Hz'],
+        sources: [
+          {name:'iQOO 官网', url:'https://www.iqoo.com/cn/product/iqoo-15t.html', official:true},
+          {name:'Gizmochina', url:'https://www.gizmochina.com/2026/05/13/iqoo-15t-launch-date-confirmed/'},
+          {name:'91mobiles', url:'https://www.91mobiles.com/hub/iqoo-15t-launch-date-confirmed-dimensity-9500-monster-edition/'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'dimensity9500-vs-sd8elite-ai-gap-2026',
+        category: '芯片',
+        title: '天玑9500 NPU纯AI任务反超骁龙，整机功耗仅16W，AI推理差距持续收窄',
+        text: '基于 OPPO Find X9 Ultra（骁龙8 Elite Gen 5）与 X9 Pro（天玑9500）实机对比，天玑9500 NPU 在纯 AI 推理任务中得分超越骁龙同代产品，整机全负载功耗约16W（低于骁龙19W）。综合多核性能骁龙仍领先约8%，但 AI 专项差距已显著收窄；行业分析指出联发科生态软件适配是下一关键短板，100+ TOPS NPU 已成旗舰芯片标配门槛。',
+        tags: ['联发科', '天玑9500', 'Qualcomm', '骁龙8 Elite Gen 5', 'NPU', 'AI推理', '功耗'],
+        sources: [
+          {name:'Android Authority', url:'https://www.androidauthority.com/oppo-find-x9-ultra-vs-x9-pro-benchmarks-3659826/'},
+          {name:'Notebookcheck', url:'https://www.notebookcheck.net/Snapdragon-8-Elite-Gen-5-sweeps-AnTuTu-s-first-flagship-phone-performance-chart-of-2026.1219603.0.html'},
+          {name:'Cashify', url:'https://www.cashify.in/best-processor-for-mobile-phone-ranking-list'}
+        ],
+        verdict: 'Supported',
+        wikiId: 'snapdragon-8-elite-gen5'
+      },
+      {
+        id: 'samsung-oled-sid2026-3000nit-sensor',
+        category: '屏幕',
+        title: '三星 SID 2026：3000nit 手机 OLED + Sensor OLED 可测血压，LG 第三代 Tandem 功耗降18%',
+        text: '三星在 SID Display Week 2026（5月5日）展示 Flex Chroma Pixel 技术，6.8英寸手机 OLED 峰值亮度3000nit，覆盖 BT.2020 色域96%，500PPI；Sensor OLED 集成有机光电二极管，可直接通过屏幕测量心率血压，屏下生物识别进入医疗级精度。LG Display 同场揭幕第三代 Tandem OLED，功耗降低18%、使用寿命翻倍，与三星正面竞争下一代旗舰主屏。',
+        tags: ['Samsung Display', 'OLED', '3000nit', 'Sensor OLED', 'LG Display', 'Tandem OLED', 'SID 2026'],
+        sources: [
+          {name:'Samsung Display 官网', url:'https://global.samsungdisplay.com/31450', official:true},
+          {name:'LG Display / PR Newswire', url:'https://www.prnewswire.com/news-releases/lg-display-presents-future-of-displays-with-next-generation-oled-technologies-at-sid-display-week-2026-302761303.html', official:true},
+          {name:'Android Central', url:'https://www.androidcentral.com/phones/samsung-galaxy/samsung-lg-reignite-oled-rivalry-with-morphing-screens-at-sid-display-week-2026'}
+        ],
         verdict: 'Supported',
         wikiId: null
       },
       {
         id: 'boe-gen86-oled-production-chengdu-2026',
         category: '屏幕',
-        title: 'BOE 成都 B16 提前一个月启动 Gen 8.6 OLED 量产，首批供华硕/宏碁笔记本',
-        text: '京东方（BOE）于2026年5月14日开始向成都 B16 工厂 Gen 8.6 OLED 产线投产，比原定下半年计划提前一个多月，率先于三星 Display 进入量产。首批客户为华硕和宏碁，供应14英寸 OLED 笔记本屏幕；手机端尺寸产线预计随后跟进。这是 BOE 在 OLED 产能竞争中首次在大尺寸世代线上领先三星。',
-        tags: ['BOE', 'Gen 8.6', 'OLED', '量产', '京东方'],
+        title: 'BOE 成都 B16 提前一个月启动 Gen 8.6 OLED 量产，首次在大尺寸世代线领先三星',
+        text: '京东方（BOE）于5月14日提前启动成都 B16 工厂 Gen 8.6 OLED 产线量产，比原定计划提前一个多月，率先于三星 Display 进入量产——这是 BOE 首次在大尺寸世代线上领先三星。首批供货华硕/宏碁14英寸 OLED 笔记本；手机端尺寸产线随后跟进，有望进一步压低折叠屏 OLED 面板成本。',
+        tags: ['BOE', '京东方', 'Gen 8.6', 'OLED', '量产', '折叠屏'],
         sources: [
-        {name:'BOE 官网', url:'https://www.boe.com.cn/en/press-center/news/20260514-b16-gen86-oled-mass-production.html', official:true},
-        {name:'TechTimes', url:'https://www.techtimes.com/articles/316600/20260514/boe-begins-gen-86-oled-production-this-month-beating-rival-samsung-display-market.htm'},
-        {name:'OLED-Info', url:'https://www.oled-info.com/boe-developed-its-own-crease-less-foldable-oled-display'}
-      ],
+          {name:'BOE 官网', url:'https://www.boe.com.cn', official:true},
+          {name:'TechTimes', url:'https://www.techtimes.com/articles/316600/20260514/boe-begins-gen-86-oled-production-this-month-beating-rival-samsung-display-market.htm'},
+          {name:'OLED-Info', url:'https://www.oled-info.com/boe-developed-its-own-crease-less-foldable-oled-display'}
+        ],
         verdict: 'Supported',
         wikiId: null
       },
       {
-        id: 'samsung-display-3year-exclusive-apple-foldable-2026',
-        category: '屏幕',
-        title: '三星 Display 签三年独家协议为苹果折叠 iPhone 供应 OLED，BOE 被排出供应链',
-        text: '三星 Display 于5月7日报道已与苹果达成三年独家 OLED 供应协议，专门为苹果折叠 iPhone 提供柔性 OLED 面板，BOE 此前争取的 iPhone 18 Pro 和折叠 iPhone OLED 份额被取消。三星 Display 的无折痕柔性 OLED（CES 2026 展示款）将被用于该机型，良率已超80%。这意味着苹果折叠 iPhone 屏幕供应链将在初期高度集中于三星。',
-        tags: ['三星显示', '苹果折叠屏', 'iPhone Fold', 'OLED', '供应链'],
+        id: 'samsung-silicon-carbon-confirm-china-ahead-2026',
+        category: '电池',
+        title: '三星正式确认硅碳电池，但中国品牌已领先2年：中国旗舰续航高出三星/苹果30~50%',
+        text: '三星在 Galaxy Unpacked 2026 正式宣布旗舰系列切换至硅碳负极电池，而中国品牌（小米、vivo、一加、荣耀）早在2024-2025年已大规模量产。一加15搭载7300mAh硅碳电池夺得 Tom\'s Guide 年度最佳续航；Tom\'s Guide 专访荣耀与一加团队指出，中国旗舰电池容量已比同价位三星/苹果高出30~50%。苹果硅碳电池最早2027年落地，供应商认证周期与电池管理算法适配是主要瓶颈。',
+        tags: ['Samsung', '硅碳负极', '电池', '一加', '荣耀', 'Apple', '供应链'],
         sources: [
-        {name:'Samsung Display 官网', url:'https://www.samsungdisplay.com/eng/pr/newsView.do?id=apple-foldable-3year-exclusive', official:true},
-        {name:'SamMobile', url:'https://www.sammobile.com/news/samsung-3-year-exclusive-oled-deal-apple-foldable-iphone/'},
-        {name:'Sammy Fans', url:'https://www.sammyfans.com/2026/05/07/samsung-takes-back-iphone-18-pro-oled-business-from-boe/'},
-        {name:'Technetbook', url:'https://www.technetbooks.com/2026/03/samsung-display-apple-oled-2026.html'}
-      ],
+          {name:'PhoneArena', url:'https://www.phonearena.com/news/samsung-silicon-carbon-batteries_id176866'},
+          {name:"Tom's Guide", url:'https://www.tomsguide.com/phones/i-interviewed-honor-and-oneplus-about-their-silicon-carbon-battery-tech-apple-and-google-are-quickly-falling-behind'},
+          {name:'9to5Mac', url:'https://9to5mac.com/2026/05/13/longer-lasting-battery-tech-is-here-but-iphone-owners-will-need-to-wait-a-while/'}
+        ],
         verdict: 'Supported',
-        wikiId: 'foldable-2026'
+        wikiId: 'silicon-carbon-anode'
       },
       {
-        id: 'dimensity-9500-monster-edition-specs-2026',
-        category: '芯片',
-        title: '天玑9500 Monster Edition 技术揭秘：联发科+iQOO 底层联合调校，帧率提升34%',
-        text: '联发科天玑9500 Monster Edition 是联发科首款针对手机厂商进行底层联合调校的定制版本，iQOO 深度参与 SoC 内部调度策略优化，重点提升游戏帧稳定性。实测在《原神》等重度游戏中帧率表现提升34%，搭配 iQOO 自研电竞芯片 Q3 管理帧率与功耗。该芯片基于台积电 N3P（3nm改进版）制程，CPU 为 1+3+4 八核架构，全球首发于 iQOO 15T。',
-        tags: ['天玑9500 Monster', '联发科', 'MediaTek', 'iQOO', '台积电N3P'],
-        sources: [
-        {name:'MediaTek 官网', url:'https://www.mediatek.com/newsroom/articles/dimensity-9500-monster-edition-iqoo-cooperation-2026', official:true},
-        {name:'Gizmochina', url:'https://www.gizmochina.com/2026/05/10/iqoo-15t-renders-specifications-china-telecom-listing/'},
-        {name:'AnTuTu 官网', url:'https://antutu.com/doc/136784.htm', official:true},
-        {name:'Notebookcheck', url:'https://www.notebookcheck-cn.com/iQoo-15T-2.1291181.0.html'}
-      ],
-        verdict: 'Supported',
-        wikiId: null
-      },
-      {
-        id: 'iqoo-15t-8000mah-gaming-cooling-q3-2026',
+        id: 'samsung-s26-ultra-ai-thermal-redesign-2026',
         category: '散热',
-        title: 'iQOO 15T 游戏散热架构：Q3电竞芯片+VC均热板协同，重度游戏峰值控温实测',
-        text: 'iQOO 15T 搭载的 Q3 游戏电竞芯片不仅负责帧率调度，同时与内置 VC 均热板协同控制 SoC 温度。iQOO 官方公布实测数据：《原神》4K满画质运行30分钟后机身最高温度控制在43.5°C，帧率跌幅低于5%。整机采用「四层散热叠加」方案：VC + 石墨散热膜 + 相变导热硅脂 + 中框辅助散热，是目前 Android 阵营中旗舰薄机身散热效率最高的方案之一。',
-        tags: ['iQOO', '散热', 'Q3', 'VC均热板', '游戏性能'],
+        title: '三星 S26 Ultra 为 AI 高负载全面重做散热：新型 VC+硅脂组合，实测降温5-8°C',
+        text: '针对骁龙8 Elite Gen 5 在 AI 持续推理负载下的高热密度，三星 Galaxy S26 Ultra 对散热系统全面重设计，采用新型大面积均热板（VC）配合高性能相变硅脂，实测较 S25 Ultra 降低芯片温度5-8°C。行业研报同步指出，AI 终端散热升级已成为 VC 均热板需求增长的核心驱动力，大陆散热厂商（均热板/石墨烯方向）市场份额持续扩大。',
+        tags: ['Samsung', 'S26 Ultra', '散热', '均热板', 'VC', '骁龙8 Elite Gen 5', 'AI负载'],
         sources: [
-        {name:'iQOO 官网', url:'https://www.iqoo.com/cn/product/iqoo-15t/cooling.html', official:true},
-        {name:'CNMO', url:'https://phone.cnmo.com/news/808690.html'},
-        {name:'安兔兔', url:'https://antutu.com/doc/136784.htm'}
-      ],
+          {name:'电子工程专辑', url:'https://www.eet-china.com/mp/a479529.html'},
+          {name:'证券时报', url:'https://www.stcn.com/article/detail/3906349.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'memory-cost-exceeds-chip-ai-driven-2026',
+        category: '存储',
+        title: '旗舰内存成本首超芯片：AI需求挤压LPDDR/NAND产能，16GB+1TB物料达280美元/台',
+        text: '2026年Q1，旗舰手机内存存储物料成本（16GB LPDDR5X + 1TB UFS 4.1，约280美元/台）首次超越骁龙8 Elite Gen 5芯片成本。根因是 AI 服务器对 HBM 的旺盛需求迫使三星、SK海力士、美光将产能向 HBM 倾斜，LPDDR5X 与 NAND Flash 供应持续紧张。TrendForce 预测 Q2 2026 合约价仍将上行；部分分析师预警旗舰 Ultra SKU 的 BOM 压力将推动厂商削减高配版本供应量。',
+        tags: ['LPDDR5X', 'UFS 4.1', '存储', 'HBM', 'TrendForce', 'SK Hynix', 'Micron'],
+        sources: [
+          {name:'Abit.ee', url:'https://abit.ee/en/smartphones/lpddr5x-ufs-41-memory-prices-flagship-smartphones-16gb-ram-2026-en'},
+          {name:'Gizchina', url:'https://www.gizchina.com/ai/rising-memory-costs-threaten-future-of-flagship-ultra-smartphones'},
+          {name:'TrendForce', url:'https://www.trendforce.com/presscenter/news/20260331-12995.html'},
+          {name:'SK Hynix 官网', url:'https://news.skhynix.com/mwc-2026/', official:true}
+        ],
         verdict: 'Supported',
         wikiId: null
       }
