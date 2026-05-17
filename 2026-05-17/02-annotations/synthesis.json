@@ -1,0 +1,785 @@
+{
+  "run_id": "combined-2026-05-17",
+  "date": "2026-05-17",
+  "run_type": "combined_morning_evening",
+  "averitec_distribution": {
+    "Refuted": 24,
+    "Supported": 8,
+    "NotEnoughEvidence": 6,
+    "ConflictingEvidence": 4
+  },
+  "items": [
+    {
+      "id": "E001",
+      "title": "汉坦病毒是美国选举骗局",
+      "fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.98,
+        "tsver": "TSV-1: WHO已确认11例/3死真实疫情；TSV-2: 病原为Andes病毒，非人工制造；TSV-3: 首发地邮轮/南美而非选举相关地区",
+        "primary_sources": [
+          "WHO DON 2026-DON599",
+          "CDC HAN 00528",
+          "UNMC传播追踪报告"
+        ]
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": []
+      },
+      "logic": {
+        "fallacies": [
+          "后此谬误(疫情时机与选举同期)",
+          "阴谋论循环论证",
+          "不可证伪命题"
+        ],
+        "severity": "high"
+      },
+      "sentiment": {
+        "clickbait_score": 9,
+        "value_concerns": [
+          "反政府情绪煽动",
+          "公共卫生危害",
+          "政治极化"
+        ],
+        "emotional_trigger": "恐惧+愤怒"
+      },
+      "eq_score": 9.1,
+      "health_score": "危险",
+      "synthesis": "fail"
+    },
+    {
+      "id": "E002",
+      "title": "汉坦病毒是COVID疫苗副作用",
+      "fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.97,
+        "tsver": "TSV-1: Andes病毒早于COVID疫苗存在数十年；TSV-2: 无生物学机制支撑关联性；TSV-3: WHO/CDC明确否认",
+        "primary_sources": [
+          "CDC Hantavirus情况摘要",
+          "Johns Hopkins医学问答",
+          "Nature News"
+        ]
+      },
+      "pseudo_science": {
+        "detected": true,
+        "patterns": [
+          "虚假因果关联(疫苗-病毒)",
+          "反疫苗话语框架",
+          "选择性忽视基础生物学"
+        ],
+        "severity": "high"
+      },
+      "logic": {
+        "fallacies": [
+          "后此谬误",
+          "错误归因"
+        ],
+        "severity": "high"
+      },
+      "sentiment": {
+        "clickbait_score": 8,
+        "value_concerns": [
+          "反疫苗运动",
+          "健康危害",
+          "科学否定主义"
+        ],
+        "emotional_trigger": "恐惧+不信任"
+      },
+      "eq_score": 9.0,
+      "health_score": "危险",
+      "synthesis": "fail"
+    },
+    {
+      "id": "E003",
+      "title": "汉坦将触发封城/强制疫苗",
+      "fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.96,
+        "tsver": "TSV-1: WHO风险评估为'全球低风险'；TSV-2: 无封城讨论；TSV-3: 无现成汉坦病毒疫苗市场",
+        "primary_sources": [
+          "WHO风险评估声明",
+          "TODAY.com专家解读",
+          "Hopkins Medicine"
+        ]
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": [
+          "新冠恐慌框架复制"
+        ]
+      },
+      "logic": {
+        "fallacies": [
+          "滑坡谬误",
+          "恐慌传导"
+        ],
+        "severity": "high"
+      },
+      "sentiment": {
+        "clickbait_score": 9,
+        "value_concerns": [
+          "公共卫生恐慌",
+          "政府不信任"
+        ],
+        "emotional_trigger": "极度恐惧"
+      },
+      "eq_score": 8.8,
+      "health_score": "危险",
+      "synthesis": "fail"
+    },
+    {
+      "id": "E004",
+      "title": "Talarico深伪视频是真实记录",
+      "fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.97,
+        "tsver": "TSV-1: CNN报道NRSC制作确认为AI生成；TSV-2: 视频内容与实际事件不符；TSV-3: OECD.AI事件追踪已记录",
+        "primary_sources": [
+          "CNN 2026-03-13",
+          "OECD.AI事件库",
+          "Fakeout.io深度分析"
+        ]
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": []
+      },
+      "logic": {
+        "fallacies": [
+          "权威借用(AI仿冒真实人物)",
+          "视觉说服偏误"
+        ],
+        "severity": "high"
+      },
+      "sentiment": {
+        "clickbait_score": 8,
+        "value_concerns": [
+          "民主进程威胁",
+          "选举操控",
+          "政治欺诈"
+        ],
+        "emotional_trigger": "厌恶+愤怒"
+      },
+      "eq_score": 8.7,
+      "health_score": "严重",
+      "synthesis": "fail"
+    },
+    {
+      "id": "E005",
+      "title": "美国已有联邦法规管控AI政治广告",
+      "fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.95,
+        "tsver": "TSV-1: 确无联邦法律；TSV-2: 仅30州有州级法规；TSV-3: Biometric Update 2026-05追踪确认",
+        "primary_sources": [
+          "Biometric Update 2026-05-13",
+          "Fakeout.io报告",
+          "美国前景杂志分析"
+        ]
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": []
+      },
+      "logic": {
+        "fallacies": [
+          "以偏概全(州法当联邦法)"
+        ],
+        "severity": "medium"
+      },
+      "sentiment": {
+        "clickbait_score": 6,
+        "value_concerns": [
+          "法律误导",
+          "选民认知扭曲"
+        ],
+        "emotional_trigger": "虚假安全感"
+      },
+      "eq_score": 7.2,
+      "health_score": "警惕",
+      "synthesis": "warn"
+    },
+    {
+      "id": "E006",
+      "title": "特朗普-习近平'梦幻交易'已全面落实",
+      "fact_check": {
+        "verdict": "ConflictingEvidence",
+        "confidence": 0.82,
+        "tsver": "TSV-1: 特朗普本人称'梦幻交易'；TSV-2: NBC报道'少有具体承诺'；TSV-3: 无联合声明发布",
+        "primary_sources": [
+          "NBC News直播博客 2026-05-15",
+          "CNBC三点分析",
+          "亚洲商业日报"
+        ]
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": []
+      },
+      "logic": {
+        "fallacies": [
+          "夸大成果(wishful amplification)",
+          "领导人权威论证"
+        ],
+        "severity": "medium"
+      },
+      "sentiment": {
+        "clickbait_score": 7,
+        "value_concerns": [
+          "国际关系误判",
+          "市场误导"
+        ],
+        "emotional_trigger": "乐观偏误"
+      },
+      "eq_score": 7.5,
+      "health_score": "警惕",
+      "synthesis": "warn"
+    },
+    {
+      "id": "E007",
+      "title": "中国确认购买三倍Boeing喷气机",
+      "fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "confidence": 0.68,
+        "tsver": "TSV-1: 特朗普单方宣称600架；TSV-2: 中方未确认；TSV-3: 原协议为200架，未有文件显示三倍",
+        "primary_sources": [
+          "CNBC 2026-05-15",
+          "Al Jazeera贸易分析",
+          "AtlanticCouncil评估"
+        ]
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": []
+      },
+      "logic": {
+        "fallacies": [
+          "单方声明放大",
+          "预期当事实"
+        ],
+        "severity": "medium"
+      },
+      "sentiment": {
+        "clickbait_score": 6,
+        "value_concerns": [
+          "企业/投资者预期误导"
+        ],
+        "emotional_trigger": "商业乐观"
+      },
+      "eq_score": 6.8,
+      "health_score": "警惕",
+      "synthesis": "warn"
+    },
+    {
+      "id": "E008",
+      "title": "巴方击落多架印度战机/摧毁S-400",
+      "fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.96,
+        "tsver": "TSV-1: 印方明确否认S-400及苏拉特/锡尔萨机场被摧毁；TSV-2: ISD追踪确认为虚假内容；TSV-3: 使用旧视频/游戏画面",
+        "primary_sources": [
+          "ISD数字快报",
+          "路透社研究所印度核查报告",
+          "法国24小时"
+        ]
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": []
+      },
+      "logic": {
+        "fallacies": [
+          "视觉欺诈(旧素材复用)",
+          "胜利叙事建构"
+        ],
+        "severity": "high"
+      },
+      "sentiment": {
+        "clickbait_score": 10,
+        "value_concerns": [
+          "战争煽动",
+          "民族主义情绪激化",
+          "冲突升级风险"
+        ],
+        "emotional_trigger": "民族主义愤怒+恐惧"
+      },
+      "eq_score": 9.5,
+      "health_score": "极危险",
+      "synthesis": "fail"
+    },
+    {
+      "id": "E009",
+      "title": "AI生成拉瓦尔品第体育场被炸视频",
+      "fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.97,
+        "tsver": "TSV-1: 拉瓦尔品第体育场未受袭击；TSV-2: 视频经技术分析确认为AI生成；TSV-3: 安全内参追踪确认",
+        "primary_sources": [
+          "安全内参 2026",
+          "ISD分析",
+          "BBC Verify"
+        ]
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": []
+      },
+      "logic": {
+        "fallacies": [
+          "合成媒体欺诈",
+          "视觉真实性偏误"
+        ],
+        "severity": "high"
+      },
+      "sentiment": {
+        "clickbait_score": 10,
+        "value_concerns": [
+          "战争恐慌",
+          "国际关系危机"
+        ],
+        "emotional_trigger": "冲击+恐惧"
+      },
+      "eq_score": 9.7,
+      "health_score": "极危险",
+      "synthesis": "fail"
+    },
+    {
+      "id": "E010",
+      "title": "Virat Kohli获FIFA世界杯开幕式邀请",
+      "fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.92,
+        "tsver": "TSV-1: FIFA无任何声明；TSV-2: Kohli团队未确认；TSV-3: NewsX核查确认为假",
+        "primary_sources": [
+          "NewsX核查 2026-05-13"
+        ]
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": []
+      },
+      "logic": {
+        "fallacies": [
+          "知名度混搭(板球+足球)",
+          "无据断言"
+        ],
+        "severity": "low"
+      },
+      "sentiment": {
+        "clickbait_score": 7,
+        "value_concerns": [
+          "名人形象利用",
+          "体育迷欺骗"
+        ],
+        "emotional_trigger": "兴奋+民族自豪"
+      },
+      "eq_score": 6.5,
+      "health_score": "一般",
+      "synthesis": "pass"
+    },
+    {
+      "id": "E011",
+      "title": "Sunny Leone回归成人产业",
+      "fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.98,
+        "tsver": "TSV-1: 伪造TMZ截图；TSV-2: Grok AI核查确认为假；TSV-3: Leone本人未发声明",
+        "primary_sources": [
+          "Latestly核查",
+          "Grok AI声明"
+        ]
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": []
+      },
+      "logic": {
+        "fallacies": [
+          "伪权威来源(假TMZ标识)",
+          "无据断言"
+        ],
+        "severity": "low"
+      },
+      "sentiment": {
+        "clickbait_score": 8,
+        "value_concerns": [
+          "名誉损害",
+          "性别歧视叙事"
+        ],
+        "emotional_trigger": "猎奇+耸人听闻"
+      },
+      "eq_score": 6.8,
+      "health_score": "一般",
+      "synthesis": "pass"
+    },
+    {
+      "id": "E012",
+      "title": "印度MEA-阿联酋通过Fujairah港撤侨协议",
+      "fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.96,
+        "tsver": "TSV-1: 印度外交部已发布辟谣公告；TSV-2: 深伪视频已被识别；TSV-3: 印度政府无此类讨论记录",
+        "primary_sources": [
+          "Telangana Today MEA辟谣报道",
+          "印度外交部公告"
+        ]
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": []
+      },
+      "logic": {
+        "fallacies": [
+          "恐慌叙事(war imminent)",
+          "深伪权威欺诈"
+        ],
+        "severity": "high"
+      },
+      "sentiment": {
+        "clickbait_score": 9,
+        "value_concerns": [
+          "海外华人/印度人恐慌",
+          "外交误读"
+        ],
+        "emotional_trigger": "生存恐惧"
+      },
+      "eq_score": 8.5,
+      "health_score": "严重",
+      "synthesis": "fail"
+    },
+    {
+      "id": "E013",
+      "title": "名人深伪加密货币骗局（通用类）",
+      "fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.99,
+        "tsver": "TSV-1: 无任何合法公众人物正式代言此类项目；TSV-2: 深伪技术制作；TSV-3: 受害者损失记录在案",
+        "primary_sources": [
+          "Bitget防骗指南 2026",
+          "Finance Complaint List 2026-04",
+          "NY AG警告"
+        ]
+      },
+      "pseudo_science": {
+        "detected": true,
+        "patterns": [
+          "零风险高回报承诺",
+          "独家内幕话术",
+          "紧迫性压力营销"
+        ],
+        "severity": "critical"
+      },
+      "logic": {
+        "fallacies": [
+          "名人权威借用",
+          "光环效应利用",
+          "稀缺性制造"
+        ],
+        "severity": "high"
+      },
+      "sentiment": {
+        "clickbait_score": 9,
+        "value_concerns": [
+          "金融欺诈",
+          "弱势群体伤害",
+          "经济损失"
+        ],
+        "emotional_trigger": "贪婪+紧迫感"
+      },
+      "eq_score": 9.5,
+      "health_score": "极危险",
+      "synthesis": "fail"
+    },
+    {
+      "id": "E014",
+      "title": "特朗普Walter Reed就医AI视频",
+      "fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.97,
+        "tsver": "TSV-1: PolitiFact 2026-04-21确认为合成内容；TSV-2: 白宫否认；TSV-3: 视频生物特征分析异常",
+        "primary_sources": [
+          "PolitiFact核查 2026-04-21",
+          "HyperVerge深伪案例库"
+        ]
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": []
+      },
+      "logic": {
+        "fallacies": [
+          "视觉说服偏误",
+          "政治动机归因"
+        ],
+        "severity": "high"
+      },
+      "sentiment": {
+        "clickbait_score": 9,
+        "value_concerns": [
+          "政治稳定性威胁",
+          "国家元首形象操控",
+          "政治煽动"
+        ],
+        "emotional_trigger": "震惊+政治焦虑"
+      },
+      "eq_score": 9.0,
+      "health_score": "严重",
+      "synthesis": "fail"
+    },
+    {
+      "id": "E015",
+      "title": "AI可100%识别假新闻（误读研究）",
+      "fact_check": {
+        "verdict": "ConflictingEvidence",
+        "confidence": 0.78,
+        "tsver": "TSV-1: CVPR 2026 MDSM研究显示显著进展但非100%；TSV-2: UFL研究：图像97%但视频人类占优；TSV-3: 媒体误读夸大",
+        "primary_sources": [
+          "新浪财经报道 2026-03-24",
+          "UFL深伪检测研究 2026-02"
+        ]
+      },
+      "pseudo_science": {
+        "detected": true,
+        "patterns": [
+          "技术万能论话术",
+          "研究成果过度外推"
+        ],
+        "severity": "medium"
+      },
+      "logic": {
+        "fallacies": [
+          "以偏概全(仅限特定数据集)",
+          "媒体夸大效应"
+        ],
+        "severity": "medium"
+      },
+      "sentiment": {
+        "clickbait_score": 7,
+        "value_concerns": [
+          "技术过度信任导致警觉降低"
+        ],
+        "emotional_trigger": "安全感虚假建立"
+      },
+      "eq_score": 7.0,
+      "health_score": "警惕",
+      "synthesis": "warn"
+    },
+    {
+      "id": "E016",
+      "title": "马斯克解散xAI建芯片工厂",
+      "fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "confidence": 0.6,
+        "tsver": "TSV-1: 上观新闻来源需核实；TSV-2: 无主流英文媒体确认；TSV-3: xAI官方无声明",
+        "primary_sources": [
+          "上海观察者 2026-05"
+        ]
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": []
+      },
+      "logic": {
+        "fallacies": [
+          "单来源声明",
+          "标题党推断"
+        ],
+        "severity": "medium"
+      },
+      "sentiment": {
+        "clickbait_score": 8,
+        "value_concerns": [
+          "科技投资误导",
+          "市场预期干扰"
+        ],
+        "emotional_trigger": "震惊+好奇"
+      },
+      "eq_score": 7.5,
+      "health_score": "警惕",
+      "synthesis": "warn"
+    },
+    {
+      "id": "E017",
+      "title": "BSE CEO股票推荐深伪视频",
+      "fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.99,
+        "tsver": "TSV-1: BSE官方已澄清为伪造；TSV-2: 深伪技术制作；TSV-3: 已有受害者案例记录",
+        "primary_sources": [
+          "HyperVerge深伪案例库 2026"
+        ]
+      },
+      "pseudo_science": {
+        "detected": true,
+        "patterns": [
+          "独家内幕话术",
+          "权威人物背书",
+          "高回报承诺"
+        ],
+        "severity": "critical"
+      },
+      "logic": {
+        "fallacies": [
+          "权威借用",
+          "视觉真实性偏误",
+          "稀缺性制造"
+        ],
+        "severity": "high"
+      },
+      "sentiment": {
+        "clickbait_score": 9,
+        "value_concerns": [
+          "金融欺诈",
+          "投资者保护",
+          "深伪危害"
+        ],
+        "emotional_trigger": "贪婪+紧迫感"
+      },
+      "eq_score": 9.5,
+      "health_score": "极危险",
+      "synthesis": "fail"
+    },
+    {
+      "id": "E019",
+      "title": "伪造《每日电讯报》'天空之王'文章",
+      "fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.99,
+        "tsver": "TSV-1: 《每日电讯报》从未发表此文；TSV-2: 路透社研究所已核实；TSV-3: 巴基斯坦官员公开传播",
+        "primary_sources": [
+          "路透社新闻研究所报告",
+          "ISD分析"
+        ]
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": []
+      },
+      "logic": {
+        "fallacies": [
+          "权威媒体伪造",
+          "民族主义情感操控"
+        ],
+        "severity": "high"
+      },
+      "sentiment": {
+        "clickbait_score": 8,
+        "value_concerns": [
+          "媒体公信力破坏",
+          "官方虚假信息传播",
+          "冲突叙事操控"
+        ],
+        "emotional_trigger": "民族自豪+胜利感"
+      },
+      "eq_score": 8.8,
+      "health_score": "严重",
+      "synthesis": "fail"
+    },
+    {
+      "id": "E020",
+      "title": "41%用户故意分享假信息（统计解读）",
+      "fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "confidence": 0.65,
+        "tsver": "TSV-1: 数据来源worldmetrics.org为聚合站点；TSV-2: 原始调查方法不明；TSV-3: '故意'定义可能被宽泛解读",
+        "primary_sources": [
+          "worldmetrics.org 2026"
+        ]
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": []
+      },
+      "logic": {
+        "fallacies": [
+          "数据来源可信度问题",
+          "定义模糊性"
+        ],
+        "severity": "low"
+      },
+      "sentiment": {
+        "clickbait_score": 6,
+        "value_concerns": [
+          "社会信任度误读"
+        ],
+        "emotional_trigger": "愤怒+道德判断"
+      },
+      "eq_score": 5.5,
+      "health_score": "一般",
+      "synthesis": "warn"
+    },
+    {
+      "id": "E023",
+      "title": "X平台对印巴虚假信息不作为",
+      "fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.88,
+        "tsver": "TSV-1: ISD研究确认大量未审核内容；TSV-2: 印度要求封号8000个，暗示X响应不足；TSV-3: 法国24小时等独立媒体确认",
+        "primary_sources": [
+          "ISD数字快报",
+          "法国24小时",
+          "路透社研究所"
+        ]
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": []
+      },
+      "logic": {
+        "fallacies": [],
+        "severity": "none"
+      },
+      "sentiment": {
+        "clickbait_score": 5,
+        "value_concerns": [
+          "平台责任审视"
+        ],
+        "emotional_trigger": "愤慨"
+      },
+      "eq_score": 5.0,
+      "health_score": "正面（有据可查）",
+      "synthesis": "pass"
+    },
+    {
+      "id": "E025",
+      "title": "印度要求X封锁近8000账号",
+      "fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.9,
+        "tsver": "TSV-1: 法国24小时独立报道；TSV-2: 路透社研究所确认；TSV-3: 印度政府官方行动",
+        "primary_sources": [
+          "法国24小时 2025-05-13",
+          "路透社研究所"
+        ]
+      },
+      "pseudo_science": {
+        "detected": false,
+        "patterns": []
+      },
+      "logic": {
+        "fallacies": [],
+        "severity": "none"
+      },
+      "sentiment": {
+        "clickbait_score": 4,
+        "value_concerns": [
+          "言论自由与内容审核平衡"
+        ],
+        "emotional_trigger": "中性"
+      },
+      "eq_score": 4.5,
+      "health_score": "正面（有据可查）",
+      "synthesis": "pass"
+    }
+  ],
+  "unr_rate": 0.231,
+  "avg_eq_score": 8.04,
+  "composite_health_score": 74,
+  "total_deep_reviewed": 43,
+  "summary": {
+    "total": 43,
+    "pass": 19,
+    "warn": 8,
+    "fail": 16
+  }
+}

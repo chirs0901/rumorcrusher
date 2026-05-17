@@ -1,0 +1,20 @@
+[2026-05-16 03:16:41 CST] git push FAILED: exit code 128, HTTP 403 from proxy after CONNECT to github.com
+  原因：Sandbox代理不允许直接HTTPS push到GitHub（需通过用户本地代理7897端口，但该端口在sandbox内不可达）
+  建议：在本机运行 git push（仓库已在本地提交完毕，内容全部就位）
+[2026-05-16 03:16:41 CST] 飞书通知: 跳过（git push失败，未触发飞书）
+[2026-05-16 03:16:41 CST] 邮件通知: 跳过（git push失败，未触发邮件）
+2026-05-16 14:18:49 UTC [git] push失败：fatal: unable to access 'https://github.com/chirs0901/rumorcrusher.git/': Received HTTP code 403 from proxy after CONNECT
+2026-05-16 14:18:49 UTC [feishu] FAILED（sandbox内webhook不可达，需用户本机执行）
+2026-05-16 14:18:49 UTC [email] FAILED（sandbox无SMTP配置）
+[2026-05-17 14:14:15 UTC] [git] push失败（sandbox代理不通）
+[2026-05-17 14:14:23 UTC] [feishu] FAILED (exit=1)
+[2026-05-17 14:14:23 UTC] [email] FAILED (exit=1)
+[2026-05-17 14:14:49 UTC] [feishu] FAILED-retry (exit=1)
+[2026-05-17 14:14:49 UTC] [email] FAILED-retry (exit=1)
+[2026-05-17 14:15:10 UTC] [feishu] FAILED-final (exit=1)
+[2026-05-17 14:15:10 UTC] [email] FAILED-final (exit=1)
+[2026-05-17 14:15:35 UTC] ===== 晚跑 evening-140354 推送汇总 =====
+[2026-05-17 14:15:35 UTC] [git]    COMMITTED_NOT_PUSHED — sandbox代理403/连接拒绝，commit hash: 0a1ef4a
+[2026-05-17 14:15:35 UTC] [feishu] FAILED — sandbox外网HTTPS被代理403阻断（open.feishu.cn不可达）
+[2026-05-17 14:15:35 UTC] [email]  FAILED — sandbox DNS解析失败（smtp.163.com无法解析）
+[2026-05-17 14:15:35 UTC] 建议：用户在本机执行 'git push' 即可完成GitHub Pages更新（本地已commit）
