@@ -1,0 +1,40 @@
+{
+  "run_id": "evening-140354",
+  "date": "2026-05-17",
+  "total_collected": 26,
+  "methodology": "Check-Worthiness按四维评分：公众影响力(0-3)、可核查性(0-3)、传播量(0-3)、危害性(0-3)，总分>=7进入精审",
+  "items": [
+    {"id":"E001","title":"汉坦病毒是选举骗局","cw_score":12,"priority":"HIGH","reason":"直接误导公共卫生响应，煽动政治对立，已获数百万次传播"},
+    {"id":"E002","title":"汉坦病毒是COVID疫苗副作用","cw_score":11,"priority":"HIGH","reason":"错误归因可能致人拒绝正规医疗，直接危害生命"},
+    {"id":"E003","title":"汉坦将触发封城/强制疫苗","cw_score":11,"priority":"HIGH","reason":"恐慌性传播，类似COVID谣言复现"},
+    {"id":"E004","title":"Talarico深伪视频是真实记录","cw_score":10,"priority":"HIGH","reason":"直接影响选举认知，首例全国级政党机构主导深伪"},
+    {"id":"E005","title":"美国已有联邦法规管控AI政治广告","cw_score":9,"priority":"HIGH","reason":"事实性法律误读，影响选民对平台内容的判断"},
+    {"id":"E006","title":"特朗普-习近平'梦幻交易'已全面落实","cw_score":10,"priority":"HIGH","reason":"夸大外交成果，误导市场和舆论"},
+    {"id":"E007","title":"中国确认购买三倍Boeing喷气机","cw_score":9,"priority":"HIGH","reason":"中方尚未确认，特朗普单方声称，影响股市预期"},
+    {"id":"E008","title":"巴方击落多架印度战机/摧毁S-400","cw_score":11,"priority":"HIGH","reason":"战时假信息，可能激化冲突，已被印方明确否认"},
+    {"id":"E009","title":"AI生成拉瓦尔品第体育场被炸视频","cw_score":11,"priority":"HIGH","reason":"典型合成媒体军事假信息，获数百万次观看"},
+    {"id":"E010","title":"Kohli获FIFA开幕式邀请","cw_score":7,"priority":"MEDIUM","reason":"知名人物，传播面广，但危害性相对较低"},
+    {"id":"E011","title":"Sunny Leone回归成人产业","cw_score":6,"priority":"MEDIUM","reason":"已有AI工具Grok公开核查，传播仍在持续"},
+    {"id":"E012","title":"印度MEA-阿联酋撤侨协议","cw_score":9,"priority":"HIGH","reason":"政府已辟谣，但深伪视频仍在传播，可引发不必要恐慌"},
+    {"id":"E013","title":"名人深伪加密货币代言","cw_score":10,"priority":"HIGH","reason":"直接经济危害，受害者损失从百元到百万美元"},
+    {"id":"E014","title":"特朗普Walter Reed就医AI视频","cw_score":10,"priority":"HIGH","reason":"涉及国家元首健康，影响政治稳定性，已被PolitiFact核实为假"},
+    {"id":"E015","title":"AI可100%识别假新闻（误读）","cw_score":7,"priority":"MEDIUM","reason":"科技报道误读，造成公众对AI检测能力的过高预期"},
+    {"id":"E016","title":"马斯克解散xAI建芯片工厂","cw_score":8,"priority":"HIGH","reason":"涉及全球科技市场预期，需核实真实性"},
+    {"id":"E017","title":"BSE CEO股票推荐深伪视频","cw_score":10,"priority":"HIGH","reason":"已知骗局案例，严重金融危害"},
+    {"id":"E018","title":"AI检测深伪图像准确率97%（正面研究）","cw_score":5,"priority":"LOW","reason":"有据可查的研究结论，主要是传播力强"},
+    {"id":"E019","title":"伪造《每日电讯报》'天空之王'文章","cw_score":10,"priority":"HIGH","reason":"官员传播的虚假媒体内容，严重损害媒体公信力"},
+    {"id":"E020","title":"41%用户故意分享虚假信息（统计声明）","cw_score":6,"priority":"MEDIUM","reason":"统计来源需核实，可能被断章取义放大"},
+    {"id":"E021","title":"美对华平均关税47.5%（可核查事实）","cw_score":5,"priority":"LOW","reason":"有据可查的经济数据，Supported类"},
+    {"id":"E022","title":"深伪内容2023-2025年增长900%","cw_score":6,"priority":"MEDIUM","reason":"研究数据，可核查性高但来源需确认"},
+    {"id":"E023","title":"X平台对印巴虚假信息不作为（平台责任）","cw_score":8,"priority":"HIGH","reason":"平台治理问题，有ISD研究支撑"},
+    {"id":"E024","title":"美国30州通过选举深伪法规（可核查）","cw_score":5,"priority":"LOW","reason":"有明确数据来源，主要是Supported内容"},
+    {"id":"E025","title":"印度要求X封锁8000账号（可核查）","cw_score":6,"priority":"MEDIUM","reason":"法新社/路透社报道，可核查性高"},
+    {"id":"E026","title":"CVPR 2026 MDSM数据集（研究事实）","cw_score":4,"priority":"LOW","reason":"学术事实，影响有限"}
+  ],
+  "summary": {
+    "HIGH_priority": 16,
+    "MEDIUM_priority": 6,
+    "LOW_priority": 4,
+    "for_deep_review": 22
+  }
+}
