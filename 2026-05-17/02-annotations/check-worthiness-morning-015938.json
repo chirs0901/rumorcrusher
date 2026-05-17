@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "run_label": "morning", "run_date": "2026-05-17",
+    "total_input": 26, "tier1_high": 11, "tier2_medium": 10, "tier3_low": 5,
+    "selected_for_full_review": 21
+  },
+  "rankings": [
+    {"id":"N003","tier":1,"cw_score":0.95,"reason":"汉坦病毒骗局说——活跃疫情+选举阴谋叠加，极高危"},
+    {"id":"N004","tier":1,"cw_score":0.94,"reason":"反犹太/以色列造谣——带歧视性的健康阴谋"},
+    {"id":"N005","tier":1,"cw_score":0.93,"reason":"大药厂制造病毒——经典健康阴谋"},
+    {"id":"N017","tier":1,"cw_score":0.92,"reason":"汉坦病毒像新冠一样传播——严重误导公众防护行为"},
+    {"id":"N001","tier":1,"cw_score":0.91,"reason":"AI视频卡尼嘲讽特朗普——持续传播中"},
+    {"id":"N007","tier":1,"cw_score":0.90,"reason":"肯塔基AI选举深伪广告（盖洛林）——2026选举集群"},
+    {"id":"N008","tier":1,"cw_score":0.90,"reason":"肯塔基AI选举深伪广告（马西）——2026选举集群"},
+    {"id":"N009","tier":1,"cw_score":0.89,"reason":"NRSC塔拉里科深伪——全国级政治操控"},
+    {"id":"N012","tier":1,"cw_score":0.88,"reason":"2026中期选举舞弊影响结果——专家一致驳斥"},
+    {"id":"N010","tier":1,"cw_score":0.87,"reason":"特朗普声称美中贸易谈判已进行——中方官方否认"},
+    {"id":"N013","tier":1,"cw_score":0.85,"reason":"大量非法选民将投票——Brennan Center数据驳斥"},
+    {"id":"N006","tier":2,"cw_score":0.78,"reason":"汉坦病毒'下一个新冠'——夸大论，部分可查"},
+    {"id":"N021","tier":2,"cw_score":0.75,"reason":"联邦法律管制AI政治广告——实为错误事实陈述"},
+    {"id":"N011","tier":2,"cw_score":0.72,"reason":"特朗普中国商业协议'达到预期'——被记者否认"},
+    {"id":"N015","tier":2,"cw_score":0.68,"reason":"5月存款计息新规——金融谣言，影响面广"},
+    {"id":"N016","tier":2,"cw_score":0.65,"reason":"新能源车企被约谈——未经证实的监管消息"},
+    {"id":"N019","tier":2,"cw_score":0.62,"reason":"美以袭伊朗后AI假图泛滥——已记录现象"},
+    {"id":"N023","tier":2,"cw_score":0.58,"reason":"75%落选候选人将声称选举舞弊——专家预测"},
+    {"id":"N024","tier":2,"cw_score":0.55,"reason":"2026首次工业规模深伪选举广告——已证实趋势"},
+    {"id":"N014","tier":2,"cw_score":0.52,"reason":"联邦选举安全减少致虚假信息加剧——专家分析"},
+    {"id":"N018","tier":2,"cw_score":0.50,"reason":"WHO工作假说（陆地暴露+船上传播）"},
+    {"id":"N002","tier":3,"cw_score":0.40,"reason":"WHO官方数据——已核实，非虚假信息"},
+    {"id":"N020","tier":3,"cw_score":0.35,"reason":"半数州有深伪法——已证实数据"},
+    {"id":"N022","tier":3,"cw_score":0.30,"reason":"分析性观点，非可核查声明"},
+    {"id":"N025","tier":3,"cw_score":0.28,"reason":"N004重复角度"},
+    {"id":"N026","tier":3,"cw_score":0.20,"reason":"分析框架，非事实声明"}
+  ]
+}

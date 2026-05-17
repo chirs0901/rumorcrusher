@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "run_label": "morning", "run_date": "2026-05-17",
+    "agents": ["fact-check","pseudo","logic","sentiment"],
+    "items_reviewed": 21,
+    "averitec_distribution": {"Supported":6,"Refuted":10,"NotEnoughEvidence":3,"ConflictingEvidence":2}
+  },
+  "items": [
+    {
+      "id":"N003","claim":"汉坦病毒疫情是为影响美国选举制造的骗局",
+      "fact_check_agent":{"verdict":"Refuted","confidence":0.97,"evidence":"WHO DON601、CDC HAN00528、Johns Hopkins均确认真实疫情；11例确诊、3人死亡。无选举关联证据。"},
+      "pseudo_agent":{"pseudo_patterns":["health_conspiracy","election_manipulation_frame"],"manipulation_score":0.94,"note":"COVID时代剧本完整复用"},
+      "logic_agent":{"fallacies":["post_hoc","conspiracy_without_mechanism"],"internal_consistency":"FAIL"},
+      "sentiment_agent":{"emotional_valence":"fear/institutional_distrust","amplification_risk":"very_high","target_emotion":"反政府、反WHO情绪"},
+      "final_label":"Refuted","severity":"critical"
+    },
+    {
+      "id":"N004","claim":"汉坦病毒由以色列制造/名称源自希伯来语",
+      "fact_check_agent":{"verdict":"Refuted","confidence":0.97,"evidence":"Euronews(May 13)核查：名称源自汉滩江(朝鲜半岛)，1950年代韩战期间UN部队中首次记录。无以色列关联。"},
+      "pseudo_agent":{"pseudo_patterns":["antisemitic_conspiracy","false_etymology"],"manipulation_score":0.92,"note":"嫁接反犹太主义叙事框架"},
+      "logic_agent":{"fallacies":["false_causation","invented_etymology"],"internal_consistency":"FAIL"},
+      "sentiment_agent":{"emotional_valence":"hatred/scapegoating","amplification_risk":"very_high","target_emotion":"反以太情绪"},
+      "final_label":"Refuted","severity":"critical"
+    },
+    {
+      "id":"N005","claim":"大药厂制造汉坦病毒以推高疫苗利润",
+      "fact_check_agent":{"verdict":"Refuted","confidence":0.96,"evidence":"Andes病毒1993年首次从啮齿动物中鉴定；自然宿主明确；无商业疫苗存在。"},
+      "pseudo_agent":{"pseudo_patterns":["pharma_conspiracy","profit_motive_fabrication"],"manipulation_score":0.91,"note":"标准阴谋论模板套用健康事件"},
+      "logic_agent":{"fallacies":["unfalsifiable_conspiracy","false_motive"],"internal_consistency":"FAIL"},
+      "sentiment_agent":{"emotional_valence":"distrust/anger","amplification_risk":"high","target_emotion":"反医药体制情绪"},
+      "final_label":"Refuted","severity":"critical"
+    },
+    {
+      "id":"N017","claim":"汉坦病毒像新冠一样容易在人际传播",
+      "fact_check_agent":{"verdict":"Refuted","confidence":0.95,"evidence":"WHO、NPR、德克萨斯州立大学专家确认：Andes病毒人传人极罕见，需长时间密切接触，危险等级远低于COVID。"},
+      "pseudo_agent":{"pseudo_patterns":["covid_parallel_false","fear_amplification"],"manipulation_score":0.87,"note":"借COVID记忆制造过度恐慌"},
+      "logic_agent":{"fallacies":["false_analogy","cherry_picking_andes_vs_other_hanta"],"internal_consistency":"FAIL"},
+      "sentiment_agent":{"emotional_valence":"panic","amplification_risk":"very_high","target_emotion":"大规模公众恐慌"},
+      "final_label":"Refuted","severity":"critical"
+    },
+    {
+      "id":"N001","claim":"马克·卡尼在G7意大利峰会上嘲讽特朗普（AI视频）",
+      "fact_check_agent":{"verdict":"Refuted","confidence":0.96,"evidence":"意大利上次举办G7为2024年，早于卡尼就任总理(2025年)。YouTube标注'Altered or synthetic content'，AI特征明显（异常眨眼、机械动作）。"},
+      "pseudo_agent":{"pseudo_patterns":["deepfake_video","authority_impersonation","temporal_fabrication"],"manipulation_score":0.93,"note":"视频继续在新平台传播"},
+      "logic_agent":{"fallacies":["impossible_timeline","fabricated_event"],"internal_consistency":"FAIL"},
+      "sentiment_agent":{"emotional_valence":"anti-Canada/pro-US nationalism","amplification_risk":"high","target_emotion":"盟友对立情绪"},
+      "final_label":"Refuted","severity":"critical"
+    },
+    {
+      "id":"N007","claim":"AI深伪广告呈现盖洛林在虚构战场逃离特朗普",
+      "fact_check_agent":{"verdict":"Refuted","confidence":0.91,"evidence":"LPM(May 5)报道：肯塔基州PAC投放，使用AI生成视频，场景完全虚构。"},
+      "pseudo_agent":{"pseudo_patterns":["election_deepfake","political_character_assassination"],"manipulation_score":0.90,"note":"2026中期选举AI广告集群第一案例"},
+      "logic_agent":{"fallacies":["fabricated_evidence","false_characterization"],"internal_consistency":"FAIL"},
+      "sentiment_agent":{"emotional_valence":"political contempt","amplification_risk":"high","target_emotion":"选民对候选人的负面印象"},
+      "final_label":"Refuted","severity":"high"
+    },
+    {
+      "id":"N008","claim":"AI深伪广告呈现马西与AOC、奥马尔手牵手",
+      "fact_check_agent":{"verdict":"Refuted","confidence":0.91,"evidence":"LPM(May 5)报道：MAGA KY PAC投放，AI生成，事件从未发生。"},
+      "pseudo_agent":{"pseudo_patterns":["election_deepfake","political_association_fabrication"],"manipulation_score":0.89,"note":"借助选民对民主党人的负面情绪"},
+      "logic_agent":{"fallacies":["fabricated_evidence"],"internal_consistency":"FAIL"},
+      "sentiment_agent":{"emotional_valence":"political disgust","amplification_risk":"high","target_emotion":"MAGA选民反建制情绪"},
+      "final_label":"Refuted","severity":"high"
+    },
+    {
+      "id":"N009","claim":"NRSC发布塔拉里科深伪内容（得克萨斯州参议院候选人）",
+      "fact_check_agent":{"verdict":"Refuted","confidence":0.93,"evidence":"CNN(Mar 13)报道：全国共和党参议院委员会发布，AI生成，经核实为虚假内容。"},
+      "pseudo_agent":{"pseudo_patterns":["institutional_deepfake","election_manipulation"],"manipulation_score":0.92,"note":"全国级政党机构直接制作深伪——升级威胁"},
+      "logic_agent":{"fallacies":["fabricated_evidence"],"internal_consistency":"FAIL"},
+      "sentiment_agent":{"emotional_valence":"political manipulation","amplification_risk":"very_high","target_emotion":"得州共和党选民"},
+      "final_label":"Refuted","severity":"critical"
+    },
+    {
+      "id":"N012","claim":"选举舞弊将影响2026中期选举结果",
+      "fact_check_agent":{"verdict":"Refuted","confidence":0.94,"evidence":"37名选举专家一致认定'不可能'；Brennan Center系统研究确认选举舞弊极其罕见。"},
+      "pseudo_agent":{"pseudo_patterns":["election_fraud_narrative","preemptive_delegitimization"],"manipulation_score":0.88,"note":"75%专家预计落选者将声称舞弊——预防性散布疑虑"},
+      "logic_agent":{"fallacies":["unfounded_assertion","appeal_to_anecdote"],"internal_consistency":"FAIL"},
+      "sentiment_agent":{"emotional_valence":"institutional distrust","amplification_risk":"very_high","target_emotion":"对民主制度的信任侵蚀"},
+      "final_label":"Refuted","severity":"critical"
+    },
+    {
+      "id":"N010","claim":"特朗普声称美中已进行直接关税谈判",
+      "fact_check_agent":{"verdict":"Refuted","confidence":0.88,"evidence":"中国外交部明确表示'中美没有就关税问题进行磋商或谈判'，《环球时报》称其为'虚假信息'。"},
+      "pseudo_agent":{"pseudo_patterns":["negotiation_fabrication","diplomatic_misrepresentation"],"manipulation_score":0.80,"note":"服务于国内政治叙事"},
+      "logic_agent":{"fallacies":["unverified_assertion","contradicted_by_counterparty"],"internal_consistency":"FAIL"},
+      "sentiment_agent":{"emotional_valence":"economic reassurance","amplification_risk":"medium","target_emotion":"市场与选民的安全感"},
+      "final_label":"Refuted","severity":"high"
+    },
+    {
+      "id":"N013","claim":"大量非法选民将在2026中期选举投票",
+      "fact_check_agent":{"verdict":"Refuted","confidence":0.95,"evidence":"Brennan Center：选民冒充几乎不存在；研究显示多数指控最终无据。专家35/37认为'完全不可能'。"},
+      "pseudo_agent":{"pseudo_patterns":["voter_fraud_myth","demographic_scapegoating"],"manipulation_score":0.85,"note":"常被用于支持限制性投票立法"},
+      "logic_agent":{"fallacies":["anecdote_as_pattern","unsupported_scale_claim"],"internal_consistency":"FAIL"},
+      "sentiment_agent":{"emotional_valence":"nativist anxiety","amplification_risk":"high","target_emotion":"选举合法性怀疑"},
+      "final_label":"Refuted","severity":"high"
+    },
+    {
+      "id":"N021","claim":"联邦法律管制AI政治广告",
+      "fact_check_agent":{"verdict":"Refuted","confidence":0.92,"evidence":"fakeout.io/LPM明确：无联邦法律；约半数州有法规，多数仅要求披露，非禁止。"},
+      "pseudo_agent":{"pseudo_patterns":["false_legal_claim"],"manipulation_score":0.50,"note":"多为无意误传，但影响公众对深伪广告监管现状的认知"},
+      "logic_agent":{"fallacies":["false_fact_assertion"],"internal_consistency":"FAIL"},
+      "sentiment_agent":{"emotional_valence":"misplaced reassurance","amplification_risk":"medium","target_emotion":"公众对AI广告的错误安全感"},
+      "final_label":"Refuted","severity":"medium"
+    },
+    {
+      "id":"N006","claim":"汉坦病毒是'下一个新冠'——即将引发大流行",
+      "fact_check_agent":{"verdict":"Refuted","confidence":0.90,"evidence":"NPR(May 7)、WHO、德州州立大学专家：P2P传播罕见、高度依赖密切接触；大流行风险低。"},
+      "pseudo_agent":{"pseudo_patterns":["pandemic_exaggeration","covid_parallel"],"manipulation_score":0.75,"note":"即使非故意也会放大公众恐慌"},
+      "logic_agent":{"fallacies":["false_analogy"],"internal_consistency":"FAIL"},
+      "sentiment_agent":{"emotional_valence":"pandemic_dread","amplification_risk":"high","target_emotion":"COVID-PTSD重激活"},
+      "final_label":"Refuted","severity":"high"
+    },
+    {
+      "id":"N011","claim":"特朗普与中国签订的商业协议'达到预期'",
+      "fact_check_agent":{"verdict":"Refuted","confidence":0.82,"evidence":"Washington Post(May 12)：协议'未能达到事先宣传的预期'。"},
+      "pseudo_agent":{"pseudo_patterns":["achievement_exaggeration"],"manipulation_score":0.72,"note":"政治自我宣传"},
+      "logic_agent":{"fallacies":["contradicted_by_reporting"],"internal_consistency":"FAIL"},
+      "sentiment_agent":{"emotional_valence":"political triumphalism","amplification_risk":"medium","target_emotion":"支持者信心维护"},
+      "final_label":"Refuted","severity":"medium"
+    },
+    {
+      "id":"N015","claim":"5月银行存款计息新规（网传）",
+      "fact_check_agent":{"verdict":"Refuted","confidence":0.88,"evidence":"今日辟谣（5月11日）核查不属实；无官方政策文件支持。"},
+      "pseudo_agent":{"pseudo_patterns":["financial_rumor","traffic_farming"],"manipulation_score":0.78,"note":"金融焦虑高关注度话题"},
+      "logic_agent":{"fallacies":["fabricated_policy"],"internal_consistency":"FAIL"},
+      "sentiment_agent":{"emotional_valence":"financial anxiety","amplification_risk":"medium","target_emotion":"储户恐慌"},
+      "final_label":"Refuted","severity":"medium"
+    },
+    {
+      "id":"N019","claim":"美以袭伊朗后社媒出现空前数量AI假图",
+      "fact_check_agent":{"verdict":"Supported","confidence":0.85,"evidence":"FactCheck.org研究人员记录在案，规模'前所未有'。"},
+      "pseudo_agent":{"pseudo_patterns":["ai_image_warfare"],"manipulation_score":0.88,"note":"战争事件AI伪造已形成系统性操作"},
+      "logic_agent":{"fallacies":[],"internal_consistency":"PASS"},
+      "sentiment_agent":{"emotional_valence":"geopolitical alarm","amplification_risk":"very_high","target_emotion":"战争恐惧/民族主义"},
+      "final_label":"Supported","severity":"high"
+    },
+    {
+      "id":"N002","claim":"WHO确认汉坦病毒疫情：11例感染、3例死亡，CFR 27%",
+      "fact_check_agent":{"verdict":"Supported","confidence":0.98,"evidence":"WHO DON601、CDC HAN00528官方数据"},
+      "pseudo_agent":{"pseudo_patterns":[],"manipulation_score":0.05,"note":"官方数据"},
+      "logic_agent":{"fallacies":[],"internal_consistency":"PASS"},
+      "sentiment_agent":{"emotional_valence":"informational/concern","amplification_risk":"low","target_emotion":"公众知情"},
+      "final_label":"Supported","severity":"informational"
+    },
+    {
+      "id":"N024","claim":"2026中期选举首次出现工业规模深伪广告",
+      "fact_check_agent":{"verdict":"Supported","confidence":0.90,"evidence":"美联社、CNN、The American Prospect等多来源确认"},
+      "pseudo_agent":{"pseudo_patterns":[],"manipulation_score":0.10,"note":"事实性描述"},
+      "logic_agent":{"fallacies":[],"internal_consistency":"PASS"},
+      "sentiment_agent":{"emotional_valence":"alarm","amplification_risk":"medium","target_emotion":"民主担忧"},
+      "final_label":"Supported","severity":"medium"
+    },
+    {
+      "id":"N023","claim":"75%专家预计多数落选候选人将声称选举舞弊",
+      "fact_check_agent":{"verdict":"Supported","confidence":0.85,"evidence":"Votebeat 37名专家调查，75%持此预期"},
+      "pseudo_agent":{"pseudo_patterns":[],"manipulation_score":0.08,"note":"专家预测，非谣言本身"},
+      "logic_agent":{"fallacies":[],"internal_consistency":"PASS"},
+      "sentiment_agent":{"emotional_valence":"democratic concern","amplification_risk":"low","target_emotion":"选举诚信担忧"},
+      "final_label":"Supported","severity":"informational"
+    },
+    {
+      "id":"N018","claim":"WHO工作假说：陆地暴露后登船人传人",
+      "fact_check_agent":{"verdict":"Supported","confidence":0.88,"evidence":"US News/WHO(May 14)：官方工作假说"},
+      "pseudo_agent":{"pseudo_patterns":[],"manipulation_score":0.05,"note":"官方科学说明"},
+      "logic_agent":{"fallacies":[],"internal_consistency":"PASS"},
+      "sentiment_agent":{"emotional_valence":"informational","amplification_risk":"low","target_emotion":"公众了解疫情"},
+      "final_label":"Supported","severity":"informational"
+    },
+    {
+      "id":"N022","claim":"特朗普'贸易委员会'举措标志美国放弃改变中国",
+      "fact_check_agent":{"verdict":"ConflictingEvidence","confidence":0.55,"evidence":"Wire China分析(May 7)；华盛顿邮报持不同框架(May 12)；分析性争议"},
+      "pseudo_agent":{"pseudo_patterns":["selective_framing"],"manipulation_score":0.45,"note":"合理分析分歧"},
+      "logic_agent":{"fallacies":["selective_evidence"],"internal_consistency":"PARTIAL"},
+      "sentiment_agent":{"emotional_valence":"geopolitical pessimism","amplification_risk":"low","target_emotion":"外交政策观察者"},
+      "final_label":"ConflictingEvidence","severity":"low"
+    },
+    {
+      "id":"N016","claim":"新能源车企因锁电被约谈立案",
+      "fact_check_agent":{"verdict":"NotEnoughEvidence","confidence":0.45,"evidence":"今日辟谣列为不实，但具体核查细节不充分"},
+      "pseudo_agent":{"pseudo_patterns":["regulatory_rumor"],"manipulation_score":0.65,"note":"消费者权益话题高关注度"},
+      "logic_agent":{"fallacies":["unverified_claim"],"internal_consistency":"UNCLEAR"},
+      "sentiment_agent":{"emotional_valence":"consumer anxiety","amplification_risk":"medium","target_emotion":"新能源车主担忧"},
+      "final_label":"NotEnoughEvidence","severity":"medium"
+    },
+    {
+      "id":"N014","claim":"联邦选举安全减少将致2026虚假信息问题加剧",
+      "fact_check_agent":{"verdict":"NotEnoughEvidence","confidence":0.60,"evidence":"专家共识，但具体影响程度尚难量化"},
+      "pseudo_agent":{"pseudo_patterns":[],"manipulation_score":0.20,"note":"合理担忧"},
+      "logic_agent":{"fallacies":[],"internal_consistency":"PARTIAL"},
+      "sentiment_agent":{"emotional_valence":"institutional concern","amplification_risk":"low","target_emotion":"选举观察者"},
+      "final_label":"NotEnoughEvidence","severity":"medium"
+    }
+  ]
+}

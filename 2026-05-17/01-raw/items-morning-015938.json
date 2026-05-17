@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "run_label": "morning",
+    "run_date": "2026-05-17",
+    "run_time": "2026-05-17 01:59 UTC",
+    "collection_window": "overnight to morning 2026-05-17",
+    "searches_conducted": 6,
+    "total_items": 26
+  },
+  "items": [
+    {"id":"N001","claim":"Mark Carney mocked Trump at G7 Italy summit (AI video, 'Carney's Line That Triggered Global Laughter')","source":"Yahoo News/Snopes","category":"political/AI deepfake","platform":"YouTube/social media","verdict_hint":"Refuted — Italy hosted G7 in 2024 pre-Carney; video labeled 'Altered or synthetic content'; AI artifacts confirmed","priority":"high"},
+    {"id":"N002","claim":"WHO hantavirus outbreak: 11 cases, 3 deaths (CFR 27%) on MV Hondius cruise ship — Andes virus","source":"WHO DON601, CDC HAN00528","category":"health/factual","platform":"news","verdict_hint":"Supported — official WHO/CDC data confirmed","priority":"high"},
+    {"id":"N003","claim":"Hantavirus is staged/a hoax designed to influence US elections","source":"Euronews (May 13)","category":"health conspiracy","platform":"social media","verdict_hint":"Refuted — real outbreak documented by WHO, CDC, Johns Hopkins","priority":"high"},
+    {"id":"N004","claim":"Hantavirus derived from Hebrew / created by Israel","source":"Euronews (May 13)","category":"health/antisemitic conspiracy","platform":"social media","verdict_hint":"Refuted — name from Hantaan River, Korea; no Israeli connection","priority":"high"},
+    {"id":"N005","claim":"Big pharma created hantavirus to drive up vaccine profits","source":"Euronews (May 13)","category":"health conspiracy","platform":"social media","verdict_hint":"Refuted — no evidence; Andes virus first identified 1993","priority":"high"},
+    {"id":"N006","claim":"Hantavirus is 'the next COVID' — imminent pandemic","source":"NPR (May 7)","category":"health/exaggeration","platform":"news/social media","verdict_hint":"Refuted — NPR/experts: person-to-person spread rare, far less threat than COVID","priority":"medium"},
+    {"id":"N007","claim":"AI deepfake ad shows Ed Gallrein fleeing Trump on a fictional battlefield (Kentucky GOP primary)","source":"LPM (May 5)","category":"political/AI deepfake","platform":"political ad","verdict_hint":"Confirmed deepfake — disclosed AI use in paid political advertising","priority":"high"},
+    {"id":"N008","claim":"AI deepfake ad shows Thomas Massie holding hands with AOC and Ilhan Omar","source":"LPM (May 5)","category":"political/AI deepfake","platform":"political ad","verdict_hint":"Confirmed deepfake — MAGA KY PAC ad","priority":"high"},
+    {"id":"N009","claim":"NRSC deepfake of James Talarico (TX Senate Democratic nominee)","source":"CNN (Mar 13)","category":"political/AI deepfake","platform":"political ad","verdict_hint":"Confirmed deepfake — National Republican Senatorial Committee","priority":"high"},
+    {"id":"N010","claim":"Trump claimed US and China had direct trade/tariff negotiations","source":"Newsweek, China MFA","category":"political/trade","platform":"statements/social media","verdict_hint":"Refuted by China — MFA called it 'false information'; no confirmed negotiation","priority":"high"},
+    {"id":"N011","claim":"Trump-China partial commercial deal 'lived up to advance billing'","source":"Washington Post (May 12)","category":"political/trade","platform":"news","verdict_hint":"Refuted — deal 'failed to live up to advance billing' per reporting","priority":"medium"},
+    {"id":"N012","claim":"Voter fraud will influence 2026 midterm race outcomes","source":"Votebeat (Apr 17)","category":"political/election","platform":"social media/partisan","verdict_hint":"Refuted — all 37 election experts said 'unlikely'; fraud virtually nonexistent","priority":"high"},
+    {"id":"N013","claim":"Significant numbers of ineligible voters will cast ballots in 2026 midterms","source":"Votebeat/Brennan Center","category":"political/election","platform":"social media","verdict_hint":"Refuted — experts unanimous; Brennan Center research confirms fraud extremely rare","priority":"high"},
+    {"id":"N014","claim":"2026 midterm misinformation will be greater due to reduced federal security","source":"News From The States","category":"political/election","platform":"news","verdict_hint":"Supported — expert consensus cited; legitimate concern","priority":"medium"},
+    {"id":"N015","claim":"网传5月存款计息新规（银行存款将按新规计息）","source":"今日辟谣（5月11日）","category":"金融","platform":"中国社交媒体","verdict_hint":"谣言 — 无官方政策依据","priority":"medium"},
+    {"id":"N016","claim":"新能源车企因锁电问题被约谈、立案","source":"今日辟谣（5月11日）","category":"科技/汽车","platform":"中国社交媒体","verdict_hint":"不实信息 — 相关部门未确认","priority":"medium"},
+    {"id":"N017","claim":"Hantavirus spreads easily person-to-person like COVID","source":"NPR, WHO, Texas State University","category":"health","platform":"social media","verdict_hint":"Refuted — Andes virus P2P spread rare; requires prolonged close contact","priority":"high"},
+    {"id":"N018","claim":"WHO hantavirus working hypothesis: land exposure first, then ship P2P spread","source":"US News / WHO (May 14)","category":"health/factual","platform":"news","verdict_hint":"Supported — WHO official working hypothesis","priority":"medium"},
+    {"id":"N019","claim":"AI generated unprecedented false images after US/Israel attack on Iran (Feb 28)","source":"FactCheck.org","category":"political/AI deepfake","platform":"social media","verdict_hint":"Supported — researchers confirmed unprecedented AI image volume","priority":"medium"},
+    {"id":"N020","claim":"Half of US states have passed deepfake campaign ad laws","source":"Fakeout.io","category":"political/legal","platform":"news","verdict_hint":"Supported — roughly half of states per reporting","priority":"low"},
+    {"id":"N021","claim":"There is federal regulation governing AI in political advertising","source":"Fakeout.io/LPM","category":"political/legal","platform":"news","verdict_hint":"Refuted — no federal law; only some state disclosure requirements","priority":"medium"},
+    {"id":"N022","claim":"Trump-Xi summit signaled US 'gave up on changing China'","source":"The Wire China (May 7)","category":"political/trade","platform":"news","verdict_hint":"ConflictingEvidence — analysis piece; disputed framing","priority":"low"},
+    {"id":"N023","claim":"Three-quarters of 2026 losing candidates will claim fraud influenced outcome","source":"Votebeat expert survey","category":"political/election","platform":"expert forecast","verdict_hint":"Supported — 75% of experts predicted this","priority":"medium"},
+    {"id":"N024","claim":"Industrial-scale deepfakes deployed in 2026 midterms for first time","source":"The American Prospect (Apr 17), fakeout.io","category":"political/AI","platform":"news","verdict_hint":"Supported — confirmed by multiple sources","priority":"medium"},
+    {"id":"N025","claim":"Hantavirus conspiracy theories claim virus made by Israel","source":"Euronews (May 13)","category":"health/antisemitic conspiracy","platform":"social media","verdict_hint":"Refuted — duplicate of N004, distinct framing","priority":"high"},
+    {"id":"N026","claim":"Trump 'Board of Trade' move signals end of US-China structural reform ambition","source":"The Wire China (May 7)","category":"political/trade","platform":"analysis","verdict_hint":"NotEnoughEvidence — analytical framing, not verifiable claim","priority":"low"}
+  ]
+}

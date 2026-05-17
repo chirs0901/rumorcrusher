@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "run_label": "morning",
+    "run_time": "2026-05-16 23:06 UTC",
+    "collection_window": "overnight to morning 2026-05-16",
+    "searches_conducted": 6,
+    "total_items": 28
+  },
+  "items": [
+    {
+      "id": "M001",
+      "claim": "Mark Carney mocked Donald Trump at G7 summit in Italy (video circulating)",
+      "source": "Yahoo News / Snopes",
+      "category": "political",
+      "platform": "social media",
+      "verdict_hint": "AI-generated fake video; Italy G7 was 2024, before Carney became PM",
+      "priority": "high"
+    },
+    {
+      "id": "M002",
+      "claim": "Trump's Miami golf club golden statue was surrounded by trash and toilet paper (photo)",
+      "source": "Snopes (May 13, 2026)",
+      "category": "political",
+      "platform": "social media",
+      "verdict_hint": "Real photo digitally altered — trash/toilet paper added",
+      "priority": "high"
+    },
+    {
+      "id": "M003",
+      "claim": "Obama orchestrated a coup against Trump in 2016",
+      "source": "Trump Truth Social posts / FactCheck.org",
+      "category": "political",
+      "platform": "Truth Social",
+      "verdict_hint": "Unproven conspiracy claim; widely debunked",
+      "priority": "medium"
+    },
+    {
+      "id": "M004",
+      "claim": "There was widespread election fraud in the 2020 US election",
+      "source": "Trump Truth Social posts (55 posts in 3 hours, May 11-12)",
+      "category": "political",
+      "platform": "Truth Social",
+      "verdict_hint": "Repeatedly debunked; courts found no evidence",
+      "priority": "medium"
+    },
+    {
+      "id": "M005",
+      "claim": "The word 'hantavirus' derives from Hebrew slang",
+      "source": "Snopes (May 14, 2026)",
+      "category": "health/etymology",
+      "platform": "social media",
+      "verdict_hint": "FALSE — name traces to Hantaan River in Korea",
+      "priority": "medium"
+    },
+    {
+      "id": "M006",
+      "claim": "OpenAI is building an AI smartphone to replace iPhone",
+      "source": "TechCrunch, MacRumors (Apr 27, 2026)",
+      "category": "tech",
+      "platform": "news/analyst report",
+      "verdict_hint": "Partially confirmed rumor — analyst Ming-Chi Kuo; fast-tracked per May 5 report",
+      "priority": "high"
+    },
+    {
+      "id": "M007",
+      "claim": "Amazon is developing a smartphone with AI capabilities",
+      "source": "HNGN (May 14, 2026)",
+      "category": "tech",
+      "platform": "news",
+      "verdict_hint": "DENIED — Panos Panay stated no current smartphone plans",
+      "priority": "high"
+    },
+    {
+      "id": "M008",
+      "claim": "AI smartphone revenue is down 3% due to RAM shortage",
+      "source": "Qualcomm CEO / unboxfuture.com",
+      "category": "tech/business",
+      "platform": "news",
+      "verdict_hint": "Confirmed by Qualcomm CEO Cristiano Amon",
+      "priority": "medium"
+    },
+    {
+      "id": "M009",
+      "claim": "Samsung aims to deploy Gemini AI on 800 million devices by end of 2026",
+      "source": "news reports",
+      "category": "tech",
+      "platform": "corporate announcement",
+      "verdict_hint": "Official Samsung announcement",
+      "priority": "low"
+    },
+    {
+      "id": "M010",
+      "claim": "AI-generated images about Trump's Venezuela/Maduro operation spread as real",
+      "source": "CNBC (Jan 6, 2026)",
+      "category": "political/AI",
+      "platform": "social media",
+      "verdict_hint": "AI-generated deepfakes; real arrest happened but images fake",
+      "priority": "high"
+    },
+    {
+      "id": "M011",
+      "claim": "Fake images of an ICE shooting incident circulated as real (AI-edited)",
+      "source": "fact-check sources",
+      "category": "political/AI",
+      "platform": "social media",
+      "verdict_hint": "AI-edited images; event details fabricated",
+      "priority": "high"
+    },
+    {
+      "id": "M012",
+      "claim": "四川绵阳北川发生重大交通事故致3人死亡",
+      "source": "中国互联网联合辟谣平台",
+      "category": "disaster/accident",
+      "platform": "中国社交媒体",
+      "verdict_hint": "谣言 — 经核查不属实",
+      "priority": "medium"
+    },
+    {
+      "id": "M013",
+      "claim": "河南驻马店突发火情（最新消息）",
+      "source": "中国互联网联合辟谣平台",
+      "category": "disaster",
+      "platform": "中国社交媒体",
+      "verdict_hint": "旧闻新发 — 实为历史事件被重新传播",
+      "priority": "medium"
+    },
+    {
+      "id": "M014",
+      "claim": "通济桥改造项目已黄（项目取消）",
+      "source": "网信部门",
+      "category": "social",
+      "platform": "中国自媒体",
+      "verdict_hint": "不实信息 — 为博流量编造；发布者已被行政处罚",
+      "priority": "medium"
+    },
+    {
+      "id": "M015",
+      "claim": "4月29日大货车侧翻致3人死亡",
+      "source": "网信部门",
+      "category": "disaster/accident",
+      "platform": "中国自媒体",
+      "verdict_hint": "谣言 — 核查不属实",
+      "priority": "low"
+    },
+    {
+      "id": "M016",
+      "claim": "汉坦病毒疫情是为影响美国选举人为制造的骗局",
+      "source": "STAT News (May 8, 2026), UNMC (May 13, 2026)",
+      "category": "health conspiracy",
+      "platform": "X (Twitter)",
+      "verdict_hint": "FALSE — WHO确认荷兰邮轮实际疫情",
+      "priority": "high"
+    },
+    {
+      "id": "M017",
+      "claim": "汉坦病毒是新冠疫苗的副作用",
+      "source": "STAT News (May 8, 2026)",
+      "category": "health conspiracy",
+      "platform": "social media",
+      "verdict_hint": "FALSE — 无科学依据",
+      "priority": "high"
+    },
+    {
+      "id": "M018",
+      "claim": "2022年社媒预言'2026年汉坦病毒'证明疫情被提前计划",
+      "source": "STAT News (May 8, 2026)",
+      "category": "health conspiracy",
+      "platform": "social media",
+      "verdict_hint": "FALSE — 模糊预测被事后曲解为证据",
+      "priority": "high"
+    },
+    {
+      "id": "M019",
+      "claim": "MMR疫苗导致自闭症",
+      "source": "health misinformation monitoring",
+      "category": "health",
+      "platform": "social media / influencers",
+      "verdict_hint": "DEBUNKED — 已被反复科学否定",
+      "priority": "medium"
+    },
+    {
+      "id": "M020",
+      "claim": "AI deepfake audio of Trump mocking Gavin Newsom overlaid on WEF footage",
+      "source": "AFP fact-checkers",
+      "category": "political/AI",
+      "platform": "social media",
+      "verdict_hint": "AI-generated deepfake audio; real WEF footage, fake audio",
+      "priority": "high"
+    },
+    {
+      "id": "M021",
+      "claim": "Florida is banning 'joyriding' or driving with no specific destination",
+      "source": "Snopes (May 16, 2026)",
+      "category": "political/legal",
+      "platform": "social media",
+      "verdict_hint": "Under fact-check review — likely exaggerated claim",
+      "priority": "medium"
+    },
+    {
+      "id": "M022",
+      "claim": "Trump made a state visit to China with tech CEOs in mid-May 2026",
+      "source": "Snopes (May 15, 2026)",
+      "category": "political",
+      "platform": "social media",
+      "verdict_hint": "Under fact-check — diplomatic activity partially confirmed",
+      "priority": "medium"
+    },
+    {
+      "id": "M023",
+      "claim": "Police arrested Sienna Halverson (31) in Glendale AZ — specific crime claims",
+      "source": "Snopes (May 15, 2026)",
+      "category": "crime",
+      "platform": "social media",
+      "verdict_hint": "Under fact-check",
+      "priority": "low"
+    },
+    {
+      "id": "M024",
+      "claim": "2026年已有超过3165起deepfake事件（三月单月数据）",
+      "source": "IdentifAI / Keepnet",
+      "category": "AI/statistics",
+      "platform": "news",
+      "verdict_hint": "Confirmed research data — notable trend claim",
+      "priority": "medium"
+    },
+    {
+      "id": "M025",
+      "claim": "AI smartphones are the end of the smartphone era (major media claim)",
+      "source": "YouTube / various tech media",
+      "category": "tech/hyperbole",
+      "platform": "news/YouTube",
+      "verdict_hint": "Exaggerated claim — AI SoC penetration only 4% end of 2025",
+      "priority": "low"
+    },
+    {
+      "id": "M026",
+      "claim": "Fake news spreads 10x faster than true news on social media",
+      "source": "MIT study (widely cited)",
+      "category": "media research",
+      "platform": "academic/news",
+      "verdict_hint": "Confirmed MIT Sloan study — legitimate research finding",
+      "priority": "low"
+    },
+    {
+      "id": "M027",
+      "claim": "汉坦病毒名称来自希伯来语俚语",
+      "source": "Snopes (May 14, 2026)",
+      "category": "health/etymology",
+      "platform": "social media",
+      "verdict_hint": "FALSE — 源自朝鲜半岛汉滩江",
+      "priority": "medium"
+    },
+    {
+      "id": "M028",
+      "claim": "Trump posted 55 times on Truth Social in 3 hours on May 11-12 pushing conspiracy claims",
+      "source": "Snopes (May 12, 2026)",
+      "category": "political",
+      "platform": "Truth Social",
+      "verdict_hint": "CONFIRMED true posting behavior; claims within posts vary in accuracy",
+      "priority": "medium"
+    }
+  ]
+}

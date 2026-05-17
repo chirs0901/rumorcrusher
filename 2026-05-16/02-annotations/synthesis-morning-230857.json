@@ -1,0 +1,566 @@
+{
+  "meta": {
+    "run_label": "morning",
+    "run_date": "2026-05-16",
+    "agents": ["fact-check", "pseudo", "logic", "sentiment"],
+    "items_reviewed": 22,
+    "averitec_distribution": {
+      "Supported": 5,
+      "Refuted": 11,
+      "NotEnoughEvidence": 4,
+      "ConflictingEvidence": 2
+    }
+  },
+  "items": [
+    {
+      "id": "M001",
+      "claim": "Mark Carney mocked Trump at G7 summit in Italy (AI video)",
+      "fact_check_agent": {
+        "verdict": "Refuted",
+        "confidence": 0.96,
+        "evidence": "Italy G7 was 2024. Carney became PM 2025. Temporal impossibility. AFP flagged as AI-generated."
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": ["deepfake_video", "authority_impersonation"],
+        "manipulation_score": 0.92,
+        "note": "AI video weaponized to frame allied leader as antagonistic to US"
+      },
+      "logic_agent": {
+        "fallacies": ["false_context", "fabricated_event"],
+        "internal_consistency": "FAIL — dates contradict claimed event timeline"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "negative/outrage",
+        "amplification_risk": "high",
+        "target_emotion": "anti-Carney, pro-US nationalism"
+      },
+      "final_label": "Refuted",
+      "severity": "critical"
+    },
+    {
+      "id": "M016",
+      "claim": "Hantavirus outbreak is a hoax designed to influence US elections",
+      "fact_check_agent": {
+        "verdict": "Refuted",
+        "confidence": 0.97,
+        "evidence": "WHO confirmed outbreak on Dutch cruise ship May 2026. Real cases documented. No election connection."
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": ["health_conspiracy", "election_manipulation_frame", "scapegoating"],
+        "manipulation_score": 0.95,
+        "note": "Combines COVID-era playbook with 2026 election anxiety"
+      },
+      "logic_agent": {
+        "fallacies": ["post_hoc", "conspiracy_without_evidence"],
+        "internal_consistency": "FAIL — no causal mechanism proposed"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "fear/distrust of institutions",
+        "amplification_risk": "very_high",
+        "target_emotion": "anti-government, anti-WHO sentiment"
+      },
+      "final_label": "Refuted",
+      "severity": "critical"
+    },
+    {
+      "id": "M017",
+      "claim": "Hantavirus is a COVID vaccine side effect",
+      "fact_check_agent": {
+        "verdict": "Refuted",
+        "confidence": 0.98,
+        "evidence": "Hantavirus is rodent-borne RNA virus; no biological or epidemiological link to mRNA vaccines. CDC, WHO confirm no such association."
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": ["vaccine_scapegoating", "correlation_as_causation"],
+        "manipulation_score": 0.94,
+        "note": "Vaccine blame is default attribution in anti-vax networks regardless of pathogen"
+      },
+      "logic_agent": {
+        "fallacies": ["false_causation", "category_error"],
+        "internal_consistency": "FAIL — mechanistically impossible"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "fear/anger",
+        "amplification_risk": "very_high",
+        "target_emotion": "vaccine hesitancy amplification"
+      },
+      "final_label": "Refuted",
+      "severity": "critical"
+    },
+    {
+      "id": "M018",
+      "claim": "2022 social media prediction proves hantavirus outbreak was pre-planned",
+      "fact_check_agent": {
+        "verdict": "Refuted",
+        "confidence": 0.93,
+        "evidence": "Vague 2022 post retroactively interpreted as prophecy. No specifics matched. Millions of predictions made annually; some coincide by chance."
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": ["retroactive_prophecy", "confirmation_bias_exploitation"],
+        "manipulation_score": 0.91,
+        "note": "Classic 'open prophecy' technique: vague enough to match any health event"
+      },
+      "logic_agent": {
+        "fallacies": ["texas_sharpshooter", "post_hoc_ergo_propter_hoc"],
+        "internal_consistency": "FAIL — unfalsifiable retroactive claim"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "paranoia/validation",
+        "amplification_risk": "high",
+        "target_emotion": "conspiratorial validation seeking"
+      },
+      "final_label": "Refuted",
+      "severity": "high"
+    },
+    {
+      "id": "M020",
+      "claim": "AI deepfake audio of Trump mocking Gavin Newsom (WEF footage)",
+      "fact_check_agent": {
+        "verdict": "Refuted",
+        "confidence": 0.95,
+        "evidence": "AFP confirmed: genuine WEF video, AI-generated audio overlay. Trump did not make these statements."
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": ["audio_deepfake", "political_character_assassination"],
+        "manipulation_score": 0.93,
+        "note": "Uses real footage to add false credibility to fake audio"
+      },
+      "logic_agent": {
+        "fallacies": ["fabricated_evidence"],
+        "internal_consistency": "FAIL — audio source unverified, context misrepresented"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "political_antagonism",
+        "amplification_risk": "high",
+        "target_emotion": "pro-Trump mockery of Newsom"
+      },
+      "final_label": "Refuted",
+      "severity": "critical"
+    },
+    {
+      "id": "M006",
+      "claim": "OpenAI is building an AI smartphone (Ming-Chi Kuo report)",
+      "fact_check_agent": {
+        "verdict": "NotEnoughEvidence",
+        "confidence": 0.60,
+        "evidence": "Analyst report (Ming-Chi Kuo) and May 5 fast-track report. No official OpenAI confirmation. Rumor status."
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": ["analyst_speculation_as_fact"],
+        "manipulation_score": 0.30,
+        "note": "Low manipulation — typical tech speculation by credible analyst"
+      },
+      "logic_agent": {
+        "fallacies": ["appeal_to_authority_without_confirmation"],
+        "internal_consistency": "PARTIAL — plausible given Sam Altman/Jony Ive device work"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "excitement/speculation",
+        "amplification_risk": "medium",
+        "target_emotion": "tech enthusiasm"
+      },
+      "final_label": "NotEnoughEvidence",
+      "severity": "low"
+    },
+    {
+      "id": "M007",
+      "claim": "Amazon is developing a smartphone",
+      "fact_check_agent": {
+        "verdict": "Refuted",
+        "confidence": 0.88,
+        "evidence": "Amazon exec Panos Panay explicitly stated no current smartphone plans (May 14, 2026)."
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": ["rumor_without_basis"],
+        "manipulation_score": 0.20,
+        "note": "Low manipulation — typical market speculation"
+      },
+      "logic_agent": {
+        "fallacies": ["speculation_as_fact"],
+        "internal_consistency": "FAIL — officially denied"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "neutral/speculative",
+        "amplification_risk": "low",
+        "target_emotion": "investor/tech curiosity"
+      },
+      "final_label": "Refuted",
+      "severity": "low"
+    },
+    {
+      "id": "M010",
+      "claim": "AI-generated images of Trump's Venezuela/Maduro operation spread as real",
+      "fact_check_agent": {
+        "verdict": "ConflictingEvidence",
+        "confidence": 0.82,
+        "evidence": "Maduro's arrest was real. Images accompanying coverage were AI-generated fakes blurring real/fake boundary."
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": ["real_event_fake_imagery", "visual_amplification"],
+        "manipulation_score": 0.85,
+        "note": "Sophisticated: uses real event as hook for fabricated visuals"
+      },
+      "logic_agent": {
+        "fallacies": ["false_illustration"],
+        "internal_consistency": "PARTIAL — event real, images false"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "patriotism/drama",
+        "amplification_risk": "high",
+        "target_emotion": "nationalist pride in military action"
+      },
+      "final_label": "ConflictingEvidence",
+      "severity": "high"
+    },
+    {
+      "id": "M011",
+      "claim": "Fake AI-edited ICE shooting images circulated as real",
+      "fact_check_agent": {
+        "verdict": "Refuted",
+        "confidence": 0.91,
+        "evidence": "Images AI-edited. Event details fabricated or misrepresented."
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": ["ai_image_fabrication", "immigration_topic_exploitation"],
+        "manipulation_score": 0.89,
+        "note": "Targets emotionally charged immigration debate"
+      },
+      "logic_agent": {
+        "fallacies": ["fabricated_evidence"],
+        "internal_consistency": "FAIL"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "outrage/fear",
+        "amplification_risk": "very_high",
+        "target_emotion": "anti-ICE sentiment amplification"
+      },
+      "final_label": "Refuted",
+      "severity": "critical"
+    },
+    {
+      "id": "M002",
+      "claim": "Photo shows Trump's Miami golf club statue surrounded by trash",
+      "fact_check_agent": {
+        "verdict": "Refuted",
+        "confidence": 0.97,
+        "evidence": "Snopes (May 13): real photo digitally altered to add trash/toilet paper. Original clean."
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": ["photo_manipulation", "political_ridicule"],
+        "manipulation_score": 0.88,
+        "note": "Political mockery via image manipulation"
+      },
+      "logic_agent": {
+        "fallacies": ["fabricated_evidence"],
+        "internal_consistency": "FAIL — manipulation confirmed"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "mockery/contempt",
+        "amplification_risk": "medium",
+        "target_emotion": "anti-Trump humor"
+      },
+      "final_label": "Refuted",
+      "severity": "medium"
+    },
+    {
+      "id": "M022",
+      "claim": "Trump made state visit to China with tech CEOs mid-May 2026",
+      "fact_check_agent": {
+        "verdict": "NotEnoughEvidence",
+        "confidence": 0.55,
+        "evidence": "Snopes under active review May 15. Trade activity between US-China ongoing; specifics unclear."
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": ["selective_framing"],
+        "manipulation_score": 0.35,
+        "note": "Partial truths likely involved"
+      },
+      "logic_agent": {
+        "fallacies": ["unclear_without_more_data"],
+        "internal_consistency": "UNCLEAR"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "political_speculation",
+        "amplification_risk": "medium",
+        "target_emotion": "US-China geopolitical anxiety"
+      },
+      "final_label": "NotEnoughEvidence",
+      "severity": "medium"
+    },
+    {
+      "id": "M021",
+      "claim": "Florida banning 'joyriding' / driving with no destination",
+      "fact_check_agent": {
+        "verdict": "NotEnoughEvidence",
+        "confidence": 0.50,
+        "evidence": "Snopes active review May 16. Likely exaggerated interpretation of traffic ordinance."
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": ["legal_exaggeration"],
+        "manipulation_score": 0.55,
+        "note": "Government overreach framing popular on social media"
+      },
+      "logic_agent": {
+        "fallacies": ["slippery_slope_framing"],
+        "internal_consistency": "UNCLEAR"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "outrage/libertarian_concern",
+        "amplification_risk": "medium",
+        "target_emotion": "anti-government regulation sentiment"
+      },
+      "final_label": "NotEnoughEvidence",
+      "severity": "medium"
+    },
+    {
+      "id": "M003",
+      "claim": "Obama orchestrated a coup against Trump in 2016",
+      "fact_check_agent": {
+        "verdict": "Refuted",
+        "confidence": 0.94,
+        "evidence": "Repeatedly investigated and refuted. No credible evidence. Multiple courts, agencies found no basis."
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": ["recurring_conspiracy", "deep_state_narrative"],
+        "manipulation_score": 0.87,
+        "note": "Perennial claim re-amplified via Truth Social"
+      },
+      "logic_agent": {
+        "fallacies": ["conspiracy_without_evidence", "unfalsifiable_claim"],
+        "internal_consistency": "FAIL"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "persecution/victimhood",
+        "amplification_risk": "high",
+        "target_emotion": "Trump base political identity reinforcement"
+      },
+      "final_label": "Refuted",
+      "severity": "high"
+    },
+    {
+      "id": "M019",
+      "claim": "MMR vaccine causes autism",
+      "fact_check_agent": {
+        "verdict": "Refuted",
+        "confidence": 0.99,
+        "evidence": "Wakefield study retracted. Dozens of large studies (millions of children) show no link. Scientific consensus: FALSE."
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": ["anti_vax", "authority_distrust"],
+        "manipulation_score": 0.90,
+        "note": "Resurfaces cyclically via influencer networks"
+      },
+      "logic_agent": {
+        "fallacies": ["appeal_to_retracted_study", "cherry_picking"],
+        "internal_consistency": "FAIL"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "parental_fear",
+        "amplification_risk": "very_high",
+        "target_emotion": "parental anxiety about child safety"
+      },
+      "final_label": "Refuted",
+      "severity": "critical"
+    },
+    {
+      "id": "M012",
+      "claim": "四川绵阳北川发生重大交通事故致3人死亡",
+      "fact_check_agent": {
+        "verdict": "Refuted",
+        "confidence": 0.90,
+        "evidence": "中国互联网联合辟谣平台经核查不属实"
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": ["disaster_fabrication", "traffic_in_tragedy"],
+        "manipulation_score": 0.80,
+        "note": "为博流量编造地方灾害事件"
+      },
+      "logic_agent": {
+        "fallacies": ["fabricated_event"],
+        "internal_consistency": "FAIL"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "恐慌/担忧",
+        "amplification_risk": "medium",
+        "target_emotion": "对公共安全的担忧"
+      },
+      "final_label": "Refuted",
+      "severity": "medium"
+    },
+    {
+      "id": "M027",
+      "claim": "汉坦病毒名称来源于希伯来语俚语",
+      "fact_check_agent": {
+        "verdict": "Refuted",
+        "confidence": 0.97,
+        "evidence": "Snopes (May 14): 名称源自朝鲜半岛汉滩江（Hantaan River），1976年首次分离病毒地点"
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": ["etymology_misinformation", "antisemitic_undertone"],
+        "manipulation_score": 0.75,
+        "note": "May carry implicit antisemitic framing in some contexts"
+      },
+      "logic_agent": {
+        "fallacies": ["false_etymology"],
+        "internal_consistency": "FAIL"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "distrust/conspiratorial",
+        "amplification_risk": "medium",
+        "target_emotion": "反建制情绪"
+      },
+      "final_label": "Refuted",
+      "severity": "medium"
+    },
+    {
+      "id": "M013",
+      "claim": "河南驻马店突发火情（最新）",
+      "fact_check_agent": {
+        "verdict": "Refuted",
+        "confidence": 0.88,
+        "evidence": "旧闻新发，事件发生于数月前，被重新包装为当日新闻"
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": ["old_news_repackaging"],
+        "manipulation_score": 0.72,
+        "note": "常见手法：旧视频或图片配新标题"
+      },
+      "logic_agent": {
+        "fallacies": ["false_recency"],
+        "internal_consistency": "FAIL — 时间线不符"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "恐慌/担忧",
+        "amplification_risk": "medium",
+        "target_emotion": "地方社区担忧"
+      },
+      "final_label": "Refuted",
+      "severity": "medium"
+    },
+    {
+      "id": "M014",
+      "claim": "通济桥改造项目已黄",
+      "fact_check_agent": {
+        "verdict": "Refuted",
+        "confidence": 0.85,
+        "evidence": "发布者已被行政处罚；项目实际仍在推进"
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": ["traffic_farming", "public_project_FUD"],
+        "manipulation_score": 0.68,
+        "note": "以民生项目为诱饵获取流量"
+      },
+      "logic_agent": {
+        "fallacies": ["fabricated_claim"],
+        "internal_consistency": "FAIL"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "不满/失望",
+        "amplification_risk": "low",
+        "target_emotion": "对基建项目的焦虑"
+      },
+      "final_label": "Refuted",
+      "severity": "low"
+    },
+    {
+      "id": "M024",
+      "claim": "2026年3月单月发生3165起deepfake事件",
+      "fact_check_agent": {
+        "verdict": "Supported",
+        "confidence": 0.80,
+        "evidence": "IdentifAI研究数据，方法论合理，与行业趋势一致"
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": [],
+        "manipulation_score": 0.15,
+        "note": "合法研究数据"
+      },
+      "logic_agent": {
+        "fallacies": [],
+        "internal_consistency": "PASS"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "concern/alarm",
+        "amplification_risk": "low",
+        "target_emotion": "公众对AI风险的认知"
+      },
+      "final_label": "Supported",
+      "severity": "informational"
+    },
+    {
+      "id": "M028",
+      "claim": "Trump posted 55 times on Truth Social in 3 hours pushing conspiracy claims",
+      "fact_check_agent": {
+        "verdict": "Supported",
+        "confidence": 0.92,
+        "evidence": "Snopes confirmed posting timeline. Count verified."
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": ["information_flooding"],
+        "manipulation_score": 0.70,
+        "note": "Volume flooding as a tactic to overwhelm fact-checking capacity"
+      },
+      "logic_agent": {
+        "fallacies": [],
+        "internal_consistency": "PASS — posting count confirmed"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "alarm/political_polarization",
+        "amplification_risk": "high",
+        "target_emotion": "political tribe validation"
+      },
+      "final_label": "Supported",
+      "severity": "medium"
+    },
+    {
+      "id": "M008",
+      "claim": "AI smartphone sales down 3% due to RAM shortage",
+      "fact_check_agent": {
+        "verdict": "Supported",
+        "confidence": 0.82,
+        "evidence": "Qualcomm CEO Cristiano Amon confirmed 'challenging memory environment'"
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": [],
+        "manipulation_score": 0.10,
+        "note": "官方来源证实"
+      },
+      "logic_agent": {
+        "fallacies": [],
+        "internal_consistency": "PASS"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "neutral/business",
+        "amplification_risk": "low",
+        "target_emotion": "investor/analyst concern"
+      },
+      "final_label": "Supported",
+      "severity": "informational"
+    },
+    {
+      "id": "M009",
+      "claim": "Samsung targets 800M Gemini AI devices by end of 2026",
+      "fact_check_agent": {
+        "verdict": "Supported",
+        "confidence": 0.85,
+        "evidence": "Official Samsung announcement"
+      },
+      "pseudo_agent": {
+        "pseudo_patterns": [],
+        "manipulation_score": 0.05,
+        "note": "官方声明"
+      },
+      "logic_agent": {
+        "fallacies": [],
+        "internal_consistency": "PASS"
+      },
+      "sentiment_agent": {
+        "emotional_valence": "neutral/optimistic",
+        "amplification_risk": "low",
+        "target_emotion": "industry confidence"
+      },
+      "final_label": "Supported",
+      "severity": "informational"
+    }
+  ]
+}

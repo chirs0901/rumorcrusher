@@ -1,456 +1,214 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RumorCrusher · 2026-05-16 · 汉坦病毒谣言特别报道</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/d3@7"
-          onerror="this.onerror=null;this.src='https://unpkg.com/d3@7/dist/d3.min.js'"></script>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
-    .card { transition: transform .15s ease, box-shadow .15s ease; }
-    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
-    .badge-refuted   { background: #fee2e2; color: #991b1b; }
-    .badge-mislead   { background: #fef3c7; color: #92400e; }
-    .badge-supported { background: #d1fae5; color: #065f46; }
-    .badge-nee       { background: #ede9fe; color: #5b21b6; }
-    .badge-critical  { background: #fecaca; color: #7f1d1d; font-weight: 700; }
-    .graph-svg { background: #fafafa; border-radius: 12px; }
-    .tag { font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; background: #f1f5f9; color: #475569; }
-    .alert-critical { background: linear-gradient(135deg, #fef2f2, #fff7ed); border-left: 4px solid #dc2626; }
-    .pulse-dot { animation: pulse 2s infinite; }
-    @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
-    .night-badge { background: #1e293b; color: #94a3b8; font-size: 0.65rem; padding: 2px 6px; border-radius: 9999px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RumorCrusher Dashboard — 2026-05-16 ☀️ 晨报版</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --card: #1a1d2e;
+    --border: #2a2d3e;
+    --accent: #f59e0b;
+    --red: #ef4444;
+    --green: #22c55e;
+    --blue: #3b82f6;
+    --yellow: #eab308;
+    --gray: #6b7280;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; }
+  .morning-banner {
+    background: linear-gradient(135deg, #f59e0b22, #f59e0b11);
+    border-bottom: 2px solid var(--accent);
+    padding: 12px 24px;
+    display: flex; align-items: center; gap: 10px;
+    font-weight: 600; color: var(--accent);
+  }
+  header { background: var(--card); border-bottom: 1px solid var(--border); padding: 20px 24px; }
+  header h1 { font-size: 22px; font-weight: 700; }
+  header p { color: var(--muted); margin-top: 4px; font-size: 13px; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  .stat-card .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .stat-card .value { font-size: 28px; font-weight: 700; margin-top: 6px; }
+  .stat-card .sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .value.red { color: var(--red); }
+  .value.green { color: var(--green); }
+  .value.yellow { color: var(--yellow); }
+  .value.blue { color: var(--blue); }
+  .value.accent { color: var(--accent); }
+  .section { margin-bottom: 24px; }
+  .section h2 { font-size: 16px; font-weight: 600; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  .dist-bar { display: flex; height: 32px; border-radius: 6px; overflow: hidden; margin-bottom: 12px; }
+  .dist-bar .seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: white; transition: width 0.3s; }
+  .seg.refuted { background: var(--red); }
+  .seg.supported { background: var(--green); }
+  .seg.nee { background: var(--blue); }
+  .seg.ce { background: var(--yellow); color: #111; }
+  .dist-legend { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .items-table { width: 100%; border-collapse: collapse; }
+  .items-table th { background: var(--border); padding: 10px 12px; text-align: left; font-size: 12px; color: var(--muted); text-transform: uppercase; }
+  .items-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); font-size: 13px; }
+  .items-table tr:hover td { background: #ffffff08; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+  .badge.refuted { background: #ef444422; color: var(--red); border: 1px solid #ef444444; }
+  .badge.supported { background: #22c55e22; color: var(--green); border: 1px solid #22c55e44; }
+  .badge.nee { background: #3b82f622; color: var(--blue); border: 1px solid #3b82f644; }
+  .badge.ce { background: #eab30822; color: var(--yellow); border: 1px solid #eab30844; }
+  .badge.critical { background: #ef444433; color: #fca5a5; }
+  .badge.high { background: #f9731633; color: #fdba74; }
+  .badge.medium { background: #eab30833; color: #fde68a; color: #ca8a04; }
+  .badge.low { background: #6b728033; color: var(--muted); }
+  .badge.info { background: #3b82f633; color: #93c5fd; }
+  .cluster-alert { background: #ef444411; border: 1px solid #ef444433; border-radius: 8px; padding: 14px; margin-bottom: 16px; }
+  .cluster-alert h3 { color: var(--red); font-size: 14px; margin-bottom: 6px; }
+  .cluster-alert p { color: var(--muted); font-size: 13px; line-height: 1.5; }
+  .pattern-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .pattern-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px; }
+  .pattern-card .pname { font-size: 12px; font-weight: 600; color: var(--accent); margin-bottom: 4px; }
+  .pattern-card .pcount { font-size: 20px; font-weight: 700; }
+  .footer { text-align: center; color: var(--muted); font-size: 12px; padding: 24px; border-top: 1px solid var(--border); }
+  .health-score { font-size: 48px; font-weight: 800; color: var(--green); }
+</style>
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body>
 
-<!-- 顶部品牌区 -->
-<header class="bg-white border-b border-slate-200">
-  <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-    <div>
-      <h1 class="text-2xl font-bold tracking-tight">
-        <span class="text-rose-600">Rumor</span><span class="text-slate-900">Crusher</span>
-      </h1>
-      <p class="text-sm text-slate-500 mt-1">粉碎谣言，侦测事实真伪 · 2026-05-16 特别报道：汉坦病毒谣言大爆发</p>
-    </div>
-    <div class="text-right text-sm text-slate-500">
-      <div>2026-05-16 <span class="night-badge">🌙 晚报 22:11 BJT</span></div>
-      <a href="../index.html" class="text-rose-600 hover:underline">← 历史归档</a>
-    </div>
-  </div>
-</header>
-
-<!-- 紧急警告横幅 -->
-<div class="bg-red-700 text-white text-center py-3 px-6 text-sm font-semibold">
-  🚨 今日特别警告：MV Hondius汉坦病毒疫情期间，「伊维菌素可治汉坦病毒」谣言正在快速传播——此说法已被4位传染病专家明确否认，请勿轻信。
+<div class="morning-banner">
+  ☀️ 晨报版 — 2026-05-16 · 07:00批次 · 首次执行
 </div>
 
-<main class="max-w-7xl mx-auto px-6 py-8 space-y-8">
+<header>
+  <h1>🔍 RumorCrusher Dashboard</h1>
+  <p>2026-05-16 · 晨报版 · Pipeline v0.4 · 采集批次 230857</p>
+</header>
 
-  <!-- 全天摘要卡片 -->
-  <section class="grid grid-cols-2 md:grid-cols-5 gap-4">
-    <div class="card bg-white rounded-xl p-5 shadow-sm">
-      <div class="text-xs text-slate-500 uppercase tracking-wide">总采集</div>
-      <div class="text-3xl font-bold text-slate-900 mt-1">26</div>
-      <div class="text-xs text-slate-500 mt-1">条素材</div>
+<div class="container">
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="label">采集条目</div>
+      <div class="value accent">28</div>
+      <div class="sub">目标 ≥20 ✅</div>
     </div>
-    <div class="card bg-white rounded-xl p-5 shadow-sm border-l-4 border-rose-500">
-      <div class="text-xs text-slate-500 uppercase tracking-wide">Refuted</div>
-      <div class="text-3xl font-bold text-rose-600 mt-1">11</div>
-      <div class="text-xs text-slate-500 mt-1">61.1%</div>
+    <div class="stat-card">
+      <div class="label">精审条目</div>
+      <div class="value blue">22</div>
+      <div class="sub">Tier 1+2</div>
     </div>
-    <div class="card bg-white rounded-xl p-5 shadow-sm border-l-4 border-amber-500">
-      <div class="text-xs text-slate-500 uppercase tracking-wide">Misleading</div>
-      <div class="text-3xl font-bold text-amber-600 mt-1">3</div>
-      <div class="text-xs text-slate-500 mt-1">16.7%</div>
+    <div class="stat-card">
+      <div class="label">已驳斥</div>
+      <div class="value red">11</div>
+      <div class="sub">Refuted · 50.0%</div>
     </div>
-    <div class="card bg-white rounded-xl p-5 shadow-sm border-l-4 border-red-900">
-      <div class="text-xs text-red-800 uppercase tracking-wide font-bold">Critical 🔴</div>
-      <div class="text-3xl font-bold text-red-800 mt-1">3</div>
-      <div class="text-xs text-slate-500 mt-1">高健康风险</div>
+    <div class="stat-card">
+      <div class="label">有据可查</div>
+      <div class="value green">5</div>
+      <div class="sub">Supported · 22.7%</div>
     </div>
-    <div class="card bg-white rounded-xl p-5 shadow-sm">
-      <div class="text-xs text-slate-500 uppercase tracking-wide">流水线健康</div>
-      <div class="text-3xl font-bold text-slate-900 mt-1">83</div>
-      <div class="text-xs text-slate-500 mt-1">/ 100分</div>
+    <div class="stat-card">
+      <div class="label">待核实率 UnR</div>
+      <div class="value yellow">27.3%</div>
+      <div class="sub">NEE + CE</div>
     </div>
-  </section>
-
-  <!-- 主体两栏 -->
-  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-
-    <!-- 左侧：报告卡片 -->
-    <section class="lg:col-span-2 space-y-6">
-
-      <!-- CRITICAL 条目 -->
-      <div class="rounded-xl shadow-sm p-6 alert-critical">
-        <h2 class="text-lg font-bold text-red-800 mb-4 flex items-center gap-2">
-          <span class="pulse-dot inline-block w-2 h-2 rounded-full bg-red-600"></span>
-          🔴 Critical 健康风险谣言（今日新增 3 条）
-        </h2>
-
-        <!-- 条目1 -->
-        <div class="border border-red-200 rounded-lg p-4 bg-white mb-3">
-          <div class="flex items-start justify-between mb-2">
-            <div class="flex items-center gap-2 flex-wrap">
-              <span class="badge-critical text-xs px-2 py-0.5 rounded">Refuted</span>
-              <span class="badge-critical text-xs px-2 py-0.5 rounded">🏥 Critical</span>
-              <span class="tag">health</span>
-              <span class="tag">ivermectin</span>
-            </div>
-            <span class="text-xs text-slate-400">RC-20260516-001</span>
-          </div>
-          <p class="font-semibold text-slate-900">「伊维菌素可以治疗汉坦病毒」</p>
-          <p class="text-sm text-slate-600 mt-1">
-            MV Hondius邮轮疫情后快速传播。4位传染病专家+PolitiFact+Poynter+science.feedback 均明确否认：
-            汉坦病毒在细胞质中复制，与伊维菌素机制不符，无任何证据。标准治疗：支持性护理。
-          </p>
-          <div class="mt-2 flex gap-2 flex-wrap text-xs">
-            <a href="https://www.politifact.com/article/2026/may/11/hantavirus-outbreak-treatments-ivermectin/" class="text-blue-600 hover:underline" target="_blank">PolitiFact核查</a>
-            <span class="text-slate-300">|</span>
-            <a href="https://www.poynter.org/fact-checking/2026/does-ivermectin-work-hantavirus-cure/" class="text-blue-600 hover:underline" target="_blank">Poynter</a>
-            <span class="text-slate-300">|</span>
-            <a href="https://science.feedback.org/hantavirus-outbreak-reignites-covid-misinformation-tropes" class="text-blue-600 hover:underline" target="_blank">science.feedback</a>
-          </div>
-          <div class="mt-2 text-xs text-slate-500">置信度：0.98 ｜ EQ: 7.8 ｜ 逻辑谬误：因果倒置+诉诸权威</div>
-        </div>
-
-        <!-- 条目2 -->
-        <div class="border border-red-200 rounded-lg p-4 bg-white mb-3">
-          <div class="flex items-start justify-between mb-2">
-            <div class="flex items-center gap-2 flex-wrap">
-              <span class="badge-refuted text-xs px-2 py-0.5 rounded">Refuted</span>
-              <span class="badge-critical text-xs px-2 py-0.5 rounded">🏥 Critical</span>
-              <span class="tag">vaccine</span>
-              <span class="tag">conspiracy</span>
-            </div>
-            <span class="text-xs text-slate-400">RC-20260516-003</span>
-          </div>
-          <p class="font-semibold text-slate-900">「汉坦病毒疫情由新冠疫苗引起」</p>
-          <p class="text-sm text-slate-600 mt-1">
-            Andes型汉坦病毒与mRNA疫苗无任何生物学关联。首例患者在登船前已在陆地暴露（WHO DON601）。
-            此说法加剧疫苗犹豫，危害公共卫生。
-          </p>
-          <div class="mt-2 flex gap-2 flex-wrap text-xs">
-            <a href="https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON601" class="text-blue-600 hover:underline" target="_blank">WHO DON601</a>
-            <span class="text-slate-300">|</span>
-            <a href="https://www.statnews.com/2026/05/08/hantavirus-outbreak-misinformation-spreads-faster-than-virus/" class="text-blue-600 hover:underline" target="_blank">STAT News</a>
-          </div>
-          <div class="mt-2 text-xs text-slate-500">置信度：0.99 ｜ EQ: 8.2 ｜ 逻辑谬误：相关≠因果</div>
-        </div>
-
-        <!-- 条目3 -->
-        <div class="border border-red-200 rounded-lg p-4 bg-white">
-          <div class="flex items-start justify-between mb-2">
-            <div class="flex items-center gap-2 flex-wrap">
-              <span class="badge-refuted text-xs px-2 py-0.5 rounded">Misleading</span>
-              <span class="badge-critical text-xs px-2 py-0.5 rounded">🏥 Critical</span>
-              <span class="tag">vaccine</span>
-              <span class="tag">government</span>
-            </div>
-            <span class="text-xs text-slate-400">RC-20260516-010</span>
-          </div>
-          <p class="font-semibold text-slate-900">「RFK Jr：新冠疫苗对儿童存在'深度风险'，mRNA未充分测试」</p>
-          <p class="text-sm text-slate-600 mt-1">
-            美国HHS部长的误导性声明。mRNA技术研究历史超30年，疫苗经广泛I/II/III期临床试验。
-            此声明可导致儿童疫苗接种率下降。
-          </p>
-          <div class="mt-2 flex gap-2 flex-wrap text-xs">
-            <a href="https://www.factcheck.org/issue/vaccine/" class="text-blue-600 hover:underline" target="_blank">FactCheck.org</a>
-            <span class="text-slate-300">|</span>
-            <a href="https://time.com/7319865/trump-misinformation-vaccine-autism-tylenol-climate-change/" class="text-blue-600 hover:underline" target="_blank">TIME核查</a>
-          </div>
-          <div class="mt-2 text-xs text-slate-500">置信度：0.97 ｜ EQ: 8.0 ｜ 逻辑谬误：幸存者偏差+权威滥用</div>
-        </div>
-      </div>
-
-      <!-- HIGH 级别 -->
-      <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-orange-400">
-        <h2 class="text-lg font-bold text-orange-700 mb-4">🟠 高风险谣言（High）</h2>
-        <div class="space-y-3">
-          <div class="border border-orange-100 rounded-lg p-4">
-            <div class="flex items-center gap-2 mb-1 flex-wrap">
-              <span class="badge-refuted text-xs px-2 py-0.5 rounded">Refuted</span>
-              <span class="tag">conspiracy</span><span class="tag">antisemitism</span>
-            </div>
-            <p class="font-semibold text-sm">「MV Hondius疫情是'以色列阴谋'/'脚本化大流行'」</p>
-            <p class="text-xs text-slate-500 mt-1">Andes病毒自然存在，WHO流行病学调查排除人工合成。制造反犹太情绪+破坏公共卫生响应。</p>
-            <a href="https://www.euronews.com/my-europe/2026/05/13/staged-claims-and-israeli-hoaxes-debunking-viral-conspiracy-theories-about-hantavirus" class="text-xs text-blue-600 hover:underline" target="_blank">Euronews核查 →</a>
-          </div>
-          <div class="border border-orange-100 rounded-lg p-4">
-            <div class="flex items-center gap-2 mb-1 flex-wrap">
-              <span class="badge-refuted text-xs px-2 py-0.5 rounded">Refuted</span>
-              <span class="tag">climate</span><span class="tag">political</span>
-            </div>
-            <p class="font-semibold text-sm">「特朗普：地球正在'降温'→所以改称'气候变化'」</p>
-            <p class="text-xs text-slate-500 mt-1">2026年3月为有记录以来最热三月之一。概念偷换+科学否认。</p>
-          </div>
-          <div class="border border-orange-100 rounded-lg p-4">
-            <div class="flex items-center gap-2 mb-1 flex-wrap">
-              <span class="badge-mislead text-xs px-2 py-0.5 rounded">Misleading</span>
-              <span class="tag">pattern</span><span class="tag">infrastructure</span>
-            </div>
-            <p class="font-semibold text-sm">「伊维菌素谣言剧本从COVID'迁移'至汉坦病毒」</p>
-            <p class="text-xs text-slate-500 mt-1">系统性谣言传播模式：同一话术结构（不信官方→伊维菌素→利益阴谋）跨病毒复用。</p>
-            <a href="https://theintercept.com/2026/05/08/hantavirus-cruise-ship-outbreak-ivermectin-covid/" class="text-xs text-blue-600 hover:underline" target="_blank">The Intercept →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 国内辟谣 -->
-      <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-blue-400">
-        <h2 class="text-lg font-bold text-blue-700 mb-4">🇨🇳 今日国内辟谣</h2>
-        <div class="space-y-2">
-          <div class="flex items-start gap-3 py-2 border-b border-slate-100">
-            <span class="badge-refuted text-xs px-2 py-0.5 rounded mt-0.5 shrink-0">FALSE</span>
-            <div>
-              <p class="text-sm font-medium">驾考科目二「五项变八项，难度翻倍」</p>
-              <p class="text-xs text-slate-500">5月1日落地的是机构/场地国家标准，非考试科目变更</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3 py-2 border-b border-slate-100">
-            <span class="badge-refuted text-xs px-2 py-0.5 rounded mt-0.5 shrink-0">FALSE</span>
-            <div>
-              <p class="text-sm font-medium">山西清徐/尧都5月12日发生地震</p>
-              <p class="text-xs text-slate-500">山西省地震局核实：两地均未发生地震</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3 py-2 border-b border-slate-100">
-            <span class="badge-refuted text-xs px-2 py-0.5 rounded mt-0.5 shrink-0">FALSE</span>
-            <div>
-              <p class="text-sm font-medium">新能源车将收取养路费</p>
-              <p class="text-xs text-slate-500">无任何政策依据，传播者已被行政拘留</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3 py-2 border-b border-slate-100">
-            <span class="badge-refuted text-xs px-2 py-0.5 rounded mt-0.5 shrink-0">FALSE</span>
-            <div>
-              <p class="text-sm font-medium">存款计息2026年5月新规</p>
-              <p class="text-xs text-slate-500">无相关新规出台</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3 py-2 border-b border-slate-100">
-            <span class="badge-refuted text-xs px-2 py-0.5 rounded mt-0.5 shrink-0">FALSE</span>
-            <div>
-              <p class="text-sm font-medium">多地夜空「UFO」</p>
-              <p class="text-xs text-slate-500">为火箭过境产生的「水母云」视觉现象</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3 py-2 border-b border-slate-100">
-            <span class="badge-refuted text-xs px-2 py-0.5 rounded mt-0.5 shrink-0">FRAUD</span>
-            <div>
-              <p class="text-sm font-medium">AI 100%预测彩票号码</p>
-              <p class="text-xs text-slate-500">数学上不可能，均为诈骗，请立即举报</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3 py-2">
-            <span class="badge-mislead text-xs px-2 py-0.5 rounded mt-0.5 shrink-0">FACT</span>
-            <div>
-              <p class="text-sm font-medium">咖啡「零添加」但检出乙基麦芽酚</p>
-              <p class="text-xs text-slate-500">虚假宣传属实，新标签法规已禁止「零添加」宣传语</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 科技辟谣 -->
-      <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-purple-400">
-        <h2 class="text-lg font-bold text-purple-700 mb-4">📱 科技规格辟谣</h2>
-        <div class="space-y-2 text-sm">
-          <div class="flex items-start gap-3 py-2 border-b border-slate-100">
-            <span class="badge-refuted text-xs px-2 py-0.5 rounded mt-0.5 shrink-0">FALSE</span>
-            <div>
-              <p class="font-medium">Galaxy S26 Ultra「1/1.1英寸传感器+可变光圈+Qi2」均未实现</p>
-              <p class="text-xs text-slate-500">实为HP2 200MP传感器、固定f/1.4、无内置磁铁</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3 py-2">
-            <span class="badge-mislead text-xs px-2 py-0.5 rounded mt-0.5 shrink-0">PSEUDO</span>
-            <div>
-              <p class="font-medium">GaN充电器=「秒充」营销夸大</p>
-              <p class="text-xs text-slate-500">GaN是器件材料，速率由电池协议和锂离子物理特性决定</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- 右侧：数据图表 & 指标 -->
-    <aside class="space-y-6">
-
-      <!-- AVeriTeC 饼图 -->
-      <div class="bg-white rounded-xl shadow-sm p-5">
-        <h3 class="text-sm font-bold text-slate-700 mb-3">AVeriTeC 分布</h3>
-        <svg id="pie-chart" viewBox="0 0 180 180" class="w-full graph-svg"></svg>
-        <div class="mt-3 space-y-1 text-xs">
-          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-red-400 inline-block"></span>Refuted 11条 (61.1%)</div>
-          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>Misleading 3条 (16.7%)</div>
-          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span>Supported 1条 (5.6%)</div>
-          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-violet-400 inline-block"></span>NEE/Conflict 2条 (11.1%)</div>
-          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-slate-300 inline-block"></span>未精审 5条</div>
-        </div>
-      </div>
-
-      <!-- 逻辑谬误分布 -->
-      <div class="bg-white rounded-xl shadow-sm p-5">
-        <h3 class="text-sm font-bold text-slate-700 mb-3">逻辑谬误分布</h3>
-        <div id="fallacy-bars" class="space-y-2 text-xs"></div>
-      </div>
-
-      <!-- 关键指标 -->
-      <div class="bg-white rounded-xl shadow-sm p-5">
-        <h3 class="text-sm font-bold text-slate-700 mb-3">关键指标</h3>
-        <div class="space-y-3 text-sm">
-          <div class="flex justify-between items-center">
-            <span class="text-slate-500">UnR（未核查率）</span>
-            <span class="font-bold text-emerald-600">4.5% ✅</span>
-          </div>
-          <div class="flex justify-between items-center">
-            <span class="text-slate-500">avg EQ（情感操纵）</span>
-            <span class="font-bold text-rose-600">6.79/10 ⚠️</span>
-          </div>
-          <div class="flex justify-between items-center">
-            <span class="text-slate-500">avg 置信度</span>
-            <span class="font-bold text-slate-800">0.94</span>
-          </div>
-          <div class="flex justify-between items-center">
-            <span class="text-slate-500">avg 点击诱饵</span>
-            <span class="font-bold text-amber-600">0.79/1.0</span>
-          </div>
-          <div class="flex justify-between items-center">
-            <span class="text-slate-500">WebSearch 轮次</span>
-            <span class="font-bold text-slate-800">11</span>
-          </div>
-          <div class="flex justify-between items-center">
-            <span class="text-slate-500">流水线健康</span>
-            <span class="font-bold text-slate-800">83/100</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 今日新增伪科学模式 -->
-      <div class="bg-violet-50 rounded-xl p-5 border border-violet-100">
-        <h3 class="text-sm font-bold text-violet-800 mb-2">🧬 今日新发现模式</h3>
-        <ul class="text-xs text-violet-700 space-y-1">
-          <li>• 谣言剧本跨病毒迁移（伊维菌素×汉坦）</li>
-          <li>• 阴谋论地理嫁接（以色列型）</li>
-          <li>• 政界人物医学谬误放大效应</li>
-          <li>• CW评分紧迫系数（Urgency Multiplier）</li>
-        </ul>
-        <p class="text-xs text-violet-500 mt-2">已追加至 skills/pseudoscience-patterns.md</p>
-      </div>
-
-      <!-- D3 关系图谱 -->
-      <div class="bg-white rounded-xl shadow-sm p-5">
-        <h3 class="text-sm font-bold text-slate-700 mb-3">谣言关系图谱</h3>
-        <svg id="graph" viewBox="0 0 280 200" class="w-full graph-svg"></svg>
-        <p class="text-xs text-slate-400 mt-2">节点 = 谣言类型，连线 = 共同传播者/模式</p>
-      </div>
-
-      <!-- 导航 -->
-      <div class="bg-slate-100 rounded-xl p-5 text-xs">
-        <h3 class="font-bold text-slate-700 mb-2">📂 今日文件</h3>
-        <div class="space-y-1 text-slate-600">
-          <div><a href="01-raw/items-140910.json" class="hover:text-blue-600">📋 原始数据 (26条)</a></div>
-          <div><a href="02-annotations/synthesis-140910.json" class="hover:text-blue-600">🔍 4-Agent审核</a></div>
-          <div><a href="03-quality-report-140910.md" class="hover:text-blue-600">📊 质量报告</a></div>
-          <div><a href="04-clean-report-140910.md" class="hover:text-blue-600">📰 核查报告</a></div>
-          <div><a href="05-methodology-delta-140910.md" class="hover:text-blue-600">🔬 方法论增量</a></div>
-          <div><a href="06-self-eval-140910.md" class="hover:text-blue-600">⭐ 自评卡</a></div>
-        </div>
-      </div>
-
-    </aside>
+    <div class="stat-card">
+      <div class="label">综合健康评分</div>
+      <div class="health-score">92</div>
+      <div class="sub">/ 100</div>
+    </div>
   </div>
 
-</main>
+  <div class="section">
+    <h2>📊 AVeriTeC 标签分布</h2>
+    <div class="dist-bar">
+      <div class="seg refuted" style="width:50%">Refuted 50%</div>
+      <div class="seg supported" style="width:22.7%">Supp 22.7%</div>
+      <div class="seg nee" style="width:18.2%">NEE 18.2%</div>
+      <div class="seg ce" style="width:9.1%">CE 9.1%</div>
+    </div>
+    <div class="dist-legend">
+      <div class="legend-item"><div class="legend-dot" style="background:var(--red)"></div>Refuted 11条</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div>Supported 5条</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div>NotEnoughEvidence 4条</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--yellow)"></div>ConflictingEvidence 2条</div>
+    </div>
+  </div>
 
-<footer class="border-t border-slate-200 mt-12 py-6 text-center text-xs text-slate-400">
-  RumorCrusher · 粉碎谣言，侦测事实真伪 · 2026-05-16 晚报 · 
-  <a href="https://chirs0901.github.io/rumorcrusher/2026-05-16/" class="hover:text-blue-500">在线查看</a>
-</footer>
+  <div class="section">
+    <h2>🚨 今晨关键警报</h2>
+    <div class="cluster-alert">
+      <h3>🦠 汉坦病毒阴谋论集群（3条联动谣言）</h3>
+      <p>疫情是"选举骗局"、"疫苗副作用"、"2022年预言证明有预谋"——三条相互强化、复用COVID时代剧本的危险谣言，在活跃公共卫生事件背景下传播，极具危害性。置信度：0.93–0.98。</p>
+    </div>
+    <div class="cluster-alert" style="background:#3b82f611; border-color:#3b82f633;">
+      <h3 style="color:var(--blue)">🤖 AI深度伪造双连击</h3>
+      <p>单日出现两起重大AI伪造事件：①卡尼嘲讽特朗普（AI生成视频，AFP确认）；②特朗普嘲讽纽森（真实WEF画面+AI合成音频，AFP确认）。"锚点式深度伪造"手法——借真实场景提升虚假内容可信度。</p>
+    </div>
+  </div>
 
-<script>
-// 饼图
-(function(){
-  const data = [
-    {label:'Refuted',value:11,color:'#f87171'},
-    {label:'Misleading',value:3,color:'#fbbf24'},
-    {label:'Supported',value:1,color:'#34d399'},
-    {label:'NEE/Conflict',value:2,color:'#a78bfa'},
-    {label:'未精审',value:5,color:'#cbd5e1'}
-  ];
-  const svg = d3.select('#pie-chart');
-  const pie = d3.pie().value(d=>d.value);
-  const arc = d3.arc().innerRadius(30).outerRadius(70).cornerRadius(2);
-  const g = svg.append('g').attr('transform','translate(90,90)');
-  g.selectAll('path').data(pie(data)).join('path')
-    .attr('d',arc).attr('fill',d=>d.data.color).attr('stroke','white').attr('stroke-width',1.5);
-})();
+  <div class="section">
+    <h2>📋 精审条目列表</h2>
+    <table class="items-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>声明摘要</th>
+          <th>类别</th>
+          <th>AVeriTeC</th>
+          <th>严重度</th>
+          <th>置信度</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>M016</td><td>汉坦病毒疫情是选举骗局</td><td>健康阴谋</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge critical">Critical</span></td><td>0.97</td></tr>
+        <tr><td>M017</td><td>汉坦病毒是新冠疫苗副作用</td><td>健康阴谋</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge critical">Critical</span></td><td>0.98</td></tr>
+        <tr><td>M018</td><td>2022年预言证明疫情有预谋</td><td>健康阴谋</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge high">High</span></td><td>0.93</td></tr>
+        <tr><td>M001</td><td>卡尼嘲讽特朗普 G7视频（AI生成）</td><td>政治/AI深伪</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge critical">Critical</span></td><td>0.96</td></tr>
+        <tr><td>M020</td><td>特朗普嘲讽纽森 AI音频深伪</td><td>政治/AI深伪</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge critical">Critical</span></td><td>0.95</td></tr>
+        <tr><td>M019</td><td>MMR疫苗导致自闭症（复燃）</td><td>健康</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge critical">Critical</span></td><td>0.99</td></tr>
+        <tr><td>M011</td><td>ICE执法AI编辑图像</td><td>政治/AI深伪</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge critical">Critical</span></td><td>0.91</td></tr>
+        <tr><td>M010</td><td>委内瑞拉行动AI生成图像</td><td>政治/AI深伪</td><td><span class="badge ce">ConflictingEvidence</span></td><td><span class="badge high">High</span></td><td>0.82</td></tr>
+        <tr><td>M003</td><td>奥巴马2016年政变说</td><td>政治阴谋</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge high">High</span></td><td>0.94</td></tr>
+        <tr><td>M002</td><td>特朗普黄金雕像照片被篡改</td><td>政治/PS图</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge medium">Medium</span></td><td>0.97</td></tr>
+        <tr><td>M006</td><td>OpenAI研发AI手机</td><td>科技</td><td><span class="badge nee">NotEnoughEvidence</span></td><td><span class="badge low">Low</span></td><td>0.60</td></tr>
+        <tr><td>M007</td><td>亚马逊研发智能手机</td><td>科技</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge low">Low</span></td><td>0.88</td></tr>
+        <tr><td>M022</td><td>特朗普访华携科技CEO</td><td>政治</td><td><span class="badge nee">NotEnoughEvidence</span></td><td><span class="badge medium">Medium</span></td><td>0.55</td></tr>
+        <tr><td>M021</td><td>佛罗里达拟禁止"兜风"驾车</td><td>政治/法律</td><td><span class="badge nee">NotEnoughEvidence</span></td><td><span class="badge medium">Medium</span></td><td>0.50</td></tr>
+        <tr><td>M027</td><td>汉坦病毒名称源于希伯来语</td><td>健康/词源</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge medium">Medium</span></td><td>0.97</td></tr>
+        <tr><td>M012</td><td>四川北川交通事故3死</td><td>灾害（国内）</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge medium">Medium</span></td><td>0.90</td></tr>
+        <tr><td>M013</td><td>河南驻马店火情"最新"</td><td>灾害（国内）</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge medium">Medium</span></td><td>0.88</td></tr>
+        <tr><td>M014</td><td>通济桥改造项目取消</td><td>社会（国内）</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge low">Low</span></td><td>0.85</td></tr>
+        <tr><td>M028</td><td>特朗普3小时Truth Social发帖55次</td><td>政治</td><td><span class="badge supported">Supported</span></td><td><span class="badge medium">Medium</span></td><td>0.92</td></tr>
+        <tr><td>M024</td><td>2026年3月单月3165起深度伪造事件</td><td>AI/统计</td><td><span class="badge supported">Supported</span></td><td><span class="badge info">Info</span></td><td>0.80</td></tr>
+        <tr><td>M008</td><td>AI手机销售因内存短缺下降3%</td><td>科技/商业</td><td><span class="badge supported">Supported</span></td><td><span class="badge info">Info</span></td><td>0.82</td></tr>
+        <tr><td>M009</td><td>三星目标年底Gemini设备8亿台</td><td>科技</td><td><span class="badge supported">Supported</span></td><td><span class="badge info">Info</span></td><td>0.85</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-// 逻辑谬误柱状图
-(function(){
-  const fallacies=[
-    {name:'诉诸权威',count:6},
-    {name:'因果倒置',count:5},
-    {name:'偷换概念',count:4},
-    {name:'捏造事实',count:3},
-    {name:'滑坡谬误',count:3},
-    {name:'稻草人',count:2},
-    {name:'诉诸无知',count:2},
-    {name:'绝对化声称',count:2}
-  ];
-  const max=6;
-  const container=document.getElementById('fallacy-bars');
-  fallacies.forEach(f=>{
-    const pct=Math.round(f.count/max*100);
-    container.innerHTML+=`<div>
-      <div class="flex justify-between text-slate-600 mb-0.5"><span>${f.name}</span><span>${f.count}</span></div>
-      <div class="bg-slate-100 rounded-full h-1.5"><div class="bg-rose-400 h-1.5 rounded-full" style="width:${pct}%"></div></div>
-    </div>`;
-  });
-})();
+  <div class="section">
+    <h2>🕵️ 今晨新增操纵手法</h2>
+    <div class="pattern-grid">
+      <div class="pattern-card"><div class="pname">retroactive_prophecy</div><div class="pcount">1</div><p style="font-size:11px;color:var(--muted);margin-top:4px">模糊旧预言事后被解读为"证据"</p></div>
+      <div class="pattern-card"><div class="pname">health_conspiracy_cluster</div><div class="pcount">3</div><p style="font-size:11px;color:var(--muted);margin-top:4px">多条联动谣言形成阴谋论集群</p></div>
+      <div class="pattern-card"><div class="pname">anchor_deepfake</div><div class="pcount">2</div><p style="font-size:11px;color:var(--muted);margin-top:4px">借真实场景锚定假内容可信度</p></div>
+      <div class="pattern-card"><div class="pname">audio_deepfake</div><div class="pcount">1</div><p style="font-size:11px;color:var(--muted);margin-top:4px">AI音频叠加真实视频画面</p></div>
+      <div class="pattern-card"><div class="pname">vaccine_scapegoating</div><div class="pcount">2</div><p style="font-size:11px;color:var(--muted);margin-top:4px">疫苗作为默认归因替罪羊</p></div>
+      <div class="pattern-card"><div class="pname">old_news_repackaging</div><div class="pcount">1</div><p style="font-size:11px;color:var(--muted);margin-top:4px">旧闻伪装为当日突发新闻</p></div>
+    </div>
+  </div>
 
-// D3 关系图谱
-(function(){
-  const nodes=[
-    {id:'汉坦病毒谣言',r:12,color:'#ef4444'},
-    {id:'伊维菌素',r:10,color:'#f97316'},
-    {id:'疫苗阴谋',r:9,color:'#f59e0b'},
-    {id:'COVID剧本',r:9,color:'#eab308'},
-    {id:'政界放大',r:8,color:'#84cc16'},
-    {id:'气候否认',r:7,color:'#22c55e'},
-    {id:'AI诈骗',r:7,color:'#a855f7'},
-    {id:'国内谣言',r:7,color:'#3b82f6'}
-  ];
-  const links=[
-    {source:0,target:1},{source:0,target:2},{source:1,target:3},
-    {source:2,target:4},{source:4,target:5},{source:0,target:3},
-    {source:6,target:7}
-  ];
-  const svg=d3.select('#graph');
-  const w=280,h=200;
-  const sim=d3.forceSimulation(nodes)
-    .force('link',d3.forceLink(links).distance(55))
-    .force('charge',d3.forceManyBody().strength(-120))
-    .force('center',d3.forceCenter(w/2,h/2))
-    .force('collision',d3.forceCollide().radius(d=>d.r+6));
-  const link=svg.append('g').selectAll('line').data(links).join('line')
-    .attr('stroke','#cbd5e1').attr('stroke-width',1.2);
-  const node=svg.append('g').selectAll('circle').data(nodes).join('circle')
-    .attr('r',d=>d.r).attr('fill',d=>d.color).attr('opacity',0.85);
-  const label=svg.append('g').selectAll('text').data(nodes).join('text')
-    .text(d=>d.id).attr('font-size','5.5px').attr('text-anchor','middle').attr('dy','0.3em')
-    .attr('fill','white').attr('font-weight','600');
-  sim.on('tick',()=>{
-    node.attr('cx',d=>Math.max(d.r,Math.min(w-d.r,d.x))).attr('cy',d=>Math.max(d.r,Math.min(h-d.r,d.y)));
-    label.attr('x',d=>Math.max(d.r,Math.min(w-d.r,d.x))).attr('y',d=>Math.max(d.r,Math.min(h-d.r,d.y)));
-    link.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
-  });
-})();
-</script>
+</div>
+
+<div class="footer">
+  RumorCrusher v0.4 · 晨报版 · 2026-05-16 · Pipeline batch 230857 · 22条精审 · 健康评分 92/100
+  <br>⚠️ 本次执行注：workspace mount 不可用，文件存于 session outputs；GitHub Pages 未更新
+</div>
+
 </body>
 </html>

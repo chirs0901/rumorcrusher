@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "run_label": "morning",
+    "run_date": "2026-05-16",
+    "total_input": 28,
+    "tier1_high": 10,
+    "tier2_medium": 12,
+    "tier3_low": 6,
+    "selected_for_full_review": 22
+  },
+  "criteria": {
+    "tier1": "High virality, clear false/misleading signal, public impact",
+    "tier2": "Medium virality or partially confirmed, needs verification",
+    "tier3": "Low virality, confirmed/uncontroversial, or administrative data"
+  },
+  "rankings": [
+    {"id": "M001", "tier": 1, "cw_score": 0.95, "reason": "AI-generated fake video about sitting PM — high virality, political impact"},
+    {"id": "M016", "tier": 1, "cw_score": 0.93, "reason": "Hantavirus conspiracy targeting active public health event — dangerous health misinformation"},
+    {"id": "M017", "tier": 1, "cw_score": 0.92, "reason": "Vaccine-hantavirus link claim — dangerous medical misinformation during active outbreak"},
+    {"id": "M018", "tier": 1, "cw_score": 0.90, "reason": "Prophecy-as-proof claim — classic conspiracy pattern, outbreak context amplifies danger"},
+    {"id": "M020", "tier": 1, "cw_score": 0.90, "reason": "AI deepfake audio of serving US President — severe political misinformation"},
+    {"id": "M006", "tier": 1, "cw_score": 0.88, "reason": "OpenAI smartphone — major tech rumor with partial analyst confirmation, needs verification"},
+    {"id": "M007", "tier": 1, "cw_score": 0.87, "reason": "Amazon smartphone — rumor officially denied by executive"},
+    {"id": "M010", "tier": 1, "cw_score": 0.86, "reason": "AI-generated images of geopolitical event — blurs real/fake boundary"},
+    {"id": "M011", "tier": 1, "cw_score": 0.85, "reason": "Fake ICE shooting images — sensitive immigration topic, AI manipulation"},
+    {"id": "M002", "tier": 1, "cw_score": 0.84, "reason": "Digitally altered photo of public figure — fact-checked by Snopes"},
+    {"id": "M022", "tier": 2, "cw_score": 0.78, "reason": "Trump-China state visit — partially confirmed diplomatic activity"},
+    {"id": "M021", "tier": 2, "cw_score": 0.75, "reason": "Florida joyriding ban — under active fact-check"},
+    {"id": "M003", "tier": 2, "cw_score": 0.72, "reason": "Obama coup claim — recurring conspiracy, renewed by Truth Social posts"},
+    {"id": "M004", "tier": 2, "cw_score": 0.70, "reason": "2020 election fraud — perennial claim, newly amplified"},
+    {"id": "M019", "tier": 2, "cw_score": 0.68, "reason": "MMR-autism claim — resurfaced by influencers"},
+    {"id": "M027", "tier": 2, "cw_score": 0.65, "reason": "Hantavirus etymology misinfo — medium virality, health context"},
+    {"id": "M005", "tier": 2, "cw_score": 0.65, "reason": "Hantavirus Hebrew etymology (duplicate angle) — same as M027"},
+    {"id": "M012", "tier": 2, "cw_score": 0.62, "reason": "Sichuan accident rumor — regional impact, verified by Chinese authorities"},
+    {"id": "M013", "tier": 2, "cw_score": 0.60, "reason": "Henan fire old news re-circulated — pattern of reposting old disasters"},
+    {"id": "M014", "tier": 2, "cw_score": 0.58, "reason": "Bridge project rumor — local interest, regulatory action taken"},
+    {"id": "M028", "tier": 2, "cw_score": 0.55, "reason": "Trump 55 posts — confirmed behavior, claims within vary"},
+    {"id": "M024", "tier": 2, "cw_score": 0.52, "reason": "Deepfake statistics — legitimate data claim worth noting"},
+    {"id": "M008", "tier": 3, "cw_score": 0.45, "reason": "RAM shortage impact — confirmed by official source"},
+    {"id": "M015", "tier": 3, "cw_score": 0.42, "reason": "Truck accident rumor — low virality, local"},
+    {"id": "M023", "tier": 3, "cw_score": 0.38, "reason": "Arrest claim — single person, local news"},
+    {"id": "M009", "tier": 3, "cw_score": 0.35, "reason": "Samsung official announcement — not misinformation"},
+    {"id": "M025", "tier": 3, "cw_score": 0.30, "reason": "AI phone hyperbole — media speculation, low harm"},
+    {"id": "M026", "tier": 3, "cw_score": 0.25, "reason": "MIT study citation — legitimate research data"}
+  ]
+}

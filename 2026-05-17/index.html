@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RumorCrusher — 2026-05-17 ☀️ 晨报版</title>
+<style>
+  :root{--bg:#0f1117;--card:#1a1d2e;--border:#2a2d3e;--accent:#f59e0b;--red:#ef4444;--green:#22c55e;--blue:#3b82f6;--yellow:#eab308;--purple:#a855f7;--text:#e2e8f0;--muted:#94a3b8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;font-size:14px}
+  .morning-banner{background:linear-gradient(135deg,#f59e0b22,#f59e0b11);border-bottom:2px solid var(--accent);padding:12px 24px;display:flex;align-items:center;gap:10px;font-weight:600;color:var(--accent)}
+  header{background:var(--card);border-bottom:1px solid var(--border);padding:20px 24px}
+  header h1{font-size:22px;font-weight:700}
+  header p{color:var(--muted);margin-top:4px;font-size:13px}
+  .container{max-width:1200px;margin:0 auto;padding:24px}
+  .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:24px}
+  .stat-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px}
+  .stat-card .label{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+  .stat-card .value{font-size:28px;font-weight:700;margin-top:6px}
+  .stat-card .sub{font-size:11px;color:var(--muted);margin-top:2px}
+  .red{color:var(--red)}.green{color:var(--green)}.blue{color:var(--blue)}.yellow{color:var(--yellow)}.accent{color:var(--accent)}.purple{color:var(--purple)}
+  .section{margin-bottom:24px}
+  .section h2{font-size:15px;font-weight:600;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+  .dist-bar{display:flex;height:30px;border-radius:6px;overflow:hidden;margin-bottom:10px}
+  .dist-bar .seg{display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#fff}
+  .seg.refuted{background:var(--red)}.seg.supported{background:var(--green)}.seg.nee{background:var(--blue)}.seg.ce{background:var(--yellow);color:#111}
+  .dist-legend{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+  .legend-item{display:flex;align-items:center;gap:6px;font-size:12px}
+  .legend-dot{width:10px;height:10px;border-radius:50%}
+  .alert-box{border-radius:8px;padding:14px;margin-bottom:12px}
+  .alert-box h3{font-size:14px;margin-bottom:6px}
+  .alert-box p{color:var(--muted);font-size:13px;line-height:1.5}
+  .alert-red{background:#ef444411;border:1px solid #ef444433}.alert-red h3{color:var(--red)}
+  .alert-blue{background:#3b82f611;border:1px solid #3b82f633}.alert-blue h3{color:var(--blue)}
+  .alert-yellow{background:#eab30811;border:1px solid #eab30833}.alert-yellow h3{color:var(--yellow)}
+  .alert-purple{background:#a855f711;border:1px solid #a855f733}.alert-purple h3{color:var(--purple)}
+  .items-table{width:100%;border-collapse:collapse}
+  .items-table th{background:var(--border);padding:9px 12px;text-align:left;font-size:11px;color:var(--muted);text-transform:uppercase}
+  .items-table td{padding:9px 12px;border-bottom:1px solid var(--border);font-size:13px}
+  .items-table tr:hover td{background:#ffffff08}
+  .badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:11px;font-weight:600}
+  .badge.refuted{background:#ef444422;color:var(--red);border:1px solid #ef444444}
+  .badge.supported{background:#22c55e22;color:var(--green);border:1px solid #22c55e44}
+  .badge.nee{background:#3b82f622;color:var(--blue);border:1px solid #3b82f644}
+  .badge.ce{background:#eab30822;color:var(--yellow);border:1px solid #eab30844}
+  .badge.critical{background:#ef444433;color:#fca5a5}
+  .badge.high{background:#f9731633;color:#fdba74}
+  .badge.medium{background:#eab30833;color:#ca8a04}
+  .badge.low{background:#6b728033;color:var(--muted)}
+  .badge.info{background:#3b82f633;color:#93c5fd}
+  .new-badge{display:inline-block;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700;background:#a855f733;color:var(--purple);border:1px solid #a855f744;margin-left:4px}
+  .delta-box{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px;margin-bottom:16px}
+  .delta-box h3{font-size:13px;color:var(--accent);margin-bottom:10px}
+  .delta-row{display:flex;justify-content:space-between;font-size:12px;padding:3px 0;border-bottom:1px solid var(--border)}
+  .delta-row:last-child{border-bottom:none}
+  .delta-val{font-weight:600}
+  .up{color:var(--green)}.down{color:var(--red)}
+  .footer{text-align:center;color:var(--muted);font-size:12px;padding:24px;border-top:1px solid var(--border)}
+  .health-score{font-size:48px;font-weight:800;color:var(--green)}
+</style>
+</head>
+<body>
+<div class="morning-banner">☀️ 晨报版 — 2026-05-17 · 手动触发 · 批次 015938</div>
+<header>
+  <h1>🔍 RumorCrusher Dashboard</h1>
+  <p>2026-05-17 · 晨报版 · Pipeline v0.4 · 采集26条 / 精审21条</p>
+</header>
+<div class="container">
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="label">采集条目</div><div class="value accent">26</div><div class="sub">目标≥20 ✅</div></div>
+    <div class="stat-card"><div class="label">精审条目</div><div class="value blue">21</div><div class="sub">Tier 1+2</div></div>
+    <div class="stat-card"><div class="label">已驳斥</div><div class="value red">10</div><div class="sub">Refuted · 47.6%</div></div>
+    <div class="stat-card"><div class="label">有据可查</div><div class="value green">6</div><div class="sub">Supported · 28.6%</div></div>
+    <div class="stat-card"><div class="label">待核实率 UnR</div><div class="value yellow">23.8%</div><div class="sub">↓ 3.5pp vs昨晨</div></div>
+    <div class="stat-card"><div class="label">健康评分</div><div class="health-score">94</div><div class="sub">/ 100 · ↑2</div></div>
+  </div>
+
+  <div class="section">
+    <h2>📊 AVeriTeC 标签分布</h2>
+    <div class="dist-bar">
+      <div class="seg refuted" style="width:47.6%">Refuted 47.6%</div>
+      <div class="seg supported" style="width:28.6%">Supp 28.6%</div>
+      <div class="seg nee" style="width:14.3%">NEE 14.3%</div>
+      <div class="seg ce" style="width:9.5%">CE 9.5%</div>
+    </div>
+    <div class="dist-legend">
+      <div class="legend-item"><div class="legend-dot" style="background:var(--red)"></div>Refuted 10条</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div>Supported 6条</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div>NotEnoughEvidence 3条</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--yellow)"></div>ConflictingEvidence 2条</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📈 与昨晨对比（2026-05-16）</h2>
+    <div class="delta-box">
+      <h3>📊 指标趋势</h3>
+      <div class="delta-row"><span>采集条数</span><span class="delta-val">28 → 26</span></div>
+      <div class="delta-row"><span>Refuted率</span><span class="delta-val">50.0% → 47.6%</span></div>
+      <div class="delta-row"><span>Supported率</span><span class="delta-val up">22.7% → 28.6% ↑</span></div>
+      <div class="delta-row"><span>UnR</span><span class="delta-val up">27.3% → 23.8% ↓改善</span></div>
+      <div class="delta-row"><span>健康评分</span><span class="delta-val up">92 → 94 ↑</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🚨 今日关键警报</h2>
+    <div class="alert-box alert-red">
+      <h3>🦠 汉坦病毒阴谋论集群 — 今日升至5条，新增反犹太变体 <span class="new-badge">NEW</span></h3>
+      <p>WHO确认：11例/3死，CFR 27%，病原Andes病毒。阴谋论涵盖：选举骗局 · 以色列制造 · 药厂牟利 · 新冠级传播 · 下一个新冠。五条相互强化，反犹太叙事变体为今日新增危险分支。</p>
+    </div>
+    <div class="alert-box alert-purple">
+      <h3>🎭 中期选举深伪广告升级：全国级政党机构入场 <span class="new-badge">ESCALATION</span></h3>
+      <p>NRSC（全国共和党参议院委员会）直接制作得州参议院候选人塔拉里科深伪内容，标志威胁从地方PAC升级至全国级政党机构。肯塔基州两起PAC深伪广告同步确认。无联邦法律管制。</p>
+    </div>
+    <div class="alert-box alert-yellow">
+      <h3>🤝 美中贸易声明真实性争议</h3>
+      <p>特朗普称已与中方进行关税直接磋商；中国外交部称其为"虚假信息"。后续协议被记者报道"未达预期"。外交声明真实性核查难度极高。</p>
+    </div>
+    <div class="alert-box alert-blue">
+      <h3>🗳️ 2026选举虚假信息生态预警</h3>
+      <p>专家一致：选举舞弊影响结果"不可能"；但75%预计落选者将声称舞弊。AI深伪广告已进入工业规模部署阶段。选举信息生态系统正处于历史性压力下。</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📋 精审条目（21条）</h2>
+    <table class="items-table">
+      <thead><tr><th>ID</th><th>声明摘要</th><th>类别</th><th>AVeriTeC</th><th>严重度</th><th>置信度</th></tr></thead>
+      <tbody>
+        <tr><td>N003</td><td>汉坦疫情是选举骗局</td><td>健康阴谋</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge critical">Critical</span></td><td>0.97</td></tr>
+        <tr><td>N004</td><td>病毒由以色列制造/希伯来名称 <span class="new-badge">NEW</span></td><td>健康/反犹阴谋</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge critical">Critical</span></td><td>0.97</td></tr>
+        <tr><td>N005</td><td>大药厂制造汉坦病毒牟利</td><td>健康阴谋</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge critical">Critical</span></td><td>0.96</td></tr>
+        <tr><td>N017</td><td>汉坦病毒像新冠一样人传人</td><td>健康</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge critical">Critical</span></td><td>0.95</td></tr>
+        <tr><td>N009</td><td>NRSC制作塔拉里科深伪（全国级） <span class="new-badge">ESCALATION</span></td><td>政治/深伪</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge critical">Critical</span></td><td>0.93</td></tr>
+        <tr><td>N012</td><td>选举舞弊将影响2026中期选举结果</td><td>政治/选举</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge critical">Critical</span></td><td>0.94</td></tr>
+        <tr><td>N001</td><td>卡尼嘲讽特朗普 AI视频（持续传播）</td><td>政治/深伪</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge critical">Critical</span></td><td>0.96</td></tr>
+        <tr><td>N007</td><td>肯塔基深伪广告：盖洛林逃离特朗普</td><td>政治/深伪</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge high">High</span></td><td>0.91</td></tr>
+        <tr><td>N008</td><td>肯塔基深伪广告：马西与AOC手牵手</td><td>政治/深伪</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge high">High</span></td><td>0.91</td></tr>
+        <tr><td>N010</td><td>特朗普称美中已进行关税直接磋商</td><td>政治/贸易</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge high">High</span></td><td>0.88</td></tr>
+        <tr><td>N013</td><td>大量非法选民将在中期选举投票</td><td>政治/选举</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge high">High</span></td><td>0.95</td></tr>
+        <tr><td>N006</td><td>汉坦病毒是"下一个新冠"</td><td>健康/夸大</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge high">High</span></td><td>0.90</td></tr>
+        <tr><td>N011</td><td>特朗普中美协议"达到预期"</td><td>政治/贸易</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge medium">Medium</span></td><td>0.82</td></tr>
+        <tr><td>N021</td><td>联邦法律管制AI政治广告（误传）</td><td>政治/法律</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge medium">Medium</span></td><td>0.92</td></tr>
+        <tr><td>N015</td><td>5月存款计息新规（网传）</td><td>金融（国内）</td><td><span class="badge refuted">Refuted</span></td><td><span class="badge medium">Medium</span></td><td>0.88</td></tr>
+        <tr><td>N019</td><td>美以袭伊朗后社媒出现前所未有AI假图</td><td>政治/AI</td><td><span class="badge supported">Supported</span></td><td><span class="badge high">High</span></td><td>0.85</td></tr>
+        <tr><td>N002</td><td>WHO确认汉坦：11例/3死/CFR 27%</td><td>健康/事实</td><td><span class="badge supported">Supported</span></td><td><span class="badge info">Info</span></td><td>0.98</td></tr>
+        <tr><td>N024</td><td>2026首次工业规模深伪选举广告</td><td>政治/AI趋势</td><td><span class="badge supported">Supported</span></td><td><span class="badge medium">Medium</span></td><td>0.90</td></tr>
+        <tr><td>N023</td><td>75%专家预计落选者将声称舞弊</td><td>政治/专家预测</td><td><span class="badge supported">Supported</span></td><td><span class="badge info">Info</span></td><td>0.85</td></tr>
+        <tr><td>N018</td><td>WHO工作假说：陆地感染+船上有限传播</td><td>健康/事实</td><td><span class="badge supported">Supported</span></td><td><span class="badge info">Info</span></td><td>0.88</td></tr>
+        <tr><td>N022</td><td>美国"贸易委员会"举措标志放弃改变中国</td><td>政治/分析</td><td><span class="badge ce">ConflictingEvidence</span></td><td><span class="badge low">Low</span></td><td>0.55</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🔬 今日新增模式</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px">
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px">
+        <div style="font-size:12px;font-weight:600;color:var(--purple);margin-bottom:4px">antisemitic_conspiracy_grafting <span class="new-badge">NEW</span></div>
+        <div style="font-size:20px;font-weight:700">1</div>
+        <p style="font-size:11px;color:var(--muted);margin-top:4px">健康事件与反犹太/反以太叙事强行关联</p>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px">
+        <div style="font-size:12px;font-weight:600;color:var(--purple);margin-bottom:4px">institutional_deepfake <span class="new-badge">NEW</span></div>
+        <div style="font-size:20px;font-weight:700">1</div>
+        <p style="font-size:11px;color:var(--muted);margin-top:4px">全国级政党机构主导制作深伪内容</p>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px">
+        <div style="font-size:12px;font-weight:600;color:var(--accent);margin-bottom:4px">health_conspiracy_cluster</div>
+        <div style="font-size:20px;font-weight:700">5</div>
+        <p style="font-size:11px;color:var(--muted);margin-top:4px">汉坦病毒集群扩至5条（昨3条）</p>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px">
+        <div style="font-size:12px;font-weight:600;color:var(--accent);margin-bottom:4px">election_deepfake</div>
+        <div style="font-size:20px;font-weight:700">3</div>
+        <p style="font-size:11px;color:var(--muted);margin-top:4px">2026中期选举确认深伪广告集群</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="footer">
+  RumorCrusher v0.4 · 晨报版 · 2026-05-17 · 批次015938 · 21条精审 · 健康评分 94/100<br>
+  ⚠️ workspace mount不可用，outputs fallback；GitHub Pages未更新
+</div>
+</body>
+</html>
