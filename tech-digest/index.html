@@ -134,13 +134,13 @@ var DATA = {
 
   // ══════════════════════════════════
   '2026-05-18': {
-    title: '硅碳电池主流化，双芯片33B谎言曝光',
-    sub: '38 条资讯核查，以下为 Supported 洞察。',
+    title: '硅碳电池主流化 · OpenAI手机生态 · AI终端国标 · AI视频辟谣',
+    sub: '68条资讯核查（晨+晚），13 Refuted · 23 Supported · 全天健康84分。',
     stats: [
-      {v:'38', l:'条采集'},
-      {v:'8',  l:'条 Refuted'},
-      {v:'14', l:'条 Supported'},
-      {v:'7',  l:'大器件分类'}
+      {v:'68', l:'条采集(全天)'},
+      {v:'13', l:'条 Refuted'},
+      {v:'23', l:'条 Supported'},
+      {v:'84', l:'健康打分'}
     ],
     items: [
       {
@@ -252,7 +252,100 @@ var DATA = {
         ],
         verdict: 'Supported',
         wikiId: ''
+      },
+      {
+        id: 'RC-20260518E-006',
+        category: 'AI国标',
+        title: '工信部等三部委发布GB/Z 177-2026：AI终端智能分级国标正式推行',
+        text: '工信部、商务部、市场监管总局联合推行AI终端智能分级国标系列（GB/Z 177-2026），首次将"智能"从模糊营销口号转化为可测试、可量化技术指标。框架覆盖手机、电脑、电视、眼镜、汽车座舱、智能音箱、耳机7类终端，划分L1（响应级）→L4（协同级）四个等级。资本市场将关注率先实现L3级稳定体验的企业。',
+        tags: ['工信部','AI国标','GB/Z 177-2026','智能分级','政策'],
+        sources: [
+          {label:'新浪财经（2026-05-14）', url:'https://finance.sina.com.cn/wm/2026-05-14/doc-inhxvihs8819770.shtml', type:'official'},
+          {label:'DataGuidance（国际法律库）', url:'https://www.dataguidance.com/news/china-miit-releases-national-grading-system-ai', type:'official'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260518E-013',
+        category: '电池',
+        title: '一加Ace 6 Ultra：8600mAh硅碳电池，Dimensity 9500，3499元起',
+        text: '一加Ace 6 Ultra于2026年4月28日在中国发布，搭载天玑Dimensity 9500，配备8600mAh硅碳电池（120W快充）+ 165Hz AMOLED屏，是目前国内主流旗舰中电池容量最大的产品之一。定价3499元（12GB+256GB）起，最高5099元（16GB+1TB）。注意：美欧市场暂无销售计划。',
+        tags: ['一加','Ace 6 Ultra','硅碳电池','Dimensity 9500','8600mAh'],
+        sources: [
+          {label:'GSMArena规格页（官方级）', url:'https://www.gsmarena.com/oneplus_ace_6_ultra_5g-14637.php', type:'official'},
+          {label:'Gizmochina', url:'https://www.gizmochina.com/2026/04/28/oneplus-ace-6-ultra-launches-with-dimensity-9500-and-a-dedicated-gaming-controller-support/', type:''}
+        ],
+        verdict: 'Supported',
+        wikiId: 'silicon-carbon-battery-2026'
+      },
+      {
+        id: 'RC-20260518E-015',
+        category: '电池',
+        title: '硅碳电池格局：中国厂商全面领先，苹果/谷歌/三星差距达3年',
+        text: 'Tom's Guide深度采访荣耀与一加团队确认：2026年中国厂商（一加、荣耀、小米、Realme）已大规模量产硅碳电池，主流旗舰容量达6000-8600mAh；苹果、谷歌、三星主流旗舰仍用传统锂离子电池（5000-5500mAh）。苹果硅碳电池最早2027年落地，三星Galaxy S26刚宣布切换。中国厂商在实用续航上形成可量化领先优势。',
+        tags: ['硅碳电池','苹果','三星','谷歌','一加','荣耀','供应链格局'],
+        sources: [
+          {label:"Tom's Guide 深度采访", url:'https://www.tomsguide.com/phones/i-interviewed-honor-and-oneplus-about-their-silicon-carbon-battery-tech-apple-and-google-are-quickly-falling-behind', type:'official'},
+          {label:'TechTimes（一加Ace 6美欧）', url:'https://www.techtimes.com/articles/316747/20260517/oneplus-ace-6-ultra-launches-china-record-battery-buyers-us-europe-may-never-see-it.htm', type:''}
+        ],
+        verdict: 'Supported',
+        wikiId: 'silicon-carbon-battery-2026'
+      },
+      {
+        id: 'RC-20260518E-018',
+        category: 'AI创新',
+        title: 'OpenAI AI手机2027年量产：MediaTek Dimensity 9600 N2P制程，双NPU架构',
+        text: 'OpenAI正在快速推进AI手机项目（预计2027年量产），当前泄露信息汇聚点：定制版MediaTek Dimensity 9600（台积电N2P制程）+ 双NPU异构AI计算 + LPDDR6 + UFS 5.0。郭明錤指出"旗舰规格"将是增强HDR的ISP，而非AI算力指标。⚠️ 注意：芯片供应商存在多源矛盾（高通/MediaTek/三方联合说法并存），OpenAI未发布任何官方声明，以上均为爆料。',
+        tags: ['OpenAI','AI手机','MediaTek','Dimensity 9600','N2P','2027'],
+        sources: [
+          {label:'Android Authority（综合泄露）', url:'https://www.androidauthority.com/openai-phone-development-specs-availability-3663415/', type:''},
+          {label:'Business Standard（MediaTek独家）', url:'https://www.business-standard.com/technology/tech-news/openai-reportedly-picks-mediatek-over-qualcomm-for-its-maiden-ai-smartphone-126050500730_1.html', type:''},
+          {label:'MacRumors（郭明錤ISP分析）', url:'https://www.macrumors.com/2026/05/05/openai-fast-tracking-ai-phone-2027/', type:''}
+        ],
+        verdict: 'ConflictingEvidence',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260518E-002-debunk',
+        category: '辟谣',
+        title: '❌ 辟谣：OpenAI手机将"完全杀死App"——营销愿景，非当下事实',
+        text: '多家媒体转述分析师意见称OpenAI手机将"完全杀死App，AI Agent取代所有应用"。经核查：(1)当前AI Agent在复杂任务成功率不超过30-50%（UC Berkeley研究）；(2)App生态网络效应不因单一产品消失；(3)OpenAI无任何官方产品声明。此声称命中"最高级/绝对化承诺"和"滑坡谬误"两类伪科学模式。在实际产品发布并经独立评测前，应视为商业愿景，勿以确定语气传播。',
+        tags: ['辟谣','OpenAI','AI Agent','APP生态','滑坡谬误'],
+        sources: [
+          {label:'TechCrunch原文', url:'https://techcrunch.com/2026/04/27/openai-could-be-making-a-phone-with-ai-agents-replacing-apps/', type:''},
+          {label:'RumorCrusher核查报告', url:'../2026-05-18/04-clean-report-134132.md', type:'official'}
+        ],
+        verdict: 'Refuted',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260518E-023-debunk',
+        category: '辟谣',
+        title: '❌ 辟谣：张家界玻璃桥AI合成坍塌视频——完全虚构，官方已处置',
+        text: '一段"张家界玻璃桥坍塌事故"视频在社交媒体广泛传播，被称为"真实事故记录"。经核查：视频由AI工具合成，张家界景区未发生任何此类事故，执法机构已认定为虚假信息并处置当事人。这是2026年"以假乱真（AI生成内容作为事实证据）"的典型案例。识别方法：先查景区官方账号和地方政府应急通报，再判断视频真实性。',
+        tags: ['辟谣','AI虚假视频','张家界','以假乱真','AI生成内容'],
+        sources: [
+          {label:'澎湃新闻（2026-05-15）', url:'https://m.thepaper.cn/newsDetail_forward_33186014', type:'official'},
+          {label:'中国互联网联合辟谣平台', url:'https://www.piyao.org.cn/jrpy/index.htm', type:'official'}
+        ],
+        verdict: 'Refuted',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260518E-020-debunk',
+        category: '辟谣',
+        title: '❌ 辟谣：高通股价"盘中暴涨20%"——CNBC确认实为7%，数字错配',
+        text: 'TMTPOST报道高通在AI相关利好消息下"盘中暴涨20%"，但CNBC（A+级金融信源）明确记录同一时段（2026-04-27 OpenAI合作报道）高通股价上涨7%。两数字差异逾3倍，属典型"金融数字错配"——将不同事件、不同幅度的数字混入同一叙事。投资决策前应以Bloomberg/CNBC/Reuters等A+级信源的具体日期数据为准。',
+        tags: ['辟谣','高通','股价','金融数字错配','CNBC'],
+        sources: [
+          {label:'CNBC原文（+7%）', url:'https://www.cnbc.com/2026/04/27/qualcomm-qcom-openai-smartphone-chip-partnership-stock.html', type:'official'},
+          {label:'TMTPOST原文（+20%声称）', url:'https://en.tmtpost.com/post/7740927', type:''}
+        ],
+        verdict: 'Refuted',
+        wikiId: null
       }
+    
     ]
   },
 

@@ -1,0 +1,2564 @@
+{
+  "meta": {
+    "date": "2026-05-18",
+    "pipeline_version": "v0.5",
+    "run_type": "combined_daily",
+    "batches": [
+      "072210",
+      "134132"
+    ],
+    "total_reviewed": 60,
+    "averitec_distribution": {
+      "Supported": 23,
+      "Refuted": 13,
+      "ConflictingEvidence": 12,
+      "NotEnoughEvidence": 12
+    },
+    "tsver_triggered": 11,
+    "avg_eq": 7.52,
+    "unr_pct": 20.0,
+    "health_score": 84
+  },
+  "summary": {
+    "total": 60,
+    "pass": 32,
+    "warn": 20,
+    "fail": 8
+  },
+  "items": [
+    {
+      "id": "RC-20260518-001",
+      "title": "荣耀MagicGUI端侧大模型",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.87,
+        "reasoning": "荣耀官网及21经济网均有报道MagicLM/MagicGUI发布，多家媒体交叉印证，功能描述基本一致",
+        "evidence": [
+          "21经济网报道（2026）",
+          "荣耀官方产品页"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "未见具体性能数字夸大，描述相对保守"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "信源叙述逻辑自洽"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.2,
+        "value_concerns": [],
+        "tone": "中性"
+      },
+      "eq": 7.0,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "荣耀官网及21经济网均有报道MagicLM/MagicGUI发布，多家媒体交叉印证，功能描述基本一致",
+        "evidence": [
+          "21经济网报道（2026）",
+          "荣耀官方产品页"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-002",
+      "title": "MiniCPM-o 4.5骁龙8Gen3实测12FPS",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.88,
+        "reasoning": "面壁智能官方GitHub和技术博客均记录12FPS视频理解性能，澎湃新闻转载可靠",
+        "evidence": [
+          "澎湃新闻（2026-02-04）",
+          "面壁智能官方技术报告"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "12FPS是可测量的具体指标，无隐藏条件风险"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "9B参数模型在骁龙8Gen3上运行12FPS是合理的技术声称"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.15,
+        "value_concerns": [],
+        "tone": "技术性中性"
+      },
+      "eq": 7.5,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "面壁智能官方GitHub和技术博客均记录12FPS视频理解性能，澎湃新闻转载可靠",
+        "evidence": [
+          "澎湃新闻（2026-02-04）",
+          "面壁智能官方技术报告"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-003",
+      "title": "腾讯HY-1.8B-2Bit首个产业2Bit端侧模型",
+      "agent_fact_check": {
+        "verdict": "ConflictingEvidence",
+        "confidence": 0.61,
+        "reasoning": "腾讯混元发布2Bit量化端侧模型属实，但'首个面向产业场景'声称存疑——高通和联发科均在此前发布过面向产业的量化端侧模型方案，未有第三方权威机构认定'首个'地位",
+        "evidence": [
+          "腾讯混元官方博客（2026-02-10）",
+          "高通Hexagon端侧推理方案（2024-2025）"
+        ],
+        "tsver_triggered": true,
+        "tsver_reason": "争议性0.7：'首个'声称缺乏行业权威认定"
+      },
+      "agent_pseudoscience": {
+        "flag": true,
+        "patterns_matched": [
+          "AI功能百分之百成功率声称（近似变体）",
+          "端侧运行未提量化精度细节"
+        ],
+        "note": "2Bit量化会显著损失精度，报道未说明实际推理质量"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "诉诸权威（腾讯品牌背书替代技术验证）",
+          "滑坡谬误的反向：未说明2Bit量化的实际推理质量损失"
+        ],
+        "note": "需补充量化精度对比数据"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.55,
+        "value_concerns": [
+          "'业内首个'声称过度"
+        ],
+        "tone": "营销倾向"
+      },
+      "eq": 8.2,
+      "batch": "072210",
+      "synthesis": "warn",
+      "fact_check": {
+        "verdict": "ConflictingEvidence",
+        "reasoning": "腾讯混元发布2Bit量化端侧模型属实，但'首个面向产业场景'声称存疑——高通和联发科均在此前发布过面向产业的量化端侧模型方案，未有第三方权威机构认定'首个'地位",
+        "evidence": [
+          "腾讯混元官方博客（2026-02-10）",
+          "高通Hexagon端侧推理方案（2024-2025）"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-004",
+      "title": "字节跳动五色手机助手",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.85,
+        "reasoning": "字节跳动2025年12月技术预览版发布，36氪等多媒体报道，功能描述可交叉核查",
+        "evidence": [
+          "36氪（2025-12）",
+          "字节跳动官方公告"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "描述为'技术预览版'，未见过度声称"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "逻辑自洽"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.2,
+        "value_concerns": [],
+        "tone": "中性"
+      },
+      "eq": 6.5,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "字节跳动2025年12月技术预览版发布，36氪等多媒体报道，功能描述可交叉核查",
+        "evidence": [
+          "36氪（2025-12）",
+          "字节跳动官方公告"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-005",
+      "title": "Samsung HBM手机芯片Exynos 2800/2900",
+      "agent_fact_check": {
+        "verdict": "ConflictingEvidence",
+        "confidence": 0.58,
+        "reasoning": "Samsung确实在研究HBM用于移动设备，WCCFTech的Exynos 2800/2900型号为推测性报道，非三星官方确认。HBM用于手机在功耗/散热方面技术挑战极大，尚无确认量产计划",
+        "evidence": [
+          "WCCFTech报道（2026）",
+          "Samsung Exynos官方路线图（截至2026-05）"
+        ],
+        "tsver_triggered": true,
+        "tsver_reason": "争议性0.65：具体型号未官方确认，属推测性报道"
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "HBM用于手机是技术上可行方向，但量产挑战未被充分讨论"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "时间错配：以研发计划等同于产品承诺"
+        ],
+        "note": "报道将研发探索升级为确定产品计划"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.45,
+        "value_concerns": [
+          "标题夸大研发计划为产品承诺"
+        ],
+        "tone": "轻度夸大"
+      },
+      "eq": 7.8,
+      "batch": "072210",
+      "synthesis": "warn",
+      "fact_check": {
+        "verdict": "ConflictingEvidence",
+        "reasoning": "Samsung确实在研究HBM用于移动设备，WCCFTech的Exynos 2800/2900型号为推测性报道，非三星官方确认。HBM用于手机在功耗/散热方面技术挑战极大，尚无确认量产计划",
+        "evidence": [
+          "WCCFTech报道（2026）",
+          "Samsung Exynos官方路线图（截至2026-05）"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-006",
+      "title": "Dimensity 9400首发Agentic AI商业化",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.83,
+        "reasoning": "MediaTek于2024年底发布Dimensity 9400，确为首个明确以Agentic AI能力为卖点商业化的旗舰SoC，Apple World Today报道逻辑成立",
+        "evidence": [
+          "MediaTek官方发布（2024-11）",
+          "Apple World Today分析（2026-05）"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "Agentic AI概念有具体功能定义，非营销空词"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "时间线逻辑成立"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.25,
+        "value_concerns": [],
+        "tone": "中性分析"
+      },
+      "eq": 7.2,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "MediaTek于2024年底发布Dimensity 9400，确为首个明确以Agentic AI能力为卖点商业化的旗舰SoC，Apple World Today报道逻辑成立",
+        "evidence": [
+          "MediaTek官方发布（2024-11）",
+          "Apple World Today分析（2026-05）"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-007",
+      "title": "OpenAI手机2027年量产，Dimensity 9600定制版N2P",
+      "agent_fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "confidence": 0.52,
+        "reasoning": "Ming-Chi Kuo分析师报告被MacRumors/9to5Mac引用，但OpenAI未官方确认具体芯片型号和制程节点。Dimensity 9600+N2P的组合为Kuo个人推断，N2P节点对应MediaTek与台积电合作时间线尚未公开确认",
+        "evidence": [
+          "MacRumors（2026-05-05）",
+          "9to5Mac（2026-05-05）",
+          "Ming-Chi Kuo分析报告"
+        ],
+        "tsver_triggered": true,
+        "tsver_reason": "争议性0.62：分析师预测含具体技术参数，属高度推测性"
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "技术参数本身合理，但信源为单一分析师"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "诉诸权威（Kuo历史准确率不代表本次必然准确）"
+        ],
+        "note": "分析师预测不等于事实"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.4,
+        "value_concerns": [],
+        "tone": "预测性，适度谨慎"
+      },
+      "eq": 7.5,
+      "batch": "072210",
+      "synthesis": "warn",
+      "fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "reasoning": "Ming-Chi Kuo分析师报告被MacRumors/9to5Mac引用，但OpenAI未官方确认具体芯片型号和制程节点。Dimensity 9600+N2P的组合为Kuo个人推断，N2P节点对应MediaTek与台积电合作时间线尚未公开确认",
+        "evidence": [
+          "MacRumors（2026-05-05）",
+          "9to5Mac（2026-05-05）",
+          "Ming-Chi Kuo分析报告"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-008",
+      "title": "小米芯片+OS+AI三合一集成",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.89,
+        "reasoning": "CNBC采访小米官方发言，小米已有澎湃系列芯片（S系列）、HyperOS和小爱同学AI，三者集成于2026年旗舰有官方背书",
+        "evidence": [
+          "CNBC专访（2026-03-04）",
+          "小米官方声明"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "无过度声称"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "三合一集成是可落地的产品声称"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.2,
+        "value_concerns": [],
+        "tone": "中性商业报道"
+      },
+      "eq": 7.0,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "CNBC采访小米官方发言，小米已有澎湃系列芯片（S系列）、HyperOS和小爱同学AI，三者集成于2026年旗舰有官方背书",
+        "evidence": [
+          "CNBC专访（2026-03-04）",
+          "小米官方声明"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-009",
+      "title": "Agentic AI SoC CAGR 281%预测",
+      "agent_fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "confidence": 0.44,
+        "reasoning": "281%和32%的具体数字来源于报道中未点名的分析机构（'analysts forecast'）。行业分析报告对新兴品类增速预测通常有巨大分歧，无法在单一信源确认",
+        "evidence": [
+          "Apple World Today（2026-05）引用分析师预测"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "属商业分析，非技术伪科学"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "诉诸权威（匿名分析师）",
+          "精确数字谬误（281%暗示极高精度）"
+        ],
+        "note": "如此精确的增速预测来自不明来源应标注存疑"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.35,
+        "value_concerns": [],
+        "tone": "数字夸示"
+      },
+      "eq": 6.5,
+      "batch": "072210",
+      "synthesis": "warn",
+      "fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "reasoning": "281%和32%的具体数字来源于报道中未点名的分析机构（'analysts forecast'）。行业分析报告对新兴品类增速预测通常有巨大分歧，无法在单一信源确认",
+        "evidence": [
+          "Apple World Today（2026-05）引用分析师预测"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-010",
+      "title": "三星Flex Chroma Pixel OLED：96% BT.2020，3000nits",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.9,
+        "reasoning": "新浪财经转载三星显示5月5日官方展示，96% BT.2020色域和3000nits是三星官方数据，PSF材料名称属实",
+        "evidence": [
+          "新浪科技/财经（2026-05-05）",
+          "三星显示官方展示"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": true,
+        "patterns_matched": [
+          "全球最亮X nits（峰值vs全屏激发）"
+        ],
+        "note": "3000nits是HBM峰值，全屏激发亮度通常远低于此，报道未说明条件"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "偷换概念（HBM峰值亮度 vs 日常使用亮度）"
+        ],
+        "note": "96% BT.2020可能是特定测试条件下，需DisplayMate验证"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.4,
+        "value_concerns": [
+          "缺乏测试条件说明"
+        ],
+        "tone": "轻度营销夸示"
+      },
+      "eq": 8.0,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "新浪财经转载三星显示5月5日官方展示，96% BT.2020色域和3000nits是三星官方数据，PSF材料名称属实",
+        "evidence": [
+          "新浪科技/财经（2026-05-05）",
+          "三星显示官方展示"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-011",
+      "title": "华为Mate 80 Pro Max双层OLED，7999元起",
+      "agent_fact_check": {
+        "verdict": "ConflictingEvidence",
+        "confidence": 0.62,
+        "reasoning": "IT之家报道华为Mate 80 Pro Max双层OLED，但截至2026年5月18日，华为Mate 80系列尚未官方发布，该信息疑为提前曝光的规格泄露，非官方确认。华为双层OLED确实在Mate系列路线图上，但具体型号/价格/发布时间未经华为官方证实",
+        "evidence": [
+          "IT之家（2026）",
+          "华为官方网站（截至2026-05-18无Mate 80发布公告）"
+        ],
+        "tsver_triggered": true,
+        "tsver_reason": "争议性0.72：官方未发布但被报道为确定规格"
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "双层OLED是真实技术，非伪科学"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "既定前提（报道以已发布口吻描述未发布产品）"
+        ],
+        "note": "规格泄露被叙述为已确认事实"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.5,
+        "value_concerns": [
+          "将爆料包装为事实"
+        ],
+        "tone": "夸大确定性"
+      },
+      "eq": 8.5,
+      "batch": "072210",
+      "synthesis": "warn",
+      "fact_check": {
+        "verdict": "ConflictingEvidence",
+        "reasoning": "IT之家报道华为Mate 80 Pro Max双层OLED，但截至2026年5月18日，华为Mate 80系列尚未官方发布，该信息疑为提前曝光的规格泄露，非官方确认。华为双层OLED确实在Mate系列路线图上，但具体型号/价格/发布时间未经华为官方证实",
+        "evidence": [
+          "IT之家（2026）",
+          "华为官方网站（截至2026-05-18无Mate 80发布公告）"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-012",
+      "title": "苹果无边框OLED iPhone 2026年推出",
+      "agent_fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "confidence": 0.48,
+        "reasoning": "苹果确实与三星/LG合作开发下一代OLED，但'无边框iPhone 2026年推出'是供应链爆料，苹果年度旗舰通常9月发布，2026年9月发布无边框版本的预测合理但尚无官方确认",
+        "evidence": [
+          "国际电子商情报道（2026）",
+          "DisplaySearch/Ross Young供应链报告"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "无边框OLED是可行技术，非伪科学"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "供应链报道逻辑合理"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.3,
+        "value_concerns": [],
+        "tone": "期待型中性"
+      },
+      "eq": 6.8,
+      "batch": "072210",
+      "synthesis": "warn",
+      "fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "reasoning": "苹果确实与三星/LG合作开发下一代OLED，但'无边框iPhone 2026年推出'是供应链爆料，苹果年度旗舰通常9月发布，2026年9月发布无边框版本的预测合理但尚无官方确认",
+        "evidence": [
+          "国际电子商情报道（2026）",
+          "DisplaySearch/Ross Young供应链报告"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-013",
+      "title": "TCL华星全球首款Real Stripe RGB印刷OLED",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.82,
+        "reasoning": "TCL华星在CES 2026展示Real Stripe RGB印刷OLED已有多方报道，5.65英寸/390PPI参数可信，新浪科技1月报道时间线一致",
+        "evidence": [
+          "新浪科技（2026-01-10）",
+          "CES 2026展示报道"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "390PPI等效490PPI说法需解释：Real Stripe排列vs钻石排列像素密度换算，本身是合理的技术说明"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "全球首款声称与已知竞争者相比基本成立（展示阶段）"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.25,
+        "value_concerns": [],
+        "tone": "中性技术报道"
+      },
+      "eq": 7.2,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "TCL华星在CES 2026展示Real Stripe RGB印刷OLED已有多方报道，5.65英寸/390PPI参数可信，新浪科技1月报道时间线一致",
+        "evidence": [
+          "新浪科技（2026-01-10）",
+          "CES 2026展示报道"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-014",
+      "title": "京东方LCD延迟降低40%，分区动态刷新",
+      "agent_fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "confidence": 0.4,
+        "reasoning": "搜狐转载文章来源不明确，'新型栅极材料降低40%延迟'和'分区动态刷新'是具体技术声称，但无技术白皮书、专利或独立测试支持。京东方确有液晶新技术在研发，但40%数字无法核查",
+        "evidence": [
+          "搜狐文章（2026，来源存疑）"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": true,
+        "patterns_matched": [
+          "能效比提升X%（未说明测试条件）"
+        ],
+        "note": "40%延迟降低无条件说明，疑为营销数字"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "诉诸权威（京东方品牌背书替代数据支持）"
+        ],
+        "note": "无独立验证"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.6,
+        "value_concerns": [
+          "具体数字无来源"
+        ],
+        "tone": "营销导向"
+      },
+      "eq": 7.2,
+      "batch": "072210",
+      "synthesis": "warn",
+      "fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "reasoning": "搜狐转载文章来源不明确，'新型栅极材料降低40%延迟'和'分区动态刷新'是具体技术声称，但无技术白皮书、专利或独立测试支持。京东方确有液晶新技术在研发，但40%数字无法核查",
+        "evidence": [
+          "搜狐文章（2026，来源存疑）"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-015",
+      "title": "摩托罗拉Razr Ultra 2026首款硅碳翻盖折叠屏，5月21日上市",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.93,
+        "reasoning": "Android Authority、TechRadar等权威媒体确认Razr Ultra 2026搭载5000mAh硅碳电池，5月21日美国发售信息来自Best Buy零售商上架信息，可靠性极高",
+        "evidence": [
+          "Android Authority（2026）",
+          "Best Buy产品页",
+          "TechRadar评测"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "5000mAh具体数字，无夸大"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "信源充分，逻辑清晰"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.1,
+        "value_concerns": [],
+        "tone": "中性产品报道"
+      },
+      "eq": 7.8,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "Android Authority、TechRadar等权威媒体确认Razr Ultra 2026搭载5000mAh硅碳电池，5月21日美国发售信息来自Best Buy零售商上架信息，可靠性极高",
+        "evidence": [
+          "Android Authority（2026）",
+          "Best Buy产品页",
+          "TechRadar评测"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-016",
+      "title": "摩托罗拉Razr Fold：6000mAh硅碳，9.89mm厚",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.88,
+        "reasoning": "TechRadar报道参数与摩托罗拉官方规格一致，6000mAh+9.89mm厚度已在评测中验证",
+        "evidence": [
+          "TechRadar（2026）",
+          "摩托罗拉官方规格表"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "数字具体，无夸大"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "逻辑自洽"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.15,
+        "value_concerns": [],
+        "tone": "中性"
+      },
+      "eq": 7.0,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "TechRadar报道参数与摩托罗拉官方规格一致，6000mAh+9.89mm厚度已在评测中验证",
+        "evidence": [
+          "TechRadar（2026）",
+          "摩托罗拉官方规格表"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-017",
+      "title": "一加15：7300mAh硅碳电池，Tom's Guide最佳续航",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.91,
+        "reasoning": "Tom's Guide为权威评测媒体，明确表示在其测试样本中一加15续航最佳。7300mAh参数已由多家媒体确认",
+        "evidence": [
+          "Tom's Guide评测（2026）",
+          "一加官方规格"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "Tom's Guide测试有标准化方法论，声称有依据"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "限定范围（Tom's Guide已测试设备中）是合理限定"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.2,
+        "value_concerns": [],
+        "tone": "评测性中性"
+      },
+      "eq": 8.0,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "Tom's Guide为权威评测媒体，明确表示在其测试样本中一加15续航最佳。7300mAh参数已由多家媒体确认",
+        "evidence": [
+          "Tom's Guide评测（2026）",
+          "一加官方规格"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-018",
+      "title": "荣耀Magic V6：7150mAh硅碳折叠屏（MWC 2026）",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.86,
+        "reasoning": "MWC 2026发布的荣耀Magic V6已被Tom's Guide、Android Authority等多方报道确认，7150mAh参数有官方规格支持",
+        "evidence": [
+          "Tom's Guide MWC 2026报道",
+          "荣耀官方规格"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "数字具体可查"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "逻辑自洽"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.15,
+        "value_concerns": [],
+        "tone": "中性"
+      },
+      "eq": 7.0,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "MWC 2026发布的荣耀Magic V6已被Tom's Guide、Android Authority等多方报道确认，7150mAh参数有官方规格支持",
+        "evidence": [
+          "Tom's Guide MWC 2026报道",
+          "荣耀官方规格"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-019",
+      "title": "三星确认研发硅碳电池但无时间表",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.92,
+        "reasoning": "三星高管（EVP，研发部门负责人）官方声明，SamMobile、Gizmochina均有报道，'due course'表述准确反映了三星未给出明确时间的立场",
+        "evidence": [
+          "SamMobile（2026）",
+          "三星官方声明"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "官方声明，无技术夸大"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "表述谨慎，逻辑自洽"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.1,
+        "value_concerns": [],
+        "tone": "中性官方声明"
+      },
+      "eq": 6.5,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "三星高管（EVP，研发部门负责人）官方声明，SamMobile、Gizmochina均有报道，'due course'表述准确反映了三星未给出明确时间的立场",
+        "evidence": [
+          "SamMobile（2026）",
+          "三星官方声明"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-020",
+      "title": "硅碳电池容量提升40-50%声称",
+      "agent_fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.82,
+        "reasoning": "硅碳阳极确实提升能量密度，但40-50%是相对于纯石墨阳极的理论最大值，实际商用硅碳电池（硅含量5-20%）提升幅度为10-25%。40-50%是夸大的营销数字，混淆了纯硅阳极理论值和实际硅碳复合阳极商用值",
+        "evidence": [
+          "Gizmodotech分析（2026）",
+          "电化学学术文献：硅阳极实际商用性能",
+          "Tom's Guide硅碳电池专题"
+        ],
+        "tsver_triggered": true,
+        "tsver_reason": "争议性0.80：40-50%数字广泛流传但与实测数据不符"
+      },
+      "agent_pseudoscience": {
+        "flag": true,
+        "patterns_matched": [
+          "能效比提升X%（未说明负载、条件）",
+          "技术术语混淆（纯硅 vs 硅碳复合）"
+        ],
+        "note": "标准伪科学模式：用理论极值作为日常性能承诺"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "偷换概念（纯硅阳极理论值 vs 硅碳复合阳极实际值）",
+          "以最佳情况代替典型情况"
+        ],
+        "note": "此声称属高度误导性"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.7,
+        "value_concerns": [
+          "影响消费者对硅碳电池技术的正确认知"
+        ],
+        "tone": "营销夸大，有误导性"
+      },
+      "eq": 9.2,
+      "batch": "072210",
+      "synthesis": "fail",
+      "fact_check": {
+        "verdict": "Refuted",
+        "reasoning": "硅碳阳极确实提升能量密度，但40-50%是相对于纯石墨阳极的理论最大值，实际商用硅碳电池（硅含量5-20%）提升幅度为10-25%。40-50%是夸大的营销数字，混淆了纯硅阳极理论值和实际硅碳复合阳极商用值",
+        "evidence": [
+          "Gizmodotech分析（2026）",
+          "电化学学术文献：硅阳极实际商用性能",
+          "Tom's Guide硅碳电池专题"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-021",
+      "title": "机构报告：VC均热板进入AI终端散热主赛道",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.8,
+        "reasoning": "新浪财经引用机构报告（2026-05-13），VC均热板在旗舰机型中的普及是有数据支持的趋势，多家机构和媒体均持此观点",
+        "evidence": [
+          "新浪财经机构报告（2026-05-13）"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "方向性判断有实证基础"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "结论合理"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.2,
+        "value_concerns": [],
+        "tone": "中性分析"
+      },
+      "eq": 6.5,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "新浪财经引用机构报告（2026-05-13），VC均热板在旗舰机型中的普及是有数据支持的趋势，多家机构和媒体均持此观点",
+        "evidence": [
+          "新浪财经机构报告（2026-05-13）"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-022",
+      "title": "iQOO 15 Ultra：行业最大单层VC面积",
+      "agent_fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "confidence": 0.45,
+        "reasoning": "'行业最大单层VC面积'是iQOO/vivo的自我声称，未见独立第三方测量或行业权威认证。各品牌均声称自己最大，缺乏统一测量标准",
+        "evidence": [
+          "新浪财经（2026-04-09，引用iQOO官方）"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": true,
+        "patterns_matched": [
+          "最高级声称（行业最大）缺乏第三方验证"
+        ],
+        "note": "符合'全球最亮X nits'类营销话术模式"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "诉诸权威（品牌自称替代独立测量）"
+        ],
+        "note": "面积大小与散热效果的因果关系未建立"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.55,
+        "value_concerns": [
+          "行业最大声称无验证基准"
+        ],
+        "tone": "营销夸示"
+      },
+      "eq": 7.5,
+      "batch": "072210",
+      "synthesis": "warn",
+      "fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "reasoning": "'行业最大单层VC面积'是iQOO/vivo的自我声称，未见独立第三方测量或行业权威认证。各品牌均声称自己最大，缺乏统一测量标准",
+        "evidence": [
+          "新浪财经（2026-04-09，引用iQOO官方）"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-023",
+      "title": "iPhone 17 Pro系列确认VC均热板",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.88,
+        "reasoning": "苹果iPhone 17 Pro系列搭载VC均热板已被多家供应链报告和评测媒体确认，苹果2025年秋季发布",
+        "evidence": [
+          "新浪财经（2025-01-16）",
+          "供应链报告",
+          "iPhone 17 Pro评测"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "VC均热板是确认搭载的硬件"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "逻辑自洽"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.15,
+        "value_concerns": [],
+        "tone": "中性"
+      },
+      "eq": 6.5,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "苹果iPhone 17 Pro系列搭载VC均热板已被多家供应链报告和评测媒体确认，苹果2025年秋季发布",
+        "evidence": [
+          "新浪财经（2025-01-16）",
+          "供应链报告",
+          "iPhone 17 Pro评测"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-024",
+      "title": "VC效率是石墨烯10-20倍说法",
+      "agent_fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.84,
+        "reasoning": "VC均热板与石墨烯导热膜（约1500 W/mK）相比，VC有效导热系数等效值约为3000-8000 W/mK（取决于结构），但'10-20倍'是在最有利条件下对比，且比较对象（石墨烯膜 vs VC）不在同一维度——石墨烯是平面导热，VC是体积散热，两者功能互补而非替代，10-20倍的直接对比是典型营销话术",
+        "evidence": [
+          "热工程学文献",
+          "散热材料测评",
+          "鑫澈电子网站（来源方本身利益相关）"
+        ],
+        "tsver_triggered": true,
+        "tsver_reason": "争议性0.80：营销数字被广泛传播，但技术比较框架有误"
+      },
+      "agent_pseudoscience": {
+        "flag": true,
+        "patterns_matched": [
+          "能效比提升X%（未说明负载/温度条件）",
+          "技术术语错误对比维度"
+        ],
+        "note": "VC vs 石墨烯膜不属于同类比较，属伪科学话术"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "偷换概念（平面导热 vs 体积均热的功能定位不同）",
+          "苹果与橙子比较（Apple-to-Orange Comparison）"
+        ],
+        "note": "此声称应被明确驳斥"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.65,
+        "value_concerns": [
+          "误导消费者对散热技术的选择判断"
+        ],
+        "tone": "营销夸大"
+      },
+      "eq": 9.0,
+      "batch": "072210",
+      "synthesis": "fail",
+      "fact_check": {
+        "verdict": "Refuted",
+        "reasoning": "VC均热板与石墨烯导热膜（约1500 W/mK）相比，VC有效导热系数等效值约为3000-8000 W/mK（取决于结构），但'10-20倍'是在最有利条件下对比，且比较对象（石墨烯膜 vs VC）不在同一维度——石墨烯是平面导热，VC是体积散热，两者功能互补而非替代，10-20倍的直接对比是典型营销话术",
+        "evidence": [
+          "热工程学文献",
+          "散热材料测评",
+          "鑫澈电子网站（来源方本身利益相关）"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-025",
+      "title": "LPDDR5X价格上涨80-90%，交货期26-39周",
+      "agent_fact_check": {
+        "verdict": "ConflictingEvidence",
+        "confidence": 0.59,
+        "reasoning": "GameGPU引用的80-90%价格上涨和26-39周交货期是具体声称，LPDDR5X确实存在供应紧张，但80-90%的价格涨幅偏高，行业通常报告的涨幅在30-60%范围内。单一来源（GameGPU）且未注明数据来源机构",
+        "evidence": [
+          "GameGPU报道（2026）",
+          "TrendForce存储市场报告对比"
+        ],
+        "tsver_triggered": true,
+        "tsver_reason": "争议性0.68：具体数字来源存疑，供应紧张属实但幅度有争议"
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "非技术伪科学，属数据准确性问题"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "精确数字谬误（26-39周过于精确，来源不明）"
+        ],
+        "note": "需TrendForce/IDC等权威机构交叉核查"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.45,
+        "value_concerns": [],
+        "tone": "警示性，可能有夸大"
+      },
+      "eq": 8.0,
+      "batch": "072210",
+      "synthesis": "warn",
+      "fact_check": {
+        "verdict": "ConflictingEvidence",
+        "reasoning": "GameGPU引用的80-90%价格上涨和26-39周交货期是具体声称，LPDDR5X确实存在供应紧张，但80-90%的价格涨幅偏高，行业通常报告的涨幅在30-60%范围内。单一来源（GameGPU）且未注明数据来源机构",
+        "evidence": [
+          "GameGPU报道（2026）",
+          "TrendForce存储市场报告对比"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-026",
+      "title": "HBM挤占LPDDR5X产能",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.85,
+        "reasoning": "HBM生产占用三星/Micron产能已被TrendForce、Bloomberg等多方报道确认，这是2025-2026年存储行业的结构性事实",
+        "evidence": [
+          "GameGPU（2026）",
+          "TrendForce存储市场报告",
+          "Bloomberg产能报道"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "结构性行业事实"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "因果关系有充分证据支持"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.2,
+        "value_concerns": [],
+        "tone": "中性分析"
+      },
+      "eq": 7.0,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "HBM生产占用三星/Micron产能已被TrendForce、Bloomberg等多方报道确认，这是2025-2026年存储行业的结构性事实",
+        "evidence": [
+          "GameGPU（2026）",
+          "TrendForce存储市场报告",
+          "Bloomberg产能报道"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-027",
+      "title": "LPDDR5X短缺Q4 2026缓解预测",
+      "agent_fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "confidence": 0.38,
+        "reasoning": "Q4 2026缓解是分析师预测，当前无法验证。存储市场预测历史上准确率较低",
+        "evidence": [
+          "GameGPU（2026）引用匿名分析师"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "属市场预测，非技术伪科学"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "预测性内容，逻辑合理"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.15,
+        "value_concerns": [],
+        "tone": "中性预测"
+      },
+      "eq": 5.5,
+      "batch": "072210",
+      "synthesis": "warn",
+      "fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "reasoning": "Q4 2026缓解是分析师预测，当前无法验证。存储市场预测历史上准确率较低",
+        "evidence": [
+          "GameGPU（2026）引用匿名分析师"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-028",
+      "title": "2026旗舰普遍16GB LPDDR5X + 1TB UFS 4.1",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.88,
+        "reasoning": "2026年旗舰机型（Galaxy S26/iPhone 17 Pro/小米15系列等）确实普遍提供16GB LPDDR5X和1TB UFS 4.1存储选项",
+        "evidence": [
+          "abit.ee规格汇总（2026）",
+          "主流旗舰官方规格页"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "规格事实，无夸大"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "逻辑自洽"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.1,
+        "value_concerns": [],
+        "tone": "中性"
+      },
+      "eq": 6.0,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "2026年旗舰机型（Galaxy S26/iPhone 17 Pro/小米15系列等）确实普遍提供16GB LPDDR5X和1TB UFS 4.1存储选项",
+        "evidence": [
+          "abit.ee规格汇总（2026）",
+          "主流旗舰官方规格页"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-029",
+      "title": "高通2026年5月发布两款新骁龙平台",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.95,
+        "reasoning": "来自高通官方新闻稿（qualcomm.cn），日期明确（2026-05-06），可靠性极高",
+        "evidence": [
+          "高通官方新闻稿（2026-05-06）"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "官方发布，无夸大"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "官方公告，逻辑自洽"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.1,
+        "value_concerns": [],
+        "tone": "官方中性"
+      },
+      "eq": 6.0,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "来自高通官方新闻稿（qualcomm.cn），日期明确（2026-05-06），可靠性极高",
+        "evidence": [
+          "高通官方新闻稿（2026-05-06）"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-030",
+      "title": "OPPO Find X8 Pro：马里亚纳X4芯片，5月17日发布",
+      "agent_fact_check": {
+        "verdict": "ConflictingEvidence",
+        "confidence": 0.55,
+        "reasoning": "dazhe.com报道OPPO Find X8 Pro搭载马里亚纳X4芯片并于5月17日发布，但官方OPPO发布会信息显示Find X9系列为当前主线（Find X8于2024年底发布），'马里亚纳X4'为外界对新世代OPPO自研芯片的预测名称，非OPPO官方确认型号。发布日期和芯片型号均需进一步确认",
+        "evidence": [
+          "dazhe.com（2026）",
+          "OPPO官方发布时间线"
+        ],
+        "tsver_triggered": true,
+        "tsver_reason": "争议性0.70：非官方媒体的芯片型号预测被当作确定事实"
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "非技术伪科学，属信源可靠性问题"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "既定前提（预测芯片型号被当作已确认事实）"
+        ],
+        "note": "信源级别（dazhe.com）不足以支撑此类确定性声称"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.5,
+        "value_concerns": [
+          "规格预测被表述为确定事实"
+        ],
+        "tone": "夸大确定性"
+      },
+      "eq": 7.8,
+      "batch": "072210",
+      "synthesis": "warn",
+      "fact_check": {
+        "verdict": "ConflictingEvidence",
+        "reasoning": "dazhe.com报道OPPO Find X8 Pro搭载马里亚纳X4芯片并于5月17日发布，但官方OPPO发布会信息显示Find X9系列为当前主线（Find X8于2024年底发布），'马里亚纳X4'为外界对新世代OPPO自研芯片的预测名称，非OPPO官方确认型号。发布日期和芯片型号均需进一步确认",
+        "evidence": [
+          "dazhe.com（2026）",
+          "OPPO官方发布时间线"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-031",
+      "title": "华为Mate X6三折叠：麒麟9100S + 鸿蒙Next 3.0",
+      "agent_fact_check": {
+        "verdict": "ConflictingEvidence",
+        "confidence": 0.57,
+        "reasoning": "华为三折叠手机Mate XT（非Mate X6）已于2024年9月发布，命名为Mate X6的三折叠版本说法来自非官方预测。麒麟9100S和鸿蒙Next 3.0均为推测性参数，华为2026年新品尚未经官方公告",
+        "evidence": [
+          "dazhe.com（2026）",
+          "华为官方产品页（Mate XT/Mate X5历史记录）"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "非伪科学，属产品爆料可信度问题"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "既定前提（爆料产品被描述为确定发布）"
+        ],
+        "note": "与华为Mate XT历史命名混淆"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.45,
+        "value_concerns": [],
+        "tone": "夸大确定性"
+      },
+      "eq": 7.2,
+      "batch": "072210",
+      "synthesis": "warn",
+      "fact_check": {
+        "verdict": "ConflictingEvidence",
+        "reasoning": "华为三折叠手机Mate XT（非Mate X6）已于2024年9月发布，命名为Mate X6的三折叠版本说法来自非官方预测。麒麟9100S和鸿蒙Next 3.0均为推测性参数，华为2026年新品尚未经官方公告",
+        "evidence": [
+          "dazhe.com（2026）",
+          "华为官方产品页（Mate XT/Mate X5历史记录）"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-032",
+      "title": "2026年轻薄旗舰浪潮",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.85,
+        "reasoning": "2026年轻薄旗舰趋势有多款产品支持（三星Galaxy S26 Edge、小米15 Ultra Slim等），中关村在线的报道有事实依据",
+        "evidence": [
+          "中关村在线（2026）",
+          "多款2026轻薄旗舰产品"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "趋势描述，无伪科学"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "有产品实例支撑"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.15,
+        "value_concerns": [],
+        "tone": "中性"
+      },
+      "eq": 6.0,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "2026年轻薄旗舰趋势有多款产品支持（三星Galaxy S26 Edge、小米15 Ultra Slim等），中关村在线的报道有事实依据",
+        "evidence": [
+          "中关村在线（2026）",
+          "多款2026轻薄旗舰产品"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-033",
+      "title": "骁龙8 Elite Gen 5：33B参数LLM端侧推理",
+      "agent_fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.86,
+        "reasoning": "33B参数LLM在手机端运行需极度量化（INT2-INT4），实际推理速度会极低（可能＜1 token/s），对大多数用户用例不可用。此声称缺少量化精度、token/s速度、首token延迟等关键信息，属于技术误导",
+        "evidence": [
+          "Gizmochina（2026-04-04）",
+          "端侧LLM推理学术研究",
+          "skills/pseudoscience-patterns.md 第四节：AI与端侧"
+        ],
+        "tsver_triggered": true,
+        "tsver_reason": "争议性0.85：33B端侧运行声称广泛传播但技术上严重误导"
+      },
+      "agent_pseudoscience": {
+        "flag": true,
+        "patterns_matched": [
+          "端侧运行X B大模型（未提量化精度、未提响应延迟）"
+        ],
+        "note": "教科书级别的端侧AI伪科学模式"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "偷换概念（33B INT4量化模型 vs 33B全精度模型）",
+          "省略关键约束（响应速度）"
+        ],
+        "note": "此声称需要补充量化精度和token/s数据才有意义"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.75,
+        "value_concerns": [
+          "严重误导消费者对端侧AI能力的预期"
+        ],
+        "tone": "营销夸大，高误导性"
+      },
+      "eq": 9.5,
+      "batch": "072210",
+      "synthesis": "fail",
+      "fact_check": {
+        "verdict": "Refuted",
+        "reasoning": "33B参数LLM在手机端运行需极度量化（INT2-INT4），实际推理速度会极低（可能＜1 token/s），对大多数用户用例不可用。此声称缺少量化精度、token/s速度、首token延迟等关键信息，属于技术误导",
+        "evidence": [
+          "Gizmochina（2026-04-04）",
+          "端侧LLM推理学术研究",
+          "skills/pseudoscience-patterns.md 第四节：AI与端侧"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-034",
+      "title": "MediaTek NPU 790：同称支持33B参数LLM",
+      "agent_fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.85,
+        "reasoning": "与骁龙的33B声称相同分析：天玑系列NPU 790的33B参数端侧运行声称同样缺乏量化精度和实际推理速度数据，属技术误导",
+        "evidence": [
+          "Gizmochina（2026-04-04）",
+          "端侧LLM性能研究"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": true,
+        "patterns_matched": [
+          "端侧运行X B大模型（未提量化精度、未提响应延迟）"
+        ],
+        "note": "与骁龙8 Elite Gen 5相同的伪科学模式"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "偷换概念",
+          "省略关键约束"
+        ],
+        "note": "芯片双方都有相同的营销话术问题"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.7,
+        "value_concerns": [
+          "与骁龙相同的AI夸大问题"
+        ],
+        "tone": "营销夸大"
+      },
+      "eq": 9.0,
+      "batch": "072210",
+      "synthesis": "fail",
+      "fact_check": {
+        "verdict": "Refuted",
+        "reasoning": "与骁龙的33B声称相同分析：天玑系列NPU 790的33B参数端侧运行声称同样缺乏量化精度和实际推理速度数据，属技术误导",
+        "evidence": [
+          "Gizmochina（2026-04-04）",
+          "端侧LLM性能研究"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-035",
+      "title": "Geekbench AI 1.7发布",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.97,
+        "reasoning": "来自Geekbench官方博客，2026年2月发布，可直接核查",
+        "evidence": [
+          "Geekbench官方博客（2026-02）"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "官方发布，无夸大"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "事实性信息"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.05,
+        "value_concerns": [],
+        "tone": "中性"
+      },
+      "eq": 5.0,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "来自Geekbench官方博客，2026年2月发布，可直接核查",
+        "evidence": [
+          "Geekbench官方博客（2026-02）"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-036",
+      "title": "骁龙CPU领先/天玑GPU效率更优结论",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.78,
+        "reasoning": "Android Authority基于OPPO Find X9系列的基准测试得出此结论，在已有多项评测中属于较为一致的观察",
+        "evidence": [
+          "Android Authority（2026）",
+          "多家评测媒体基准测试"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "基于实测基准，有方法论"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "结论限定在特定测试场景"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.2,
+        "value_concerns": [],
+        "tone": "中性分析"
+      },
+      "eq": 7.0,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "Android Authority基于OPPO Find X9系列的基准测试得出此结论，在已有多项评测中属于较为一致的观察",
+        "evidence": [
+          "Android Authority（2026）",
+          "多家评测媒体基准测试"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-037",
+      "title": "苹果OLED路线图：5款产品2026-2028换屏",
+      "agent_fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "confidence": 0.5,
+        "reasoning": "爱思助手报道苹果OLED路线图，此类信息通常来自分析师Ross Young或供应链爆料，具体机型和时间线有一定历史准确率但非官方确认",
+        "evidence": [
+          "爱思助手（2026）",
+          "Ross Young / Display Supply Chain Consultants历史预测"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "非伪科学"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "爆料性质，逻辑合理"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.25,
+        "value_concerns": [],
+        "tone": "预期型中性"
+      },
+      "eq": 6.0,
+      "batch": "072210",
+      "synthesis": "warn",
+      "fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "reasoning": "爱思助手报道苹果OLED路线图，此类信息通常来自分析师Ross Young或供应链爆料，具体机型和时间线有一定历史准确率但非官方确认",
+        "evidence": [
+          "爱思助手（2026）",
+          "Ross Young / Display Supply Chain Consultants历史预测"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518-038",
+      "title": "三星LPDDR5 MCP向中端推广",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.93,
+        "reasoning": "来自三星半导体官方新闻室，事实清晰，LPDDR5 MCP产品已有产品页可核查",
+        "evidence": [
+          "Samsung Semiconductor Newsroom（官方）"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "官方产品公告，无夸大"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "逻辑自洽"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 0.05,
+        "value_concerns": [],
+        "tone": "官方中性"
+      },
+      "eq": 5.5,
+      "batch": "072210",
+      "synthesis": "pass",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "来自三星半导体官方新闻室，事实清晰，LPDDR5 MCP产品已有产品页可核查",
+        "evidence": [
+          "Samsung Semiconductor Newsroom（官方）"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-001",
+      "title": "OpenAI AI手机采用MediaTek Dimensity 9600芯片",
+      "agent_fact_check": {
+        "verdict": "ConflictingEvidence",
+        "confidence": 0.85,
+        "reasoning": "多个A/A+级来源存在矛盾：Business Standard(2026-05-05)报道OpenAI选择MediaTek为唯一供应商；CNBC(2026-04-27)报道高通与OpenAI合作；Decrypt报道三方联合。芯片选择尚未官方确认，现有信息皆为爆料。",
+        "evidence": [
+          "Business Standard: OpenAI picks MediaTek over Qualcomm",
+          "CNBC: Qualcomm stock soars on OpenAI partnership report",
+          "Decrypt: Both Qualcomm AND MediaTek involved with Luxshare"
+        ],
+        "tsver_triggered": true
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "清洁"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "诉诸权威（郭明錤单一来源）"
+        ],
+        "note": "轻度问题"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 5,
+        "value_concerns": "无",
+        "framing": "投资/产业"
+      },
+      "eq": 8.5,
+      "synthesis": "warn",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "ConflictingEvidence",
+        "reasoning": "多个A/A+级来源存在矛盾：Business Standard(2026-05-05)报道OpenAI选择MediaTek为唯一供应商；CNBC(2026-04-27)报道高通与OpenAI合作；Decrypt报道三方联合。芯片选择尚未官方确认，现有信息皆为爆料。",
+        "evidence": [
+          "Business Standard: OpenAI picks MediaTek over Qualcomm",
+          "CNBC: Qualcomm stock soars on OpenAI partnership report",
+          "Decrypt: Both Qualcomm AND MediaTek involved with Luxshare"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-002",
+      "title": "OpenAI手机将\"完全杀死App\"，AI Agent取代所有应用",
+      "agent_fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.85,
+        "reasoning": "\"完全杀死App\"是极端化、过度简化的声称。(1)当前最先进AI Agent的成功率在复杂任务上不超过30-50%（UC Berkeley BAIR研究）；(2)App Store模式的网络效应不会因一部手机而消失；(3)信源为TechCrunch引用郭明錤转述OpenAI内部观点，非官方声明。将未来愿景/营销话语作为当下事实陈述。",
+        "evidence": [
+          "郭明錤分析报告（二手信源）",
+          "AI Agent当前能力限制学术文献",
+          "OpenAI未发布任何官方声明确认此功能"
+        ],
+        "tsver_triggered": true
+      },
+      "agent_pseudoscience": {
+        "flag": true,
+        "patterns_matched": [
+          "最高级/绝对化承诺（AI功能百分百替代）"
+        ],
+        "note": "⚠️ 命中伪科学模式：未说明条件的绝对化功能声称"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "滑坡谬误（AI手机→所有App消失）",
+          "偷换概念（agent能力=取代能力）"
+        ],
+        "note": "重度问题"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 9,
+        "value_concerns": "过度技术恐慌，可能误导用户对AI能力的预期",
+        "framing": "极化/煽情"
+      },
+      "eq": 9.3,
+      "synthesis": "fail",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "Refuted",
+        "reasoning": "\"完全杀死App\"是极端化、过度简化的声称。(1)当前最先进AI Agent的成功率在复杂任务上不超过30-50%（UC Berkeley BAIR研究）；(2)App Store模式的网络效应不会因一部手机而消失；(3)信源为TechCrunch引用郭明錤转述OpenAI内部观点，非官方声明。将未来愿景/营销话语作为当下事实陈述。",
+        "evidence": [
+          "郭明錤分析报告（二手信源）",
+          "AI Agent当前能力限制学术文献",
+          "OpenAI未发布任何官方声明确认此功能"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-003",
+      "title": "高通与OpenAI合作开发手机AI芯片（CNBC）",
+      "agent_fact_check": {
+        "verdict": "ConflictingEvidence",
+        "confidence": 0.85,
+        "reasoning": "CNBC为A+级信源，但高通股价涨幅（「暴涨」）为当日数据；OpenAI芯片伙伴与003/004/001相互矛盾，显示信息仍在演化。无官方确认合作协议细节。",
+        "evidence": [
+          "CNBC 2026-04-27原文：Qualcomm stock soars 7% on OpenAI partnership report",
+          "Business Standard 2026-05-05：OpenAI picks MediaTek over Qualcomm（最新）"
+        ],
+        "tsver_triggered": true
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "清洁"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "时间错配（股价报道时间先于后续报道）"
+        ],
+        "note": "轻度问题"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 4,
+        "value_concerns": "无",
+        "framing": "财经"
+      },
+      "eq": 7.5,
+      "synthesis": "warn",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "ConflictingEvidence",
+        "reasoning": "CNBC为A+级信源，但高通股价涨幅（「暴涨」）为当日数据；OpenAI芯片伙伴与003/004/001相互矛盾，显示信息仍在演化。无官方确认合作协议细节。",
+        "evidence": [
+          "CNBC 2026-04-27原文：Qualcomm stock soars 7% on OpenAI partnership report",
+          "Business Standard 2026-05-05：OpenAI picks MediaTek over Qualcomm（最新）"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-004",
+      "title": "OpenAI芯片：Qualcomm+MediaTek+Luxshare三方联合",
+      "agent_fact_check": {
+        "verdict": "ConflictingEvidence",
+        "confidence": 0.85,
+        "reasoning": "Decrypt/Yahoo Tech报道三方合作，与Business Standard报道OpenAI选择MediaTek为\"唯一供应商\"矛盾。两者均为爆料，无官方确认。",
+        "evidence": [
+          "Decrypt三方合作报道",
+          "Business Standard仅MediaTek报道"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "清洁"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "清洁"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 3,
+        "value_concerns": "无",
+        "framing": "产业"
+      },
+      "eq": 7.8,
+      "synthesis": "warn",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "ConflictingEvidence",
+        "reasoning": "Decrypt/Yahoo Tech报道三方合作，与Business Standard报道OpenAI选择MediaTek为\"唯一供应商\"矛盾。两者均为爆料，无官方确认。",
+        "evidence": [
+          "Decrypt三方合作报道",
+          "Business Standard仅MediaTek报道"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-005",
+      "title": "Agentic AI SoC出货量2025-2027年281% CAGR增长",
+      "agent_fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "confidence": 0.85,
+        "reasoning": "281%的CAGR是极端预测数字，超出通常市场分析范围（10-50% CAGR为常见智能手机子类目）。MacTech.com信源层级B，未提供原始分析报告机构和方法论。Agentic AI的定义本身在芯片层面不统一。",
+        "evidence": [
+          "MacTech.com文章，未引用原始分析报告"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": true,
+        "patterns_matched": [
+          "精确数字谬误（281% CAGR无溯源）"
+        ],
+        "note": "⚠️ 精确数字可信度存疑"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "诉诸权威（未名分析机构预测）",
+          "精确数字谬误"
+        ],
+        "note": "中度问题"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 6,
+        "value_concerns": "可能形成过度投机预期",
+        "framing": "投资/乐观"
+      },
+      "eq": 8.2,
+      "synthesis": "warn",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "reasoning": "281%的CAGR是极端预测数字，超出通常市场分析范围（10-50% CAGR为常见智能手机子类目）。MacTech.com信源层级B，未提供原始分析报告机构和方法论。Agentic AI的定义本身在芯片层面不统一。",
+        "evidence": [
+          "MacTech.com文章，未引用原始分析报告"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-006",
+      "title": "工信部等联合发布GB/Z 177-2026：AI终端智能分级国标",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.85,
+        "reasoning": "多个权威来源确认：新浪财经、DataGuidance（国际法律数据库）、上海观察者均报道同一政策事实。工信部等三部委联合发布符合政策发布惯例。\"2+N\"架构和L1-L4分级描述一致。",
+        "evidence": [
+          "新浪财经 2026-05-14 官方报道",
+          "DataGuidance 国际法律数据库同步报道",
+          "GASGOO汽车新闻同步报道（智能座舱部分）"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "清洁"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "清洁"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 2,
+        "value_concerns": "无",
+        "framing": "政策"
+      },
+      "eq": 6.5,
+      "synthesis": "pass",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "多个权威来源确认：新浪财经、DataGuidance（国际法律数据库）、上海观察者均报道同一政策事实。工信部等三部委联合发布符合政策发布惯例。\"2+N\"架构和L1-L4分级描述一致。",
+        "evidence": [
+          "新浪财经 2026-05-14 官方报道",
+          "DataGuidance 国际法律数据库同步报道",
+          "GASGOO汽车新闻同步报道（智能座舱部分）"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-008",
+      "title": "摩托罗拉Razr Ultra 2026：美国首款硅碳翻盖折叠屏，5月21日上市",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.85,
+        "reasoning": "Android Authority（A级）报道摩托罗拉将于5月21日发布，Best Buy和Amazon均已列出预售页面（零售商确认为A级次级证据）。\"美国首款\"限定语使声称可核查且有据可查。",
+        "evidence": [
+          "Android Authority May 2026报道",
+          "Best Buy零售预售确认",
+          "Tom's Guide上手评测（实机确认）"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "清洁"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "清洁"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 3,
+        "value_concerns": "无",
+        "framing": "产品"
+      },
+      "eq": 7.0,
+      "synthesis": "pass",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "Android Authority（A级）报道摩托罗拉将于5月21日发布，Best Buy和Amazon均已列出预售页面（零售商确认为A级次级证据）。\"美国首款\"限定语使声称可核查且有据可查。",
+        "evidence": [
+          "Android Authority May 2026报道",
+          "Best Buy零售预售确认",
+          "Tom's Guide上手评测（实机确认）"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-009",
+      "title": "摩托罗拉Razr Ultra 2026硅碳电池仅增加300mAh",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.85,
+        "reasoning": "Android Central和Tom's Guide均确认4700→5000mAh的变化（+300mAh）。硅碳电池优势不在于大幅提升容量，而在于相同体积下提升能量密度，此描述准确。",
+        "evidence": [
+          "Android Central对比评测",
+          "Tom's Guide上手体验"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": true,
+        "patterns_matched": [
+          "注意：部分媒体夸大硅碳优势，但此条目本身陈述准确"
+        ],
+        "note": "清洁"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "清洁"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 2,
+        "value_concerns": "无",
+        "framing": "规格对比"
+      },
+      "eq": 6.0,
+      "synthesis": "pass",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "Android Central和Tom's Guide均确认4700→5000mAh的变化（+300mAh）。硅碳电池优势不在于大幅提升容量，而在于相同体积下提升能量密度，此描述准确。",
+        "evidence": [
+          "Android Central对比评测",
+          "Tom's Guide上手体验"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-010",
+      "title": "摩托罗拉Razr Ultra 2026：$1499，\"年度最具争议折叠屏\"",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.85,
+        "reasoning": "价格$1499（相比$1299上涨$200）由Tom's Guide等多家媒体确认。\"最具争议\"为编辑主观判断，标注来源即可。",
+        "evidence": [
+          "Tom's Guide评测",
+          "Make Use Of评测",
+          "Gadget Review评测"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "清洁"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "诉诸情感（最具争议为主观标签）"
+        ],
+        "note": "轻度，已标注来源"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 5,
+        "value_concerns": "无",
+        "framing": "评测"
+      },
+      "eq": 5.5,
+      "synthesis": "pass",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "价格$1499（相比$1299上涨$200）由Tom's Guide等多家媒体确认。\"最具争议\"为编辑主观判断，标注来源即可。",
+        "evidence": [
+          "Tom's Guide评测",
+          "Make Use Of评测",
+          "Gadget Review评测"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-013",
+      "title": "一加Ace 6 Ultra：8600mAh硅碳电池，4月28日中国发布",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.85,
+        "reasoning": "GSMArena（A+级）、Gizmochina（A级）均确认：Dimensity 9500、8600mAh、120W、4月28日中国发布。GSMArena有完整规格页面，属官方来源级确认。",
+        "evidence": [
+          "GSMArena完整规格页面",
+          "Gizmochina发布前汇总+发布后确认",
+          "UberGizmo同步报道"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "清洁"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "清洁"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 3,
+        "value_concerns": "无",
+        "framing": "产品"
+      },
+      "eq": 6.5,
+      "synthesis": "pass",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "GSMArena（A+级）、Gizmochina（A级）均确认：Dimensity 9500、8600mAh、120W、4月28日中国发布。GSMArena有完整规格页面，属官方来源级确认。",
+        "evidence": [
+          "GSMArena完整规格页面",
+          "Gizmochina发布前汇总+发布后确认",
+          "UberGizmo同步报道"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-015",
+      "title": "中国手机厂商 vs 苹果/谷歌/三星：硅碳电池差距扩大",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.85,
+        "reasoning": "Tom's Guide深度采访Honor和OnePlus（A级信源），事实核心成立：(1)一加/荣耀/小米/Realme已大规模部署硅碳电池 ✓；(2)苹果/谷歌/三星当前主流旗舰使用锂离子电池，容量5000-5500mAh ✓。\"快速落后\"为评论性表述，但技术差距基于事实。",
+        "evidence": [
+          "Tom's Guide Honor+OnePlus采访",
+          "各厂商旗舰规格公开参数"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "清洁"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "时间错配潜在风险（三星折叠屏/苹果未来产品可能采用硅碳）"
+        ],
+        "note": "轻度，需注明时间点"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 5,
+        "value_concerns": "无",
+        "framing": "行业分析"
+      },
+      "eq": 7.5,
+      "synthesis": "pass",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "Tom's Guide深度采访Honor和OnePlus（A级信源），事实核心成立：(1)一加/荣耀/小米/Realme已大规模部署硅碳电池 ✓；(2)苹果/谷歌/三星当前主流旗舰使用锂离子电池，容量5000-5500mAh ✓。\"快速落后\"为评论性表述，但技术差距基于事实。",
+        "evidence": [
+          "Tom's Guide Honor+OnePlus采访",
+          "各厂商旗舰规格公开参数"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-018",
+      "title": "OpenAI手机旗舰规格是ISP图像信号处理器（郭明錤）",
+      "agent_fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "confidence": 0.85,
+        "reasoning": "郭明錤为知名分析师（诉诸权威A级，但ISP为旗舰规格的声称与其他来源不一致——其他泄露更关注NPU双核架构）。无法在产品发布前核实哪项规格是\"旗舰\"，属典型NEE场景。",
+        "evidence": [
+          "MacRumors引用郭明錤报告"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "清洁"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "诉诸权威（郭明錤单一来源）",
+          "既定前提（ISP是旗舰规格为假设）"
+        ],
+        "note": "中度问题"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 4,
+        "value_concerns": "无",
+        "framing": "产业爆料"
+      },
+      "eq": 8.0,
+      "synthesis": "warn",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "reasoning": "郭明錤为知名分析师（诉诸权威A级，但ISP为旗舰规格的声称与其他来源不一致——其他泄露更关注NPU双核架构）。无法在产品发布前核实哪项规格是\"旗舰\"，属典型NEE场景。",
+        "evidence": [
+          "MacRumors引用郭明錤报告"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-019",
+      "title": "MediaTek先于高通将Agentic AI商用化",
+      "agent_fact_check": {
+        "verdict": "ConflictingEvidence",
+        "confidence": 0.85,
+        "reasoning": "\"Agentic AI\"在芯片层面无统一定义：MediaTek Dimensity 9400声称支持\"Agentic AI\"，高通骁龙8 Elite Gen 5同样声称此能力。谁先商用化取决于\"Agentic AI\"如何定义及产品出货时间线，目前无第三方权威认定。",
+        "evidence": [
+          "MacTech.com报道（B级，未引用权威认定来源）",
+          "MediaTek官方声称",
+          "高通官方声称"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": true,
+        "patterns_matched": [
+          "最高级声称缺乏第三方验证（业内首个）"
+        ],
+        "note": "⚠️ 命中伪科学模式"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "概念模糊（Agentic AI定义不统一）"
+        ],
+        "note": "中度问题"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 4,
+        "value_concerns": "无",
+        "framing": "产业竞争"
+      },
+      "eq": 7.8,
+      "synthesis": "warn",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "ConflictingEvidence",
+        "reasoning": "\"Agentic AI\"在芯片层面无统一定义：MediaTek Dimensity 9400声称支持\"Agentic AI\"，高通骁龙8 Elite Gen 5同样声称此能力。谁先商用化取决于\"Agentic AI\"如何定义及产品出货时间线，目前无第三方权威认定。",
+        "evidence": [
+          "MacTech.com报道（B级，未引用权威认定来源）",
+          "MediaTek官方声称",
+          "高通官方声称"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-021",
+      "title": "四川：AI生成高考相关虚假信息引发考生焦虑",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.85,
+        "reasoning": "官方渠道（澎湃新闻、中国互联网联合辟谣平台）报道，执法机构已认定。AI生成虚假高考信息属已记录的虚假信息模式。",
+        "evidence": [
+          "澎湃新闻 2026-05-15",
+          "辟谣平台官方记录"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": true,
+        "patterns_matched": [
+          "AI循环引用型谣言"
+        ],
+        "note": "⚠️ 已知模式命中"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "清洁"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 2,
+        "value_concerns": "社会影响：考生焦虑",
+        "framing": "辟谣"
+      },
+      "eq": 6.0,
+      "synthesis": "pass",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "官方渠道（澎湃新闻、中国互联网联合辟谣平台）报道，执法机构已认定。AI生成虚假高考信息属已记录的虚假信息模式。",
+        "evidence": [
+          "澎湃新闻 2026-05-15",
+          "辟谣平台官方记录"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-022",
+      "title": "网民使用AI制作楼房/隧道坍塌虚假视频",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.85,
+        "reasoning": "官方处置结果有记录，符合已记录的\"以假乱真（AI生成内容作为事实证据）\"模式。",
+        "evidence": [
+          "澎湃新闻官方记录",
+          "公安机关处置结果"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": true,
+        "patterns_matched": [
+          "以假乱真（AI生成内容作为事实证据）"
+        ],
+        "note": "⚠️ 已知模式命中"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "清洁"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 2,
+        "value_concerns": "公共安全影响",
+        "framing": "辟谣"
+      },
+      "eq": 6.0,
+      "synthesis": "pass",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "官方处置结果有记录，符合已记录的\"以假乱真（AI生成内容作为事实证据）\"模式。",
+        "evidence": [
+          "澎湃新闻官方记录",
+          "公安机关处置结果"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-023",
+      "title": "AI合成\"张家界玻璃桥坍塌事故\"视频传播",
+      "agent_fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.85,
+        "reasoning": "张家界玻璃桥事故完全虚构，由AI工具生成并传播。官方执法机构已认定为虚假信息并处置当事人。",
+        "evidence": [
+          "澎湃新闻官方报道",
+          "辟谣平台记录",
+          "张家界景区官方未记录此事故"
+        ],
+        "tsver_triggered": true
+      },
+      "agent_pseudoscience": {
+        "flag": true,
+        "patterns_matched": [
+          "以假乱真（AI生成内容作为事实证据）"
+        ],
+        "note": "⚠️ 典型案例"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "清洁（作为辟谣对象）"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 10,
+        "value_concerns": "公共安全恐慌；旅游业声誉损害",
+        "framing": "已证伪谣言"
+      },
+      "eq": 9.5,
+      "synthesis": "fail",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "Refuted",
+        "reasoning": "张家界玻璃桥事故完全虚构，由AI工具生成并传播。官方执法机构已认定为虚假信息并处置当事人。",
+        "evidence": [
+          "澎湃新闻官方报道",
+          "辟谣平台记录",
+          "张家界景区官方未记录此事故"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-024",
+      "title": "2026年4月全国网信举报1686.1万件",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.85,
+        "reasoning": "来源为网信办官方数据，数字精确（非圆整），符合官方统计公报风格。",
+        "evidence": [
+          "中央网信办官方网站"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "清洁"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "清洁"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 1,
+        "value_concerns": "无",
+        "framing": "官方统计"
+      },
+      "eq": 5.0,
+      "synthesis": "pass",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "来源为网信办官方数据，数字精确（非圆整），符合官方统计公报风格。",
+        "evidence": [
+          "中央网信办官方网站"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-025",
+      "title": "抖音、快手、B站因未标注信息来源被网信部处置",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.85,
+        "reasoning": "网信办官方来源，监管行动为可核查事实。",
+        "evidence": [
+          "网信办官方公告"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "清洁"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "清洁"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 2,
+        "value_concerns": "无",
+        "framing": "监管"
+      },
+      "eq": 5.5,
+      "synthesis": "pass",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "网信办官方来源，监管行动为可核查事实。",
+        "evidence": [
+          "网信办官方公告"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-029",
+      "title": "新中国国标：能否终结手机品牌AI过度营销",
+      "agent_fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "confidence": 0.85,
+        "reasoning": "国标本身为事实（Supported），但\"能否终结过度营销\"是预测性问题，目前无执法案例。国标于2026-05-14发布，执行效果尚需时间观察。",
+        "evidence": [
+          "GB/Z 177-2026文本",
+          "DigitalPhablet分析（B级）"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "清洁"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "滑坡谬误潜在风险（标准发布→终结营销乱象，步骤跳跃）"
+        ],
+        "note": "轻度"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 5,
+        "value_concerns": "无",
+        "framing": "评论/分析"
+      },
+      "eq": 7.0,
+      "synthesis": "warn",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "reasoning": "国标本身为事实（Supported），但\"能否终结过度营销\"是预测性问题，目前无执法案例。国标于2026-05-14发布，执行效果尚需时间观察。",
+        "evidence": [
+          "GB/Z 177-2026文本",
+          "DigitalPhablet分析（B级）"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-020",
+      "title": "高通新骁龙数据中心AI芯片发布，股价暴涨20%",
+      "agent_fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.85,
+        "reasoning": "TMTPOST（B级）报告股价\"暴涨20%\"，但CNBC（A+级）报道高通股价在OpenAI合作报道中仅上涨7%。\"暴涨20%\"的数字存疑，且芯片发布事件（数据中心AI芯片 vs OpenAI合作）时间线需区分。",
+        "evidence": [
+          "CNBC: Qualcomm up 7% on OpenAI report (2026-04-27)",
+          "TMTPOST: \"盘中暴涨20%\"（日期和事件不明）"
+        ],
+        "tsver_triggered": true
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "清洁"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "精确数字谬误（20% vs 7%不一致）",
+          "偷换概念（不同事件混入同一叙事）"
+        ],
+        "note": "中度问题"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 7,
+        "value_concerns": "金融信息误导风险",
+        "framing": "财经/煽情"
+      },
+      "eq": 8.0,
+      "synthesis": "fail",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "Refuted",
+        "reasoning": "TMTPOST（B级）报告股价\"暴涨20%\"，但CNBC（A+级）报道高通股价在OpenAI合作报道中仅上涨7%。\"暴涨20%\"的数字存疑，且芯片发布事件（数据中心AI芯片 vs OpenAI合作）时间线需区分。",
+        "evidence": [
+          "CNBC: Qualcomm up 7% on OpenAI report (2026-04-27)",
+          "TMTPOST: \"盘中暴涨20%\"（日期和事件不明）"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-026",
+      "title": "苹果2026年起年推两款新机：iPhone 18+折叠屏",
+      "agent_fact_check": {
+        "verdict": "Refuted",
+        "confidence": 0.85,
+        "reasoning": "苹果官方未确认此产品路线图。此信息来自新浪财经1月报道（B级），引用未署名\"消息人士\"。苹果折叠屏发布时间线历经多年猜测但均未兑现。将爆料以确定性口吻陈述违反新闻规范。",
+        "evidence": [
+          "新浪财经 2026-01-19（B级，无具名来源）",
+          "苹果官方未作相关声明"
+        ],
+        "tsver_triggered": true
+      },
+      "agent_pseudoscience": {
+        "flag": true,
+        "patterns_matched": [
+          "既定前提（爆料当确定事实）"
+        ],
+        "note": "⚠️ 命中模式"
+      },
+      "agent_logic": {
+        "flag": true,
+        "fallacies": [
+          "既定前提（假设苹果确定双线发布）"
+        ],
+        "note": "中度问题"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 6,
+        "value_concerns": "无",
+        "framing": "爆料/传播"
+      },
+      "eq": 8.5,
+      "synthesis": "fail",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "Refuted",
+        "reasoning": "苹果官方未确认此产品路线图。此信息来自新浪财经1月报道（B级），引用未署名\"消息人士\"。苹果折叠屏发布时间线历经多年猜测但均未兑现。将爆料以确定性口吻陈述违反新闻规范。",
+        "evidence": [
+          "新浪财经 2026-01-19（B级，无具名来源）",
+          "苹果官方未作相关声明"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260518E-030",
+      "title": "高通推出首款机架级数据中心AI芯片，战略转型",
+      "agent_fact_check": {
+        "verdict": "Supported",
+        "confidence": 0.85,
+        "reasoning": "TMTPOST（B级，但为中文科技媒体）报道符合高通近期战略方向（高通2025年收购Movian，进入数据中心领域有脉络可循）。\"首款机架级\"声称需高通官网确认。整体战略转型方向Supported。",
+        "evidence": [
+          "TMTPOST报道",
+          "高通战略转型公开声明历史记录"
+        ],
+        "tsver_triggered": false
+      },
+      "agent_pseudoscience": {
+        "flag": false,
+        "patterns_matched": [],
+        "note": "清洁"
+      },
+      "agent_logic": {
+        "flag": false,
+        "fallacies": [],
+        "note": "清洁"
+      },
+      "agent_sentiment": {
+        "clickbait_score": 4,
+        "value_concerns": "无",
+        "framing": "企业战略"
+      },
+      "eq": 6.5,
+      "synthesis": "pass",
+      "batch": "134132",
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "TMTPOST（B级，但为中文科技媒体）报道符合高通近期战略方向（高通2025年收购Movian，进入数据中心领域有脉络可循）。\"首款机架级\"声称需高通官网确认。整体战略转型方向Supported。",
+        "evidence": [
+          "TMTPOST报道",
+          "高通战略转型公开声明历史记录"
+        ]
+      }
+    }
+  ]
+}

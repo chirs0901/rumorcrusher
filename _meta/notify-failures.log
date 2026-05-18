@@ -18,3 +18,21 @@
 [2026-05-17 14:15:35 UTC] [feishu] FAILED — sandbox外网HTTPS被代理403阻断（open.feishu.cn不可达）
 [2026-05-17 14:15:35 UTC] [email]  FAILED — sandbox DNS解析失败（smtp.163.com无法解析）
 [2026-05-17 14:15:35 UTC] 建议：用户在本机执行 'git push' 即可完成GitHub Pages更新（本地已commit）
+[2026-05-18 13:56:15 UTC] [git-evening-134132] push失败（sandbox代理不通，commit已完成：8bc9da2，请在本机运行 git push）
+[2026-05-18 13:56:21 UTC] [feishu-evening-134132] FAILED: Traceback (most recent call last):
+  File "/sessions/compassionate-sharp-hopper/mnt/RumorCrusher/scripts/feishu_notify.py", line 85, in <module>
+    sys.exit(main())
+  File "/sessions/compassionate-sharp-hopper/mnt/RumorCrusher/scripts/feishu_notify.py", line 59, in main
+    annot = json.load(open(ROOT / date / "02-annotations" / "synthesis.json"))
+FileNotFoundError: [Errno 2] No such file or directory: '/sessions/compassionate-sharp-hopper/mnt/RumorCrusher/2026-05-18/02-annotations/synthesis.json'
+[2026-05-18 13:56:21 UTC] [email-evening-134132] FAILED: Traceback (most recent call last):
+  File "/sessions/compassionate-sharp-hopper/mnt/RumorCrusher/scripts/email_notify.py", line 137, in <module>
+    sys.exit(main())
+  File "/sessions/compassionate-sharp-hopper/mnt/RumorCrusher/scripts/email_notify.py", line 109, in main
+    annot = json.load(open(ROOT / date / "02-annotations" / "synthesis.json"))
+FileNotFoundError: [Errno 2] No such file or directory: '/sessions/compassionate-sharp-hopper/mnt/RumorCrusher/2026-05-18/02-annotations/synthesis.json'
+[2026-05-18 13:57:39 UTC] [feishu-evening-134132] FAILED: Traceback (most recent call last): File "/usr/lib/python3.10/urllib/request.py", line 1348, in do_open h.request(req.get_method(), req.selector, req.data, headers, File "/usr/lib/python3.10/http/clien
+[2026-05-18 13:57:39 UTC] [email-evening-134132] FAILED: Traceback (most recent call last): File "/sessions/compassionate-sharp-hopper/mnt/RumorCrusher/scripts/email_notify.py", line 137, in <module> sys.exit(main()) File "/sessions/compassionate-sharp-hopp
+[2026-05-18 13:58:31 UTC] [feishu-evening-134132] FAILED_NETWORK: sandbox代理403
+[2026-05-18 13:58:31 UTC] [email-evening-134132] FAILED_NETWORK: sandbox网络限制
+[2026-05-18 23:24:15 UTC] [git-techdigest] push失败（代理），commit已完成
