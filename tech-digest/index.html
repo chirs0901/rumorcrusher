@@ -133,6 +133,130 @@ var WIKI_MAP = {
 var DATA = {
 
   // ══════════════════════════════════
+  '2026-05-18': {
+    title: '硅碳电池主流化，双芯片33B谎言曝光',
+    sub: '38 条资讯核查，以下为 Supported 洞察。',
+    stats: [
+      {v:'38', l:'条采集'},
+      {v:'8',  l:'条 Refuted'},
+      {v:'14', l:'条 Supported'},
+      {v:'7',  l:'大器件分类'}
+    ],
+    items: [
+      {
+        id: 'RC-20260518-017',
+        category: '电池',
+        title: '一加15：7300mAh硅碳电池，Tom\'s Guide实测全场最佳续航',
+        text: '一加15搭载7300mAh硅碳复合阳极电池，在Tom\'s Guide标准续航测试中取得迄今最高分，是测试样本中续航最佳的手机。注意：广泛传播的"硅碳电池提升40-50%"是夸大声称，实际商用硅碳（硅含量5-20%）提升幅度为10-25%。',
+        tags: ['一加','硅碳电池','续航'],
+        sources: [
+          {label:'Tom\'s Guide 评测', url:'https://www.tomsguide.com/phones/i-interviewed-honor-and-oneplus-about-their-silicon-carbon-battery-tech-apple-and-google-are-quickly-falling-behind', type:'official'}
+        ],
+        verdict: 'Supported',
+        wikiId: 'silicon-carbon-battery-2026'
+      },
+      {
+        id: 'RC-20260518-015',
+        category: '电池',
+        title: '摩托罗拉Razr Ultra 2026：首款硅碳翻盖折叠屏，5月21日美国上市',
+        text: '摩托罗拉Razr Ultra 2026是首款搭载硅碳电池的翻盖折叠屏手机，5月21日在美国Best Buy/Amazon正式开售，5000mAh容量较前代增加300mAh。Razr Fold版本更达6000mAh，整机厚度仅9.89mm。',
+        tags: ['摩托罗拉','Razr','硅碳电池','折叠屏'],
+        sources: [
+          {label:'Android Authority', url:'https://www.androidauthority.com/motorola-razr-2026-ultra-fold-battery-3661996/', type:'official'},
+          {label:'TechRadar', url:'https://www.techradar.com/phones/motorola-phones/motorola-just-made-silicon-carbon-batteries-mainstream-heres-what-that-means-for-the-iphone-18-and-samsung-galaxy-s27', type:''}
+        ],
+        verdict: 'Supported',
+        wikiId: 'silicon-carbon-battery-2026'
+      },
+      {
+        id: 'RC-20260518-006',
+        category: 'AI创新',
+        title: 'MediaTek Dimensity 9400首发Agentic AI商业化，Snapdragon 8 Elite Gen 5跟进',
+        text: 'MediaTek确认为全球首个将Agentic AI能力商业化的手机芯片厂商（Dimensity 9400系列），Qualcomm随后在Snapdragon 8 Elite Gen 5跟进。⚠️注意：两家芯片商声称的"端侧运行33B参数LLM"均未提量化精度，已被核查驳斥——实际需INT4量化，推理速度约1-3 token/s，日常用例不可用。',
+        tags: ['MediaTek','Dimensity 9400','Agentic AI','端侧AI'],
+        sources: [
+          {label:'Apple World Today 分析（2026-05）', url:'https://appleworld.today/2026/05/apples-introduction-of-an-agentic-ai-smartphone-could-significantly-reshape-the-market/', type:''}
+        ],
+        verdict: 'Supported',
+        wikiId: 'dimensity-9400'
+      },
+      {
+        id: 'RC-20260518-008',
+        category: 'AI创新',
+        title: '小米2026年实现自研芯片+OS+AI三合一垂直整合（CNBC官采确认）',
+        text: '小米官方向CNBC确认，2026年将首次在单一设备同时搭载自研芯片（澎湃系列）、自研操作系统（HyperOS）和自研AI（MiMo/小爱）。这是继华为之后全球第二个完成手机技术栈垂直整合的品牌，年度芯片发布计划也同步公布。',
+        tags: ['小米','澎湃芯片','HyperOS','MiMo','垂直整合'],
+        sources: [
+          {label:'CNBC 专访（2026-03-04）', url:'https://www.cnbc.com/2026/03/04/xiaomi-plans-yearly-smartphone-chip-release-ai-assistant-for-overseas.html', type:'official'}
+        ],
+        verdict: 'Supported',
+        wikiId: ''
+      },
+      {
+        id: 'RC-20260518-010',
+        category: '屏幕',
+        title: '三星Flex Chroma Pixel OLED：PSF新材料，96% BT.2020色域，HBM模式3000nits',
+        text: '三星显示2026年5月5日官方展示下一代OLED技术Flex Chroma Pixel，采用磷光敏化荧光（PSF）新型发光材料，HBM峰值模式达3000nits，色域覆盖96% BT.2020。注意：3000nits和96%均为HBM峰值条件，全屏激发亮度显著低于峰值，需DisplayMate独立验证。',
+        tags: ['三星','OLED','PSF材料','屏幕技术'],
+        sources: [
+          {label:'新浪科技（2026-05-05）', url:'https://finance.sina.com.cn/tech/digi/2026-05-05/doc-inhwvcpk9810544.shtml', type:''}
+        ],
+        verdict: 'Supported',
+        wikiId: ''
+      },
+      {
+        id: 'RC-20260518-013',
+        category: '屏幕',
+        title: 'TCL华星展示全球首款Real Stripe RGB印刷OLED手机屏（CES 2026）',
+        text: 'TCL华星在CES 2026展示全球首款Real Stripe RGB印刷OLED手机屏，5.65英寸，390PPI，等效于钻石排列490PPI的视觉密度。印刷OLED路线有望降低OLED生产成本，是有别于传统蒸镀OLED的重要技术路线。',
+        tags: ['TCL华星','印刷OLED','CES 2026','屏幕'],
+        sources: [
+          {label:'新浪科技（2026-01-10）', url:'https://finance.sina.com.cn/tech/roll/2026-01-10/doc-inhfurhv5170580.shtml', type:''}
+        ],
+        verdict: 'Supported',
+        wikiId: ''
+      },
+      {
+        id: 'RC-20260518-023',
+        category: '散热',
+        title: 'iPhone 17 Pro系列确认搭载VC均热板，全球主流旗舰VC普及收官',
+        text: 'iPhone 17 Pro系列已确认搭载VC均热板，至此全球主流旗舰设备（华为/三星/小米/OPPO/vivo/苹果）完成VC散热技术普及。AI推理任务产生集中热点，VC均热板将点热源转换为面热源，是AI手机的必备硬件。注意：VC均热板与石墨烯导热膜功能互补，不能做直接效率倍数对比。',
+        tags: ['苹果','iPhone 17 Pro','VC均热板','散热'],
+        sources: [
+          {label:'新浪财经（2025-01-16）', url:'https://finance.sina.com.cn/roll/2025-01-16/doc-inefcmai6491490.shtml', type:''}
+        ],
+        verdict: 'Supported',
+        wikiId: 'vc-vapor-chamber'
+      },
+      {
+        id: 'RC-20260518-026',
+        category: '存储',
+        title: 'HBM需求爆增持续挤占LPDDR5X产能，手机存储供应偏紧',
+        text: 'HBM3/HBM3E需求使三星/Micron将大量产能优先供应NVIDIA、AMD和云厂商，导致手机用LPDDR5X供应偏紧。2026年旗舰已普遍采用16GB LPDDR5X + 1TB UFS 4.1，供应紧张将推高中高端机型成本。分析师预测Q4 2026随新产能上线缓解（预测，待观察）。',
+        tags: ['LPDDR5X','HBM','存储供应','供应链'],
+        sources: [
+          {label:'GameGPU（2026）', url:'https://en.gamegpu.com/News/zhelezo/LPDDR5X-smartphone-memory-supply-deficit-shifts-to-mid-2026', type:''},
+          {label:'Samsung Newsroom', url:'https://news.samsung.com/global/samsung-brings-flagship-features-to-broader-smartphone-market-with-lpddr5-multichip-package', type:'official'}
+        ],
+        verdict: 'Supported',
+        wikiId: ''
+      },
+      {
+        id: 'RC-20260518-002',
+        category: 'AI创新',
+        title: 'MiniCPM-o 4.5：9B参数多模态模型骁龙8Gen3实测12FPS，端侧AI真实基准',
+        text: '面壁智能2026年2月发布MiniCPM-o 4.5，9B参数开源多模态模型，在骁龙8Gen3设备上实现12FPS视频理解。这是与芯片厂商夸大的"33B参数端侧运行"形成对比的真实性能基准——9B参数在旗舰芯片上的实际推理速度约为12FPS，合理可用。',
+        tags: ['面壁智能','MiniCPM','端侧AI','骁龙8Gen3'],
+        sources: [
+          {label:'澎湃新闻（2026-02-04）', url:'https://m.thepaper.cn/newsDetail_forward_32706411', type:''}
+        ],
+        verdict: 'Supported',
+        wikiId: ''
+      }
+    ]
+  },
+
+  // ══════════════════════════════════
   '2026-05-17': {
     title: 'AI重塑手机格局：品牌端侧大模型落地，器件策略随之重构',
     sub: '32 条资讯经多维筛查，涵盖 2026-05-10 后最新动态，新增 AI 创新品类，覆盖品牌 AI 战略与核心器件应对措施，去除高相似条目后保留 10 条 Supported 洞察。',

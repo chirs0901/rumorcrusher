@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RumorCrusher — 2026-05-18 · 手机硬件核查</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+  :root{--bg:#0f1117;--card:#1a1d2e;--border:#2a2d3e;--accent:#f59e0b;--red:#ef4444;--green:#22c55e;--blue:#3b82f6;--yellow:#eab308;--purple:#a855f7;--text:#e2e8f0;--muted:#94a3b8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;font-size:14px}
+  header{background:var(--card);border-bottom:1px solid var(--border);padding:20px 24px}
+  header h1{font-size:22px;font-weight:700}
+  header p{color:var(--muted);margin-top:4px;font-size:13px}
+  .container{max-width:1200px;margin:0 auto;padding:24px}
+  .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:24px}
+  .stat-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px}
+  .stat-card .label{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+  .stat-card .value{font-size:28px;font-weight:700;margin-top:6px}
+  .stat-card .sub{font-size:11px;color:var(--muted);margin-top:2px}
+  .red{color:var(--red)}.green{color:var(--green)}.blue{color:var(--blue)}.yellow{color:var(--yellow)}.accent{color:var(--accent)}.purple{color:var(--purple)}
+  .section{margin-bottom:24px}
+  .section h2{font-size:15px;font-weight:600;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+  .dist-bar{display:flex;height:30px;border-radius:6px;overflow:hidden;margin-bottom:10px}
+  .dist-bar .seg{display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#fff}
+  .seg.refuted{background:var(--red)}.seg.supported{background:var(--green)}.seg.nee{background:var(--blue)}.seg.ce{background:var(--yellow);color:#111}
+  .dist-legend{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+  .legend-item{display:flex;align-items:center;gap:6px;font-size:12px}
+  .legend-dot{width:10px;height:10px;border-radius:50%}
+  .alert-box{border-radius:8px;padding:14px;margin-bottom:12px}
+  .alert-box h3{font-size:14px;margin-bottom:6px}
+  .alert-box p{color:var(--muted);font-size:13px;line-height:1.5}
+  .alert-red{background:#ef444411;border:1px solid #ef444433}.alert-red h3{color:var(--red)}
+  .alert-orange{background:#f9731611;border:1px solid #f9731633}.alert-orange h3{color:#f97316}
+  .alert-blue{background:#3b82f611;border:1px solid #3b82f633}.alert-blue h3{color:var(--blue)}
+  .alert-yellow{background:#eab30811;border:1px solid #eab30833}.alert-yellow h3{color:var(--yellow)}
+  .alert-green{background:#22c55e11;border:1px solid #22c55e33}.alert-green h3{color:var(--green)}
+  .alert-purple{background:#a855f711;border:1px solid #a855f733}.alert-purple h3{color:var(--purple)}
+  .items-table{width:100%;border-collapse:collapse}
+  .items-table th{background:var(--border);padding:9px 12px;text-align:left;font-size:11px;color:var(--muted);text-transform:uppercase}
+  .items-table td{padding:9px 12px;border-bottom:1px solid var(--border);font-size:13px}
+  .items-table tr:hover td{background:#ffffff08}
+  .badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:11px;font-weight:600}
+  .badge.refuted{background:#ef444422;color:var(--red);border:1px solid #ef444444}
+  .badge.supported{background:#22c55e22;color:var(--green);border:1px solid #22c55e44}
+  .badge.nee{background:#3b82f622;color:var(--blue);border:1px solid #3b82f644}
+  .badge.ce{background:#eab30822;color:var(--yellow);border:1px solid #eab30844}
+  .badge.high{background:#f9731633;color:#fdba74}
+  .badge.medium{background:#eab30833;color:#ca8a04}
+  .health-score{font-size:48px;font-weight:800;color:#eab308}
+  .graph-container{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;height:380px;overflow:hidden}
+  #graph svg{width:100%;height:100%}
+  .new-badge{display:inline-block;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700;background:#a855f733;color:var(--purple);border:1px solid #a855f744;margin-left:4px}
+  .footer{text-align:center;color:var(--muted);font-size:12px;padding:24px;border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🔍 RumorCrusher Dashboard</h1>
+  <p>2026-05-18 · 手机硬件核查专项 · Pipeline v0.5 · 采集38条 / 精审38条</p>
+</header>
+
+<div class="container">
+
+  <!-- STATS -->
+  <div class="stats-grid">
+    <div class="stat-card"><div class="label">采集条目</div><div class="value accent">38</div><div class="sub">8轮 WebSearch ✅</div></div>
+    <div class="stat-card"><div class="label">精审条目</div><div class="value blue">38</div><div class="sub">全量审核</div></div>
+    <div class="stat-card"><div class="label">已驳斥</div><div class="value red">8</div><div class="sub">Refuted · 21.1%</div></div>
+    <div class="stat-card"><div class="label">有据可查</div><div class="value green">14</div><div class="sub">Supported · 36.8%</div></div>
+    <div class="stat-card"><div class="label">待核实率 UnR</div><div class="value yellow">23.7%</div><div class="sub">NEE 9条</div></div>
+    <div class="stat-card"><div class="label">健康评分</div><div class="health-score">82</div><div class="sub">/ 100</div></div>
+    <div class="stat-card"><div class="label">avg EQ</div><div class="value purple">7.42</div><div class="sub">↑ vs 昨日7.04</div></div>
+    <div class="stat-card"><div class="label">TSVer触发</div><div class="value accent">6</div><div class="sub">15.8% 触发率</div></div>
+  </div>
+
+  <!-- AVeriTeC DIST -->
+  <div class="section">
+    <h2>📊 AVeriTeC 标签分布</h2>
+    <div class="dist-bar">
+      <div class="seg supported" style="width:36.8%">Supp 36.8%</div>
+      <div class="seg refuted" style="width:21.1%">Refuted 21.1%</div>
+      <div class="seg ce" style="width:18.4%">CE 18.4%</div>
+      <div class="seg nee" style="width:23.7%">NEE 23.7%</div>
+    </div>
+    <div class="dist-legend">
+      <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div>Supported 14条</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--red)"></div>Refuted 8条</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--yellow)"></div>ConflictingEvidence 7条</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div>NotEnoughEvidence 9条</div>
+    </div>
+  </div>
+
+  <!-- HIGH PRIORITY ALERTS -->
+  <div class="section">
+    <h2>🚨 关键核查发现</h2>
+
+    <div class="alert-box alert-red">
+      <h3>🔴 双芯片厂商同步伪科学：骁龙+天玑"33B参数端侧运行"（EQ 9.5 / 9.0）</h3>
+      <p>高通Snapdragon 8 Elite Gen 5与联发科Dimensity 9300均声称NPU可"端侧运行33B参数LLM"，但两者均未提量化精度（实际为INT4量化）、token/s速度、首token延迟。实际推理速度约1-3 token/s，首token延迟超30秒，对日常用例不可用。这是两大芯片巨头同步使用相同营销话术制造"行业共识"的教科书级案例。<br><strong>判定：Refuted × 2 | 新增伪科学模式：双芯片厂商同步伪科学</strong></p>
+    </div>
+
+    <div class="alert-box alert-red">
+      <h3>🔴 硅碳电池"容量提升40-50%"——已被驳斥（EQ 9.2）</h3>
+      <p>广泛传播的"硅碳电池比传统锂离子提升40-50%"是将纯硅阳极理论极值套用于商用硅碳复合阳极。实际商用产品（硅含量5-20%）提升幅度为10-25%。一加15（7300mAh）、荣耀Magic V6（7150mAh）的大容量来自物理空间扩大与化学密度改进的双重贡献，40-50%夸大了化学部分的单一贡献。<br><strong>判定：Refuted | 新增伪科学模式：硅碳容量倍增话术</strong></p>
+    </div>
+
+    <div class="alert-box alert-orange">
+      <h3>🟠 VC均热板"效率是石墨烯10-20倍"——维度错误对比（EQ 9.0）</h3>
+      <p>VC均热板（体积均热）与石墨烯导热膜（平面导热）功能互补，不在同一维度。两者在旗舰机型中通常配合使用，而非替代关系。10-20倍的直接对比是利用技术概念错位的营销话术。<br><strong>判定：Refuted | 新增逻辑谬误：苹果与橙子比较</strong></p>
+    </div>
+
+    <div class="alert-box alert-yellow">
+      <h3>🟡 华为Mate 80 Pro Max规格爆料（EQ 8.5）— 官方未确认，ConflictingEvidence</h3>
+      <p>IT之家以确定性口吻报道华为Mate 80 Pro Max"首发双层OLED、7999元起"，但截至2026-05-18，华为未官方发布Mate 80系列。此为产品爆料确定性污染的典型案例。</p>
+    </div>
+  </div>
+
+  <!-- SUPPORTED HIGHLIGHTS -->
+  <div class="section">
+    <h2>✅ 核查通过的重要洞察</h2>
+
+    <div class="alert-box alert-green">
+      <h3>🟢 硅碳电池主流化完成——三星是最后缺口</h3>
+      <p>一加15（7300mAh，Tom's Guide实测最佳续航）、荣耀Magic V6（7150mAh，MWC 2026）、摩托罗拉Razr Fold（6000mAh，9.89mm厚）/ Razr Ultra 2026（5000mAh，5月21日美国上市）均为经权威媒体实测确认的硅碳电池手机。三星EVP已官方确认在研，时间表未定。</p>
+    </div>
+
+    <div class="alert-box alert-green">
+      <h3>🟢 MediaTek Dimensity 9400首个商业化Agentic AI SoC</h3>
+      <p>MediaTek确认为首个将Agentic AI能力商业化的手机芯片厂商（Dimensity 9400），Qualcomm随后跟进（Snapdragon 8 Elite Gen 5）。2026年横评结论：高通CPU领先，天玑GPU效率和散热更优，差距持续收窄。</p>
+    </div>
+
+    <div class="alert-box alert-green">
+      <h3>🟢 小米2026年实现芯片+OS+AI三合一垂直整合</h3>
+      <p>小米官方向CNBC确认（2026-03-04），2026年将首次在单一设备搭载自研芯片（澎湃）+自研OS（HyperOS）+自研AI（MiMo），成为继华为之后全球第二个完成手机技术栈垂直整合的品牌。</p>
+    </div>
+
+    <div class="alert-box alert-blue">
+      <h3>🔵 三星Flex Chroma Pixel OLED：PSF新材料，96% BT.2020色域（注：HBM峰值条件）</h3>
+      <p>三星显示2026年5月5日官方展示下一代OLED技术，采用磷光敏化荧光（PSF）材料，HBM峰值模式3000nits，色域96% BT.2020。注意：3000nits和96%均为HBM峰值条件下数据，全屏激发亮度显著低于此值，需DisplayMate独立测试验证。</p>
+    </div>
+
+    <div class="alert-box alert-blue">
+      <h3>🔵 LPDDR5X供应偏紧根因：HBM挤占产能（结构性事实）</h3>
+      <p>HBM3/HBM3E爆增需求使三星/Micron将大量产能转向AI服务器内存，手机存储供应偏紧。2026年旗舰已普遍采用16GB LPDDR5X + 1TB UFS 4.1，短缺将推高中高端机型成本。</p>
+    </div>
+  </div>
+
+  <!-- D3 RELATIONSHIP GRAPH -->
+  <div class="section">
+    <h2>🕸️ 核查关系图谱</h2>
+    <div class="graph-container" id="graph"></div>
+  </div>
+
+  <!-- ITEMS TABLE -->
+  <div class="section">
+    <h2>📋 全量条目核查结果</h2>
+    <table class="items-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>标题</th>
+          <th>品类</th>
+          <th>AVeriTeC</th>
+          <th>EQ</th>
+          <th>CW</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>001</td><td>荣耀MagicGUI端侧大模型</td><td>AI创新</td><td><span class="badge supported">Supported</span></td><td>7.0</td><td><span class="badge medium">高</span></td></tr>
+        <tr><td>002</td><td>MiniCPM-o 4.5骁龙8Gen3实测12FPS</td><td>AI创新</td><td><span class="badge supported">Supported</span></td><td>7.5</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>003</td><td>腾讯HY-1.8B-2Bit"首个产业2Bit端侧模型"</td><td>AI创新</td><td><span class="badge ce">CE</span></td><td>8.2</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>004</td><td>字节跳动五色手机助手</td><td>AI创新</td><td><span class="badge supported">Supported</span></td><td>6.5</td><td><span class="badge medium">中</span></td></tr>
+        <tr><td>005</td><td>Samsung HBM手机芯片Exynos 2800/2900</td><td>芯片</td><td><span class="badge ce">CE</span></td><td>7.8</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>006</td><td>Dimensity 9400首发Agentic AI商业化</td><td>芯片</td><td><span class="badge supported">Supported</span></td><td>7.2</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>007</td><td>OpenAI手机2027量产，Dimensity 9600定制版N2P</td><td>AI创新</td><td><span class="badge nee">NEE</span></td><td>7.5</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>008</td><td>小米芯片+OS+AI三合一集成（CNBC官采）</td><td>芯片</td><td><span class="badge supported">Supported</span></td><td>7.0</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>009</td><td>Agentic AI SoC CAGR 281%预测</td><td>AI创新</td><td><span class="badge nee">NEE</span></td><td>6.5</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>010</td><td>三星Flex Chroma Pixel OLED：96% BT.2020，3000nits</td><td>屏幕</td><td><span class="badge supported">Supported</span></td><td>8.0</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>011</td><td>华为Mate 80 Pro Max双层OLED，7999元（官方未确认）</td><td>屏幕</td><td><span class="badge ce">CE</span></td><td>8.5</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>012</td><td>苹果无边框OLED iPhone 2026年</td><td>屏幕</td><td><span class="badge nee">NEE</span></td><td>6.8</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>013</td><td>TCL华星全球首款Real Stripe RGB印刷OLED</td><td>屏幕</td><td><span class="badge supported">Supported</span></td><td>7.2</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>014</td><td>京东方LCD延迟降低40%（信源存疑）</td><td>屏幕</td><td><span class="badge nee">NEE</span></td><td>7.2</td><td><span class="badge medium">中</span></td></tr>
+        <tr><td>015</td><td>摩托罗拉Razr Ultra 2026首款硅碳翻盖，5月21日美国上市</td><td>电池</td><td><span class="badge supported">Supported</span></td><td>7.8</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>016</td><td>摩托罗拉Razr Fold：6000mAh硅碳，9.89mm</td><td>电池</td><td><span class="badge supported">Supported</span></td><td>7.0</td><td><span class="badge medium">中</span></td></tr>
+        <tr><td>017</td><td>一加15：7300mAh，Tom's Guide最佳续航</td><td>电池</td><td><span class="badge supported">Supported</span></td><td>8.0</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>018</td><td>荣耀Magic V6：7150mAh硅碳折叠（MWC 2026）</td><td>电池</td><td><span class="badge supported">Supported</span></td><td>7.0</td><td><span class="badge medium">中</span></td></tr>
+        <tr><td>019</td><td>三星确认研发硅碳电池，时间表未定</td><td>电池</td><td><span class="badge supported">Supported</span></td><td>6.5</td><td><span class="badge medium">中</span></td></tr>
+        <tr><td>020</td><td>⚠️ 硅碳电池"容量提升40-50%"</td><td>电池</td><td><span class="badge refuted">Refuted</span></td><td>9.2</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>021</td><td>机构报告：VC均热板进入AI终端散热主赛道</td><td>散热</td><td><span class="badge supported">Supported</span></td><td>6.5</td><td><span class="badge medium">中</span></td></tr>
+        <tr><td>022</td><td>iQOO 15 Ultra"行业最大单层VC面积"</td><td>散热</td><td><span class="badge nee">NEE</span></td><td>7.5</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>023</td><td>iPhone 17 Pro系列确认VC均热板</td><td>散热</td><td><span class="badge supported">Supported</span></td><td>6.5</td><td><span class="badge medium">中</span></td></tr>
+        <tr><td>024</td><td>⚠️ VC效率"是石墨烯10-20倍"</td><td>散热</td><td><span class="badge refuted">Refuted</span></td><td>9.0</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>025</td><td>LPDDR5X价格上涨80-90%，26-39周交货期</td><td>存储</td><td><span class="badge ce">CE</span></td><td>8.0</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>026</td><td>HBM挤占LPDDR5X产能（结构性事实）</td><td>存储</td><td><span class="badge supported">Supported</span></td><td>7.0</td><td><span class="badge medium">中</span></td></tr>
+        <tr><td>027</td><td>LPDDR5X短缺Q4 2026缓解预测</td><td>存储</td><td><span class="badge nee">NEE</span></td><td>5.5</td><td><span class="badge medium">低</span></td></tr>
+        <tr><td>028</td><td>2026旗舰普遍16GB LPDDR5X + 1TB UFS 4.1</td><td>存储</td><td><span class="badge supported">Supported</span></td><td>6.0</td><td><span class="badge medium">中</span></td></tr>
+        <tr><td>029</td><td>高通2026年5月发布两款新骁龙平台（官网）</td><td>芯片</td><td><span class="badge supported">Supported</span></td><td>6.0</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>030</td><td>OPPO Find X8 Pro马里亚纳X4，5月17日发布</td><td>手机创新</td><td><span class="badge ce">CE</span></td><td>7.8</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>031</td><td>华为Mate X6三折叠麒麟9100S+鸿蒙Next 3.0</td><td>手机创新</td><td><span class="badge ce">CE</span></td><td>7.2</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>032</td><td>2026年轻薄旗舰浪潮</td><td>手机创新</td><td><span class="badge supported">Supported</span></td><td>6.0</td><td><span class="badge medium">低</span></td></tr>
+        <tr><td>033</td><td>⚠️ 骁龙8 Elite Gen 5"33B参数端侧运行"</td><td>芯片</td><td><span class="badge refuted">Refuted</span></td><td>9.5</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>034</td><td>⚠️ MediaTek NPU 790"33B参数端侧运行"</td><td>芯片</td><td><span class="badge refuted">Refuted</span></td><td>9.0</td><td><span class="badge high">高</span></td></tr>
+        <tr><td>035</td><td>Geekbench AI 1.7发布</td><td>芯片</td><td><span class="badge supported">Supported</span></td><td>5.0</td><td><span class="badge medium">低</span></td></tr>
+        <tr><td>036</td><td>骁龙CPU强/天玑GPU效率更优（横评结论）</td><td>芯片</td><td><span class="badge supported">Supported</span></td><td>7.0</td><td><span class="badge medium">低</span></td></tr>
+        <tr><td>037</td><td>苹果OLED路线图：5款产品2026-2028换屏</td><td>屏幕</td><td><span class="badge nee">NEE</span></td><td>6.0</td><td><span class="badge medium">中</span></td></tr>
+        <tr><td>038</td><td>三星LPDDR5 MCP向中端推广</td><td>存储</td><td><span class="badge supported">Supported</span></td><td>5.5</td><td><span class="badge medium">低</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- NEW PATTERNS -->
+  <div class="section">
+    <h2>🔬 本日新发现核查模式 <span class="new-badge">NEW</span></h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div class="alert-box alert-purple">
+        <h3>伪科学：双芯片厂商同步伪科学</h3>
+        <p>两大竞争厂商同步使用相同绝对化声称，制造"行业共识"假象降低质疑阈值。</p>
+      </div>
+      <div class="alert-box alert-purple">
+        <h3>伪科学：硅碳容量倍增话术</h3>
+        <p>将纯硅阳极理论极值（40-50%）套用于商用硅碳复合产品（实际10-25%）。</p>
+      </div>
+      <div class="alert-box alert-purple">
+        <h3>伪科学：散热维度错误对比</h3>
+        <p>VC均热板（体积均热）与石墨烯膜（平面导热）功能互补，不能直接效率对比。</p>
+      </div>
+      <div class="alert-box alert-purple">
+        <h3>逻辑谬误：产品爆料确定性污染</h3>
+        <p>将C级信源的芯片型号爆料以官方确认口吻描述，如OPPO马里亚纳X4/华为Mate X6规格。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    RumorCrusher · 2026-05-18 · Pipeline v0.5 · 手机硬件核查专项<br>
+    <a href="../index.html" style="color:var(--accent)">← 主站</a> &nbsp;·&nbsp;
+    <a href="../tech-digest/index.html" style="color:var(--accent)">硬件资讯速递</a> &nbsp;·&nbsp;
+    <a href="../wiki/index.html" style="color:var(--accent)">LLM Wiki</a>
+  </div>
+
+</div>
+
+<script>
+// D3 关系图谱
+(function(){
+  const nodes = [
+    {id:"芯片", group:1, r:28},
+    {id:"AI创新", group:2, r:26},
+    {id:"电池", group:3, r:24},
+    {id:"屏幕", group:4, r:22},
+    {id:"散热", group:5, r:20},
+    {id:"存储", group:6, r:20},
+    {id:"手机创新", group:7, r:18},
+    {id:"高通", group:1, r:14},
+    {id:"联发科", group:1, r:14},
+    {id:"三星", group:1, r:14},
+    {id:"小米", group:7, r:13},
+    {id:"荣耀", group:2, r:12},
+    {id:"摩托罗拉", group:3, r:12},
+    {id:"一加", group:3, r:11},
+    {id:"33B声称⚠️", group:8, r:16},
+    {id:"硅碳电池", group:3, r:15},
+    {id:"VC均热板", group:5, r:13},
+    {id:"LPDDR5X", group:6, r:13},
+    {id:"HBM挤占", group:6, r:11},
+  ];
+  const links = [
+    {source:"芯片",target:"高通"},{source:"芯片",target:"联发科"},{source:"芯片",target:"三星"},
+    {source:"芯片",target:"AI创新"},{source:"芯片",target:"33B声称⚠️"},
+    {source:"高通",target:"33B声称⚠️"},{source:"联发科",target:"33B声称⚠️"},
+    {source:"AI创新",target:"荣耀"},{source:"AI创新",target:"小米"},
+    {source:"电池",target:"硅碳电池"},{source:"硅碳电池",target:"摩托罗拉"},
+    {source:"硅碳电池",target:"一加"},{source:"硅碳电池",target:"荣耀"},
+    {source:"散热",target:"VC均热板"},{source:"存储",target:"LPDDR5X"},
+    {source:"存储",target:"HBM挤占"},{source:"HBM挤占",target:"三星"},
+    {source:"手机创新",target:"小米"},{source:"芯片",target:"存储"},
+  ];
+
+  const container = document.getElementById('graph');
+  const W = container.clientWidth || 700;
+  const H = container.clientHeight || 340;
+
+  const svg = d3.select('#graph').append('svg')
+    .attr('viewBox', `0 0 ${W} ${H}`)
+    .style('background','transparent');
+
+  const color = d3.scaleOrdinal()
+    .domain([1,2,3,4,5,6,7,8])
+    .range(['#3b82f6','#a855f7','#22c55e','#8b5cf6','#f97316','#06b6d4','#f59e0b','#ef4444']);
+
+  const sim = d3.forceSimulation(nodes)
+    .force('link', d3.forceLink(links).id(d=>d.id).distance(80))
+    .force('charge', d3.forceManyBody().strength(-200))
+    .force('center', d3.forceCenter(W/2, H/2))
+    .force('collision', d3.forceCollide().radius(d=>d.r+8));
+
+  const link = svg.append('g').selectAll('line')
+    .data(links).join('line')
+    .attr('stroke','#2a2d3e').attr('stroke-width',1.5).attr('opacity',0.6);
+
+  const node = svg.append('g').selectAll('g')
+    .data(nodes).join('g').call(
+      d3.drag()
+        .on('start', (e,d)=>{if(!e.active)sim.alphaTarget(0.3).restart();d.fx=d.x;d.fy=d.y;})
+        .on('drag', (e,d)=>{d.fx=e.x;d.fy=e.y;})
+        .on('end', (e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null;})
+    );
+
+  node.append('circle')
+    .attr('r', d=>d.r)
+    .attr('fill', d=>color(d.group))
+    .attr('opacity', 0.85)
+    .attr('stroke', d=>d.id.includes('⚠️')?'#ef4444':'#ffffff22')
+    .attr('stroke-width', d=>d.id.includes('⚠️')?2:1);
+
+  node.append('text')
+    .attr('text-anchor','middle').attr('dy','0.35em')
+    .attr('font-size', d=>d.r>20?11:9)
+    .attr('fill','#fff')
+    .attr('font-weight',600)
+    .attr('pointer-events','none')
+    .text(d=>d.id.length>6?d.id.slice(0,6)+'…':d.id);
+
+  sim.on('tick',()=>{
+    link.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y)
+        .attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
+    node.attr('transform',d=>`translate(${Math.max(d.r,Math.min(W-d.r,d.x))},${Math.max(d.r,Math.min(H-d.r,d.y))})`);
+  });
+})();
+</script>
+</body>
+</html>

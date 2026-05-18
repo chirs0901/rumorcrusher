@@ -1,5 +1,38 @@
 # RumorCrusher 项目演进日志
 
+## 2026-05-18 · 手机硬件专项晚报（072210）
+
+### 本次运行统计
+- 采集条目：38条（8轮 WebSearch）
+- AVeriTeC分布：Supported×14, Refuted×8, ConflictingEvidence×7, NEE×9
+- TSVer触发：6条
+- avg EQ：7.42 | UnR：23.7% | 健康打分：82/100
+
+### 今日核心发现
+- **最大谎言：** 高通+联发科同步使用"33B参数端侧运行"声称（均未提量化精度），双双被Refuted（EQ 9.5/9.0）
+- **硅碳电池主流化完成：** 一加15（7300mAh）/荣耀Magic V6（7150mAh）/摩托罗拉Razr系列实测确认，三星是最后缺口
+- **VC均热板全球旗舰普及完成：** iPhone 17 Pro加入后收官，AI负载驱动下一波升级
+- **LPDDR5X供应偏紧：** HBM产能挤占是根因，Q4 2026预计缓解（预测，待观察）
+- **OpenAI手机2027量产：** 仅Kuo一源，标注NEE
+
+### 飞轮更新
+- `skills/pseudoscience-patterns.md`：追加3条新模式（双厂商同步伪科学、硅碳容量倍增话术、散热维度错误对比）
+- `skills/logical-fallacy-catalog.md`：追加3条新谬误（苹果与橙子比较、精确数字谬误、产品爆料确定性污染）
+- `wiki/entities/soc/dimensity-9400.md`：新建，Agentic AI首发地位核查
+- `wiki/entities/tech/vc-vapor-chamber.md`：新建，修正VC vs石墨烯误导比较
+- `wiki/topics/silicon-carbon-battery-2026.md`：新建，硅碳电池核查专题
+
+### 产出文件
+- `2026-05-18/01-raw/items-072210.json`（38条原始数据）
+- `2026-05-18/02-annotations/check-worthiness-072210.json`
+- `2026-05-18/02-annotations/synthesis-072210.json`
+- `2026-05-18/03-quality-report-072210.md`
+- `2026-05-18/04-clean-report-072210.md`
+- `2026-05-18/05-methodology-delta-072210.md`
+- `2026-05-18/06-self-eval-072210.md`
+- `2026-05-18/index.html`（仪表盘）
+- `tech-digest/index.html`（更新，新增2026-05-18数据块）
+
 ## 2026-05-14 · 项目启动 + 首日试运行
 - 完成需求对齐：信源/范围/输出格式/部署方式/可视化风格
 - 搭建目录骨架与种子文件：scope.md, source-list.yaml, agents-architecture.md
