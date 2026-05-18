@@ -120,3 +120,31 @@
 - **汉坦新变体：** 封城+疫苗阴谋论第二波
 - **质量指标：** 采集26条/精审22条，UnR=22.7%，avg EQ=8.04，健康74/100
 - **方法论改进：** 建议增加`spreader_tier`字段，印巴冲突纳入必查清单
+
+## 2026-05-18 晚报 (批次 134132)
+
+### 采集
+- 采集30条，精审22条，9轮WebSearch（中英文）
+
+### AVeriTeC 分布
+- Supported 9 / Refuted 5 / ConflictingEvidence 5 / NEE 3
+- avg EQ 7.68 | UnR 13.6% | 健康打分 85/100
+
+### 关键辟谣
+- 张家界玻璃桥AI合成坍塌视频（EQ 9.5，完全虚构）
+- OpenAI手机"完全杀死App"声称（EQ 9.3，Refuted）
+- 苹果双线发布爆料（确定性措辞，Refuted）
+
+### 飞轮更新
+- pseudoscience-patterns.md：+2模式（AI手机绝对化功能 + 芯片供应商爆料混战）
+- logical-fallacy-catalog.md：+2案例（金融数字错配 + 技术愿景当产品承诺）
+- 信源调整：TMTPOST数字信息需降权核查
+
+### 产出文件
+- 01-raw/items-134132.json（30条）
+- 02-annotations/check-worthiness-134132.json（22条）
+- 02-annotations/synthesis-134132.json（4-Agent审核）
+- 03-quality-report-134132.md
+- 04-clean-report-134132.md
+- 05-methodology-delta-134132.md
+- 06-self-eval-134132.md

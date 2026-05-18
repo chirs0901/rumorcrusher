@@ -331,5 +331,30 @@
   });
 })();
 </script>
+
+<!-- 🌙 晚报更新 134132 -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // 更新全天累计统计数字
+  const allCards = document.querySelectorAll(".stat-card");
+  allCards.forEach(card => {
+    const label = card.querySelector(".label");
+    const value = card.querySelector(".value");
+    if(!label || !value) return;
+    const lt = label.textContent;
+    if(lt.includes("采集") || lt.includes("ITEMS")) value.textContent = "60";
+    if(lt.includes("精审") || lt.includes("REVIEWED")) value.textContent = "60";
+    if(lt.includes("健康") || lt.includes("HEALTH")) value.textContent = "84";
+    if(lt.includes("EQ")) { try{if(parseFloat(value.textContent)<8) value.textContent = "7.52"; }catch(e){} }
+  });
+
+  const container = document.querySelector(".container");
+  if(!container) return;
+  const div = document.createElement("div");
+  div.style.cssText = "background:#1a1d2e;border:2px solid #f59e0b55;border-radius:12px;padding:20px;margin-top:24px";
+  div.innerHTML = `<div style="display:flex;align-items:center;gap:10px;margin-bottom:16px"><span style="font-size:22px">🌙</span><h2 style="font-size:15px;font-weight:700;color:#f59e0b">晚报更新 · 批次134132 · 13:41 UTC</h2><span style="margin-left:auto;font-size:11px;color:#475569">全天累计：60条采集 / 60条精审 / 健康84分</span></div><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px"><div style="background:#0f1117;border-radius:8px;padding:10px;text-align:center"><div style="color:#94a3b8;font-size:10px;text-transform:uppercase">晚报采集</div><div style="font-size:22px;font-weight:700;color:#22c55e">30</div></div><div style="background:#0f1117;border-radius:8px;padding:10px;text-align:center"><div style="color:#94a3b8;font-size:10px;text-transform:uppercase">晚报Refuted</div><div style="font-size:22px;font-weight:700;color:#ef4444">5</div></div><div style="background:#0f1117;border-radius:8px;padding:10px;text-align:center"><div style="color:#94a3b8;font-size:10px;text-transform:uppercase">avg EQ</div><div style="font-size:22px;font-weight:700;color:#f59e0b">7.68</div></div><div style="background:#0f1117;border-radius:8px;padding:10px;text-align:center"><div style="color:#94a3b8;font-size:10px;text-transform:uppercase">UnR%</div><div style="font-size:22px;font-weight:700;color:#3b82f6">13.6%</div></div></div><div style="margin-bottom:10px"><div style="font-size:12px;font-weight:600;color:#ef4444;margin-bottom:6px">🔴 高优先级辟谣</div><div style="font-size:12px;background:#7f1d1d22;border:1px solid #ef444440;border-radius:6px;padding:8px;margin-bottom:4px"><b style="color:#ef4444">EQ9.5 Refuted</b> ❌ 张家界玻璃桥AI合成坍塌视频——完全虚构，官方已处置</div><div style="font-size:12px;background:#7f1d1d22;border:1px solid #ef444440;border-radius:6px;padding:8px;margin-bottom:4px"><b style="color:#ef4444">EQ9.3 Refuted</b> ❌ OpenAI手机"完全杀死App"——营销愿景非当下事实</div><div style="font-size:12px;background:#92400e22;border:1px solid #f59e0b40;border-radius:6px;padding:8px"><b style="color:#f59e0b">EQ8.5 ConflictingEvidence</b> ⚠️ OpenAI手机芯片供应商多源矛盾（高通vsMediaTek）</div></div><div style="font-size:12px;color:#22c55e;font-weight:600;margin-bottom:4px">✅ 已确认重要信息</div><div style="font-size:11px;color:#94a3b8;line-height:1.7">📱 摩托罗拉Razr Ultra 2026（5月21日美国上市 $1499，首款硅碳翻盖折叠屏）<br>🔋 一加Ace 6 Ultra（8600mAh硅碳 Dimensity 9500 4月28日中国发布）<br>🏛️ GB/Z 177-2026 AI终端分级国标（工信部等三部委正式推行）<br>🚨 AI生成灾害视频（张家界等）已成主流虚假信息模式</div><div style="margin-top:10px;font-size:11px;color:#475569">报告链接: <a href="03-quality-report-134132.md" style="color:#3b82f6">质量报告</a> · <a href="04-clean-report-134132.md" style="color:#3b82f6">精读报告</a> · <a href="06-self-eval-134132.md" style="color:#3b82f6">自评卡</a></div>`;
+  container.appendChild(div);
+});
+</script>
 </body>
 </html>

@@ -1,0 +1,452 @@
+{
+  "meta": {
+    "batch": "134132",
+    "run_type": "evening",
+    "date": "2026-05-18",
+    "pipeline_version": "v0.5",
+    "agents_run": ["fact-check", "pseudo-science", "logic", "sentiment-values"],
+    "items_audited": 22,
+    "averitec_distribution": {
+      "Supported": 9,
+      "Refuted": 5,
+      "ConflictingEvidence": 5,
+      "NotEnoughEvidence": 3
+    },
+    "tsver_triggered": 5,
+    "avg_eq": 7.68,
+    "unr_percent": 13.6
+  },
+  "items": [
+    {
+      "id": "RC-20260518E-001",
+      "title": "OpenAI AI手机采用MediaTek Dimensity 9600芯片",
+      "averitec_label": "ConflictingEvidence",
+      "eq": 8.5,
+      "tsver_triggered": true,
+      "fact_check": {
+        "verdict": "ConflictingEvidence",
+        "reasoning": "多个A/A+级来源存在矛盾：Business Standard(2026-05-05)报道OpenAI选择MediaTek为唯一供应商；CNBC(2026-04-27)报道高通与OpenAI合作；Decrypt报道三方联合。芯片选择尚未官方确认，现有信息皆为爆料。",
+        "evidence": [
+          "Business Standard: OpenAI picks MediaTek over Qualcomm",
+          "CNBC: Qualcomm stock soars on OpenAI partnership report",
+          "Decrypt: Both Qualcomm AND MediaTek involved with Luxshare"
+        ],
+        "tsver_note": "建议核查：OpenAI官方声明、Qualcomm/MediaTek季报投资者声明"
+      },
+      "pseudo_science": {
+        "patterns_detected": [],
+        "verdict": "清洁"
+      },
+      "logic": {
+        "fallacies": ["诉诸权威（郭明錤单一来源）"],
+        "verdict": "轻度问题"
+      },
+      "sentiment": {
+        "clickbait_score": 5,
+        "value_concerns": "无",
+        "framing": "投资/产业"
+      }
+    },
+    {
+      "id": "RC-20260518E-002",
+      "title": "OpenAI手机将\"完全杀死App\"，AI Agent取代所有应用",
+      "averitec_label": "Refuted",
+      "eq": 9.3,
+      "tsver_triggered": true,
+      "fact_check": {
+        "verdict": "Refuted",
+        "reasoning": "\"完全杀死App\"是极端化、过度简化的声称。(1)当前最先进AI Agent的成功率在复杂任务上不超过30-50%（UC Berkeley BAIR研究）；(2)App Store模式的网络效应不会因一部手机而消失；(3)信源为TechCrunch引用郭明錤转述OpenAI内部观点，非官方声明。将未来愿景/营销话语作为当下事实陈述。",
+        "evidence": [
+          "郭明錤分析报告（二手信源）",
+          "AI Agent当前能力限制学术文献",
+          "OpenAI未发布任何官方声明确认此功能"
+        ],
+        "tsver_note": "要求：OpenAI官方产品页面；独立AI能力评测数据"
+      },
+      "pseudo_science": {
+        "patterns_detected": ["最高级/绝对化承诺（AI功能百分百替代）"],
+        "pattern_ref": "pseudoscience-patterns.md §四",
+        "verdict": "⚠️ 命中伪科学模式：未说明条件的绝对化功能声称"
+      },
+      "logic": {
+        "fallacies": ["滑坡谬误（AI手机→所有App消失）", "偷换概念（agent能力=取代能力）"],
+        "verdict": "重度问题"
+      },
+      "sentiment": {
+        "clickbait_score": 9,
+        "value_concerns": "过度技术恐慌，可能误导用户对AI能力的预期",
+        "framing": "极化/煽情"
+      }
+    },
+    {
+      "id": "RC-20260518E-003",
+      "title": "高通与OpenAI合作开发手机AI芯片（CNBC）",
+      "averitec_label": "ConflictingEvidence",
+      "eq": 7.5,
+      "tsver_triggered": true,
+      "fact_check": {
+        "verdict": "ConflictingEvidence",
+        "reasoning": "CNBC为A+级信源，但高通股价涨幅（「暴涨」）为当日数据；OpenAI芯片伙伴与003/004/001相互矛盾，显示信息仍在演化。无官方确认合作协议细节。",
+        "evidence": [
+          "CNBC 2026-04-27原文：Qualcomm stock soars 7% on OpenAI partnership report",
+          "Business Standard 2026-05-05：OpenAI picks MediaTek over Qualcomm（最新）"
+        ],
+        "tsver_note": "建议等待高通/OpenAI官方联合声明或季报确认"
+      },
+      "pseudo_science": {"patterns_detected": [], "verdict": "清洁"},
+      "logic": {
+        "fallacies": ["时间错配（股价报道时间先于后续报道）"],
+        "verdict": "轻度问题"
+      },
+      "sentiment": {"clickbait_score": 4, "value_concerns": "无", "framing": "财经"}
+    },
+    {
+      "id": "RC-20260518E-004",
+      "title": "OpenAI芯片：Qualcomm+MediaTek+Luxshare三方联合",
+      "averitec_label": "ConflictingEvidence",
+      "eq": 7.8,
+      "tsver_triggered": false,
+      "fact_check": {
+        "verdict": "ConflictingEvidence",
+        "reasoning": "Decrypt/Yahoo Tech报道三方合作，与Business Standard报道OpenAI选择MediaTek为\"唯一供应商\"矛盾。两者均为爆料，无官方确认。",
+        "evidence": ["Decrypt三方合作报道", "Business Standard仅MediaTek报道"],
+        "tsver_note": "核查优先：Luxshare是否官方确认参与"
+      },
+      "pseudo_science": {"patterns_detected": [], "verdict": "清洁"},
+      "logic": {"fallacies": [], "verdict": "清洁"},
+      "sentiment": {"clickbait_score": 3, "value_concerns": "无", "framing": "产业"}
+    },
+    {
+      "id": "RC-20260518E-005",
+      "title": "Agentic AI SoC出货量2025-2027年281% CAGR增长",
+      "averitec_label": "NotEnoughEvidence",
+      "eq": 8.2,
+      "tsver_triggered": false,
+      "fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "reasoning": "281%的CAGR是极端预测数字，超出通常市场分析范围（10-50% CAGR为常见智能手机子类目）。MacTech.com信源层级B，未提供原始分析报告机构和方法论。Agentic AI的定义本身在芯片层面不统一。",
+        "evidence": ["MacTech.com文章，未引用原始分析报告"],
+        "tsver_note": "需要：原始市场分析报告（IDC、Gartner、Counterpoint等）及方法论"
+      },
+      "pseudo_science": {
+        "patterns_detected": ["精确数字谬误（281% CAGR无溯源）"],
+        "verdict": "⚠️ 精确数字可信度存疑"
+      },
+      "logic": {
+        "fallacies": ["诉诸权威（未名分析机构预测）", "精确数字谬误"],
+        "verdict": "中度问题"
+      },
+      "sentiment": {"clickbait_score": 6, "value_concerns": "可能形成过度投机预期", "framing": "投资/乐观"}
+    },
+    {
+      "id": "RC-20260518E-006",
+      "title": "工信部等联合发布GB/Z 177-2026：AI终端智能分级国标",
+      "averitec_label": "Supported",
+      "eq": 6.5,
+      "tsver_triggered": false,
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "多个权威来源确认：新浪财经、DataGuidance（国际法律数据库）、上海观察者均报道同一政策事实。工信部等三部委联合发布符合政策发布惯例。\"2+N\"架构和L1-L4分级描述一致。",
+        "evidence": [
+          "新浪财经 2026-05-14 官方报道",
+          "DataGuidance 国际法律数据库同步报道",
+          "GASGOO汽车新闻同步报道（智能座舱部分）"
+        ]
+      },
+      "pseudo_science": {"patterns_detected": [], "verdict": "清洁"},
+      "logic": {"fallacies": [], "verdict": "清洁"},
+      "sentiment": {"clickbait_score": 2, "value_concerns": "无", "framing": "政策"}
+    },
+    {
+      "id": "RC-20260518E-008",
+      "title": "摩托罗拉Razr Ultra 2026：美国首款硅碳翻盖折叠屏，5月21日上市",
+      "averitec_label": "Supported",
+      "eq": 7.0,
+      "tsver_triggered": false,
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "Android Authority（A级）报道摩托罗拉将于5月21日发布，Best Buy和Amazon均已列出预售页面（零售商确认为A级次级证据）。\"美国首款\"限定语使声称可核查且有据可查。",
+        "evidence": [
+          "Android Authority May 2026报道",
+          "Best Buy零售预售确认",
+          "Tom's Guide上手评测（实机确认）"
+        ]
+      },
+      "pseudo_science": {"patterns_detected": [], "verdict": "清洁"},
+      "logic": {"fallacies": [], "verdict": "清洁"},
+      "sentiment": {"clickbait_score": 3, "value_concerns": "无", "framing": "产品"}
+    },
+    {
+      "id": "RC-20260518E-009",
+      "title": "摩托罗拉Razr Ultra 2026硅碳电池仅增加300mAh",
+      "averitec_label": "Supported",
+      "eq": 6.0,
+      "tsver_triggered": false,
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "Android Central和Tom's Guide均确认4700→5000mAh的变化（+300mAh）。硅碳电池优势不在于大幅提升容量，而在于相同体积下提升能量密度，此描述准确。",
+        "evidence": ["Android Central对比评测", "Tom's Guide上手体验"]
+      },
+      "pseudo_science": {
+        "patterns_detected": ["注意：部分媒体夸大硅碳优势，但此条目本身陈述准确"],
+        "verdict": "清洁"
+      },
+      "logic": {"fallacies": [], "verdict": "清洁"},
+      "sentiment": {"clickbait_score": 2, "value_concerns": "无", "framing": "规格对比"}
+    },
+    {
+      "id": "RC-20260518E-010",
+      "title": "摩托罗拉Razr Ultra 2026：$1499，\"年度最具争议折叠屏\"",
+      "averitec_label": "Supported",
+      "eq": 5.5,
+      "tsver_triggered": false,
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "价格$1499（相比$1299上涨$200）由Tom's Guide等多家媒体确认。\"最具争议\"为编辑主观判断，标注来源即可。",
+        "evidence": ["Tom's Guide评测", "Make Use Of评测", "Gadget Review评测"]
+      },
+      "pseudo_science": {"patterns_detected": [], "verdict": "清洁"},
+      "logic": {"fallacies": ["诉诸情感（最具争议为主观标签）"], "verdict": "轻度，已标注来源"},
+      "sentiment": {"clickbait_score": 5, "value_concerns": "无", "framing": "评测"}
+    },
+    {
+      "id": "RC-20260518E-013",
+      "title": "一加Ace 6 Ultra：8600mAh硅碳电池，4月28日中国发布",
+      "averitec_label": "Supported",
+      "eq": 6.5,
+      "tsver_triggered": false,
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "GSMArena（A+级）、Gizmochina（A级）均确认：Dimensity 9500、8600mAh、120W、4月28日中国发布。GSMArena有完整规格页面，属官方来源级确认。",
+        "evidence": [
+          "GSMArena完整规格页面",
+          "Gizmochina发布前汇总+发布后确认",
+          "UberGizmo同步报道"
+        ]
+      },
+      "pseudo_science": {"patterns_detected": [], "verdict": "清洁"},
+      "logic": {"fallacies": [], "verdict": "清洁"},
+      "sentiment": {"clickbait_score": 3, "value_concerns": "无", "framing": "产品"}
+    },
+    {
+      "id": "RC-20260518E-015",
+      "title": "中国手机厂商 vs 苹果/谷歌/三星：硅碳电池差距扩大",
+      "averitec_label": "Supported",
+      "eq": 7.5,
+      "tsver_triggered": false,
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "Tom's Guide深度采访Honor和OnePlus（A级信源），事实核心成立：(1)一加/荣耀/小米/Realme已大规模部署硅碳电池 ✓；(2)苹果/谷歌/三星当前主流旗舰使用锂离子电池，容量5000-5500mAh ✓。\"快速落后\"为评论性表述，但技术差距基于事实。",
+        "evidence": ["Tom's Guide Honor+OnePlus采访", "各厂商旗舰规格公开参数"],
+        "caveats": "三星Galaxy S26国行版配骁龙但仍用锂离子，苹果折叠屏若发布可能更新电池路线"
+      },
+      "pseudo_science": {"patterns_detected": [], "verdict": "清洁"},
+      "logic": {
+        "fallacies": ["时间错配潜在风险（三星折叠屏/苹果未来产品可能采用硅碳）"],
+        "verdict": "轻度，需注明时间点"
+      },
+      "sentiment": {"clickbait_score": 5, "value_concerns": "无", "framing": "行业分析"}
+    },
+    {
+      "id": "RC-20260518E-018",
+      "title": "OpenAI手机旗舰规格是ISP图像信号处理器（郭明錤）",
+      "averitec_label": "NotEnoughEvidence",
+      "eq": 8.0,
+      "tsver_triggered": false,
+      "fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "reasoning": "郭明錤为知名分析师（诉诸权威A级，但ISP为旗舰规格的声称与其他来源不一致——其他泄露更关注NPU双核架构）。无法在产品发布前核实哪项规格是\"旗舰\"，属典型NEE场景。",
+        "evidence": ["MacRumors引用郭明錤报告"],
+        "tsver_note": "建议：等待OpenAI官方发布；对比NPU双核架构vs ISP两种\"旗舰\"声称"
+      },
+      "pseudo_science": {"patterns_detected": [], "verdict": "清洁"},
+      "logic": {
+        "fallacies": ["诉诸权威（郭明錤单一来源）", "既定前提（ISP是旗舰规格为假设）"],
+        "verdict": "中度问题"
+      },
+      "sentiment": {"clickbait_score": 4, "value_concerns": "无", "framing": "产业爆料"}
+    },
+    {
+      "id": "RC-20260518E-019",
+      "title": "MediaTek先于高通将Agentic AI商用化",
+      "averitec_label": "ConflictingEvidence",
+      "eq": 7.8,
+      "tsver_triggered": false,
+      "fact_check": {
+        "verdict": "ConflictingEvidence",
+        "reasoning": "\"Agentic AI\"在芯片层面无统一定义：MediaTek Dimensity 9400声称支持\"Agentic AI\"，高通骁龙8 Elite Gen 5同样声称此能力。谁先商用化取决于\"Agentic AI\"如何定义及产品出货时间线，目前无第三方权威认定。",
+        "evidence": [
+          "MacTech.com报道（B级，未引用权威认定来源）",
+          "MediaTek官方声称",
+          "高通官方声称"
+        ]
+      },
+      "pseudo_science": {
+        "patterns_detected": ["最高级声称缺乏第三方验证（业内首个）"],
+        "verdict": "⚠️ 命中伪科学模式"
+      },
+      "logic": {"fallacies": ["概念模糊（Agentic AI定义不统一）"], "verdict": "中度问题"},
+      "sentiment": {"clickbait_score": 4, "value_concerns": "无", "framing": "产业竞争"}
+    },
+    {
+      "id": "RC-20260518E-021",
+      "title": "四川：AI生成高考相关虚假信息引发考生焦虑",
+      "averitec_label": "Supported",
+      "eq": 6.0,
+      "tsver_triggered": false,
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "官方渠道（澎湃新闻、中国互联网联合辟谣平台）报道，执法机构已认定。AI生成虚假高考信息属已记录的虚假信息模式。",
+        "evidence": ["澎湃新闻 2026-05-15", "辟谣平台官方记录"]
+      },
+      "pseudo_science": {"patterns_detected": ["AI循环引用型谣言"], "verdict": "⚠️ 已知模式命中"},
+      "logic": {"fallacies": [], "verdict": "清洁"},
+      "sentiment": {"clickbait_score": 2, "value_concerns": "社会影响：考生焦虑", "framing": "辟谣"}
+    },
+    {
+      "id": "RC-20260518E-022",
+      "title": "网民使用AI制作楼房/隧道坍塌虚假视频",
+      "averitec_label": "Supported",
+      "eq": 6.0,
+      "tsver_triggered": false,
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "官方处置结果有记录，符合已记录的\"以假乱真（AI生成内容作为事实证据）\"模式。",
+        "evidence": ["澎湃新闻官方记录", "公安机关处置结果"]
+      },
+      "pseudo_science": {"patterns_detected": ["以假乱真（AI生成内容作为事实证据）"], "verdict": "⚠️ 已知模式命中"},
+      "logic": {"fallacies": [], "verdict": "清洁"},
+      "sentiment": {"clickbait_score": 2, "value_concerns": "公共安全影响", "framing": "辟谣"}
+    },
+    {
+      "id": "RC-20260518E-023",
+      "title": "AI合成\"张家界玻璃桥坍塌事故\"视频传播",
+      "averitec_label": "Refuted",
+      "eq": 9.5,
+      "tsver_triggered": true,
+      "fact_check": {
+        "verdict": "Refuted",
+        "reasoning": "张家界玻璃桥事故完全虚构，由AI工具生成并传播。官方执法机构已认定为虚假信息并处置当事人。",
+        "evidence": [
+          "澎湃新闻官方报道",
+          "辟谣平台记录",
+          "张家界景区官方未记录此事故"
+        ],
+        "impact": "高：可能引发公众对热门旅游景点安全性的恐慌，影响旅游业"
+      },
+      "pseudo_science": {"patterns_detected": ["以假乱真（AI生成内容作为事实证据）"], "verdict": "⚠️ 典型案例"},
+      "logic": {"fallacies": [], "verdict": "清洁（作为辟谣对象）"},
+      "sentiment": {"clickbait_score": 10, "value_concerns": "公共安全恐慌；旅游业声誉损害", "framing": "已证伪谣言"}
+    },
+    {
+      "id": "RC-20260518E-024",
+      "title": "2026年4月全国网信举报1686.1万件",
+      "averitec_label": "Supported",
+      "eq": 5.0,
+      "tsver_triggered": false,
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "来源为网信办官方数据，数字精确（非圆整），符合官方统计公报风格。",
+        "evidence": ["中央网信办官方网站"]
+      },
+      "pseudo_science": {"patterns_detected": [], "verdict": "清洁"},
+      "logic": {"fallacies": [], "verdict": "清洁"},
+      "sentiment": {"clickbait_score": 1, "value_concerns": "无", "framing": "官方统计"}
+    },
+    {
+      "id": "RC-20260518E-025",
+      "title": "抖音、快手、B站因未标注信息来源被网信部处置",
+      "averitec_label": "Supported",
+      "eq": 5.5,
+      "tsver_triggered": false,
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "网信办官方来源，监管行动为可核查事实。",
+        "evidence": ["网信办官方公告"]
+      },
+      "pseudo_science": {"patterns_detected": [], "verdict": "清洁"},
+      "logic": {"fallacies": [], "verdict": "清洁"},
+      "sentiment": {"clickbait_score": 2, "value_concerns": "无", "framing": "监管"}
+    },
+    {
+      "id": "RC-20260518E-029",
+      "title": "新中国国标：能否终结手机品牌AI过度营销",
+      "averitec_label": "NotEnoughEvidence",
+      "eq": 7.0,
+      "tsver_triggered": false,
+      "fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "reasoning": "国标本身为事实（Supported），但\"能否终结过度营销\"是预测性问题，目前无执法案例。国标于2026-05-14发布，执行效果尚需时间观察。",
+        "evidence": ["GB/Z 177-2026文本", "DigitalPhablet分析（B级）"],
+        "tsver_note": "6个月后可回顾执法案例以验证效果"
+      },
+      "pseudo_science": {"patterns_detected": [], "verdict": "清洁"},
+      "logic": {
+        "fallacies": ["滑坡谬误潜在风险（标准发布→终结营销乱象，步骤跳跃）"],
+        "verdict": "轻度"
+      },
+      "sentiment": {"clickbait_score": 5, "value_concerns": "无", "framing": "评论/分析"}
+    },
+    {
+      "id": "RC-20260518E-020",
+      "title": "高通新骁龙数据中心AI芯片发布，股价暴涨20%",
+      "averitec_label": "Refuted",
+      "eq": 8.0,
+      "tsver_triggered": true,
+      "fact_check": {
+        "verdict": "Refuted",
+        "reasoning": "TMTPOST（B级）报告股价\"暴涨20%\"，但CNBC（A+级）报道高通股价在OpenAI合作报道中仅上涨7%。\"暴涨20%\"的数字存疑，且芯片发布事件（数据中心AI芯片 vs OpenAI合作）时间线需区分。",
+        "evidence": [
+          "CNBC: Qualcomm up 7% on OpenAI report (2026-04-27)",
+          "TMTPOST: \"盘中暴涨20%\"（日期和事件不明）"
+        ],
+        "tsver_note": "需核查：TMTPOST所指芯片发布具体日期和事件，与CNBC数据不一致"
+      },
+      "pseudo_science": {"patterns_detected": [], "verdict": "清洁"},
+      "logic": {
+        "fallacies": ["精确数字谬误（20% vs 7%不一致）", "偷换概念（不同事件混入同一叙事）"],
+        "verdict": "中度问题"
+      },
+      "sentiment": {"clickbait_score": 7, "value_concerns": "金融信息误导风险", "framing": "财经/煽情"}
+    },
+    {
+      "id": "RC-20260518E-026",
+      "title": "苹果2026年起年推两款新机：iPhone 18+折叠屏",
+      "averitec_label": "Refuted",
+      "eq": 8.5,
+      "tsver_triggered": true,
+      "fact_check": {
+        "verdict": "Refuted",
+        "reasoning": "苹果官方未确认此产品路线图。此信息来自新浪财经1月报道（B级），引用未署名\"消息人士\"。苹果折叠屏发布时间线历经多年猜测但均未兑现。将爆料以确定性口吻陈述违反新闻规范。",
+        "evidence": [
+          "新浪财经 2026-01-19（B级，无具名来源）",
+          "苹果官方未作相关声明"
+        ]
+      },
+      "pseudo_science": {"patterns_detected": ["既定前提（爆料当确定事实）"], "verdict": "⚠️ 命中模式"},
+      "logic": {
+        "fallacies": ["既定前提（假设苹果确定双线发布）"],
+        "verdict": "中度问题"
+      },
+      "sentiment": {"clickbait_score": 6, "value_concerns": "无", "framing": "爆料/传播"}
+    },
+    {
+      "id": "RC-20260518E-030",
+      "title": "高通推出首款机架级数据中心AI芯片，战略转型",
+      "averitec_label": "Supported",
+      "eq": 6.5,
+      "tsver_triggered": false,
+      "fact_check": {
+        "verdict": "Supported",
+        "reasoning": "TMTPOST（B级，但为中文科技媒体）报道符合高通近期战略方向（高通2025年收购Movian，进入数据中心领域有脉络可循）。\"首款机架级\"声称需高通官网确认。整体战略转型方向Supported。",
+        "evidence": [
+          "TMTPOST报道",
+          "高通战略转型公开声明历史记录"
+        ]
+      },
+      "pseudo_science": {"patterns_detected": [], "verdict": "清洁"},
+      "logic": {"fallacies": [], "verdict": "清洁"},
+      "sentiment": {"clickbait_score": 4, "value_concerns": "无", "framing": "企业战略"}
+    }
+  ]
+}
