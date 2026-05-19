@@ -37,10 +37,14 @@ if ! git diff --staged --quiet; then
     if [ "${PUSH_OK}" -eq 1 ]; then
       echo "✓ git push 成功"
       GIT_STATUS="SUCCESS"
+      # 清除待推送标志（如有）
+      rm -f "${REPO_PATH}/_meta/.push-pending"
     else
       GIT_STATUS="COMMITTED_NOT_PUSHED"
-      echo "[${TIMESTAMP}] [git] push失败（sandbox代理不通，请在本机运行 git push）" >> "${NOTIFY_LOG}"
-      echo "  ⚠ git commit 成功，push 失败（代理不通）"
+      echo "[${TIMESTAMP}] [git] push失败（sandbox代理不通，本机守护进程将自动重试）" >> "${NOTIFY_LOG}"
+      echo "  ⚠ git commit 成功，push 失败 → 写入标志文件等待本机守护进程推送"
+      # 写标志文件，触发本机 auto-push-watcher.sh（每5分钟检查一次）
+      echo "${TIMESTAMP} ${DATE}" > "${REPO_PATH}/_meta/.push-pending"
     fi
   else
     GIT_STATUS="COMMIT_FAILED"
