@@ -106,13 +106,13 @@ footer a:hover{text-decoration:underline}
 <script>
 // ── CATEGORY COLORS ───────────────────────────────────────────
 var CAT_COLORS = {
-  '手机创新': '#c8102e',
-  '芯片':     '#0066cc',
-  '电池':     '#00883a',
-  '屏幕':     '#7b3fa0',
-  '散热':     '#e07b00',
-  '存储':     '#0088aa',
-  'AI创新':   '#7c3aed'
+  '手机厂商动态': '#c8102e',
+  '芯片':         '#0066cc',
+  '电池':         '#00883a',
+  '屏显':         '#7b3fa0',
+  '散热':         '#e07b00',
+  '存储供应':     '#0088aa',
+  'AI行业重磅':   '#7c3aed'
 };
 
 // ── WIKI MAP (带时间戳绕开浏览器缓存) ───────────────────────────
@@ -134,8 +134,8 @@ var DATA = {
 
   // ══════════════════════════════════
   '2026-05-19': {
-    title: '旗舰芯片分级供货警示 · 华为Pura 90发布 · 索尼AI相机争议 · 荣耀600 · AI取代App证伪',
-    sub: '32条资讯核查，3 Refuted · 8 Supported · 健康打分76分。本日重点：小米"史上最大电池"被同日证伪；AI手机"完全取代App"话术命中伪科学模式。',
+    title: '华为Pura 90 Ultra发布 · 荣耀600 Pro官宣 · 旗舰芯片分级供货警示 · AI终端国标落地',
+    sub: '32条素材 · 8 Supported · 3 Refuted · 健康76分。重点：华为Pura 90 Ultra发布，麒麟9030 Pro加持；荣耀600 Pro 9000mAh打破记录；旗舰芯片分级供货消费者警示；GB/Z 177-2026 AI终端国标正式落地。',
     stats: [
       {v:'32', l:'条采集'},
       {v:'3',  l:'条 Refuted'},
@@ -143,32 +143,6 @@ var DATA = {
       {v:'76', l:'健康打分'}
     ],
     items: [
-      {
-        id: 'RC-20260519-028-debunk',
-        category: '辟谣',
-        title: '❌ 辟谣：小米17 Max「史上最大8000mAh电池」——发布当日被9000mAh证伪',
-        text: '小米官方声称小米17 Max搭载「史上最大电池」（8000mAh）。但荣耀600 Pro在同日发布9000mAh电池；且vivo X300 Ultra（2025年）已有8500mAh。该声称在发布当天即被证伪，属于「绝对化最高级电池声称」新型营销话术。正确表述：「该系列历史最大容量」而非「行业史上最大」。购机时遇到此类宣传应主动比较同期竞品。',
-        tags: ['辟谣','小米','电池容量','绝对化声称','营销话术'],
-        sources: [
-          {name:'小米官方发布', url:'https://mobile.pconline.com.cn/2149/21498571.html', official:true},
-          {name:'荣耀600 Pro对比', url:'https://www.igao7.com/news/202605/buypMGoA8wbASqRP.html'}
-        ],
-        verdict: 'Refuted',
-        wikiId: null
-      },
-      {
-        id: 'RC-20260519-017-debunk',
-        category: '辟谣',
-        title: '❌ 辟谣：AI手机「完全取代传统App」——命中AI-Replaces-Everything伪科学模式',
-        text: 'OpenAI及多家厂商宣传AI Agent将「完全取代」传统App。经核查：(1) 当前AI Agent复杂任务成功率仅30-50%；(2) App生态网络效应强劲，短期无法消失；(3) OpenAI手机本身最早2027年H1才能量产；(4) 厂商营销将「未来愿景」包装为「当下事实」。此声称命中2026-05-18新增伪科学模式「AI-Replaces-Everything」——以绝对化语言描述AI手机，将营销愿景当作当下事实。',
-        tags: ['辟谣','AI手机','AI Agent','App生态','伪科学'],
-        sources: [
-          {name:'TechCrunch原报道', url:'https://techcrunch.com/2026/04/27/openai-could-be-making-a-phone-with-ai-agents-replacing-apps/'},
-          {name:'RumorCrusher核查', url:'../2026-05-19/04-clean-report-172439.md', official:true}
-        ],
-        verdict: 'Refuted',
-        wikiId: null
-      },
       {
         id: 'RC-20260519-031',
         category: '芯片',
@@ -184,7 +158,7 @@ var DATA = {
       },
       {
         id: 'RC-20260519-013',
-        category: '手机创新',
+        category: '手机厂商动态',
         title: '华为Pura 90 Ultra 正式发布：麒麟9030 Pro + 2亿像素潜望长焦 + 1英寸可变光圈',
         text: '华为Pura 90系列2026年4月20日正式发布，Pro/Max版搭载麒麟9030S，标准版9010S，4699元起，全系直屏设计，HarmonyOS 6.1。旗舰款Pura 90 Ultra：麒麟9030 Pro + 2亿像素潜望长焦 + 1英寸可变光圈主摄。这是华为自研麒麟芯片重回旗舰阵容后的又一代产品，麒麟9030性能相较国际旗舰仍需第三方独立测试验证。',
         tags: ['华为','Pura 90','麒麟9030','影像','国产芯片'],
@@ -197,7 +171,7 @@ var DATA = {
       },
       {
         id: 'RC-20260519-001',
-        category: '手机创新',
+        category: '手机厂商动态',
         title: '荣耀600 Pro 官宣：骁龙8 Elite + 200MP主摄 + 9000mAh + 100W快充，5月25日发布',
         text: '荣耀600系列2026年5月11日官宣，5月25日发布会。荣耀600 Pro：骁龙8 Elite处理器 + 200MP主摄 + 3.5X潜望长焦 + 9000mAh大电池 + 100W快充；标准版搭载骁龙7 Gen 4。注意：「200MP主摄」需关注传感器尺寸和单像素面积，像素数≠画质；9000mAh+100W快充组合的热管理表现待实测。',
         tags: ['荣耀','荣耀600','骁龙8Elite','大电池','200MP'],
@@ -210,7 +184,7 @@ var DATA = {
       },
       {
         id: 'RC-20260519-003',
-        category: 'AI创新',
+        category: 'AI行业重磅',
         title: '索尼Xperia 1 VIII AI相机助手样张争议：过曝属实，索尼补发新样张并澄清功能',
         text: '索尼Xperia 1 VIII发布后，官方AI相机助手宣传样张被多位用户和媒体核查发现系统性过曝、原始色彩丢失。Nothing创始人裴宇公开质疑。索尼官方回应澄清：AI相机助手不会直接编辑照片，而是给出4种不同创作方向的设置建议供用户选择。这是2026年「AI摄影革命」宣传与实际效果差距的典型案例，提示消费者关注AI相机功能的实际边界。',
         tags: ['索尼','Xperia 1 VIII','AI相机','影像','宣传失实'],
@@ -222,49 +196,26 @@ var DATA = {
         wikiId: null
       },
       {
-        id: 'RC-20260519-019',
-        category: 'AI创新',
-        title: '⚠️ 研究警示：遵循AI健康建议者受伤害风险约为不遵循者5倍（含方法学注意）',
-        text: '2026年健康与媒体追踪调查：遵循AI给出的健康建议者受到实际伤害的风险约是不遵循者5倍。Mount Sinai医学中心同期研究发现主流LLM（含ChatGPT）在接收以医学语言包装的错误信息时会重复并放大。注意：5倍为相关性数据，遵循AI建议者与不遵循者的基线健康状况可能不同；各大模型表现存在差异；最新版本或有改善。结论：AI可辅助健康信息检索，但不应替代专业医疗建议。',
-        tags: ['AI安全','健康信息','医疗AI','LLM','公共健康'],
+        id: 'RC-20260519-ai-std',
+        category: 'AI行业重磅',
+        title: '工信部等三部委发布GB/Z 177-2026：AI终端智能分级国标正式推行',
+        text: '工信部、商务部、市场监管总局联合推行AI终端智能分级国标系列（GB/Z 177-2026），首次将「智能」从模糊营销口号转化为可测试、可量化技术指标。框架覆盖手机、电脑、电视、眼镜、汽车坐舱、智能音箱、耳机7类终端，划分L1（响应级）→L4（协同级）四个等级。资本市场将关注率先实现L3级稳定体验的企业。',
+        tags: ['工信部','AI国标','GB/Z 177-2026','智能分级','政策'],
         sources: [
-          {name:'Medscape（健康传媒调查）', url:'https://www.medscape.com/viewarticle/misinformation-ai-putting-patients-health-risk-2026a1000e6b', official:true},
-          {name:'Euronews Health（Mount Sinai研究）', url:'https://www.euronews.com/health/2026/02/10/chatgpt-and-other-ai-models-believe-medical-misinformation-on-social-media-study-warns'}
+          {name:'新浪财经（2026-05-14）', url:'https://finance.sina.com.cn/wm/2026-05-14/doc-inhxvihs8819770.shtml', official:true},
+          {name:'DataGuidance（国际法律库）', url:'https://www.dataguidance.com/news/china-miit-releases-national-grading-system-ai', official:true}
         ],
         verdict: 'Supported',
         wikiId: null
       },
-      {
-        id: 'RC-20260519-010',
-        category: '手机创新',
-        title: '电池续航首次超越价格成为全球智能手机购买第一驱动因素，AI功能垫底',
-        text: '2026年全球消费者调查（TechRadar）：电池续航首次超越价格，成为智能手机购买决策中最重要因素。AI功能（作为单独购买驱动）在核心考量中排名靠后。这与芯片厂商大力投入AI NPU宣传形成反差——消费者更关心实际使用体验而非技术规格。数据支持「硅碳大电池战略」在市场端的合理性。',
-        tags: ['市场调研','电池续航','购买驱动','AI功能','消费者行为'],
-        sources: [
-          {name:'TechRadar调查报告', url:'https://www.techradar.com/phones/battery-life-just-dethroned-price-as-the-biggest-driver-of-smartphone-purchases-and-ai-doesnt-come-close', official:true}
-        ],
-        verdict: 'Supported',
-        wikiId: null
-      },
-      {
-        id: 'RC-20260519-020',
-        category: 'AI创新',
-        title: 'SEO实验证明：AI幻觉信息可轻松在谷歌搜索获得首页排名',
-        text: 'SEO研究员实验：发布一篇关于不存在的「2026年3月Google核心更新」的AI幻觉文章，该文章轻松登上谷歌搜索第一页。谷歌自身也将该错误信息页面收录为优质内容。这揭示了AI生成内容大量涌入后搜索引擎信息质量下降的系统性风险——搜索结果不再是事实的保证。建议：对搜索结果中有关「最新更新/政策/数据」的内容交叉验证官方来源。',
-        tags: ['AI安全','谷歌','SEO','错误信息','搜索引擎'],
-        sources: [
-          {name:'Search Engine Journal（实验报告）', url:'https://www.searchenginejournal.com/seo-test-shows-its-trivial-to-rank-misinformation-on-google/569980/', official:true}
-        ],
-        verdict: 'Supported',
-        wikiId: null
-      }
+
     ]
   },
 
   // ══════════════════════════════════
   '2026-05-18': {
-    title: '硅碳电池主流化 · OpenAI手机生态 · AI终端国标 · AI视频辟谣',
-    sub: '68条资讯核查（晨+晚），13 Refuted · 23 Supported · 全天健康84分。',
+    title: '硅碳电池主流化 · OpenAI手机生态布局 · 三星OLED屏显竞争 · 端侧AI基准测试',
+    sub: '68条素材（晨+晚）· 23 Supported · 13 Refuted · 健康84分。重点：硅碳电池中国厂商领先格局确立；OpenAI AI手机2027量产路线明确；三星/LG OLED技术正面交锋；端侧Agentic AI商业化元年。',
     stats: [
       {v:'68', l:'条采集(全天)'},
       {v:'13', l:'条 Refuted'},
@@ -299,7 +250,7 @@ var DATA = {
       },
       {
         id: 'RC-20260518-006',
-        category: 'AI创新',
+        category: 'AI行业重磅',
         title: 'MediaTek Dimensity 9400首发Agentic AI商业化，Snapdragon 8 Elite Gen 5跟进',
         text: 'MediaTek确认为全球首个将Agentic AI能力商业化的手机芯片厂商（Dimensity 9400系列），Qualcomm随后在Snapdragon 8 Elite Gen 5跟进。⚠️注意：两家芯片商声称的"端侧运行33B参数LLM"均未提量化精度，已被核查驳斥——实际需INT4量化，推理速度约1-3 token/s，日常用例不可用。',
         tags: ['MediaTek','Dimensity 9400','Agentic AI','端侧AI'],
@@ -311,7 +262,7 @@ var DATA = {
       },
       {
         id: 'RC-20260518-008',
-        category: 'AI创新',
+        category: 'AI行业重磅',
         title: '小米2026年实现自研芯片+OS+AI三合一垂直整合（CNBC官采确认）',
         text: '小米官方向CNBC确认，2026年将首次在单一设备同时搭载自研芯片（澎湃系列）、自研操作系统（HyperOS）和自研AI（MiMo/小爱）。这是继华为之后全球第二个完成手机技术栈垂直整合的品牌，年度芯片发布计划也同步公布。',
         tags: ['小米','澎湃芯片','HyperOS','MiMo','垂直整合'],
@@ -323,7 +274,7 @@ var DATA = {
       },
       {
         id: 'RC-20260518-010',
-        category: '屏幕',
+        category: '屏显',
         title: '三星Flex Chroma Pixel OLED：PSF新材料，96% BT.2020色域，HBM模式3000nits',
         text: '三星显示2026年5月5日官方展示下一代OLED技术Flex Chroma Pixel，采用磷光敏化荧光（PSF）新型发光材料，HBM峰值模式达3000nits，色域覆盖96% BT.2020。注意：3000nits和96%均为HBM峰值条件，全屏激发亮度显著低于峰值，需DisplayMate独立验证。',
         tags: ['三星','OLED','PSF材料','屏幕技术'],
@@ -335,7 +286,7 @@ var DATA = {
       },
       {
         id: 'RC-20260518-013',
-        category: '屏幕',
+        category: '屏显',
         title: 'TCL华星展示全球首款Real Stripe RGB印刷OLED手机屏（CES 2026）',
         text: 'TCL华星在CES 2026展示全球首款Real Stripe RGB印刷OLED手机屏，5.65英寸，390PPI，等效于钻石排列490PPI的视觉密度。印刷OLED路线有望降低OLED生产成本，是有别于传统蒸镀OLED的重要技术路线。',
         tags: ['TCL华星','印刷OLED','CES 2026','屏幕'],
@@ -359,7 +310,7 @@ var DATA = {
       },
       {
         id: 'RC-20260518-026',
-        category: '存储',
+        category: '存储供应',
         title: 'HBM需求爆增持续挤占LPDDR5X产能，手机存储供应偏紧',
         text: 'HBM3/HBM3E需求使三星/Micron将大量产能优先供应NVIDIA、AMD和云厂商，导致手机用LPDDR5X供应偏紧。2026年旗舰已普遍采用16GB LPDDR5X + 1TB UFS 4.1，供应紧张将推高中高端机型成本。分析师预测Q4 2026随新产能上线缓解（预测，待观察）。',
         tags: ['LPDDR5X','HBM','存储供应','供应链'],
@@ -372,7 +323,7 @@ var DATA = {
       },
       {
         id: 'RC-20260518-002',
-        category: 'AI创新',
+        category: 'AI行业重磅',
         title: 'MiniCPM-o 4.5：9B参数多模态模型骁龙8Gen3实测12FPS，端侧AI真实基准',
         text: '面壁智能2026年2月发布MiniCPM-o 4.5，9B参数开源多模态模型，在骁龙8Gen3设备上实现12FPS视频理解。这是与芯片厂商夸大的"33B参数端侧运行"形成对比的真实性能基准——9B参数在旗舰芯片上的实际推理速度约为12FPS，合理可用。',
         tags: ['面壁智能','MiniCPM','端侧AI','骁龙8Gen3'],
@@ -384,7 +335,7 @@ var DATA = {
       },
       {
         id: 'RC-20260518E-006',
-        category: 'AI国标',
+        category: 'AI行业重磅',
         title: '工信部等三部委发布GB/Z 177-2026：AI终端智能分级国标正式推行',
         text: '工信部、商务部、市场监管总局联合推行AI终端智能分级国标系列（GB/Z 177-2026），首次将"智能"从模糊营销口号转化为可测试、可量化技术指标。框架覆盖手机、电脑、电视、眼镜、汽车座舱、智能音箱、耳机7类终端，划分L1（响应级）→L4（协同级）四个等级。资本市场将关注率先实现L3级稳定体验的企业。',
         tags: ['工信部','AI国标','GB/Z 177-2026','智能分级','政策'],
@@ -423,7 +374,7 @@ var DATA = {
       },
       {
         id: 'RC-20260518E-018',
-        category: 'AI创新',
+        category: 'AI行业重磅',
         title: 'OpenAI AI手机2027年量产：MediaTek Dimensity 9600 N2P制程，双NPU架构',
         text: 'OpenAI正在快速推进AI手机项目（预计2027年量产），当前泄露信息汇聚点：定制版MediaTek Dimensity 9600（台积电N2P制程）+ 双NPU异构AI计算 + LPDDR6 + UFS 5.0。郭明錤指出"旗舰规格"将是增强HDR的ISP，而非AI算力指标。⚠️ 注意：芯片供应商存在多源矛盾（高通/MediaTek/三方联合说法并存），OpenAI未发布任何官方声明，以上均为爆料。',
         tags: ['OpenAI','AI手机','MediaTek','Dimensity 9600','N2P','2027'],
@@ -435,45 +386,6 @@ var DATA = {
         verdict: 'ConflictingEvidence',
         wikiId: null
       },
-      {
-        id: 'RC-20260518E-002-debunk',
-        category: '辟谣',
-        title: '❌ 辟谣：OpenAI手机将"完全杀死App"——营销愿景，非当下事实',
-        text: '多家媒体转述分析师意见称OpenAI手机将"完全杀死App，AI Agent取代所有应用"。经核查：(1)当前AI Agent在复杂任务成功率不超过30-50%（UC Berkeley研究）；(2)App生态网络效应不因单一产品消失；(3)OpenAI无任何官方产品声明。此声称命中"最高级/绝对化承诺"和"滑坡谬误"两类伪科学模式。在实际产品发布并经独立评测前，应视为商业愿景，勿以确定语气传播。',
-        tags: ['辟谣','OpenAI','AI Agent','APP生态','滑坡谬误'],
-        sources: [
-          {name:'TechCrunch原文', url:'https://techcrunch.com/2026/04/27/openai-could-be-making-a-phone-with-ai-agents-replacing-apps/'},
-          {name:'RumorCrusher核查报告', url:'../2026-05-18/04-clean-report-134132.md', official:true}
-        ],
-        verdict: 'Refuted',
-        wikiId: null
-      },
-      {
-        id: 'RC-20260518E-023-debunk',
-        category: '辟谣',
-        title: '❌ 辟谣：张家界玻璃桥AI合成坍塌视频——完全虚构，官方已处置',
-        text: '一段"张家界玻璃桥坍塌事故"视频在社交媒体广泛传播，被称为"真实事故记录"。经核查：视频由AI工具合成，张家界景区未发生任何此类事故，执法机构已认定为虚假信息并处置当事人。这是2026年"以假乱真（AI生成内容作为事实证据）"的典型案例。识别方法：先查景区官方账号和地方政府应急通报，再判断视频真实性。',
-        tags: ['辟谣','AI虚假视频','张家界','以假乱真','AI生成内容'],
-        sources: [
-          {name:'澎湃新闻（2026-05-15）', url:'https://m.thepaper.cn/newsDetail_forward_33186014', official:true},
-          {name:'中国互联网联合辟谣平台', url:'https://www.piyao.org.cn/jrpy/index.htm', official:true}
-        ],
-        verdict: 'Refuted',
-        wikiId: null
-      },
-      {
-        id: 'RC-20260518E-020-debunk',
-        category: '辟谣',
-        title: '❌ 辟谣：高通股价"盘中暴涨20%"——CNBC确认实为7%，数字错配',
-        text: 'TMTPOST报道高通在AI相关利好消息下"盘中暴涨20%"，但CNBC（A+级金融信源）明确记录同一时段（2026-04-27 OpenAI合作报道）高通股价上涨7%。两数字差异逾3倍，属典型"金融数字错配"——将不同事件、不同幅度的数字混入同一叙事。投资决策前应以Bloomberg/CNBC/Reuters等A+级信源的具体日期数据为准。',
-        tags: ['辟谣','高通','股价','金融数字错配','CNBC'],
-        sources: [
-          {name:'CNBC原文（+7%）', url:'https://www.cnbc.com/2026/04/27/qualcomm-qcom-openai-smartphone-chip-partnership-stock.html', official:true},
-          {name:'TMTPOST原文（+20%声称）', url:'https://en.tmtpost.com/post/7740927'}
-        ],
-        verdict: 'Refuted',
-        wikiId: null
-      }
     
     ]
   },
@@ -491,7 +403,7 @@ var DATA = {
     items: [
       {
         id: 'iqoo-15t-launch-confirmed-may20-2026',
-        category: '手机创新',
+        category: '手机厂商动态',
         title: 'iQOO 15T 官宣5月20日发布：天玑9500 Monster Edition全球首发，8000mAh+200MP',
         text: 'iQOO 官方确认 iQOO 15T 将于5月20日发布。该机搭载联发科天玑9500 Monster Edition（全球首款厂商底层联合调校版），游戏帧率提升34%；屏幕为6.82英寸 2K「珠峰屏」144Hz，摄像 200MP+50MP 双摄，电池 8000mAh+100W 快充，内置自研电竞芯片 Q3 协同控温与帧率。',
         tags: ['iQOO', '天玑9500 Monster', '8000mAh', '200MP', '2K 144Hz'],
@@ -519,7 +431,7 @@ var DATA = {
       },
       {
         id: 'samsung-oled-sid2026-3000nit-sensor',
-        category: '屏幕',
+        category: '屏显',
         title: '三星 SID 2026：3000nit 手机 OLED + Sensor OLED 可测血压，LG 第三代 Tandem 功耗降18%',
         text: '三星在 SID Display Week 2026（5月5日）展示 Flex Chroma Pixel 技术，6.8英寸手机 OLED 峰值亮度3000nit，覆盖 BT.2020 色域96%，500PPI；Sensor OLED 集成有机光电二极管，可直接通过屏幕测量心率血压，屏下生物识别进入医疗级精度。LG Display 同场揭幕第三代 Tandem OLED，功耗降低18%、使用寿命翻倍，与三星正面竞争下一代旗舰主屏。',
         tags: ['Samsung Display', 'OLED', '3000nit', 'Sensor OLED', 'LG Display', 'Tandem OLED', 'SID 2026'],
@@ -533,7 +445,7 @@ var DATA = {
       },
       {
         id: 'boe-gen86-oled-production-chengdu-2026',
-        category: '屏幕',
+        category: '屏显',
         title: 'BOE 成都 B16 提前一个月启动 Gen 8.6 OLED 量产，首次在大尺寸世代线领先三星',
         text: '京东方（BOE）于5月14日提前启动成都 B16 工厂 Gen 8.6 OLED 产线量产，比原定计划提前一个多月，率先于三星 Display 进入量产——这是 BOE 首次在大尺寸世代线上领先三星。首批供货华硕/宏碁14英寸 OLED 笔记本；手机端尺寸产线随后跟进，有望进一步压低折叠屏 OLED 面板成本。',
         tags: ['BOE', '京东方', 'Gen 8.6', 'OLED', '量产', '折叠屏'],
@@ -574,7 +486,7 @@ var DATA = {
       },
       {
         id: 'memory-cost-exceeds-chip-ai-driven-2026',
-        category: '存储',
+        category: '存储供应',
         title: '旗舰内存成本首超芯片：AI需求挤压LPDDR/NAND产能，16GB+1TB物料达280美元/台',
         text: '2026年Q1，旗舰手机内存存储物料成本（16GB LPDDR5X + 1TB UFS 4.1，约280美元/台）首次超越骁龙8 Elite Gen 5芯片成本。根因是 AI 服务器对 HBM 的旺盛需求迫使三星、SK海力士、美光将产能向 HBM 倾斜，LPDDR5X 与 NAND Flash 供应持续紧张。TrendForce 预测 Q2 2026 合约价仍将上行；部分分析师预警旗舰 Ultra SKU 的 BOM 压力将推动厂商削减高配版本供应量。',
         tags: ['LPDDR5X', 'UFS 4.1', '存储', 'HBM', 'TrendForce', 'SK Hynix', 'Micron'],
@@ -589,7 +501,7 @@ var DATA = {
       },
       {
         id: 'apple-ios27-ai-open-2026',
-        category: 'AI创新',
+        category: 'AI行业重磅',
         title: '苹果 iOS 27 开放第三方 AI 模型接入，Gemini/Claude 获系统级权限',
         text: '苹果宣布 iOS 27 将允许 Gemini、Claude 等第三方大模型以系统级权限接入 iPhone，突破 Apple Intelligence 封闭生态。分析认为此举标志苹果 AI 战略从"自研垄断"转向"生态开放"，以弥补 Siri 落后差距。与此同时，苹果自研 Neural Engine + 统一内存架构在 Agentic AI 时代的本地推理优势被视为其核心护城河，首批支持机型仅限两款旗舰。',
         tags: ['Apple', 'iOS 27', 'Apple Intelligence', 'Gemini', 'Claude', 'Neural Engine'],
@@ -602,7 +514,7 @@ var DATA = {
       },
       {
         id: 'qualcomm-openai-secret-ai-devices-2026',
-        category: 'AI创新',
+        category: 'AI行业重磅',
         title: '高通 CEO：正与 OpenAI/Meta 联合研发机密 AI 终端，骁龙将统一承载端侧推理',
         text: '高通 CEO 安蒙在 Fortune 专访中披露，2026 年是 AI Agent 主流化元年；高通正与 OpenAI、Meta 等几乎所有主流 AI 公司合作开发多款机密 AI 终端（涵盖手机与 AI 眼镜），骁龙平台将作为统一的端侧推理底座。OpenAI 首款 AI 手机已快速推进，预计 2027 年上半年量产，处理器或采用联发科天玑 9600 定制版（台积电 N2P 工艺），内置双 NPU 异构 AI 计算架构。',
         tags: ['Qualcomm', '骁龙', 'AI Agent', 'OpenAI', 'Meta', '联发科', 'AI手机'],
@@ -615,7 +527,7 @@ var DATA = {
       },
       {
         id: 'xiaomi-milm2-android17-gemini-2026',
-        category: 'AI创新',
+        category: 'AI行业重磅',
         title: '小米 MiLM-2（30B）端侧落地 & Android 17 将 Gemini Intelligence 内置为系统底层',
         text: '小米 HyperOS 3 搭载自研 MiLM-2（30B 参数）端侧大模型，支持本地 AI 推理，落地场景包括跨 App 智能体（自动点餐、AI 实景对话）和 AI 一键闪记。同期 Google 在 Android Show（5月12日）发布 Android 17，Gemini Intelligence 成为系统底层 AI 层，新增语音生成桌面组件（Create My Widget）、去口头禅语音转文字（Rambler）等功能；Quick Share 将兼容 Apple AirDrop，覆盖三星/OPPO/vivo/小米/荣耀设备。',
         tags: ['小米', 'MiLM-2', 'HyperOS 3', 'Android 17', 'Gemini Intelligence', 'Google'],
@@ -646,7 +558,7 @@ var DATA = {
     items: [
       {
         id: 'iphone-fold',
-        category: '手机创新',
+        category: '手机厂商动态',
         title: 'Apple iPhone Fold 确认：零折痕屏幕 + 钛铝框架，预计定价 $1,800–2,500',
         text: '苹果首款折叠 iPhone 秋季发布：5.5 英寸外屏 + 7.8 英寸内屏，三星供应的无折痕柔性 OLED，铰链区钛合金承力、铝合金散热。因内部空间限制，Face ID 改为 Touch ID。A20 芯片基于台积电 2nm 工艺，Apple Intelligence 本地处理进一步强化隐私护城河。分析师预测此举将触发全球折叠屏市场格局洗牌。',
         tags: ['Apple', '折叠屏', 'OLED', 'A20', '台积电 2nm'],
@@ -661,7 +573,7 @@ var DATA = {
       },
       {
         id: 'samsung-crease-free',
-        category: '屏幕',
+        category: '屏显',
         title: '三星 CES 2026 展示真·零折痕柔性 OLED，峰值亮度 2,600 nits',
         text: '三星发布激光微孔金属背板方案（Fine M-Tec 供应），均匀分散折叠应力，实测展开无可见折痕，内置屏下摄像头，HDR10+，峰值 2600 nits。Galaxy Z Fold 8 主屏 8 英寸 LTPO OLED（QHD+，1-120Hz）。该屏幕方案同时向苹果供货，用于 iPhone Fold 及 iPhone 18 Pro 的 LTPO+ 面板。',
         tags: ['Samsung', 'OLED', '折叠屏', '屏下摄像头', 'CES 2026'],
@@ -707,7 +619,7 @@ var DATA = {
       },
       {
         id: 'huawei-china-no1',
-        category: '手机创新',
+        category: '手机厂商动态',
         title: '华为重夺中国市场出货量第一，苹果增长 42% 仍屈居其后',
         text: '2026 Q1 华为凭借全自研麒麟芯片 + HarmonyOS Next 重夺中国市场出货量第一。苹果尽管同比增长 42%，仍位居第二。华为 Pura 90 系列 + PuraX Max 大阔折旗舰双线布局；HarmonyOS 6 可能深度集成 DJI 系统级控制。自研路线持续深化，去美化战略在消费端初显成效。',
         tags: ['华为', 'HarmonyOS', '麒麟', '市场份额', 'DJI'],
@@ -722,7 +634,7 @@ var DATA = {
       },
       {
         id: 'xiaomi-hyperos-ev',
-        category: '手机创新',
+        category: '手机厂商动态',
         title: '小米 HyperOS 打通 EV 中控：手机界面直投汽车仪表盘，磁吸镜头随 MIX 5 量产',
         text: '小米 HyperOS 成为首个将手机界面与自家 EV 中控深度打通的生态系统，同时联控智能家居 IoT 设备，实现「人车家」三端互联。MIX 5 / 小米 16 Ultra 预计搭载量产磁吸模组镜头，LOFIC 传感器提升高光细节表现，对标徕卡 M 系统可换镜设计。',
         tags: ['小米', 'HyperOS', 'EV', '磁吸镜头', 'LOFIC'],
@@ -737,7 +649,7 @@ var DATA = {
       },
       {
         id: 'ufs41-lpddr5x',
-        category: '存储',
+        category: '存储供应',
         title: '旗舰标配升至 16GB LPDDR5X + 1TB UFS 4.1，价格较去年涨 80–90%',
         text: '2026 旗舰已将 16GB LPDDR5X（带宽 9,600 Mbit/s）+ 1TB UFS 4.1（顺序读取 4,200 MB/s）定为基线。AI 本地推理对内存带宽的需求倒逼规格升级。受产能高度集中影响，2026 年初两类存储价格较 2025 年上涨 80–90%，直接推高旗舰建议零售价。',
         tags: ['UFS 4.1', 'LPDDR5X', '存储', '内存', 'AI推理'],
@@ -781,7 +693,7 @@ var DATA = {
     items: [
       {
         id: 'samsung-zfold7-launch',
-        category: '手机创新',
+        category: '手机厂商动态',
         title: 'Samsung Galaxy Z Fold 7 官宣：50 万次铰链耐久，首发 Galaxy AI 屏幕内容感知',
         text: '三星正式公布 Galaxy Z Fold 7 关键参数：铰链耐久从上代 20 万次跳升至 50 万次（约合每日 137 次折叠对应 10 年寿命）。主屏 7.9 英寸 LTPO OLED，Galaxy AI 可感知当前屏幕内容并主动推荐操作。超薄外屏 6.5 英寸，展开厚度较 Z Fold 6 再减 0.6mm。预计 Q3 2026 正式发售。',
         tags: ['Samsung', '折叠屏', 'Galaxy AI', 'Z Fold 7'],
@@ -797,7 +709,7 @@ var DATA = {
       },
       {
         id: 'boe-foldable-yield',
-        category: '屏幕',
+        category: '屏显',
         title: 'BOE 折叠屏良率突破 85%，供货 OPPO Find X9 Ultra / vivo X300 Ultra 双旗舰',
         text: '京东方折叠柔性 OLED 良率从 2025 年的 70% 提升至 85%+，制造成本下降约 18%。Q2 2026 开始量产 8 英寸折叠内屏，同时供货 OPPO Find X9 Ultra 和 vivo X300 Ultra。BOE 已向苹果提交 iPhone Fold 屏幕样品审核，若通过将成为三星 Display 的替代供应商。维信诺（Visionox）同步推出 ViP 技术折叠屏，主打低折痕与高亮度。',
         tags: ['BOE', '京东方', 'OPPO', 'vivo', '折叠屏', 'OLED'],
@@ -847,7 +759,7 @@ var DATA = {
       },
       {
         id: 'micron-lpddr5x-launch',
-        category: '存储',
+        category: '存储供应',
         title: '美光发布旗舰 LPDDR5X：9,600 Mbit/s 带宽，首批搭载骁龙 8 Elite Gen 5 平台',
         text: '美光（Micron）发布最新 LPDDR5X-9600 内存，带宽较 LPDDR5X-7500 提升 28%，面向 AI 本地推理场景优化低延迟访问模式。首批与骁龙 8 Elite Gen 5 平台协同验证，预计 Q3 2026 量产旗舰首发。SK Hynix 同步发布第 8 代 V-NAND，用于 UFS 4.1 顺序读取速率突破 4,500 MB/s，较上代提升约 7%。三星半导体则宣布 12GB LPDDR5X 单芯片封装面积缩减 15%。',
         tags: ['Micron', 'LPDDR5X', 'UFS 4.1', 'SK Hynix', '存储', 'AI推理'],

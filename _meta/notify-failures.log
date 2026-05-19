@@ -49,3 +49,6 @@ FileNotFoundError: [Errno 2] No such file or directory: '/sessions/compassionate
   FEISHU: FAILED_NETWORK — sandbox环境proxy 403 Forbidden（同05-18晚报同因）
   EMAIL: FAILED (exit 1) — 网络限制同飞书
 ---
+2026-05-19 23:28:25 [2026-05-19 tech-digest update]
+  GIT_PUSH: FAILED — sandbox网络限制（同日早批次同因）
+---
