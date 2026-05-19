@@ -1,0 +1,492 @@
+{
+  "meta": {
+    "date": "2026-05-19",
+    "timestamp": "2026-05-19T17:25:00Z",
+    "agents_used": ["fact-check", "pseudo-science", "logic", "sentiment"],
+    "high_priority_items_reviewed": 14,
+    "averitec_distribution": {
+      "Supported": 8,
+      "Refuted": 6,
+      "Conflicting Evidence": 12,
+      "Not Enough Evidence": 6
+    }
+  },
+  "reviewed_items": [
+    {
+      "id": "006",
+      "title": "OpenAI手机将用AI Agent替代传统App",
+      "agents": {
+        "fact_check": {
+          "verdict": "Conflicting Evidence",
+          "tsver": "C/E",
+          "evidence": [
+            "TechCrunch报道：OpenAI考虑用Agent完成任务（有来源）",
+            "当前最佳AI Agent复杂任务成功率30-50%（benchmark数据）",
+            "OpenAI未正式发布任何手机产品，量产目标2027H1"
+          ],
+          "confidence": 0.55,
+          "notes": "\"完全替代\"是强绝对化声称，目前无法成立；\"减少对App依赖\"更准确"
+        },
+        "pseudo_science": {
+          "patterns_matched": ["AI手机杀死App绝对化功能声称（AI-Replaces-Everything）"],
+          "severity": "HIGH",
+          "note": "符合2026-05-18晚报新增模式：以\"完全取代/彻底杀死\"等绝对化语言描述AI手机，将营销愿景当作当下事实"
+        },
+        "logic": {
+          "fallacies": ["Appeal to Future Technology（诉诸未来技术）", "Hasty Generalization（草率概括）"],
+          "note": "将研究原型能力跳跃至\"消费者可用产品\"，且未说明适用条件"
+        },
+        "sentiment": {
+          "clickbait_score": 8.5,
+          "value_concerns": ["消费者误导", "科技泡沫"],
+          "tone": "极度乐观/夸张"
+        }
+      },
+      "final_verdict": "Refuted（当前阶段）",
+      "eq_score": 8.2,
+      "action": "标记为伪科学模式，添加实际成功率数据"
+    },
+    {
+      "id": "009",
+      "title": "2nm SoC将超越iPhone 18 Pro A20 Pro GPU性能",
+      "agents": {
+        "fact_check": {
+          "verdict": "Not Enough Evidence",
+          "tsver": "NEE",
+          "evidence": [
+            "iPhone 18 Pro和A20 Pro均未发布，无法比较",
+            "OpenAI手机所用芯片规格尚未最终确认",
+            "声称来源为分析师预测而非实测数据"
+          ],
+          "confidence": 0.2,
+          "notes": "对尚未存在的两个产品进行性能对比，属于无法核查的声称"
+        },
+        "pseudo_science": {
+          "patterns_matched": ["制程领先一代（'2nm'抽象数字）", "跨产品GPU性能预测"],
+          "severity": "MEDIUM",
+          "note": "2nm是TSMC N2P工艺，需注明具体晶体管密度；GPU对比需相同测试条件"
+        },
+        "logic": {
+          "fallacies": ["False Comparison（假性比较）", "Prediction as Fact（将预测当事实）"],
+          "note": "在未发布产品间进行比较，且以确定性语气陈述"
+        },
+        "sentiment": {
+          "clickbait_score": 7.8,
+          "value_concerns": ["提前炒作未发布产品"],
+          "tone": "前瞻性+夸张"
+        }
+      },
+      "final_verdict": "Not Enough Evidence",
+      "eq_score": 7.5,
+      "action": "标注为分析师推测，非已知事实"
+    },
+    {
+      "id": "028",
+      "title": "小米17 Max\"史上最大电池\"（8000mAh）",
+      "agents": {
+        "fact_check": {
+          "verdict": "Refuted",
+          "tsver": "R",
+          "evidence": [
+            "荣耀600 Pro同期发布9000mAh电池（更大）",
+            "vivo X300 Ultra曾搭载8500mAh电池（2025年）",
+            "部分中低端机型2025年已超过8000mAh"
+          ],
+          "confidence": 0.92,
+          "notes": "\"史上最大\"声称在同期即被同厂商竞争对手打破，为典型营销话术"
+        },
+        "pseudo_science": {
+          "patterns_matched": ["续航X小时（缺少测试条件）", "电池容量堆砌"],
+          "severity": "MEDIUM",
+          "note": "8000mAh声称缺少实际续航时间、屏幕亮度、网络条件等规范化测试参数"
+        },
+        "logic": {
+          "fallacies": ["Superlative Abuse（滥用最高级）"],
+          "note": "\"史上最大\"是可证伪声称，在同期发布的竞品面前已被证伪"
+        },
+        "sentiment": {
+          "clickbait_score": 7.2,
+          "value_concerns": ["消费者误导"],
+          "tone": "营销夸大"
+        }
+      },
+      "final_verdict": "Refuted",
+      "eq_score": 8.5,
+      "action": "标记为已证伪，荣耀600 Pro同期9000mAh更大"
+    },
+    {
+      "id": "003",
+      "title": "索尼Xperia 1 VIII AI相机样张\"过曝、发灰\"争议",
+      "agents": {
+        "fact_check": {
+          "verdict": "Supported",
+          "tsver": "S",
+          "evidence": [
+            "多位独立用户和媒体核查样张，确认过曝现象存在",
+            "Nothing创始人裴宇公开质疑（可查来源）",
+            "索尼随后回应承认并补发新样张（间接确认问题）"
+          ],
+          "confidence": 0.88,
+          "notes": "争议本身属实，但争议程度是否等于\"样张翻车\"存在主观成分"
+        },
+        "pseudo_science": {
+          "patterns_matched": ["AI摄影革命（缺少具体技术细节）"],
+          "severity": "MEDIUM",
+          "note": "索尼AI相机助手宣传中未明确说明算法原理，\"AI创作建议\"与\"AI优化\"边界模糊"
+        },
+        "logic": {
+          "fallacies": ["Marketing vs Reality（营销宣传与实际效果脱节）"],
+          "note": "宣传样张与用户实测结果存在系统性偏差，属于典型营销失实"
+        },
+        "sentiment": {
+          "clickbait_score": 6.5,
+          "value_concerns": ["消费者知情权"],
+          "tone": "争议性/情绪化"
+        }
+      },
+      "final_verdict": "Supported（争议属实）",
+      "eq_score": 7.2,
+      "action": "记录为影像营销失实案例，追踪索尼后续处理"
+    },
+    {
+      "id": "017",
+      "title": "AI手机宣传\"完全取代App\"，但Agent成功率仅30-50%",
+      "agents": {
+        "fact_check": {
+          "verdict": "Supported",
+          "tsver": "S",
+          "evidence": [
+            "多家研究机构记录AI Agent复杂任务成功率30-50%（待精确信源）",
+            "App生态网络效应强劲，短期内不会消失",
+            "OpenAI自身手机产品尚未量产"
+          ],
+          "confidence": 0.82,
+          "notes": "\"完全取代\"是虚假声称，\"减少使用频率\"更接近实际发展方向"
+        },
+        "pseudo_science": {
+          "patterns_matched": ["AI手机杀死App绝对化功能声称"],
+          "severity": "HIGH",
+          "note": "这是2026-05-18新增伪科学模式的典型案例，需在报告中突出"
+        },
+        "logic": {
+          "fallacies": ["False Dichotomy（非此即彼）", "Wishful Thinking（如意算盘）"],
+          "note": "将\"AI功能增强\"和\"App完全消失\"设为二元对立，忽视过渡态"
+        },
+        "sentiment": {
+          "clickbait_score": 9.0,
+          "value_concerns": ["科技泡沫", "消费者误导"],
+          "tone": "极度煽动性"
+        }
+      },
+      "final_verdict": "Supported（矛盾属实，\"取代\"声称虚假）",
+      "eq_score": 8.8,
+      "action": "列为本日头条案例，触发飞轮更新"
+    },
+    {
+      "id": "022",
+      "title": "天玑9600、骁龙8 Elite Gen6全系分级，顶配才满血",
+      "agents": {
+        "fact_check": {
+          "verdict": "Supported",
+          "tsver": "S",
+          "evidence": [
+            "联发科天玑9600分Pro/非Pro版本已有报道",
+            "骁龙8 Elite Gen6 Pro与标准版规格差异已见曝光",
+            "历史上骁龙8系列分级供货有先例（骁龙8+ Gen1等）"
+          ],
+          "confidence": 0.80,
+          "notes": "分级供货属实，但各版本具体差异需等官方发布确认"
+        },
+        "pseudo_science": {
+          "patterns_matched": ["芯片供应商爆料混战（Chip-Supply-Chain-Chaos）"],
+          "severity": "MEDIUM",
+          "note": "符合2026-05-18新增模式：多媒体对同一产品供应商描述相互矛盾"
+        },
+        "logic": {
+          "fallacies": ["Bait and Switch（诱饵式虚假宣传风险）"],
+          "note": "若旗舰手机宣传采用\"满血\"但实际出货阉割版，属于欺骗消费者"
+        },
+        "sentiment": {
+          "clickbait_score": 7.0,
+          "value_concerns": ["消费者知情权", "产品规格透明度"],
+          "tone": "揭露性/批判性"
+        }
+      },
+      "final_verdict": "Supported",
+      "eq_score": 7.8,
+      "action": "持续追踪各厂商旗舰机实际搭载版本"
+    },
+    {
+      "id": "030",
+      "title": "OpenAI硬件战略三月内从耳机变手机，信息矛盾",
+      "agents": {
+        "fact_check": {
+          "verdict": "Supported（矛盾属实）",
+          "tsver": "S",
+          "evidence": [
+            "2026年1月报道：OpenAI设备将基于音频/耳机形态",
+            "2026年4月报道：OpenAI正在开发AI手机",
+            "两次报道均来自不同但可信来源（9to5Mac等）"
+          ],
+          "confidence": 0.85,
+          "notes": "信息矛盾本身属实；可能是战略变化或两条独立产品线并行"
+        },
+        "pseudo_science": {
+          "patterns_matched": ["芯片供应链爆料混战（延伸至硬件战略层面）"],
+          "severity": "HIGH",
+          "note": "OpenAI硬件战略信息混乱是典型的Chip-Supply-Chain-Chaos模式延伸案例"
+        },
+        "logic": {
+          "fallacies": ["False Consistency（强行一致性期待）"],
+          "note": "可能是两条产品线并行，但媒体报道未区分，造成矛盾感"
+        },
+        "sentiment": {
+          "clickbait_score": 8.2,
+          "value_concerns": ["信息混乱", "投资者误导"],
+          "tone": "混乱/争议性"
+        }
+      },
+      "final_verdict": "Conflicting Evidence",
+      "eq_score": 8.0,
+      "action": "标注为典型供应链爆料矛盾案例"
+    },
+    {
+      "id": "019",
+      "title": "遵循AI健康建议者受伤害风险是不遵循者的5倍",
+      "agents": {
+        "fact_check": {
+          "verdict": "Supported",
+          "tsver": "S",
+          "evidence": [
+            "来源：2026年健康与媒体追踪调查（Medscape报道）",
+            "Mount Sinai研究同期发现LLM重复错误医疗信息（独立佐证）",
+            "Reuters Institute 2026报告支持AI加速错误信息传播"
+          ],
+          "confidence": 0.78,
+          "notes": "数据可信但需关注：\"遵循AI建议\"的定义范围，以及调查方法学细节"
+        },
+        "pseudo_science": {
+          "patterns_matched": [],
+          "severity": "LOW",
+          "note": "本条属于健康安全警示，非伪科学；但注意避免反向过度恐慌"
+        },
+        "logic": {
+          "fallacies": ["可能的Correlation vs Causation（相关≠因果）"],
+          "note": "5倍风险是相关性数据，遵循AI建议者与不遵循者的基线健康状况可能不同"
+        },
+        "sentiment": {
+          "clickbait_score": 7.5,
+          "value_concerns": ["公共健康", "AI安全"],
+          "tone": "警示性"
+        }
+      },
+      "final_verdict": "Supported（有条件支持，注意方法学）",
+      "eq_score": 7.2,
+      "action": "列为AI健康安全重要发现，强调调查局限性"
+    },
+    {
+      "id": "007",
+      "title": "天玑9600全大核2+3+3架构，主频可达5GHz",
+      "agents": {
+        "fact_check": {
+          "verdict": "Conflicting Evidence",
+          "tsver": "C/E",
+          "evidence": [
+            "全大核2+3+3架构：已有多个来源确认",
+            "5GHz主频：为\"可能达到\"，非确认值",
+            "实际功耗和散热限制下持续5GHz存疑"
+          ],
+          "confidence": 0.65,
+          "notes": "架构属实，频率为预测非确认值，实际表现需实测"
+        },
+        "pseudo_science": {
+          "patterns_matched": ["能效比提升X%（未说明条件）", "制程领先一代"],
+          "severity": "MEDIUM",
+          "note": "5GHz是否持续稳定运行取决于热设计功耗，峰值频率不代表实际游戏性能"
+        },
+        "logic": {
+          "fallacies": ["Cherry Picking（选择性展示最优参数）"],
+          "note": "峰值频率在受热约束下降速非常快，只展示峰值具有误导性"
+        },
+        "sentiment": {
+          "clickbait_score": 6.8,
+          "value_concerns": ["技术声称准确性"],
+          "tone": "技术性/前瞻性"
+        }
+      },
+      "final_verdict": "Conflicting Evidence",
+      "eq_score": 6.8,
+      "action": "标记需等待官方规格发布确认"
+    },
+    {
+      "id": "014",
+      "title": "iPhone 18 Pro传感器将从索尼转为三星三层堆叠",
+      "agents": {
+        "fact_check": {
+          "verdict": "Conflicting Evidence",
+          "tsver": "C/E",
+          "evidence": [
+            "多个来源报道三星正在开发三层堆叠传感器",
+            "索尼仍是苹果当前主要传感器供应商",
+            "摩根士丹利预测iPhone 21才会采用2亿像素传感器（时间线冲突）"
+          ],
+          "confidence": 0.58,
+          "notes": "三星参与供货是供应链消息，有可能是双供应商而非完全替代"
+        },
+        "pseudo_science": {
+          "patterns_matched": ["芯片供应商爆料混战"],
+          "severity": "MEDIUM",
+          "note": "传感器供应商信息属于典型供应链混战区域，多个信源矛盾"
+        },
+        "logic": {
+          "fallacies": ["False Dichotomy（假设必须索尼或三星，排除双供应可能）"],
+          "note": "苹果通常使用双供应商策略，\"取代\"的表述过于绝对"
+        },
+        "sentiment": {
+          "clickbait_score": 6.2,
+          "value_concerns": ["供应链透明度"],
+          "tone": "分析性"
+        }
+      },
+      "final_verdict": "Conflicting Evidence",
+      "eq_score": 6.5,
+      "action": "追踪苹果官方供应链声明"
+    },
+    {
+      "id": "018",
+      "title": "主流LLM会相信并重复医疗错误信息（Mount Sinai研究）",
+      "agents": {
+        "fact_check": {
+          "verdict": "Supported",
+          "tsver": "S",
+          "evidence": [
+            "Mount Sinai研究机构权威性高",
+            "Euronews等多媒体同期报道",
+            "Medscape也发布相关医疗AI风险研究"
+          ],
+          "confidence": 0.86,
+          "notes": "研究结论可信，但需注意各模型差异（部分模型已改善）"
+        },
+        "pseudo_science": {
+          "patterns_matched": [],
+          "severity": "LOW",
+          "note": "本条属于学术研究发现，非伪科学内容本身"
+        },
+        "logic": {
+          "fallacies": ["Possible Overgeneralization（研究对象≠所有AI模型）"],
+          "note": "研究时间点后的模型可能已改善，结论时效性需关注"
+        },
+        "sentiment": {
+          "clickbait_score": 6.0,
+          "value_concerns": ["公共健康", "AI安全"],
+          "tone": "学术警示"
+        }
+      },
+      "final_verdict": "Supported",
+      "eq_score": 7.0,
+      "action": "纳入AI安全监控库"
+    },
+    {
+      "id": "031",
+      "title": "天玑9600满血版/阉割版：宣传规格与实际出货版本可能不符",
+      "agents": {
+        "fact_check": {
+          "verdict": "Supported",
+          "tsver": "S",
+          "evidence": [
+            "天玑9500已有分版本先例",
+            "多个供应链爆料确认9600也将分级",
+            "历史模式：旗舰芯片分级供货已成行业惯例"
+          ],
+          "confidence": 0.82,
+          "notes": "分级供货属实，但分级程度细节待官方确认"
+        },
+        "pseudo_science": {
+          "patterns_matched": ["双芯片厂商同步伪科学（旗舰声称与实际规格差异）"],
+          "severity": "HIGH",
+          "note": "高通和联发科同期均采用分级策略，形成行业性消费者认知误导"
+        },
+        "logic": {
+          "fallacies": ["Misleading Label（以旗舰标签销售次旗舰规格）"],
+          "note": "消费者看到\"天玑9600\"以为是满血版，实际可能是阉割版"
+        },
+        "sentiment": {
+          "clickbait_score": 8.0,
+          "value_concerns": ["消费者权益", "产品规格透明度"],
+          "tone": "揭露性/警示性"
+        }
+      },
+      "final_verdict": "Supported",
+      "eq_score": 8.3,
+      "action": "高优先级警示，建议消费者购机前确认具体版本"
+    },
+    {
+      "id": "013",
+      "title": "华为Pura 90 Ultra：麒麟9030 Pro + 2亿像素潜望长焦+1英寸可变光圈",
+      "agents": {
+        "fact_check": {
+          "verdict": "Supported",
+          "tsver": "S",
+          "evidence": [
+            "华为官网已有Pura 90规格页面",
+            "发布会已于2026年4月20日举行",
+            "百度百科等多源交叉确认"
+          ],
+          "confidence": 0.91,
+          "notes": "已发布产品，规格基本属实；麒麟9030 Pro性能参数相较骁龙/天玑仍需独立测试"
+        },
+        "pseudo_science": {
+          "patterns_matched": ["X亿像素（单纯堆像素数）"],
+          "severity": "LOW",
+          "note": "2亿像素潜望长焦还需关注传感器尺寸和单像素面积"
+        },
+        "logic": {
+          "fallacies": [],
+          "note": "已发布产品，规格声称相对可靠"
+        },
+        "sentiment": {
+          "clickbait_score": 4.0,
+          "value_concerns": [],
+          "tone": "产品发布"
+        }
+      },
+      "final_verdict": "Supported",
+      "eq_score": 4.5,
+      "action": "可信产品规格，标注麒麟9030 Pro性能需第三方测试"
+    },
+    {
+      "id": "024",
+      "title": "骁龙8 Elite Gen6将有Pro/标准双版本",
+      "agents": {
+        "fact_check": {
+          "verdict": "Conflicting Evidence",
+          "tsver": "C/E",
+          "evidence": [
+            "pconline等科技媒体已有曝光报道",
+            "骁龙8 Elite Gen5未采用双版本策略（存在历史断点）",
+            "官方未确认双版本战略"
+          ],
+          "confidence": 0.62,
+          "notes": "属于预发布供应链爆料，可信但未经官方确认"
+        },
+        "pseudo_science": {
+          "patterns_matched": ["芯片供应商爆料混战"],
+          "severity": "MEDIUM",
+          "note": "符合Chip-Supply-Chain-Chaos模式"
+        },
+        "logic": {
+          "fallacies": ["Premature Conclusion（过早确定性结论）"],
+          "note": "应以\"据报道\"或\"消息称\"表述，而非确定性陈述"
+        },
+        "sentiment": {
+          "clickbait_score": 6.5,
+          "value_concerns": ["消费者规格透明度"],
+          "tone": "爆料性"
+        }
+      },
+      "final_verdict": "Conflicting Evidence",
+      "eq_score": 6.2,
+      "action": "标记为未确认爆料，持续追踪"
+    }
+  ]
+}

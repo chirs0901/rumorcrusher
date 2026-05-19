@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RumorCrusher · 2026-05-19 · 手机硬件每日洞察</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"
+          onerror="this.onerror=null;this.src='https://unpkg.com/d3@7/dist/d3.min.js'"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+    .card { transition: transform .15s ease, box-shadow .15s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .badge-pass { background: #d1fae5; color: #065f46; }
+    .badge-warn { background: #fef3c7; color: #92400e; }
+    .badge-fail { background: #fee2e2; color: #991b1b; }
+    .badge-official { background: #dbeafe; color: #1e40af; }
+    .badge-leak { background: #ede9fe; color: #5b21b6; }
+    .badge-ce { background: #e0f2fe; color: #0c4a6e; }
+    .graph-svg { background: #fafafa; border-radius: 12px; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+<!-- 顶部品牌区 -->
+<header class="bg-white border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+    <div>
+      <h1 class="text-2xl font-bold tracking-tight">
+        <span class="text-rose-600">Rumor</span><span class="text-slate-900">Crusher</span>
+      </h1>
+      <p class="text-sm text-slate-500 mt-1">粉碎谣言，侦测事实真伪 · 手机硬件 &amp; AI设备每日洞察</p>
+    </div>
+    <div class="text-right text-sm text-slate-500">
+      <div>2026-05-19（UTC 17:26）</div>
+      <a href="../index.html" class="text-rose-600 hover:underline">← 历史归档</a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-8 space-y-8">
+
+  <!-- 摘要卡片区 -->
+  <section class="grid grid-cols-2 md:grid-cols-5 gap-4">
+    <div class="card bg-white rounded-xl p-5 shadow-sm">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">总采集</div>
+      <div class="text-3xl font-bold text-slate-900 mt-1">32</div>
+      <div class="text-xs text-slate-500 mt-1">条素材（9轮搜索）</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm border-l-4 border-emerald-500">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">Supported</div>
+      <div class="text-3xl font-bold text-emerald-600 mt-1">8</div>
+      <div class="text-xs text-slate-500 mt-1">有据支持</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm border-l-4 border-amber-500">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">Conflicting</div>
+      <div class="text-3xl font-bold text-amber-600 mt-1">4</div>
+      <div class="text-xs text-slate-500 mt-1">证据矛盾</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm border-l-4 border-rose-500">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">Refuted</div>
+      <div class="text-3xl font-bold text-rose-600 mt-1">3</div>
+      <div class="text-xs text-slate-500 mt-1">已被证伪</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">健康打分</div>
+      <div class="text-3xl font-bold text-slate-900 mt-1">76</div>
+      <div class="text-xs text-slate-500 mt-1">avg EQ 7.4</div>
+    </div>
+  </section>
+
+  <!-- 主体两栏 -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+    <!-- 左侧主内容 -->
+    <section class="lg:col-span-2 space-y-6">
+
+      <!-- 已证伪高亮 -->
+      <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-rose-500">
+        <h2 class="text-lg font-bold text-rose-700 mb-3">🔴 已证伪内容（Refuted）</h2>
+        <div class="space-y-5">
+
+          <div class="border-l-2 border-rose-300 pl-4">
+            <div class="flex items-center gap-2 mb-1">
+              <h3 class="font-semibold text-slate-900">小米17 Max「史上最大8000mAh电池」声称</h3>
+              <span class="px-2 py-0.5 rounded text-xs badge-fail">Refuted · EQ 8.5</span>
+            </div>
+            <p class="text-sm text-slate-600">小米官方发布小米17 Max时声称搭载「史上最大电池」（8000mAh），但同日发布的荣耀600 Pro电池容量达9000mAh，vivo X300 Ultra（2025年）已有8500mAh，令该声称在发布当天即被证伪。</p>
+            <p class="text-xs text-slate-400 mt-2">正确表述应为：「该系列历史最大容量」而非「行业史上最大」</p>
+          </div>
+
+          <div class="border-l-2 border-rose-300 pl-4">
+            <div class="flex items-center gap-2 mb-1">
+              <h3 class="font-semibold text-slate-900">AI手机「完全取代传统App」声称</h3>
+              <span class="px-2 py-0.5 rounded text-xs badge-fail">Refuted · EQ 8.8</span>
+            </div>
+            <p class="text-sm text-slate-600">OpenAI及多家厂商宣传AI Agent将「完全取代」传统App。但当前AI Agent复杂任务成功率仅30-50%，App生态网络效应强劲，OpenAI手机本身最早2027年H1才能量产。命中伪科学模式：<span class="font-medium text-rose-600">AI-Replaces-Everything</span>。</p>
+            <p class="text-xs text-slate-400 mt-2">伪科学模式（2026-05-18新增）命中 · 逻辑谬误：Appeal to Future Tech + False Dichotomy</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 消费者警示 -->
+      <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-amber-500">
+        <h2 class="text-lg font-bold text-amber-700 mb-3">⚠️ 消费者警示（高优先级）</h2>
+        <div class="space-y-5">
+
+          <div class="border-l-2 border-amber-300 pl-4">
+            <div class="flex items-center gap-2 mb-1">
+              <h3 class="font-semibold text-slate-900">天玑9600 / 骁龙8 Elite Gen6 均采用分级供货</h3>
+              <span class="px-2 py-0.5 rounded text-xs badge-warn">Supported · EQ 8.1</span>
+            </div>
+            <p class="text-sm text-slate-600">联发科天玑9600和高通骁龙8 Elite Gen6均将推出Pro/标准版，只有顶配SKU才是「满血」规格。消费者看到「天玑9600」或「骁龙8EG6」标签时，实际搭载版本可能远低于旗舰规格。</p>
+            <p class="text-xs text-slate-400 mt-2">⚡ 购机建议：购买前明确询问具体芯片版本（Pro/标准/增强版）</p>
+          </div>
+
+          <div class="border-l-2 border-amber-300 pl-4">
+            <div class="flex items-center gap-2 mb-1">
+              <h3 class="font-semibold text-slate-900">AI健康建议安全警示：遵循AI建议者受伤风险5倍</h3>
+              <span class="px-2 py-0.5 rounded text-xs badge-warn">Supported（条件） · EQ 7.2</span>
+            </div>
+            <p class="text-sm text-slate-600">2026年健康传媒追踪调查显示，遵循AI给出的健康建议者受到实际伤害的风险约是不遵循者的5倍；Mount Sinai研究发现主流LLM会重复并放大以医学语言包装的错误信息。</p>
+            <p class="text-xs text-slate-400 mt-2">注意：5倍为相关性数据，因果边界需进一步研究。不建议用AI替代专业医疗建议。</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 已确认属实 -->
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-4">✅ 已确认属实</h2>
+        <div class="space-y-4">
+
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">索尼Xperia 1 VIII AI相机样张过曝争议</h3>
+              <span class="px-2 py-1 rounded text-xs badge-pass">PASS</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">争议确实存在：索尼官方AI相机助手宣传样张经多位用户和媒体核查，存在系统性过曝现象，Nothing创始人裴宇公开质疑。索尼随后补发新样张并澄清：AI相机助手是给出4种创作建议，而非直接修改照片。</p>
+            <div class="text-xs text-slate-400 mt-2">来源：finance.sina.com.cn（2026-05-15~16）· 置信度 0.88</div>
+          </article>
+
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">华为Pura 90系列已发布（4月20日）</h3>
+              <span class="px-2 py-1 rounded text-xs badge-official">已发布</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">Pro/Max版搭载麒麟9030S，标准版9010S；4699元起；全系直屏设计；HarmonyOS 6.1。Pura 90 Ultra：麒麟9030 Pro + 2亿像素潜望长焦 + 1英寸可变光圈主摄。</p>
+            <div class="text-xs text-slate-400 mt-2">来源：华为官网 + mobile.zol.com.cn · 置信度 0.91</div>
+          </article>
+
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">LLM重复医疗错误信息（Mount Sinai研究）</h3>
+              <span class="px-2 py-1 rounded text-xs badge-pass">PASS</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">Mount Sinai医学中心研究：主流LLM（含ChatGPT）在接收以医学语言包装的错误信息时会重复并放大；Euronews和Medscape独立印证。各模型版本间差异大，最新版改善情况需持续关注。</p>
+            <div class="text-xs text-slate-400 mt-2">来源：Euronews Health（2026-02-10）+ Medscape · 置信度 0.86</div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- 证据矛盾项 -->
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-4">🔵 证据矛盾 / 待确认</h2>
+        <div class="space-y-4">
+
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">OpenAI硬件战略：3个月内从耳机变手机</h3>
+              <span class="px-2 py-1 rounded text-xs badge-ce">矛盾 C/E</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">2026年1月报道OpenAI设备为音频/耳机形态；4月报道变为AI手机。两个来源均可信但相互矛盾。可能是两条独立产品线并行，但媒体报道未区分。最早2027H1量产（目标多次变更）。</p>
+            <div class="text-xs text-slate-400 mt-2">追踪文件：wiki/openai-hardware-timeline.md · 置信度 0.55（整体策略）</div>
+          </article>
+
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">ChatGPT手机GPU将超越iPhone 18 Pro A20 Pro</h3>
+              <span class="px-2 py-1 rounded text-xs badge-ce">NEE 证据不足</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">两款产品均未发布，无法比较。iPhone 18 Pro和A20 Pro规格未知，OpenAI手机芯片未最终确定。该声称源于分析师推测而非实测数据，不可作为事实引用。</p>
+            <div class="text-xs text-slate-400 mt-2">来源：notebookcheck.net · 置信度 0.20</div>
+          </article>
+
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">iPhone 18 Pro传感器从索尼转三星三层堆叠</h3>
+              <span class="px-2 py-1 rounded text-xs badge-ce">矛盾 C/E</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">多个来源报道三星正在开发用于iPhone 18 Pro的三层堆叠传感器；但摩根士丹利预测iPhone 21才采用2亿像素传感器（时间线冲突）。苹果通常采用双供应商策略，「完全取代索尼」表述可能过于绝对。</p>
+            <div class="text-xs text-slate-400 mt-2">来源：news.qq.com / finance.sina.com.cn · 置信度 0.58</div>
+          </article>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 右侧：统计图 + 变更日志 -->
+    <section class="space-y-6">
+
+      <!-- AVeriTeC分布 -->
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h2 class="text-base font-bold text-slate-900 mb-4">AVeriTeC 分布（精审14条）</h2>
+        <svg id="averitec-chart" class="w-full" height="140" viewBox="0 0 280 140"></svg>
+        <script>
+          const data = [
+            { label: "Supported", count: 8, color: "#10b981" },
+            { label: "Refuted", count: 3, color: "#ef4444" },
+            { label: "Conflicting", count: 4, color: "#f59e0b" },
+            { label: "NEE", count: 1, color: "#94a3b8" }
+          ];
+          const svg = document.getElementById("averitec-chart");
+          const W = 280, barH = 22, gap = 10, startX = 90;
+          const maxV = 14;
+          data.forEach((d, i) => {
+            const y = i * (barH + gap) + 5;
+            const barW = Math.round((d.count / maxV) * (W - startX - 20));
+            // label
+            const t = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            t.setAttribute("x", startX - 6); t.setAttribute("y", y + barH * 0.68);
+            t.setAttribute("text-anchor", "end"); t.setAttribute("font-size", "11");
+            t.setAttribute("fill", "#475569"); t.textContent = d.label;
+            svg.appendChild(t);
+            // bar bg
+            const bg = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+            bg.setAttribute("x", startX); bg.setAttribute("y", y);
+            bg.setAttribute("width", W - startX - 20); bg.setAttribute("height", barH);
+            bg.setAttribute("fill", "#f1f5f9"); bg.setAttribute("rx", 4);
+            svg.appendChild(bg);
+            // bar fill
+            const bar = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+            bar.setAttribute("x", startX); bar.setAttribute("y", y);
+            bar.setAttribute("width", barW); bar.setAttribute("height", barH);
+            bar.setAttribute("fill", d.color); bar.setAttribute("rx", 4);
+            svg.appendChild(bar);
+            // count
+            const n = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            n.setAttribute("x", startX + barW + 5); n.setAttribute("y", y + barH * 0.68);
+            n.setAttribute("font-size", "11"); n.setAttribute("fill", "#334155");
+            n.setAttribute("font-weight", "600"); n.textContent = d.count;
+            svg.appendChild(n);
+          });
+        </script>
+      </div>
+
+      <!-- 伪科学模式触发 -->
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h2 class="text-base font-bold text-slate-900 mb-3">伪科学模式触发</h2>
+        <div class="space-y-2">
+          <div class="flex justify-between text-sm">
+            <span class="text-slate-600">AI-Replaces-Everything</span>
+            <span class="font-bold text-rose-600">2次 🔴</span>
+          </div>
+          <div class="flex justify-between text-sm">
+            <span class="text-slate-600">双芯片厂商同步伪科学</span>
+            <span class="font-bold text-rose-600">2次 🔴</span>
+          </div>
+          <div class="flex justify-between text-sm">
+            <span class="text-slate-600">芯片供应链爆料混战</span>
+            <span class="font-bold text-amber-600">3次 🟡</span>
+          </div>
+          <div class="flex justify-between text-sm">
+            <span class="text-slate-600">绝对化最高级电池声称</span>
+            <span class="font-bold text-amber-600">2次 🟡</span>
+          </div>
+          <div class="flex justify-between text-sm">
+            <span class="text-slate-600">AI摄影革命（模糊）</span>
+            <span class="font-bold text-slate-500">1次</span>
+          </div>
+          <div class="flex justify-between text-sm">
+            <span class="text-slate-600">X亿像素堆像素数</span>
+            <span class="font-bold text-slate-500">1次</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 今日新增/更新 -->
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h2 class="text-base font-bold text-slate-900 mb-3">🔄 飞轮更新</h2>
+        <ul class="text-sm text-slate-600 space-y-2">
+          <li>📌 <code class="text-xs bg-slate-100 px-1 rounded">pseudoscience-patterns.md</code>：新增「绝对化最高级电池声称」+ 候选「AI Agent成功率虚报」</li>
+          <li>📌 <code class="text-xs bg-slate-100 px-1 rounded">wiki/openai-hardware-timeline.md</code>：新建，追踪OpenAI硬件战略变化时间线</li>
+          <li>📌 <code class="text-xs bg-slate-100 px-1 rounded">_meta/changelog.md</code>：追加本日运行记录</li>
+          <li>💡 方法论：首次记录「同日证伪」现象，建议新增superlative_auto_flag维度</li>
+        </ul>
+      </div>
+
+      <!-- 质量指标 -->
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h2 class="text-base font-bold text-slate-900 mb-3">质量指标</h2>
+        <div class="space-y-3">
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span class="text-slate-600">综合健康打分</span>
+              <span class="font-bold">76/100</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-2">
+              <div class="bg-blue-500 h-2 rounded-full" style="width:76%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span class="text-slate-600">avg EQ 分</span>
+              <span class="font-bold">7.4/10</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-2">
+              <div class="bg-amber-500 h-2 rounded-full" style="width:74%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span class="text-slate-600">UnR（未解决矛盾率）</span>
+              <span class="font-bold">35.7%</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-2">
+              <div class="bg-rose-400 h-2 rounded-full" style="width:35.7%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span class="text-slate-600">伪科学模式触发率</span>
+              <span class="font-bold">71%</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-2">
+              <div class="bg-orange-400 h-2 rounded-full" style="width:71%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- D3关系图谱 -->
+  <section class="bg-white rounded-xl shadow-sm p-6">
+    <h2 class="text-lg font-bold text-slate-900 mb-2">🕸️ 本日实体关系图谱</h2>
+    <p class="text-xs text-slate-500 mb-4">节点越大表示涉及条目越多；连线表示共现关系</p>
+    <svg id="graph" class="graph-svg w-full" height="340"></svg>
+    <script>
+    (function(){
+      const nodes = [
+        {id:"OpenAI", group:1, r:22, label:"OpenAI"},
+        {id:"天玑9600", group:2, r:18, label:"天玑9600"},
+        {id:"骁龙8EG6", group:2, r:18, label:"骁龙8EG6"},
+        {id:"小米17Max", group:3, r:16, label:"小米17Max"},
+        {id:"荣耀600", group:3, r:16, label:"荣耀600"},
+        {id:"索尼Xperia", group:3, r:14, label:"Xperia1VIII"},
+        {id:"iPhone18", group:3, r:14, label:"iPhone18"},
+        {id:"华为Pura90", group:3, r:14, label:"华为Pura90"},
+        {id:"AI Agent", group:1, r:18, label:"AI Agent"},
+        {id:"电池容量", group:4, r:14, label:"电池容量"},
+        {id:"AI相机", group:4, r:12, label:"AI相机"},
+        {id:"联发科", group:2, r:14, label:"联发科"},
+        {id:"高通", group:2, r:14, label:"高通"},
+      ];
+      const links = [
+        {source:"OpenAI", target:"AI Agent"},
+        {source:"OpenAI", target:"天玑9600"},
+        {source:"OpenAI", target:"骁龙8EG6"},
+        {source:"天玑9600", target:"联发科"},
+        {source:"骁龙8EG6", target:"高通"},
+        {source:"小米17Max", target:"电池容量"},
+        {source:"荣耀600", target:"电池容量"},
+        {source:"荣耀600", target:"骁龙8EG6"},
+        {source:"小米17Max", target:"骁龙8EG6"},
+        {source:"索尼Xperia", target:"AI相机"},
+        {source:"iPhone18", target:"AI相机"},
+        {source:"华为Pura90", target:"AI相机"},
+        {source:"AI Agent", target:"荣耀600"},
+        {source:"AI Agent", target:"小米17Max"},
+      ];
+      const colors = {1:"#3b82f6", 2:"#10b981", 3:"#f59e0b", 4:"#8b5cf6"};
+      const svgEl = document.getElementById("graph");
+      const W = svgEl.clientWidth || 800, H = 340;
+      svgEl.setAttribute("viewBox", `0 0 ${W} ${H}`);
+      if(typeof d3 !== "undefined"){
+        const svg = d3.select("#graph");
+        const sim = d3.forceSimulation(nodes)
+          .force("link", d3.forceLink(links).id(d=>d.id).distance(100))
+          .force("charge", d3.forceManyBody().strength(-200))
+          .force("center", d3.forceCenter(W/2, H/2))
+          .force("collide", d3.forceCollide(d=>d.r+10));
+        const link = svg.append("g").selectAll("line").data(links).join("line")
+          .attr("stroke","#cbd5e1").attr("stroke-width",1.5);
+        const node = svg.append("g").selectAll("circle").data(nodes).join("circle")
+          .attr("r",d=>d.r).attr("fill",d=>colors[d.group]||"#94a3b8")
+          .attr("fill-opacity",0.85).attr("stroke","white").attr("stroke-width",2)
+          .call(d3.drag()
+            .on("start",(e,d)=>{if(!e.active)sim.alphaTarget(0.3).restart();d.fx=d.x;d.fy=d.y;})
+            .on("drag",(e,d)=>{d.fx=e.x;d.fy=e.y;})
+            .on("end",(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null;}));
+        const label = svg.append("g").selectAll("text").data(nodes).join("text")
+          .text(d=>d.label).attr("font-size","10px").attr("text-anchor","middle")
+          .attr("fill","#1e293b").attr("pointer-events","none");
+        sim.on("tick",()=>{
+          link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y)
+              .attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
+          node.attr("cx",d=>d.x).attr("cy",d=>d.y);
+          label.attr("x",d=>d.x).attr("y",d=>d.y+3);
+        });
+      } else {
+        svgEl.innerHTML = '<text x="50%" y="50%" text-anchor="middle" fill="#94a3b8" font-size="14">D3 加载失败，图谱不可用</text>';
+      }
+    })();
+    </script>
+  </section>
+
+</main>
+
+<footer class="bg-white border-t border-slate-200 mt-12">
+  <div class="max-w-7xl mx-auto px-6 py-5 text-center text-xs text-slate-400">
+    RumorCrusher v2.4 · 2026-05-19 17:26 UTC · 仅供参考，不构成投资或消费建议
+    <span class="mx-2">·</span>
+    <a href="https://chirs0901.github.io/rumorcrusher/2026-05-19/" class="text-rose-500 hover:underline">在线版本</a>
+    <span class="mx-2">·</span>
+    <a href="../index.html" class="text-rose-500 hover:underline">归档首页</a>
+  </div>
+</footer>
+
+</body>
+</html>

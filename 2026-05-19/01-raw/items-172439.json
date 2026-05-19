@@ -1,0 +1,331 @@
+{
+  "meta": {
+    "date": "2026-05-19",
+    "timestamp": "2026-05-19T17:20:00Z",
+    "run_type": "daily",
+    "total_items": 32,
+    "search_rounds": 9
+  },
+  "items": [
+    {
+      "id": "001",
+      "title": "荣耀600系列官宣：幸运星背板设计，9000mAh电池+200MP主摄+100W快充",
+      "source": "igao7.com / mobile.zol.com.cn",
+      "date": "2026-05-11",
+      "url": "https://www.igao7.com/news/202605/buypMGoA8wbASqRP.html",
+      "category": "smartphone_launch",
+      "claim_type": "spec_claim",
+      "raw_claim": "荣耀600 Pro：骁龙8 Elite处理器+200MP主摄+9000mAh电池+100W快充+3.5x潜望长焦"
+    },
+    {
+      "id": "002",
+      "title": "小米17 Max官宣：8000mAh电池+2亿像素徕卡主摄+骁龙8至尊版第五代",
+      "source": "pconline.com.cn / sina.com.cn",
+      "date": "2026-05-13",
+      "url": "https://mobile.pconline.com.cn/2149/21498571.html",
+      "category": "smartphone_launch",
+      "claim_type": "spec_claim",
+      "raw_claim": "小米17 Max：8000mAh电池（史上最大）、2亿像素徕卡、骁龙8至尊版Gen5、6.9英寸1.5K OLED"
+    },
+    {
+      "id": "003",
+      "title": "索尼Xperia 1 VIII AI相机助手样张引发争议：过曝、发灰、失真",
+      "source": "finance.sina.com.cn",
+      "date": "2026-05-15",
+      "url": "https://finance.sina.com.cn/tech/digi/2026-05-15/doc-inhxxwvr3413454.shtml",
+      "category": "product_controversy",
+      "claim_type": "marketing_vs_reality",
+      "raw_claim": "索尼Xperia 1 VIII AI相机助手宣传样张发布后被用户质疑普遍过曝、原始色彩丢失"
+    },
+    {
+      "id": "004",
+      "title": "索尼回应Xperia 1 VIII AI相机争议：补发新样张并澄清功能定位",
+      "source": "finance.sina.com.cn",
+      "date": "2026-05-16",
+      "url": "https://finance.sina.com.cn/tech/digi/2026-05-16/doc-inhyahap2747719.shtml",
+      "category": "product_controversy",
+      "claim_type": "clarification",
+      "raw_claim": "索尼澄清：AI相机助手不会直接编辑照片，而是给出4种创作建议；Nothing创始人裴宇质疑索尼是否在故意引流"
+    },
+    {
+      "id": "005",
+      "title": "OpenAI正在快速推进AI手机项目，预计2027年上半年量产",
+      "source": "9to5mac.com / techcrunch.com",
+      "date": "2026-05-05",
+      "url": "https://9to5mac.com/2026/05/05/openais-new-phone-being-fast-tracked-to-launch-next-year-per-report/",
+      "category": "ai_device",
+      "claim_type": "roadmap_claim",
+      "raw_claim": "OpenAI AI手机fast-tracked，将使用天玑9600定制版（TSMC N2P），2027年上半年量产"
+    },
+    {
+      "id": "006",
+      "title": "OpenAI手机将用AI Agent替代传统App",
+      "source": "techcrunch.com",
+      "date": "2026-04-27",
+      "url": "https://techcrunch.com/2026/04/27/openai-could-be-making-a-phone-with-ai-agents-replacing-apps/",
+      "category": "ai_device",
+      "claim_type": "feature_claim",
+      "raw_claim": "OpenAI手机将完全依赖AI agents完成任务，不再需要传统App"
+    },
+    {
+      "id": "007",
+      "title": "MediaTek天玑9600：全大核2+3+3架构，集成Google AI TPU v7，主频可达5GHz",
+      "source": "phonearena.com / t.cj.sina.com.cn",
+      "date": "2026-05",
+      "url": "https://www.phonearena.com/news/mediatek-9500s-unveiled_id177361",
+      "category": "chip_announcement",
+      "claim_type": "spec_claim",
+      "raw_claim": "天玑9600全大核架构，2+3+3三丛架构，两颗Ultra超大核，主频5GHz，采用TSMC N2P"
+    },
+    {
+      "id": "008",
+      "title": "骁龙8 Elite Gen5：Oryon核心最高4.6GHz，CPU性能+35%，GPU+23%，NPU+37%",
+      "source": "notebookcheck.net",
+      "date": "2026-05",
+      "url": "https://www.notebookcheck.net/2nm-SoC-in-ChatGPT-powered-AI-phone-to-beat-iPhone-18-Pro-s-A20-Pro-Galaxy-S27-Ultra-s-Snapdragon-8-Elite-Gen-6-in-GPU.1296104.0.html",
+      "category": "chip_announcement",
+      "claim_type": "spec_claim",
+      "raw_claim": "骁龙8 Elite Gen5 CPU性能提升35%，GPU提升23%，Hexagon NPU提升37%"
+    },
+    {
+      "id": "009",
+      "title": "2nm SoC将驱动OpenAI ChatGPT手机超越iPhone 18 Pro A20 Pro GPU性能",
+      "source": "notebookcheck.net",
+      "date": "2026-05",
+      "url": "https://www.notebookcheck.net/2nm-SoC-in-ChatGPT-powered-AI-phone-to-beat-iPhone-18-Pro-s-A20-Pro-Galaxy-S27-Ultra-s-Snapdragon-8-Elite-Gen-6-in-GPU.1296104.0.html",
+      "category": "ai_device",
+      "claim_type": "performance_claim",
+      "raw_claim": "OpenAI ChatGPT手机的2nm SoC GPU性能将超越iPhone 18 Pro和Galaxy S27 Ultra"
+    },
+    {
+      "id": "010",
+      "title": "电池续航已超越价格成为智能手机购买首要因素，AI功能排名靠后",
+      "source": "techradar.com",
+      "date": "2026-05",
+      "url": "https://www.techradar.com/phones/battery-life-just-dethroned-price-as-the-biggest-driver-of-smartphone-purchases-and-ai-doesnt-come-close",
+      "category": "market_research",
+      "claim_type": "survey_data",
+      "raw_claim": "首次调查显示电池续航超过价格成为最重要购买因素，AI功能不在核心考量"
+    },
+    {
+      "id": "011",
+      "title": "手机涨价：小米17 Ultra起售价较上代涨500元，原因是存储芯片价格飙升",
+      "source": "mobile.pconline.com.cn",
+      "date": "2026-03",
+      "url": "https://mobile.pconline.com.cn/2104/21043652.html",
+      "category": "market_trend",
+      "claim_type": "price_claim",
+      "raw_claim": "2026年手机市场全品类涨价，最低涨千元，原因是存储芯片等关键零部件价格大幅飙升"
+    },
+    {
+      "id": "012",
+      "title": "华为Pura 90系列发布：Pro/Max搭载麒麟9030S，4699元起，全系直屏",
+      "source": "mobile.zol.com.cn / news.qq.com",
+      "date": "2026-04-20",
+      "url": "https://mobile.zol.com.cn/1168/11689468.html",
+      "category": "smartphone_launch",
+      "claim_type": "spec_claim",
+      "raw_claim": "华为Pura 90系列4699元起，Pro/Max搭载麒麟9030S，标准版用9010S，全系直屏设计"
+    },
+    {
+      "id": "013",
+      "title": "华为Pura 90 Ultra：2亿像素长焦+1英寸可变光圈，麒麟9030 Pro",
+      "source": "eet-china.com / baike.baidu.com",
+      "date": "2026-04-20",
+      "url": "https://www.eet-china.com/mp/a467068.html",
+      "category": "smartphone_launch",
+      "claim_type": "spec_claim",
+      "raw_claim": "华为Pura 90 Ultra：2亿像素潜望长焦+1英寸可变光圈主摄+麒麟9030 Pro+HarmonyOS 6.1"
+    },
+    {
+      "id": "014",
+      "title": "iPhone 18 Pro将首次采用三星三层堆叠图像传感器，取代索尼长期独占地位",
+      "source": "news.qq.com",
+      "date": "2026-04-15",
+      "url": "https://news.qq.com/rain/a/20260415A04F9M00",
+      "category": "supply_chain",
+      "claim_type": "supply_chain_claim",
+      "raw_claim": "iPhone 18 Pro主摄将采用三星新型三层堆叠传感器，打破索尼长期独家供应地位"
+    },
+    {
+      "id": "015",
+      "title": "摩根士丹利预测iPhone 21系列才会上2亿像素传感器",
+      "source": "finance.sina.com.cn",
+      "date": "2026-01",
+      "url": "https://finance.sina.com.cn/tech/roll/2026-01-07/doc-inhfmycx7662375.shtml",
+      "category": "analyst_forecast",
+      "claim_type": "timeline_claim",
+      "raw_claim": "摩根士丹利：苹果iPhone 21（约2028年）才会采用2亿像素图像传感器"
+    },
+    {
+      "id": "016",
+      "title": "苹果计划2026年上半年密集发布新品推动收入增长回归正轨",
+      "source": "wallstreetcn.com",
+      "date": "2026-05",
+      "url": "https://wallstreetcn.com/articles/3750875",
+      "category": "company_strategy",
+      "claim_type": "business_claim",
+      "raw_claim": "苹果2026年上半年将密集发布新产品（含Mac/iPad/可穿戴），推动收入增长"
+    },
+    {
+      "id": "017",
+      "title": "AI智能手机中AI功能被营销为「完全取代App」，但当前Agent任务成功率仅30-50%",
+      "source": "techcrunch.com / builtin.com",
+      "date": "2026-04~05",
+      "url": "https://builtin.com/articles/openai-device",
+      "category": "marketing_claim",
+      "claim_type": "feature_exaggeration",
+      "raw_claim": "多家厂商宣传AI Agent将\"完全取代\"传统App，但独立研究显示复杂任务成功率仅30-50%"
+    },
+    {
+      "id": "018",
+      "title": "AI模型会相信医疗错误信息：大型研究显示LLM重复错误健康信息",
+      "source": "euronews.com / mountsinai.org",
+      "date": "2026-02-10",
+      "url": "https://www.euronews.com/health/2026/02/10/chatgpt-and-other-ai-models-believe-medical-misinformation-on-social-media-study-warns",
+      "category": "ai_safety",
+      "claim_type": "research_finding",
+      "raw_claim": "Mount Sinai研究：主流LLM（含ChatGPT）在接收以医学语言包装的错误信息时会重复并放大"
+    },
+    {
+      "id": "019",
+      "title": "遵循AI健康建议者遭受伤害风险是不遵循者的5倍（2026健康传媒追踪调查）",
+      "source": "medscape.com",
+      "date": "2026",
+      "url": "https://www.medscape.com/viewarticle/misinformation-ai-putting-patients-health-risk-2026a1000e6b",
+      "category": "ai_safety",
+      "claim_type": "research_finding",
+      "raw_claim": "2026年健康与媒体追踪调查：遵循AI健康建议者受到实际伤害的概率是不遵循者的5倍"
+    },
+    {
+      "id": "020",
+      "title": "SEO实验证明谷歌搜索中AI虚假信息极易排名靠前",
+      "source": "searchenginejournal.com",
+      "date": "2026",
+      "url": "https://www.searchenginejournal.com/seo-test-shows-its-trivial-to-rank-misinformation-on-google/569980/",
+      "category": "platform_risk",
+      "claim_type": "research_finding",
+      "raw_claim": "SEO测试：关于不存在的\"2026年3月Google核心更新\"的AI幻觉文章轻松登上谷歌第一页"
+    },
+    {
+      "id": "021",
+      "title": "MWC 2026七大亮点：小米展示超跑概念机，荣耀手机Magic V5展示\"长手脚\"机械臂形态",
+      "source": "mobile.zol.com.cn",
+      "date": "2026-02",
+      "url": "https://mobile.zol.com.cn/1142/11424447.html",
+      "category": "concept_device",
+      "claim_type": "product_concept",
+      "raw_claim": "MWC 2026荣耀展示Magic V5配备小型机械臂（\"长出手脚\"），小米展示超跑造型概念手机"
+    },
+    {
+      "id": "022",
+      "title": "天玑骁龙齐砍：天玑9600、骁龙8 Elite Gen6全系分级，顶配才满血",
+      "source": "163.com",
+      "date": "2026-05",
+      "url": "https://www.163.com/dy/article/KQ3UNTI105503WTT.html",
+      "category": "chip_strategy",
+      "claim_type": "supply_chain_claim",
+      "raw_claim": "天玑9600和骁龙8 Elite Gen6均采用分级供货策略，只有顶配版本才是\"满血\"规格"
+    },
+    {
+      "id": "023",
+      "title": "阶跃星辰Step系列多模态模型已预装于4200万台手机（OPPO/荣耀/吉利）",
+      "source": "finance.sina.com.cn（间接引用）",
+      "date": "2026-05",
+      "url": "https://finance.sina.com.cn/tech/digi/2026-05-16/doc-inhyahap2747719.shtml",
+      "category": "ai_deployment",
+      "claim_type": "market_claim",
+      "raw_claim": "阶跃星辰Step系列已与OPPO、荣耀、吉利等厂商合作，手机预装机量突破4200万台"
+    },
+    {
+      "id": "024",
+      "title": "骁龙8 Elite Gen6 Pro规格曝光：安卓旗舰迎来\"双版本\"时代",
+      "source": "mobile.pconline.com.cn",
+      "date": "2026-05",
+      "url": "https://mobile.pconline.com.cn/2124/21248072.html",
+      "category": "chip_announcement",
+      "claim_type": "spec_claim",
+      "raw_claim": "骁龙8 Elite Gen6将有Pro和标准两个版本，性能存在明显差异，形成安卓旗舰双版本时代"
+    },
+    {
+      "id": "025",
+      "title": "iPhone 18 Pro两款机型将首次配备可变光圈主摄",
+      "source": "news.qq.com",
+      "date": "2026-04-15",
+      "url": "https://news.qq.com/rain/a/20260415A04F9M00",
+      "category": "upcoming_product",
+      "claim_type": "feature_claim",
+      "raw_claim": "iPhone 18 Pro和Pro Max将首次配备可变光圈（非固定f/1.78），是iPhone历史重大相机升级"
+    },
+    {
+      "id": "026",
+      "title": "荣耀Magic V5 MWC展示机械臂功能：被指为\"概念噱头\"而非量产功能",
+      "source": "mobile.zol.com.cn",
+      "date": "2026-02",
+      "url": "https://mobile.zol.com.cn/1142/11424447.html",
+      "category": "product_concept",
+      "claim_type": "marketing_vs_reality",
+      "raw_claim": "荣耀Magic V5展示的小型机械臂在展会现场引发争议，外界质疑是否会进入量产版本"
+    },
+    {
+      "id": "027",
+      "title": "Reuters Institute 2026报告：AI加速新闻造假传播，但也赋能小型核查团队",
+      "source": "reutersinstitute.politics.ox.ac.uk",
+      "date": "2026",
+      "url": "https://reutersinstitute.politics.ox.ac.uk/news/ai-and-future-news-2026-what-we-learnt-about-its-impact-newsrooms-fact-checking-and-news",
+      "category": "media_research",
+      "claim_type": "research_finding",
+      "raw_claim": "路透社新闻研究所2026报告：AI既加速错误信息生产和传播，也让小型核查团队能以前所未有的规模运作"
+    },
+    {
+      "id": "028",
+      "title": "小米17 Max\"史上最大电池\"声称：8000mAh是否真创手机之最？",
+      "source": "pconline.com.cn",
+      "date": "2026-05-13",
+      "url": "https://mobile.pconline.com.cn/2149/21498571.html",
+      "category": "marketing_claim",
+      "claim_type": "superlative_claim",
+      "raw_claim": "小米官方声称小米17 Max搭载\"史上最大电池\"（8000mAh）"
+    },
+    {
+      "id": "029",
+      "title": "荣耀600 Pro 9000mAh+200MP：同类产品中最大电池容量声称",
+      "source": "igao7.com",
+      "date": "2026-05-11",
+      "url": "https://www.igao7.com/news/202605/buypMGoA8wbASqRP.html",
+      "category": "marketing_claim",
+      "claim_type": "superlative_claim",
+      "raw_claim": "荣耀600 Pro 9000mAh电池+100W快充，厂商暗示为同价位最大电池"
+    },
+    {
+      "id": "030",
+      "title": "OpenAI首款硬件产品定位持续变化：从耳机到手机，Jony Ive合作形态仍不明朗",
+      "source": "9to5mac.com / builtin.com",
+      "date": "2026-01~05",
+      "url": "https://9to5mac.com/2026/01/02/openai-device-will-be-audio-based-with-new-chatgpt-models-per-report/",
+      "category": "ai_device",
+      "claim_type": "roadmap_inconsistency",
+      "raw_claim": "OpenAI硬件战略：先报道基于音频的耳机（1月），后变为AI手机（4月），Jony Ive合作项目是否为同一产品存在矛盾"
+    },
+    {
+      "id": "031",
+      "title": "天玑9600全大核架构\"挑战高通\"：但分级供货策略令顶配版比例存疑",
+      "source": "t.cj.sina.com.cn / 163.com",
+      "date": "2026-05",
+      "url": "https://t.cj.sina.com.cn/articles/view/1776773647/69e76a0f020018d36",
+      "category": "chip_strategy",
+      "claim_type": "spec_vs_reality",
+      "raw_claim": "联发科天玑9600全大核架构宣传可\"挑战高通\"，但分级供货导致多数手机搭载的是阉割版"
+    },
+    {
+      "id": "032",
+      "title": "2026年手机全品类涨价：最低涨千元，低价手机将消失",
+      "source": "mobile.pconline.com.cn / eu.36kr.com",
+      "date": "2026-03~05",
+      "url": "https://eu.36kr.com/zh/p/3702585196163203",
+      "category": "market_trend",
+      "claim_type": "market_claim",
+      "raw_claim": "2026年3月起中国手机市场全品类首次普涨，入门机型涨幅最低千元，低价手机或将消失"
+    }
+  ]
+}

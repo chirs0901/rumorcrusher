@@ -1,5 +1,39 @@
 # RumorCrusher 项目演进日志
 
+## 2026-05-19 · 日报（172439）
+
+### 本次运行统计
+- 采集条目：32条（9轮 WebSearch）
+- AVeriTeC分布：Supported×8, Refuted×3, Conflicting Evidence×4, NEE×1（精审14条，不重叠分类）
+- avg EQ：7.4 | UnR：35.7% | 健康打分：76/100
+
+### 今日核心发现
+- **已证伪：** 小米\"史上最大8000mAh电池\"声称——同日荣耀600 Pro发布9000mAh，当日即证伪（EQ 8.5）
+- **伪科学高危：** OpenAI/多厂商\"AI完全取代App\"声称，与Agent成功率30-50%严重矛盾（命中AI-Replaces-Everything新模式）
+- **消费者警示：** 天玑9600+骁龙8E Gen6双双分级供货，顶配才满血（命中双芯片厂商同步伪科学模式）
+- **影像失实：** 索尼Xperia 1 VIII AI相机样张过曝争议已确认，索尼补发新样张并澄清功能
+- **信息矛盾：** OpenAI硬件战略3个月内从耳机变手机，矛盾属实
+
+### 飞轮更新
+- `skills/pseudoscience-patterns.md`：候选新增\"AI Agent成功率虚报\"模式（待评审）
+- `wiki/openai-hardware-timeline.md`：新建，追踪OpenAI硬件战略变化
+- `_meta/changelog.md`：本条更新
+
+### 方法论新观察
+- 新增\"急时效证伪\"（Same-Day Refutation）观察：同日发布产品互相证伪
+- 建议check-worthiness新增`superlative_auto_flag`维度
+- 建议创建电池容量历史记录数据库
+
+### 产出文件
+- `2026-05-19/01-raw/items-172439.json`（32条原始数据）
+- `2026-05-19/02-annotations/check-worthiness-172439.json`
+- `2026-05-19/02-annotations/synthesis-172439.json`
+- `2026-05-19/03-quality-report-172439.md`
+- `2026-05-19/04-clean-report-172439.md`
+- `2026-05-19/05-methodology-delta-172439.md`
+- `2026-05-19/06-self-eval-172439.md`
+- `2026-05-19/index.html`（仪表盘）
+
 ## 2026-05-18 · 手机硬件专项晚报（072210）
 
 ### 本次运行统计
