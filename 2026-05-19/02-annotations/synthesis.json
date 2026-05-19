@@ -1,0 +1,321 @@
+{
+  "meta": {
+    "date": "2026-05-19",
+    "timestamp": "2026-05-19T17:32:00Z",
+    "total_input": 32,
+    "reviewed": 14
+  },
+  "summary": {
+    "total": 32,
+    "pass": 16,
+    "warn": 13,
+    "fail": 3
+  },
+  "items": [
+    {
+      "id": "001",
+      "title": "荣耀600 Pro：骁龙8 Elite+200MP+9000mAh+100W快充",
+      "synthesis": "pass",
+      "eq": 6.5,
+      "fact_check": {
+        "verdict": "Supported"
+      }
+    },
+    {
+      "id": "002",
+      "title": "小米17 Max：8000mAh+2亿像素徕卡+骁龙8至尊版Gen5",
+      "synthesis": "warn",
+      "eq": 7.0,
+      "note": "8000mAh\"史上最大\"声称不实，荣耀600 Pro同期9000mAh",
+      "fact_check": {
+        "verdict": "Conflicting Evidence"
+      }
+    },
+    {
+      "id": "003",
+      "title": "索尼Xperia 1 VIII AI相机样张过曝争议",
+      "synthesis": "pass",
+      "eq": 7.2,
+      "fact_check": {
+        "verdict": "Supported"
+      }
+    },
+    {
+      "id": "004",
+      "title": "索尼回应争议：补发样张+澄清AI助手功能",
+      "synthesis": "pass",
+      "eq": 5.0,
+      "fact_check": {
+        "verdict": "Supported"
+      }
+    },
+    {
+      "id": "005",
+      "title": "OpenAI手机fast-tracked，2027H1量产",
+      "synthesis": "warn",
+      "eq": 6.7,
+      "note": "来自单一分析师，时间线多次变更",
+      "fact_check": {
+        "verdict": "Conflicting Evidence"
+      }
+    },
+    {
+      "id": "006",
+      "title": "OpenAI手机将用AI Agent替代传统App",
+      "synthesis": "fail",
+      "eq": 8.8,
+      "note": "AI-Replaces-Everything伪科学模式命中，Agent成功率30-50%",
+      "fact_check": {
+        "verdict": "Refuted"
+      }
+    },
+    {
+      "id": "007",
+      "title": "天玑9600全大核2+3+3，主频5GHz",
+      "synthesis": "warn",
+      "eq": 6.8,
+      "note": "5GHz为峰值非持续频率",
+      "fact_check": {
+        "verdict": "Conflicting Evidence"
+      }
+    },
+    {
+      "id": "008",
+      "title": "骁龙8 Elite Gen5：CPU+35%，GPU+23%，NPU+37%",
+      "synthesis": "warn",
+      "eq": 6.5,
+      "note": "相对提升需说明基准和测试条件",
+      "fact_check": {
+        "verdict": "Conflicting Evidence"
+      }
+    },
+    {
+      "id": "009",
+      "title": "ChatGPT手机GPU将超越iPhone 18 Pro",
+      "synthesis": "fail",
+      "eq": 7.5,
+      "note": "两款产品均未发布，无法比较",
+      "fact_check": {
+        "verdict": "Not Enough Evidence"
+      }
+    },
+    {
+      "id": "010",
+      "title": "电池续航超越价格成为购机首要因素",
+      "synthesis": "pass",
+      "eq": 5.0,
+      "fact_check": {
+        "verdict": "Supported"
+      }
+    },
+    {
+      "id": "011",
+      "title": "手机涨价：小米17 Ultra较上代涨500元",
+      "synthesis": "pass",
+      "eq": 6.3,
+      "fact_check": {
+        "verdict": "Supported"
+      }
+    },
+    {
+      "id": "012",
+      "title": "华为Pura 90系列发布：4699元起，麒麟9030S",
+      "synthesis": "pass",
+      "eq": 4.5,
+      "fact_check": {
+        "verdict": "Supported"
+      }
+    },
+    {
+      "id": "013",
+      "title": "华为Pura 90 Ultra：麒麟9030 Pro+2亿像素+1英寸可变光圈",
+      "synthesis": "pass",
+      "eq": 4.5,
+      "fact_check": {
+        "verdict": "Supported"
+      }
+    },
+    {
+      "id": "014",
+      "title": "iPhone 18 Pro传感器从索尼转三星三层堆叠",
+      "synthesis": "warn",
+      "eq": 6.5,
+      "note": "可能双供应商而非完全替代",
+      "fact_check": {
+        "verdict": "Conflicting Evidence"
+      }
+    },
+    {
+      "id": "015",
+      "title": "摩根士丹利预测iPhone 21才上2亿像素",
+      "synthesis": "pass",
+      "eq": 4.2,
+      "fact_check": {
+        "verdict": "Supported"
+      }
+    },
+    {
+      "id": "016",
+      "title": "苹果2026上半年密集发布新品",
+      "synthesis": "pass",
+      "eq": 4.5,
+      "fact_check": {
+        "verdict": "Supported"
+      }
+    },
+    {
+      "id": "017",
+      "title": "AI手机宣传\"完全取代App\"但Agent成功率30-50%",
+      "synthesis": "fail",
+      "eq": 8.8,
+      "note": "AI-Replaces-Everything伪科学模式，强烈命中",
+      "fact_check": {
+        "verdict": "Refuted"
+      }
+    },
+    {
+      "id": "018",
+      "title": "LLM相信医疗错误信息（Mount Sinai研究）",
+      "synthesis": "pass",
+      "eq": 7.0,
+      "fact_check": {
+        "verdict": "Supported"
+      }
+    },
+    {
+      "id": "019",
+      "title": "遵循AI健康建议者受伤害风险5倍",
+      "synthesis": "warn",
+      "eq": 7.2,
+      "note": "相关性数据，因果边界需注意",
+      "fact_check": {
+        "verdict": "Supported"
+      }
+    },
+    {
+      "id": "020",
+      "title": "SEO实验：谷歌搜索AI错误信息极易排名靠前",
+      "synthesis": "pass",
+      "eq": 6.5,
+      "fact_check": {
+        "verdict": "Supported"
+      }
+    },
+    {
+      "id": "021",
+      "title": "MWC 2026：荣耀Magic V5展示机械臂概念",
+      "synthesis": "pass",
+      "eq": 4.0,
+      "fact_check": {
+        "verdict": "Supported"
+      }
+    },
+    {
+      "id": "022",
+      "title": "天玑9600/骁龙8EG6全系分级，顶配才满血",
+      "synthesis": "warn",
+      "eq": 7.8,
+      "note": "消费者警示：购机前确认具体版本",
+      "fact_check": {
+        "verdict": "Supported"
+      }
+    },
+    {
+      "id": "023",
+      "title": "阶跃星辰预装机量突破4200万台",
+      "synthesis": "warn",
+      "eq": 6.2,
+      "note": "第三方验证困难",
+      "fact_check": {
+        "verdict": "Conflicting Evidence"
+      }
+    },
+    {
+      "id": "024",
+      "title": "骁龙8EG6 Pro/标准双版本爆料",
+      "synthesis": "warn",
+      "eq": 6.2,
+      "note": "未经官方确认",
+      "fact_check": {
+        "verdict": "Conflicting Evidence"
+      }
+    },
+    {
+      "id": "025",
+      "title": "iPhone 18 Pro首次配备可变光圈",
+      "synthesis": "warn",
+      "eq": 6.9,
+      "note": "属于传闻，苹果未官方确认",
+      "fact_check": {
+        "verdict": "Conflicting Evidence"
+      }
+    },
+    {
+      "id": "026",
+      "title": "荣耀Magic V5机械臂是否进入量产",
+      "synthesis": "warn",
+      "eq": 5.7,
+      "note": "概念展示≠量产功能",
+      "fact_check": {
+        "verdict": "Conflicting Evidence"
+      }
+    },
+    {
+      "id": "027",
+      "title": "Reuters Institute 2026：AI加速错误信息但也赋能核查",
+      "synthesis": "pass",
+      "eq": 5.8,
+      "fact_check": {
+        "verdict": "Supported"
+      }
+    },
+    {
+      "id": "028",
+      "title": "小米17 Max\"史上最大电池\"8000mAh",
+      "synthesis": "fail",
+      "eq": 8.5,
+      "note": "已被荣耀600 Pro 9000mAh同日证伪",
+      "fact_check": {
+        "verdict": "Refuted"
+      }
+    },
+    {
+      "id": "029",
+      "title": "荣耀600 Pro 9000mAh+100W快充暗示最大容量",
+      "synthesis": "warn",
+      "eq": 6.8,
+      "fact_check": {
+        "verdict": "Conflicting Evidence"
+      }
+    },
+    {
+      "id": "030",
+      "title": "OpenAI硬件战略从耳机变手机，信息矛盾",
+      "synthesis": "warn",
+      "eq": 8.0,
+      "note": "供应链爆料矛盾典型案例",
+      "fact_check": {
+        "verdict": "Conflicting Evidence"
+      }
+    },
+    {
+      "id": "031",
+      "title": "天玑9600满血/阉割版分化，宣传与实际不符",
+      "synthesis": "warn",
+      "eq": 8.3,
+      "note": "消费者权益高关注度",
+      "fact_check": {
+        "verdict": "Supported"
+      }
+    },
+    {
+      "id": "032",
+      "title": "2026手机全品类涨价，低价手机或消失",
+      "synthesis": "pass",
+      "eq": 5.5,
+      "fact_check": {
+        "verdict": "Supported"
+      }
+    }
+  ]
+}

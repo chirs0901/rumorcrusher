@@ -36,3 +36,16 @@ FileNotFoundError: [Errno 2] No such file or directory: '/sessions/compassionate
 [2026-05-18 13:58:31 UTC] [feishu-evening-134132] FAILED_NETWORK: sandbox代理403
 [2026-05-18 13:58:31 UTC] [email-evening-134132] FAILED_NETWORK: sandbox网络限制
 [2026-05-18 23:24:15 UTC] [git-techdigest] push失败（代理），commit已完成
+2026-05-19 17:32:05 [2026-05-19 daily]
+  GIT_PUSH: FAILED — proxy 403 (127.0.0.1:7897 not reachable)
+---
+2026-05-19 17:32:13 [2026-05-19 retry-after-symlink]
+  FEISHU: OK
+  EMAIL: OK
+  GIT_PUSH: FAILED — 代理不可达，commit已完成 (hash: 4db2712)
+---
+2026-05-19 17:33:22 [2026-05-19 final]
+  GIT_PUSH: FAILED — sandbox代理403/SOCKS5不可达，commit已完成 (hash: 4db2712)
+  FEISHU: FAILED_NETWORK — sandbox环境proxy 403 Forbidden（同05-18晚报同因）
+  EMAIL: FAILED (exit 1) — 网络限制同飞书
+---

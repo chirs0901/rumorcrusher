@@ -133,6 +133,135 @@ var WIKI_MAP = {
 var DATA = {
 
   // ══════════════════════════════════
+  '2026-05-19': {
+    title: '旗舰芯片分级供货警示 · 华为Pura 90发布 · 索尼AI相机争议 · 荣耀600 · AI取代App证伪',
+    sub: '32条资讯核查，3 Refuted · 8 Supported · 健康打分76分。本日重点：小米"史上最大电池"被同日证伪；AI手机"完全取代App"话术命中伪科学模式。',
+    stats: [
+      {v:'32', l:'条采集'},
+      {v:'3',  l:'条 Refuted'},
+      {v:'8',  l:'条 Supported'},
+      {v:'76', l:'健康打分'}
+    ],
+    items: [
+      {
+        id: 'RC-20260519-028-debunk',
+        category: '辟谣',
+        title: '❌ 辟谣：小米17 Max「史上最大8000mAh电池」——发布当日被9000mAh证伪',
+        text: '小米官方声称小米17 Max搭载「史上最大电池」（8000mAh）。但荣耀600 Pro在同日发布9000mAh电池；且vivo X300 Ultra（2025年）已有8500mAh。该声称在发布当天即被证伪，属于「绝对化最高级电池声称」新型营销话术。正确表述：「该系列历史最大容量」而非「行业史上最大」。购机时遇到此类宣传应主动比较同期竞品。',
+        tags: ['辟谣','小米','电池容量','绝对化声称','营销话术'],
+        sources: [
+          {name:'小米官方发布', url:'https://mobile.pconline.com.cn/2149/21498571.html', official:true},
+          {name:'荣耀600 Pro对比', url:'https://www.igao7.com/news/202605/buypMGoA8wbASqRP.html'}
+        ],
+        verdict: 'Refuted',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260519-017-debunk',
+        category: '辟谣',
+        title: '❌ 辟谣：AI手机「完全取代传统App」——命中AI-Replaces-Everything伪科学模式',
+        text: 'OpenAI及多家厂商宣传AI Agent将「完全取代」传统App。经核查：(1) 当前AI Agent复杂任务成功率仅30-50%；(2) App生态网络效应强劲，短期无法消失；(3) OpenAI手机本身最早2027年H1才能量产；(4) 厂商营销将「未来愿景」包装为「当下事实」。此声称命中2026-05-18新增伪科学模式「AI-Replaces-Everything」——以绝对化语言描述AI手机，将营销愿景当作当下事实。',
+        tags: ['辟谣','AI手机','AI Agent','App生态','伪科学'],
+        sources: [
+          {name:'TechCrunch原报道', url:'https://techcrunch.com/2026/04/27/openai-could-be-making-a-phone-with-ai-agents-replacing-apps/'},
+          {name:'RumorCrusher核查', url:'../2026-05-19/04-clean-report-172439.md', official:true}
+        ],
+        verdict: 'Refuted',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260519-031',
+        category: '芯片',
+        title: '⚠️ 消费者警示：天玑9600 / 骁龙8 Elite Gen6 均采用分级供货，顶配才满血',
+        text: '联发科天玑9600和高通骁龙8 Elite Gen6将同时推出Pro/标准两个版本，只有顶配SKU才是「满血」规格。消费者看到「天玑9600」或「骁龙8EG6」标签时，实际搭载版本可能远低于旗舰规格。这是高通和联发科同步采用分级策略的首次，命中「双芯片厂商同步伪科学」模式。购机前必须明确询问具体芯片版本（Pro/标准/增强版）。',
+        tags: ['芯片','天玑9600','骁龙8EG6','分级供货','消费者警示'],
+        sources: [
+          {name:'163科技（分级报道）', url:'https://www.163.com/dy/article/KQ3UNTI105503WTT.html'},
+          {name:'太平洋科技（Gen6 Pro）', url:'https://mobile.pconline.com.cn/2124/21248072.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260519-013',
+        category: '手机创新',
+        title: '华为Pura 90 Ultra 正式发布：麒麟9030 Pro + 2亿像素潜望长焦 + 1英寸可变光圈',
+        text: '华为Pura 90系列2026年4月20日正式发布，Pro/Max版搭载麒麟9030S，标准版9010S，4699元起，全系直屏设计，HarmonyOS 6.1。旗舰款Pura 90 Ultra：麒麟9030 Pro + 2亿像素潜望长焦 + 1英寸可变光圈主摄。这是华为自研麒麟芯片重回旗舰阵容后的又一代产品，麒麟9030性能相较国际旗舰仍需第三方独立测试验证。',
+        tags: ['华为','Pura 90','麒麟9030','影像','国产芯片'],
+        sources: [
+          {name:'华为官网规格页', url:'https://consumer.huawei.com/cn/phones/pura90/specs/', official:true},
+          {name:'中关村在线', url:'https://mobile.zol.com.cn/1168/11689468.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260519-001',
+        category: '手机创新',
+        title: '荣耀600 Pro 官宣：骁龙8 Elite + 200MP主摄 + 9000mAh + 100W快充，5月25日发布',
+        text: '荣耀600系列2026年5月11日官宣，5月25日发布会。荣耀600 Pro：骁龙8 Elite处理器 + 200MP主摄 + 3.5X潜望长焦 + 9000mAh大电池 + 100W快充；标准版搭载骁龙7 Gen 4。注意：「200MP主摄」需关注传感器尺寸和单像素面积，像素数≠画质；9000mAh+100W快充组合的热管理表现待实测。',
+        tags: ['荣耀','荣耀600','骁龙8Elite','大电池','200MP'],
+        sources: [
+          {name:'爱搞机', url:'https://www.igao7.com/news/202605/buypMGoA8wbASqRP.html'},
+          {name:'中关村在线', url:'https://mobile.zol.com.cn/1177/11775695.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260519-003',
+        category: 'AI创新',
+        title: '索尼Xperia 1 VIII AI相机助手样张争议：过曝属实，索尼补发新样张并澄清功能',
+        text: '索尼Xperia 1 VIII发布后，官方AI相机助手宣传样张被多位用户和媒体核查发现系统性过曝、原始色彩丢失。Nothing创始人裴宇公开质疑。索尼官方回应澄清：AI相机助手不会直接编辑照片，而是给出4种不同创作方向的设置建议供用户选择。这是2026年「AI摄影革命」宣传与实际效果差距的典型案例，提示消费者关注AI相机功能的实际边界。',
+        tags: ['索尼','Xperia 1 VIII','AI相机','影像','宣传失实'],
+        sources: [
+          {name:'新浪科技（5月15日争议报道）', url:'https://finance.sina.com.cn/tech/digi/2026-05-15/doc-inhxxwvr3413454.shtml'},
+          {name:'新浪科技（5月16日官方回应）', url:'https://finance.sina.com.cn/tech/digi/2026-05-16/doc-inhyahap2747719.shtml', official:true}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260519-019',
+        category: 'AI创新',
+        title: '⚠️ 研究警示：遵循AI健康建议者受伤害风险约为不遵循者5倍（含方法学注意）',
+        text: '2026年健康与媒体追踪调查：遵循AI给出的健康建议者受到实际伤害的风险约是不遵循者5倍。Mount Sinai医学中心同期研究发现主流LLM（含ChatGPT）在接收以医学语言包装的错误信息时会重复并放大。注意：5倍为相关性数据，遵循AI建议者与不遵循者的基线健康状况可能不同；各大模型表现存在差异；最新版本或有改善。结论：AI可辅助健康信息检索，但不应替代专业医疗建议。',
+        tags: ['AI安全','健康信息','医疗AI','LLM','公共健康'],
+        sources: [
+          {name:'Medscape（健康传媒调查）', url:'https://www.medscape.com/viewarticle/misinformation-ai-putting-patients-health-risk-2026a1000e6b', official:true},
+          {name:'Euronews Health（Mount Sinai研究）', url:'https://www.euronews.com/health/2026/02/10/chatgpt-and-other-ai-models-believe-medical-misinformation-on-social-media-study-warns'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260519-010',
+        category: '手机创新',
+        title: '电池续航首次超越价格成为全球智能手机购买第一驱动因素，AI功能垫底',
+        text: '2026年全球消费者调查（TechRadar）：电池续航首次超越价格，成为智能手机购买决策中最重要因素。AI功能（作为单独购买驱动）在核心考量中排名靠后。这与芯片厂商大力投入AI NPU宣传形成反差——消费者更关心实际使用体验而非技术规格。数据支持「硅碳大电池战略」在市场端的合理性。',
+        tags: ['市场调研','电池续航','购买驱动','AI功能','消费者行为'],
+        sources: [
+          {name:'TechRadar调查报告', url:'https://www.techradar.com/phones/battery-life-just-dethroned-price-as-the-biggest-driver-of-smartphone-purchases-and-ai-doesnt-come-close', official:true}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260519-020',
+        category: 'AI创新',
+        title: 'SEO实验证明：AI幻觉信息可轻松在谷歌搜索获得首页排名',
+        text: 'SEO研究员实验：发布一篇关于不存在的「2026年3月Google核心更新」的AI幻觉文章，该文章轻松登上谷歌搜索第一页。谷歌自身也将该错误信息页面收录为优质内容。这揭示了AI生成内容大量涌入后搜索引擎信息质量下降的系统性风险——搜索结果不再是事实的保证。建议：对搜索结果中有关「最新更新/政策/数据」的内容交叉验证官方来源。',
+        tags: ['AI安全','谷歌','SEO','错误信息','搜索引擎'],
+        sources: [
+          {name:'Search Engine Journal（实验报告）', url:'https://www.searchenginejournal.com/seo-test-shows-its-trivial-to-rank-misinformation-on-google/569980/', official:true}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      }
+    ]
+  },
+
+  // ══════════════════════════════════
   '2026-05-18': {
     title: '硅碳电池主流化 · OpenAI手机生态 · AI终端国标 · AI视频辟谣',
     sub: '68条资讯核查（晨+晚），13 Refuted · 23 Supported · 全天健康84分。',
