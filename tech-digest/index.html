@@ -133,6 +133,85 @@ var WIKI_MAP = {
 var DATA = {
 
   // ══════════════════════════════════
+  '2026-05-20': {
+    title: 'iQOO 15T今日首发 · 小米17 Max明日上场 · 8000mAh旗舰标配化',
+    sub: '10条资讯经多 Agent 核查，聚焦最近3天（05-18/19/20）动态，以下为去重后的 Supported 洞察。',
+    stats: [
+      {v:'10', l:'条采集'},
+      {v:'2',  l:'条 Refuted'},
+      {v:'5',  l:'条 Supported'},
+      {v:'4',  l:'大器件分类'}
+    ],
+    items: [
+      {
+        id: 'RC-20260520-001',
+        category: '手机厂商动态',
+        title: 'iQOO 15T 今日首发开售：天玑9500 Monster + 8000mAh + 2K 144Hz，发布即同步开售',
+        text: 'iQOO 15T于5月20日19时正式发布并同步开售。该机全球首发联发科天玑9500 Monster Edition（iQOO与联发科联合底层调校），自研电竞芯片Q3协同控帧，2K珠峰屏144Hz；8000mAh大电池；200MP+50MP双摄；6.82英寸，机身8.25mm，仅216g，提供青云/赛道/传奇三色。这是iQOO数字系列首款搭载联发科平台的旗舰产品。',
+        tags: ['iQOO','iQOO 15T','天玑9500 Monster','8000mAh','2K','游戏','联发科'],
+        sources: [
+          {name:'中关村在线（5月20日发布报道）', url:'https://mobile.zol.com.cn/1180/11807644.html'},
+          {name:'新浪科技（天玑9500 Monster官宣）', url:'https://finance.sina.com.cn/tech/roll/2026-05-13/doc-inhxtqxr4604782.shtml'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260520-002',
+        category: '手机厂商动态',
+        title: '小米17 Max 5月21日发布：骁龙8 Elite Gen5 + 8000mAh + 200MP，旗舰续航新基准',
+        text: '小米17 Max定于5月21日正式发布，搭载第五代骁龙8至尊版，8000mAh硅碳超大电池（90W有线+50W无线快充），6.8英寸旗舰OLED，200MP主摄+3倍潜望长焦。预计定价16GB+512GB 4999元 / 24GB+1TB顶配5999元。注意：「史上最大8000mAh」宣传已被核查为夸大——同期荣耀600 Pro电池为9000mAh，但小米17 Max系该系列历史最大电池。',
+        tags: ['小米','小米17 Max','骁龙8EG5','8000mAh','硅碳电池','200MP','旗舰'],
+        sources: [
+          {name:'新浪财经（5月发布预告）', url:'https://finance.sina.com.cn/stock/t/2026-05-01/doc-inhwkimm0686830.shtml'},
+          {name:'ZOL中关村在线（规格汇总）', url:'https://mobile.zol.com.cn/1176/11769422.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260520-003',
+        category: '芯片',
+        title: '天玑9500 Monster Edition：联发科首款厂商底层联调版，游戏帧率提升34%',
+        text: '联发科天玑9500 Monster Edition是全球首款由手机品牌（iQOO）与芯片厂商（联发科）在底层固件层面联合调校的定制版SoC。相较标准天玑9500，游戏帧率提升34%，功耗优化同步进行，峰值算力提升来自CPU/GPU调频曲线与散热策略的联合优化。这一模式与高通「for Galaxy」定制路线类似，预示2026年旗舰芯片定制化将成常态。',
+        tags: ['天玑9500','Monster Edition','联发科','芯片定制','iQOO','游戏性能'],
+        sources: [
+          {name:'腾讯科技（天玑9500配置确认）', url:'https://news.qq.com/rain/a/20260510A06RXE00'},
+          {name:'光通信Pro（5月20日首发报道）', url:'https://www.c114.net.cn/industry/81517.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260520-004',
+        category: '电池',
+        title: '8000mAh+硅碳已成5月旗舰入场门槛：小米、iQOO同步采用，国产旗舰续航领先苹果三代以上',
+        text: '2026年5月，小米17 Max（8000mAh）与iQOO 15T（8000mAh）同期发布，加上荣耀600 Pro（9000mAh）、vivo X300 Ultra（8000mAh+）等，8000mAh+硅碳负极已成国产旗舰标配起点。中国旗舰主流续航达2-3天，与苹果iPhone 18 Pro（5000mAh传统电池）形成可量化差距。注意：电池容量≠实际续航，系统优化和屏幕亮度对续航影响同样关键。',
+        tags: ['硅碳电池','8000mAh','小米','iQOO','续航','旗舰标配'],
+        sources: [
+          {name:"Tom's Guide 硅碳电池深度报告", url:'https://www.tomsguide.com/phones/i-interviewed-honor-and-oneplus-about-their-silicon-carbon-battery-tech-apple-and-google-are-quickly-falling-behind'},
+          {name:'Gizmodotech 2026年硅碳市场分析', url:'https://gizmodotech.com/silicon-carbon-battery-smartphones-the-real-2026-story/'}
+        ],
+        verdict: 'Supported',
+        wikiId: 'silicon-carbon-anode'
+      },
+      {
+        id: 'RC-20260520-005',
+        category: 'AI行业重磅',
+        title: '生成式AI手机Q3 2026将累计突破10亿部，中国厂商端侧AI本地化加速',
+        text: 'Counterpoint Research预测：生成式AI手机全球累计出货量有望在2026年Q3突破10亿部，端侧AI新品落地提速。中国手机厂商（小米、vivo、荣耀、OPPO）通过自研SoC+端侧大模型联合调优，在「AI功能不依赖云端」方向形成竞争优势。⚠️ 注意：「生成式AI手机」定义宽泛（厂商自报），实际端侧运行质量差异巨大，需参考第三方独立评测数据。',
+        tags: ['AI手机','Counterpoint','生成式AI','端侧模型','10亿部','市场预测'],
+        sources: [
+          {name:'华尔街见闻（2026年AI手机主线分析）', url:'https://wallstreetcn.com/articles/3762504'},
+          {name:'TechRepublic（Android AI趋势2026）', url:'https://www.techrepublic.com/article/news-android-trends-defining-smartphones-2026/'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      }
+    ]
+  },
+
+  // ══════════════════════════════════
   '2026-05-19': {
     title: '华为Pura 90 Ultra发布 · 荣耀600 Pro官宣 · 旗舰芯片分级供货警示 · AI终端国标落地',
     sub: '32条素材 · 8 Supported · 3 Refuted · 健康76分。重点：华为Pura 90 Ultra发布，麒麟9030 Pro加持；荣耀600 Pro 9000mAh打破记录；旗舰芯片分级供货消费者警示；GB/Z 177-2026 AI终端国标正式落地。',
@@ -800,10 +879,14 @@ var activeDate = DATES[0];
 var activeCat = '全部';
 
 // ── HELPERS ────────────────────────────────────────────────────
+var CAT_ORDER = ['手机厂商动态','芯片','电池','屏显','散热','存储供应','AI行业重磅'];
 function getCategories(date) {
-  var cats = [];
+  var present = {};
+  DATA[date].items.forEach(function(i) { present[i.category] = true; });
+  var cats = CAT_ORDER.filter(function(c) { return present[c]; });
+  // 兜底：有未知分类也显示
   DATA[date].items.forEach(function(i) {
-    if (cats.indexOf(i.category) === -1) cats.push(i.category);
+    if (CAT_ORDER.indexOf(i.category) === -1 && cats.indexOf(i.category) === -1) cats.push(i.category);
   });
   return ['全部'].concat(cats);
 }
