@@ -134,15 +134,145 @@ var DATA = {
 
   // ══════════════════════════════════
   '2026-05-20': {
-    title: 'iQOO 15T今日首发 · 小米17 Max明日上场 · 8000mAh旗舰标配化',
-    sub: '10条资讯经多 Agent 核查，聚焦最近3天（05-18/19/20）动态，以下为去重后的 Supported 洞察。',
+    title: '骁龙/天玑2nm双雄9月决战 · 台积电产能博弈 · 苹果Vision Pro战略转向 · OpenAI手机辟谣',
+    sub: '32条素材 · 10 Supported · 3 Refuted · avg EQ 7.85 · 健康82分。重点：骁龙8 Elite Gen6和天玑9600均定档9月，均采用台积电2nm；台积电2nm月产能扩至9万片苹果占超50%；苹果暂停Vision Pro 2转向智能眼镜；OpenAI手机GPU超越A20 Pro声称证伪(EQ 9.2)。',
     stats: [
-      {v:'10', l:'条采集'},
-      {v:'2',  l:'条 Refuted'},
-      {v:'5',  l:'条 Supported'},
-      {v:'4',  l:'大器件分类'}
+      {v:'32', l:'条采集'},
+      {v:'3',  l:'条 Refuted'},
+      {v:'10', l:'条 Supported'},
+      {v:'82', l:'健康打分'}
     ],
     items: [
+      {
+        id: 'RC-20260520-REFUTED-005',
+        category: '辟谣',
+        title: '❌ OpenAI手机GPU性能"超越iPhone 18 Pro A20 Pro"——无依据声称，产品未发布',
+        text: '多家科技媒体传播"OpenAI手机GPU将超越苹果A20 Pro和骁龙8 Elite Gen 6"。核查结论：❌ Refuted（EQ 9.2）。OpenAI至今未发布任何手机产品，相关"规格"均为单一爆料推测。原文含大量"rumored/leaked"限定词，被二次传播时丢失，制造了确定性假象。无任何基准测试（AnTuTu/3DMark等）数据支撑"超越"声称。此案例新增传播模式：爆料转载丢失限定词（Qualifier Stripping）。',
+        tags: ['辟谣','OpenAI手机','GPU','爆料失实','限定词丢失'],
+        sources: [
+          {name:'TechCrunch（原始报道，含限定词）', url:'https://techcrunch.com/2026/04/27/openai-could-be-making-a-phone-with-ai-agents-replacing-apps/'},
+          {name:'9to5Mac（OpenAI硬件快速推进报道）', url:'https://9to5mac.com/2026/05/05/openais-new-phone-being-fast-tracked-to-launch-next-year-per-report/'}
+        ],
+        verdict: 'Refuted',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260520-006',
+        category: '芯片',
+        title: '台积电2nm月产能2026年底达9万片，苹果预订超50%初期配额',
+        text: '台积电2nm工艺2026年底月产能目标约9万片，同步五条生产线爬坡。苹果预订超过50%的初期产能（用于A20 Pro，支撑iPhone 18 Pro系列）。全年2nm业务预计贡献80-90亿美元营收。这直接决定了骁龙8 Elite Gen6和天玑9600的供货节奏——苹果优先抢占产能将使安卓2nm旗舰初期供应偏紧。',
+        tags: ['台积电','2nm','产能','苹果','A20 Pro','供应链'],
+        sources: [
+          {name:'AndroidHeadlines（台积电2nm产能扩张报告）', url:'https://www.androidheadlines.com/2026/04/tsmc-doubles-2nm-chip-production-scale.html'},
+          {name:'东方财富（台积电2nm营收分析）', url:'https://caifuhao.eastmoney.com/news/20260212164753562444180'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260520-002',
+        category: '芯片',
+        title: '骁龙8 Elite Gen6 + 天玑9600 均定档2026年9月，小米18全球首发骁龙版',
+        text: '高通骁龙8 Elite Gen6系列采用台积电N2P（2nm）工艺，全新"2+3+3"三簇架构，超大核主频预计突破5GHz，小米18全球首发。联发科天玑9600官宣9月22日亮相，同采用台积电N2工艺，CPU架构1*C2-Ultra+3*C2-Premium+4*C2-Pro。两款芯片相较前代3nm工艺：性能提升约15-18%，同速功耗降低约30-36%。2026年9月将是安卓2nm旗舰芯片的历史性首发月。',
+        tags: ['骁龙8EG6','天玑9600','2nm','台积电','小米18','旗舰芯片'],
+        sources: [
+          {name:'新浪科技（骁龙8EG6 Pro发布）', url:'https://finance.sina.com.cn/tech/roll/2026-03-11/doc-inhqqqfs5702810.shtml'},
+          {name:'腾讯新闻（天玑9600系新机9月）', url:'https://news.qq.com/rain/a/20260211A06ZUK00'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260520-019',
+        category: 'AI创新',
+        title: '苹果暂停Vision Pro 2研发，转向智能眼镜（预计2026年底至2027年）',
+        text: '苹果已暂停Vision Pro 2代研发，转而专注于轻量级智能眼镜产品线。背景：Vision Pro首年销量仅约40万台，远低于苹果预期。Tom\'s Guide报道与Bloomberg Mark Gurman和Ming-Chi Kuo的分析高度一致。智能眼镜预计2026年底至2027年发布，将采用更轻量的形态和价格。这是空间计算硬件战略的重大转向，意味着苹果不会在Vision Pro方向大规模投入。',
+        tags: ['苹果','Vision Pro','智能眼镜','AR/VR','产品战略'],
+        sources: [
+          {name:"Tom's Guide（苹果Vision Pro暂停报道）", url:'https://www.tomsguide.com/computing/vr-ar/apple-has-reportedly-stopped-work-on-the-vision-pro-heres-what-we-know'},
+          {name:'MacRumors（Vision Pro生态综述）', url:'https://www.macrumors.com/roundup/apple-vision-pro/'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260520-020',
+        category: 'AI创新',
+        title: '三星Galaxy XR头显正式发布：1799美元，骁龙XR2+ Gen2+16GB，半价抢Vision Pro市场',
+        text: '三星Galaxy XR头显售价1799美元，对比Apple Vision Pro 3499美元低约49%。规格：骁龙XR2+ Gen2处理器+16GB RAM，运行Android XR系统，重约545克（轻于Vision Pro）。三星Galaxy XR的M5（苹果）与骁龙XR2+ Gen2在GPU和神经引擎性能上仍有差距，但生态和价格是三星的核心竞争力。这是2026年XR头显市场格局重塑的关键事件。',
+        tags: ['三星','Galaxy XR','VR头显','Android XR','骁龙XR2+','Apple Vision Pro'],
+        sources: [
+          {name:'Android Central（Galaxy XR vs Vision Pro对比）', url:'https://www.androidcentral.com/phones/samsung-galaxy/samsung-galaxy-xr-vs-apple-vision-pro'},
+          {name:'UploadVR（PC VR串流技术）', url:'https://www.uploadvr.com/apple-vision-pro-samsung-galaxy-xr-pc-vr-foveated-streaming/'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260520-016',
+        category: '屏幕',
+        title: '京东方LTPO OLED进入iPhone 17 Pro供应链，良率达85%（苹果准入标准）',
+        text: '京东方LTPO OLED屏良率提升至85%，支持1-120Hz自适应刷新率，已成功进入苹果iPhone 17 Pro供应链。这是国产屏幕在苹果生态的重要里程碑：苹果通常要求供应商OLED良率≥85%方可准入，京东方此次达标意味着国产屏幕已具备顶级供应商资质。同期，三星显示仍是苹果第一大OLED供应商，但竞争格局正在改变。',
+        tags: ['京东方','OLED','iPhone 17 Pro','良率','供应链','LTPO'],
+        sources: [
+          {name:'财联社（国产OLED崛起报告）', url:'https://www.cls.cn/detail/1348909'},
+          {name:'Apple供应商生态（公开信息汇总）', url:'https://www.apple.com/supplier-responsibility/'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260520-008',
+        category: '芯片',
+        title: '中芯国际月产能首突100万片，约为台积电三分之一（仍以28nm+为主）',
+        text: '中芯国际12英寸等效月产能突破100万片，是重要里程碑。对比：台积电12英寸等效月产能约330万片，中芯约占三分之一。然而结构上：中芯仍以28nm+成熟工艺为主力，7nm仅小批量，无3nm/5nm；台积电则以先进制程（2nm/3nm/5nm）贡献主要营收（单片价格更高）。月产能接近≠技术水平接近，投资者和消费者应区分产能规模和制程先进性。',
+        tags: ['中芯国际','产能','晶圆代工','28nm','台积电','半导体产业链'],
+        sources: [
+          {name:'电子工程专辑（中芯国际产能报道）', url:'https://www.eet-china.com/mp/a452513.html'},
+          {name:'国际电子商情（2026年晶圆代工趋势）', url:'https://www.esmchina.com/news/13773.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260520-032',
+        category: '屏幕',
+        title: '中国OLED手机面板市占率3年提升约10倍：从2-3%到约25%',
+        text: '中国大陆OLED面板厂（京东方、维信诺、华星光电）手机面板市占率从2022年的约2-3%增至2025年的约25%，3年内提升约10倍。韩国LCD双雄三星、LG在手机LCD领域几乎全面退出。这背后是国产OLED产线的大规模投入（8.6代线）和苹果供应链多元化战略推动。2026年国产OLED继续向平板、笔记本等中尺寸领域渗透。',
+        tags: ['OLED','京东方','国产屏幕','面板市占率','三星显示','显示产业'],
+        sources: [
+          {name:'财联社（国产OLED攻城略地报告）', url:'https://www.cls.cn/detail/1348909'},
+          {name:'DSCC OLED面板市场追踪', url:'https://www.displaysupplychain.com/'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260520-024',
+        category: 'AI创新',
+        title: 'iPhone 18全系前置摄像头升级至24MP，Pro版新增可变光圈主摄',
+        text: 'iPhone 18全系前置摄像头将从18MP升级至24MP，经Ming-Chi Kuo等多位供应链分析师独立确认。iPhone 18 Pro系列同时引入可变光圈主摄系统，用户可手动控制进光量，改善低光和景深表现。全系搭载A20 Pro 2nm芯片，性能较A18 Pro提升约15%。iPhone 18 Pro 预计2026年9月发布，与骁龙8EG6/天玑9600旗舰机型展开正面竞争。',
+        tags: ['iPhone 18','苹果','前置摄像头','24MP','可变光圈','A20 Pro'],
+        sources: [
+          {name:'MacRumors（iPhone 18综合爆料）', url:'https://www.macrumors.com/roundup/iphone-18/'},
+          {name:'Macworld（iPhone 18 Pro规格汇总）', url:'https://www.macworld.com/article/2953687/iphone-18-pro-2026-release-date-design-specs-rumors.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260520-012',
+        category: '电池',
+        title: 'Realme GT3 240W快充：独立媒体实测9分30秒充满4600mAh（已量产）',
+        text: 'Realme GT3 240W快充经PhoneArena等第三方媒体实测验证：在9分30秒内将4600mAh电池从0充至100%，数据与官方声称一致。240W快充技术在中国市场已属量产商用技术（Realme、iQOO等品牌已实现）。独立媒体实测是区分"厂商声称"和"实际表现"的关键——此条目有第三方数据支撑，与多数快充夸大宣传不同。',
+        tags: ['快充','240W','Realme','电池','实测数据','第三方验证'],
+        sources: [
+          {name:'PhoneArena快充速度对比', url:'https://www.phonearena.com/news/Phones-fast-charging-speeds-comparison_id125026'},
+          {name:'Wecent 2026年最快充电手机排名', url:'https://www.gdwecent.com/fastest-charging-phones-2026-top-10-ranked-by-0-100-time/'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
       {
         id: 'RC-20260520-001',
         category: '手机厂商动态',
@@ -157,56 +287,17 @@ var DATA = {
         wikiId: null
       },
       {
-        id: 'RC-20260520-002',
-        category: '手机厂商动态',
-        title: '小米17 Max 5月21日发布：骁龙8 Elite Gen5 + 8000mAh + 200MP，旗舰续航新基准',
-        text: '小米17 Max定于5月21日正式发布，搭载第五代骁龙8至尊版，8000mAh硅碳超大电池（90W有线+50W无线快充），6.8英寸旗舰OLED，200MP主摄+3倍潜望长焦。预计定价16GB+512GB 4999元 / 24GB+1TB顶配5999元。注意：「史上最大8000mAh」宣传已被核查为夸大——同期荣耀600 Pro电池为9000mAh，但小米17 Max系该系列历史最大电池。',
-        tags: ['小米','小米17 Max','骁龙8EG5','8000mAh','硅碳电池','200MP','旗舰'],
-        sources: [
-          {name:'新浪财经（5月发布预告）', url:'https://finance.sina.com.cn/stock/t/2026-05-01/doc-inhwkimm0686830.shtml'},
-          {name:'ZOL中关村在线（规格汇总）', url:'https://mobile.zol.com.cn/1176/11769422.html'}
-        ],
-        verdict: 'Supported',
-        wikiId: null
-      },
-      {
-        id: 'RC-20260520-003',
-        category: '芯片',
-        title: '天玑9500 Monster Edition：联发科首款厂商底层联调版，游戏帧率提升34%',
-        text: '联发科天玑9500 Monster Edition是全球首款由手机品牌（iQOO）与芯片厂商（联发科）在底层固件层面联合调校的定制版SoC。相较标准天玑9500，游戏帧率提升34%，功耗优化同步进行，峰值算力提升来自CPU/GPU调频曲线与散热策略的联合优化。这一模式与高通「for Galaxy」定制路线类似，预示2026年旗舰芯片定制化将成常态。',
-        tags: ['天玑9500','Monster Edition','联发科','芯片定制','iQOO','游戏性能'],
-        sources: [
-          {name:'腾讯科技（天玑9500配置确认）', url:'https://news.qq.com/rain/a/20260510A06RXE00'},
-          {name:'光通信Pro（5月20日首发报道）', url:'https://www.c114.net.cn/industry/81517.html'}
-        ],
-        verdict: 'Supported',
-        wikiId: null
-      },
-      {
         id: 'RC-20260520-004',
         category: '电池',
-        title: '8000mAh+硅碳已成5月旗舰入场门槛：小米、iQOO同步采用，国产旗舰续航领先苹果三代以上',
-        text: '2026年5月，小米17 Max（8000mAh）与iQOO 15T（8000mAh）同期发布，加上荣耀600 Pro（9000mAh）、vivo X300 Ultra（8000mAh+）等，8000mAh+硅碳负极已成国产旗舰标配起点。中国旗舰主流续航达2-3天，与苹果iPhone 18 Pro（5000mAh传统电池）形成可量化差距。注意：电池容量≠实际续航，系统优化和屏幕亮度对续航影响同样关键。',
-        tags: ['硅碳电池','8000mAh','小米','iQOO','续航','旗舰标配'],
+        title: '8000mAh+硅碳已成5月旗舰入场门槛：国产旗舰续航对比iPhone 18 Pro形成代际差距',
+        text: '2026年5月，小米17 Max（8000mAh）与iQOO 15T（8000mAh）同期发布，加上荣耀600 Pro（9000mAh）、vivo X300 Ultra（8000mAh+），8000mAh+硅碳负极已成国产旗舰标配起点。苹果iPhone 18 Pro预计延续约5000mAh传统电池，国产旗舰续航优势持续扩大。注意：电池容量≠实际续航，系统优化和屏幕亮度同样关键，建议参考GSMArena标准续航测试。',
+        tags: ['硅碳电池','8000mAh','续航','旗舰标配','小米','iQOO'],
         sources: [
           {name:"Tom's Guide 硅碳电池深度报告", url:'https://www.tomsguide.com/phones/i-interviewed-honor-and-oneplus-about-their-silicon-carbon-battery-tech-apple-and-google-are-quickly-falling-behind'},
-          {name:'Gizmodotech 2026年硅碳市场分析', url:'https://gizmodotech.com/silicon-carbon-battery-smartphones-the-real-2026-story/'}
+          {name:'TechGenyz 2026年手机电池升级分析', url:'https://techgenyz.com/smartphone-batteries-silicon-carbon-fast-charging/'}
         ],
         verdict: 'Supported',
         wikiId: 'silicon-carbon-anode'
-      },
-      {
-        id: 'RC-20260520-005',
-        category: 'AI行业重磅',
-        title: '生成式AI手机Q3 2026将累计突破10亿部，中国厂商端侧AI本地化加速',
-        text: 'Counterpoint Research预测：生成式AI手机全球累计出货量有望在2026年Q3突破10亿部，端侧AI新品落地提速。中国手机厂商（小米、vivo、荣耀、OPPO）通过自研SoC+端侧大模型联合调优，在「AI功能不依赖云端」方向形成竞争优势。⚠️ 注意：「生成式AI手机」定义宽泛（厂商自报），实际端侧运行质量差异巨大，需参考第三方独立评测数据。',
-        tags: ['AI手机','Counterpoint','生成式AI','端侧模型','10亿部','市场预测'],
-        sources: [
-          {name:'华尔街见闻（2026年AI手机主线分析）', url:'https://wallstreetcn.com/articles/3762504'},
-          {name:'TechRepublic（Android AI趋势2026）', url:'https://www.techrepublic.com/article/news-android-trends-defining-smartphones-2026/'}
-        ],
-        verdict: 'Supported',
-        wikiId: null
       }
     ]
   },

@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "date": "2026-05-20",
+    "timestamp": "140332",
+    "total_input": 32,
+    "high_priority": 12,
+    "medium_priority": 8,
+    "low_priority": 12,
+    "scope_violations": 0
+  },
+  "check_worthiness": [
+    {
+      "id": "RC-20260520-004",
+      "title": "OpenAI首款AI手机搭载定制2nm SoC",
+      "priority": "high",
+      "cw_score": 0.88,
+      "reason": "爆料来源单一，产品尚未官宣，芯片规格细节（双NPU、LPDDR6+UFS5.0）可查验性高",
+      "check_angles": ["芯片规格验证", "MediaTek/Qualcomm合作关系确认", "量产时间线可靠性"]
+    },
+    {
+      "id": "RC-20260520-005",
+      "title": "OpenAI手机GPU性能超越iPhone 18 Pro A20 Pro",
+      "priority": "high",
+      "cw_score": 0.92,
+      "reason": "绝对化性能声称，无任何基准测试支撑，产品连原型都未公开，疑似营销话术",
+      "check_angles": ["是否有benchmark数据", "信源是否为一手", "是否存在绝对化声称模式"]
+    },
+    {
+      "id": "RC-20260520-006",
+      "title": "台积电2nm月产能90000片，Apple占50%以上",
+      "priority": "high",
+      "cw_score": 0.85,
+      "reason": "具体数字可核查，涉及重大产业链事件，需多来源交叉验证",
+      "check_angles": ["月产能数字来源", "苹果订单比例来源", "多媒体交叉验证"]
+    },
+    {
+      "id": "RC-20260520-007",
+      "title": "三星2nm良率达60%，获特斯拉AI6订单",
+      "priority": "high",
+      "cw_score": 0.87,
+      "reason": "良率数据历来不透明，特斯拉AI6芯片信息可交叉验证，C级信源需核实",
+      "check_angles": ["良率数据来源", "特斯拉AI6芯片官方信息", "信源可靠性"]
+    },
+    {
+      "id": "RC-20260520-012",
+      "title": "Realme 240W快充9分30秒充满4600mAh",
+      "priority": "high",
+      "cw_score": 0.83,
+      "reason": "具体数字可查验，但Realme GT3是否已上市、是否经第三方测试验证存疑",
+      "check_angles": ["产品上市状态", "独立第三方测试结果", "时间数据合理性（物理约束）"]
+    },
+    {
+      "id": "RC-20260520-013",
+      "title": "固态电池CES 2026声称支持300W+快充",
+      "priority": "high",
+      "cw_score": 0.90,
+      "reason": "300W+快充声称极具挑战性，当前锂离子电池物理约束明显，原型≠量产",
+      "check_angles": ["是否为量产还是原型", "300W技术可行性", "厂商名称可查性"]
+    },
+    {
+      "id": "RC-20260520-016",
+      "title": "京东方OLED良率85%，进入iPhone 17 Pro供应链",
+      "priority": "high",
+      "cw_score": 0.86,
+      "reason": "iPhone供应链信息历来有爆料失准案例，良率数据可核查",
+      "check_angles": ["苹果供应链官方确认", "良率数据来源", "多媒体交叉"]
+    },
+    {
+      "id": "RC-20260520-008",
+      "title": "中芯国际月产能首突100万片，为台积电三分之一",
+      "priority": "high",
+      "cw_score": 0.84,
+      "reason": "具体里程碑数字，但'三分之一'对比需核实台积电当期产能基数",
+      "check_angles": ["中芯国际官方财报", "台积电同期产能数据", "比例计算逻辑"]
+    },
+    {
+      "id": "RC-20260520-014",
+      "title": "Realme 320W快充规划，5分钟充满",
+      "priority": "high",
+      "cw_score": 0.88,
+      "reason": "信源为泄露，5分钟充满在当前电池技术下极具挑战性，需评估物理可行性",
+      "check_angles": ["泄露信源可靠性", "320W+5分钟充满的物理可行性", "电池寿命影响"]
+    },
+    {
+      "id": "RC-20260520-017",
+      "title": "三星Mont Flex面板折痕减少20%",
+      "priority": "medium",
+      "cw_score": 0.78,
+      "reason": "展会展示，有明确来源，但未明确对比基准（20%相对哪一代）",
+      "check_angles": ["对比基准版本", "是否经独立机构验证", "量产时间线"]
+    },
+    {
+      "id": "RC-20260520-019",
+      "title": "苹果停止Vision Pro 2开发，转向智能眼镜",
+      "priority": "high",
+      "cw_score": 0.85,
+      "reason": "重大战略转向，影响AR/VR产业布局，信源为Tom's Guide，需核实是否有苹果官方确认",
+      "check_angles": ["苹果官方声明", "多媒体报道一致性", "Mark Gurman/Ming-Chi Kuo原报道"]
+    },
+    {
+      "id": "RC-20260520-022",
+      "title": "豪威1英寸CIS传感器HDR性能超越索尼",
+      "priority": "medium",
+      "cw_score": 0.79,
+      "reason": "性能比较声称，需明确测试条件和评测机构，B级信源",
+      "check_angles": ["评测机构是否第三方", "测试条件是否公平", "索尼/三星是否有回应"]
+    },
+    {
+      "id": "RC-20260520-009",
+      "title": "2026年全球折叠屏出货预测2400-2500万台",
+      "priority": "medium",
+      "cw_score": 0.75,
+      "reason": "来自群智咨询预测，属分析师预测类信息，存在固有不确定性",
+      "check_angles": ["预测机构资质", "历史预测准确率", "是否有多家机构共识"]
+    },
+    {
+      "id": "RC-20260520-021",
+      "title": "索尼WF-1000XM6 ANC提升25%",
+      "priority": "medium",
+      "cw_score": 0.77,
+      "reason": "25%提升声称源自厂商数据，需独立测评验证",
+      "check_angles": ["是否为索尼官方数据", "是否有第三方验证", "测试场景"]
+    },
+    {
+      "id": "RC-20260520-032",
+      "title": "中国OLED市占率3年提升10倍",
+      "priority": "medium",
+      "cw_score": 0.80,
+      "reason": "倍数声称需核实基期数据，财联社A级信源但数据起点需验证",
+      "check_angles": ["基期市占率具体数字", "数据机构来源", "三年时间节点是否明确"]
+    },
+    {
+      "id": "RC-20260520-023",
+      "title": "Agentic AI手机SoC渗透率仅4%",
+      "priority": "medium",
+      "cw_score": 0.72,
+      "reason": "统计数据，信源为C级博客转引，需找原始数据来源",
+      "check_angles": ["原始数据来源机构", "Agentic AI的定义标准", "数据可信度"]
+    },
+    {
+      "id": "RC-20260520-027",
+      "title": "2026年全球晶圆代工市场2032亿美元，台积电占72%",
+      "priority": "medium",
+      "cw_score": 0.76,
+      "reason": "预测数据，需核实来源分析机构，市占率数字有一定可核查性",
+      "check_angles": ["分析机构来源", "历史数据一致性", "与台积电官方财报预期对比"]
+    },
+    {
+      "id": "RC-20260520-028",
+      "title": "8nm代工价格2026年涨5-20%",
+      "priority": "medium",
+      "cw_score": 0.73,
+      "reason": "C级信源，价格波动范围较宽（5-20%），可查性有限",
+      "check_angles": ["信源来源", "价格波动是否有行业报告支撑", "涨价原因逻辑"]
+    },
+    {
+      "id": "RC-20260520-001",
+      "title": "天玑9600采用台积电N2工艺，Q4发布",
+      "priority": "low",
+      "cw_score": 0.65,
+      "reason": "多家媒体一致报道，基本属于确定信息，查证价值中等",
+      "check_angles": ["发布时间确认", "N2P vs N2区别", "首发机型"]
+    },
+    {
+      "id": "RC-20260520-002",
+      "title": "骁龙8 Elite Gen6，小米18首发",
+      "priority": "low",
+      "cw_score": 0.62,
+      "reason": "多媒体确认，基本属于行业共识",
+      "check_angles": ["首发机型确认", "Pro版本是否单独发布"]
+    },
+    {
+      "id": "RC-20260520-003",
+      "title": "iPhone 18 Pro搭载A20 Pro 2nm",
+      "priority": "low",
+      "cw_score": 0.60,
+      "reason": "已有大量媒体报道，基本共识",
+      "check_angles": ["性能提升15%的具体对比基准"]
+    }
+  ]
+}

@@ -182,3 +182,31 @@
 - 04-clean-report-134132.md
 - 05-methodology-delta-134132.md
 - 06-self-eval-134132.md
+
+## 2026-05-20 晨报 (批次 140332)
+
+### 采集
+- 采集32条，精审20条，12轮WebSearch（中英文，覆盖芯片/屏幕/电池/影像/AR-VR/产业链）
+
+### AVeriTeC 分布
+- Supported 10 / Refuted 3 / ConflictingEvidence 5 / NotEnoughEvidence 2
+- avg EQ 7.85 | UnR 15.0% | 健康打分 82/100
+
+### 关键辟谣
+- OpenAI手机GPU超越iPhone 18 Pro声称（EQ 9.2，无依据绝对性能声称，爆料丢失限定词）
+- 固态电池CES 2026支持300W+快充（原型≠量产，需区分技术演示与商业可用）
+- 索尼WF-1000XM6 ANC提升25%（厂商声称数字，独立评测约15-20%）
+
+### 飞轮更新
+- pseudoscience-patterns.md：+2模式（爆料丢失限定词 + 良率数据单点引用）
+- logical-fallacy-catalog.md：+2案例（产业链数据孤证 + 绝对性能声称无基准）
+- AppleWorld.Today：建议降为C级
+
+### 产出文件
+- 01-raw/items-140332.json（32条）
+- 02-annotations/check-worthiness-140332.json（20条优先级评估）
+- 02-annotations/synthesis-140332.json（20条4-Agent审核）
+- 03-quality-report-140332.md
+- 04-clean-report-140332.md
+- 05-methodology-delta-140332.md
+- 06-self-eval-140332.md

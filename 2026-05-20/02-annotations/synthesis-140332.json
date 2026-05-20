@@ -1,0 +1,516 @@
+{
+  "meta": {
+    "date": "2026-05-20",
+    "timestamp": "140332",
+    "agents": ["fact-check", "pseudo-science", "logic", "sentiment"],
+    "total_reviewed": 20,
+    "avritec_distribution": {
+      "Supported": 10,
+      "Refuted": 3,
+      "ConflictingEvidence": 5,
+      "NotEnoughEvidence": 2
+    },
+    "avg_eq": 7.85,
+    "unr_rate": 0.15
+  },
+  "items": [
+    {
+      "id": "RC-20260520-005",
+      "title": "OpenAI手机GPU性能超越iPhone 18 Pro A20 Pro",
+      "verdict": "Refuted",
+      "eq": 9.2,
+      "fact_check": {
+        "label": "Refuted",
+        "tsvr": "该声称来自一篇基于爆料的文章，无任何官方发布数据。OpenAI至今（2026-05-20）未发布任何手机产品，更没有公布芯片规格。在产品未出之前声称GPU超越竞争对手属于无依据断言。NotebookCheck原文标注了大量'rumored'和'leaked'限定词，被二次传播时被删除，制造了确定性假象。",
+        "sources_checked": ["NotebookCheck原文", "OpenAI官方公告列表", "9to5Mac", "MacRumors"],
+        "confidence": 0.92
+      },
+      "pseudo_science": {
+        "patterns": ["绝对化性能声称（超越所有竞争对手）", "无基准数据的性能排序"],
+        "severity": "high",
+        "notes": "典型的'最高级声称模式'——在无benchmark数据的情况下声称性能第一。与pseudoscience-patterns.md中'AI算力X TOPS碾压同行'模式高度吻合。"
+      },
+      "logic": {
+        "fallacies": ["诉诸权威（引用爆料者而非实测数据）", "既定前提（默认OpenAI手机已存在且规格确定）"],
+        "severity": "high"
+      },
+      "sentiment": {
+        "clickbait_score": 0.88,
+        "value_concerns": ["误导消费者预期", "贬低竞争对手产品"],
+        "spread_risk": "high"
+      },
+      "summary": "❌ 辟谣：OpenAI手机GPU性能超越iPhone 18 Pro A20 Pro的声称完全无依据。OpenAI尚未发布任何手机产品，相关芯片规格均为爆料推测，被媒体二次传播时丢失了限定词，形成误导性确定性声称。"
+    },
+    {
+      "id": "RC-20260520-013",
+      "title": "固态电池CES 2026声称支持300W+快充",
+      "verdict": "ConflictingEvidence",
+      "eq": 8.5,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "tsvr": "CES 2026确实展示了多款固态电池原型，展示方宣称可支持300W+充电。但这是原型而非量产产品。锂离子物理约束下，真正量产固态电池的300W快充至今仍无商用案例。'能够支持'（can enable）与'已实现'（has achieved）存在本质区别。",
+        "sources_checked": ["CES 2026展会报告", "PhoneArena电池报道", "学术文献固态电池综述"],
+        "confidence": 0.78
+      },
+      "pseudo_science": {
+        "patterns": ["原型≠量产混淆", "能量密度提升声称缺乏具体数值"],
+        "severity": "medium",
+        "notes": "与pseudoscience-patterns.md'石墨烯电池'模式相似：展会原型被当作量产技术传播"
+      },
+      "logic": {
+        "fallacies": ["滑坡谬误（展示→量产→改变行业）", "时间错配（原型发布时间线不清晰）"],
+        "severity": "medium"
+      },
+      "sentiment": {
+        "clickbait_score": 0.72,
+        "value_concerns": ["夸大技术成熟度"],
+        "spread_risk": "medium"
+      },
+      "summary": "⚠️ 存疑：固态电池300W+快充声称来自CES 2026原型展示，属研发阶段非商用量产技术。消费者应区分'展会原型'与'量产产品'，当前固态电池大规模商用仍面临成本和良率挑战。"
+    },
+    {
+      "id": "RC-20260520-014",
+      "title": "Realme 320W快充5分钟充满",
+      "verdict": "ConflictingEvidence",
+      "eq": 8.1,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "tsvr": "Realme 320W快充为泄露消息，非官方确认。5分钟充满4600mAh电池在物理上需要约400W+(考虑充电效率损耗)，与320W标称矛盾。更关键的是，当前锂离子电池化学在极速充电下的循环寿命问题尚无公开解决方案。泄露者@Digital Chat Station历史准确率约70-75%。",
+        "sources_checked": ["TechGenyz原文", "Realme官方", "GSMArena电池测试"],
+        "confidence": 0.68
+      },
+      "pseudo_science": {
+        "patterns": ["极限快充声称缺乏电池寿命说明", "充电速率计算暗含误导（效率未计算）"],
+        "severity": "medium",
+        "notes": "续航测试必须给出标准场景，极速快充声称必须说明电池寿命影响（pseudoscience-patterns.md电池章节）"
+      },
+      "logic": {
+        "fallacies": ["偷换概念（标称功率vs实际进电功率）", "诉诸权威（引用特定爆料者）"],
+        "severity": "medium"
+      },
+      "sentiment": {
+        "clickbait_score": 0.78,
+        "value_concerns": ["夸大充电能力", "隐藏电池寿命代价"],
+        "spread_risk": "medium-high"
+      },
+      "summary": "⚠️ 存疑：Realme 320W/5分钟充满为未经官方确认的泄露信息。物理上需要更高实际功率输入，且极速充电对电池寿命的影响是重要但未披露的变量。建议等待官方发布和独立评测后再作判断。"
+    },
+    {
+      "id": "RC-20260520-007",
+      "title": "三星2nm良率达60%，获特斯拉AI6订单",
+      "verdict": "ConflictingEvidence",
+      "eq": 7.8,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "tsvr": "三星Exynos 2600量产2nm是经多家媒体报道的既成事实，但60%良率数字来自单一C级信源（TechNetBooks），无法从三星官方或权威产业链报告独立核实。特斯拉AI6芯片合同部分由路透社等有报道，但细节有出入。",
+        "sources_checked": ["TechNetBooks", "Korea Herald", "Reuters三星特斯拉报道"],
+        "confidence": 0.65
+      },
+      "pseudo_science": {
+        "patterns": ["良率数字来源不透明（典型产业链信息不可独立核实）"],
+        "severity": "low"
+      },
+      "logic": {
+        "fallacies": ["诉诸权威（单一来源数字当作既定事实）"],
+        "severity": "low"
+      },
+      "sentiment": {
+        "clickbait_score": 0.55,
+        "value_concerns": ["良率数据误导投资判断风险"],
+        "spread_risk": "medium"
+      },
+      "summary": "⚠️ 存疑：三星2nm Exynos 2600量产属实，但60%良率和特斯拉AI6合同细节来自单一非权威信源，需更多交叉验证。投资相关决策勿依赖此单一数据点。"
+    },
+    {
+      "id": "RC-20260520-012",
+      "title": "Realme 240W快充9分30秒充满4600mAh",
+      "verdict": "Supported",
+      "eq": 7.5,
+      "fact_check": {
+        "label": "Supported",
+        "tsvr": "Realme GT3 240W快充已有多家媒体实测报告，9分30秒的数据与PhoneArena等第三方评测数据基本吻合。240W充电技术在中国市场已有量产产品（realme、iQOO等品牌）。",
+        "sources_checked": ["PhoneArena实测", "GSMArena充电测试", "Wecent", "Notebookcheck"],
+        "confidence": 0.88
+      },
+      "pseudo_science": {
+        "patterns": [],
+        "severity": "none",
+        "notes": "数据与独立评测吻合，无伪科学问题"
+      },
+      "logic": {
+        "fallacies": [],
+        "severity": "none"
+      },
+      "sentiment": {
+        "clickbait_score": 0.35,
+        "value_concerns": [],
+        "spread_risk": "low"
+      },
+      "summary": "✅ 支持：Realme GT3 240W快充在9分30秒内充满4600mAh的数据经多家独立媒体实测验证，属可靠事实。"
+    },
+    {
+      "id": "RC-20260520-006",
+      "title": "台积电2nm月产能90000片，Apple占50%+",
+      "verdict": "Supported",
+      "eq": 8.2,
+      "fact_check": {
+        "label": "Supported",
+        "tsvr": "台积电2nm产能扩张由AndroidHeadlines（A级信源）报道，90000片/月目标与台积电法说会披露的产能规划一致。苹果占大比例初期产能的信息获多家分析师确认（包括Ming-Chi Kuo）。",
+        "sources_checked": ["AndroidHeadlines", "台积电法说会报告", "Ming-Chi Kuo分析", "SemiWiki"],
+        "confidence": 0.85
+      },
+      "pseudo_science": {
+        "patterns": [],
+        "severity": "none"
+      },
+      "logic": {
+        "fallacies": [],
+        "severity": "none"
+      },
+      "sentiment": {
+        "clickbait_score": 0.28,
+        "value_concerns": [],
+        "spread_risk": "low"
+      },
+      "summary": "✅ 支持：台积电2nm月产能扩张至9万片（2026年底）、苹果预订超50%初期产能，属多来源确认的可靠信息。"
+    },
+    {
+      "id": "RC-20260520-016",
+      "title": "京东方OLED良率85%，进入iPhone 17 Pro供应链",
+      "verdict": "Supported",
+      "eq": 8.0,
+      "fact_check": {
+        "label": "Supported",
+        "tsvr": "苹果供应商多元化战略已持续多年，京东方进入iPhone OLED供应链由Bloomberg和财联社多次报道。良率85%的数据与行业基准一致（苹果通常要求≥85%）。",
+        "sources_checked": ["财联社", "Bloomberg供应链报道", "Apple供应商名单"],
+        "confidence": 0.83
+      },
+      "pseudo_science": {
+        "patterns": [],
+        "severity": "none"
+      },
+      "logic": {
+        "fallacies": [],
+        "severity": "none"
+      },
+      "sentiment": {
+        "clickbait_score": 0.32,
+        "value_concerns": [],
+        "spread_risk": "low"
+      },
+      "summary": "✅ 支持：京东方LTPO OLED进入iPhone 17 Pro供应链，良率达85%，经多家供应链媒体确认。标志着国产屏幕在苹果生态的重要突破。"
+    },
+    {
+      "id": "RC-20260520-008",
+      "title": "中芯国际月产能首突100万片",
+      "verdict": "Supported",
+      "eq": 7.6,
+      "fact_check": {
+        "label": "Supported",
+        "tsvr": "中芯国际月产能突破100万片由电子工程专辑（行业B级权威媒体）报道，与中芯国际公开财报中的产能扩张路径一致。'达台积电三分之一'的说法：台积电12英寸等效月产能约330万片，中芯100万片约为三分之一，比例基本正确。",
+        "sources_checked": ["电子工程专辑", "中芯国际财报", "台积电年报"],
+        "confidence": 0.82
+      },
+      "pseudo_science": {
+        "patterns": [],
+        "severity": "none"
+      },
+      "logic": {
+        "fallacies": [],
+        "severity": "none"
+      },
+      "sentiment": {
+        "clickbait_score": 0.30,
+        "value_concerns": [],
+        "spread_risk": "low"
+      },
+      "summary": "✅ 支持：中芯国际12英寸月产能突破100万片属实，占台积电约三分之一比例计算基本正确。中芯仍以28nm+成熟工艺为主力。"
+    },
+    {
+      "id": "RC-20260520-019",
+      "title": "苹果停止Vision Pro 2开发，转向智能眼镜",
+      "verdict": "Supported",
+      "eq": 8.3,
+      "fact_check": {
+        "label": "Supported",
+        "tsvr": "Tom's Guide报道的信息与Mark Gurman（Bloomberg）和Ming-Chi Kuo的分析高度一致。苹果Vision Pro销量远低于预期（首年约40万台）是公开信息，暂停下一代研发具有充分商业逻辑。苹果智能眼镜产品线正在推进也获Bloomberg多次报道。",
+        "sources_checked": ["Tom's Guide", "Bloomberg Mark Gurman", "Ming-Chi Kuo子栈", "IDC Vision Pro销量数据"],
+        "confidence": 0.87
+      },
+      "pseudo_science": {
+        "patterns": [],
+        "severity": "none"
+      },
+      "logic": {
+        "fallacies": [],
+        "severity": "none"
+      },
+      "sentiment": {
+        "clickbait_score": 0.40,
+        "value_concerns": [],
+        "spread_risk": "low"
+      },
+      "summary": "✅ 支持：苹果暂停Vision Pro 2研发、转向智能眼镜的报道由多位权威记者独立确认，与产品销量低迷的商业现实一致。智能眼镜预计2026年底至2027年发布。"
+    },
+    {
+      "id": "RC-20260520-020",
+      "title": "三星Galaxy XR售价1799美元，搭载骁龙XR2+ Gen2",
+      "verdict": "Supported",
+      "eq": 8.5,
+      "fact_check": {
+        "label": "Supported",
+        "tsvr": "三星Galaxy XR发布信息由Android Central、The Verge等A级媒体报道，价格和规格（骁龙XR2+ Gen2、16GB RAM、Android XR）均有多方确认。",
+        "sources_checked": ["Android Central", "The Verge", "Samsung官方新闻稿"],
+        "confidence": 0.92
+      },
+      "pseudo_science": {
+        "patterns": [],
+        "severity": "none"
+      },
+      "logic": {
+        "fallacies": [],
+        "severity": "none"
+      },
+      "sentiment": {
+        "clickbait_score": 0.25,
+        "value_concerns": [],
+        "spread_risk": "low"
+      },
+      "summary": "✅ 支持：三星Galaxy XR头显规格和售价（1799美元）经官方和权威媒体多方确认。"
+    },
+    {
+      "id": "RC-20260520-009",
+      "title": "2026年全球折叠屏出货预测2400-2500万台",
+      "verdict": "Supported",
+      "eq": 7.2,
+      "fact_check": {
+        "label": "Supported",
+        "tsvr": "群智咨询是业内认可的屏幕产业链咨询机构，2400-2500万台的预测与DSCC、TrendForce等其他机构的折叠屏增长预测方向一致（均看涨2026年出货量）。",
+        "sources_checked": ["钛媒体", "群智咨询官方", "DSCC折叠屏预测"],
+        "confidence": 0.78
+      },
+      "pseudo_science": {
+        "patterns": [],
+        "severity": "none"
+      },
+      "logic": {
+        "fallacies": ["预测本质是不确定性声称，需标注置信区间"],
+        "severity": "low"
+      },
+      "sentiment": {
+        "clickbait_score": 0.28,
+        "value_concerns": [],
+        "spread_risk": "low"
+      },
+      "summary": "✅ 支持（预测）：群智咨询2400-2500万台折叠屏出货预测与多家机构方向一致，但预测本身存在不确定性，实际出货取决于新品发布节奏和定价。"
+    },
+    {
+      "id": "RC-20260520-017",
+      "title": "三星Mont Flex面板折痕减少20%",
+      "verdict": "ConflictingEvidence",
+      "eq": 7.4,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "tsvr": "CES 2026三星显示确有展示折痕改善的新技术，但20%的数字仅见于部分中文科技媒体，三星官方新闻稿中未使用此具体数字。且对比基准（相较于哪一代产品）未明确说明。",
+        "sources_checked": ["LEDinside", "三星显示CES新闻稿", "DisplayMate"],
+        "confidence": 0.65
+      },
+      "pseudo_science": {
+        "patterns": ["比例提升声称无基准对比"],
+        "severity": "low"
+      },
+      "logic": {
+        "fallacies": ["偷换概念（展示样品改善 vs 量产产品改善）"],
+        "severity": "low"
+      },
+      "sentiment": {
+        "clickbait_score": 0.42,
+        "value_concerns": ["夸大展会原型效果"],
+        "spread_risk": "low"
+      },
+      "summary": "⚠️ 存疑：三星Mont Flex折叠屏折痕改善属实，但20%改善数字缺乏官方确认和明确对比基准。量产时间和实际效果需等待DisplayMate等第三方机构评测。"
+    },
+    {
+      "id": "RC-20260520-027",
+      "title": "2026年全球晶圆代工市场2032亿美元",
+      "verdict": "Supported",
+      "eq": 7.8,
+      "fact_check": {
+        "label": "Supported",
+        "tsvr": "2032亿美元和19%增长率来自国际电子商情引用的市场研究数据，与Gartner、IDC等机构的晶圆代工市场预测趋势一致（均预测2026年显著增长，主要受AI芯片和先进制程推动）。台积电72%市占率与历史数据相符。",
+        "sources_checked": ["国际电子商情", "Gartner半导体预测", "台积电官方财报"],
+        "confidence": 0.80
+      },
+      "pseudo_science": {
+        "patterns": [],
+        "severity": "none"
+      },
+      "logic": {
+        "fallacies": [],
+        "severity": "none"
+      },
+      "sentiment": {
+        "clickbait_score": 0.20,
+        "value_concerns": [],
+        "spread_risk": "low"
+      },
+      "summary": "✅ 支持：2026年全球晶圆代工市场规模约2032亿美元、同比增长19%的预测与多家机构一致，台积电约72%市占率与历史趋势相符。"
+    },
+    {
+      "id": "RC-20260520-023",
+      "title": "Agentic AI手机SoC渗透率仅4%",
+      "verdict": "NotEnoughEvidence",
+      "eq": 6.8,
+      "fact_check": {
+        "label": "NotEnoughEvidence",
+        "tsvr": "4%的渗透率数字来自C级信源（AppleWorld.Today转引），无法找到原始数据发布机构（Counterpoint Research? IDC?）。'Agentic AI SoC'的定义标准各家不同，统计口径影响结论显著。",
+        "sources_checked": ["AppleWorld.Today", "Counterpoint Research报告", "IDC移动AI报告"],
+        "confidence": 0.55
+      },
+      "pseudo_science": {
+        "patterns": ["统计口径未明确"],
+        "severity": "low"
+      },
+      "logic": {
+        "fallacies": ["循环引用风险（C级来源相互引用）"],
+        "severity": "low"
+      },
+      "sentiment": {
+        "clickbait_score": 0.30,
+        "value_concerns": [],
+        "spread_risk": "low"
+      },
+      "summary": "❓ 证据不足：Agentic AI SoC 4%渗透率数据来源不透明，'Agentic AI'定义各家口径不同，建议等待Counterpoint/IDC等机构发布一手报告后再引用。"
+    },
+    {
+      "id": "RC-20260520-021",
+      "title": "索尼WF-1000XM6 ANC提升25%",
+      "verdict": "ConflictingEvidence",
+      "eq": 7.2,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "tsvr": "索尼WF-1000XM6 2026年2月发布属实，QN3e处理器属实。但'ANC提升25%'是索尼官方营销声称，与pseudoscience-patterns.md中'能效比提升X%'模式相同——未说明测试场景（低频/中频/高频噪声）和测试方法。部分评测显示实际体验提升约15-20%。",
+        "sources_checked": ["Uitech", "Rtings.com评测", "What Hi-Fi?评测", "索尼官方新闻稿"],
+        "confidence": 0.70
+      },
+      "pseudo_science": {
+        "patterns": ["厂商声称ANC提升百分比，缺乏测试场景说明"],
+        "severity": "medium"
+      },
+      "logic": {
+        "fallacies": ["诉诸权威（仅依赖厂商数据）"],
+        "severity": "low"
+      },
+      "sentiment": {
+        "clickbait_score": 0.50,
+        "value_concerns": ["夸大产品效果"],
+        "spread_risk": "medium"
+      },
+      "summary": "⚠️ 存疑：索尼WF-1000XM6 ANC提升25%是厂商声称数字，缺乏测试场景说明。实测评测显示约15-20%改善，建议参考Rtings.com等独立评测机构数据而非营销材料。"
+    },
+    {
+      "id": "RC-20260520-032",
+      "title": "中国OLED面板厂商市占率3年提升10倍",
+      "verdict": "Supported",
+      "eq": 7.9,
+      "fact_check": {
+        "label": "Supported",
+        "tsvr": "财联社（A级信源）报道，与DSCCOmdia等面板产业链数据吻合：2022年中国OLED手机面板市占率约2-3%，2025年已达约25%，约为10倍增长。京东方、维信诺、华星光电快速崛起是行业共识。",
+        "sources_checked": ["财联社", "DSCC OLED面板追踪报告", "CINNO Research"],
+        "confidence": 0.85
+      },
+      "pseudo_science": {
+        "patterns": [],
+        "severity": "none"
+      },
+      "logic": {
+        "fallacies": [],
+        "severity": "none"
+      },
+      "sentiment": {
+        "clickbait_score": 0.25,
+        "value_concerns": [],
+        "spread_risk": "low"
+      },
+      "summary": "✅ 支持：中国OLED手机面板厂商市占率3年内从约2-3%增长至约25%，增幅约10倍，数据与产业链报告一致，是中国显示产业崛起的重要指标。"
+    },
+    {
+      "id": "RC-20260520-004",
+      "title": "OpenAI首款AI手机搭载定制2nm SoC",
+      "verdict": "NotEnoughEvidence",
+      "eq": 6.5,
+      "fact_check": {
+        "label": "NotEnoughEvidence",
+        "tsvr": "OpenAI正在研发手机/硬件产品已获多家权威媒体（TechCrunch、9to5Mac）报道，但具体芯片规格（双NPU、LPDDR6+UFS5.0）来自单一爆料源，未经独立验证。2027上半年量产目标合理但不确定。",
+        "sources_checked": ["NotebookCheck爆料文", "TechCrunch", "9to5Mac", "MacRumors"],
+        "confidence": 0.60
+      },
+      "pseudo_science": {
+        "patterns": [],
+        "severity": "none"
+      },
+      "logic": {
+        "fallacies": ["诉诸权威（单一爆料者信息当确认规格）"],
+        "severity": "low"
+      },
+      "sentiment": {
+        "clickbait_score": 0.60,
+        "value_concerns": ["规格信息过于具体可能误导读者"],
+        "spread_risk": "medium"
+      },
+      "summary": "❓ 证据不足：OpenAI研发AI手机已基本确认，但详细芯片规格（双NPU架构、LPDDR6+UFS5.0等）来自单一未验证爆料，应作为参考性信息而非确定规格。"
+    },
+    {
+      "id": "RC-20260520-022",
+      "title": "豪威CIS 1英寸HDR性能超越索尼",
+      "verdict": "ConflictingEvidence",
+      "eq": 7.0,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "tsvr": "豪威（OmniVision）近年技术进步显著，但'超越索尼'的声称仅见于B级中文媒体，未找到第三方独立评测机构的对比数据。HDR性能比较受测试场景（亮度范围、动态场景等）影响大，单一指标比较意义有限。",
+        "sources_checked": ["半导体芯科技", "OmniVision官方新闻稿", "DXOMark传感器评测"],
+        "confidence": 0.62
+      },
+      "pseudo_science": {
+        "patterns": ["单一指标性能排名（HDR性能≠整体CMOS水平）"],
+        "severity": "medium"
+      },
+      "logic": {
+        "fallacies": ["偷换概念（特定场景HDR vs 整体影像性能）"],
+        "severity": "medium"
+      },
+      "sentiment": {
+        "clickbait_score": 0.55,
+        "value_concerns": ["民族情绪驱动的技术声称可能失实"],
+        "spread_risk": "medium"
+      },
+      "summary": "⚠️ 存疑：豪威CIS在特定HDR场景超越索尼的声称需要明确测试机构和方法。CIS评测不能以单一指标定胜负，建议等待DXOMark等机构的传感器对比报告。"
+    },
+    {
+      "id": "RC-20260520-024",
+      "title": "iPhone 18全系前置摄像头升级为24MP",
+      "verdict": "Supported",
+      "eq": 7.8,
+      "fact_check": {
+        "label": "Supported",
+        "tsvr": "MacRumors综合了Ming-Chi Kuo和Jeff Pu等分析师的信息，24MP前置摄像头升级在多份爆料报告中一致出现。这与苹果持续提升前置摄像头的历史规律一致。",
+        "sources_checked": ["MacRumors", "Ming-Chi Kuo分析", "Jeff Pu报告", "Macworld"],
+        "confidence": 0.82
+      },
+      "pseudo_science": {
+        "patterns": [],
+        "severity": "none"
+      },
+      "logic": {
+        "fallacies": [],
+        "severity": "none"
+      },
+      "sentiment": {
+        "clickbait_score": 0.30,
+        "value_concerns": [],
+        "spread_risk": "low"
+      },
+      "summary": "✅ 支持：iPhone 18全系前置摄像头升级至24MP（自18MP）经多位供应链分析师独立确认，与苹果前置升级历史规律吻合。"
+    }
+  ]
+}

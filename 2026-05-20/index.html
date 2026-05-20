@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RumorCrusher · 2026-05-20 · 手机硬件每日洞察</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"
+          onerror="this.onerror=null;this.src='https://unpkg.com/d3@7/dist/d3.min.js'"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+    .card { transition: transform .15s ease, box-shadow .15s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .badge-pass { background: #d1fae5; color: #065f46; }
+    .badge-warn { background: #fef3c7; color: #92400e; }
+    .badge-fail { background: #fee2e2; color: #991b1b; }
+    .badge-official { background: #dbeafe; color: #1e40af; }
+    .badge-leak { background: #ede9fe; color: #5b21b6; }
+    .graph-svg { background: #fafafa; border-radius: 12px; }
+    .source-dot { font-size: 0.75rem; opacity: 0.7; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+<!-- 顶部品牌区 -->
+<header class="bg-white border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+    <div>
+      <h1 class="text-2xl font-bold tracking-tight">
+        <span class="text-rose-600">Rumor</span><span class="text-slate-900">Crusher</span>
+      </h1>
+      <p class="text-sm text-slate-500 mt-1">粉碎谣言，侦测事实真伪 · 手机硬件 &amp; 智能硬件每日洞察</p>
+    </div>
+    <div class="text-right text-sm text-slate-500">
+      <div>2026-05-20（UTC 14:03 · 批次 140332）</div>
+      <a href="../index.html" class="text-rose-600 hover:underline">← 历史归档</a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-8 space-y-8">
+
+  <!-- 摘要卡片区 -->
+  <section class="grid grid-cols-2 md:grid-cols-5 gap-4">
+    <div class="card bg-white rounded-xl p-5 shadow-sm">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">总采集</div>
+      <div class="text-3xl font-bold text-slate-900 mt-1">32</div>
+      <div class="text-xs text-slate-500 mt-1">条素材</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm border-l-4 border-emerald-500">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">Supported ✅</div>
+      <div class="text-3xl font-bold text-emerald-600 mt-1">10</div>
+      <div class="text-xs text-slate-500 mt-1">多源验证通过</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm border-l-4 border-amber-500">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">ConflictingEvidence ⚠️</div>
+      <div class="text-3xl font-bold text-amber-600 mt-1">5</div>
+      <div class="text-xs text-slate-500 mt-1">存疑需更多验证</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm border-l-4 border-rose-500">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">Refuted ❌</div>
+      <div class="text-3xl font-bold text-rose-600 mt-1">3</div>
+      <div class="text-xs text-slate-500 mt-1">已辟谣</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">avg EQ</div>
+      <div class="text-3xl font-bold text-slate-900 mt-1">7.85</div>
+      <div class="text-xs text-slate-500 mt-1">健康打分 82/100</div>
+    </div>
+  </section>
+
+  <!-- 主体两栏 -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+    <!-- 左侧主内容 -->
+    <section class="lg:col-span-2 space-y-6">
+
+      <!-- 辟谣高亮 -->
+      <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-rose-500">
+        <h2 class="text-lg font-bold text-rose-700 mb-4">🔴 已辟谣 (Refuted)</h2>
+
+        <div class="space-y-4">
+          <div class="p-4 rounded-lg bg-rose-50">
+            <div class="flex items-start gap-3">
+              <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold badge-fail">EQ 9.2</span>
+              <div>
+                <p class="font-semibold text-sm text-slate-800">❌ OpenAI手机GPU性能将超越iPhone 18 Pro A20 Pro</p>
+                <p class="text-xs text-slate-600 mt-1">OpenAI至今未发布任何手机产品，相关"规格"均为爆料推测，被二次传播时丢失了"rumored/leaked"限定词，制造确定性假象。无任何基准测试数据支撑"超越"声称。</p>
+                <p class="text-xs text-rose-700 mt-1 font-medium">🆕 新识别模式：爆料转载丢失限定词（Qualifier Stripping）</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-lg bg-amber-50">
+            <div class="flex items-start gap-3">
+              <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold badge-warn">EQ 8.5</span>
+              <div>
+                <p class="font-semibold text-sm text-slate-800">⚠️ 固态电池CES 2026支持300W+快充（原型≠量产）</p>
+                <p class="text-xs text-slate-600 mt-1">CES展示原型，非量产商用技术。消费级固态电池规模商用仍面临成本和良率挑战。"展示能做到"≠"产品上市可用"。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-lg bg-amber-50">
+            <div class="flex items-start gap-3">
+              <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold badge-warn">EQ 8.1</span>
+              <div>
+                <p class="font-semibold text-sm text-slate-800">⚠️ Realme 320W快充/5分钟充满电（泄露未确认）</p>
+                <p class="text-xs text-slate-600 mt-1">泄露信息，未经官方确认。5分钟充满的极速充电对电池循环寿命有重要影响，但相关信息被忽略。建议等官方发布和独立评测。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 已验证事实 -->
+      <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-emerald-500">
+        <h2 class="text-lg font-bold text-emerald-700 mb-4">🟢 已验证事实 (Supported)</h2>
+
+        <div class="space-y-3">
+
+          <div class="p-3 rounded-lg bg-emerald-50 flex items-start gap-3">
+            <span class="badge-pass px-2 py-0.5 rounded text-xs font-semibold shrink-0">芯片</span>
+            <div>
+              <p class="font-semibold text-sm">台积电2nm月产能2026年底达9万片，苹果预订50%+</p>
+              <p class="text-xs text-slate-500 mt-0.5">五条产线同步扩产，苹果A20 Pro（iPhone 18）将主导初期产能配额。EQ 8.2</p>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-lg bg-emerald-50 flex items-start gap-3">
+            <span class="badge-pass px-2 py-0.5 rounded text-xs font-semibold shrink-0">芯片</span>
+            <div>
+              <p class="font-semibold text-sm">骁龙8 Elite Gen6 + 天玑9600 均定档2026年9月</p>
+              <p class="text-xs text-slate-500 mt-0.5">两款旗舰2nm芯片同台竞技。小米18首发骁龙8EG6 Pro，天玑9600官宣9月22日亮相。EQ 7.7</p>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-lg bg-emerald-50 flex items-start gap-3">
+            <span class="badge-pass px-2 py-0.5 rounded text-xs font-semibold shrink-0">屏幕</span>
+            <div>
+              <p class="font-semibold text-sm">京东方LTPO OLED进入iPhone 17 Pro供应链，良率85%</p>
+              <p class="text-xs text-slate-500 mt-0.5">国产屏幕关键里程碑，支持1-120Hz自适应刷新率。EQ 8.0</p>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-lg bg-emerald-50 flex items-start gap-3">
+            <span class="badge-pass px-2 py-0.5 rounded text-xs font-semibold shrink-0">AR/VR</span>
+            <div>
+              <p class="font-semibold text-sm">苹果暂停Vision Pro 2研发，转向智能眼镜（2026-2027）</p>
+              <p class="text-xs text-slate-500 mt-0.5">首年销量约40万台远低于预期，多位权威记者独立确认战略转向。EQ 8.3</p>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-lg bg-emerald-50 flex items-start gap-3">
+            <span class="badge-pass px-2 py-0.5 rounded text-xs font-semibold shrink-0">AR/VR</span>
+            <div>
+              <p class="font-semibold text-sm">三星Galaxy XR头显正式发布：1799美元，骁龙XR2+ Gen2+16GB</p>
+              <p class="text-xs text-slate-500 mt-0.5">对比Apple Vision Pro 3499美元，三星以更低价格+Android XR生态入场。EQ 8.5</p>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-lg bg-emerald-50 flex items-start gap-3">
+            <span class="badge-pass px-2 py-0.5 rounded text-xs font-semibold shrink-0">产业链</span>
+            <div>
+              <p class="font-semibold text-sm">中芯国际月产能首突100万片，约为台积电三分之一</p>
+              <p class="text-xs text-slate-500 mt-0.5">里程碑突破，但仍以28nm+成熟工艺为主，7nm仅小批量。EQ 7.6</p>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-lg bg-emerald-50 flex items-start gap-3">
+            <span class="badge-pass px-2 py-0.5 rounded text-xs font-semibold shrink-0">屏幕</span>
+            <div>
+              <p class="font-semibold text-sm">中国OLED手机面板市占率3年提升约10倍</p>
+              <p class="text-xs text-slate-500 mt-0.5">从2022年约2-3%增至2025年约25%，韩国LCD双雄几乎全面退出。EQ 7.9</p>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-lg bg-emerald-50 flex items-start gap-3">
+            <span class="badge-pass px-2 py-0.5 rounded text-xs font-semibold shrink-0">影像</span>
+            <div>
+              <p class="font-semibold text-sm">iPhone 18全系前置升级24MP + Pro可变光圈主摄</p>
+              <p class="text-xs text-slate-500 mt-0.5">Ming-Chi Kuo等多位分析师独立确认前置24MP（自18MP），Pro系列引入可变光圈。EQ 7.8</p>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-lg bg-emerald-50 flex items-start gap-3">
+            <span class="badge-pass px-2 py-0.5 rounded text-xs font-semibold shrink-0">电池</span>
+            <div>
+              <p class="font-semibold text-sm">Realme GT3 240W快充：9分30秒充满4600mAh（第三方验证）</p>
+              <p class="text-xs text-slate-500 mt-0.5">PhoneArena等第三方实测数据吻合，240W快充在中国市场已属量产技术。EQ 7.5</p>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-lg bg-emerald-50 flex items-start gap-3">
+            <span class="badge-pass px-2 py-0.5 rounded text-xs font-semibold shrink-0">折叠屏</span>
+            <div>
+              <p class="font-semibold text-sm">2026年全球折叠屏出货预测2400-2500万台（群智咨询）</p>
+              <p class="text-xs text-slate-500 mt-0.5">与DSCC等机构预测方向一致，中国贡献1200-1300万台。行业将加速整合。EQ 7.2</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 存疑条目 -->
+      <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-amber-500">
+        <h2 class="text-lg font-bold text-amber-700 mb-4">🟡 存疑条目 (ConflictingEvidence / NEE)</h2>
+        <div class="space-y-3">
+          <div class="p-3 rounded-lg bg-amber-50">
+            <p class="font-semibold text-sm">⚠️ 三星2nm良率60%（单一C级信源，未交叉验证）EQ 7.8</p>
+          </div>
+          <div class="p-3 rounded-lg bg-amber-50">
+            <p class="font-semibold text-sm">⚠️ 三星Mont Flex折痕减少20%（CES展示，无官方文件，比较基准不明）EQ 7.4</p>
+          </div>
+          <div class="p-3 rounded-lg bg-amber-50">
+            <p class="font-semibold text-sm">⚠️ 索尼WF-1000XM6 ANC提升25%（厂商自测，独立评测约15-20%）EQ 7.2</p>
+          </div>
+          <div class="p-3 rounded-lg bg-amber-50">
+            <p class="font-semibold text-sm">⚠️ 豪威CIS 1英寸HDR超越索尼（缺乏第三方评测机构验证）EQ 7.0</p>
+          </div>
+          <div class="p-3 rounded-lg bg-slate-50">
+            <p class="font-semibold text-sm">❓ Agentic AI SoC 4%渗透率（数据来源机构不透明）EQ 6.8</p>
+          </div>
+          <div class="p-3 rounded-lg bg-slate-50">
+            <p class="font-semibold text-sm">❓ OpenAI手机定制2nm SoC规格（爆料单一来源，产品未发布）EQ 6.5</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 右侧：统计图谱 + 方法论 -->
+    <section class="space-y-6">
+
+      <!-- AVeriTeC 分布饼图 -->
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h3 class="text-sm font-bold text-slate-700 mb-4">AVeriTeC 分布</h3>
+        <svg id="pie-chart" width="100%" viewBox="0 0 220 220" class="graph-svg"></svg>
+        <div class="mt-3 space-y-1.5 text-xs">
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>Supported 10条 (50%)</div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>ConflictingEvidence 5条 (25%)</div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>Refuted 3条 (15%)</div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-slate-400 inline-block"></span>NotEnoughEvidence 2条 (10%)</div>
+        </div>
+      </div>
+
+      <!-- 指标卡 -->
+      <div class="bg-white rounded-xl shadow-sm p-6 space-y-4">
+        <h3 class="text-sm font-bold text-slate-700">核心指标</h3>
+        <div class="space-y-3">
+          <div>
+            <div class="flex justify-between text-xs text-slate-500 mb-1"><span>avg EQ</span><span class="font-semibold text-slate-800">7.85 / 10</span></div>
+            <div class="w-full bg-slate-100 rounded-full h-2"><div class="bg-emerald-500 h-2 rounded-full" style="width:78.5%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs text-slate-500 mb-1"><span>UnR（未解决率）</span><span class="font-semibold text-slate-800">15.0%</span></div>
+            <div class="w-full bg-slate-100 rounded-full h-2"><div class="bg-amber-400 h-2 rounded-full" style="width:15%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs text-slate-500 mb-1"><span>健康打分</span><span class="font-semibold text-slate-800">82 / 100</span></div>
+            <div class="w-full bg-slate-100 rounded-full h-2"><div class="bg-blue-500 h-2 rounded-full" style="width:82%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs text-slate-500 mb-1"><span>范围合规</span><span class="font-semibold text-emerald-700">100%</span></div>
+            <div class="w-full bg-slate-100 rounded-full h-2"><div class="bg-emerald-500 h-2 rounded-full" style="width:100%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 分类覆盖 -->
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h3 class="text-sm font-bold text-slate-700 mb-3">分类覆盖</h3>
+        <div class="space-y-2 text-xs">
+          <div class="flex justify-between"><span>🔧 芯片/SoC</span><span class="font-semibold">7条</span></div>
+          <div class="flex justify-between"><span>🖥️ 屏幕/OLED</span><span class="font-semibold">5条</span></div>
+          <div class="flex justify-between"><span>🏭 产业链</span><span class="font-semibold">5条</span></div>
+          <div class="flex justify-between"><span>📷 影像/CIS</span><span class="font-semibold">4条</span></div>
+          <div class="flex justify-between"><span>🔋 电池/快充</span><span class="font-semibold">4条</span></div>
+          <div class="flex justify-between"><span>🥽 AR/VR</span><span class="font-semibold">3条</span></div>
+          <div class="flex justify-between"><span>📱 折叠屏</span><span class="font-semibold">3条</span></div>
+          <div class="flex justify-between"><span>🎧 TWS耳机</span><span class="font-semibold">1条</span></div>
+        </div>
+      </div>
+
+      <!-- 飞轮更新 -->
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h3 class="text-sm font-bold text-slate-700 mb-3">🔄 飞轮更新</h3>
+        <div class="space-y-2 text-xs text-slate-600">
+          <div class="p-2 bg-purple-50 rounded">
+            <span class="font-semibold text-purple-700">新模式（pseudoscience）</span><br>
+            爆料转载丢失限定词（Qualifier Stripping）
+          </div>
+          <div class="p-2 bg-purple-50 rounded">
+            <span class="font-semibold text-purple-700">新模式（pseudoscience）</span><br>
+            良率数据单点引用（Single-Source Yield Claim）
+          </div>
+          <div class="p-2 bg-blue-50 rounded">
+            <span class="font-semibold text-blue-700">新案例（logical-fallacy）</span><br>
+            产业链数据孤证 + 绝对性能声称无基准
+          </div>
+          <div class="p-2 bg-slate-50 rounded">
+            <span class="font-semibold text-slate-600">信源评级</span><br>
+            AppleWorld.Today 降为 C 级
+          </div>
+        </div>
+      </div>
+
+      <!-- 信源质量 -->
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h3 class="text-sm font-bold text-slate-700 mb-3">信源质量分布</h3>
+        <div class="space-y-2 text-xs">
+          <div class="flex items-center gap-2">
+            <div class="w-full bg-slate-100 rounded-full h-4 relative overflow-hidden">
+              <div class="bg-emerald-500 h-4 absolute left-0" style="width:45%"></div>
+              <span class="absolute inset-0 flex items-center px-2 text-white font-semibold">A级 45%</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-full bg-slate-100 rounded-full h-4 relative overflow-hidden">
+              <div class="bg-amber-400 h-4 absolute left-0" style="width:40%"></div>
+              <span class="absolute inset-0 flex items-center px-2 text-slate-800 font-semibold">B级 40%</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-full bg-slate-100 rounded-full h-4 relative overflow-hidden">
+              <div class="bg-rose-400 h-4 absolute left-0" style="width:15%"></div>
+              <span class="absolute inset-0 flex items-center px-2 text-slate-800 font-semibold">C级 15%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+</main>
+
+<!-- 脚注 -->
+<footer class="border-t border-slate-200 mt-12 py-6 text-center text-xs text-slate-400">
+  RumorCrusher · 批次 140332 · 2026-05-20 UTC · <a href="https://chirs0901.github.io/rumorcrusher/2026-05-20/" class="text-rose-500 hover:underline">在线版本</a>
+</footer>
+
+<script>
+  // D3 饼图
+  const data = [
+    { label: "Supported", value: 10, color: "#10b981" },
+    { label: "ConflictingEvidence", value: 5, color: "#f59e0b" },
+    { label: "Refuted", value: 3, color: "#ef4444" },
+    { label: "NotEnoughEvidence", value: 2, color: "#94a3b8" }
+  ];
+  const width = 220, height = 220, radius = 90;
+  const svg = d3.select("#pie-chart")
+    .append("g")
+    .attr("transform", `translate(${width/2},${height/2})`);
+  const pie = d3.pie().value(d => d.value);
+  const arc = d3.arc().innerRadius(40).outerRadius(radius);
+  svg.selectAll("path")
+    .data(pie(data))
+    .enter()
+    .append("path")
+    .attr("d", arc)
+    .attr("fill", d => d.data.color)
+    .attr("stroke", "white")
+    .attr("stroke-width", 2);
+  // 中心标注
+  svg.append("text").attr("text-anchor","middle").attr("dy","0.35em")
+    .attr("font-size","14").attr("font-weight","bold").attr("fill","#334155")
+    .text("20");
+  svg.append("text").attr("text-anchor","middle").attr("dy","1.5em")
+    .attr("font-size","10").attr("fill","#94a3b8")
+    .text("精审");
+</script>
+
+</body>
+</html>
