@@ -210,3 +210,44 @@
 - 04-clean-report-140332.md
 - 05-methodology-delta-140332.md
 - 06-self-eval-140332.md
+
+---
+
+## 2026-05-20 · 批次 231841（晚报）
+
+### 运行概况
+- 批次ID：231841
+- 时间：23:18–24:00 CST
+- 原始采集：28条
+- 有效审核：18条（10条超出手机硬件范围剔除）
+- 结果：8 Supported · 3 Refuted · 5 CE · 2 NEE
+- avg EQ：7.92 · UnR：16.7% · 健康分：85/100
+
+### 重大发现
+- **Apple Watch Series 11血糖监测谣言**（EQ 9.5，Critical）：官方+FDA+Bloomberg三重证伪，触发健康类模式新增
+- **vivo X300 Ultra"重新定义摄影"证伪**（EQ 8.3）：规格属实，营销绝对化语言Refuted
+- **小米18放弃SD8EG6谣言证伪**（EQ 8.0）：Stale Prediction Recycling模式命中
+
+### 新增方法论
+- P-2026-0520-E-01：过期预测当新闻（Stale Prediction Recycling）
+- P-2026-0520-E-02：可穿戴健康功能夸大（Wearable Health Feature Inflation）【Critical级】
+
+### 批次间冲突
+- E-021（小米18放弃SD8EG6）vs RC-002（小米18首发SD8EG6）→ 按官方发布优先原则，E-021 Refuted
+
+### 产出文件
+- 01-raw/items-231841.json（28条）
+- 02-annotations/check-worthiness-231841.json
+- 02-annotations/synthesis-231841.json（18条4-Agent审核）
+- 03-quality-report-231841.json
+- 04-clean-report-231841.md
+- 05-methodology-delta-231841.md
+- 06-self-eval-231841.md
+
+## 2026-05-21 晚报
+
+- **采集**：36条，8次搜索，覆盖芯片/折叠屏/电池/CMOS传感器/半导体代工/XR头显/AI NPU/存储涨价
+- **辟谣**：固态电池"数天续航"声称已辟谣
+- **新增规则**：miracle_tech_claim 伪科学检测、GPU对比未发布竞品标注逻辑
+- **健康打分**：88/100 | UnR: 0.077 | avg EQ: 3.62
+- **科技简报**：新增9条，类别：电池×2、芯片×3、存储×2、AI创新×2、辟谣×1

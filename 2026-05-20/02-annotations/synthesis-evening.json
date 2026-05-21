@@ -1,0 +1,136 @@
+{
+  "summary": {
+    "total": 18,
+    "pass": 8,
+    "warn": 7,
+    "fail": 3
+  },
+  "items": [
+    {
+      "id": "RC-20260520-E-017",
+      "title": "Apple Watch Series 11已支持无创血糖监测",
+      "synthesis": "fail",
+      "fact_check": {"verdict": "Refuted", "eq": 9.5},
+      "risk": "Critical"
+    },
+    {
+      "id": "RC-20260520-E-009",
+      "title": "vivo X300 Ultra声称'重新定义手机摄影'",
+      "synthesis": "fail",
+      "fact_check": {"verdict": "Refuted", "eq": 8.3},
+      "risk": "High"
+    },
+    {
+      "id": "RC-20260520-E-021",
+      "title": "小米18放弃骁龙8EG6 Pro，成本过高",
+      "synthesis": "fail",
+      "fact_check": {"verdict": "Refuted", "eq": 8.0},
+      "risk": "Medium"
+    },
+    {
+      "id": "RC-20260520-E-005",
+      "title": "三星Galaxy Z Fold 7：215g/4.2mm展开/1999美元",
+      "synthesis": "pass",
+      "fact_check": {"verdict": "Supported", "eq": 9.0},
+      "risk": null
+    },
+    {
+      "id": "RC-20260520-E-014",
+      "title": "三星Galaxy S26 Ultra发布：60W快充三星史上首次",
+      "synthesis": "pass",
+      "fact_check": {"verdict": "Supported", "eq": 8.9},
+      "risk": null
+    },
+    {
+      "id": "RC-20260520-E-007",
+      "title": "OPPO Find N6零折痕，铰链高度差0.05mm，百万次折叠认证",
+      "synthesis": "pass",
+      "fact_check": {"verdict": "Supported", "eq": 8.8},
+      "risk": null
+    },
+    {
+      "id": "RC-20260520-E-008",
+      "title": "vivo X300 Ultra：200MP索尼LYTIA 901+ZEISS 400mm长焦全球发布",
+      "synthesis": "pass",
+      "fact_check": {"verdict": "Supported", "eq": 8.7},
+      "risk": null
+    },
+    {
+      "id": "RC-20260520-E-006",
+      "title": "三星Z Fold 7电池五年未变4400mAh，实测5h36m",
+      "synthesis": "warn",
+      "fact_check": {"verdict": "Supported", "eq": 8.5},
+      "risk": null
+    },
+    {
+      "id": "RC-20260520-E-016",
+      "title": "Apple Watch Series 11无血糖监测，2026年落地极不可能",
+      "synthesis": "pass",
+      "fact_check": {"verdict": "Supported", "eq": 9.2},
+      "risk": null
+    },
+    {
+      "id": "RC-20260520-E-001",
+      "title": "骁龙8 Elite Gen6 Pro单价超330美元",
+      "synthesis": "warn",
+      "fact_check": {"verdict": "Supported", "eq": 8.1},
+      "risk": null
+    },
+    {
+      "id": "RC-20260520-E-010",
+      "title": "华为麒麟9030系列量产改善，Mate 80开放购买",
+      "synthesis": "pass",
+      "fact_check": {"verdict": "Supported", "eq": 7.8},
+      "risk": null
+    },
+    {
+      "id": "RC-20260520-E-003",
+      "title": "天玑9600 Pro性能领先25%但散热抑制可能消除优势",
+      "synthesis": "warn",
+      "fact_check": {"verdict": "ConflictingEvidence", "eq": 8.0},
+      "risk": null
+    },
+    {
+      "id": "RC-20260520-E-012",
+      "title": "iPhone 18 Pro Dynamic Island缩小25%，14.98mm",
+      "synthesis": "warn",
+      "fact_check": {"verdict": "ConflictingEvidence", "eq": 7.6},
+      "risk": null
+    },
+    {
+      "id": "RC-20260520-E-011",
+      "title": "麒麟9030 Pro晶体管密度追平三星5nm",
+      "synthesis": "warn",
+      "fact_check": {"verdict": "ConflictingEvidence", "eq": 7.5},
+      "risk": null
+    },
+    {
+      "id": "RC-20260520-E-002",
+      "title": "天玑9600 Pro Geekbench单核4200-4300",
+      "synthesis": "warn",
+      "fact_check": {"verdict": "ConflictingEvidence", "eq": 7.4},
+      "risk": null
+    },
+    {
+      "id": "RC-20260520-E-013",
+      "title": "Tim Cook退休，John Ternus主持iPhone 18发布会",
+      "synthesis": "warn",
+      "fact_check": {"verdict": "ConflictingEvidence", "eq": 7.3},
+      "risk": null
+    },
+    {
+      "id": "RC-20260520-E-022",
+      "title": "骁龙8EG6 Pro AnTuTu突破500万分（预测）",
+      "synthesis": "warn",
+      "fact_check": {"verdict": "NotEnoughEvidence", "eq": 6.5},
+      "risk": null
+    },
+    {
+      "id": "RC-20260520-E-015",
+      "title": "三星Galaxy S26系列Exynos/骁龙分区销售属实",
+      "synthesis": "warn",
+      "fact_check": {"verdict": "NotEnoughEvidence", "eq": 7.0},
+      "risk": null
+    }
+  ]
+}

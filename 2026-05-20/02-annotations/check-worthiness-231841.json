@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "date": "2026-05-20",
+    "timestamp": "231841",
+    "batch": "evening",
+    "total_input": 28,
+    "high_priority": 10,
+    "medium_priority": 9,
+    "low_priority": 9,
+    "scope_violations": 0
+  },
+  "check_worthiness": [
+    {"id":"RC-20260520-E-003","title":"天玑9600 Pro性能领先25%但散热抑制风险","priority":"high","cw_score":0.90,"reason":"性能声称+散热警示组合，需验证物理可行性"},
+    {"id":"RC-20260520-E-004","title":"骁龙8EG6 Pro性能提升不足20%","priority":"high","cw_score":0.88,"reason":"与营销预期冲突，来源需交叉验证"},
+    {"id":"RC-20260520-E-017","title":"Apple Watch Series 11已支持无创血糖","priority":"high","cw_score":0.95,"reason":"高危健康谣言，需明确辟谣"},
+    {"id":"RC-20260520-E-009","title":"vivo X300 Ultra声称重新定义手机摄影","priority":"high","cw_score":0.85,"reason":"绝对化营销话术，符合pseudoscience模式"},
+    {"id":"RC-20260520-E-001","title":"骁龙8EG6 Pro单价超330美元","priority":"high","cw_score":0.82,"reason":"具体价格数字可核查，影响消费者购买决策"},
+    {"id":"RC-20260520-E-021","title":"小米18放弃骁龙8EG6 Pro","priority":"high","cw_score":0.83,"reason":"与早间批次小米18首发声称矛盾，需核实"},
+    {"id":"RC-20260520-E-011","title":"麒麟9030 Pro晶体管密度追平三星5nm","priority":"high","cw_score":0.87,"reason":"制程比较声称，涉及不同工厂nm命名差异"},
+    {"id":"RC-20260520-E-006","title":"三星Z Fold 7电池五年未变4400mAh","priority":"medium","cw_score":0.78,"reason":"官方发布的事实，但三星解释逻辑需评估"},
+    {"id":"RC-20260520-E-022","title":"骁龙8EG6 Pro AnTuTu突破500万分预测","priority":"high","cw_score":0.86,"reason":"预测性数字，C级信源，易被误解为实测数据"},
+    {"id":"RC-20260520-E-013","title":"Tim Cook退休，Ternus主持发布会","priority":"high","cw_score":0.84,"reason":"重大人事变动，需多源核实"}
+  ]
+}

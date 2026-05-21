@@ -133,14 +133,145 @@ var WIKI_MAP = {
 var DATA = {
 
   // ══════════════════════════════════
-  '2026-05-20': {
-    title: '骁龙/天玑2nm双雄9月决战 · 台积电产能博弈 · 苹果Vision Pro战略转向 · OpenAI手机辟谣',
-    sub: '32条素材 · 10 Supported · 3 Refuted · avg EQ 7.85 · 健康82分。重点：骁龙8 Elite Gen6和天玑9600均定档9月，均采用台积电2nm；台积电2nm月产能扩至9万片苹果占超50%；苹果暂停Vision Pro 2转向智能眼镜；OpenAI手机GPU超越A20 Pro声称证伪(EQ 9.2)。',
+  '2026-05-21': {
+    title: 'CATL神行3代6分27秒充满 · TSMC N2良率超90% · DRAM暴涨369% · Vision Pro vs Galaxy XR · 固态电池"数天续航"辟谣 🌙晚报',
+    sub: '晚报36条素材 · 8 Supported · 1 Refuted · 4 ConflictingEvidence · avg EQ 3.62 · UnR 0.077 · 健康88分。重点：CATL第三代神行超充电池参数核实(6min27s/10C/0.25mΩ)；TSMC N2良率正式超过90%产能目标10万片/月；DRAM价格从$3.2暴涨至$15(+369%)；固态电池"数天续航"夸大声称成功辟谣(miracle_tech_claim模式)；新增飞轮规则2条。',
     stats: [
-      {v:'32', l:'条采集'},
-      {v:'3',  l:'条 Refuted'},
-      {v:'10', l:'条 Supported'},
-      {v:'82', l:'健康打分'}
+      {v:'36', l:'条采集'},
+      {v:'1',  l:'条 Refuted'},
+      {v:'8',  l:'条 Supported'},
+      {v:'88', l:'健康打分'}
+    ],
+    items: [
+      {
+        id: 'RC-20260521-E-REFUTED-001',
+        category: '辟谣',
+        title: '❌ 固态电池"让手机续航数天"——严重夸大，量产最早2027-2028年',
+        text: '某报道声称"新型固态电池可让手机续航数天"，属于严重夸大的miracle_tech_claim。核查结论：❌ Refuted（EQ 1/5）。当前消费级真正固态电池量产最早在2027-2028年；现阶段实验室原型在体积、成本、循环寿命方面均不支持手机商用。原报道使用"promises"（承诺）标题，并非实测数据，二次传播时确定性被强化。当前主流商用方案为半固态（混合电解质），可在-20°C低温15分钟内加热至工作温度。消费者应对"革命性"电池声称保持怀疑，以已上市产品实测为准。',
+        tags: ['辟谣','固态电池','续航夸大','miracle_tech_claim','半固态电池'],
+        sources: [
+          {name:'PhoneArena（原始报道，用promises标题）', url:'https://www.phonearena.com/news/new-solid-state-battery-promises-days-of-smartphone-battery-life_id177443'},
+          {name:'bonnenbatteries（固态电池2026进展与挑战）', url:'https://www.bonnenbatteries.com/solid-state-batteries-advances-challenges-future-use-cases/'}
+        ],
+        verdict: 'Refuted',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260521-E-001',
+        category: '电池',
+        title: 'CATL第三代神行超充电池：6分27秒充满 · 10C/15C倍率 · 内阻行业最低0.25mΩ',
+        text: 'CATL于2026年4月21日正式发布第三代神行超充电池。核心参数：峰值充电倍率10C（最高15C），全程仅6分27秒，内阻行业最低0.25mΩ，1000次循环后容量保持率>90%。官方白皮书数据，多方核实可信。这是目前已发布量产电池中充电速度最快的方案，标志着"6分钟超快充"正式进入量产商用阶段，为硅碳负极技术的重要里程碑。',
+        tags: ['CATL','神行超充','快充','10C','硅碳负极','电池'],
+        sources: [
+          {name:'CATL官方（神行超充电池发布）', url:'https://www.catl.com/'},
+          {name:'technerdo（硅碳电池2026主流化深度解析）', url:'https://www.technerdo.com/post/silicon-carbon-batteries-smartphones-2026'}
+        ],
+        verdict: 'Supported',
+        wikiId: 'silicon-carbon-anode'
+      },
+      {
+        id: 'RC-20260521-E-002',
+        category: '电池',
+        title: '硅碳负极成2026旗舰标配：储能密度是石墨10倍，快充更安全',
+        text: '2026年主流旗舰手机已普遍采用硅碳负极电池。核心数据：硅负极理论储能密度3579 mAh/g，约为石墨（372 mAh/g）的9.6倍。硅负极在特定条件下可比石墨更快接受充电，降低快充过程中的降解风险。荣耀、小米、OPPO、CATL等主要厂商已商用落地，为已核实的电化学基础事实。',
+        tags: ['硅碳负极','电池密度','快充','CATL','旗舰标配'],
+        sources: [
+          {name:'technerdo（硅碳电池2026深度报告）', url:'https://www.technerdo.com/post/silicon-carbon-batteries-smartphones-2026'},
+          {name:'NEWARE（硅碳负极原理与优势）', url:'https://www.neware.net/news/the-secret-behind-increasing-mobile-phone-battery-capacity-silicon-carbon-anode/230/153.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: 'silicon-carbon-anode'
+      },
+      {
+        id: 'RC-20260521-E-003',
+        category: '芯片',
+        title: '台积电N2（2nm）良率超90%，2026年月产能目标10万片，先进产能已订至2028年',
+        text: '台积电N2工艺良率已达85-90%以上区间，为当前最高行业水平。2026年月产能计划扩充至10万片，先进制程（2nm/3nm）产能已全部预订至2028年。对比：三星SF2（2nm）良率约55-60%，年底产能仅2.1万片/月。台积电在产能和良率上对三星保持显著优势。苹果A20 Pro、骁龙8 Elite Gen6、天玑9600均计划使用台积电2nm产能，供应将持续偏紧。',
+        tags: ['台积电','2nm','N2','良率','产能','半导体代工'],
+        sources: [
+          {name:'SemiWiki（台积电2nm良率结果公布）', url:'https://semiwiki.com/forum/threads/tsmcs-2nm-chips-the-results-are-out.24329/'},
+          {name:'Dataconomy（台积电先进产能已预订至2028）', url:'https://dataconomy.com/2026/03/31/tsmcs-advanced-chip-capacity-is-booked-out-through-2028/'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260521-E-004',
+        category: '芯片',
+        title: '三星SF2（2nm）良率55-60%，年底月产能2.1万片，GAA工艺寻求差异化',
+        text: 'TrendForce 2025年11月权威报告：三星2nm（SF2）工艺良率已稳定在55-60%区间，已开始量产（初期用于Exynos 2600）。2026年底月产能目标2.1万片，2nm订单同比增长超30%。三星通过GAA（围栅式晶体管）工艺的早期商用寻求与台积电的差异化竞争。两者差距：台积电N2良率超90%/产能10万片，三星SF2良率55-60%/产能2.1万片。',
+        tags: ['三星','SF2','2nm','GAA','晶圆代工','良率'],
+        sources: [
+          {name:'TrendForce（三星2nm良率报告2025Q4）', url:'https://www.trendforce.com/news/2025/11/25/news-samsung-reportedly-hits-55-60-2nm-yields-eyeing-an-edge-through-early-gaa-deployment/'},
+          {name:'Digitimes（台积电3nm扩产压制三星2nm竞争）', url:'https://www.digitimes.com/news/a20260427PD214/tsmc-3nm-earnings-samsung-capacity.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260521-E-005',
+        category: '存储',
+        title: 'DRAM价格暴涨：DDR4 8Gb从$3.2→$15（+369%），Q1 2026合约价环比涨55-60%',
+        text: 'DRAM价格出现历史性暴涨，DDR4 8Gb颗粒从2025年低点$3.2飙升至$15（涨幅369%），创2016年有记录以来最高值。TrendForce预测：2026年Q1通用DRAM合约价环比涨55-60%，NAND涨33-38%（消费级QLC超40%）。主要驱动因素：AI数据中心HBM需求大量分流存储厂商产能，导致手机用DRAM/NAND供应减少。消费者购机成本将明显上升。',
+        tags: ['DRAM','内存价格','涨价','TrendForce','HBM','手机成本'],
+        sources: [
+          {name:'观察者网（DRAM涨价分析）', url:'https://www.guancha.cn/yuanchuankejipinglun/2026_03_02_808437.shtml'},
+          {name:'EET-China（2025-2027 DRAM/NAND市场走势）', url:'https://www.eet-china.com/mp/a449354.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260521-E-006',
+        category: '存储',
+        title: '手机存储成本同比涨超80%，多品牌集体提价，新机均价或涨25%',
+        text: '智能手机存储芯片采购成本较去年同期上涨超80%，存储BOM占比从10%升至20-30%。小米雷军公开表示手机业务面临"很大压力"；OPPO、一加、vivo、小米等头部品牌已于2026年3月启动提价，为近五年最大规模集体调价。部分性价比机型已停产，512GB以上大容量版本受影响最为明显。消费者建议：近期有购机需求可考虑提前入手或选择上一代旗舰。',
+        tags: ['内存涨价','手机提价','小米','OPPO','vivo','BOM成本'],
+        sources: [
+          {name:'新浪财经（存储涨价冲击2026手机市场）', url:'https://finance.sina.com.cn/jjxw/2026-02-28/doc-inhphzau6353485.shtml'},
+          {name:'证券时报（雷军谈内存价格暴涨压力）', url:'https://www.stcn.com/article/detail/3662754.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260521-E-007',
+        category: 'AI创新',
+        title: 'NPU算力2026旗舰对比：骁龙8EG4 75 TOPS · 天玑9400超50 TOPS · A18 Pro 35 TOPS',
+        text: '三大旗舰SoC NPU算力（均为原厂官方数据）：高通骁龙8 Elite Gen4 >75 TOPS；MediaTek天玑9400 >50 TOPS；苹果A18 Pro ~35 TOPS。注意：各厂商TOPS测量方法不统一（精度位宽、稀疏率处理不同），不可线性比较。实际用户体验受软件优化影响显著（苹果Core ML优化下A18 Pro实测体验常优于数字）。骁龙平台已有超56个模型可在5ms内通过NPU完成推理。',
+        tags: ['NPU','TOPS','骁龙','天玑','A18 Pro','on-device AI'],
+        sources: [
+          {name:'localaimaster（2026年NPU算力对比）', url:'https://localaimaster.com/blog/npu-comparison-2026'},
+          {name:'Qualcomm（Snapdragon AI Engine官方）', url:'https://www.qualcomm.com/processors/ai-engine'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260521-E-008',
+        category: 'AI创新',
+        title: 'Apple Vision Pro M5（$3499）vs 三星Galaxy XR（$1799）：完整规格对比',
+        text: 'Apple Vision Pro M5：M5芯片（3nm，10核CPU+10核GPU）+独立R1传感器芯片（12ms光子延迟），16GB统一内存，23M像素/眼（120Hz），重750-800g，起价$3499。三星Galaxy XR：骁龙XR2+ Gen2（4nm，6核CPU+Adreno 740），16GB LPDDR5X，27M像素/眼（90Hz），重545g，$1799。Galaxy XR分辨率更高但刷新率低；Vision Pro帧率更高但价格几乎翻倍。两款均已正式上市销售，规格可验证。',
+        tags: ['Apple Vision Pro','Galaxy XR','XR头显','M5芯片','骁龙XR2+','价格对比'],
+        sources: [
+          {name:'AppleInsider（M5 Vision Pro vs Galaxy XR规格对比）', url:'https://appleinsider.com/inside/apple-vision-pro/vs/m5-apple-vision-pro-vs-samsung-galaxy-xr-processing-power-vs-ai'},
+          {name:'TechCrunch（三星Galaxy XR发布报道）', url:'https://techcrunch.com/2025/10/22/samsung-takes-on-apples-vision-pro-with-new-galaxy-xr-headset/'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      }
+    ]
+  },
+
+  // ══════════════════════════════════
+  '2026-05-20': {
+    title: '骁龙/天玑2nm双雄 · 台积电产能博弈 · Vision Pro转向 · 折叠旗舰三强 · Apple Watch血糖谣言证伪 🌙晚报已更新',
+    sub: '全天60条素材（晨批32+晚批28）· 18 Supported · 6 Refuted · avg EQ 7.88 · 健康83.5分。重点：OpenAI手机GPU超越A20 Pro声称证伪(EQ 9.2)；Apple Watch Series 11血糖监测谣言证伪(EQ 9.5·Critical)；三星Fold 7·OPPO Find N6·vivo X300 Ultra折叠/影像三强发布；骁龙8EG6 Pro单价超330美元供应链预警。',
+    stats: [
+      {v:'60', l:'条采集'},
+      {v:'6',  l:'条 Refuted'},
+      {v:'18', l:'条 Supported'},
+      {v:'83', l:'健康打分'}
     ],
     items: [
       {
@@ -298,6 +429,97 @@ var DATA = {
         ],
         verdict: 'Supported',
         wikiId: 'silicon-carbon-anode'
+      },
+      {
+        id: 'RC-20260520-E-017',
+        category: '辟谣',
+        title: '❌ Apple Watch Series 11无创血糖监测——官方+FDA+Bloomberg三重证伪（EQ 9.5）',
+        text: '多渠道流传"Apple Watch Series 11已支持无创血糖监测"。核查结论：❌ Refuted（EQ 9.5，本批次最高）。① Apple 2026年春季发布会官方记录无此功能；② FDA迄今未批准任何消费级无创血糖监测设备；③ Tim Cook在Q2财报电话会议明确排除2026年落地；④ Bloomberg Mark Gurman确认"极不可能"。此类健康谣言具有真实危害风险——用户切勿依赖任何穿戴设备进行医疗级血糖管理，请遵医嘱使用经FDA批准的设备。新增方法论：Wearable Health Feature Inflation（可穿戴健康功能夸大）。',
+        tags: ['辟谣','Apple Watch','血糖监测','健康谣言','Critical','FDA'],
+        sources: [
+          {name:'Bloomberg（Mark Gurman报道）', url:'https://www.bloomberg.com/news/newsletters/2026-05-18/apple-watch-blood-glucose-monitoring-2026-update'},
+          {name:'FDA设备数据库（无相关批准记录）', url:'https://www.fda.gov/medical-devices/in-vitro-diagnostics/home-use-tests'}
+        ],
+        verdict: 'Refuted',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260520-E-005',
+        category: '手机厂商动态',
+        title: '三星 Galaxy Z Fold 7 官方规格确认：215g · 展开4.2mm · 起售1999美元',
+        text: '三星Galaxy Z Fold 7官方规格经Samsung Galaxy Unpacked发布会确认：机身215克（较Fold 6减重约8g）；展开厚度4.2mm，创折叠旗舰最薄记录之一；起售价1999美元，较前代降价约100美元；铰链通过20万次折叠认证，寿命测试更严苛。这是折叠屏旗舰在轻薄化和价格策略上的重大进步，将对OPPO Find N6和华为Mate X7形成竞争压力。',
+        tags: ['三星','Galaxy Z Fold 7','折叠屏','官方规格','铰链'],
+        sources: [
+          {name:'Samsung Galaxy Unpacked 2026官方直播', url:'https://www.samsung.com/global/galaxy/events/unpacked/'},
+          {name:'GSMArena Galaxy Z Fold 7规格页', url:'https://www.gsmarena.com/samsung_galaxy_z_fold7-13456.php'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260520-E-014',
+        category: '手机厂商动态',
+        title: '三星 Galaxy S26 Ultra 首搭60W快充：三星Ultra系列充电速度历史性突破',
+        text: '三星Galaxy S26 Ultra搭载60W有线快充，是三星Ultra系列史上首次突破45W充电上限。这源于Samsung SDI新一代电池技术和优化的充电管理芯片。实测充电曲线与官方数据吻合，充满时间较S25 Ultra缩短约25分钟。对比：中国安卓旗舰已普遍实现80W-240W，三星60W仍显保守，但三星的充电健康管理（BMS）经多代验证，长期电池健康度较优。',
+        tags: ['三星','Galaxy S26 Ultra','60W快充','Samsung SDI','电池健康'],
+        sources: [
+          {name:'Android Authority（S26 Ultra快充实测）', url:'https://www.androidauthority.com/samsung-galaxy-s26-ultra-charging-speed-test/'},
+          {name:'PhoneArena快充对比', url:'https://www.phonearena.com/news/Phones-fast-charging-speeds-comparison_id125026'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260520-E-007',
+        category: '手机厂商动态',
+        title: 'OPPO Find N6 零折痕铰链：高度差≤0.05mm，百万次折叠认证，独立实验室验证',
+        text: 'OPPO Find N6铰链展开高度差≤0.05mm（肉眼不可见），已通过第三方独立实验室百万次折叠认证。核查路径：多家评测媒体拆解验证 + 第三方实验室数据交叉确认。这是折叠屏铰链工艺的重大突破——此前同类产品折痕高度差通常在0.1-0.3mm范围。结合三星Fold 7（20万次认证）和华为Mate X7，2026年折叠屏铰链耐久性竞争进入新阶段。',
+        tags: ['OPPO','Find N6','折叠屏','零折痕','铰链','实验室认证'],
+        sources: [
+          {name:'DXOMARK铰链评测（独立验证）', url:'https://www.dxomark.com/oppo-find-n6-test/'},
+          {name:'爱搞机（Find N6拆解报告）', url:'https://www.igao7.com/news/202605/find-n6-teardown.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260520-E-008',
+        category: '手机厂商动态',
+        title: 'vivo X300 Ultra：200MP 1/1.28" 索尼LYTIA 901主摄 + ZEISS 400mm APO超长焦全球发布',
+        text: 'vivo X300 Ultra规格（具体参数部分，不含营销绝对化声称）已验证：200MP 1/1.28英寸索尼LYTIA 901主摄（当前最大消费级移动传感器之一）；ZEISS合作APO级400mm超长焦（消弥色差设计）；全球版本同步发布。注意：vivo"重新定义手机摄影"的营销声称已被证伪（EQ 8.3），DxOMark评分未超越当前榜首。本条仅记录已验证规格，不含营销溢价评价。',
+        tags: ['vivo','X300 Ultra','200MP','索尼LYTIA 901','ZEISS','长焦','影像旗舰'],
+        sources: [
+          {name:'vivo官网 X300 Ultra规格页', url:'https://www.vivo.com/cn/products/x300ultra/overview'},
+          {name:'DXOMARK X300 Ultra测评', url:'https://www.dxomark.com/vivo-x300-ultra-test/'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260520-E-001',
+        category: '芯片',
+        title: '骁龙8 Elite Gen6 Pro 单价超330美元：TSMC N3P工艺成本传导，较Gen5涨约18%',
+        text: '多家供应链授权媒体（3源交叉）确认骁龙8 Elite Gen6 Pro芯片单价超330美元，较骁龙8 Elite Gen5（约280美元）涨幅约18%。涨价主因：台积电N3P（改进版3nm）工艺晶圆成本上升约12-15%；新架构面积增加约8%。成本传导预测：搭载骁龙8EG6 Pro的旗舰机型起售价预计上调约200-400元人民币。消费者参考：高价芯片不等于高价手机，品牌定价策略有较大差异空间。',
+        tags: ['骁龙8EG6','高通','芯片定价','TSMC N3P','供应链成本'],
+        sources: [
+          {name:'DigiTimes（供应链成本分析）', url:'https://www.digitimes.com/news/a20260518PD213/qualcomm-snapdragon-8-elite-gen6-pro-price.html'},
+          {name:'中关村在线（骁龙Gen6 Pro价格报道）', url:'https://mobile.zol.com.cn/1180/11806000.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260520-E-009',
+        category: '辟谣',
+        title: '❌ "vivo X300 Ultra重新定义手机摄影"——营销绝对化声称，DxOMark未登顶（EQ 8.3）',
+        text: '"重新定义手机摄影"属无可量化标准的营销绝对语言，核查结论：❌ Refuted（EQ 8.3）。① DxOMark当前评分榜首并非X300 Ultra；② "重新定义"未指定维度（解析力/低光/视频/色彩）；③ 历史参照：过去3年8款同类"重新定义"声称，独立测试均未全面验证。vivo X300 Ultra的具体硬件规格（200MP索尼LYTIA 901、ZEISS 400mm）属实（见E-008）。此案例命中逻辑谬误：Benchmark-Free Performance Supremacy（无基准的绝对性能声称）。',
+        tags: ['辟谣','vivo','营销绝对化','DxOMark','影像','无基准声称'],
+        sources: [
+          {name:'DxOMark手机评测排行榜', url:'https://www.dxomark.com/ranking/'},
+          {name:'vivo X300 Ultra官方发布会', url:'https://www.vivo.com/cn/products/x300ultra/overview'}
+        ],
+        verdict: 'Refuted',
+        wikiId: null
       }
     ]
   },
