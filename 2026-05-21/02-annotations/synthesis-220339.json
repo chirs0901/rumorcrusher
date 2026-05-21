@@ -1,0 +1,315 @@
+{
+  "generated_at": "2026-05-21T22:07:00+08:00",
+  "pipeline_run": "2026-05-21-evening",
+  "agents": ["fact-check", "pseudo-science", "logic", "sentiment"],
+  "items": [
+    {
+      "id": "RC-20260521-006",
+      "title": "CATL第三代神行电池：6分27秒充满，10C/15C倍率，循环1000次容量>90%",
+      "verdict": "Supported",
+      "confidence": 0.82,
+      "eq": 4,
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "CATL于2026年4月21日官方发布第三代神行超充电池，官方文件确认6min27s、0.25mΩ内阻、10C峰值充电倍率参数；1000次循环>90%来自官方白皮书。",
+        "sources_quality": "A",
+        "tsver": "high"
+      },
+      "pseudo_science": {
+        "flag": false,
+        "note": "参数有官方支持，电化学原理合理"
+      },
+      "logic": {
+        "fallacy": null,
+        "note": "数据完整，无逻辑跳跃"
+      },
+      "sentiment": {
+        "clickbait_score": 0.3,
+        "value_concerns": null
+      },
+      "digest_eligible": true,
+      "digest_category": "电池"
+    },
+    {
+      "id": "RC-20260521-001",
+      "title": "MediaTek天玑9600 GPU声称超A20 Pro和骁龙8 Elite Gen 6",
+      "verdict": "ConflictingEvidence",
+      "confidence": 0.55,
+      "eq": 2,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "evidence": "天玑9600为2026年Q4预计发布产品，当前无真机测试数据；宣传GPU超A20 Pro/骁龙8 Elite Gen 6均为未发布芯片，比较基于厂商声明而非独立测试。历史上MediaTek GPU宣传数字与实测存在差距。",
+        "sources_quality": "C",
+        "tsver": "low"
+      },
+      "pseudo_science": {
+        "flag": false,
+        "note": "技术声称合理但未经验证"
+      },
+      "logic": {
+        "fallacy": "Appeal to future performance（未实测提前宣称领先）",
+        "note": "比较对象（A20 Pro、骁龙8 Elite Gen 6）均未发布，无实测依据"
+      },
+      "sentiment": {
+        "clickbait_score": 0.75,
+        "value_concerns": "夸大性能声称，消费者可能被误导"
+      },
+      "digest_eligible": false,
+      "digest_category": null
+    },
+    {
+      "id": "RC-20260521-019",
+      "title": "三星Galaxy S26 Ultra改用索尼1/1.1英寸2亿像素主摄",
+      "verdict": "ConflictingEvidence",
+      "confidence": 0.65,
+      "eq": 3,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "evidence": "来自澎湃新闻和安兔兔的消息称S26 Ultra将改用索尼传感器，但属于供应链爆料，非三星官方确认。三星官方从未公布S26系列传感器供应商。信源可靠度中等，有待官方确认。",
+        "sources_quality": "B",
+        "tsver": "medium"
+      },
+      "pseudo_science": {
+        "flag": false,
+        "note": "传感器供应商更换在技术上完全合理"
+      },
+      "logic": {
+        "fallacy": null,
+        "note": "推理链完整，但依赖未经证实的供应链信息"
+      },
+      "sentiment": {
+        "clickbait_score": 0.45,
+        "value_concerns": null
+      },
+      "digest_eligible": true,
+      "digest_category": "芯片"
+    },
+    {
+      "id": "RC-20260521-027",
+      "title": "DDR4 8Gb颗粒从$3.2涨至$15，涨幅达369%",
+      "verdict": "Supported",
+      "confidence": 0.80,
+      "eq": 4,
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "TrendForce、DRAMeXchange及多家行业媒体确认2025年至2026年初DRAM价格大幅上涨；$3.2为2024年底低点，$15为2026年初现货高点，与多个交易平台数据吻合。涨幅计算正确（369%）。",
+        "sources_quality": "A",
+        "tsver": "high"
+      },
+      "pseudo_science": {
+        "flag": false,
+        "note": "价格数据有市场记录"
+      },
+      "logic": {
+        "fallacy": null,
+        "note": "数学计算正确，涨幅叙述准确"
+      },
+      "sentiment": {
+        "clickbait_score": 0.4,
+        "value_concerns": null
+      },
+      "digest_eligible": true,
+      "digest_category": "存储"
+    },
+    {
+      "id": "RC-20260521-009",
+      "title": "新型固态电池声称可实现数天手机续航",
+      "verdict": "Refuted",
+      "confidence": 0.85,
+      "eq": 1,
+      "fact_check": {
+        "label": "Refuted",
+        "evidence": "PhoneArena报道标题为'promises'（承诺），并非实测。目前消费级真正固态电池量产最早2027-2028年（业界共识），当前实验室原型体积/成本/循环寿命均不支持手机应用。'数天续航'属于严重夸大，无可信技术路线支撑。",
+        "sources_quality": "D",
+        "tsver": "low"
+      },
+      "pseudo_science": {
+        "flag": true,
+        "pattern": "miracle_tech_claim",
+        "note": "使用'数天续航'等极端化表述，符合科技伪新闻模式"
+      },
+      "logic": {
+        "fallacy": "Overgeneralization + Appeal to future technology",
+        "note": "将实验室原型的理论值等同于量产手机应用场景"
+      },
+      "sentiment": {
+        "clickbait_score": 0.90,
+        "value_concerns": "误导消费者对固态电池商业化时间线的预期"
+      },
+      "digest_eligible": true,
+      "digest_category": "辟谣"
+    },
+    {
+      "id": "RC-20260521-016",
+      "title": "台积电2nm良率超90%，月产能计划10万片",
+      "verdict": "Supported",
+      "confidence": 0.78,
+      "eq": 4,
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "SemiWiki、TrendForce、Dataconomy等多家半导体行业媒体均报道台积电N2良率快速提升，多数来源指向>85-90%区间；10万片/月产能目标来自台积电官方产能规划。参数一致性高。",
+        "sources_quality": "A",
+        "tsver": "high"
+      },
+      "pseudo_science": {
+        "flag": false,
+        "note": "半导体工艺参数，技术合理"
+      },
+      "logic": {
+        "fallacy": null,
+        "note": "逻辑严密，对比三星数据有量化依据"
+      },
+      "sentiment": {
+        "clickbait_score": 0.2,
+        "value_concerns": null
+      },
+      "digest_eligible": true,
+      "digest_category": "芯片"
+    },
+    {
+      "id": "RC-20260521-011",
+      "title": "华为Pura X Max搭载麒麟9030 Pro，性能提升30%，售价¥10999",
+      "verdict": "ConflictingEvidence",
+      "confidence": 0.60,
+      "eq": 3,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "evidence": "中华网/数字中国报道华为Pura X Max相关参数，但麒麟9030 Pro芯片型号未经华为官方确认；'性能提升30%'是常见厂商宣传口径，需具体说明是哪种性能、与哪代相比。¥10999价格待官方验证。",
+        "sources_quality": "C",
+        "tsver": "medium"
+      },
+      "pseudo_science": {
+        "flag": false,
+        "note": "无伪科学问题"
+      },
+      "logic": {
+        "fallacy": "Ambiguous benchmark（性能提升30%缺乏比较基准）",
+        "note": "性能提升声称缺乏明确定义"
+      },
+      "sentiment": {
+        "clickbait_score": 0.35,
+        "value_concerns": null
+      },
+      "digest_eligible": false,
+      "digest_category": null
+    },
+    {
+      "id": "RC-20260521-015",
+      "title": "三星2nm良率达55-60%，月产能2026年底达2.1万片",
+      "verdict": "Supported",
+      "confidence": 0.75,
+      "eq": 4,
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "TrendForce 2025年11月报告明确指出三星SF2工艺良率55-60%区间，多家半导体分析机构数据吻合；2.1万片/月产能目标来自三星官方产能规划文件。",
+        "sources_quality": "A",
+        "tsver": "high"
+      },
+      "pseudo_science": {"flag": false, "note": null},
+      "logic": {"fallacy": null, "note": "数据有权威来源"},
+      "sentiment": {"clickbait_score": 0.15, "value_concerns": null},
+      "digest_eligible": true,
+      "digest_category": "芯片"
+    },
+    {
+      "id": "RC-20260521-028",
+      "title": "多品牌手机3月起集体提价，存储采购成本同比涨超80%",
+      "verdict": "Supported",
+      "confidence": 0.83,
+      "eq": 4,
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "新浪财经、观察者网等主流财经媒体均有报道；手机厂商涨价消息与DRAM/NAND价格数据相互印证；80%同比涨幅与TrendForce数据一致。雷军公开发言进一步证实成本压力属实。",
+        "sources_quality": "A",
+        "tsver": "high"
+      },
+      "pseudo_science": {"flag": false, "note": null},
+      "logic": {"fallacy": null, "note": "因果链清晰"},
+      "sentiment": {"clickbait_score": 0.4, "value_concerns": null},
+      "digest_eligible": true,
+      "digest_category": "存储"
+    },
+    {
+      "id": "RC-20260521-021",
+      "title": "Apple Vision Pro M5 vs 三星Galaxy XR规格对比",
+      "verdict": "Supported",
+      "confidence": 0.88,
+      "eq": 5,
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "AppleInsider、Android Central、TechCrunch等多家主流科技媒体均报道两款头显规格，数据一致性高。Apple Vision Pro M5$3499、Galaxy XR $1799均已公开销售，规格可验证。",
+        "sources_quality": "A",
+        "tsver": "high"
+      },
+      "pseudo_science": {"flag": false, "note": null},
+      "logic": {"fallacy": null, "note": "对比维度清晰，无误导"},
+      "sentiment": {"clickbait_score": 0.25, "value_concerns": null},
+      "digest_eligible": true,
+      "digest_category": "AI创新"
+    },
+    {
+      "id": "RC-20260521-007",
+      "title": "硅碳负极电池2026年成主流，容量可储存锂离子量是石墨10倍",
+      "verdict": "Supported",
+      "confidence": 0.85,
+      "eq": 4,
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "硅负极储能密度是石墨10倍（3579mAh/g vs 372mAh/g）为电化学基础事实；2026年主流旗舰采用硅碳负极已被多家厂商确认（CATL、宁德产品已量产）。",
+        "sources_quality": "A",
+        "tsver": "high"
+      },
+      "pseudo_science": {"flag": false, "note": "基础电化学事实"},
+      "logic": {"fallacy": null, "note": null},
+      "sentiment": {"clickbait_score": 0.2, "value_concerns": null},
+      "digest_eligible": true,
+      "digest_category": "电池"
+    },
+    {
+      "id": "RC-20260521-024",
+      "title": "骁龙8 Elite Gen4 NPU 75 TOPS，苹果A18 Pro 35 TOPS，天玑9400超50 TOPS",
+      "verdict": "Supported",
+      "confidence": 0.76,
+      "eq": 4,
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "高通官方文件声明骁龙8 Elite NPU超75 TOPS；苹果Neural Engine 35 TOPS来自Apple官方；天玑9400 MediaTek官方文件声明超50 TOPS。三项数据均有原厂官方依据。",
+        "sources_quality": "B",
+        "tsver": "high"
+      },
+      "pseudo_science": {"flag": false, "note": null},
+      "logic": {"fallacy": null, "note": "TOPS数字需注意测量方法可能不统一"},
+      "sentiment": {"clickbait_score": 0.2, "value_concerns": null},
+      "digest_eligible": true,
+      "digest_category": "AI创新"
+    },
+    {
+      "id": "RC-20260521-012",
+      "title": "小米MIX Trifold三折叠预计2026年Q3亮相",
+      "verdict": "ConflictingEvidence",
+      "confidence": 0.65,
+      "eq": 3,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "evidence": "设备已通过认证（属实），但'Q3亮相'为推测，小米官方未确认发布时间表。",
+        "sources_quality": "B",
+        "tsver": "medium"
+      },
+      "pseudo_science": {"flag": false, "note": null},
+      "logic": {"fallacy": null, "note": "基于认证推测发布时间合理但有不确定性"},
+      "sentiment": {"clickbait_score": 0.35, "value_concerns": null},
+      "digest_eligible": false,
+      "digest_category": null
+    }
+  ],
+  "averitec_distribution": {
+    "Supported": 8,
+    "Refuted": 1,
+    "ConflictingEvidence": 4,
+    "NotEnoughEvidence": 0,
+    "total_high_priority": 13
+  },
+  "unr": 0.077,
+  "avg_eq": 3.62,
+  "digest_eligible_count": 9
+}

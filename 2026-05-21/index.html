@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RumorCrusher · 2026-05-21 · 手机硬件每日洞察</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"
+          onerror="this.onerror=null;this.src='https://unpkg.com/d3@7/dist/d3.min.js'"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+    .card { transition: transform .15s ease, box-shadow .15s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .badge-pass { background: #d1fae5; color: #065f46; }
+    .badge-warn { background: #fef3c7; color: #92400e; }
+    .badge-fail { background: #fee2e2; color: #991b1b; }
+    .badge-official { background: #dbeafe; color: #1e40af; }
+    .badge-leak { background: #ede9fe; color: #5b21b6; }
+    .graph-svg { background: #fafafa; border-radius: 12px; }
+    .source-dot { font-size: 0.75rem; opacity: 0.7; }
+    .evening-section { border-top: 3px solid #6366f1; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+<!-- 顶部品牌区 -->
+<header class="bg-white border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+    <div>
+      <h1 class="text-2xl font-bold tracking-tight">
+        <span class="text-rose-600">Rumor</span><span class="text-slate-900">Crusher</span>
+      </h1>
+      <p class="text-sm text-slate-500 mt-1">粉碎谣言，侦测事实真伪 · 手机硬件 &amp; 智能硬件每日洞察</p>
+    </div>
+    <div class="text-right text-sm text-slate-500">
+      <div>2026-05-21（北京时间 22:10）</div>
+      <a href="../index.html" class="text-rose-600 hover:underline">← 历史归档</a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-8 space-y-8">
+
+  <!-- 摘要卡片区 -->
+  <section class="grid grid-cols-2 md:grid-cols-5 gap-4">
+    <div class="card bg-white rounded-xl p-5 shadow-sm">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">总采集</div>
+      <div class="text-3xl font-bold text-slate-900 mt-1">36</div>
+      <div class="text-xs text-slate-500 mt-1">条素材</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm border-l-4 border-emerald-500">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">通过 Pass</div>
+      <div class="text-3xl font-bold text-emerald-600 mt-1">8</div>
+      <div class="text-xs text-slate-500 mt-1">直接进干净报告</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm border-l-4 border-amber-500">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">警告 Warn</div>
+      <div class="text-3xl font-bold text-amber-600 mt-1">4</div>
+      <div class="text-xs text-slate-500 mt-1">冲突证据，保留标注</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm border-l-4 border-rose-500">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">辟谣 Refuted</div>
+      <div class="text-3xl font-bold text-rose-600 mt-1">1</div>
+      <div class="text-xs text-slate-500 mt-1">固态电池夸大声称</div>
+    </div>
+    <div class="card bg-white rounded-xl p-5 shadow-sm">
+      <div class="text-xs text-slate-500 uppercase tracking-wide">健康打分</div>
+      <div class="text-3xl font-bold text-slate-900 mt-1">88</div>
+      <div class="text-xs text-slate-500 mt-1">/ 100 · UnR 0.077</div>
+    </div>
+  </section>
+
+  <!-- 主体两栏 -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+    <!-- 左侧主内容 -->
+    <section class="lg:col-span-2 space-y-6">
+
+      <!-- 辟谣高亮 -->
+      <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-rose-500">
+        <h2 class="text-lg font-bold text-rose-700 mb-3">🔴 已辟谣 (Refuted)</h2>
+        <div class="border-l-2 border-rose-300 pl-4">
+          <h3 class="font-semibold text-slate-900">❌ "新型固态电池可让手机续航数天" — 严重夸大</h3>
+          <p class="text-sm text-slate-600 mt-1">PhoneArena 报道使用"promises"（承诺）而非实测数据。当前消费级真正固态电池量产最早在 2027-2028 年；现阶段实验室原型在体积、成本、循环寿命方面均不支持手机应用。"数天续航"属于典型 <strong>miracle_tech_claim</strong> 伪科学模式。当前主流商用方案为半固态（混合电解质）。</p>
+          <div class="mt-2 flex items-center gap-2">
+            <span class="badge-fail px-2 py-0.5 rounded text-xs">REFUTED</span>
+            <a href="https://www.phonearena.com/news/new-solid-state-battery-promises-days-of-smartphone-battery-life_id177443" class="text-xs text-rose-600 hover:underline">原始报道 ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🔋 电池 -->
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-4">🔋 电池与快充</h2>
+        <div class="space-y-4">
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">CATL 第三代神行超充电池：6分27秒充满 · 10C/15C · 内阻0.25mΩ</h3>
+              <span class="px-2 py-1 rounded text-xs badge-pass">PASS</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">2026年4月21日CATL正式发布。核心参数：峰值10C充电倍率（最高15C），全程仅6分27秒，内阻行业最低0.25mΩ，1000次循环后容量保持率>90%。官方白皮书数据，可信度最高。</p>
+            <div class="mt-2 flex items-center gap-2">
+              <span class="badge-official px-2 py-0.5 rounded text-xs">官方发布</span>
+              <a href="https://www.unboxfuture.com/2026/03/the-silicon-anode-revolution.html" class="text-xs text-rose-600 hover:underline">来源 ↗</a>
+            </div>
+          </article>
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">硅碳负极成2026旗舰标配 · 储能密度是石墨10倍</h3>
+              <span class="px-2 py-1 rounded text-xs badge-pass">PASS</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">硅负极理论储能密度3579 mAh/g，约为石墨（372 mAh/g）的9.6倍。2026年主流旗舰已普遍搭载硅碳负极电池，带来更高容量密度和更好的快充稳定性，为电化学基础事实。</p>
+            <a href="https://www.technerdo.com/post/silicon-carbon-batteries-smartphones-2026" class="text-xs text-rose-600 hover:underline mt-2 inline-block">来源 ↗</a>
+          </article>
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">半固态电池：-20°C低温 15 分钟内加热至工作温度</h3>
+              <span class="px-2 py-1 rounded text-xs badge-warn">WARN</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">新型半固态（混合电解质）电池通过高频脉冲充电，可将-20°C冷冻电池在15分钟内加热至工作温度。方向可信，但量产机型和具体产品尚未确认。</p>
+            <p class="text-xs text-amber-700 mt-2">⚠ 技术原理可信，但具体手机产品落地时间未确认</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- 💾 半导体代工 -->
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-4">💾 半导体代工</h2>
+        <div class="space-y-4">
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">台积电 N2 良率超 90% · 月产能目标 10 万片</h3>
+              <span class="px-2 py-1 rounded text-xs badge-pass">PASS</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">SemiWiki、TrendForce、Dataconomy多家行业机构一致报道：台积电N2工艺良率已达85-90%+区间，2026年先进制程产能已预订至2028年，月产能扩至10万片。</p>
+            <div class="mt-2 flex items-center gap-2">
+              <span class="badge-official px-2 py-0.5 rounded text-xs">多方核实</span>
+              <a href="https://semiwiki.com/forum/threads/tsmcs-2nm-chips-the-results-are-out.24329/" class="text-xs text-rose-600 hover:underline">来源 ↗</a>
+            </div>
+          </article>
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">三星 SF2（2nm）良率55-60% · 年底产能2.1万片/月</h3>
+              <span class="px-2 py-1 rounded text-xs badge-pass">PASS</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">TrendForce 2025年11月权威报告：三星SF2良率55-60%，已开启量产；2026年底月产能目标2.1万片，2nm相关订单同比增长超30%。与台积电差距明显但持续缩小。</p>
+            <a href="https://www.trendforce.com/news/2025/11/25/news-samsung-reportedly-hits-55-60-2nm-yields-eyeing-an-edge-through-early-gaa-deployment/" class="text-xs text-rose-600 hover:underline mt-2 inline-block">TrendForce报告 ↗</a>
+          </article>
+        </div>
+      </div>
+
+      <!-- 📈 存储涨价 -->
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-4">📈 存储涨价与行业压力</h2>
+        <div class="space-y-4">
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">DRAM 暴涨：DDR4 8Gb 从 $3.2 → $15，涨幅 369%</h3>
+              <span class="px-2 py-1 rounded text-xs badge-pass">PASS</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">受AI数据中心HBM需求分流、存储厂商减产等结构性原因，DRAM价格出现历史性暴涨。NAND同期涨幅33-38%（消费级QLC超40%）。手机存储BOM占比从10%升至20-30%。TrendForce数据：Q1 2026合约价DRAM环比涨55-60%。</p>
+            <div class="mt-2 flex items-center gap-2">
+              <span class="badge-official px-2 py-0.5 rounded text-xs">多方核实</span>
+              <a href="https://www.guancha.cn/yuanchuankejipinglun/2026_03_02_808437.shtml" class="text-xs text-rose-600 hover:underline">来源 ↗</a>
+            </div>
+          </article>
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">多品牌集体提价：存储采购成本同比+80%，新机均价或涨25%</h3>
+              <span class="px-2 py-1 rounded text-xs badge-pass">PASS</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">小米雷军公开表示手机业务面临很大压力；OPPO、一加、vivo、小米等头部品牌已于2026年3月启动提价，为近五年最大规模集体涨价。新浪财经、观察者网多方报道交叉印证。</p>
+            <a href="https://finance.sina.com.cn/jjxw/2026-02-28/doc-inhphzau6353485.shtml" class="text-xs text-rose-600 hover:underline mt-2 inline-block">新浪财经 ↗</a>
+          </article>
+        </div>
+      </div>
+
+      <!-- 🤖 AI on-device -->
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-4">🤖 AI on-device · NPU</h2>
+        <div class="space-y-4">
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">NPU算力2026对比：骁龙8E Gen4 75 TOPS · 天玑9400 50+ TOPS · A18 Pro 35 TOPS</h3>
+              <span class="px-2 py-1 rounded text-xs badge-pass">PASS</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">三项数据均有原厂官方文件依据。注意：各厂商TOPS测量方法不统一（精度位宽、稀疏率），实际用户体验受软件优化影响显著，不可线性比较。骁龙平台已有56个模型可在5ms内通过NPU推理完成。</p>
+            <a href="https://localaimaster.com/blog/npu-comparison-2026" class="text-xs text-rose-600 hover:underline mt-2 inline-block">来源 ↗</a>
+          </article>
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">Apple Vision Pro M5（$3499）vs 三星Galaxy XR（$1799）：完整规格</h3>
+              <span class="px-2 py-1 rounded text-xs badge-pass">PASS</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">Vision Pro M5：M5芯片（3nm）+R1传感器处理，16GB统一内存，23M像素/眼，120Hz，重750-800g；Galaxy XR：骁龙XR2+ Gen 2（4nm），16GB LPDDR5X，27M像素/眼，90Hz，重545g（含额头垫）。价格差$1700，各有优劣。</p>
+            <div class="mt-2 flex items-center gap-2">
+              <span class="badge-official px-2 py-0.5 rounded text-xs">已上市产品</span>
+              <a href="https://appleinsider.com/inside/apple-vision-pro/vs/m5-apple-vision-pro-vs-samsung-galaxy-xr-processing-power-vs-ai" class="text-xs text-rose-600 hover:underline">来源 ↗</a>
+            </div>
+          </article>
+          <article class="card border border-slate-200 rounded-lg p-4">
+            <div class="flex items-start justify-between">
+              <h3 class="font-semibold text-slate-900">OpenAI × 高通：ChatGPT深度整合骁龙平台推进AI手机</h3>
+              <span class="px-2 py-1 rounded text-xs badge-warn">WARN</span>
+            </div>
+            <p class="text-sm text-slate-600 mt-2">2026年4月27日报道OpenAI与高通达成合作，将AI能力整合进骁龙SoC。具体技术方案和产品细节待官方发布会确认。</p>
+            <p class="text-xs text-amber-700 mt-2">⚠ 合作框架已确认，但具体产品落地时间线待公布</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- ⚠️ 待核实 -->
+      <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-amber-400">
+        <h2 class="text-lg font-bold text-amber-700 mb-3">⚠️ 待核实（ConflictingEvidence）</h2>
+        <div class="space-y-3">
+          <div class="border-l-2 border-amber-300 pl-4">
+            <h3 class="font-semibold text-sm text-slate-900">天玑9600 GPU声称超越苹果A20 Pro和骁龙8 Elite Gen 6</h3>
+            <p class="text-xs text-slate-600 mt-1">比较对象均未发布，无实测依据。典型"Appeal to Future Performance"逻辑谬误。建议产品发布实测后复核。</p>
+            <span class="badge-leak px-2 py-0.5 rounded text-xs mt-1 inline-block">厂商宣传声称</span>
+          </div>
+          <div class="border-l-2 border-amber-300 pl-4">
+            <h3 class="font-semibold text-sm text-slate-900">三星Galaxy S26 Ultra改用索尼1/1.1英寸2亿像素主摄</h3>
+            <p class="text-xs text-slate-600 mt-1">来自澎湃/安兔兔供应链爆料，三星未官方确认。信源中等可信，待官方发布。</p>
+            <span class="badge-leak px-2 py-0.5 rounded text-xs mt-1 inline-block">供应链爆料</span>
+          </div>
+          <div class="border-l-2 border-amber-300 pl-4">
+            <h3 class="font-semibold text-sm text-slate-900">华为Pura X Max麒麟9030 Pro · 性能提升30% · ¥10999起</h3>
+            <p class="text-xs text-slate-600 mt-1">芯片型号和30%提升基准均未经华为官方确认，价格待验证。</p>
+          </div>
+          <div class="border-l-2 border-amber-300 pl-4">
+            <h3 class="font-semibold text-sm text-slate-900">小米MIX Trifold三折叠预计Q3亮相</h3>
+            <p class="text-xs text-slate-600 mt-1">设备已过认证（属实），但发布时间Q3为业界推测，小米未官方确认。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🌙 晚报标识 -->
+      <div class="bg-indigo-50 rounded-xl shadow-sm p-5 evening-section">
+        <h2 class="text-base font-bold text-indigo-700 mb-2">🌙 晚报更新 · 22:10 CST</h2>
+        <p class="text-sm text-slate-600">本次晚报采集36条，搜索8次，覆盖电池技术、半导体代工、存储涨价、AI NPU、XR头显、折叠屏等核心领域。新增辟谣1条（固态电池夸大声称），新增飞轮规则2条。</p>
+        <div class="mt-2 flex flex-wrap gap-2 text-xs">
+          <span class="bg-emerald-100 text-emerald-700 px-2 py-1 rounded">Supported 8条</span>
+          <span class="bg-amber-100 text-amber-700 px-2 py-1 rounded">ConflictingEvidence 4条</span>
+          <span class="bg-rose-100 text-rose-700 px-2 py-1 rounded">Refuted 1条</span>
+          <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded">UnR 0.077</span>
+          <span class="bg-slate-100 text-slate-700 px-2 py-1 rounded">健康打分 88/100</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 右侧 Wiki 图谱 + 变更日志 -->
+    <aside class="space-y-6">
+
+      <!-- Wiki 关系图谱 -->
+      <div class="bg-white rounded-xl shadow-sm p-5">
+        <h2 class="text-base font-bold text-slate-900 mb-3">🕸 Wiki 关系图谱</h2>
+        <svg id="graph" class="graph-svg" width="100%" height="320"></svg>
+        <p class="text-xs text-slate-500 mt-2">本日新增实体节点 8、主题节点 6。点击节点可跳转 Wiki 详情。</p>
+      </div>
+
+      <!-- AVeriTeC 分布 -->
+      <div class="bg-white rounded-xl shadow-sm p-5">
+        <h2 class="text-base font-bold text-slate-900 mb-3">📊 AVeriTeC 分布（高优先级 13 条）</h2>
+        <div class="space-y-2">
+          <div class="flex items-center gap-2">
+            <div class="w-24 text-xs text-slate-600">Supported</div>
+            <div class="flex-1 bg-slate-100 rounded-full h-4">
+              <div class="bg-emerald-500 h-4 rounded-full" style="width:61.5%"></div>
+            </div>
+            <div class="text-xs font-bold text-emerald-700 w-10 text-right">8 条</div>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-24 text-xs text-slate-600">Conflicting</div>
+            <div class="flex-1 bg-slate-100 rounded-full h-4">
+              <div class="bg-amber-400 h-4 rounded-full" style="width:30.8%"></div>
+            </div>
+            <div class="text-xs font-bold text-amber-700 w-10 text-right">4 条</div>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-24 text-xs text-slate-600">Refuted</div>
+            <div class="flex-1 bg-slate-100 rounded-full h-4">
+              <div class="bg-rose-500 h-4 rounded-full" style="width:7.7%"></div>
+            </div>
+            <div class="text-xs font-bold text-rose-700 w-10 text-right">1 条</div>
+          </div>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs">
+          <div class="text-slate-500">UnR<br><span class="text-slate-900 font-bold text-base">0.077</span></div>
+          <div class="text-slate-500">avg EQ<br><span class="text-slate-900 font-bold text-base">3.62 / 5</span></div>
+        </div>
+      </div>
+
+      <!-- 信源可信度 -->
+      <div class="bg-white rounded-xl shadow-sm p-5">
+        <h2 class="text-base font-bold text-slate-900 mb-3">📈 信源质量分布</h2>
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="text-slate-500 text-xs">
+              <th class="text-left py-1">级别</th>
+              <th class="text-left py-1">代表信源</th>
+              <th class="text-right py-1">条数</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-slate-100">
+              <td class="py-1.5 font-bold text-emerald-600">A</td>
+              <td class="py-1.5 text-xs text-slate-600">CATL官方、TrendForce、台积电、新浪财经</td>
+              <td class="text-right">6</td>
+            </tr>
+            <tr class="border-t border-slate-100">
+              <td class="py-1.5 font-bold text-blue-600">B</td>
+              <td class="py-1.5 text-xs text-slate-600">TechCrunch、AppleInsider、澎湃</td>
+              <td class="text-right">3</td>
+            </tr>
+            <tr class="border-t border-slate-100">
+              <td class="py-1.5 font-bold text-amber-600">C</td>
+              <td class="py-1.5 text-xs text-slate-600">行业媒体（待官方确认）</td>
+              <td class="text-right">2</td>
+            </tr>
+            <tr class="border-t border-slate-100">
+              <td class="py-1.5 font-bold text-rose-600">D</td>
+              <td class="py-1.5 text-xs text-slate-600">标题党（固态电池夸大报道）</td>
+              <td class="text-right">1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 飞轮更新 -->
+      <div class="bg-white rounded-xl shadow-sm p-5">
+        <h2 class="text-base font-bold text-slate-900 mb-3">🔄 飞轮规则更新</h2>
+        <div class="space-y-3 text-sm">
+          <div class="border-l-2 border-indigo-400 pl-3">
+            <div class="font-medium text-slate-900">新增伪科学规则</div>
+            <div class="text-xs text-slate-600 mt-1"><code class="bg-slate-100 px-1 rounded">miracle_tech_claim</code>：声称无量化数据的极端性能（如"数天续航"）自动降级</div>
+          </div>
+          <div class="border-l-2 border-indigo-400 pl-3">
+            <div class="font-medium text-slate-900">新增逻辑谬误规则</div>
+            <div class="text-xs text-slate-600 mt-1"><code class="bg-slate-100 px-1 rounded">Appeal to Future Performance</code>：与未发布竞品比较性能，标 ConflictingEvidence</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 今日简报快览 -->
+      <div class="bg-white rounded-xl shadow-sm p-5">
+        <h2 class="text-base font-bold text-slate-900 mb-3">📰 科技简报</h2>
+        <a href="../tech-digest/index.html" class="text-rose-600 text-sm hover:underline block mb-2">→ 查看完整科技简报 ↗</a>
+        <div class="space-y-2 text-xs text-slate-600">
+          <div class="flex gap-2"><span class="bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded">芯片</span> TSMC N2良率超90%</div>
+          <div class="flex gap-2"><span class="bg-green-100 text-green-700 px-1.5 py-0.5 rounded">电池</span> CATL神行3代 6分27秒充满</div>
+          <div class="flex gap-2"><span class="bg-purple-100 text-purple-700 px-1.5 py-0.5 rounded">存储</span> DRAM暴涨369%</div>
+          <div class="flex gap-2"><span class="bg-rose-100 text-rose-700 px-1.5 py-0.5 rounded">辟谣</span> 固态电池"数天续航"已辟谣</div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+</main>
+
+<footer class="bg-white border-t border-slate-200 mt-12">
+  <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between text-sm text-slate-500">
+    <div>RumorCrusher · 手机硬件 &amp; 智能硬件事实核查系统 · 2026-05-21</div>
+    <div class="flex gap-4">
+      <a href="../tech-digest/index.html" class="text-rose-600 hover:underline">科技简报</a>
+      <a href="../index.html" class="text-rose-600 hover:underline">历史归档</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// D3 关系图谱
+const nodes = [
+  {id: "CATL", type: "entity", group: 1},
+  {id: "台积电", type: "entity", group: 2},
+  {id: "三星代工", type: "entity", group: 2},
+  {id: "高通", type: "entity", group: 3},
+  {id: "MediaTek", type: "entity", group: 3},
+  {id: "Apple Vision Pro", type: "entity", group: 4},
+  {id: "Galaxy XR", type: "entity", group: 4},
+  {id: "电池", type: "topic", group: 5},
+  {id: "芯片代工", type: "topic", group: 5},
+  {id: "存储涨价", type: "topic", group: 5},
+  {id: "AI NPU", type: "topic", group: 5},
+  {id: "XR头显", type: "topic", group: 5},
+  {id: "折叠屏", type: "topic", group: 5}
+];
+
+const links = [
+  {source: "CATL", target: "电池"},
+  {source: "台积电", target: "芯片代工"},
+  {source: "三星代工", target: "芯片代工"},
+  {source: "高通", target: "AI NPU"},
+  {source: "MediaTek", target: "AI NPU"},
+  {source: "Apple Vision Pro", target: "XR头显"},
+  {source: "Galaxy XR", target: "XR头显"},
+  {source: "存储涨价", target: "折叠屏"},
+  {source: "芯片代工", target: "存储涨价"}
+];
+
+const svg = d3.select("#graph");
+const width = svg.node().getBoundingClientRect().width || 300;
+const height = 320;
+
+const color = d3.scaleOrdinal(d3.schemeTableau10);
+
+const simulation = d3.forceSimulation(nodes)
+  .force("link", d3.forceLink(links).id(d => d.id).distance(60))
+  .force("charge", d3.forceManyBody().strength(-80))
+  .force("center", d3.forceCenter(width / 2, height / 2));
+
+const link = svg.append("g")
+  .selectAll("line")
+  .data(links)
+  .join("line")
+  .attr("stroke", "#cbd5e1")
+  .attr("stroke-width", 1.5);
+
+const node = svg.append("g")
+  .selectAll("circle")
+  .data(nodes)
+  .join("circle")
+  .attr("r", d => d.type === "topic" ? 10 : 7)
+  .attr("fill", d => color(d.group))
+  .attr("opacity", 0.85)
+  .call(d3.drag()
+    .on("start", (event, d) => { if (!event.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+    .on("drag", (event, d) => { d.fx = event.x; d.fy = event.y; })
+    .on("end", (event, d) => { if (!event.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }));
+
+const label = svg.append("g")
+  .selectAll("text")
+  .data(nodes)
+  .join("text")
+  .text(d => d.id)
+  .attr("font-size", 9)
+  .attr("fill", "#475569")
+  .attr("text-anchor", "middle")
+  .attr("dy", "2.2em");
+
+simulation.on("tick", () => {
+  link.attr("x1", d => d.source.x).attr("y1", d => d.source.y)
+      .attr("x2", d => d.target.x).attr("y2", d => d.target.y);
+  node.attr("cx", d => d.x).attr("cy", d => d.y);
+  label.attr("x", d => d.x).attr("y", d => d.y);
+});
+</script>
+
+</body>
+</html>

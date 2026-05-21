@@ -1,0 +1,368 @@
+{
+  "collected_at": "2026-05-21T22:03:39+08:00",
+  "run_type": "evening",
+  "search_count": 8,
+  "total_items": 36,
+  "items": [
+    {
+      "id": "RC-20260521-001",
+      "source": "notebookcheck.net",
+      "url": "https://www.notebookcheck.net/2nm-SoC-in-ChatGPT-powered-AI-phone-to-beat-iPhone-18-Pro-s-A20-Pro-Galaxy-S27-Ultra-s-Snapdragon-8-Elite-Gen-6-in-GPU.1296104.0.html",
+      "title": "MediaTek Dimensity 9600 2nm SoC 声称GPU超越 A20 Pro 和骁龙8 Elite Gen 6",
+      "claim": "MediaTek天玑9600采用台积电N2工艺，2+3+3全大核CPU，GPU性能宣称超越苹果A20 Pro和高通骁龙8 Elite Gen 6",
+      "category": "芯片",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260521-002",
+      "source": "qualcomm.cn",
+      "url": "https://www.qualcomm.cn/news/releases/2026/05/releases-2026-05-06",
+      "title": "高通5月发布两款全新骁龙移动平台",
+      "claim": "高通2026年5月6日推出两款全新骁龙移动平台，专注更快更流畅移动体验",
+      "category": "芯片",
+      "language": "zh",
+      "credibility_signal": "official"
+    },
+    {
+      "id": "RC-20260521-003",
+      "source": "icsmart.cn",
+      "url": "https://www.icsmart.cn/",
+      "title": "2nm代工成本上涨，高通联发科2026年面临价格压力",
+      "claim": "2nm工艺成本上涨导致高通和联发科在2026年面临更大价格压力",
+      "category": "产业链",
+      "language": "zh",
+      "credibility_signal": "industry_media"
+    },
+    {
+      "id": "RC-20260521-004",
+      "source": "cashify.in",
+      "url": "https://www.cashify.in/best-processor-for-mobile-phone-ranking-list",
+      "title": "骁龙8 Elite Gen 5 AnTuTu得分393万，2026年最强手机处理器",
+      "claim": "骁龙8 Elite Gen 5 AnTuTu得分3,932,397，Geekbench单核3642/多核11088",
+      "category": "芯片",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260521-005",
+      "source": "pconline.com.cn",
+      "url": "https://mobile.pconline.com.cn/2084/20847132.html",
+      "title": "内存芯片涨价引发2026手机行业危机：性价比机停产、新机涨价",
+      "claim": "内存芯片涨价导致部分性价比机型停产，骁龙8E中端机和512GB以上大容量版本受影响明显",
+      "category": "产业链",
+      "language": "zh",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260521-006",
+      "source": "unboxfuture.com",
+      "url": "https://www.unboxfuture.com/2026/03/the-silicon-anode-revolution.html",
+      "title": "CATL第三代神行电池：6分27秒充满，10C/15C倍率，循环1000次保容量>90%",
+      "claim": "CATL 2026年4月21日发布第三代神行电池：充电仅6分27秒，内阻0.25mΩ（行业最低），10C/15C倍率，1000次循环后容量保持>90%",
+      "category": "电池",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260521-007",
+      "source": "technerdo.com",
+      "url": "https://www.technerdo.com/post/silicon-carbon-batteries-smartphones-2026",
+      "title": "硅碳负极电池2026年成主流：容量提升、快充更安全",
+      "claim": "2026年主流旗舰手机普遍采用硅碳负极电池，硅负极可储存锂离子量是石墨的10倍，快充性能更优",
+      "category": "电池",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260521-008",
+      "source": "adamlobo.tv",
+      "url": "https://adamlobo.tv/solid-state-batteries-breakthrough-2026-guide",
+      "title": "消费电子固态电池量产最早2027-2028年",
+      "claim": "真正意义上的固态电池在消费电子产品中量产的现实时间线，最早是2027年末至2028年",
+      "category": "电池",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260521-009",
+      "source": "phonearena.com",
+      "url": "https://www.phonearena.com/news/new-solid-state-battery-promises-days-of-smartphone-battery-life_id177443",
+      "title": "新型固态电池声称可实现数天的手机续航",
+      "claim": "一款新型固态电池技术声称可使手机续航达到数天",
+      "category": "电池",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260521-010",
+      "source": "tmtpost.com",
+      "url": "https://www.tmtpost.com/7913256.html",
+      "title": "2026年手机厂商涌入折叠屏赛道",
+      "claim": "2026年手机厂商大量布局折叠屏产品，折叠屏成为行业新增长点",
+      "category": "折叠屏",
+      "language": "zh",
+      "credibility_signal": "industry_media"
+    },
+    {
+      "id": "RC-20260521-011",
+      "source": "digi.china.com",
+      "url": "https://digi.china.com/articles/20260515/202605151869999.html",
+      "title": "华为Pura X Max搭载麒麟9030 Pro，性能较前代提升30%，售价¥10999起",
+      "claim": "华为Pura X Max折叠屏手机搭载麒麟9030 Pro处理器，整机性能提升30%，12GB+256GB售价¥10999",
+      "category": "折叠屏",
+      "language": "zh",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260521-012",
+      "source": "sohu.com",
+      "url": "https://www.sohu.com/a/984910271_120951518",
+      "title": "小米首款三折叠MIX Trifold预计2026年第三季度发布",
+      "claim": "小米首款三折叠手机MIX Trifold通过认证，预计2026年Q3亮相，届时三折叠市场将形成华为、三星、小米三方竞争",
+      "category": "折叠屏",
+      "language": "zh",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260521-013",
+      "source": "zol.com.cn",
+      "url": "https://mobile.zol.com.cn/1113/11135605.html",
+      "title": "无折痕折叠屏突破量产，2026年旗舰新机将采用",
+      "claim": "无折痕折叠屏技术突破量产关口，即将在2026年旗舰手机上应用",
+      "category": "折叠屏",
+      "language": "zh",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260521-014",
+      "source": "pconline.com.cn",
+      "url": "https://mobile.pconline.com.cn/2033/20332653.html",
+      "title": "苹果首款折叠iPhone将至，IDC预测2026年折叠屏格局将被重塑",
+      "claim": "IDC预测苹果将推出首款折叠iPhone，采用横向内折设计，2026年秋季上市，将重塑折叠屏市场格局",
+      "category": "折叠屏",
+      "language": "zh",
+      "credibility_signal": "research_firm"
+    },
+    {
+      "id": "RC-20260521-015",
+      "source": "trendforce.com",
+      "url": "https://www.trendforce.com/news/2025/11/25/news-samsung-reportedly-hits-55-60-2nm-yields-eyeing-an-edge-through-early-gaa-deployment/",
+      "title": "三星2nm良率达55-60%，通过GAA工艺寻求竞争优势",
+      "claim": "三星2nm（SF2）工艺良率已提升至55-60%，2026年底月产能预计达2.1万片",
+      "category": "半导体",
+      "language": "en",
+      "credibility_signal": "research_firm"
+    },
+    {
+      "id": "RC-20260521-016",
+      "source": "semiwiki.com",
+      "url": "https://semiwiki.com/forum/threads/tsmcs-2nm-chips-the-results-are-out.24329/",
+      "title": "台积电2nm良率超90%，月产能计划达10万片",
+      "claim": "台积电2nm工艺良率已超过90%，2026年月产能计划扩充至10万片，远超三星",
+      "category": "半导体",
+      "language": "en",
+      "credibility_signal": "industry_media"
+    },
+    {
+      "id": "RC-20260521-017",
+      "source": "dataconomy.com",
+      "url": "https://dataconomy.com/2026/03/31/tsmcs-advanced-chip-capacity-is-booked-out-through-2028/",
+      "title": "台积电先进制程产能已预订至2028年",
+      "claim": "台积电先进制程（2nm/3nm）产能已全部预订至2028年",
+      "category": "半导体",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260521-018",
+      "source": "digitimes.com",
+      "url": "https://www.digitimes.com/news/a20260427PD214/tsmc-3nm-earnings-samsung-capacity.html",
+      "title": "台积电3nm扩产或使三星2nm竞争更加被动",
+      "claim": "台积电持续扩大3nm产能，对三星2nm竞争策略构成压力",
+      "category": "半导体",
+      "language": "en",
+      "credibility_signal": "industry_media"
+    },
+    {
+      "id": "RC-20260521-019",
+      "source": "thepaper.cn",
+      "url": "https://m.thepaper.cn/newsDetail_forward_31201191",
+      "title": "三星Galaxy S26 Ultra将搭载索尼1/1.1英寸2亿像素主摄",
+      "claim": "三星Galaxy S26 Ultra将首次转用索尼提供的1/1.1英寸200MP主摄，结束连续三代使用自家ISOCELL的历史",
+      "category": "影像",
+      "language": "zh",
+      "credibility_signal": "major_media"
+    },
+    {
+      "id": "RC-20260521-020",
+      "source": "antutu.com",
+      "url": "https://www.antutu.com/doc/134798.htm",
+      "title": "消息称三星S26 Ultra将搭载索尼1/1.1英寸2亿像素传感器",
+      "claim": "有消息来源称三星S26 Ultra主摄将改用索尼新款2亿像素传感器，底部规格1/1.1英寸",
+      "category": "影像",
+      "language": "zh",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260521-021",
+      "source": "appleinsider.com",
+      "url": "https://appleinsider.com/inside/apple-vision-pro/vs/m5-apple-vision-pro-vs-samsung-galaxy-xr-processing-power-vs-ai",
+      "title": "Apple Vision Pro M5 vs 三星Galaxy XR：规格对比",
+      "claim": "Apple Vision Pro M5售价$3499，搭载10核CPU+10核GPU M5芯片（3nm）；三星Galaxy XR售价$1799，搭载骁龙XR2+ Gen 2（4nm），分辨率更高但刷新率仅90Hz",
+      "category": "XR头显",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260521-022",
+      "source": "techcrunch.com",
+      "url": "https://techcrunch.com/2025/10/22/samsung-takes-on-apples-vision-pro-with-new-galaxy-xr-headset/",
+      "title": "三星Galaxy XR头显以$1799挑战Apple Vision Pro",
+      "claim": "三星Galaxy XR发布，售价$1799，重量545g（含额头垫），分辨率3552×3840/眼，16GB LPDDR5X内存",
+      "category": "XR头显",
+      "language": "en",
+      "credibility_signal": "major_media"
+    },
+    {
+      "id": "RC-20260521-023",
+      "source": "247wallst.com",
+      "url": "https://247wallst.com/investing/2026/04/27/openai-qualcomm-tie-up-signals-ai-smartphone-revolution-should-apple-be-worried/",
+      "title": "OpenAI与高通合作，推进AI手机革命",
+      "claim": "OpenAI与高通达成合作，将ChatGPT等AI能力深度整合进骁龙平台，打造AI手机新生态",
+      "category": "AI on-device",
+      "language": "en",
+      "credibility_signal": "finance_media"
+    },
+    {
+      "id": "RC-20260521-024",
+      "source": "localaimaster.com",
+      "url": "https://localaimaster.com/blog/npu-comparison-2026",
+      "title": "2026年NPU算力对比：骁龙75 TOPS，苹果A18 Pro 35 TOPS，天玑9400超50 TOPS",
+      "claim": "2026年主流SoC NPU算力：骁龙8 Elite Gen4为75 TOPS，苹果A18 Pro为35 TOPS，天玑9400超过50 TOPS，Google Tensor G5采用定制AI核心",
+      "category": "AI on-device",
+      "language": "en",
+      "credibility_signal": "tech_blog"
+    },
+    {
+      "id": "RC-20260521-025",
+      "source": "intelligentliving.co",
+      "url": "https://www.intelligentliving.co/qualcomm-3d-dram-npu-ai-phone/",
+      "title": "高通研发集成3D DRAM的独立NPU芯片，目标40 TOPS+4GB堆叠内存",
+      "claim": "高通正在研发一款用于Android手机的独立NPU芯片，集成3D DRAM，约40 TOPS算力和4GB堆叠内存，目标2026年末至2027年初",
+      "category": "AI on-device",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260521-026",
+      "source": "stcn.com",
+      "url": "https://www.stcn.com/article/detail/3662754.html",
+      "title": "雷军表示手机业务因内存涨价面临很大压力",
+      "claim": "小米雷军公开表示手机业务受内存芯片大幅涨价冲击，面临较大成本压力",
+      "category": "产业链",
+      "language": "zh",
+      "credibility_signal": "major_media"
+    },
+    {
+      "id": "RC-20260521-027",
+      "source": "guancha.cn",
+      "url": "https://www.guancha.cn/yuanchuankejipinglun/2026_03_02_808437.shtml",
+      "title": "内存涨价：DDR4 8Gb颗粒从$3.2涨至$15，涨幅达369%",
+      "claim": "DRAM价格暴涨，DDR4 8Gb颗粒从2025年低点$3.2飙升至$15，涨幅369%；手机存储成本占整机BOM比例从10%升至20-30%",
+      "category": "产业链",
+      "language": "zh",
+      "credibility_signal": "major_media"
+    },
+    {
+      "id": "RC-20260521-028",
+      "source": "finance.sina.com.cn",
+      "url": "https://finance.sina.com.cn/jjxw/2026-02-28/doc-inhphzau6353485.shtml",
+      "title": "存储涨价冲击2026年手机市场，多品牌3月起集体提价",
+      "claim": "OPPO、一加、vivo、小米等头部手机品牌将于3月起集体提价，为近五年最大规模涨价；手机存储采购成本同比已涨超80%",
+      "category": "产业链",
+      "language": "zh",
+      "credibility_signal": "major_media"
+    },
+    {
+      "id": "RC-20260521-029",
+      "source": "guancha.cn",
+      "url": "https://www.guancha.cn/economy/2026_02_26_808085.shtml",
+      "title": "头部手机品牌将再涨价，3月后新机均价或上调25%",
+      "claim": "头部手机品牌计划于2026年3月后将新机均价上调约25%",
+      "category": "产业链",
+      "language": "zh",
+      "credibility_signal": "major_media"
+    },
+    {
+      "id": "RC-20260521-030",
+      "source": "pconline.com.cn",
+      "url": "https://mobile.pconline.com.cn/1726/17269209.html",
+      "title": "移动影像新趋势：三星、索尼、豪威的创新之路",
+      "claim": "2026年移动影像传感器市场呈现三星ISOCELL、索尼IMX、豪威OVX三足鼎立竞争态势",
+      "category": "影像",
+      "language": "zh",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260521-031",
+      "source": "eet-china.com",
+      "url": "https://www.eet-china.com/mp/a449354.html",
+      "title": "2025-2027年DRAM/NAND价格走势：Q1 2026合约价DRAM涨55-60%，NAND涨33-38%",
+      "claim": "TrendForce预测：2026年Q1通用DRAM合约价环比涨55-60%，NAND闪存涨33-38%，消费级QLC涨幅不低于40%",
+      "category": "产业链",
+      "language": "zh",
+      "credibility_signal": "industry_media"
+    },
+    {
+      "id": "RC-20260521-032",
+      "source": "52audio.com",
+      "url": "https://www.52audio.com/archives/261631.html",
+      "title": "2026年TWS耳机技术演进：连接+声学+智慧三大底座深度融合",
+      "claim": "2026年TWS耳机进入全能型阶段，连接、声学、智慧功能深度整合，华为FreeBuds Pro 5和三星Galaxy Buds 4 Pro为代表产品",
+      "category": "智能配件",
+      "language": "zh",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260521-033",
+      "source": "pconline.com.cn",
+      "url": "https://mobile.pconline.com.cn/2092/20924792.html",
+      "title": "三星Galaxy Unpacked 2026年2月26日举行，S26系列携AI新品亮相",
+      "claim": "三星官宣Galaxy Unpacked发布会于2026年2月26日举行，Galaxy S26系列携全新AI功能亮相",
+      "category": "旗舰手机",
+      "language": "zh",
+      "credibility_signal": "official"
+    },
+    {
+      "id": "RC-20260521-034",
+      "source": "view.inews.qq.com",
+      "url": "https://view.inews.qq.com/a/20260104A02ZIE00",
+      "title": "曝国内手机厂商将全面转向联发科天玑系列处理器",
+      "claim": "有报道称国内主要手机厂商计划2026年将旗舰/中高端产品线全面转向天玑系列",
+      "category": "芯片",
+      "language": "zh",
+      "credibility_signal": "industry_media"
+    },
+    {
+      "id": "RC-20260521-035",
+      "source": "techgenyz.com",
+      "url": "https://techgenyz.com/smartphone-batteries-silicon-carbon-fast-charging/",
+      "title": "半固态电池半固态电解质：-20°C低温15分钟加热至工作温度",
+      "claim": "新型半固态电池采用混合电解质（固态聚合物+5-10%液体/凝胶溶剂），通过高频脉冲充电可在15分钟内将-20°C低温电池加热至工作温度",
+      "category": "电池",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260521-036",
+      "source": "stcn.com",
+      "url": "https://www.stcn.com/article/detail/1916755.html",
+      "title": "智能穿戴攻克关键难题，机构看好龙头成长潜力",
+      "claim": "智能穿戴设备（手表/耳机）在续航、健康监测、连接稳定性等关键技术上取得重要突破",
+      "category": "智能配件",
+      "language": "zh",
+      "credibility_signal": "industry_media"
+    }
+  ]
+}
