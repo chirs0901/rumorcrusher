@@ -53,6 +53,10 @@ a{color:inherit;text-decoration:none}
 .card-foot{padding:12px 22px;border-top:1px solid #eee;display:flex;align-items:center;justify-content:space-between;gap:8px}
 .verdict{font-size:10px;font-weight:700;letter-spacing:.06em;padding:3px 8px;border-radius:4px}
 .v-sup{background:rgba(0,150,80,.1);color:#006633}
+.v-ref{background:rgba(200,16,46,.1);color:#a8102e}
+.card-img-wrap{margin:4px -22px 6px;overflow:hidden;background:#f7f7f4}
+.card-img{width:100%;height:auto;max-height:220px;object-fit:cover;display:block;transition:transform .25s}
+.card-img:hover{transform:scale(1.02)}
 .wiki-link{font-size:10px;font-weight:600;color:#c8102e;padding:3px 8px;border:1px solid rgba(200,16,46,.3);border-radius:4px;transition:all .15s}
 .wiki-link:hover{background:#c8102e;color:#fff;border-color:#c8102e}
 
@@ -112,7 +116,8 @@ var CAT_COLORS = {
   '屏显':         '#7b3fa0',
   '散热':         '#e07b00',
   '存储供应':     '#0088aa',
-  'AI行业重磅':   '#7c3aed'
+  'AI行业重磅':   '#7c3aed',
+  '辟谣':         '#555555'
 };
 
 // ── WIKI MAP (带时间戳绕开浏览器缓存) ───────────────────────────
@@ -131,6 +136,104 @@ var WIKI_MAP = {
 
 // ── DATA ──────────────────────────────────────────────────────
 var DATA = {
+
+  // ══════════════════════════════════
+  '2026-05-22': {
+    title: '小米17 Max 8000mAh官方发布 · 索尼首款200MP LYTIA 901 · 骁龙6/4 Gen 5 · SID 2026 OLED · DRAM涨价130% · 天玑9600 GPU声称辟谣',
+    sub: '日报32条素材 · 14 Supported · 1 Refuted · 13 ConflictingEvidence · avg EQ 3.41 · UnR 0.031 · 健康86分。重点：小米17 Max官方确认规格（8000mAh硅碳+200MP徕卡，5月25日4299元开售）；索尼LYTIA 901首款200MP 1/1.12英寸传感器；高通骁龙6/4 Gen 5正式发布；SID 2026中国企业无痕折叠OLED突破；Gartner确认DRAM年底涨130%；天玑9600 GPU比较声称成功辟谣（预发布多芯比较新模式）。',
+    stats: [
+      {v:'32', l:'条采集'},
+      {v:'1',  l:'条 Refuted'},
+      {v:'14', l:'条 Supported'},
+      {v:'86', l:'健康打分'}
+    ],
+    items: [
+      {
+        id: 'RC-20260522-REFUTED-001',
+        category: '辟谣',
+        title: '❌ 天玑9600 GPU声称超越A20 Pro和骁龙8 Elite Gen 6——三款均未发布，无实测依据',
+        text: '某报道声称天玑9600 GPU性能超越苹果A20 Pro和高通骁龙8 Elite Gen 6，属于"预发布多芯比较"谬误（Appeal to Future Performance）。❌ Refuted（EQ 1/5，clickbait_score 0.85）。核查结论：三款芯片在2026年5月均未正式发布，均无任何独立Benchmark实测数据，任何比较均无效。历史上联发科GPU宣传数字与独立测试存在差距（天玑9300等案例）。消费者应等待产品发布后的AnTuTu/Geekbench/3DMark独立评测数据，不应根据预发布宣传做出购机决策。',
+        tags: ['辟谣','天玑9600','GPU性能','预发布声称','Appeal to Future Performance'],
+        sources: [
+          {name:'Notebookcheck（原始报道，含推测措辞）', url:'https://www.notebookcheck.net/2nm-SoC-in-ChatGPT-powered-AI-phone-to-beat-iPhone-18-Pro-s-A20-Pro-Galaxy-S27-Ultra-s-Snapdragon-8-Elite-Gen-6-in-GPU.1296104.0.html'},
+          {name:'Gizmochina（骁龙8 Elite Gen 6规格综述）', url:'https://www.gizmochina.com/2026/05/20/snapdragon-8-elite-gen-6-specs-benchmarks-and-more/'}
+        ],
+        verdict: 'Refuted'
+      },
+      {
+        id: 'RC-20260522-001',
+        category: '手机厂商动态',
+        title: '小米17 Max官方确认：8000mAh硅碳电池+徕卡200MP，4299元起，5月25日开售',
+        text: '小米官方确认17 Max核心规格：骁龙8 Elite Gen 5处理器，徕卡200MP主摄（1/1.4英寸传感器），8000mAh硅碳负极电池（支持100W有线+50W无线快充），6.9英寸Super Pixel屏。为小米迄今最大容量电池手机，国补后4299元起，2026年5月25日上午10时正式开售。GSMArena、Gizmochina及小米官方多信源高度一致，信源质量A级。Verdict：✅ Supported（EQ 5/5）',
+        tags: ['小米17 Max','硅碳电池','8000mAh','徕卡200MP','骁龙8 Elite Gen 5'],
+        sources: [
+          {name:'GSMArena（规格报道）', url:'https://www.gsmarena.com/xiaomi_17_max_arrives_with_200mp_main_cam_and_8000_mah_sic_battery_-news-72937.php', official:false},
+          {name:'Gizmochina（官方确认规格）', url:'https://www.gizmochina.com/2026/05/14/xiaomi-17-max-key-specs-officially-confirmed/', official:true}
+        ],
+        verdict: 'Supported'
+      },
+      {
+        id: 'RC-20260522-002',
+        category: '芯片',
+        title: '高通骁龙6 Gen 5 / 4 Gen 5正式发布：4nm工艺，2026年H2搭载终端上市',
+        text: '高通于2026年5月7日正式发布骁龙6 Gen 5和骁龙4 Gen 5两款中端移动平台，均采用4nm工艺，面向中端及中低端手机市场。搭载终端设备将于2026年下半年推出。这是高通本年度首次中端芯片正式发布，意味着2026年H2中端手机将迎来新一轮换代周期。高通官网中文新闻稿确认，信源质量A级。Verdict：✅ Supported（EQ 5/5）',
+        tags: ['高通','骁龙6 Gen 5','骁龙4 Gen 5','4nm','中端芯片'],
+        sources: [
+          {name:'高通官网（中文新闻稿）', url:'https://www.qualcomm.cn/news', official:true},
+          {name:'新浪科技（报道）', url:'https://finance.sina.com.cn/tech/digi/2026-05-07/doc-inhxaaie7762536.shtml', official:false}
+        ],
+        verdict: 'Supported'
+      },
+      {
+        id: 'RC-20260522-003',
+        category: '影像',
+        title: '索尼LYTIA 901：全球首款1/1.12英寸200MP手机传感器，QQBC+AI去马赛克引擎',
+        text: '索尼推出LYTIA 901，是其首款200MP手机CMOS传感器，同时也是全球最大尺寸200MP传感器（1/1.12英寸）。核心技术：0.7μm像素、Quad-Quad Bayer Coding 16合1结构（适用超低光场景）、内置AI去马赛克引擎，支持4倍传感器内变焦并保持细节。TechInsights专业拆解分析确认规格，挑战三星ISOCELL HP系列的高端市场地位。预计OPPO Find X9 Ultra和vivo X300 Ultra首发（供应链信息，非官方确认）。Verdict：✅ Supported（EQ 4/5）',
+        tags: ['索尼LYTIA 901','200MP','CMOS传感器','QQBC','影像旗舰'],
+        sources: [
+          {name:'TechInsights专业分析', url:'https://www.techinsights.com/blog/sony-launches-first-200mp-smartphone-sensor-lytia-901', official:true},
+          {name:'TechRadar报道', url:'https://www.techradar.com/phones/sony-just-launched-the-worlds-largest-200mp-smartphone-sensor-heres-which-phones-could-get-it', official:false}
+        ],
+        verdict: 'Supported'
+      },
+      {
+        id: 'RC-20260522-004',
+        category: '屏幕',
+        title: 'SID 2026：天马折痕≤50μm无痕折叠屏，TCL华星28英寸印刷OLED展开厚4.48mm',
+        text: 'SID国际显示周（2026年5月5-7日，洛杉矶）：中国企业集中展示新一代显示技术。天马展示6.32英寸无痕折叠屏（折痕深度≤50μm，业界先进水平）；TCL华星展示首款28英寸印刷OLED折叠便携桌面屏（展开厚4.48mm，无彩边稳定广色域）；BOE、维信诺同步展示无折痕OLED方案。中国8.6代OLED产能加速落地，中韩OLED博弈进入关键博弈期（2026-2028年）。Verdict：✅ Supported（EQ 4/5）',
+        tags: ['SID 2026','无痕折叠屏','印刷OLED','天马','TCL华星'],
+        sources: [
+          {name:'新浪财经·SID 2026报道', url:'https://finance.sina.com.cn/tech/roll/2026-05-06/doc-inhwyiyc8964810.shtml', official:false},
+          {name:'证券时报', url:'https://www.stcn.com/article/detail/3897191.html', official:false}
+        ],
+        verdict: 'Supported'
+      },
+      {
+        id: 'RC-20260522-005',
+        category: '存储供应',
+        title: 'Gartner确认：DRAM价格2026年底上涨130%，全球手机出货量降8.4%',
+        text: 'Gartner官方新闻稿（2026年2月26日）确认：AI服务器HBM需求爆发使三大存储厂（三星/SK海力士/美光）产能向AI企业级内存转移，导致2026年底DRAM+SSD综合价格上涨130%，手机均价上升13%，全球智能手机出货量下降8.4%。IDC、TrendForce（Q1 DRAM环比+80-90%）、Counterpoint四重权威机构数据相互印证，消费者应预期2026年手机价格普遍上涨。Verdict：✅ Supported（EQ 4/5）',
+        tags: ['DRAM涨价','内存短缺','AI芯片','手机价格','供应链'],
+        sources: [
+          {name:'Gartner官方新闻稿', url:'https://www.gartner.com/en/newsroom/press-releases/2026-02-26-gartner-says-surging-memory-costs-will-reduce-global-pc-and-smartphone-shipments-in-2026', official:true},
+          {name:'IDC内存危机分析', url:'https://www.idc.com/resource-center/blog/global-memory-shortage-crisis-market-analysis-and-the-potential-impact-on-the-smartphone-and-pc-markets-in-2026/', official:true}
+        ],
+        verdict: 'Supported'
+      },
+      {
+        id: 'RC-20260522-006',
+        category: '电池',
+        title: '硅碳电池2026年能量密度突破900 Wh/L，中国品牌容量提升30-50%，领先西方两年',
+        text: 'IEEE Spectrum确认Enovix量产硅负极电池突破900 Wh/L。Tom's Guide专访荣耀/一加研发团队：中国旗舰（小米17 Max 8000mAh、一加/vivo等）已规模采用硅碳电池，容量较传统锂电提升30-50%，同等厚度下可实现更大容量，快充稳定性更优。苹果/谷歌最早2027年才能广泛跟进。三星新旗舰向硅碳转型的声称来自媒体推测，官方未正式确认。Verdict：✅ Supported（EQ 4/5）',
+        tags: ['硅碳电池','900 Wh/L','快充','中国旗舰','电池技术'],
+        sources: [
+          {name:'IEEE Spectrum（Enovix硅负极分析）', url:'https://spectrum.ieee.org/enovix-silicon-anode-battery-smartphone', official:true},
+          {name:"Tom's Guide（荣耀/一加专访）", url:'https://www.tomsguide.com/phones/i-interviewed-honor-and-oneplus-about-their-silicon-carbon-battery-tech-apple-and-google-are-quickly-falling-behind', official:false}
+        ],
+        verdict: 'Supported'
+      }
+    ]
+  },
 
   // ══════════════════════════════════
   '2026-05-21': {
@@ -1196,12 +1299,19 @@ var activeCat = '全部';
 var CAT_ORDER = ['手机厂商动态','芯片','电池','屏显','散热','存储供应','AI行业重磅'];
 function getCategories(date) {
   var present = {};
-  DATA[date].items.forEach(function(i) { present[i.category] = true; });
-  var cats = CAT_ORDER.filter(function(c) { return present[c]; });
-  // 兜底：有未知分类也显示
+  var hasRefuted = false;
   DATA[date].items.forEach(function(i) {
+    if (i.verdict === 'Refuted') { hasRefuted = true; return; }
+    present[i.category] = true;
+  });
+  var cats = CAT_ORDER.filter(function(c) { return present[c]; });
+  // 兜底：未知分类（不含已被识别为辟谣的）也显示
+  DATA[date].items.forEach(function(i) {
+    if (i.verdict === 'Refuted') return;
     if (CAT_ORDER.indexOf(i.category) === -1 && cats.indexOf(i.category) === -1) cats.push(i.category);
   });
+  // 辟谣单独放最后
+  if (hasRefuted) cats.push('辟谣');
   return ['全部'].concat(cats);
 }
 
@@ -1233,7 +1343,10 @@ function renderFilters() {
 
 function renderGrid() {
   var items = DATA[activeDate].items.filter(function(i) {
-    return activeCat === '全部' || i.category === activeCat;
+    var isRefuted = (i.verdict === 'Refuted');
+    if (activeCat === '全部')   return true;
+    if (activeCat === '辟谣')   return isRefuted;
+    return !isRefuted && i.category === activeCat;
   });
   var grid = document.getElementById('grid');
   var empty = document.getElementById('empty');
@@ -1241,7 +1354,10 @@ function renderGrid() {
   empty.style.display = 'none';
 
   grid.innerHTML = items.map(function(item) {
-    var c = CAT_COLORS[item.category] || '#c8102e';
+    var isRefuted = (item.verdict === 'Refuted');
+    // 辟谣条目用统一颜色，其它走原 category
+    var c = isRefuted ? CAT_COLORS['辟谣'] : (CAT_COLORS[item.category] || '#c8102e');
+    var kicker = isRefuted ? ('辟谣 · ' + item.category) : item.category;
 
     // wiki button
     var wikiBtn = (item.wikiId && WIKI_MAP[item.wikiId])
@@ -1252,6 +1368,14 @@ function renderGrid() {
     var tags = item.tags.map(function(t) {
       return '<span class="tag">' + t + '</span>';
     }).join('');
+
+    // product image (新品 / 新器件)
+    var imgHtml = '';
+    if (item.image) {
+      imgHtml = '<div class="card-img-wrap"><img class="card-img" src="'
+        + item.image + '" alt="' + (item.title || '').replace(/"/g, '&quot;')
+        + '" loading="lazy" onerror="this.parentNode.style.display=\'none\'"></div>';
+    }
 
     // sources
     var srcsHtml = '';
@@ -1265,16 +1389,20 @@ function renderGrid() {
         + '</div>';
     }
 
+    var verdictClass = isRefuted ? 'v-ref' : 'v-sup';
+    var verdictIcon  = isRefuted ? '✗ ' : '✓ ';
+
     return '<div class="card">'
       + '<div class="card-top" style="background:' + c + '"></div>'
       + '<div class="card-body">'
-      + '<div class="card-kicker">' + item.category + '</div>'
+      + '<div class="card-kicker" style="color:' + c + '">' + kicker + '</div>'
       + '<div class="card-title">' + item.title + '</div>'
+      + imgHtml
       + '<div class="card-text">' + item.text + '</div>'
       + '<div class="card-tags">' + tags + '</div>'
       + '</div>'
       + '<div class="card-foot">'
-      + '<span class="verdict v-sup">✓ ' + item.verdict + '</span>'
+      + '<span class="verdict ' + verdictClass + '">' + verdictIcon + item.verdict + '</span>'
       + wikiBtn
       + '</div>'
       + srcsHtml

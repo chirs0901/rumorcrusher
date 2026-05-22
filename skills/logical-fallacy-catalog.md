@@ -72,3 +72,17 @@
 **定义**：以尚未发布/量产的产品性能作为当前宣传依据，无法被当前实测验证
 **典型案例**：天玑9600宣称GPU超越苹果A20 Pro（A20 Pro未发布，无实测数据）
 **处置**：ConflictingEvidence + 注记"厂商声称，待产品发布后实测验证"
+
+## 2026-05-22 新增条目
+
+### 预发布多芯比较（Pre-Release Multi-Chip Comparison）
+**定义**：将多款均未发布的芯片进行相互性能比较，且所有被比较产品均无实测Benchmark数据
+**与 Appeal to Future Performance 的区别**：后者仅涉及单一产品声称最优；本模式涉及至少3款均未发布产品的相互比较，可信度更低
+**典型案例**：天玑9600 GPU声称超越A20 Pro和骁龙8 Elite Gen 6（三款均未发布，RC-20260522-002）
+**严重程度**：高——直接标记 Refuted（非ConflictingEvidence）
+**检测信号**：比较双方均为"预计X季度发布"状态 + 无任何实测Benchmark链接
+
+### 市场份额信源不透明（Opaque Market Share Sourcing）
+**定义**：报道援引市场排名/出货量数据但未指明来源机构（IDC/Counterpoint/Canalys/TrendForce）
+**处置**：降至C级信源，标记ConflictingEvidence，备注"需对照原始报告"
+**典型案例**：RC-20260522-018（华为Q1中国市场第一，未标明数据来源机构）

@@ -1,0 +1,328 @@
+{
+  "collected_at": "2026-05-22T15:33:37+08:00",
+  "run_type": "daily",
+  "search_count": 11,
+  "total_items": 32,
+  "items": [
+    {
+      "id": "RC-20260522-001",
+      "source": "gizmochina.com",
+      "url": "https://www.gizmochina.com/2026/05/20/snapdragon-8-elite-gen-6-specs-benchmarks-and-more/",
+      "title": "骁龙8 Elite Gen 6规格曝光：2nm TSMC N2P、5GHz主频、Adreno 845 GPU",
+      "claim": "高通骁龙8 Elite Gen 6采用台积电2nm N2P工艺，2+3+3 CPU布局，主频接近5GHz，Adreno 845 GPU，16MB L2缓存，支持LPDDR5X内存和UFS 5.0，预计2026年9月发布",
+      "category": "芯片",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260522-002",
+      "source": "notebookcheck.net",
+      "url": "https://www.notebookcheck.net/2nm-SoC-in-ChatGPT-powered-AI-phone-to-beat-iPhone-18-Pro-s-A20-Pro-Galaxy-S27-Ultra-s-Snapdragon-8-Elite-Gen-6-in-GPU.1296104.0.html",
+      "title": "天玑9600 2nm声称GPU超越A20 Pro和骁龙8 Elite Gen 6，OpenAI旗舰手机搭载",
+      "claim": "联发科天玑9600采用台积电N2工艺，声称GPU性能超越苹果A20 Pro和高通骁龙8 Elite Gen 6，将为OpenAI首款手机提供算力支持",
+      "category": "芯片",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260522-003",
+      "source": "finance.sina.com.cn",
+      "url": "https://finance.sina.com.cn/tech/digi/2026-05-07/doc-inhxaaie7762536.shtml",
+      "title": "高通正式发布骁龙6 Gen 5 / 4 Gen 5，终端设备2026H2推出",
+      "claim": "高通于2026年5月7日正式发布骁龙6 Gen 5和骁龙4 Gen 5两款移动平台，均基于4nm工艺，搭载终端设备将于2026年下半年推出",
+      "category": "芯片",
+      "language": "zh",
+      "credibility_signal": "official"
+    },
+    {
+      "id": "RC-20260522-004",
+      "source": "finance.sina.com.cn",
+      "url": "https://finance.sina.com.cn/tech/mobile/n/n/2026-05-13/doc-inhxtqxn9355055.shtml",
+      "title": "联发科天玑开发者大会2026：推出AI智能体化引擎2.0，部署效率提升50%",
+      "claim": "联发科于2026年5月13日召开MDDC 2026，发布天玑AI智能体化引擎2.0和天玑AI开发套件3.0，模型部署与调优效率提升50%，压缩率提升最高58%",
+      "category": "芯片",
+      "language": "zh",
+      "credibility_signal": "official"
+    },
+    {
+      "id": "RC-20260522-005",
+      "source": "digitimes.com",
+      "url": "https://www.digitimes.com/news/a20260414VL205/samsung-2nm-yield-rate-production-tsmc.html",
+      "title": "三星2nm良率仍低于量产门槛，约55%，落后台积电约10个百分点",
+      "claim": "2026年4月13日报告显示三星2nm良率约55%，仍未达到量产门槛，落后台积电（60-70%）约10个百分点",
+      "category": "产业链",
+      "language": "en",
+      "credibility_signal": "industry_media"
+    },
+    {
+      "id": "RC-20260522-006",
+      "source": "dataconomy.com",
+      "url": "https://dataconomy.com/2026/03/31/tsmcs-advanced-chip-capacity-is-booked-out-through-2028/",
+      "title": "台积电先进产能预订满至2028年，2nm良率60-70%，客户包括苹果/英伟达/AMD/高通",
+      "claim": "台积电2nm N2工艺良率达到60-70%，已进入量产阶段，先进产能预订满至2028年，主要客户为苹果、英伟达、AMD、高通",
+      "category": "产业链",
+      "language": "en",
+      "credibility_signal": "industry_media"
+    },
+    {
+      "id": "RC-20260522-007",
+      "source": "finance.sina.com.cn",
+      "url": "https://finance.sina.com.cn/tech/roll/2026-05-06/doc-inhwyiyc8964810.shtml",
+      "title": "中韩OLED在SID 2026「斗法」，未来两三年是双方博弈关键期",
+      "claim": "在SID 2026显示周（5月5-7日），中国企业展示印刷折叠OLED、无金属掩膜版OLED、柔性无痕OLED等新技术，竞争核心已转向AI与新应用融合，中国8.6代OLED产能逐步落地",
+      "category": "屏幕",
+      "language": "zh",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260522-008",
+      "source": "stcn.com",
+      "url": "https://www.stcn.com/article/detail/3897191.html",
+      "title": "天马6.32英寸无痕折叠屏折痕深度≤50μm，BOE/TCL华星同步展示",
+      "claim": "SID 2026上天马展示6.32英寸无痕折叠屏，折痕深度≤50微米；京东方、TCL华星、维信诺同步展示无折痕OLED柔性显示技术；TCL华星展示28英寸印刷OLED折叠显示屏，展开厚度4.48mm",
+      "category": "屏幕",
+      "language": "zh",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260522-009",
+      "source": "gsmarena.com",
+      "url": "https://www.gsmarena.com/xiaomi_17_max_arrives_with_200mp_main_cam_and_8000_mah_sic_battery_-news-72937.php",
+      "title": "小米17 Max正式发布：200MP徕卡主摄+8000mAh硅碳电池，骁龙8 Elite Gen 5，4299元起",
+      "claim": "小米17 Max搭载骁龙8 Elite Gen 5，配备200MP徕卡主摄（1/1.4英寸传感器），8000mAh硅碳电池（100W有线+50W无线快充），6.9英寸1.5K屏，5月25日开售，4299元起",
+      "category": "手机厂商动态",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260522-010",
+      "source": "gizmochina.com",
+      "url": "https://www.gizmochina.com/2026/05/14/xiaomi-17-max-key-specs-officially-confirmed/",
+      "title": "小米官方确认小米17 Max关键规格，8000mAh硅碳电池为小米史上最大",
+      "claim": "小米官方确认17 Max搭载8000mAh硅碳负极电池，徕卡200MP三摄，6.9英寸Super Pixel显示屏，为小米迄今最大容量手机电池",
+      "category": "手机厂商动态",
+      "language": "en",
+      "credibility_signal": "official"
+    },
+    {
+      "id": "RC-20260522-011",
+      "source": "consumer.huawei.com",
+      "url": "https://consumer.huawei.com/cn/phones/mate80-pro-max/",
+      "title": "华为Mate 80 Pro Max：麒麟9030 Pro、天通卫星通信、700MHz无网应急13公里连接",
+      "claim": "华为Mate 80 Pro Max搭载麒麟9030 Pro芯片，支持天通卫星通信、双向北斗卫星消息、业界首发700MHz无网应急通信（无基站情况下最远13公里连接）",
+      "category": "手机厂商动态",
+      "language": "zh",
+      "credibility_signal": "official"
+    },
+    {
+      "id": "RC-20260522-012",
+      "source": "techradar.com",
+      "url": "https://www.techradar.com/phones/sony-just-launched-the-worlds-largest-200mp-smartphone-sensor-heres-which-phones-could-get-it",
+      "title": "索尼LYTIA 901发布：全球最大200MP手机传感器，1/1.12英寸，0.7μm像素，QQBC架构",
+      "claim": "索尼发布LYTIA 901，首款200MP手机CMOS传感器，1/1.12英寸（全球最大200MP传感器），0.7μm像素，Quad-Quad Bayer Coding架构，16合1像素合并，内置AI去马赛克引擎，预计OPPO Find X9 Ultra和vivo X300 Ultra首发采用",
+      "category": "影像",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260522-013",
+      "source": "techinsights.com",
+      "url": "https://www.techinsights.com/blog/sony-launches-first-200mp-smartphone-sensor-lytia-901",
+      "title": "TechInsights：索尼LYTIA 901突破200MP门槛，挑战三星ISOCELL旗舰传感器",
+      "claim": "索尼LYTIA 901传感器规格经TechInsights专业分析确认，16合1像素合并用于超低光场景，4倍传感器内变焦并保持细节，三星Galaxy S26 Ultra和iPhone 18不会采用此传感器",
+      "category": "影像",
+      "language": "en",
+      "credibility_signal": "authoritative"
+    },
+    {
+      "id": "RC-20260522-014",
+      "source": "macrumors.com",
+      "url": "https://www.macrumors.com/2026/04/29/apple-vision-pro-m5-flop/",
+      "title": "苹果Vision Pro M5版销量惨淡，苹果已放弃下一代Vision Pro研发",
+      "claim": "苹果Vision Pro M5款因销量不及预期，苹果已将Vision Pro团队分散至其他部门，停止研发下一代Vision Pro，转而专注于2026年底发布AI智能眼镜",
+      "category": "AR/VR",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260522-015",
+      "source": "tomshardware.com",
+      "url": "https://www.tomshardware.com/virtual-reality/apple-has-given-up-on-vision-pro-report-claims-costly-price-and-weight-behind-purported-failure-but-the-company-continues-to-hire-into-its-vision-production-group",
+      "title": "多方报道苹果放弃Vision Pro：售价过高+重量是主因，但Vision Production Group仍在招聘",
+      "claim": "多家媒体报道苹果放弃Vision Pro续作，主因是售价过高（3499美元）和设备过重；但苹果Vision Production Group仍在持续招聘，可能为轻量化智能眼镜做准备",
+      "category": "AR/VR",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260522-016",
+      "source": "gartner.com",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2026-02-26-gartner-says-surging-memory-costs-will-reduce-global-pc-and-smartphone-shipments-in-2026",
+      "title": "Gartner：DRAM/SSD价格2026年底上涨130%，智能手机出货量下滑8.4%",
+      "claim": "Gartner预测DRAM和SSD综合价格到2026年底上涨130%，导致手机价格上升13%，全球智能手机出货量下降8.4%；根本原因是HBM需求爆发导致三大存储厂产能向AI服务器转移",
+      "category": "产业链",
+      "language": "en",
+      "credibility_signal": "authoritative"
+    },
+    {
+      "id": "RC-20260522-017",
+      "source": "trendforce.com",
+      "url": "https://www.trendforce.com/presscenter/news/20251211-12831.html",
+      "title": "TrendForce：移动DRAM价格Q1 2026持续上涨，品牌商开始降配或涨价",
+      "claim": "TrendForce报告称移动DRAM价格从Q4 2025到Q1 2026季度环比上涨80-90%，导致中低端Android品牌调整新机规格，OPPO/vivo/小米/荣耀协调进行产品价格上调",
+      "category": "产业链",
+      "language": "en",
+      "credibility_signal": "authoritative"
+    },
+    {
+      "id": "RC-20260522-018",
+      "source": "pconline.com.cn",
+      "url": "https://mobile.pconline.com.cn/2129/21296792.html",
+      "title": "2026年Q1中国大陆手机出货量同比降1%，华为位居榜首",
+      "claim": "2026年Q1中国大陆智能手机出货量同比下降1%，华为以最高市场份额位居榜首",
+      "category": "产业链",
+      "language": "zh",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260522-019",
+      "source": "163.com",
+      "url": "https://www.163.com/dy/article/KMAADSJD0511CTRI.html",
+      "title": "苹果iPhone Fold 2026秋季量产：5.5英寸外屏+7.8英寸内屏，钛合金框架+液态金属铰链",
+      "claim": "苹果首款折叠屏iPhone Fold已进入量产筹备阶段，预计2026年秋季发布；规格：外屏5.5英寸（2088×1422），内屏7.8英寸（2713×1920），钛合金框架，液态金属铰链，近乎无折痕，折叠厚度9-9.5mm，美版售价2000-2500美元",
+      "category": "折叠屏",
+      "language": "zh",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260522-020",
+      "source": "news.mydrivers.com",
+      "url": "https://news.mydrivers.com/1/1093/1093865.htm",
+      "title": "三星\"阔折叠\"Galaxy Wide Fold 2026发布：4:3比例7.6英寸内屏，骁龙8 Elite Gen 5 for Galaxy，5000mAh",
+      "claim": "三星将于2026年秋季推出\"阔折叠\"宽屏新机，规格：外屏5.4英寸（4:3），内屏7.6英寸（4:3），搭载骁龙8 Elite Gen 5 for Galaxy定制版，最高16GB+1TB，5000mAh电池，45W有线+25W无线快充",
+      "category": "折叠屏",
+      "language": "zh",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260522-021",
+      "source": "tomsguide.com",
+      "url": "https://www.tomsguide.com/phones/i-interviewed-honor-and-oneplus-about-their-silicon-carbon-battery-tech-apple-and-google-are-quickly-falling-behind",
+      "title": "荣耀/一加硅碳电池技术访谈：容量提升30-50%，中国品牌领先西方两年",
+      "claim": "采访荣耀和一加研发团队确认：硅碳电池技术在中国旗舰已成熟，2026年能量密度超900 Wh/L，容量提升30-50%；苹果/谷歌至少落后两年，预计2027年才能广泛跟进",
+      "category": "电池",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260522-022",
+      "source": "spectrum.ieee.org",
+      "url": "https://spectrum.ieee.org/enovix-silicon-anode-battery-smartphone",
+      "title": "IEEE Spectrum：Enovix硅负极电池为AI智能手机提供动力，能量密度超900 Wh/L",
+      "claim": "Enovix硅负极电池已实现商业量产，能量密度超900 Wh/L，应用于AI智能手机；IEEE Spectrum技术评估确认硅负极可比石墨多储存锂离子，支持更高充电倍率",
+      "category": "电池",
+      "language": "en",
+      "credibility_signal": "authoritative"
+    },
+    {
+      "id": "RC-20260522-023",
+      "source": "phonearena.com",
+      "url": "https://www.phonearena.com/news/samsung-silicon-carbon-batteries_id176866",
+      "title": "三星终于转向硅碳电池，但老款Galaxy机型不受益",
+      "claim": "三星确认2026年旗舰机型开始采用硅碳电池技术，但仅限新发布机型；现有Galaxy S25/S26系列老版本不在更新范围内",
+      "category": "电池",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260522-024",
+      "source": "androidheadlines.com",
+      "url": "https://www.androidheadlines.com/2026/01/qualcomm-mediatek-to-use-tsmcs-improved-2nm-n2p-node-to-edge-out-apples-a20-chip.html",
+      "title": "高通与联发科将用台积电N2P工艺挑战苹果A20芯片",
+      "claim": "高通和联发科已确定使用台积电改进版2nm N2P节点制造骁龙8 Elite Gen 6和天玑9600，N2P相比N2提供更高CPU频率，目标超越苹果A20系列",
+      "category": "芯片",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260522-025",
+      "source": "gadgets.beebom.com",
+      "url": "https://gadgets.beebom.com/news/huawei-watch-buds-2-china-launch-date-comeback-announced",
+      "title": "华为Watch Buds 2发布：手表内置TWS耳机，4月20日中国开售",
+      "claim": "华为Watch Buds 2于2026年4月20日在中国发布，将TWS耳机内置于智能手表内，实现二合一穿戴体验",
+      "category": "穿戴设备",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260522-026",
+      "source": "sourceability.com",
+      "url": "https://sourceability.com/post/dram-prices-surge-amid-ai-driven-shortage",
+      "title": "DRAM价格因AI驱动短缺整体上涨30-60%，供应链传导至手机BOM成本",
+      "claim": "AI服务器HBM需求爆发导致DRAM综合价格上涨30-60%，三大存储厂（三星/SK海力士/美光）将产能向AI企业级内存转移，手机BOM成本显著上升",
+      "category": "产业链",
+      "language": "en",
+      "credibility_signal": "industry_media"
+    },
+    {
+      "id": "RC-20260522-027",
+      "source": "counterpointresearch.com",
+      "url": "https://counterpointresearch.com/en/insights/2026-smartphone-shipment-forecasts-revised-down-as-memory-shortage-drives-bom-costs-up",
+      "title": "Counterpoint：2026年全球智能手机出货预测下调，内存短缺推高BOM成本",
+      "claim": "Counterpoint Research下调2026年全球智能手机出货量预测，内存短缺使手机BOM成本上升是主因；低价手机线配置受影响最大",
+      "category": "产业链",
+      "language": "en",
+      "credibility_signal": "authoritative"
+    },
+    {
+      "id": "RC-20260522-028",
+      "source": "techinsights.com",
+      "url": "https://www.techinsights.com/blog/sony-launches-first-200mp-smartphone-sensor-lytia-901",
+      "title": "索尼LYT-901传感器首次挑战三星ISOCELL HP3/HP2系列200MP霸主地位",
+      "claim": "索尼LYTIA 901是其首款200MP传感器，直接挑战三星ISOCELL HP系列；三星HP3/HP2在2025-2026年同样是200MP，但索尼LYTIA 901在尺寸（1/1.12\"）和AI能力上更具竞争力",
+      "category": "影像",
+      "language": "en",
+      "credibility_signal": "authoritative"
+    },
+    {
+      "id": "RC-20260522-029",
+      "source": "pjtime.com",
+      "url": "http://www.pjtime.com/2026/1/142625618643.shtml",
+      "title": "630亿元OLED大项目提前5个月：中韩面板生死对决",
+      "claim": "中国某OLED扩产项目（投资规模约630亿元）提前5个月完工，对韩国三星显示和LG显示形成产能压力，标志着中国8.6代OLED产能快速落地",
+      "category": "屏幕",
+      "language": "zh",
+      "credibility_signal": "industry_media"
+    },
+    {
+      "id": "RC-20260522-030",
+      "source": "wccftech.com",
+      "url": "https://wccftech.com/roundup/qualcomm-snapdragon-8-elite-gen-6-specifications-features-launch-roundup/",
+      "title": "骁龙8 Elite Gen 6搭载Snapdragon X90 5G调制解调器，AI硬件直接集成至基带",
+      "claim": "骁龙8 Elite Gen 6配备升级版Snapdragon X90 5G调制解调器，AI硬件直接集成在基带芯片中；为首款将AI能力内嵌基带的高通旗舰平台",
+      "category": "芯片",
+      "language": "en",
+      "credibility_signal": "tech_media"
+    },
+    {
+      "id": "RC-20260522-031",
+      "source": "idc.com",
+      "url": "https://www.idc.com/resource-center/blog/global-memory-shortage-crisis-market-analysis-and-the-potential-impact-on-the-smartphone-and-pc-markets-in-2026/",
+      "title": "IDC：全球内存短缺危机——对2026年手机和PC市场的潜在影响分析",
+      "claim": "IDC报告分析全球内存短缺对2026年手机市场的影响：供应结构性转变（AI服务器优先），手机DRAM供应紧张，中低端机型受影响最大",
+      "category": "产业链",
+      "language": "en",
+      "credibility_signal": "authoritative"
+    },
+    {
+      "id": "RC-20260522-032",
+      "source": "techxplore.com",
+      "url": "https://techxplore.com/news/2026-04-freestanding-silicon-anode-fast-life.html",
+      "title": "学术突破：独立式硅负极设计显著提升快充速率与循环寿命",
+      "claim": "2026年4月学术成果：新型独立式硅负极设计通过无粘结剂结构解决硅膨胀问题，实验室数据显示快充速率和循环寿命同时提升，为商业硅碳电池提供技术路径",
+      "category": "电池",
+      "language": "en",
+      "credibility_signal": "academic"
+    }
+  ]
+}

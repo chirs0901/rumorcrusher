@@ -1,5 +1,35 @@
 # RumorCrusher 项目演进日志
 
+## 2026-05-22 · 日报（153337）
+
+### 本次运行统计
+- 采集条目：32条（11轮 WebSearch）
+- AVeriTeC分布：Supported×14, Refuted×1, ConflictingEvidence×13, NEE×4
+- avg EQ：3.41 | UnR：0.031 | 健康打分：86/100
+
+### 今日核心发现
+- **辟谣成功：** 天玑9600 GPU声称超越A20 Pro和骁龙8 Elite Gen 6——三款芯片均未发布，无实测依据（❌ Refuted，EQ 1/5，clickbait_score 0.85）
+- **官方确认：** 小米17 Max正式发布（5月25日开售，4299元起，8000mAh硅碳+200MP徕卡）
+- **重要数据：** Gartner确认DRAM价格2026年底上涨130%，手机出货量降8.4%（四机构矩阵印证）
+- **新传感器：** 索尼LYTIA 901首款200MP传感器（1/1.12英寸，QQBC架构）
+- **产业格局：** 台积电2nm良率60-70%，产能预订满至2028年；三星2nm约55%仍低于量产门槛
+
+### 飞轮更新
+- `skills/logical-fallacy-catalog.md`：新增"预发布多芯比较"和"市场份额信源不透明"两种模式
+- 信源评级：TechInsights → A级；Sourceability → B级；PjTime → C级
+- 飞轮规则：学术阶段电池研究不直接进科技简报；战略放弃类报道需2+独立信源
+
+### 产出文件
+- `2026-05-22/01-raw/items-153337.json`（32条原始数据）
+- `2026-05-22/02-annotations/check-worthiness-153337.json`
+- `2026-05-22/02-annotations/synthesis-153337.json`
+- `2026-05-22/03-quality-report-153337.md`
+- `2026-05-22/04-clean-report-153337.md`
+- `2026-05-22/05-methodology-delta-153337.md`
+- `2026-05-22/06-self-eval-153337.md`
+- `2026-05-22/index.html`（仪表盘）
+- `tech-digest/index.html`（科技简报更新）
+
 ## 2026-05-19 · 日报（172439）
 
 ### 本次运行统计
