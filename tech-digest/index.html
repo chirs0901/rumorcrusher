@@ -1348,6 +1348,21 @@ function renderGrid() {
     if (activeCat === '辟谣')   return isRefuted;
     return !isRefuted && i.category === activeCat;
   });
+
+  // 「全部」标签下：按 CAT_ORDER 排序，辟谣永远放最后
+  if (activeCat === '全部') {
+    items = items.slice().sort(function(a, b) {
+      var aRef = (a.verdict === 'Refuted') ? 1 : 0;
+      var bRef = (b.verdict === 'Refuted') ? 1 : 0;
+      if (aRef !== bRef) return aRef - bRef;     // 非辟谣在前，辟谣在后
+      var ai = CAT_ORDER.indexOf(a.category);
+      var bi = CAT_ORDER.indexOf(b.category);
+      if (ai === -1) ai = 999;
+      if (bi === -1) bi = 999;
+      return ai - bi;                            // 同类内按 CAT_ORDER 顺序
+    });
+  }
+
   var grid = document.getElementById('grid');
   var empty = document.getElementById('empty');
   if (!items.length) { grid.innerHTML = ''; empty.style.display = 'block'; return; }
