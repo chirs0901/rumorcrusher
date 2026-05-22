@@ -18,8 +18,20 @@ if [ -f "${DATE}/tech-digest-update.json" ]; then
   python3 scripts/update_tech_digest.py "${DATE}/tech-digest-update.json" 2>&1 || true
 fi
 
+# [pre-commit 校验] tech-digest JS 语法自检——失败则拒绝 commit
+echo "[pre-commit] tech-digest JS 校验..."
+if ! bash scripts/validate-tech-digest.sh; then
+  echo "❌ tech-digest/index.html JS 校验失败，拒绝 commit。请检查最近写入是否有未转义引号"
+  echo "[${TIMESTAMP}] [validate] tech-digest JS 校验失败，commit 已被阻止" >> "${NOTIFY_LOG}"
+  GIT_STATUS="VALIDATION_FAILED"
+  # 不退出，让后续飞书/邮件继续报告失败
+  SKIP_COMMIT=1
+fi
+
 git add "${DATE}/" skills/ wiki/ index.html tech-digest/index.html _meta/changelog.md 2>/dev/null || true
-if ! git diff --staged --quiet; then
+if [ "${SKIP_COMMIT:-0}" = "1" ]; then
+  echo "  ⚠ 校验失败，跳过 commit"
+elif ! git diff --staged --quiet; then
   if git commit -m "Daily update ${DATE}" 2>&1; then
     # 尝试 push，优先 7897，fallback 1080
     PUSH_OK=0
