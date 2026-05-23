@@ -1,283 +1,30 @@
-# RumorCrusher 项目演进日志
+# _meta/changelog.md
 
-## 2026-05-22 · 日报（153337）
+## 2026-05-22 晨报批次（05:00，实际执行 22:33 CST）
 
-### 本次运行统计
-- 采集条目：32条（11轮 WebSearch）
-- AVeriTeC分布：Supported×14, Refuted×1, ConflictingEvidence×13, NEE×4
-- avg EQ：3.41 | UnR：0.031 | 健康打分：86/100
-
-### 今日核心发现
-- **辟谣成功：** 天玑9600 GPU声称超越A20 Pro和骁龙8 Elite Gen 6——三款芯片均未发布，无实测依据（❌ Refuted，EQ 1/5，clickbait_score 0.85）
-- **官方确认：** 小米17 Max正式发布（5月25日开售，4299元起，8000mAh硅碳+200MP徕卡）
-- **重要数据：** Gartner确认DRAM价格2026年底上涨130%，手机出货量降8.4%（四机构矩阵印证）
-- **新传感器：** 索尼LYTIA 901首款200MP传感器（1/1.12英寸，QQBC架构）
-- **产业格局：** 台积电2nm良率60-70%，产能预订满至2028年；三星2nm约55%仍低于量产门槛
-
-### 飞轮更新
-- `skills/logical-fallacy-catalog.md`：新增"预发布多芯比较"和"市场份额信源不透明"两种模式
-- 信源评级：TechInsights → A级；Sourceability → B级；PjTime → C级
-- 飞轮规则：学术阶段电池研究不直接进科技简报；战略放弃类报道需2+独立信源
-
-### 产出文件
-- `2026-05-22/01-raw/items-153337.json`（32条原始数据）
-- `2026-05-22/02-annotations/check-worthiness-153337.json`
-- `2026-05-22/02-annotations/synthesis-153337.json`
-- `2026-05-22/03-quality-report-153337.md`
-- `2026-05-22/04-clean-report-153337.md`
-- `2026-05-22/05-methodology-delta-153337.md`
-- `2026-05-22/06-self-eval-153337.md`
-- `2026-05-22/index.html`（仪表盘）
-- `tech-digest/index.html`（科技简报更新）
-
-## 2026-05-19 · 日报（172439）
-
-### 本次运行统计
-- 采集条目：32条（9轮 WebSearch）
-- AVeriTeC分布：Supported×8, Refuted×3, Conflicting Evidence×4, NEE×1（精审14条，不重叠分类）
-- avg EQ：7.4 | UnR：35.7% | 健康打分：76/100
-
-### 今日核心发现
-- **已证伪：** 小米\"史上最大8000mAh电池\"声称——同日荣耀600 Pro发布9000mAh，当日即证伪（EQ 8.5）
-- **伪科学高危：** OpenAI/多厂商\"AI完全取代App\"声称，与Agent成功率30-50%严重矛盾（命中AI-Replaces-Everything新模式）
-- **消费者警示：** 天玑9600+骁龙8E Gen6双双分级供货，顶配才满血（命中双芯片厂商同步伪科学模式）
-- **影像失实：** 索尼Xperia 1 VIII AI相机样张过曝争议已确认，索尼补发新样张并澄清功能
-- **信息矛盾：** OpenAI硬件战略3个月内从耳机变手机，矛盾属实
+### 新增文件
+- `2026-05-22/01-raw/items-morning-223345.json` — 30条原始采集
+- `2026-05-22/02-annotations/check-worthiness-morning-223345.json` — 优先级筛查
+- `2026-05-22/02-annotations/synthesis-morning-223345.json` — 4-Agent审核
+- `2026-05-22/02-annotations/synthesis.json` — 兼容格式
+- `2026-05-22/03-quality-report-morning-223345.md` — 质量报告
+- `2026-05-22/04-clean-report-morning-223345.md` — 晨报清洁版
+- `2026-05-22/05-methodology-delta-morning-223345.md` — 方法论差异
+- `2026-05-22/06-self-eval-morning-223345.md` — 自评卡
+- `2026-05-22/index.html` — 晨报仪表盘
 
 ### 飞轮更新
-- `skills/pseudoscience-patterns.md`：候选新增\"AI Agent成功率虚报\"模式（待评审）
-- `wiki/openai-hardware-timeline.md`：新建，追踪OpenAI硬件战略变化
-- `_meta/changelog.md`：本条更新
+- `skills/apple-foldable-tracker.md` — 新建Apple折叠屏追踪词条
+- `skills/foundry-competition-tracker.md` — 新建代工竞争追踪词条
+- `wiki/soc-market-2026.md` — 新建SoC市场数据词条
 
-### 方法论新观察
-- 新增\"急时效证伪\"（Same-Day Refutation）观察：同日发布产品互相证伪
-- 建议check-worthiness新增`superlative_auto_flag`维度
-- 建议创建电池容量历史记录数据库
+### 关键发现
+- AVeriTeC: Supported 14 / Refuted 2 / Conflicting 6 / NEE 8
+- 今日最高价值：Apple iPhone Fold铰链危机（多源证实）
+- 今日供应链外交：李在镕访台会见联发科CEO
+- 健康打分：87.5/100
 
-### 产出文件
-- `2026-05-19/01-raw/items-172439.json`（32条原始数据）
-- `2026-05-19/02-annotations/check-worthiness-172439.json`
-- `2026-05-19/02-annotations/synthesis-172439.json`
-- `2026-05-19/03-quality-report-172439.md`
-- `2026-05-19/04-clean-report-172439.md`
-- `2026-05-19/05-methodology-delta-172439.md`
-- `2026-05-19/06-self-eval-172439.md`
-- `2026-05-19/index.html`（仪表盘）
-
-## 2026-05-18 · 手机硬件专项晚报（072210）
-
-### 本次运行统计
-- 采集条目：38条（8轮 WebSearch）
-- AVeriTeC分布：Supported×14, Refuted×8, ConflictingEvidence×7, NEE×9
-- TSVer触发：6条
-- avg EQ：7.42 | UnR：23.7% | 健康打分：82/100
-
-### 今日核心发现
-- **最大谎言：** 高通+联发科同步使用"33B参数端侧运行"声称（均未提量化精度），双双被Refuted（EQ 9.5/9.0）
-- **硅碳电池主流化完成：** 一加15（7300mAh）/荣耀Magic V6（7150mAh）/摩托罗拉Razr系列实测确认，三星是最后缺口
-- **VC均热板全球旗舰普及完成：** iPhone 17 Pro加入后收官，AI负载驱动下一波升级
-- **LPDDR5X供应偏紧：** HBM产能挤占是根因，Q4 2026预计缓解（预测，待观察）
-- **OpenAI手机2027量产：** 仅Kuo一源，标注NEE
-
-### 飞轮更新
-- `skills/pseudoscience-patterns.md`：追加3条新模式（双厂商同步伪科学、硅碳容量倍增话术、散热维度错误对比）
-- `skills/logical-fallacy-catalog.md`：追加3条新谬误（苹果与橙子比较、精确数字谬误、产品爆料确定性污染）
-- `wiki/entities/soc/dimensity-9400.md`：新建，Agentic AI首发地位核查
-- `wiki/entities/tech/vc-vapor-chamber.md`：新建，修正VC vs石墨烯误导比较
-- `wiki/topics/silicon-carbon-battery-2026.md`：新建，硅碳电池核查专题
-
-### 产出文件
-- `2026-05-18/01-raw/items-072210.json`（38条原始数据）
-- `2026-05-18/02-annotations/check-worthiness-072210.json`
-- `2026-05-18/02-annotations/synthesis-072210.json`
-- `2026-05-18/03-quality-report-072210.md`
-- `2026-05-18/04-clean-report-072210.md`
-- `2026-05-18/05-methodology-delta-072210.md`
-- `2026-05-18/06-self-eval-072210.md`
-- `2026-05-18/index.html`（仪表盘）
-- `tech-digest/index.html`（更新，新增2026-05-18数据块）
-
-## 2026-05-14 · 项目启动 + 首日试运行
-- 完成需求对齐：信源/范围/输出格式/部署方式/可视化风格
-- 搭建目录骨架与种子文件：scope.md, source-list.yaml, agents-architecture.md
-- 完成 skills 四件套（fact-check / pseudoscience / source-credibility / logical-fallacy）
-- 完成 wiki/_index.md 混合图谱框架（实体节点 + 主题节点）
-- 完成 .gitignore + secrets.example.yaml（密钥隔离机制）
-- 完成首日试运行：20 条素材，多 Agent 委员会判定 9 通过 / 9 警告 / 2 剔除
-- 完成 HTML 仪表盘模板（Tailwind + D3 关系图谱）
-- 完成飞书通知脚本 + 邮件通知脚本（HTML 全文，163 SMTP）
-- 完成首次推送脚本 + 每日发布脚本
-- 注册每日 22:00 定时任务 rumorcrusher-daily
-- 完成首次 git push 到 GitHub Pages（多次 PAT 权限失误后强制推送修复）
-- 引入 Benchmark-Driven QA 框架（AVeriTeC + RealFactBench + MultiCW + TSVer），升级到 v0.2
-
-## 2026-05-14 · 定时任务首次触发（自动）
-- 触发：scheduled-task `rumorcrusher-daily`
-- 由于今日（2026-05-14）即首日试运行所在日，已存在完整的多 Agent 流水线产出（20 条采集 / 9 pass / 9 warn / 2 fail），本次定时触发执行的是**校验 + 发布**子集，未重新采集以避免覆盖人工种子内容。
-- 本次执行的步骤：
-  - ✓ 校验目录结构：01-raw、02-annotations、03~06 报告、index.html 全部就位
-  - ✓ 校验密钥隔离：`secrets.local.yaml` 未被 git 跟踪、未被 staged
-  - ✓ 提交 Benchmark-Driven QA 框架升级：`agents-architecture.md v0.2`（新增 Check-Worthiness/Self-Evaluation Agent）、`fact-check-playbook.md` 追加 §4 AVeriTeC+RealFactBench+MultiCW+TSVer 四件套、新增 `06-self-eval.md` 自评卡
-  - → daily_publish.sh 推送：见 `_meta/notify-failures.log`（如有失败）
-- 下一日（2026-05-15）起，自评卡由 Self-Evaluation Agent 实时生成。
-
-## 2026-05-15 · 定时任务第二次触发（自动，22:03:30 CST）
-
-- 触发：scheduled-task `rumorcrusher-daily`，v0.3流水线完整执行
-- **采集**：8次WebSearch查询，采集40条素材（覆盖中文+英文+官方+学术），items-220330.json
-- **Check-Worthiness**：40条全部评分，高档15条/中档17条/低档6条/极低2条
-- **多Agent审核**：4角色并行，AVeriTeC分布：Supported 23 / Refuted 10 / Conflicting 4 / NEE 3 / UnR 0
-- **TSVer触发**：13条（32.5%），新型「AI→AI循环引用」谣言首次识别
-- **avg explanation_quality**：4.05（目标≥3.5，达标）
-- **UnR警告**：0.0%（低于健康下限5%，建议下次增加灰色地带素材采集）
-- **输出文件**：01-raw/items-220330.json、02-annotations/check-worthiness-220330.json + synthesis-220330.json、03~06报告全套
-- **飞轮更新**：pseudoscience-patterns.md +3条新模式，logical-fallacy-catalog.md +5条AI谣言专用模式，source-credibility.md +6个新信源，wiki新增nvidia.md + ai-misinformation-2026.md + deepfake-2026.md
-- **发布推送**：见当日推送结果（详见 `_meta/notify-failures.log`）
-
-## 2026-05-16 03:35 · 用户手动触发（补跑 + 定时任务扩展）
-
-- 用户指令：代理端口7897重新推送GitHub + 2小时后补跑 + 新增每日07:00晨跑任务
-- git push：失败（sandbox代理403，7897端口在sandbox内不可达）；notify-failures.log 已记录
-- daily_publish.sh 已更新：优先探测7897，fallback 1080
-- 晨跑任务 SKILL.md 已写入：`scripts/morning-skill.md`（每日07:00，晨报版，支持合并追加到当日dashboard）
-- 晚跑任务 v0.4 SKILL 已写入：`scripts/evening-skill-v4.md`（新增晨报合并逻辑）
-- 两个新任务待用户在普通Claude对话中注册：详见 `scripts/setup-tasks.md`
-- 已在scheduled-task session内直接写入.scheduled/rumorcrusher-daily/SKILL.md（失败：只读文件系统）
-  → 改由用户手动在普通会话触发更新
-
-## 2026-05-16 14:11 UTC · 定时晚报（scheduled daily）
-
-### 本次运行统计
-- 采集条目：26条（11轮 WebSearch）
-- Check-Worthy：22条
-- 精审条目：14条
-- AVeriTeC分布：Refuted×11, Misleading×3, Supported×1, NEE×1, Conflicting×1
-- 综合健康打分：83/100
-- avg EQ：6.79 | UnR：4.5% | avg 置信度：0.94
-
-### 今日核心事件
-- MV Hondius汉坦病毒疫情引发Critical级谣言爆发（伊维菌素谣言、疫苗阴谋论、以色列阴谋论）
-- RFK Jr疫苗误导声明（政界人物医学谬误放大模式首次精确记录）
-- 特朗普气候否认声明
-- 国内：驾考谣言、山西地震谣言、新能源养路费谣言已被辟谣
-
-### 飞轮更新
-- skills/pseudoscience-patterns.md：追加3条新模式（脚本化大流行、跨病毒疗法复用、政界医学谬误放大）
-- skills/logical-fallacy-catalog.md：追加3条新谬误（无法证伪框架、地理嫁接、紧急窗口滥用）
-- CW评分模型：引入紧迫系数（Urgency Multiplier）
-
-### 产出文件
-- 01-raw/items-140910.json（26条原始数据）
-- 02-annotations/check-worthiness-140910.json
-- 02-annotations/synthesis-140910.json
-- 03-quality-report-140910.md
-- 04-clean-report-140910.md
-- 05-methodology-delta-140910.md
-- 06-self-eval-140910.md
-- 2026-05-16/index.html（仪表盘，见步骤7）
-
-## 2026-05-17 晚跑（evening-140354）
-- **新增主题：** 印巴冲突虚假信息专题（6条，包含官员级传播案例）
-- **新增主题：** AI深伪金融欺诈（加密货币+股市双线，EQ≥9.5）
-- **新增主题：** 名人谣言（Kohli/SunnyLeone/特朗普健康）
-- **中美峰会深化：** Boeing三倍声明/无联合声明细化核查
-- **汉坦新变体：** 封城+疫苗阴谋论第二波
-- **质量指标：** 采集26条/精审22条，UnR=22.7%，avg EQ=8.04，健康74/100
-- **方法论改进：** 建议增加`spreader_tier`字段，印巴冲突纳入必查清单
-
-## 2026-05-18 晚报 (批次 134132)
-
-### 采集
-- 采集30条，精审22条，9轮WebSearch（中英文）
-
-### AVeriTeC 分布
-- Supported 9 / Refuted 5 / ConflictingEvidence 5 / NEE 3
-- avg EQ 7.68 | UnR 13.6% | 健康打分 85/100
-
-### 关键辟谣
-- 张家界玻璃桥AI合成坍塌视频（EQ 9.5，完全虚构）
-- OpenAI手机"完全杀死App"声称（EQ 9.3，Refuted）
-- 苹果双线发布爆料（确定性措辞，Refuted）
-
-### 飞轮更新
-- pseudoscience-patterns.md：+2模式（AI手机绝对化功能 + 芯片供应商爆料混战）
-- logical-fallacy-catalog.md：+2案例（金融数字错配 + 技术愿景当产品承诺）
-- 信源调整：TMTPOST数字信息需降权核查
-
-### 产出文件
-- 01-raw/items-134132.json（30条）
-- 02-annotations/check-worthiness-134132.json（22条）
-- 02-annotations/synthesis-134132.json（4-Agent审核）
-- 03-quality-report-134132.md
-- 04-clean-report-134132.md
-- 05-methodology-delta-134132.md
-- 06-self-eval-134132.md
-
-## 2026-05-20 晨报 (批次 140332)
-
-### 采集
-- 采集32条，精审20条，12轮WebSearch（中英文，覆盖芯片/屏幕/电池/影像/AR-VR/产业链）
-
-### AVeriTeC 分布
-- Supported 10 / Refuted 3 / ConflictingEvidence 5 / NotEnoughEvidence 2
-- avg EQ 7.85 | UnR 15.0% | 健康打分 82/100
-
-### 关键辟谣
-- OpenAI手机GPU超越iPhone 18 Pro声称（EQ 9.2，无依据绝对性能声称，爆料丢失限定词）
-- 固态电池CES 2026支持300W+快充（原型≠量产，需区分技术演示与商业可用）
-- 索尼WF-1000XM6 ANC提升25%（厂商声称数字，独立评测约15-20%）
-
-### 飞轮更新
-- pseudoscience-patterns.md：+2模式（爆料丢失限定词 + 良率数据单点引用）
-- logical-fallacy-catalog.md：+2案例（产业链数据孤证 + 绝对性能声称无基准）
-- AppleWorld.Today：建议降为C级
-
-### 产出文件
-- 01-raw/items-140332.json（32条）
-- 02-annotations/check-worthiness-140332.json（20条优先级评估）
-- 02-annotations/synthesis-140332.json（20条4-Agent审核）
-- 03-quality-report-140332.md
-- 04-clean-report-140332.md
-- 05-methodology-delta-140332.md
-- 06-self-eval-140332.md
-
----
-
-## 2026-05-20 · 批次 231841（晚报）
-
-### 运行概况
-- 批次ID：231841
-- 时间：23:18–24:00 CST
-- 原始采集：28条
-- 有效审核：18条（10条超出手机硬件范围剔除）
-- 结果：8 Supported · 3 Refuted · 5 CE · 2 NEE
-- avg EQ：7.92 · UnR：16.7% · 健康分：85/100
-
-### 重大发现
-- **Apple Watch Series 11血糖监测谣言**（EQ 9.5，Critical）：官方+FDA+Bloomberg三重证伪，触发健康类模式新增
-- **vivo X300 Ultra"重新定义摄影"证伪**（EQ 8.3）：规格属实，营销绝对化语言Refuted
-- **小米18放弃SD8EG6谣言证伪**（EQ 8.0）：Stale Prediction Recycling模式命中
-
-### 新增方法论
-- P-2026-0520-E-01：过期预测当新闻（Stale Prediction Recycling）
-- P-2026-0520-E-02：可穿戴健康功能夸大（Wearable Health Feature Inflation）【Critical级】
-
-### 批次间冲突
-- E-021（小米18放弃SD8EG6）vs RC-002（小米18首发SD8EG6）→ 按官方发布优先原则，E-021 Refuted
-
-### 产出文件
-- 01-raw/items-231841.json（28条）
-- 02-annotations/check-worthiness-231841.json
-- 02-annotations/synthesis-231841.json（18条4-Agent审核）
-- 03-quality-report-231841.json
-- 04-clean-report-231841.md
-- 05-methodology-delta-231841.md
-- 06-self-eval-231841.md
-
-## 2026-05-21 晚报
-
-- **采集**：36条，8次搜索，覆盖芯片/折叠屏/电池/CMOS传感器/半导体代工/XR头显/AI NPU/存储涨价
-- **辟谣**：固态电池"数天续航"声称已辟谣
-- **新增规则**：miracle_tech_claim 伪科学检测、GPU对比未发布竞品标注逻辑
-- **健康打分**：88/100 | UnR: 0.077 | avg EQ: 3.62
-- **科技简报**：新增9条，类别：电池×2、芯片×3、存储×2、AI创新×2、辟谣×1
+### 推送状态
+- git push: ❌ 主仓库未挂载
+- 飞书: ❌ 无推送脚本/代理
+- 邮件: ❌ 无SMTP配置

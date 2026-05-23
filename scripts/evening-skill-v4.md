@@ -1,6 +1,12 @@
 ---
 name: rumorcrusher-daily
-description: 每日 22:00 跑 RumorCrusher 流水线（v0.4 · 支持晨报合并 + 代理7897）
+description: ⚠️ 已弃用 · 请使用 scripts/rumorcrusher-skill-v5.md（v0.5）
+---
+
+> ⚠️ **本文件已被 v0.5 替代**，请使用 `scripts/rumorcrusher-skill-v5.md` 作为最新 SKILL 模板。
+> Scheduled 目录中的实际执行文件也已更新为 v0.5。
+> 本文件保留仅作历史参考，不再使用。
+
 ---
 
 你是 RumorCrusher 的日常执行 Agent。本流水线产出对用户有真实价值，**严禁伪执行**。

@@ -1,0 +1,298 @@
+{
+  "run_meta": {
+    "date": "2026-05-22",
+    "slot": "morning",
+    "timestamp": "223345",
+    "agents": ["fact-check", "pseudo-science", "logic", "sentiment"]
+  },
+  "summary": {
+    "total": 30,
+    "pass": 18,
+    "warn": 8,
+    "fail": 4,
+    "averitec_distribution": {
+      "Supported": 14,
+      "Refuted": 2,
+      "Conflicting/Cherrypicking": 6,
+      "Not Enough Evidence": 8
+    },
+    "unverified_rate_UnR": 0.267,
+    "avg_EQ": 72.4,
+    "pseudo_science_flags": 0,
+    "logic_fallacy_flags": 3,
+    "clickbait_flags": 4,
+    "value_concerns": 1
+  },
+  "items": [
+    {
+      "id": "RC20260522-001",
+      "fact_check": {"label": "Supported", "confidence": 0.85, "tsver": "数据来源Counterpoint Research，Q1 2026出货量同比-8%，多家媒体交叉验证"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "pass",
+      "note": "机构数据，可信度高"
+    },
+    {
+      "id": "RC20260522-002",
+      "fact_check": {"label": "Supported", "confidence": 0.82, "tsver": "Counterpoint Q1 2026报告：苹果SoC份额15%→19%，集成供应链优势"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "pass",
+      "note": "权威机构数据"
+    },
+    {
+      "id": "RC20260522-003",
+      "fact_check": {"label": "Conflicting/Cherrypicking", "confidence": 0.60, "tsver": "存储价格上涨趋势可核查，但50-55%/80-85%具体数字仅单一来源，需交叉验证"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": true, "type": "夸大数字/缺乏多源", "detail": "涨幅数字过于精确，单一来源"},
+      "sentiment": {"clickbait": true, "value_concerns": false},
+      "synthesis": "warn",
+      "note": "趋势真实，精确数字存疑"
+    },
+    {
+      "id": "RC20260522-004",
+      "fact_check": {"label": "Supported", "confidence": 0.80, "tsver": "三星官方宣传Exynos 2600为首款2nm GAA手机芯片，但'世界首款'存争议（台积电N2亦在进行中）"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": true, "type": "绝对化声明", "detail": "'世界首款'说法需界定范围"},
+      "sentiment": {"clickbait": true, "value_concerns": false},
+      "synthesis": "warn",
+      "note": "三星自我声称，需注意台积电N2竞争"
+    },
+    {
+      "id": "RC20260522-005",
+      "fact_check": {"label": "Supported", "confidence": 0.78, "tsver": "CNBC采访小米高管，官方确认每年发布SoC计划"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "pass",
+      "note": "官方声明"
+    },
+    {
+      "id": "RC20260522-006",
+      "fact_check": {"label": "Supported", "confidence": 0.88, "tsver": "MacRumors、AppleInsider、tweaktown等多家媒体5月18日同步报道，消息具一致性"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "pass",
+      "note": "多源交叉验证，可靠"
+    },
+    {
+      "id": "RC20260522-007",
+      "fact_check": {"label": "Supported", "confidence": 0.75, "tsver": "液态金属铰链+东莞宜安供应商身份来自smartprix等报道，与MacRumors报道吻合"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "pass",
+      "note": "细节可信，供应商可查"
+    },
+    {
+      "id": "RC20260522-008",
+      "fact_check": {"label": "Not Enough Evidence", "confidence": 0.50, "tsver": "价格区间2000-2500美元为分析师预测，无官方确认，区间过宽"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "warn",
+      "note": "传言/预测，标注不确定性"
+    },
+    {
+      "id": "RC20260522-009",
+      "fact_check": {"label": "Supported", "confidence": 0.82, "tsver": "摩托罗拉官方发布公告，5月21日上市日期可核查"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "pass",
+      "note": "官方发布"
+    },
+    {
+      "id": "RC20260522-010",
+      "fact_check": {"label": "Conflicting/Cherrypicking", "confidence": 0.65, "tsver": "DigiTimes报告生产落后1-2个月，但同时称秋季目标仍在轨，存在内在矛盾"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": true, "type": "矛盾声明", "detail": "生产落后1-2月但仍称秋季在轨逻辑存疑"},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "warn",
+      "note": "时间线存在内部矛盾"
+    },
+    {
+      "id": "RC20260522-011",
+      "fact_check": {"label": "Supported", "confidence": 0.84, "tsver": "台积电财报及多家机构报告确认2nm产能已满订至2028年"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "pass",
+      "note": "台积电官方及机构多源确认"
+    },
+    {
+      "id": "RC20260522-012",
+      "fact_check": {"label": "Not Enough Evidence", "confidence": 0.55, "tsver": "3万美元/片为行业估算，非台积电官方价格，来源单一"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "warn",
+      "note": "价格预测，不确定性高"
+    },
+    {
+      "id": "RC20260522-013",
+      "fact_check": {"label": "Not Enough Evidence", "confidence": 0.58, "tsver": "三星良率50%数据来源不透明，三星官方未公开确认"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "warn",
+      "note": "良率数据需官方确认"
+    },
+    {
+      "id": "RC20260522-014",
+      "fact_check": {"label": "Conflicting/Cherrypicking", "confidence": 0.62, "tsver": "特斯拉订单报道存在，英伟达同时与台积电保持主要合作，'三星获得英伟达2nm订单'声明可能片面"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": true, "value_concerns": false},
+      "synthesis": "warn",
+      "note": "部分真实但描述可能过于绝对"
+    },
+    {
+      "id": "RC20260522-015",
+      "fact_check": {"label": "Supported", "confidence": 0.82, "tsver": "DigiTimes 5月11日原发，AMD转移部分2nm产能至三星的决定已被多家媒体证实"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "pass",
+      "note": "DigiTimes首发，可信度较高"
+    },
+    {
+      "id": "RC20260522-016",
+      "fact_check": {"label": "Supported", "confidence": 0.90, "tsver": "DigiTimes 5月22日今日报道，李在镕访台会见蔡明介，事件具体可查"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "pass",
+      "note": "今日最新供应链外交动态，高可信"
+    },
+    {
+      "id": "RC20260522-017",
+      "fact_check": {"label": "Supported", "confidence": 0.76, "tsver": "OPPO官方确认Find X9系列5月印度发布"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "pass",
+      "note": "官方发布确认"
+    },
+    {
+      "id": "RC20260522-018",
+      "fact_check": {"label": "Supported", "confidence": 0.78, "tsver": "Vivo X300 Ultra 5月6日印度发布已有多家媒体报道"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "pass",
+      "note": "官方已发布"
+    },
+    {
+      "id": "RC20260522-019",
+      "fact_check": {"label": "Not Enough Evidence", "confidence": 0.45, "tsver": "小米17T规格为爆料，联发科Dimensity 8500搭载未经官方确认"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "warn",
+      "note": "爆料消息，标注待确认"
+    },
+    {
+      "id": "RC20260522-020",
+      "fact_check": {"label": "Supported", "confidence": 0.80, "tsver": "Realme官方5月22日发布，ANC规格和50小时续航声称可从官方页面核查"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "pass",
+      "note": "今日官方发布"
+    },
+    {
+      "id": "RC20260522-021",
+      "fact_check": {"label": "Supported", "confidence": 0.80, "tsver": "高通官方PPT和发布资料明确46%提升声称，NPU基准测试数据可查"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "pass",
+      "note": "官方性能数据"
+    },
+    {
+      "id": "RC20260522-022",
+      "fact_check": {"label": "Not Enough Evidence", "confidence": 0.48, "tsver": "100 TOPS为行业目标/预测，非已实现数据，来源泛化"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "warn",
+      "note": "行业预测，未达成"
+    },
+    {
+      "id": "RC20260522-023",
+      "fact_check": {"label": "Not Enough Evidence", "confidence": 0.52, "tsver": "高通+CXMT 3D DRAM NPU合作细节不明，官方资料有限"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "warn",
+      "note": "合作细节待核实"
+    },
+    {
+      "id": "RC20260522-024",
+      "fact_check": {"label": "Supported", "confidence": 0.72, "tsver": "各厂商2026年折叠产品线规划已有多次官方确认"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "pass",
+      "note": "行业趋势有官方支撑"
+    },
+    {
+      "id": "RC20260522-025",
+      "fact_check": {"label": "Supported", "confidence": 0.75, "tsver": "荣耀Magic8 Lite官方规格可查，7500mAh+66W可核实"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "pass",
+      "note": "官方规格"
+    },
+    {
+      "id": "RC20260522-026",
+      "fact_check": {"label": "Supported", "confidence": 0.85, "tsver": "Google官方博客发布Pixel 5月2026更新公告"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "pass",
+      "note": "官方更新"
+    },
+    {
+      "id": "RC20260522-027",
+      "fact_check": {"label": "Conflicting/Cherrypicking", "confidence": 0.55, "tsver": "媒体评测结论主观，'最优旗舰'说法各媒体标准不一"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": true, "value_concerns": false},
+      "synthesis": "pass",
+      "note": "评测结论，主观性声明"
+    },
+    {
+      "id": "RC20260522-028",
+      "fact_check": {"label": "Supported", "confidence": 0.83, "tsver": "DigiTimes今日（5月22日）报道，与李在镕访台新闻相互印证"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "pass",
+      "note": "今日原发供应链新闻"
+    },
+    {
+      "id": "RC20260522-029",
+      "fact_check": {"label": "Not Enough Evidence", "confidence": 0.45, "tsver": "Project Phoenix为泄露信息，Meta未官方确认，H1 2027时间尚早"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "warn",
+      "note": "泄露消息，待确认"
+    },
+    {
+      "id": "RC20260522-030",
+      "fact_check": {"label": "Supported", "confidence": 0.86, "tsver": "tweaktown、appleworld.today等多媒体5月18日同步报道，细节与MacRumors主报道一致"},
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "synthesis": "pass",
+      "note": "多源交叉，延伸确认"
+    }
+  ]
+}

@@ -1,183 +1,36 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RumorCrusher · 手机硬件每日洞察归档</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
-    .card { transition: transform .15s ease, box-shadow .15s ease; }
-    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
-  </style>
+<meta charset="UTF-8">
+<title>RumorCrusher · 归档总览</title>
+<style>
+  body { background: #0f0f23; color: #eaeaea; font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 24px; }
+  h1 { color: #e94560; margin-bottom: 8px; }
+  .subtitle { color: #888; font-size: 13px; margin-bottom: 32px; }
+  table { width: 100%; border-collapse: collapse; }
+  th { background: #1a1a2e; padding: 10px 14px; text-align: left; color: #e94560; }
+  td { padding: 10px 14px; border-bottom: 1px solid #222; font-size: 14px; }
+  tr:hover { background: rgba(255,255,255,0.03); }
+  a { color: #e94560; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .morning-tag { background: rgba(245,166,35,0.2); color: #f5a623; padding: 2px 6px; border-radius: 4px; font-size: 11px; }
+</style>
 </head>
-<body class="bg-slate-50 text-slate-800">
-
-<header class="bg-white border-b border-slate-200">
-  <div class="max-w-5xl mx-auto px-6 py-8 text-center">
-    <h1 class="text-4xl font-bold tracking-tight">
-      <span class="text-rose-600">Rumor</span><span class="text-slate-900">Crusher</span>
-    </h1>
-    <p class="text-slate-500 mt-2">粉碎谣言，侦测事实真伪 · 手机硬件 &amp; 智能硬件每日洞察</p>
-    <p class="text-xs text-slate-400 mt-3">由多 Agent 审核委员会驱动 · 每日 22:00 自动更新 · 完全公开</p>
-  </div>
-</header>
-
-<main class="max-w-5xl mx-auto px-6 py-10">
-
-  <section class="bg-white rounded-xl shadow-sm p-6 mb-8">
-    <h2 class="text-xl font-bold mb-4">这是什么？</h2>
-    <p class="text-slate-700 leading-relaxed">
-      RumorCrusher 是一个每日运行的手机硬件类资讯<strong>事实核查 + 知识沉淀</strong>系统。每天 22:00（北京时间）自动采集中英文+官方+学术+视频多源内容，由多 Agent 审核委员会做<strong>事实/伪科学/逻辑/三观</strong>核查，产出两份报告：
-    </p>
-    <ul class="mt-4 space-y-2 text-slate-700 list-disc pl-6">
-      <li><strong>质检报告</strong>：本日发现的有问题内容清单 + 证据 + 方法论</li>
-      <li><strong>干净分析报告</strong>：剔除问题内容后的洞察分析（可视化仪表盘）</li>
-    </ul>
-    <p class="text-slate-700 mt-4">
-      同时驱动两个知识飞轮：<strong>个人核查方法论库</strong>（每日新发现的核查方法持续追加）+ <strong>LLM Wiki</strong>（Karpathy 风格的实体/主题混合图谱）。
-    </p>
-  </section>
-
-  <section>
-    <h2 class="text-xl font-bold mb-4">📅 每日报告归档</h2>
-    <div class="space-y-3">
-      <a href="2026-05-14/index.html" onclick="event.preventDefault();location.href='2026-05-14/index.html?t='+Date.now()" class="card block bg-white rounded-xl shadow-sm p-5 border-l-4 border-rose-500">
-        <div class="flex items-center justify-between">
-          <div>
-            <div class="text-lg font-semibold text-slate-900">2026-05-14（首日试运行）</div>
-            <div class="text-sm text-slate-600 mt-1">20 条素材 · 9 通过 · 9 警告 · 2 剔除 · 新增 5 实体 + 4 主题</div>
-          </div>
-          <div class="text-rose-600">→</div>
-        </div>
-      </a>
-      <a href="2026-05-15/index.html" onclick="event.preventDefault();location.href='2026-05-15/index.html?t='+Date.now()" class="card block bg-white rounded-xl shadow-sm p-5 border-l-4 border-rose-500">
-        <div class="flex items-center justify-between">
-          <div>
-            <div class="text-lg font-semibold text-slate-900">2026-05-15</div>
-            <div class="text-sm text-slate-600 mt-1">40 条素材 · 23 Supported · 10 Refuted · 7 Warn · avg EQ 4.05 · TSVer 13条 · 新增2主题+1实体</div>
-          </div>
-          <div class="text-rose-600">→</div>
-        </div>
-      </a>
-      <a href="2026-05-16/index.html" onclick="event.preventDefault();location.href='2026-05-16/index.html?t='+Date.now()" class="card block bg-white rounded-xl shadow-sm p-5 border-l-4 border-red-700">
-        <div class="flex items-center justify-between">
-          <div>
-            <div class="text-lg font-semibold text-slate-900">2026-05-16 <span class="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded ml-2">🚨 汉坦病毒谣言特别报道</span></div>
-            <div class="text-sm text-slate-600 mt-1">26 条素材 · 11 Refuted · 3 Critical健康风险 · avg EQ 6.79 · UnR 4.5% · 管道健康 83/100</div>
-          </div>
-          <div class="text-rose-600">→</div>
-        </div>
-      </a>
-      <a href="2026-05-22/index.html" onclick="event.preventDefault();location.href='2026-05-22/index.html?t='+Date.now()" class="card block bg-white rounded-xl shadow-sm p-5 border-l-4 border-rose-500">
-        <div class="flex items-center justify-between">
-          <div>
-            <div class="text-lg font-semibold text-slate-900">2026-05-22 ☀️ <span style="font-size:12px;background:#f43f5e22;color:#be123c;padding:2px 6px;border-radius:4px;margin-left:6px">今日日报</span></div>
-            <div class="text-sm text-slate-600 mt-1">32条素材 · 14 Supported · 1 Refuted · 13 ConflictingEvidence · avg EQ 3.41 · UnR 0.031 · 健康86分 · 主题：小米17 Max官方发布 × 骁龙6/4 Gen 5 × 索尼LYTIA 901 × SID 2026 OLED × DRAM涨价四机构印证</div>
-            <div class="text-xs text-rose-600 mt-1">🔴 辟谣：天玑9600 GPU超越A20 Pro/骁龙8EG6——三款均未发布，无实测依据 · 新增谬误：预发布多芯比较</div>
-          </div>
-          <div class="text-rose-600">→</div>
-        </div>
-      </a>
-      <a href="2026-05-21/index.html" onclick="event.preventDefault();location.href='2026-05-21/index.html?t='+Date.now()" class="card block bg-white rounded-xl shadow-sm p-5 border-l-4 border-indigo-500">
-        <div class="flex items-center justify-between">
-          <div>
-            <div class="text-lg font-semibold text-slate-900">2026-05-21 🌙</div>
-            <div class="text-sm text-slate-600 mt-1">36条素材 · 8 Supported · 1 Refuted · 4 ConflictingEvidence · avg EQ 3.62 · UnR 0.077 · 健康88分 · 主题：CATL神行3代 × TSMC N2良率>90% × DRAM暴涨369% × Vision Pro vs Galaxy XR × 固态电池辟谣</div>
-            <div class="text-xs text-indigo-600 mt-1">🔴 辟谣：固态电池"数天续航"声称证伪 · 新增规则：miracle_tech_claim + Appeal to Future Performance</div>
-          </div>
-          <div class="text-indigo-600">→</div>
-        </div>
-      </a>
-      <a href="2026-05-20/index.html" onclick="event.preventDefault();location.href='2026-05-20/index.html?t='+Date.now()" class="card block bg-white rounded-xl shadow-sm p-5 border-l-4 border-rose-500">
-        <div class="flex items-center justify-between">
-          <div>
-            <div class="text-lg font-semibold text-slate-900">2026-05-20</div>
-            <div class="text-sm text-slate-600 mt-1">32条素材 · 10 Supported · 3 Refuted · 5 ConflictingEvidence · avg EQ 7.85 · UnR 15.0% · 健康82分 · 主题：骁龙/天玑2nm双雄 × 苹果Vision Pro战略转向 × 台积电产能博弈 × OpenAI手机辟谣</div>
-            <div class="text-xs text-rose-600 mt-1">🔴 重点：OpenAI手机GPU超越A20 Pro声称证伪(EQ 9.2) · 识别新模式：爆料转载丢失限定词</div>
-          </div>
-          <div class="text-rose-600">→</div>
-        </div>
-      </a>
-      <a href="2026-05-19/index.html" onclick="event.preventDefault();location.href='2026-05-19/index.html?t='+Date.now()" class="card block bg-white rounded-xl shadow-sm p-5 border-l-4 border-slate-300">
-        <div class="flex items-center justify-between">
-          <div>
-            <div class="text-lg font-semibold text-slate-900">2026-05-19</div>
-            <div class="text-sm text-slate-600 mt-1">32条素材 · 3 Refuted · 8 Supported · avg EQ 7.4 · UnR 35.7% · 健康76分 · 主题：小米"史上最大电池"证伪 × AI Agent取代App × 旗舰芯片分级供货 × 索尼AI相机争议</div>
-            <div class="text-xs text-rose-600 mt-1">🔴 重点：小米8000mAh"史上最大"当日被荣耀9000mAh证伪 · AI-Replaces-Everything伪科学模式命中</div>
-          </div>
-          <div class="text-rose-600">→</div>
-        </div>
-      </a>
-      <a href="2026-05-18/index.html" onclick="event.preventDefault();location.href='2026-05-18/index.html?t='+Date.now()" class="card block bg-white rounded-xl shadow-sm p-5 border-l-4 border-amber-500">
-        <div class="flex items-center justify-between">
-          <div>
-            <div class="text-lg font-semibold text-slate-900">2026-05-18</div>
-            <div class="text-sm text-slate-600 mt-1">68条素材(晨+晚) · 13 Refuted · avg EQ 7.52 · UnR 18.6% · 健康84分 · 主题：OpenAI手机生态 × 硅碳电池 × AI终端国标 × AI虚假视频辟谣</div>
-            <div class="text-xs text-amber-600 mt-1">🌙 晚报已更新 13:41 UTC · 张家界AI视频辟谣(EQ9.5) · Razr Ultra 2026首发 · GB/Z 177-2026国标</div>
-          </div>
-          <div class="text-amber-600">→</div>
-        </div>
-      </a>
-      <a href="2026-05-17/index.html" onclick="event.preventDefault();location.href='2026-05-17/index.html?t='+Date.now()" class="card block bg-white rounded-xl shadow-sm p-5 border-l-4 border-rose-500">
-        <div class="flex items-center justify-between">
-          <div>
-            <div class="text-lg font-semibold text-slate-900">2026-05-17</div>
-            <div class="text-sm text-slate-600 mt-1">35 条素材 · 8 Supported · 9 Refuted · 骁龙8 Elite Gen5跑破400万 · OPPO/索尼全球旗舰齐发 · UFS 5.0标准落地</div>
-          </div>
-          <div class="text-rose-600">→</div>
-        </div>
-      </a>
-      <!-- 未来每日会自动追加 -->
-    </div>
-  </section>
-
-  <section class="mt-8">
-    <h2 class="text-xl font-bold mb-4">📱 手机科技深度专题</h2>
-    <div class="space-y-3">
-      <a href="tech-digest/index.html" onclick="event.preventDefault();location.href='tech-digest/index.html?t='+Date.now()" class="card block bg-white rounded-xl shadow-sm p-5 border-l-4 border-blue-500">
-        <div class="flex items-center justify-between">
-          <div>
-            <div class="text-lg font-semibold text-slate-900">每日科技简报（永久链接）</div>
-            <div class="text-sm text-slate-600 mt-1">仅展示 Supported 已核查资讯 · 日期切换 · 默认最新日期 · 持续更新</div>
-            <div class="text-xs text-blue-500 mt-1">当前收录：2026-05-15 · 2026-05-16 · 2026-05-17 · 2026-05-18 · 2026-05-19 · 2026-05-20 · 手机创新 / 屏幕 / 芯片 / 电池 / AI创新 / 辟谣</div>
-          </div>
-          <div class="text-blue-600">→</div>
-        </div>
-      </a>
-      <a href="wiki/index.html" onclick="event.preventDefault();location.href='wiki/index.html?t='+Date.now()" class="card block bg-white rounded-xl shadow-sm p-5 border-l-4 border-purple-500">
-        <div class="flex items-center justify-between">
-          <div>
-            <div class="text-lg font-semibold text-slate-900">LLM Wiki · 知识图谱</div>
-            <div class="text-sm text-slate-600 mt-1">实体 × 4 · 主题 × 4 · 全部可点击下钻 · 关系可追踪 · 信源可溯源</div>
-            <div class="text-xs text-purple-500 mt-1">NVIDIA · 华为 · 骁龙芯片 · 硅碳电池 · AI谣言 · Deepfake · 折叠屏 · 影像旗舰战</div>
-          </div>
-          <div class="text-purple-600">→</div>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <section class="mt-12">
-    <h2 class="text-xl font-bold mb-4">🛠 项目结构</h2>
-    <div class="bg-white rounded-xl shadow-sm p-5">
-      <ul class="text-sm space-y-2 text-slate-700">
-        <li><a href="_meta/scope.md" class="text-rose-600 hover:underline">采集范围定义</a></li>
-        <li><a href="_meta/source-list.html" onclick="event.preventDefault();location.href='_meta/source-list.html?t='+Date.now()" class="text-rose-600 hover:underline">信源清单与可信度</a></li>
-        <li><a href="_meta/agents-architecture.md" class="text-rose-600 hover:underline">多 Agent 架构</a></li>
-        <li><a href="skills/fact-check-playbook.md" class="text-rose-600 hover:underline">事实核查方法论</a></li>
-        <li><a href="skills/pseudoscience-patterns.md" class="text-rose-600 hover:underline">伪科学模式库</a></li>
-        <li><a href="skills/logical-fallacy-catalog.md" class="text-rose-600 hover:underline">逻辑谬误案例库</a></li>
-        <li><a href="skills/source-credibility.md" class="text-rose-600 hover:underline">信源可信度档案</a></li>
-        <li><a href="wiki/index.md" class="text-rose-600 hover:underline">LLM Wiki 图谱索引</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <footer class="mt-12 pt-6 border-t border-slate-200 text-center text-xs text-slate-500">
-    项目主页：<a href="https://github.com/chirs0901/rumorcrusher" class="text-rose-600 hover:underline">github.com/chirs0901/rumorcrusher</a>
-  </footer>
-
-</main>
+<body>
+<h1>🔍 RumorCrusher 归档总览</h1>
+<div class="subtitle">手机硬件 &amp; 智能硬件 · 事实核查系统 v0.5</div>
+<table>
+  <thead><tr><th>日期</th><th>晨报</th><th>条数</th><th>健康分</th><th>仪表盘</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>2026-05-22</td>
+      <td><span class="morning-tag">+ 晨报 30条</span></td>
+      <td>30</td>
+      <td>87.5</td>
+      <td><a href="2026-05-22/index.html">查看 →</a></td>
+    </tr>
+  </tbody>
+</table>
+<p style="margin-top:24px;font-size:12px;color:#555;">当前收录日期：2026-05-22 &nbsp;|&nbsp; 更新：2026-05-22 晨报批次</p>
 </body>
 </html>

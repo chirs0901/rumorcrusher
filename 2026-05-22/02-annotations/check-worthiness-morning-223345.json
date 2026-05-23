@@ -1,0 +1,48 @@
+{
+  "run_meta": {
+    "date": "2026-05-22",
+    "slot": "morning",
+    "timestamp": "223345",
+    "model": "check-worthiness-v1"
+  },
+  "summary": {
+    "total_input": 30,
+    "high_priority": 12,
+    "medium_priority": 11,
+    "low_priority": 5,
+    "out_of_scope": 2,
+    "selected_for_audit": 23
+  },
+  "items": [
+    {"id": "RC20260522-001", "cw_score": 0.82, "priority": "high", "reason": "权威机构数据，市场影响大"},
+    {"id": "RC20260522-002", "cw_score": 0.79, "priority": "high", "reason": "苹果市场份额增长，数据可核查"},
+    {"id": "RC20260522-003", "cw_score": 0.88, "priority": "high", "reason": "存储价格暴涨影响整个产业链，数字具体需核查"},
+    {"id": "RC20260522-004", "cw_score": 0.85, "priority": "high", "reason": "首款2nm GAA芯片声称需仔细核实"},
+    {"id": "RC20260522-005", "cw_score": 0.70, "priority": "medium", "reason": "公司战略公告，真实性较高但细节待验证"},
+    {"id": "RC20260522-006", "cw_score": 0.92, "priority": "high", "reason": "苹果折叠屏铰链失败是重大供应链新闻，多源证实"},
+    {"id": "RC20260522-007", "cw_score": 0.78, "priority": "high", "reason": "供应商身份可核查，液态金属技术有争议"},
+    {"id": "RC20260522-008", "cw_score": 0.65, "priority": "medium", "reason": "价格属传言，区间宽泛"},
+    {"id": "RC20260522-009", "cw_score": 0.75, "priority": "medium", "reason": "摩托罗拉官方发布，细节可核查"},
+    {"id": "RC20260522-010", "cw_score": 0.80, "priority": "high", "reason": "量产时间表有供应链影响，DigiTimes来源"},
+    {"id": "RC20260522-011", "cw_score": 0.83, "priority": "high", "reason": "台积电产能预订声称影响全行业"},
+    {"id": "RC20260522-012", "cw_score": 0.72, "priority": "medium", "reason": "价格预测，数字需来源支撑"},
+    {"id": "RC20260522-013", "cw_score": 0.81, "priority": "high", "reason": "三星良率数据对代工竞争格局关键"},
+    {"id": "RC20260522-014", "cw_score": 0.77, "priority": "high", "reason": "三星代工客户名单含重要厂商，可核查"},
+    {"id": "RC20260522-015", "cw_score": 0.86, "priority": "high", "reason": "AMD转单三星对台积电影响重大，DigiTimes原发"},
+    {"id": "RC20260522-016", "cw_score": 0.90, "priority": "high", "reason": "李在镕访台+联发科会面，极高影响力供应链外交"},
+    {"id": "RC20260522-017", "cw_score": 0.68, "priority": "medium", "reason": "产品发布公告，细节核查难度低"},
+    {"id": "RC20260522-018", "cw_score": 0.66, "priority": "medium", "reason": "明确发布日期，可核查"},
+    {"id": "RC20260522-019", "cw_score": 0.60, "priority": "medium", "reason": "爆料消息，规格未经官方确认"},
+    {"id": "RC20260522-020", "cw_score": 0.65, "priority": "medium", "reason": "发布公告，可核查"},
+    {"id": "RC20260522-021", "cw_score": 0.76, "priority": "medium", "reason": "NPU提升数字来自高通官方声明"},
+    {"id": "RC20260522-022", "cw_score": 0.58, "priority": "low", "reason": "行业预测目标，难以核实"},
+    {"id": "RC20260522-023", "cw_score": 0.62, "priority": "medium", "reason": "合作项目，细节模糊"},
+    {"id": "RC20260522-024", "cw_score": 0.55, "priority": "low", "reason": "行业趋势分析，非具体声明"},
+    {"id": "RC20260522-025", "cw_score": 0.63, "priority": "medium", "reason": "产品规格，可从官方核查"},
+    {"id": "RC20260522-026", "cw_score": 0.70, "priority": "medium", "reason": "官方更新公告"},
+    {"id": "RC20260522-027", "cw_score": 0.50, "priority": "low", "reason": "媒体评测判断，主观性强"},
+    {"id": "RC20260522-028", "cw_score": 0.73, "priority": "medium", "reason": "战略分析，DigiTimes今日报道"},
+    {"id": "RC20260522-029", "cw_score": 0.60, "priority": "low", "reason": "泄露信息，时间较远"},
+    {"id": "RC20260522-030", "cw_score": 0.88, "priority": "high", "reason": "苹果折叠屏铰链失败延伸报道，多媒体覆盖"}
+  ]
+}

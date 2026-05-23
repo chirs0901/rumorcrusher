@@ -1,0 +1,312 @@
+{
+  "run_meta": {
+    "date": "2026-05-22",
+    "slot": "morning",
+    "timestamp": "223345",
+    "search_count": 8,
+    "total_items": 30,
+    "scope": "手机硬件与智能硬件"
+  },
+  "items": [
+    {
+      "id": "RC20260522-001",
+      "title": "全球智能手机SoC出货量Q1 2026同比下降8%",
+      "source": "Counterpoint Research via newkerala.com",
+      "url": "https://www.newkerala.com/news/a/global-smartphone-soc-shipments-down-pc-amid-supply-444.htm",
+      "date": "2026-05",
+      "claim": "全球智能手机SoC出货量在2026年第一季度同比下降8%，但营收仍有望实现两位数增长",
+      "category": "SoC/芯片",
+      "tags": ["Counterpoint", "SoC出货量", "Q1 2026"]
+    },
+    {
+      "id": "RC20260522-002",
+      "title": "苹果SoC市场份额Q1 2026从15%升至19%",
+      "source": "appleworld.today",
+      "url": "https://appleworld.today/2026/04/apple-had-19-of-the-global-smartphone-system-on-a-chip-shipments-in-quarter-one/",
+      "date": "2026-04",
+      "claim": "苹果在2026年第一季度全球智能手机SoC市场份额从15%增至19%，集成供应链优势突出",
+      "category": "SoC/芯片",
+      "tags": ["Apple", "市场份额", "SoC"]
+    },
+    {
+      "id": "RC20260522-003",
+      "title": "存储价格Q1涨50-55%，Q2预计再涨80-85%，打击Android芯片厂商利润",
+      "source": "wccftech.com",
+      "url": "https://wccftech.com/one-apple-strategy-not-practiced-by-android-chipset-makers-is-losing-them-millions/",
+      "date": "2026-05",
+      "claim": "内存价格在Q1同比上涨50-55%，Q2预计进一步上涨80-85%，高通/联发科出货量两位数下滑",
+      "category": "SoC/芯片",
+      "tags": ["存储价格", "高通", "联发科", "供应链"]
+    },
+    {
+      "id": "RC20260522-004",
+      "title": "三星Exynos 2600被称为全球首款2nm GAA制程手机芯片",
+      "source": "androidpolice.com",
+      "url": "https://www.androidpolice.com/snapdragon-8-elite-gen-5-vs-exynos-2600/",
+      "date": "2026-05",
+      "claim": "三星Exynos 2600采用2nm GAA工艺，在性能、能效和散热上有显著提升",
+      "category": "SoC/芯片",
+      "tags": ["三星", "Exynos 2600", "2nm", "GAA"]
+    },
+    {
+      "id": "RC20260522-005",
+      "title": "小米计划每年发布新款自研手机SoC",
+      "source": "CNBC / androidheadlines.com",
+      "url": "https://www.cnbc.com/2026/03/04/xiaomi-plans-yearly-smartphone-chip-release-ai-assistant-for-overseas.html",
+      "date": "2026-03",
+      "claim": "小米宣布将每年发布一款新的自研手机芯片，并计划为海外用户推出自研AI助手",
+      "category": "SoC/芯片",
+      "tags": ["小米", "自研芯片", "AI"]
+    },
+    {
+      "id": "RC20260522-006",
+      "title": "苹果可折叠iPhone铰链量产停滞（2026年5月18日）",
+      "source": "MacRumors",
+      "url": "https://www.macrumors.com/2026/05/18/foldable-iphone-production-stalls/",
+      "date": "2026-05-18",
+      "claim": "苹果可折叠iPhone试产阶段铰链反复失效，无法通过苹果QC标准，量产面临停滞",
+      "category": "折叠铰链",
+      "tags": ["Apple", "折叠屏", "铰链", "iPhone Fold"]
+    },
+    {
+      "id": "RC20260522-007",
+      "title": "苹果折叠iPhone铰链采用液态金属，东莞宜安独家供货",
+      "source": "smartprix.com / gadgethacks",
+      "url": "https://www.smartprix.com/bytes/apples-foldable-iphone-may-use-a-liquid-metal-hinge-and-new-titanium-frame/",
+      "date": "2026-05",
+      "claim": "苹果折叠iPhone铰链将使用液态金属（非晶合金），东莞宜安科技为独家供应商",
+      "category": "折叠铰链",
+      "tags": ["Apple", "液态金属", "铰链供应链", "东莞宜安"]
+    },
+    {
+      "id": "RC20260522-008",
+      "title": "苹果折叠iPhone预计售价2000-2500美元，秋季发布",
+      "source": "MacRumors / phonearena.com",
+      "url": "https://www.macrumors.com/guide/foldable-iphone/",
+      "date": "2026-05",
+      "claim": "苹果折叠iPhone（iPhone Ultra/Fold）预计售价2000-2500美元，秋季与iPhone 18 Pro一同发布",
+      "category": "折叠铰链",
+      "tags": ["Apple", "iPhone Fold", "价格", "发布时间"]
+    },
+    {
+      "id": "RC20260522-009",
+      "title": "摩托罗拉Razr 2026于5月21日开售，铰链盖板采用大猩猩玻璃",
+      "source": "unboxfuture.com",
+      "url": "https://www.unboxfuture.com/2026/05/the-future-unfolds-best-foldable-phone.html",
+      "date": "2026-05-21",
+      "claim": "摩托罗拉Razr 2026家族于5月21日发布，铰链盖板玻璃升级为大猩猩玻璃，解决碎屑进入和屏幕分层问题",
+      "category": "折叠铰链",
+      "tags": ["摩托罗拉", "Razr", "折叠屏", "大猩猩玻璃"]
+    },
+    {
+      "id": "RC20260522-010",
+      "title": "苹果折叠iPhone量产计划7月开始，秋季发布仍在轨",
+      "source": "DigiTimes / appleinsider.com",
+      "url": "https://appleinsider.com/articles/26/05/18/problematic-hinge-could-delay-the-iphone-fold",
+      "date": "2026-05-18",
+      "claim": "DigiTimes报道苹果折叠iPhone量产比计划落后1-2个月，但7月开始量产、秋季发布的目标仍维持",
+      "category": "折叠铰链",
+      "tags": ["Apple", "iPhone Fold", "量产时间", "供应链"]
+    },
+    {
+      "id": "RC20260522-011",
+      "title": "TSMC先进制程产能已预订至2028年",
+      "source": "Dataconomy",
+      "url": "https://dataconomy.com/2026/03/31/tsmcs-advanced-chip-capacity-is-booked-out-through-2028/",
+      "date": "2026-03",
+      "claim": "台积电先进制程（2nm）产能已被苹果、英伟达、AMD、高通等预订至2028年",
+      "category": "上游与产业链",
+      "tags": ["台积电", "2nm", "产能", "代工"]
+    },
+    {
+      "id": "RC20260522-012",
+      "title": "台积电2nm晶圆价格预计超过3万美元/片",
+      "source": "technetbooks.com",
+      "url": "https://www.technetbooks.com/2026/01/samsungs-2nm-foundry-opportunity-as.html",
+      "date": "2026-01",
+      "claim": "台积电2nm制程晶圆价格预计将超过30,000美元每片，价格压力推动客户寻找三星代工替代方案",
+      "category": "上游与产业链",
+      "tags": ["台积电", "晶圆价格", "2nm"]
+    },
+    {
+      "id": "RC20260522-013",
+      "title": "三星2nm代工良率已达50%，H2 2026量产",
+      "source": "seoulz.com",
+      "url": "https://www.seoulz.com/samsung-foundry-chases-tsmc-2nm-chip-race/",
+      "date": "2026-05",
+      "claim": "三星晶圆代工2nm节点量产前良率已达50%，计划2026年下半年开始量产",
+      "category": "上游与产业链",
+      "tags": ["三星", "2nm", "良率", "代工"]
+    },
+    {
+      "id": "RC20260522-014",
+      "title": "三星代工获得特斯拉和英伟达2nm订单",
+      "source": "technetbooks.com",
+      "url": "https://www.technetbooks.com/2026/01/samsungs-2nm-foundry-opportunity-as.html",
+      "date": "2026-05",
+      "claim": "三星晶圆代工已获得特斯拉和英伟达的2nm制程订单，借台积电产能饱和抢占市场",
+      "category": "上游与产业链",
+      "tags": ["三星", "英伟达", "特斯拉", "2nm代工"]
+    },
+    {
+      "id": "RC20260522-015",
+      "title": "AMD转投三星2nm代工，冲击台积电AI芯片主导地位（5月11日）",
+      "source": "DigiTimes",
+      "url": "https://www.digitimes.com/news/a20260511PD215/samsung-tsmc-amd-2nm-supply-chain.html",
+      "date": "2026-05-11",
+      "claim": "AMD已决定将部分2nm芯片生产转移至三星代工，对台积电AI芯片业务形成竞争压力",
+      "category": "上游与产业链",
+      "tags": ["AMD", "三星代工", "台积电", "2nm"]
+    },
+    {
+      "id": "RC20260522-016",
+      "title": "三星李在镕5月21日秘访台湾，会见联发科CEO蔡明介",
+      "source": "DigiTimes",
+      "url": "https://www.digitimes.com/news/a20260522PD213/samsung-tsmc-taiwan-mediatek-chairman.html",
+      "date": "2026-05-22",
+      "claim": "三星集团会长李在镕5月21日低调访台，与联发科CEO蔡明介会面，旨在争取联发科2nm代工订单",
+      "category": "上游与产业链",
+      "tags": ["三星", "联发科", "代工合作", "供应链外交"]
+    },
+    {
+      "id": "RC20260522-017",
+      "title": "OPPO Find X9s及X9 Ultra将于5月在印度发布，搭载LUMO图像引擎",
+      "source": "mymobileindia.com",
+      "url": "https://www.mymobileindia.com/upcoming-phones-in-may-2026-in-india/",
+      "date": "2026-05",
+      "claim": "OPPO Find X9s和X9 Ultra将在印度5月发布，X9 Ultra搭载新一代哈苏大师相机系统及LUMO图像引擎",
+      "category": "手机本体与核心硬件",
+      "tags": ["OPPO", "Find X9 Ultra", "影像", "LUMO"]
+    },
+    {
+      "id": "RC20260522-018",
+      "title": "Vivo X300 Ultra于5月6日在印度发布",
+      "source": "mymobileindia.com",
+      "url": "https://www.mymobileindia.com/upcoming-phones-in-may-2026-in-india/",
+      "date": "2026-05-06",
+      "claim": "Vivo X300 FE和X300 Ultra于2026年5月6日在印度上午12点正式发布",
+      "category": "手机本体与核心硬件",
+      "tags": ["Vivo", "X300 Ultra", "发布"]
+    },
+    {
+      "id": "RC20260522-019",
+      "title": "小米17T预计5月全球发布，搭载联发科Dimensity 8500",
+      "source": "mymobileindia.com",
+      "url": "https://www.mymobileindia.com/upcoming-phones-in-may-2026-in-india/",
+      "date": "2026-05",
+      "claim": "小米17T预计5月全球首发，搭载联发科Dimensity 8500，6500mAh电池，67W快充",
+      "category": "手机本体与核心硬件",
+      "tags": ["小米", "Dimensity 8500", "电池", "快充"]
+    },
+    {
+      "id": "RC20260522-020",
+      "title": "Realme Buds Air8 Pro TWS耳机与Watch S5手表5月22日印度发布",
+      "source": "fonearena.com",
+      "url": "https://www.fonearena.com/blog/475959/ui-entry-star-tws-earbuds-neckband-speaker-charger-smartwatch-price-features.html",
+      "date": "2026-05-22",
+      "claim": "Realme于2026年5月22日在印度发布Buds Air8 Pro（ANC，50小时续航）及Watch S5智能手表",
+      "category": "智能硬件与配件",
+      "tags": ["Realme", "TWS", "智能手表", "ANC"]
+    },
+    {
+      "id": "RC20260522-021",
+      "title": "Snapdragon 8 Elite Gen 5 NPU AI性能较上代提升46%",
+      "source": "gizmochina.com",
+      "url": "https://www.gizmochina.com/2025/12/24/on-device-ai-snapdragon-8-gen-5-npu-explained/",
+      "date": "2025-12",
+      "claim": "高通骁龙8 Elite Gen 5的NPU AI算力较上一代提升46%，超过56个模型在NPU上推理延迟低于5ms",
+      "category": "AI on-device",
+      "tags": ["高通", "骁龙8 Elite Gen 5", "NPU", "AI"]
+    },
+    {
+      "id": "RC20260522-022",
+      "title": "2026年高端手机AI算力目标100 TOPS",
+      "source": "androidauthority.com",
+      "url": "https://www.androidauthority.com/smartphone-soc-shipments-declining-in-2026-3636273/",
+      "date": "2026-05",
+      "claim": "2026年旗舰手机机载AI性能目标为100 TOPS，配合2nm工艺提升能效",
+      "category": "AI on-device",
+      "tags": ["AI TOPS", "旗舰芯片", "2nm", "NPU"]
+    },
+    {
+      "id": "RC20260522-023",
+      "title": "高通与CXMT联合开发3D DRAM + NPU方案，提升AI手机硬件",
+      "source": "intelligentliving.co",
+      "url": "https://www.intelligentliving.co/qualcomm-3d-dram-npu-ai-phone/",
+              "date": "2026-05",
+      "claim": "高通与CXMT合作研发3D DRAM与NPU融合方案，旨在提升手机AI推理带宽",
+      "category": "AI on-device",
+      "tags": ["高通", "CXMT", "3D DRAM", "NPU"]
+    },
+    {
+      "id": "RC20260522-024",
+      "title": "华为、荣耀、OPPO、小米在2026年优先布局大折叠屏",
+      "source": "huaweicentral.com",
+      "url": "https://www.huaweicentral.com/huawei-honor-oppo-xiaomi-prioritizing-big-foldables-in-2026/",
+      "date": "2026-05",
+      "claim": "华为、荣耀、OPPO、小米2026年产品策略均优先考虑大折叠屏形态，争夺高端折叠市场",
+      "category": "折叠铰链",
+      "tags": ["华为", "荣耀", "OPPO", "小米", "折叠屏"]
+    },
+    {
+      "id": "RC20260522-025",
+      "title": "荣耀Magic8 Lite搭载7500mAh超大电池+66W快充",
+      "source": "gsmarena.com",
+      "url": "https://www.gsmarena.com/phones_best_battery_life_buyers_guide-review-2028.php",
+      "date": "2026-05",
+      "claim": "荣耀Magic8 Lite配备7500mAh大容量电池，支持66W有线快充",
+      "category": "电池与快充",
+      "tags": ["荣耀", "大电池", "快充", "Magic8 Lite"]
+    },
+    {
+      "id": "RC20260522-026",
+      "title": "Google Pixel 5月2026更新改进电池充电、相机与显示",
+      "source": "thetechoutlook.com",
+      "url": "https://www.thetechoutlook.com/news/os/may-2026-google-pixel-update-announced-with-improvements-to-battery-charging-camera-performance-and-display/",
+      "date": "2026-05-22",
+      "claim": "Google发布Pixel设备5月2026更新，涵盖电池充电优化、相机性能提升及显示改善，Pixel 7a及更新机型适用",
+      "category": "手机本体与核心硬件",
+      "tags": ["Google", "Pixel", "系统更新", "电池", "相机"]
+    },
+    {
+      "id": "RC20260522-027",
+      "title": "Pixel 10 Pro XL成为2026年综合旗舰标杆",
+      "source": "techadvisor.com",
+      "url": "https://www.techadvisor.com/article/724318/best-phone.html",
+      "date": "2026-05",
+      "claim": "Pixel 10 Pro XL被评测为2026年最优旗舰之一，主要亮点为出色屏幕、快充提速及双倍起始存储",
+      "category": "手机本体与核心硬件",
+      "tags": ["Google", "Pixel 10 Pro XL", "旗舰评测"]
+    },
+    {
+      "id": "RC20260522-028",
+      "title": "三星悄然布局台湾：存储+代工双线争夺台积电溢出订单（5月22日）",
+      "source": "DigiTimes",
+      "url": "https://www.digitimes.com/news/a20260522PD213/samsung-tsmc-taiwan-mediatek-chairman.html",
+      "date": "2026-05-22",
+      "claim": "三星正同时推进台湾存储业务和代工业务，以承接台积电产能饱和后的溢出订单",
+      "category": "上游与产业链",
+      "tags": ["三星", "台积电", "台湾", "供应链战略"]
+    },
+    {
+      "id": "RC20260522-029",
+      "title": "Meta Quest下一代AR眼镜（Project Phoenix）泄露，预计H1 2027",
+      "source": "t3.com",
+      "url": "https://www.t3.com/tech/vr/metas-next-quest-headset-might-be-way-smaller-with-one-major-asterisk",
+      "date": "2026-05",
+      "claim": "Meta下一代AR眼镜（代号Project Phoenix）泄露，据报体积更小，预计2027年上半年发布",
+      "category": "智能硬件与配件",
+      "tags": ["Meta", "AR眼镜", "Project Phoenix", "VR"]
+    },
+    {
+      "id": "RC20260522-030",
+      "title": "苹果折叠iPhone铰链问题：液态金属耐久度未达标，可用性或推迟至12月",
+      "source": "tweaktown.com / appleworld.today",
+      "url": "https://www.tweaktown.com/news/111671/apples-foldable-iphone-halted-by-hinge-failures-production-stalls/index.html",
+      "date": "2026-05-18",
+      "claim": "苹果折叠iPhone液态金属铰链在高频开合测试中持续失效，用户到货时间可能推迟至12月",
+      "category": "折叠铰链",
+      "tags": ["Apple", "iPhone Fold", "液态金属", "铰链耐久"]
+    }
+  ]
+}

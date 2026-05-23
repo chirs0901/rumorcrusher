@@ -4,7 +4,7 @@ RumorCrusher 飞书通知脚本
 用法：python3 feishu_notify.py 2026-05-14
 读取同日 02-annotations/synthesis.json 摘要发送卡片
 """
-import sys, json, urllib.request, urllib.error, yaml
+import sys, json, urllib.request, urllib.error, yaml, glob
 from pathlib import Path
 from datetime import datetime
 
@@ -56,7 +56,14 @@ def main():
     secrets = load_secrets()
     fs = secrets["feishu"]
 
-    annot = json.load(open(ROOT / date / "02-annotations" / "synthesis.json"))
+    # 优先找 synthesis-{timestamp}.json，fallback 到 synthesis.json
+    synth_dir = ROOT / date / "02-annotations"
+    synth_files = sorted(glob.glob(str(synth_dir / "synthesis-*.json")))
+    if synth_files:
+        synth_path = Path(synth_files[-1])  # 取最新时间戳
+    else:
+        synth_path = synth_dir / "synthesis.json"
+    annot = json.load(open(synth_path))
     summary = annot["summary"]
     fail_items = [x for x in annot["items"] if x["synthesis"] == "fail"]
     gh = secrets["github"]
