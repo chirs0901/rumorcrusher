@@ -3,50 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RumorCrusher · 2026-05-23 · 未来30天手机新品前瞻</title>
+<title>RumorCrusher · 2026-05-23 · 晨报</title>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,"Helvetica Neue","PingFang SC",sans-serif;background:#f2f2ef;color:#111;-webkit-font-smoothing:antialiased;line-height:1.6}
 a{color:#c8102e;text-decoration:none}
 a:hover{text-decoration:underline}
 
-/* HEADER */
 .header{background:#111;color:#fff;padding:48px 28px 36px}
 .header-inner{max-width:1000px;margin:0 auto}
 .header-meta{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#c8102e;margin-bottom:12px}
 .header-title{font-size:clamp(26px,3.4vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-bottom:14px}
-.header-sub{font-size:14px;color:rgba(255,255,255,.65);max-width:720px}
+.header-sub{font-size:14px;color:rgba(255,255,255,.65);max-width:760px}
 
-/* MAIN */
 main{max-width:1000px;margin:0 auto;padding:28px}
 
 .window-banner{background:#fff;border-left:4px solid #c8102e;padding:18px 22px;margin-bottom:24px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 .window-banner .label{font-size:11px;font-weight:700;letter-spacing:.12em;color:#c8102e;margin-bottom:4px}
-.window-banner .value{font-size:16px;font-weight:700;color:#111}
+.window-banner .value{font-size:15px;font-weight:600;color:#111;line-height:1.6}
 
 .section{background:#fff;border-radius:6px;padding:24px;margin-bottom:18px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 .section h2{font-size:18px;letter-spacing:-.01em;margin-bottom:14px;color:#111;display:flex;align-items:center;gap:8px}
 .section h2::before{content:'';width:3px;height:18px;background:#c8102e;border-radius:2px}
 
-/* TABLE */
-.launch-table{width:100%;border-collapse:collapse;font-size:13.5px}
-.launch-table th,.launch-table td{padding:10px 12px;border-bottom:1px solid #e8e8e4;text-align:left;vertical-align:top}
+/* news item */
+.news{border-top:1px solid #e8e8e4;padding:16px 0;display:flex;gap:14px}
+.news:first-of-type{border-top:none;padding-top:6px}
+.news-cat{flex-shrink:0;width:84px;font-size:10px;font-weight:700;letter-spacing:.06em;padding:3px 7px;border-radius:3px;height:fit-content;text-align:center}
+.cat-mfr{background:rgba(200,16,46,.1);color:#a8102e}
+.cat-mem{background:rgba(0,136,170,.1);color:#005e7c}
+.cat-ai{background:rgba(124,58,237,.1);color:#6c2bd9}
+.cat-chip{background:rgba(0,102,204,.1);color:#0055aa}
+.news-body{flex:1}
+.news-title{font-size:15px;font-weight:700;color:#111;margin-bottom:6px;line-height:1.4}
+.news-text{font-size:13.5px;color:#444;line-height:1.7;margin-bottom:6px}
+.news-srcs{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.src{font-size:10px;color:#666;padding:2px 7px;border:1px solid #e0e0dc;border-radius:3px}
+.src:hover{background:#111;color:#fff;border-color:#111}
+.src.official{border-color:#0066cc44;color:#0055aa;background:rgba(0,102,204,.04)}
+
+/* preview table */
+.launch-table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px}
+.launch-table th,.launch-table td{padding:9px 11px;border-bottom:1px solid #e8e8e4;text-align:left;vertical-align:top}
 .launch-table th{background:#f7f7f4;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#555}
 .launch-table td.date{font-weight:700;color:#c8102e;white-space:nowrap}
 .launch-table td.model{font-weight:600}
-.conf{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px;letter-spacing:.04em}
+.conf{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px}
 .conf-h{background:rgba(0,150,80,.15);color:#006633}
 .conf-m{background:rgba(245,166,35,.18);color:#a06800}
-
-/* DETAIL */
-.detail{background:#fafafa;border-left:3px solid #ddd;padding:14px 18px;margin-top:10px;font-size:13.5px;color:#444;line-height:1.75}
-.detail strong{color:#111}
-
-/* SOURCES */
-.sources{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
-.src{font-size:10px;color:#666;padding:3px 9px;border:1px solid #e0e0dc;border-radius:3px}
-.src:hover{background:#111;color:#fff;border-color:#111}
-.src.official{border-color:#0066cc44;color:#0055aa;background:rgba(0,102,204,.04)}
 
 .note{background:rgba(245,166,35,.08);border-left:3px solid #f5a623;padding:12px 16px;margin-top:14px;font-size:13px;color:#5c4500;border-radius:0 4px 4px 0}
 
@@ -57,6 +61,8 @@ footer a{color:#c8102e;font-weight:600}
   .header{padding:36px 20px 28px}
   main{padding:20px}
   .section{padding:18px}
+  .news{flex-direction:column;gap:10px}
+  .news-cat{width:fit-content}
   .launch-table{font-size:12px}
   .launch-table th,.launch-table td{padding:8px 6px}
 }
@@ -66,21 +72,107 @@ footer a{color:#c8102e;font-weight:600}
 
 <div class="header">
   <div class="header-inner">
-    <div class="header-meta">2026-05-23 · 每日简报 · 主题专版</div>
-    <h1 class="header-title">未来 30 天手机新品前瞻</h1>
-    <p class="header-sub">采集时间窗口：2026-05-23 至 2026-06-22。仅收录经多源核验、有官方/权威媒体一致背书的资讯。Conflicting/未确认条目不予纳入。</p>
+    <div class="header-meta">2026-05-23 · 每日简报 · 晨报版</div>
+    <h1 class="header-title">Apple Q1 全球第一 · LPDDR5X 再涨 80% · AI 手机过半 · 30 天新品前瞻</h1>
+    <p class="header-sub">本日采集 6 条经多 Agent 核查的 Supported 资讯，涵盖手机厂商动态、存储供应、AI行业趋势三大主线，外加未来 30 天发布前瞻。所有信源链接均经独立验证。</p>
   </div>
 </div>
 
 <main>
 
 <div class="window-banner">
-  <div class="label">采集窗口</div>
-  <div class="value">2026-05-23 → 2026-06-22（共 30 天）· 信源核验：高通/联发科官网、品牌中国官方渠道、IT之家/GSMArena/MacRumors 等</div>
+  <div class="label">本日要点</div>
+  <div class="value">
+    1️⃣ Apple Q1 2026 以 21% 出货份额跃居全球第一（同比 +9%）<br>
+    2️⃣ TrendForce：LPDDR5X 在 Q2 2026 再涨 78-83%，12GB 成主流，16GB 反向回落<br>
+    3️⃣ IDC：2026 中国 AI 手机出货 1.47 亿台，占比首破 50%（达 53%）<br>
+    4️⃣ OPPO Find X9 系列进军印度市场，含品牌首款 Ultra 机型<br>
+    5️⃣ 国产厂商集体下调 2026 出货量预期：小米/OPPO -20%，vivo -15%<br>
+    6️⃣ 30 天新品前瞻：荣耀 600 系列 + 小米 17 Max 同 5月25日登场
+  </div>
 </div>
 
 <div class="section">
-  <h2>已确认发布日程</h2>
+  <h2>📰 今日 6 条核查资讯</h2>
+
+  <div class="news">
+    <span class="news-cat cat-mfr">手机厂商动态</span>
+    <div class="news-body">
+      <div class="news-title">Apple Q1 2026 跃居全球出货第一：21% 份额，9% 同比增长</div>
+      <div class="news-text">Apple 2026 Q1 以 21% 全球出货份额（同比 +9%）首次夺得 Q1 冠军。三星同 21% 但出货持平。其后：小米 12%、OPPO 10%、vivo 7%。增长驱动：iPhone 17 系列 + 印度扩张 + 二手以旧换新。⚠️ 注意：按销售额 Apple 仍占 45-50%（无变化），份额为出货量。</div>
+      <div class="news-srcs">
+        <a class="src" href="https://techstartups.com/2026/05/22/top-tech-news-today-may-22-2026/" target="_blank">TechStartups</a>
+        <a class="src" href="https://www.163.com/dy/article/KTK0M07M0514R9OJ.html" target="_blank">网易</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-mem">存储供应</span>
+    <div class="news-body">
+      <div class="news-title">LPDDR5X Q2 2026 再涨 78-83%，12GB 成旗舰新主流</div>
+      <div class="news-text">TrendForce 5月最新预测：LPDDR5X 合约价 Q2 再涨 78-83%，LPDDR4X +70-75%。12GB 已成高端主流（16GB 因成本压力部分被砍），中端核心 8GB，入门 4GB。原因：AI 服务器 HBM 挤占 DRAM 产能，三星/SK海力士/美光优先服务数据中心。后果：旗舰 BOM（16GB+1TB UFS4.1）超过 SD8 Elite Gen5 单价，小米 4 月已调价 3 款机型。</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.tomshardware.com/pc-components/dram/nvidias-demand-for-lpddr5x-could-double-smartphone-and-server-memory-prices-in-2026-seismic-shift-means-even-smartphone-class-memory-isnt-safe-from-ai-induced-crunch" target="_blank">Tom's Hardware</a>
+        <a class="src official" href="https://www.trendforce.com/presscenter/news/20260202-12911.html" target="_blank">● TrendForce 官方</a>
+        <a class="src" href="https://www.21jingji.com/article/20260403/herald/faf9fffe6ec7e55121254929d4a80e94.html" target="_blank">21经济网</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-ai">AI行业重磅</span>
+    <div class="news-body">
+      <div class="news-title">IDC：2026 中国 AI 手机出货 1.47 亿台，占比首破 50% 达 53%</div>
+      <div class="news-text">IDC 预测：2026 中国市场 AI 手机出货 1.47 亿台，占比 53%（首次过半）。"AI 手机"定义含端侧大模型 + AI Agent + 系统级 AI 助手。⚠️ 注意：定义宽泛，各家差异可达 5-10 倍。消费者关注：①是否原生端侧推理 ②大模型参数（≥3B 才有意义） ③能否跨 App 协同。该数据与 Counterpoint Q3 全球破 10 亿预测一致。</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.jiemian.com/article/14043807.html" target="_blank">界面新闻</a>
+        <a class="src" href="https://www.163.com/dy/article/KTK0M07M0514R9OJ.html" target="_blank">网易</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-mfr">手机厂商动态</span>
+    <div class="news-body">
+      <div class="news-title">OPPO Find X9s / Find X9 Ultra 印度首发：品牌史上首款 Ultra 进军南亚</div>
+      <div class="news-text">OPPO 本周宣布将 Find X9s / X9 Ultra 引入印度，这是 OPPO 历史上首次在印度发售 Ultra 系列。Find X9 Ultra：骁龙8 Elite Gen5 + 双 200MP 潜望长焦（业内首款双2亿）+ 6.82″ LTPO AMOLED QHD+ 144Hz 3600nit + 7050mAh + 100W/40W 快充。背景：印度 Q1 出货 +18%，OPPO 印度份额 7%→10%。后续：印度版与中国版可能在 RAM 配置/定价/保修上有差异。</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.stuff.tv/features/most-anticipated-upcoming-phones/" target="_blank">Stuff.tv</a>
+        <a class="src" href="https://techstartups.com/2026/05/22/top-tech-news-today-may-22-2026/" target="_blank">TechStartups</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-mfr">手机厂商动态</span>
+    <div class="news-body">
+      <div class="news-title">国产厂商下调 2026 出货预期：小米/OPPO -20%，vivo -15%</div>
+      <div class="news-text">2026 年 5 月初，主流国产安卓厂商集体下调全年出货预期：小米/OPPO 超 20%、vivo 约 15%、传音同步下调。原因双重：①存储芯片涨价深度挤压利润 ②国内换机周期延长（平均 3.5 年）+ 海外扩张乏力。Q1 国内 -5%（vs 全球 +3%）。应对：向高端倾斜、AI 拉新换机、精简 SKU。</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.jiemian.com/article/14043807.html" target="_blank">界面新闻</a>
+        <a class="src" href="https://36kr.com/p/3700902849851910" target="_blank">36氪</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-mfr">手机厂商动态</span>
+    <div class="news-body">
+      <div class="news-title">未来 30 天新品前瞻：荣耀 600 系列 + 小米 17 Max 同日登场（5月25日）</div>
+      <div class="news-text">5月25日 19:00 荣耀 600/600 Pro/600 星耀版国行发布（200MP+8600mAh+磁吸副屏）。同日早 10 点小米 17 Max 开售（骁龙8 Elite Gen5+8000mAh硅碳+2亿徕卡，4299 国补起）。vivo X Fold6 / OPPO Reno16 / vivo S60 预计 5月底-6月中。6月8-12日 Apple WWDC（软件向）。下站：Samsung Z Fold8 7月22日伦敦（超窗口）。</div>
+      <div class="news-srcs">
+        <a class="src official" href="https://www.honor.com/global/phones/honor-600/" target="_blank">● Honor 官网</a>
+        <a class="src official" href="https://finance.sina.com.cn/tech/digi/2026-05-21/doc-inhyshrm8165542.shtml" target="_blank">● 新浪科技</a>
+        <a class="src" href="https://www.ithome.com/0/953/605.htm" target="_blank">IT之家</a>
+        <a class="src" href="https://www.gsmarena.com/honor_600_series_china_launch_date_design_and_color_options_revealed-news-72822.php" target="_blank">GSMArena</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>📅 未来 30 天发布日程</h2>
   <table class="launch-table">
     <thead>
       <tr><th>日期</th><th>厂商/机型</th><th>核心规格</th><th>价格</th><th>置信度</th></tr>
@@ -89,104 +181,67 @@ footer a{color:#c8102e;font-weight:600}
       <tr>
         <td class="date">05-25 19:00</td>
         <td class="model">荣耀 600 / 600 Pro / 600 星耀版</td>
-        <td>2亿主摄 + 8600mAh青海湖电池 + 80W有线快充 + 磁吸副屏；Pro 版升 天玑8550 Elite + 潜望长焦 + 3D超声指纹</td>
-        <td>TBD（Pro 预计 4500+）</td>
+        <td>2亿主摄 + 8600mAh 青海湖电池 + 磁吸副屏；Pro 升 天玑8550 Elite + 潜望长焦</td>
+        <td>TBD（Pro 4500+）</td>
         <td><span class="conf conf-h">高</span></td>
       </tr>
       <tr>
         <td class="date">05-25 10:00</td>
         <td class="model">小米 17 Max 开售</td>
-        <td>骁龙8 Elite Gen5 + 8000mAh硅碳电池（16%硅含量/894Wh·L）+ 100W有线/50W无线 + 2亿徕卡主摄 + 6.9″ LTPO 3500nit</td>
-        <td>4799 起 / 国补 4299 起</td>
+        <td>骁龙8 Elite Gen5 + 8000mAh 硅碳(16%硅) + 2亿徕卡 + 6.9″ LTPO 3500nit</td>
+        <td>4799 / 国补 4299 起</td>
         <td><span class="conf conf-h">高</span></td>
       </tr>
       <tr>
         <td class="date">5月底-6月中</td>
         <td class="model">vivo X Fold 6</td>
-        <td>折叠旗舰，详细规格未官宣</td>
+        <td>折叠旗舰，规格未官宣</td>
         <td>未公布</td>
         <td><span class="conf conf-m">中</span></td>
       </tr>
       <tr>
         <td class="date">5月底-6月中</td>
         <td class="model">vivo S60 系列</td>
-        <td>2000-3000元档位，主推银白"夏日星光"设计，一体冷雕玻璃</td>
+        <td>2000-3000 档，银白"夏日星光"设计</td>
         <td>未公布</td>
         <td><span class="conf conf-m">中</span></td>
       </tr>
       <tr>
         <td class="date">5月底-6月中</td>
         <td class="model">OPPO Reno 16 系列</td>
-        <td>OPPO 线下主力产品线，规格未官宣</td>
+        <td>线下主力，Pro Max 升天玑9400+</td>
         <td>未公布</td>
         <td><span class="conf conf-m">中</span></td>
       </tr>
       <tr>
         <td class="date">06-08 → 06-12</td>
         <td class="model">Apple WWDC 2026</td>
-        <td>iOS 27 / iPadOS 27 / macOS 新版本 / watchOS / visionOS。按惯例无手机硬件公布</td>
-        <td>免费（开发者活动）</td>
+        <td>iOS 27 / iPadOS 27 / macOS 新版本，按惯例无手机硬件</td>
+        <td>免费</td>
         <td><span class="conf conf-h">高</span></td>
       </tr>
     </tbody>
   </table>
-</div>
-
-<div class="section">
-  <h2>🏆 重点机型详解</h2>
-
-  <div style="font-weight:700;font-size:15px;margin-bottom:6px;color:#c8102e">荣耀 600 系列（5月25日 19:00 中国发布）</div>
-  <div class="detail">
-    <strong>三机型阵容：</strong>Honor 600（骁龙7 Gen4，国行）/ Honor 600 Pro（天玑8550 Elite，含潜望长焦）/ Honor 600 星耀版。<br>
-    <strong>电池：</strong>全系 8600mAh 青海湖电池（含硅碳负极），80W 有线 + 27W 反向充电。注意：国行版本 8600mAh 比全球版（7000mAh）大。<br>
-    <strong>影像：</strong>2亿像素主摄（1/1.4 英寸传感器 + OIS + CIPA 6.0 级防抖），Pro 版增配潜望长焦。号称"4K 闪光微单 Live"模式。<br>
-    <strong>屏幕：</strong>6.57″（标准版）/ 6.75″（Pro）AMOLED 120Hz，峰值 8000 nit，3840Hz PWM 高频护眼调光。<br>
-    <strong>新形态：</strong>磁吸副屏配件（细节待发布会公布）。
-  </div>
-
-  <div style="font-weight:700;font-size:15px;margin:18px 0 6px;color:#c8102e">小米 17 Max（5月25日 早10点 正式开售）</div>
-  <div class="detail">
-    <strong>处理器：</strong>第五代骁龙 8 至尊版（Snapdragon 8 Elite Gen5）。<br>
-    <strong>电池：</strong>8000mAh 小米金沙江电池，含硅量 <strong>16%</strong>，能量密度 894 Wh/L（行业当前最高之一），100W 有线 + 50W 无线快充。<br>
-    <strong>影像：</strong>徕卡光学全焦段三摄，主摄为 2亿像素 1/1.4 英寸传感器，13.5EV 高动态范围。<br>
-    <strong>屏幕：</strong>6.9 英寸超窄四等边直屏 LTPO，1-120Hz，峰值亮度 3500 nit，第三代龙晶玻璃。<br>
-    <strong>价格：</strong>标价 4799 元起（16GB+512GB），国补到手价 4299 元起。
-  </div>
 
   <div class="note">
-    <strong>⚠️ 30天窗口外的重要事件：</strong>Samsung Galaxy Z Fold8 / Flip8 已确认 2026年7月22日伦敦 Unpacked 发布（距今 60 天），将引入"Wide Fold"新形态，可能携带 Galaxy Glasses。本次前瞻不纳入但提前预告。
+    <strong>⚠️ 30 天窗口外重要事件：</strong>Samsung Galaxy Z Fold8 / Flip8 已确认 2026 年 7月22日 伦敦 Unpacked（距今 60 天，超窗口）。可能引入"Wide Fold"新形态 + Galaxy Glasses。
   </div>
 </div>
 
 <div class="section">
-  <h2>📋 核验方法说明</h2>
-  <div class="detail">
-    <strong>采集方式：</strong>6 轮 WebSearch 多源比对（中英文 + 官方页 + 权威媒体）。<br>
-    <strong>核验维度：</strong>① 官网链接可访问 ② 至少 2 个独立信源一致 ③ 发布日期与产品命名经品牌官方确认 ④ 关键规格（芯片/电池/像素）有数字一致性。<br>
-    <strong>排除规则：</strong>
-    <ul style="margin-left:20px;margin-top:6px">
-      <li>已被推翻的传言型号（如此前传"Pura 90 Ultra"实际不存在的命名幻觉）</li>
-      <li>仅有单一爆料账号、无官方背书的"6月待发"机型</li>
-      <li>2025 年旧报道被搜索引擎误归为 2026 年的（小米 6月26日发布会属 2025 年事件，已发布产品现已上市，不属"未来"）</li>
-    </ul>
-  </div>
-
-  <div class="sources">
-    <a class="src official" href="https://www.honor.com/global/phones/honor-600/" target="_blank">● Honor 官网 600 全球页</a>
-    <a class="src official" href="https://www.honor.com/global/phones/honor-600-pro/" target="_blank">● Honor 官网 600 Pro</a>
-    <a class="src official" href="https://finance.sina.com.cn/tech/digi/2026-05-21/doc-inhyshrm8165542.shtml" target="_blank">● 新浪科技·小米17 Max官方</a>
-    <a class="src official" href="https://www.macrumors.com/2026/03/23/apple-announces-wwdc-2026-dates/" target="_blank">● MacRumors·WWDC 2026</a>
-    <a class="src" href="https://www.gsmarena.com/honor_600_series_china_launch_date_design_and_color_options_revealed-news-72822.php" target="_blank">GSMArena·荣耀600详情</a>
-    <a class="src" href="https://www.ithome.com/0/953/605.htm" target="_blank">IT之家·小米17 Max</a>
-    <a class="src" href="https://mobile.zol.com.cn/1181/11812463.html" target="_blank">中关村·荣耀600配置</a>
-    <a class="src" href="https://m.thepaper.cn/newsDetail_forward_33090599" target="_blank">澎湃·5月新机集结</a>
-  </div>
+  <h2>🔬 核验方法</h2>
+  <p style="font-size:13.5px;color:#444;line-height:1.75">
+    <strong>采集：</strong>8 轮 WebSearch 跨中英文 + 官方渠道；时间窗口 2026-05-20 至 2026-05-23（最近 3 天）。<br>
+    <strong>核验：</strong>① 官网链接可访问 ② ≥2 个独立信源一致 ③ 关键数字（份额/价格/容量）与官方数据交叉验证 ④ 日期/型号/规格命名经品牌官方确认。<br>
+    <strong>排除：</strong>已被推翻的传言（如 Pura 90 "Ultra" 命名幻觉）/ 单一爆料无官方背书 / 2025 年旧报道被搜索误归 2026 年的事件。<br>
+    <strong>自动化：</strong>每日 22:00 晚跑 + 07:00 晨跑 + LaunchAgent 每 5 分钟同步 sandbox 产出到本机仓库，自动推送 GitHub Pages，post-push 自动健康自检。
+  </p>
 </div>
 
 </main>
 
 <footer>
-  本前瞻由 RumorCrusher 多 Agent 委员会自动核查生成 · 仅包含经多源核验的 Supported 条目 · 核查方法：AVeriTeC 4 标签 + MultiCW + TSVer<br>
+  本晨报由 RumorCrusher 多 Agent 委员会自动核查生成 · 仅包含 AVeriTeC Supported 条目 · 核查方法：AVeriTeC 4 标签 + MultiCW + TSVer<br>
   <a href="../index.html">← 主站</a> &nbsp;·&nbsp; <a href="../tech-digest/index.html">硬件资讯速递</a> &nbsp;·&nbsp; <a href="../wiki/index.html">LLM Wiki</a> &nbsp;·&nbsp; <a href="https://github.com/chirs0901/rumorcrusher" target="_blank">GitHub</a>
 </footer>
 
