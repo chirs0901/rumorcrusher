@@ -139,13 +139,13 @@ var DATA = {
 
   // ══════════════════════════════════
   '2026-05-23': {
-    title: '未来30天手机新品前瞻：荣耀600系列5月25日中国发布 · 小米17 Max同日开售 · vivo X Fold6/OPPO Reno16/vivo S60齐排队',
-    sub: "重点：荣耀600/600 Pro/600星耀版5月25日19:00中国发布（首发2亿主摄+8600mAh青海湖电池+磁吸副屏）；小米17 Max 5月25日早10点正式开售（骁龙8 Elite Gen5+8000mAh硅碳+2亿徕卡，国补到手4299元起）；vivo X Fold6/OPPO Reno16系列/vivo S60系列预计5月底-6月中旬陆续登场；6月8-12日Apple WWDC 2026（聚焦iOS 27等软件，预计无手机硬件）；下个大事件Samsung Galaxy Z Fold8/Flip8 Unpacked 7月22日伦敦（超出30天窗口）。",
+    title: '晨报：Apple Q1 2026出货全球第一 · LPDDR5X Q2再涨80% · IDC中国AI手机占比突破53% · 30天新品前瞻',
+    sub: '重点：Apple Q1 2026以21%份额跃居全球出货第一（同比+9%），三星紧随同为21%；LPDDR5X Q2 2026合约价再涨78-83%，12GB成旗舰主流（16GB回落）；IDC预测2026中国AI手机占比首破50%（达53%/1.47亿台）；OPPO Find X9s/X9 Ultra印度首发（含品牌首款Ultra）；国产厂商2026出货量预期下调15-20%；未来30天前瞻：荣耀600/小米17 Max同日5月25日登场。',
     stats: [
-      {v:'1', l:'条采集'},
+      {v:'6', l:'条采集'},
       {v:'0', l:'条 Refuted'},
-      {v:'1', l:'条 Supported'},
-      {v:'1', l:'大器件分类'}
+      {v:'6', l:'条 Supported'},
+      {v:'4', l:'大器件分类'}
     ],
     items: [
       {
@@ -163,6 +163,73 @@ var DATA = {
           {name:'中关村在线 · 荣耀600 Pro超级版配置全曝光', url:'https://mobile.zol.com.cn/1181/11812463.html'},
           {name:'MacRumors · WWDC 2026 时间确认', url:'https://www.macrumors.com/2026/03/23/apple-announces-wwdc-2026-dates/', official:true},
           {name:'澎湃新闻 · 5月新机集结报道', url:'https://m.thepaper.cn/newsDetail_forward_33090599'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260523-002',
+        category: '手机厂商动态',
+        title: 'Apple Q1 2026 跃居全球出货第一：21% 份额，9% 同比增长，与三星持平历史首次领跑Q1',
+        text: 'Apple在2026年第一季度（1-3月）以21%的全球智能手机出货份额跃居第一，同比增长9%——这是Apple有史以来首次在Q1夺得全球份额冠军。三星以同样21%份额紧随其后但出货持平。其后排名：小米12%、OPPO 10%、vivo 7%。Apple收入连续14个月同比增长，多个区域市场创历史新高。⚠️ 注意：份额为出货量（shipments）而非销售额；按销售额Apple仍占全球收入约45-50%（无变化）。增长驱动：iPhone 17系列+印度市场扩张+二手以旧换新计划升级。',
+        tags: ['Apple','iPhone','市场份额','Q1 2026','三星','出货量','21%份额'],
+        sources: [
+          {name:'Tech Startups · 全球Q1 2026出货排名', url:'https://techstartups.com/2026/05/22/top-tech-news-today-may-22-2026/'},
+          {name:'网易 · 2026 Q1 手机榜 iPhone 领跑', url:'https://www.163.com/dy/article/KTK0M07M0514R9OJ.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260523-003',
+        category: '存储供应',
+        title: 'LPDDR5X Q2 2026 再涨 78-83%：12GB 成旗舰新主流，16GB 反向回落，存储BOM超芯片',
+        text: 'TrendForce 5月最新预测：2026年Q2 LPDDR5X 合约价继续上涨78-83%，LPDDR4X 涨70-75%。关键变化：12GB 已成为高端机型主流配置（16GB 反而因成本压力被部分厂商砍掉），中端机型核心规格降到8GB，入门机型保持4GB。原因：AI服务器对HBM的旺盛需求挤占DRAM产能，三星/SK海力士/美光均优先供应数据中心客户。后果：旗舰手机BOM（16GB+1TB UFS 4.1）已超过骁龙8 Elite Gen5单价，部分品牌2026年4月起已开始调价（小米3款机型已宣布）。Q1 2026涨幅80-90%，记录高位。',
+        tags: ['LPDDR5X','DRAM涨价','TrendForce','12GB','16GB','存储供应','HBM挤占','78-83%'],
+        sources: [
+          {name:'Tom\'s Hardware · LPDDR5X 涨价深度分析', url:'https://www.tomshardware.com/pc-components/dram/nvidias-demand-for-lpddr5x-could-double-smartphone-and-server-memory-prices-in-2026-seismic-shift-means-even-smartphone-class-memory-isnt-safe-from-ai-induced-crunch'},
+          {name:'TrendForce 1Q26 价格预测', url:'https://www.trendforce.com/presscenter/news/20260202-12911.html', official:true},
+          {name:'21经济网 · 小米3款机型调价', url:'https://www.21jingji.com/article/20260403/herald/faf9fffe6ec7e55121254929d4a80e94.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260523-004',
+        category: 'AI行业重磅',
+        title: 'IDC 预测：2026 中国 AI 手机出货 1.47亿台占比 53%，首次过半',
+        text: 'IDC最新报告预测：2026年中国市场AI手机出货量将达1.47亿台，占比首次突破50%达到53%。"AI手机"定义为含有端侧大模型推理能力+AI Agent + 系统级AI助手的机型。⚠️ 注意：定义宽泛，不同厂商自报标准差异巨大——华为/小米/vivo/荣耀/OPPO 各家"AI手机"实际端侧能力差异可达 5-10 倍。建议消费者关注：①是否原生支持端侧大模型推理 ②大模型参数规模（最少3B以上才有意义）③系统级AI Agent是否能跨App协同。该数据与Counterpoint Q3 2026全球生成式AI手机累计破10亿的预测一致。',
+        tags: ['AI手机','IDC预测','1.47亿','53%占比','端侧大模型','中国市场'],
+        sources: [
+          {name:'界面新闻 · IDC AI手机数据深度', url:'https://www.jiemian.com/article/14043807.html'},
+          {name:'网易 · 2026 Q1 手机榜分析', url:'https://www.163.com/dy/article/KTK0M07M0514R9OJ.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260523-005',
+        category: '手机厂商动态',
+        title: 'OPPO Find X9s / Find X9 Ultra 印度首发：品牌史上首款 Ultra 机型进军南亚',
+        text: 'OPPO本周宣布将 Find X9s 与 Find X9 Ultra 引入印度市场，这是 OPPO 品牌历史上首次将 Ultra 系列引入印度（此前 Ultra 仅在中国/欧洲发售）。Find X9 Ultra 关键规格：骁龙8 Elite Gen5 + 双200MP潜望长焦（业内首款双2亿摄像头）+ 6.82英寸LTPO AMOLED + QHD+ 144Hz + 3600nit峰值 + 7050mAh电池 + 100W有线/40W无线。此举背景：印度智能手机市场2026年Q1出货同比增长18%，OPPO在印度市场份额从7%上升至10%。后续：印度版本和中国版本可能存在细微规格差异（如RAM配置、定价、保修条款）。',
+        tags: ['OPPO','Find X9 Ultra','Find X9s','印度市场','双200MP','骁龙8EG5','7050mAh'],
+        sources: [
+          {name:'Stuff.tv · OPPO Find X9 系列详情', url:'https://www.stuff.tv/features/most-anticipated-upcoming-phones/'},
+          {name:'TechStartups · 5月22日 Tech News', url:'https://techstartups.com/2026/05/22/top-tech-news-today-may-22-2026/'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260523-006',
+        category: '手机厂商动态',
+        title: '国产厂商下调 2026 出货量预期：小米/OPPO -20%，vivo -15%，存储成本+市场饱和双重压力',
+        text: '2026年5月初，国内主流安卓厂商集体下调2026年全年出货量预期：小米下调超20%、OPPO下调超20%、vivo下调约15%、传音同步下调。背后双重压力：①存储芯片涨价深度挤压利润（LPDDR5X Q2 +80%）②国内换机周期延长（平均使用年限突破3.5年）+ 海外市场扩张乏力。Q1 2026国内出货同比下滑约5%（vs全球+3%）。应对：①向高端机型倾斜（小米17 Max 4799起、荣耀600 Pro预计4500+）②AI功能拉新换机需求（IDC预测AI手机53%占比）③精简SKU降低库存压力。',
+        tags: ['出货量','小米','OPPO','vivo','下调预期','换机周期','存储成本','市场饱和'],
+        sources: [
+          {name:'界面新闻 · 智能手机2026淘汰赛', url:'https://www.jiemian.com/article/14043807.html'},
+          {name:'36氪 · 智能手机2026变局', url:'https://36kr.com/p/3700902849851910'},
+          {name:'21经济网 · 存储涨价小米调价', url:'https://www.21jingji.com/article/20260403/herald/faf9fffe6ec7e55121254929d4a80e94.html'}
         ],
         verdict: 'Supported',
         wikiId: null
