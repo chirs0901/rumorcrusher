@@ -53,16 +53,31 @@ if [ -f "$SANDBOX_TD" ]; then
 fi
 
 # rsync sandbox → repo
-#   --update: 仅当源文件较新才覆盖
-#   --exclude .git: 永远不动 .git
-#   --exclude _meta/auto-push*.log: 不动本机日志
-#   --exclude _meta/sync-sandbox.log: 不动同步日志自己
+#   --update: 仅当源文件较新才覆盖（防止旧 sandbox 内容覆盖较新本地版本）
 EXCLUDES=(
+  # —— 永远不动的目录 ——
   --exclude=.git
+  --exclude=.DS_Store
+
+  # —— 本机本地维护的基础设施脚本（绝不允许 sandbox 覆盖）——
+  --exclude=scripts/daily_publish.sh
+  --exclude=scripts/auto-push-watcher.sh
+  --exclude=scripts/autopush-watcher.sh
+  --exclude=scripts/validate-tech-digest.sh
+  --exclude=scripts/sync-sandbox-outputs.sh
+  --exclude=scripts/fix-locks-and-push.sh
+
+  # —— 本机日志（sandbox 没有这些上下文）——
   --exclude=_meta/auto-push.log
   --exclude=_meta/auto-push-launchd.log
   --exclude=_meta/sync-sandbox.log
-  --exclude=.DS_Store
+  --exclude=_meta/.push-pending
+
+  # —— 凭据/配置类（绝对不能被覆盖）——
+  --exclude=.git-credentials
+  --exclude=scripts/secrets*
+  --exclude=scripts/config*.yaml
+  --exclude=scripts/config*.yml
 )
 [ "${SKIP_TD:-0}" = "1" ] && EXCLUDES+=( --exclude=tech-digest/index.html )
 

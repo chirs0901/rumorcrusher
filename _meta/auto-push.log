@@ -1093,3 +1093,8 @@ To https://github.com/chirs0901/rumorcrusher.git
 To https://github.com/chirs0901/rumorcrusher.git
    0528a2a..e2f3375  main -> main
 [2026-05-22 22:21:45] ✓ 推送成功（proxy=http://127.0.0.1:7897）
+[2026-05-23 11:50:10] 检测到 1 个未推送 commit，开始 push...
+To https://github.com/chirs0901/rumorcrusher.git
+   3d00cc6..4e08d7b  main -> main
+[2026-05-23 11:50:10] ✓ 推送成功（proxy=http://127.0.0.1:7897）
+[2026-05-23 11:50:14] 等待 90 秒后做页面自检...

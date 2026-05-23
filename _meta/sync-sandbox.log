@@ -1,2 +1,26 @@
 [2026-05-23 11:47:49] 同步源: /Users/zhiqiao/Library/Application Support/Claude/local-agent-mode-sessions/057355b0-80de-44e0-839d-beb31c6fa00d/b270b889-7f34-4b4c-992a-c0600bb1fb02/local_b3179572-016e-47de-9e5d-bd4970e1f6d9/outputs/RumorCrusher
 [2026-05-23 11:47:49] ⚠️ sandbox tech-digest JS 校验失败，跳过其同步（其他文件继续）
+[main 4e08d7b] auto-sync from sandbox local_b3179572-016e-47de-9e5d-bd4970e1f6d9 at 2026-05-23 11:47:49
+ 33 files changed, 2840 insertions(+), 2667 deletions(-)
+ delete mode 100644 2026-05-17/index.html.bak
+ create mode 100644 2026-05-22/01-raw/items-morning-223345.json
+ create mode 100644 2026-05-22/02-annotations/check-worthiness-morning-223345.json
+ create mode 100644 2026-05-22/02-annotations/synthesis-morning-223345.json
+ create mode 100644 2026-05-22/02-annotations/synthesis.json
+ create mode 100644 2026-05-22/03-quality-report-morning-223345.md
+ create mode 100644 2026-05-22/04-clean-report-morning-223345.md
+ create mode 100644 2026-05-22/05-methodology-delta-morning-223345.md
+ create mode 100644 2026-05-22/06-self-eval-morning-223345.md
+ create mode 100644 _meta/auto-push-launchd.log
+ create mode 100644 _meta/auto-push.log
+ create mode 100644 _meta/register-noon-task.md
+ create mode 100644 _meta/sync-sandbox.log
+ delete mode 100644 scripts/morning-skill.md.bak
+ create mode 100755 scripts/sync-sandbox-outputs.sh
+ create mode 100644 skills/apple-foldable-tracker.md
+ create mode 100644 skills/foundry-competition-tracker.md
+ delete mode 100644 tech-digest/index.html.bak
+ create mode 100644 wiki/soc-market-2026.md
+[2026-05-23 11:47:49] ✅ 自动 commit 成功
+[2026-05-23 11:56:44] 同步源: /Users/zhiqiao/Library/Application Support/Claude/local-agent-mode-sessions/057355b0-80de-44e0-839d-beb31c6fa00d/b270b889-7f34-4b4c-992a-c0600bb1fb02/local_b3179572-016e-47de-9e5d-bd4970e1f6d9/outputs/RumorCrusher
+[2026-05-23 11:56:44] ⚠️ sandbox tech-digest JS 校验失败，跳过其同步（其他文件继续）

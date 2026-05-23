@@ -8,6 +8,12 @@ LOG="$RCPATH/_meta/auto-push.log"
 
 cd "$RCPATH" 2>/dev/null || { echo "[$(date '+%F %T')] ❌ 仓库路径不存在" >> "$LOG"; exit 78; }
 
+# ── 步骤 0：sandbox → repo 同步（拉取定时任务在 sandbox 里的产出）─────────────
+# sync-sandbox-outputs.sh 退出码：0=有新内容并自动 commit / 2=无变化 / 1=错误
+if [ -x "$RCPATH/scripts/sync-sandbox-outputs.sh" ]; then
+  bash "$RCPATH/scripts/sync-sandbox-outputs.sh" >/dev/null 2>&1
+fi
+
 # 确保获取最新远端状态（不阻塞太久）
 git fetch origin main --quiet 2>/dev/null
 
