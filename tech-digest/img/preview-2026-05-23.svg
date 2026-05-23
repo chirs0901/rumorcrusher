@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300">
+<defs>
+  <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#f7f7f4"/>
+    <stop offset="100%" stop-color="#e8e8e2"/>
+  </linearGradient>
+</defs>
+<rect width="1000" height="300" fill="url(#bg)"/>
+
+<!-- 荣耀 600 Pro -->
+<g transform="translate(50,40)">
+  <rect x="20" y="10" width="120" height="200" rx="22" fill="#e87b3a"/>
+  <rect x="24" y="14" width="112" height="192" rx="18" fill="#0a0a0a"/>
+  <rect x="38" y="26" width="84" height="52" rx="12" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+  <circle cx="55" cy="52" r="11" fill="#3a3a3a"/><circle cx="80" cy="52" r="11" fill="#3a3a3a"/><circle cx="105" cy="52" r="11" fill="#3a3a3a"/>
+  <circle cx="55" cy="52" r="4" fill="#666"/><circle cx="80" cy="52" r="4" fill="#666"/><circle cx="105" cy="52" r="4" fill="#666"/>
+  <text x="80" y="245" text-anchor="middle" fill="#111" font-size="14" font-family="-apple-system,sans-serif" font-weight="700">HONOR 600 Pro</text>
+  <text x="80" y="262" text-anchor="middle" fill="#666" font-size="10" font-family="sans-serif">05-25 19:00</text>
+</g>
+
+<!-- 小米 17 Max -->
+<g transform="translate(290,40)">
+  <rect x="20" y="10" width="120" height="200" rx="22" fill="#7eb5d6"/>
+  <rect x="24" y="14" width="112" height="192" rx="18" fill="#0a0a0a"/>
+  <rect x="40" y="26" width="80" height="42" rx="10" fill="#1a1a1a" stroke="#444" stroke-width="1"/>
+  <circle cx="55" cy="47" r="10" fill="#3a3a3a"/><circle cx="80" cy="47" r="10" fill="#3a3a3a"/><circle cx="105" cy="47" r="10" fill="#3a3a3a"/>
+  <circle cx="55" cy="47" r="3" fill="#777"/><circle cx="80" cy="47" r="3" fill="#777"/><circle cx="105" cy="47" r="3" fill="#777"/>
+  <text x="80" y="245" text-anchor="middle" fill="#111" font-size="14" font-family="-apple-system,sans-serif" font-weight="700">Xiaomi 17 Max</text>
+  <text x="80" y="262" text-anchor="middle" fill="#666" font-size="10" font-family="sans-serif">05-25 10:00 开售</text>
+</g>
+
+<!-- vivo S60 -->
+<g transform="translate(530,40)">
+  <rect x="20" y="10" width="120" height="200" rx="22" fill="#ebeced"/>
+  <rect x="24" y="14" width="112" height="192" rx="18" fill="#0d0d0d"/>
+  <circle cx="55" cy="52" r="20" fill="#1f1f1f" stroke="#444" stroke-width="1.5"/>
+  <circle cx="55" cy="52" r="13" fill="#2a2a2a"/>
+  <circle cx="55" cy="52" r="6" fill="#777"/>
+  <text x="80" y="245" text-anchor="middle" fill="#111" font-size="14" font-family="-apple-system,sans-serif" font-weight="700">vivo S60 系列</text>
+  <text x="80" y="262" text-anchor="middle" fill="#666" font-size="10" font-family="sans-serif">05-29 中国发布</text>
+</g>
+
+<!-- vivo X Fold 6 -->
+<g transform="translate(750,80)">
+  <rect x="10" y="20" width="180" height="120" rx="14" fill="#9a9a9d"/>
+  <rect x="14" y="24" width="86" height="112" rx="8" fill="#0a0a0a"/>
+  <rect x="100" y="24" width="86" height="112" rx="8" fill="#0a0a0a"/>
+  <line x1="100" y1="20" x2="100" y2="140" stroke="#555" stroke-width="1.5"/>
+  <circle cx="155" cy="55" r="18" fill="#222" stroke="#444" stroke-width="2"/>
+  <circle cx="155" cy="55" r="11" fill="#333"/>
+  <circle cx="155" cy="55" r="5" fill="#666"/>
+  <text x="100" y="205" text-anchor="middle" fill="#111" font-size="14" font-family="-apple-system,sans-serif" font-weight="700">vivo X Fold 6</text>
+  <text x="100" y="222" text-anchor="middle" fill="#666" font-size="10" font-family="sans-serif">6月预期</text>
+</g>
+
+<text x="500" y="25" text-anchor="middle" fill="#666" font-size="11" font-family="sans-serif" font-weight="600" letter-spacing="2">未来 30 天手机新品前瞻 · 2026-05-23 → 2026-06-22</text>
+</svg>
