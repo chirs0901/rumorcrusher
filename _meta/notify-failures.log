@@ -1,9 +1,6 @@
-=== 2026-05-22 晨报批次 223345 ===
-时间：2026-05-22 22:43:10 CST
-git push: FAILED — 主仓库 /sessions/*/mnt/Claude/Projects/RumorCrusher 未挂载，无远程仓库配置
-飞书推送: FAILED — https_proxy 127.0.0.1:7897 不可达，无 feishu webhook token
-邮件推送: FAILED — 无SMTP配置
-发布脚本退出码: 1
-[2026-05-23 15:33:40 CST] [git] push失败（sandbox代理不通，本机守护进程将自动重试）
-[2026-05-23 15:33:40 CST] [feishu] FAILED（sandbox内webhook不可达，需用户本机执行）
-[2026-05-23 15:33:40 CST] [email] FAILED（sandbox无SMTP配置）
+[2026-05-23 22:44:05 CST] morning 2026-05-24
+  git_push: SKIPPED (no git remote in session fallback repo)
+  feishu_webhook: SKIPPED (no webhook env var; no script in fallback)
+  email_smtp: SKIPPED (no smtp config; no script in fallback)
+  cause: 主仓库 /sessions/*/mnt/Claude/Projects/RumorCrusher 未挂载，使用 outputs fallback；
+         scripts/daily_publish.sh 不存在，按 SKILL 要求显式记入失败日志，不伪造已发送。
