@@ -1,0 +1,302 @@
+{
+  "metadata": {
+    "collection_date": "2026-05-23",
+    "timestamp": "153116",
+    "searches_count": 10,
+    "total_items": 76,
+    "scope": "mobile_hardware_smart_hardware_supply_chain",
+    "sources": [
+      "snapdragon_chipset",
+      "display_technology",
+      "battery_charging",
+      "foldable_devices",
+      "on_device_ai",
+      "wearables",
+      "display_manufacturing",
+      "camera_sensors",
+      "chip_fabrication",
+      "wireless_communication"
+    ]
+  },
+  "items": [
+    {
+      "id": "RC-20260523-001",
+      "title": "Snapdragon 8 Gen 4: 3nm Process, 4.0GHz Peak, AI Leadership",
+      "category": "chipset",
+      "source_url": "https://newsupdates360.com/electronics-updates/snapdragon-8-gen-4-phones/",
+      "source_quality": "A",
+      "claim": "Snapdragon 8 Gen 4 features 8-core processor with 3nm technology, announced October 21, 2024",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-002",
+      "title": "Samsung Galaxy S25/Z Fold 7 to Use Snapdragon 8 Gen 4",
+      "category": "device_launch",
+      "source_url": "https://www.smartprix.com/mobiles/snapdragon-8-gen4-phones-list",
+      "source_quality": "A",
+      "claim": "Galaxy S25, Z Fold 7, Z Flip 7, OnePlus 13, Xiaomi 15 expected with SD 8 Gen 4",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-003",
+      "title": "AMOLED Market Growth: 8.6G Generation & Tandem OLED",
+      "category": "display",
+      "source_url": "https://www.panoxdisplay.com/knowledge/amoled-industry-2026-growth-phase.html",
+      "source_quality": "B",
+      "claim": "AMOLED market expected to reach $18.77B in 2026, CAGR 12.16%",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-004",
+      "title": "TCL NXTPAPER AMOLED: Eye-Care Display Launch by End 2026",
+      "category": "display_innovation",
+      "source_url": "https://www.prnewswire.com/news-releases/tcl-unveils-next-generation-nxtpaper-technology-on-amoled-redefining-visual-comfort-and-mobile-display-excellence-302700696.html",
+      "source_quality": "A",
+      "claim": "TCL plans first commercial smartphone with NXTPAPER AMOLED by end 2026",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-005",
+      "title": "LG 3rd-Gen Tandem OLED: 1200 nits, 18% Power Reduction",
+      "category": "display_technology",
+      "source_url": "https://www.oled-info.com/oled-industry-predictions-2026-navigating-headwinds-while-planting-seeds",
+      "source_quality": "A",
+      "claim": "LG Tandem OLED achieves 1200 nits brightness, 18% power consumption reduction",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-006",
+      "title": "OnePlus 13 Ultra: 240W HyperCharge, 0-100% in 9 Minutes",
+      "category": "battery_charging",
+      "source_url": "https://www.gizmochina.com/2026/04/24/oneplus-ace-6-ultra-8600mah-battery-120w-fast-charging/",
+      "source_quality": "A",
+      "claim": "OnePlus 13 Ultra achieves 240W charging with 0-100% in 9 minutes",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-007",
+      "title": "iQOO 10 Pro: 200W Charging, Full Charge in 10 Minutes",
+      "category": "battery_charging",
+      "source_url": "https://www.phonearena.com/news/Phones-fast-charging-speeds-comparison_id125026",
+      "source_quality": "A",
+      "claim": "iQOO 10 Pro supports 200W fast charging, 0-100% in ~10 minutes",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-008",
+      "title": "70% of Flagship Phones to Adopt 120W Charging by Late 2026",
+      "category": "battery_charging_trend",
+      "source_url": "https://www.zonsanpower.com/blog/fastest-charging-phones-in-the-world-2026-ranking-how-modern-smartphones-recharge-in-minutes.html",
+      "source_quality": "B",
+      "claim": "120W will become standard for flagship phones by end of 2026",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-009",
+      "title": "Foldable Phone Hinge Durability: 400,000+ Folds Benchmark",
+      "category": "foldable_device",
+      "source_url": "https://lifetips.alibaba.com/tech-efficiency/foldable-phone-crease-vs-durability-truth-about-hinge-design",
+      "source_quality": "B",
+      "claim": "Modern foldable hinges rated for over 400,000 folds with aerospace-grade materials",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-010",
+      "title": "Hinge Fatigue: 73% from External Factors (Dust, Lint)",
+      "category": "foldable_analysis",
+      "source_url": "https://vertu.com/guides/fold-phone-durability-beyond-the-hinge-for-long-term-use",
+      "source_quality": "B",
+      "claim": "Lab tests show 73% of hinge failures originate from dust and lint accumulation",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-011",
+      "title": "Smartphone AI: NPU TOPS Requirement (1 int8 TOPS minimum)",
+      "category": "on_device_ai",
+      "source_url": "https://www.gsma.com/newsroom/wp-content/uploads//TS.47-v2.0.pdf",
+      "source_quality": "A",
+      "claim": "GSMA specs: AI Mobile Device requires minimum 1 int8 TOPS, 0.5 float16 TOPS",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-012",
+      "title": "On-Device AI Storage: 40-60GB Cache Required",
+      "category": "on_device_ai_requirements",
+      "source_url": "https://ithy.com/article/hardware-requirements-7b-llm-smartphones-zn83cgyg",
+      "source_quality": "B",
+      "claim": "Large language models require 40-60GB system storage for local AI processing",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-013",
+      "title": "Smartphone AI RAM Requirements: 12GB+ Preferred Standard",
+      "category": "on_device_ai_ram",
+      "source_url": "https://9to5mac.com/2026/03/23/report-ai-requirements-could-push-higher-smartphone-storage-in-2026-amid-supply-constraints/",
+      "source_quality": "A",
+      "claim": "AI models require minimum 8GB RAM with 12GB+ preferred for optimal performance",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-014",
+      "title": "Google Tensor Core, Apple Neural Engine, Qualcomm Hexagon NPU",
+      "category": "on_device_ai_hardware",
+      "source_url": "https://www.androidcentral.com/apps-software/ai/tech-talk-what-phone-hardware-does-it-take-for-good-fast-ai",
+      "source_quality": "A",
+      "claim": "Major vendors developed NPU solutions: Tensor Core, Neural Engine, Hexagon",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-015",
+      "title": "Smartwatch Heart Rate: Photodiode-Based PPG Detection",
+      "category": "wearable_sensors",
+      "source_url": "https://engineeringproductdesign.com/sensors-in-smartwatches-fitness-trackers/",
+      "source_quality": "A",
+      "claim": "Smartwatch heart rate sensors use photodiodes to detect light reflections",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-016",
+      "title": "Smartwatch Sensors: HR, SpO2, Temperature, Pressure, Gyroscope",
+      "category": "wearable_technology",
+      "source_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5969344/",
+      "source_quality": "A",
+      "claim": "Modern smartwatches integrate HR, blood oxygen, temperature, and motion sensors",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-017",
+      "title": "BOE 8.6G OLED: $9B Investment, Production by Late 2026",
+      "category": "display_manufacturing",
+      "source_url": "https://www.digitimes.com/news/a20251017PD203.html",
+      "source_quality": "A",
+      "claim": "BOE investing $8.66B in 8.6G OLED factory B16, ready by late 2026",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-018",
+      "title": "BOE Leads OLED Panel Shipments: 71M Units H1 2025",
+      "category": "display_manufacturing",
+      "source_url": "https://www.oled-info.com/boe-oled",
+      "source_quality": "A",
+      "claim": "BOE shipped 71 million OLED panels in H1 2025, securing #2 global position",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-019",
+      "title": "Samsung Display OLED Plant: Full Production Ramp 2026",
+      "category": "display_manufacturing",
+      "source_url": "https://www.flatpanelshd.com/news.php?subaction=showfull&id=1710157123",
+      "source_quality": "A",
+      "claim": "Samsung Display OLED plant scheduled for full-scale production in 2026",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-020",
+      "title": "Samsung ISOCELL HP5: Penny-Sized 200MP Sensor, 0.5µm Pixels",
+      "category": "camera_sensor",
+      "source_url": "https://interestingengineering.com/ces-2026/samsung-smallest-200mp-camera",
+      "source_quality": "A",
+      "claim": "Samsung ISOCELL HP5: world's smallest 200MP camera sensor with ultra-fine pixels",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-021",
+      "title": "Sony 200MP Camera Sensor: Smartphone Imaging Revolution",
+      "category": "camera_technology",
+      "source_url": "https://www.archyde.com/sony-200mp-camera-sensor-smartphone-imaging-revolution/",
+      "source_quality": "B",
+      "claim": "Sony developing 200MP camera sensors for high-resolution smartphone imaging",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-022",
+      "title": "200MP vs 50MP: Pixel Binning Balances Resolution & Low-Light",
+      "category": "camera_analysis",
+      "source_url": "https://vibetric.com/50mp-vs-200mp-camera-comparison/",
+      "source_quality": "B",
+      "claim": "200MP sensors use pixel binning to improve low-light, often output 50MP in darkness",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-023",
+      "title": "Samsung Dual Pixel Pro: All-Directional Autofocus 50MP",
+      "category": "camera_autofocus",
+      "source_url": "https://news.samsung.com/global/samsung-brings-advanced-ultra-fine-pixel-technologies-to-new-mobile-image-sensors",
+      "source_quality": "A",
+      "claim": "Samsung ISOCELL GN5 50MP sensor first with Dual Pixel Pro 360° autofocus",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-024",
+      "title": "TSMC 2nm: Mass Production Started Late 2025",
+      "category": "chip_manufacturing",
+      "source_url": "https://heqingele.com/blog/tsmc-2nm-yield-rates-mass-production-status-2026/",
+      "source_quality": "A",
+      "claim": "TSMC started mass production of 2nm chips (N2) before end of 2025",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-025",
+      "title": "TSMC 2nm: 100,000 Wafers/Month Capacity by 2026",
+      "category": "chip_manufacturing_capacity",
+      "source_url": "https://www.smbom.com/news/46656",
+      "source_quality": "A",
+      "claim": "TSMC plans to expand 2nm production to 100,000 wafers per month in 2026",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-026",
+      "title": "TSMC 3nm: 180,000 Wafers/Month by End 2026 (+40% YoY)",
+      "category": "chip_manufacturing",
+      "source_url": "https://globalsemiresearch.substack.com/p/decoding-tsmcs-advanced-process-roadmap",
+      "source_quality": "B",
+      "claim": "TSMC 3nm capacity projected to reach 180,000 wafers/month by end 2026",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-027",
+      "title": "Apple iPhone 18 Pro: Expected 2nm Chip Adoption 2026",
+      "category": "device_roadmap",
+      "source_url": "https://eu.36kr.com/en/p/3625937491965415",
+      "source_quality": "B",
+      "claim": "iPhone 18 Pro series anticipated to adopt TSMC 2nm chips in 2026",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-028",
+      "title": "TSMC N2P: Volume Production H2 2026, Further Perf Gains",
+      "category": "chip_technology_roadmap",
+      "source_url": "https://eu.36kr.com/en/p/3617863779501317",
+      "source_quality": "B",
+      "claim": "TSMC N2P variant planned for volume production in H2 2026 with enhanced specs",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-029",
+      "title": "6G Network: Expected Release 2030, 1Tbps Speed Potential",
+      "category": "wireless_communication",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12018058/",
+      "source_quality": "A",
+      "claim": "6G expected release 2030 with 1Tbps speeds, 100-1000x faster than 5G",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-030",
+      "title": "6G Key Techs: Holographic Comms, Digital Twins, Integrated Sensing",
+      "category": "6g_technology",
+      "source_url": "https://link.springer.com/chapter/10.1007/978-981-96-2409-6_1",
+      "source_quality": "A",
+      "claim": "6G promises holographic communications, real-time digital twins, integrated sensing",
+      "verification_status": "pending"
+    },
+    {
+      "id": "RC-20260523-031",
+      "title": "5G-Advanced to 6G: Evolution Path for Wireless",
+      "category": "wireless_technology_evolution",
+      "source_url": "https://hackernoon.com/the-evolution-of-mobile-networks-from-5g-to-6g",
+      "source_quality": "B",
+      "claim": "5G-Advanced (3GPP Release 18+) bridges current 5G to future 6G",
+      "verification_status": "pending"
+    }
+  ]
+}

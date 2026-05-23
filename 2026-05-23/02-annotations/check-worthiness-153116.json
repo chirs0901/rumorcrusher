@@ -1,0 +1,424 @@
+{
+  "metadata": {
+    "assessment_date": "2026-05-23",
+    "total_items": 31,
+    "worthy_count": 11,
+    "worthiness_rate": "35.5%"
+  },
+  "assessments": [
+    {
+      "id": "RC-20260523-001",
+      "title": "Snapdragon 8 Gen 4: 3nm Process, 4.0GHz Peak, AI Leadership",
+      "category": "chipset",
+      "assessment": {
+        "score": 6,
+        "worthy": true,
+        "reasons": [
+          "官方/权威来源",
+          "高价值硬件类别",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-002",
+      "title": "Samsung Galaxy S25/Z Fold 7 to Use Snapdragon 8 Gen 4",
+      "category": "device_launch",
+      "assessment": {
+        "score": 7,
+        "worthy": true,
+        "reasons": [
+          "官方/权威来源",
+          "高价值硬件类别",
+          "包含具体数据",
+          "易于时间轴验证"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-003",
+      "title": "AMOLED Market Growth: 8.6G Generation & Tandem OLED",
+      "category": "display",
+      "assessment": {
+        "score": 5,
+        "worthy": true,
+        "reasons": [
+          "中等可信度来源",
+          "高价值硬件类别",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-004",
+      "title": "TCL NXTPAPER AMOLED: Eye-Care Display Launch by End 2026",
+      "category": "display_innovation",
+      "assessment": {
+        "score": 4,
+        "worthy": false,
+        "reasons": [
+          "官方/权威来源",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-005",
+      "title": "LG 3rd-Gen Tandem OLED: 1200 nits, 18% Power Reduction",
+      "category": "display_technology",
+      "assessment": {
+        "score": 4,
+        "worthy": false,
+        "reasons": [
+          "官方/权威来源",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-006",
+      "title": "OnePlus 13 Ultra: 240W HyperCharge, 0-100% in 9 Minutes",
+      "category": "battery_charging",
+      "assessment": {
+        "score": 6,
+        "worthy": true,
+        "reasons": [
+          "官方/权威来源",
+          "高价值硬件类别",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-007",
+      "title": "iQOO 10 Pro: 200W Charging, Full Charge in 10 Minutes",
+      "category": "battery_charging",
+      "assessment": {
+        "score": 6,
+        "worthy": true,
+        "reasons": [
+          "官方/权威来源",
+          "高价值硬件类别",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-008",
+      "title": "70% of Flagship Phones to Adopt 120W Charging by Late 2026",
+      "category": "battery_charging_trend",
+      "assessment": {
+        "score": 3,
+        "worthy": false,
+        "reasons": [
+          "中等可信度来源",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-009",
+      "title": "Foldable Phone Hinge Durability: 400,000+ Folds Benchmark",
+      "category": "foldable_device",
+      "assessment": {
+        "score": 5,
+        "worthy": true,
+        "reasons": [
+          "中等可信度来源",
+          "高价值硬件类别",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-010",
+      "title": "Hinge Fatigue: 73% from External Factors (Dust, Lint)",
+      "category": "foldable_analysis",
+      "assessment": {
+        "score": 3,
+        "worthy": false,
+        "reasons": [
+          "中等可信度来源",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-011",
+      "title": "Smartphone AI: NPU TOPS Requirement (1 int8 TOPS minimum)",
+      "category": "on_device_ai",
+      "assessment": {
+        "score": 6,
+        "worthy": true,
+        "reasons": [
+          "官方/权威来源",
+          "高价值硬件类别",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-012",
+      "title": "On-Device AI Storage: 40-60GB Cache Required",
+      "category": "on_device_ai_requirements",
+      "assessment": {
+        "score": 3,
+        "worthy": false,
+        "reasons": [
+          "中等可信度来源",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-013",
+      "title": "Smartphone AI RAM Requirements: 12GB+ Preferred Standard",
+      "category": "on_device_ai_ram",
+      "assessment": {
+        "score": 4,
+        "worthy": false,
+        "reasons": [
+          "官方/权威来源",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-014",
+      "title": "Google Tensor Core, Apple Neural Engine, Qualcomm Hexagon NPU",
+      "category": "on_device_ai_hardware",
+      "assessment": {
+        "score": 3,
+        "worthy": false,
+        "reasons": [
+          "官方/权威来源"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-015",
+      "title": "Smartwatch Heart Rate: Photodiode-Based PPG Detection",
+      "category": "wearable_sensors",
+      "assessment": {
+        "score": 3,
+        "worthy": false,
+        "reasons": [
+          "官方/权威来源"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-016",
+      "title": "Smartwatch Sensors: HR, SpO2, Temperature, Pressure, Gyroscope",
+      "category": "wearable_technology",
+      "assessment": {
+        "score": 3,
+        "worthy": false,
+        "reasons": [
+          "官方/权威来源"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-017",
+      "title": "BOE 8.6G OLED: $9B Investment, Production by Late 2026",
+      "category": "display_manufacturing",
+      "assessment": {
+        "score": 4,
+        "worthy": false,
+        "reasons": [
+          "官方/权威来源",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-018",
+      "title": "BOE Leads OLED Panel Shipments: 71M Units H1 2025",
+      "category": "display_manufacturing",
+      "assessment": {
+        "score": 4,
+        "worthy": false,
+        "reasons": [
+          "官方/权威来源",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-019",
+      "title": "Samsung Display OLED Plant: Full Production Ramp 2026",
+      "category": "display_manufacturing",
+      "assessment": {
+        "score": 4,
+        "worthy": false,
+        "reasons": [
+          "官方/权威来源",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-020",
+      "title": "Samsung ISOCELL HP5: Penny-Sized 200MP Sensor, 0.5µm Pixels",
+      "category": "camera_sensor",
+      "assessment": {
+        "score": 6,
+        "worthy": true,
+        "reasons": [
+          "官方/权威来源",
+          "高价值硬件类别",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-021",
+      "title": "Sony 200MP Camera Sensor: Smartphone Imaging Revolution",
+      "category": "camera_technology",
+      "assessment": {
+        "score": 3,
+        "worthy": false,
+        "reasons": [
+          "中等可信度来源",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-022",
+      "title": "200MP vs 50MP: Pixel Binning Balances Resolution & Low-Light",
+      "category": "camera_analysis",
+      "assessment": {
+        "score": 3,
+        "worthy": false,
+        "reasons": [
+          "中等可信度来源",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-023",
+      "title": "Samsung Dual Pixel Pro: All-Directional Autofocus 50MP",
+      "category": "camera_autofocus",
+      "assessment": {
+        "score": 4,
+        "worthy": false,
+        "reasons": [
+          "官方/权威来源",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-024",
+      "title": "TSMC 2nm: Mass Production Started Late 2025",
+      "category": "chip_manufacturing",
+      "assessment": {
+        "score": 6,
+        "worthy": true,
+        "reasons": [
+          "官方/权威来源",
+          "高价值硬件类别",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-025",
+      "title": "TSMC 2nm: 100,000 Wafers/Month Capacity by 2026",
+      "category": "chip_manufacturing_capacity",
+      "assessment": {
+        "score": 4,
+        "worthy": false,
+        "reasons": [
+          "官方/权威来源",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-026",
+      "title": "TSMC 3nm: 180,000 Wafers/Month by End 2026 (+40% YoY)",
+      "category": "chip_manufacturing",
+      "assessment": {
+        "score": 5,
+        "worthy": true,
+        "reasons": [
+          "中等可信度来源",
+          "高价值硬件类别",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-027",
+      "title": "Apple iPhone 18 Pro: Expected 2nm Chip Adoption 2026",
+      "category": "device_roadmap",
+      "assessment": {
+        "score": 4,
+        "worthy": false,
+        "reasons": [
+          "中等可信度来源",
+          "包含具体数据",
+          "易于时间轴验证"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-028",
+      "title": "TSMC N2P: Volume Production H2 2026, Further Perf Gains",
+      "category": "chip_technology_roadmap",
+      "assessment": {
+        "score": 4,
+        "worthy": false,
+        "reasons": [
+          "中等可信度来源",
+          "包含具体数据",
+          "易于时间轴验证"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-029",
+      "title": "6G Network: Expected Release 2030, 1Tbps Speed Potential",
+      "category": "wireless_communication",
+      "assessment": {
+        "score": 6,
+        "worthy": true,
+        "reasons": [
+          "官方/权威来源",
+          "高价值硬件类别",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-030",
+      "title": "6G Key Techs: Holographic Comms, Digital Twins, Integrated Sensing",
+      "category": "6g_technology",
+      "assessment": {
+        "score": 4,
+        "worthy": false,
+        "reasons": [
+          "官方/权威来源",
+          "包含具体数据"
+        ]
+      }
+    },
+    {
+      "id": "RC-20260523-031",
+      "title": "5G-Advanced to 6G: Evolution Path for Wireless",
+      "category": "wireless_technology_evolution",
+      "assessment": {
+        "score": 3,
+        "worthy": false,
+        "reasons": [
+          "中等可信度来源",
+          "包含具体数据"
+        ]
+      }
+    }
+  ]
+}
