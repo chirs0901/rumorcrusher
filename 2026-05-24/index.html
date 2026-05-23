@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>RumorCrusher · 2026-05-24 · 晨报版</title>
+<style>
+  :root { --bg:#0f1115; --fg:#e7e9ee; --mute:#9aa3b2; --acc:#ffb454; --ok:#7ec699; --warn:#f6c177; --bad:#ea6962; --card:#171a21; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:14px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", sans-serif; background:var(--bg); color:var(--fg); }
+  header { padding: 28px 24px 12px; border-bottom: 1px solid #232730; }
+  h1 { margin: 0 0 6px; font-size: 22px; }
+  .sub { color: var(--mute); font-size: 13px; }
+  .banner { background: linear-gradient(135deg,#3b2a07,#5a3a10); color:#ffd68a; padding:14px 18px; border-radius:10px; margin: 18px 24px 0; border: 1px solid #6a4a18; }
+  main { padding: 18px 24px 60px; max-width: 1100px; margin: 0 auto; }
+  .grid { display:grid; gap:14px; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); }
+  .stat { background: var(--card); padding:14px 16px; border-radius:10px; border:1px solid #232730; }
+  .stat .k { color: var(--mute); font-size:12px; }
+  .stat .v { font-size:22px; font-weight:600; margin-top:4px; }
+  .row { display:flex; gap:14px; flex-wrap:wrap; margin-top:8px; }
+  .pill { padding:3px 9px; border-radius:999px; font-size:12px; font-weight:500; }
+  .ok { background:#1a3a26; color:var(--ok); }
+  .warn { background:#3a2f12; color:var(--warn); }
+  .bad { background:#3a1c1a; color:var(--bad); }
+  table { width:100%; border-collapse: collapse; margin-top:8px; background:var(--card); border-radius:10px; overflow:hidden; }
+  th, td { padding:10px 12px; border-bottom: 1px solid #232730; text-align:left; vertical-align: top; }
+  th { background:#1c2027; color:var(--mute); font-weight:500; font-size:12px; }
+  .section { margin-top:32px; }
+  .section h2 { font-size:16px; margin:0 0 10px; }
+  .src { color: var(--mute); font-size:12px; }
+  footer { color: var(--mute); font-size:12px; padding: 20px 24px 40px; border-top:1px solid #232730; margin-top:30px; }
+  a { color:#9ec5ff; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+</style>
+</head>
+<body>
+<header>
+  <h1>RumorCrusher · 2026-05-24 · 晨报版</h1>
+  <div class="sub">05:05 CST · v0.5 · 手机硬件 / 智能硬件 / 供应链事实核查流水线</div>
+</header>
+
+<div class="banner">☀️ 05:00 晨报更新：本次为当日首跑（fallback 仓库）。AVeriTeC 健康打分 78.4；新增 2 条 Refuted。</div>
+
+<main>
+  <div class="grid">
+    <div class="stat"><div class="k">采集条数</div><div class="v">32</div></div>
+    <div class="stat"><div class="k">Supported</div><div class="v" style="color:var(--ok)">23</div></div>
+    <div class="stat"><div class="k">Refuted</div><div class="v" style="color:var(--bad)">2</div></div>
+    <div class="stat"><div class="k">NotEnoughEvidence</div><div class="v" style="color:var(--warn)">4</div></div>
+    <div class="stat"><div class="k">ConflictingEvidence</div><div class="v" style="color:var(--warn)">3</div></div>
+    <div class="stat"><div class="k">UnR</div><div class="v">9.4%</div></div>
+    <div class="stat"><div class="k">平均 EQ</div><div class="v">0.61</div></div>
+    <div class="stat"><div class="k">综合健康打分</div><div class="v" style="color:var(--acc)">78.4</div></div>
+  </div>
+
+  <div class="section">
+    <h2>新增 Refuted（red）</h2>
+    <table>
+      <tr><th>ID</th><th>标题</th><th>原因</th></tr>
+      <tr><td>M27</td><td>Pixel 11 / Tensor G6 偏弱</td><td>主观贬义『runt』+ 未发布产品横向比较</td></tr>
+      <tr><td>M32</td><td>2027 iPhone 四曲面 OLED 已量产测试</td><td>远期单源 + 『radical overhaul』夸张词</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>今日 8 条 Supported 高置信</h2>
+    <table>
+      <tr><th>ID</th><th>标题</th><th>置信</th></tr>
+      <tr><td>M04</td><td>Samsung 拿回 iPhone 18 Pro OLED 业务</td><td><span class="pill ok">0.86</span></td></tr>
+      <tr><td>M06</td><td>BOE 成都 B16 Gen 8.6 OLED 提前投产</td><td><span class="pill ok">0.88</span></td></tr>
+      <tr><td>M07</td><td>TSMC 3nm 2026 月产 18 万片</td><td><span class="pill ok">0.85</span></td></tr>
+      <tr><td>M08</td><td>TSMC 2nm 量产 · Apple 占初期产能过半</td><td><span class="pill ok">0.90</span></td></tr>
+      <tr><td>M16</td><td>Sony 官方确认 5 月新 Xperia</td><td><span class="pill ok">0.88</span></td></tr>
+      <tr><td>M22</td><td>Sony LYT-910 / IMX09E 200MP 登陆 2026 旗舰</td><td><span class="pill ok">0.84</span></td></tr>
+      <tr><td>M28</td><td>Meta 推迟 Quest 4 至 2027，2026 主推 Puffin</td><td><span class="pill ok">0.84</span></td></tr>
+      <tr><td>M29</td><td>Google I/O 2026 首秀 Android XR 智能眼镜</td><td><span class="pill ok">0.85</span></td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>黄灯（warn）</h2>
+    <table>
+      <tr><th>ID</th><th>标题</th><th>原因</th></tr>
+      <tr><td>M09</td><td>Qualcomm 5 月新 Snapdragon 平台</td><td>未披露具体型号</td></tr>
+      <tr><td>M10</td><td>MediaTek N2P Dimensity 9600</td><td>属预测</td></tr>
+      <tr><td>M11</td><td>Galaxy S26 Ultra 相机换 Sony</td><td>主摄/自拍说法冲突</td></tr>
+      <tr><td>M12</td><td>Galaxy Z Fold 7 ≈ Fold 6 SE</td><td>创新性争议</td></tr>
+      <tr><td>M23</td><td>Xiaomi 16 Ultra 1″ 120W</td><td>缺一手评测</td></tr>
+      <tr><td>M26</td><td>Motorola 2026 阵容</td><td>单源含糊</td></tr>
+      <tr><td>M31</td><td>Apple AR 眼镜窗口</td><td>反复传出</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>日期校验</h2>
+    <table>
+      <tr><th>源</th><th>值</th><th>采用</th></tr>
+      <tr><td>CTX_DATE</td><td>2026-05-23</td><td>×</td></tr>
+      <tr><td>SCHED_DATE (lastRunAt → CST)</td><td>2026-05-24</td><td>✅</td></tr>
+      <tr><td>BASH_DATE</td><td>2026-05-23（漂移 -7h）</td><td>×</td></tr>
+      <tr><td>env header</td><td>Sunday, May 24, 2026</td><td>旁证 ✅</td></tr>
+    </table>
+  </div>
+</main>
+
+<footer>
+  RumorCrusher · 自动化事实核查 · 采用 AVeriTeC 4 标签 + TSVer + Pseudoscience + LogicalFallacy + Sentiment
+</footer>
+</body>
+</html>

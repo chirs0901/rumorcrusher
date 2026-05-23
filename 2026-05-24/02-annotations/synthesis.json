@@ -1,0 +1,56 @@
+{
+  "_meta": {
+    "run_slot": "morning",
+    "today": "2026-05-24",
+    "compat_format": true
+  },
+  "summary": {
+    "total": 32,
+    "pass": 23,
+    "warn": 7,
+    "fail": 2,
+    "averitec": {
+      "Supported": 23,
+      "Refuted": 2,
+      "NotEnoughEvidence": 4,
+      "ConflictingEvidence": 3
+    },
+    "unsupported_ratio": 0.094,
+    "avg_eq": 0.61,
+    "health_score": 78.4
+  },
+  "items": [
+    {"id":"M01","title":"Apple 延长 iPhone 17 生产至 2026 年 11 月","fact_check":{"label":"Supported","confidence":0.78},"synthesis":{"verdict":"pass"}},
+    {"id":"M02","title":"今秋无标准版 iPhone 18","fact_check":{"label":"Supported","confidence":0.72},"synthesis":{"verdict":"pass"}},
+    {"id":"M03","title":"iPhone 18 Pro Max 2nm A20 Pro","fact_check":{"label":"Supported","confidence":0.70},"synthesis":{"verdict":"pass"}},
+    {"id":"M04","title":"Samsung 拿回 iPhone 18 Pro OLED 订单","fact_check":{"label":"Supported","confidence":0.86},"synthesis":{"verdict":"pass"}},
+    {"id":"M05","title":"iPhone 18 Pro 升级 LTPO+","fact_check":{"label":"Supported","confidence":0.80},"synthesis":{"verdict":"pass"}},
+    {"id":"M06","title":"BOE 成都 B16 Gen 8.6 OLED 投产","fact_check":{"label":"Supported","confidence":0.88},"synthesis":{"verdict":"pass"}},
+    {"id":"M07","title":"TSMC 3nm 2026 月产 18 万","fact_check":{"label":"Supported","confidence":0.85},"synthesis":{"verdict":"pass"}},
+    {"id":"M08","title":"TSMC 2nm 量产 Apple 占大头","fact_check":{"label":"Supported","confidence":0.90},"synthesis":{"verdict":"pass"}},
+    {"id":"M09","title":"Qualcomm 5 月新 Snapdragon 平台","fact_check":{"label":"NotEnoughEvidence","confidence":0.55},"synthesis":{"verdict":"warn"}},
+    {"id":"M10","title":"MediaTek N2P Dimensity 9600","fact_check":{"label":"NotEnoughEvidence","confidence":0.55},"synthesis":{"verdict":"warn"}},
+    {"id":"M11","title":"Galaxy S26 Ultra 相机换 Sony","fact_check":{"label":"ConflictingEvidence","confidence":0.50},"synthesis":{"verdict":"warn"}},
+    {"id":"M12","title":"Galaxy Z Fold 7 = Fold 6 SE","fact_check":{"label":"ConflictingEvidence","confidence":0.55},"synthesis":{"verdict":"warn"}},
+    {"id":"M13","title":"Samsung UTG 减少 20% 折痕","fact_check":{"label":"Supported","confidence":0.72},"synthesis":{"verdict":"pass"}},
+    {"id":"M14","title":"Apple 折叠机铰链不达标，或延至 2027","fact_check":{"label":"Supported","confidence":0.70},"synthesis":{"verdict":"pass"}},
+    {"id":"M15","title":"Apple 折叠机双层 UTG","fact_check":{"label":"Supported","confidence":0.72},"synthesis":{"verdict":"pass"}},
+    {"id":"M16","title":"Sony 官方确认 5 月新 Xperia","fact_check":{"label":"Supported","confidence":0.88},"synthesis":{"verdict":"pass"}},
+    {"id":"M17","title":"Oppo Find X9 Ultra 印度 5 月发售","fact_check":{"label":"Supported","confidence":0.80},"synthesis":{"verdict":"pass"}},
+    {"id":"M18","title":"Vivo X300 Ultra 双 200MP","fact_check":{"label":"Supported","confidence":0.78},"synthesis":{"verdict":"pass"}},
+    {"id":"M19","title":"OnePlus Nord CE 6 五月首周","fact_check":{"label":"Supported","confidence":0.78},"synthesis":{"verdict":"pass"}},
+    {"id":"M20","title":"OnePlus 15 7300mAh 120W","fact_check":{"label":"Supported","confidence":0.85},"synthesis":{"verdict":"pass"}},
+    {"id":"M21","title":"Honor Magic8 Pro 7100mAh","fact_check":{"label":"Supported","confidence":0.82},"synthesis":{"verdict":"pass"}},
+    {"id":"M22","title":"Sony LYT-910 / IMX09E 200MP","fact_check":{"label":"Supported","confidence":0.84},"synthesis":{"verdict":"pass"}},
+    {"id":"M23","title":"Xiaomi 16 Ultra 1″ 120W","fact_check":{"label":"NotEnoughEvidence","confidence":0.55},"synthesis":{"verdict":"warn"}},
+    {"id":"M24","title":"Huawei Pura 90 麒麟 9030","fact_check":{"label":"Supported","confidence":0.62},"synthesis":{"verdict":"pass"}},
+    {"id":"M25","title":"Honor Magic V5 继任者 MWC 亮相","fact_check":{"label":"Supported","confidence":0.60},"synthesis":{"verdict":"pass"}},
+    {"id":"M26","title":"Motorola 2026 阵容泄露","fact_check":{"label":"NotEnoughEvidence","confidence":0.45},"synthesis":{"verdict":"warn"}},
+    {"id":"M27","title":"Pixel 11 / Tensor G6 偏弱","fact_check":{"label":"Refuted","confidence":0.40},"synthesis":{"verdict":"fail"}},
+    {"id":"M28","title":"Meta 推 Puffin 推迟 Quest 4","fact_check":{"label":"Supported","confidence":0.84},"synthesis":{"verdict":"pass"}},
+    {"id":"M29","title":"Google I/O 2026 Android XR 眼镜","fact_check":{"label":"Supported","confidence":0.85},"synthesis":{"verdict":"pass"}},
+    {"id":"M30","title":"Realme Buds Air8 Pro / Watch S5 印度","fact_check":{"label":"Supported","confidence":0.78},"synthesis":{"verdict":"pass"}},
+    {"id":"M31","title":"Apple AR 眼镜窗口","fact_check":{"label":"ConflictingEvidence","confidence":0.55},"synthesis":{"verdict":"warn"}},
+    {"id":"M32","title":"2027 iPhone 四曲面 OLED 量产测试","fact_check":{"label":"Refuted","confidence":0.35},"synthesis":{"verdict":"fail"}}
+  ]
+}

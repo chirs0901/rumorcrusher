@@ -1,0 +1,332 @@
+{
+  "_meta": {
+    "run_slot": "morning",
+    "today": "2026-05-24",
+    "timestamp": "050553",
+    "scope": "phone hardware + smart hardware + supply chain",
+    "search_queries": 12,
+    "target_range": "25-40"
+  },
+  "items": [
+    {
+      "id": "M01",
+      "category": "iPhone-supply-chain",
+      "title": "Apple 延长 iPhone 17 生产至 2026 年 11 月以备战双十一",
+      "claim": "中国爆料人 5 月 4 日称 Apple 延长 iPhone 17 产线，并罕见地在产品末期追加双十一备货订单。",
+      "sources": ["technobezz.com","the-gadgeteer.com"],
+      "date_anchor": "2026-05-04",
+      "stake": "high",
+      "scope_in": true
+    },
+    {
+      "id": "M02",
+      "category": "iPhone-roadmap",
+      "title": "供应链泄露：今秋无标准版 iPhone 18，仅 Pro/Pro Max/Ultra/Air2",
+      "claim": "多份供应链泄露称 Apple 跳过 2026 秋季标准版 iPhone 18，仅发布 Pro/Pro Max，可能含 iPhone Ultra 与 Air 2，标准版推迟到 2027 早春。",
+      "sources": ["technobezz.com","the-gadgeteer.com"],
+      "date_anchor": "2026-05-22",
+      "stake": "high",
+      "scope_in": true
+    },
+    {
+      "id": "M03",
+      "category": "iPhone-soc",
+      "title": "iPhone 18 Pro Max 将搭载 2nm A20 Pro 芯片",
+      "claim": "传 iPhone 18 Pro Max 采用台积电 N2 节点 A20 Pro，配 DSLR 风格相机系统。",
+      "sources": ["easternherald.com"],
+      "date_anchor": "2026-05-12",
+      "stake": "high",
+      "scope_in": true
+    },
+    {
+      "id": "M04",
+      "category": "iPhone-display",
+      "title": "Samsung 从 BOE 手中拿回 iPhone 18 Pro OLED 订单",
+      "claim": "BOE 因 LTPO+ 良率与质量问题被踢出 iPhone 18 Pro 高端面板供应链，Samsung Display 与 LG Display 接手；Samsung 约供 1.46 亿片，LG 约 8200 万片，BOE 至多 3500 万片（仅旧机型）。",
+      "sources": ["sammyfans.com","macrumors.com","macobserver.com","sammobile.com"],
+      "date_anchor": "2026-05-06",
+      "stake": "high",
+      "scope_in": true
+    },
+    {
+      "id": "M05",
+      "category": "iPhone-display",
+      "title": "iPhone 18 Pro 升级 LTPO+ 面板",
+      "claim": "iPhone 18 Pro 系列将采用 LTPO+，比 iPhone 17 系列的 LTPO 更节能。",
+      "sources": ["macrumors.com","en.tempo.co"],
+      "date_anchor": "2026-05-06",
+      "stake": "med",
+      "scope_in": true
+    },
+    {
+      "id": "M06",
+      "category": "panel-supply",
+      "title": "BOE 成都 B16 Gen 8.6 OLED 产线提前一个月投产",
+      "claim": "BOE 本月（2026-05）开始在成都 B16 工厂的 Gen 8.6 OLED 产线投入玻璃基板，比原定 H2 2026 提前一个月以上。采用 LTPO 背板（LTPS+oxide TFT）。",
+      "sources": ["techtimes.com"],
+      "date_anchor": "2026-05-14",
+      "stake": "high",
+      "scope_in": true
+    },
+    {
+      "id": "M07",
+      "category": "foundry",
+      "title": "TSMC 3nm 月产能 2026 年或冲 18 万片，同比 +40%",
+      "claim": "据 TrendForce 4 月 27 日报道，TSMC 3nm 月产能预计 2026 年达约 18 万片，同比增长超 40%，主要由 AI 需求驱动。",
+      "sources": ["trendforce.com"],
+      "date_anchor": "2026-04-27",
+      "stake": "high",
+      "scope_in": true
+    },
+    {
+      "id": "M08",
+      "category": "foundry",
+      "title": "TSMC 2nm 已进入量产，Apple 占据 2026 初期产能过半",
+      "claim": "TSMC 2nm 在 Q4 2025 进入量产，到 2025 年底月产能约 3-4 万片，2026 年底有望逼近 10 万片；2026 年高雄/新竹 2nm 产能全部预订完毕，Apple 占初期产能过半，其余为 Qualcomm/MediaTek/AMD/NVIDIA。",
+      "sources": ["trendforce.com","tomshardware.com","counterpointresearch.com"],
+      "date_anchor": "2026-05-01",
+      "stake": "high",
+      "scope_in": true
+    },
+    {
+      "id": "M09",
+      "category": "soc",
+      "title": "Qualcomm 5 月 2026 发布两款新 Snapdragon 移动平台",
+      "claim": "Qualcomm 官方新闻稿（2026-05）发布两款全新 Snapdragon 移动平台，主打更快更顺滑的体验。",
+      "sources": ["qualcomm.com"],
+      "date_anchor": "2026-05-01",
+      "stake": "med",
+      "scope_in": true
+    },
+    {
+      "id": "M10",
+      "category": "soc",
+      "title": "MediaTek 首款 N2P SoC 预计 2026 末发布，可能为 Dimensity 9600",
+      "claim": "MediaTek 首款基于台积电 N2P 工艺的芯片预计 2026 年末推出，可能为 Dimensity 9600；另外有 Dimensity 9600 Pro 采用 N2P 的传闻。",
+      "sources": ["androidcentral.com","futurumgroup.com"],
+      "date_anchor": "2026-04-22",
+      "stake": "med",
+      "scope_in": true
+    },
+    {
+      "id": "M11",
+      "category": "samsung-flagship",
+      "title": "Galaxy S26 Ultra 相机将切换至 Sony 传感器（自拍 IMX874）",
+      "claim": "传 Galaxy S26 Ultra 的自拍相机将从 ISOCELL 切换为 Sony IMX874，但主摄仍为 ISOCELL HP2；亦有消息源称主摄会换 Sony 200MP，存在矛盾。",
+      "sources": ["thedailyjagran.com","androidpolice.com","gizmochina.com","analyticsinsight.net","digitaltrends.com","sammobile.com"],
+      "date_anchor": "2026-02-16",
+      "stake": "high",
+      "scope_in": true
+    },
+    {
+      "id": "M12",
+      "category": "samsung-foldable",
+      "title": "Galaxy Z Fold 7 ≈ Fold 6 SE 重新包装",
+      "claim": "泄露称 Galaxy Z Fold 7 在尺寸上与 Fold 6 SE 完全一致，被指更像换皮版本；Flip 7 外屏 4.1″/120Hz/2600nit，内屏 6.9″/21:9/120Hz/2600nit。",
+      "sources": ["tomsguide.com","techradar.com","phonearena.com","androidauthority.com"],
+      "date_anchor": "2025-07-01",
+      "stake": "med",
+      "scope_in": true
+    },
+    {
+      "id": "M13",
+      "category": "samsung-foldable",
+      "title": "Samsung 用 UTG 把折痕减少 20%，Z Fold 8 与 Apple 折叠或采纳",
+      "claim": "TrendForce 1 月报道 Samsung 通过新 UTG 设计减少 20% 折痕，Galaxy Z Fold 8 与 Apple 首款折叠机均在评估采用。",
+      "sources": ["trendforce.com"],
+      "date_anchor": "2026-01-20",
+      "stake": "med",
+      "scope_in": true
+    },
+    {
+      "id": "M14",
+      "category": "apple-foldable",
+      "title": "Apple 折叠 iPhone 因铰链耐久度未达标，发布或推迟到 2027",
+      "claim": "2026-05 报告称 Apple 折叠 iPhone（暂称 iPhone Fold/Ultra）面板表现良好，但机械铰链在高频折叠测试中未达 Apple 防尘防水标准，重做或需 12-18 个月，可能推迟至 2027。",
+      "sources": ["gsmgotech.com","appleinsider.com"],
+      "date_anchor": "2026-05-01",
+      "stake": "high",
+      "scope_in": true
+    },
+    {
+      "id": "M15",
+      "category": "apple-foldable",
+      "title": "Apple 折叠机将采用双层 UTG 减少折痕",
+      "claim": "Apple 首款书本式折叠机将把柔性 OLED 夹在两层 UTG 之间，让铰链应力分散到多层而非单层 UTG。",
+      "sources": ["appleworld.today","ibtimes.co.uk","yankodesign.com","hardwarezone.com.sg","macrumors.com"],
+      "date_anchor": "2026-03-23",
+      "stake": "med",
+      "scope_in": true
+    },
+    {
+      "id": "M16",
+      "category": "sony-xperia",
+      "title": "Sony 官方确认 5 月 2026 发布新 Xperia",
+      "claim": "Sony 官方确认 2026 年 5 月发布新 Xperia 手机，配 Snapdragon 8 Elite Gen 5；不再使用 Xperia 1 系列自 2019 年起的垂直相机排列。",
+      "sources": ["ibtimes.com.au","notebookcheck.net"],
+      "date_anchor": "2026-05-01",
+      "stake": "high",
+      "scope_in": true
+    },
+    {
+      "id": "M17",
+      "category": "oppo-flagship",
+      "title": "Oppo Find X9 Ultra 5 月登陆印度，配 SD 8 Elite Gen 5 + 双 200MP",
+      "claim": "Oppo Find X9 Ultra 4 月中国发布，5 月印度发售，搭载 Snapdragon 8 Elite Gen 5，配双 200MP 相机。",
+      "sources": ["gizmochina.com"],
+      "date_anchor": "2026-04-28",
+      "stake": "high",
+      "scope_in": true
+    },
+    {
+      "id": "M18",
+      "category": "vivo-flagship",
+      "title": "Vivo X300 Ultra 配 6.82″ LTPO AMOLED + 200MP 主摄 + 200MP 长焦",
+      "claim": "Vivo X300 Ultra 搭载 Snapdragon 8 Elite Gen 5，6.82″ LTPO AMOLED；主摄 200MP，潜望长焦 200MP 3.7x。",
+      "sources": ["gizmochina.com"],
+      "date_anchor": "2026-04-28",
+      "stake": "high",
+      "scope_in": true
+    },
+    {
+      "id": "M19",
+      "category": "oneplus",
+      "title": "OnePlus Nord CE 6 五月首周发售，SD 7s Gen 4 + 1.5K 144Hz",
+      "claim": "OnePlus Nord CE 6 5 月第一周发布，搭载 Snapdragon 7s Gen 4，1.5K 分辨率 144Hz 屏幕，峰值亮度 1800nit。",
+      "sources": ["gizmochina.com"],
+      "date_anchor": "2026-04-28",
+      "stake": "med",
+      "scope_in": true
+    },
+    {
+      "id": "M20",
+      "category": "battery-charging",
+      "title": "OnePlus 15 配 7300mAh 电池 + 120W 充电，40 分钟充满",
+      "claim": "OnePlus 15 在 8.1mm 厚度内塞入 7300mAh 硅碳电池，120W 适配器约 40 分钟充满。",
+      "sources": ["tomsguide.com","bgr.com"],
+      "date_anchor": "2026-04-01",
+      "stake": "med",
+      "scope_in": true
+    },
+    {
+      "id": "M21",
+      "category": "battery-charging",
+      "title": "Honor Magic8 Pro 7100mAh 硅碳电池 + 100W 有线",
+      "claim": "Honor Magic8 Pro 搭载 7100mAh 硅碳电池，100W 有线 SuperCharge。",
+      "sources": ["honor.com","kts.my"],
+      "date_anchor": "2026-04-01",
+      "stake": "med",
+      "scope_in": true
+    },
+    {
+      "id": "M22",
+      "category": "camera-sensor",
+      "title": "Sony LYT-910 / IMX09E 200MP 近 1 英寸传感器登陆 2026 旗舰",
+      "claim": "Sony 新 200MP 移动传感器（LYT-910 / IMX09E），尺寸约 1/1.11″-1/1.12″，Hybrid-Frame HDR，4x 无损变焦，超 100dB 动态范围；Oppo Find X9 Ultra、Xiaomi 16 Ultra、Vivo Ultra 预计搭载。",
+      "sources": ["gizmochina.com","mymobileindia.com","digitalcameraworld.com","sammobile.com"],
+      "date_anchor": "2025-10-25",
+      "stake": "high",
+      "scope_in": true
+    },
+    {
+      "id": "M23",
+      "category": "xiaomi-flagship",
+      "title": "Xiaomi 16 Ultra 早期亮相，1″ 主摄 + 120W 充电",
+      "claim": "Xiaomi 16 Ultra 早期亮相，Leica 联名光学，1 英寸主摄，120W 快充。",
+      "sources": ["gizmochina.com"],
+      "date_anchor": "2026-01-25",
+      "stake": "med",
+      "scope_in": true
+    },
+    {
+      "id": "M24",
+      "category": "huawei-flagship",
+      "title": "Huawei Pura 90 系列 3-4 月发布，搭载麒麟 9030",
+      "claim": "Huawei Pura 90 系列 2026 年 3-4 月发布，搭载自研麒麟 9030。",
+      "sources": ["gizmochina.com"],
+      "date_anchor": "2026-01-25",
+      "stake": "med",
+      "scope_in": true
+    },
+    {
+      "id": "M25",
+      "category": "honor-foldable",
+      "title": "Honor Magic V5 继任者 MWC 2026 全球亮相",
+      "claim": "Honor Magic V5 继任者于 2026 年 3 月 MWC 全球亮相。",
+      "sources": ["huaweicentral.com"],
+      "date_anchor": "2026-03-01",
+      "stake": "med",
+      "scope_in": true
+    },
+    {
+      "id": "M26",
+      "category": "motorola",
+      "title": "Motorola 2026 整年阵容泄露",
+      "claim": "重大爆料展示 Motorola 2026 年完整手机阵容。",
+      "sources": ["phonearena.com"],
+      "date_anchor": "2026-05-01",
+      "stake": "low",
+      "scope_in": true
+    },
+    {
+      "id": "M27",
+      "category": "google-pixel",
+      "title": "Pixel 11 可能是 2026 旗舰中的小弟，Tensor G6 规格曝光",
+      "claim": "Pixel 11 Tensor G6 规格泄露，被指可能是 2026 年旗舰梯队中较弱的一档。",
+      "sources": ["techadvisor.com"],
+      "date_anchor": "2026-05-01",
+      "stake": "low",
+      "scope_in": true
+    },
+    {
+      "id": "M28",
+      "category": "ar-vr",
+      "title": "Meta 推迟传统 Quest 4 到 2027，2026 优先推超轻 Puffin + 计算 Puck",
+      "claim": "Meta 优先推出代号 Puffin 的超轻 Horizon OS 头显（<110g、无控制器、注视+捏合输入、外接计算 puck），2026 年底前发布；Pismo Low/High 两个 Quest 4 候选已被砍。",
+      "sources": ["uploadvr.com","pcgamer.com","gizmodo.com"],
+      "date_anchor": "2026-05-01",
+      "stake": "high",
+      "scope_in": true
+    },
+    {
+      "id": "M29",
+      "category": "ar-glasses",
+      "title": "Google I/O 2026 首秀 Android XR 智能眼镜（Project Aura 等）",
+      "claim": "Google I/O 2026（5 月）首秀 Google + Samsung『Intelligent Eyewear』与 Xreal 的 Android XR 眼镜（Project Aura）；Google/Samsung 眼镜 2026 秋发，Gentle Monster/Warby Parker 操刀设计；Xreal 提供 70° 视场角并外接计算 puck。",
+      "sources": ["tomsguide.com","glassalmanac.com","xrtoday.com"],
+      "date_anchor": "2026-05-01",
+      "stake": "high",
+      "scope_in": true
+    },
+    {
+      "id": "M30",
+      "category": "wearable-tws",
+      "title": "Realme 5 月 22 印度发布 Buds Air8 Pro + Watch S5",
+      "claim": "Realme 2026 年 5 月 22 日在印度发布 Buds Air8 Pro（ANC、20Hz-40kHz、含盒 50 小时续航）和 Watch S5。",
+      "sources": ["smartprix.com"],
+      "date_anchor": "2026-05-22",
+      "stake": "med",
+      "scope_in": true
+    },
+    {
+      "id": "M31",
+      "category": "ar-apple",
+      "title": "Apple AR 眼镜确认发布窗口，可能 2027 上市",
+      "claim": "Apple 正测试 4 种眼镜框设计，消费版可能 2027 上市，late 2026 首次亮相。",
+      "sources": ["tomsguide.com"],
+      "date_anchor": "2026-05-01",
+      "stake": "med",
+      "scope_in": true
+    },
+    {
+      "id": "M32",
+      "category": "iphone-design",
+      "title": "2027 iPhone 四曲面 OLED 已在量产测试",
+      "claim": "AppleInsider 5 月 21 日传 2027 款 iPhone 的四曲面 OLED 已进入量产测试阶段。",
+      "sources": ["appleinsider.com"],
+      "date_anchor": "2026-05-21",
+      "stake": "med",
+      "scope_in": true
+    }
+  ]
+}

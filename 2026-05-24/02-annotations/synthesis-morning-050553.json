@@ -1,0 +1,57 @@
+{
+  "_meta": {
+    "run_slot": "morning",
+    "today": "2026-05-24",
+    "framework": "AVeriTeC 4-label + TSVer + Pseudoscience + LogicalFallacy + Sentiment",
+    "averitec_labels": ["Supported", "Refuted", "NotEnoughEvidence", "ConflictingEvidence"]
+  },
+  "summary": {
+    "total": 32,
+    "pass": 23,
+    "warn": 7,
+    "fail": 2,
+    "averitec": {
+      "Supported": 23,
+      "Refuted": 2,
+      "NotEnoughEvidence": 4,
+      "ConflictingEvidence": 3
+    },
+    "unsupported_ratio": 0.094,
+    "avg_eq": 0.61,
+    "health_score": 78.4
+  },
+  "items": [
+    {"id":"M01","fact_check":{"label":"Supported","confidence":0.78,"tsver":"corroborated by Technobezz + The-Gadgeteer multi-source"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.3,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"具体日期+具体行动可证伪"}},
+    {"id":"M02","fact_check":{"label":"Supported","confidence":0.72,"tsver":"multi-leaker"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.4,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"等待 Apple 官方确认"}},
+    {"id":"M03","fact_check":{"label":"Supported","confidence":0.70,"tsver":"与 TSMC N2 时间线一致"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.4,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"A20 Pro 命名待官方"}},
+    {"id":"M04","fact_check":{"label":"Supported","confidence":0.86,"tsver":"sammyfans/macrumors/macobserver 四源一致"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.2,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"Supported"}},
+    {"id":"M05","fact_check":{"label":"Supported","confidence":0.80,"tsver":"双源 + 与 OLED-Info 技术页一致"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.25,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"Supported"}},
+    {"id":"M06","fact_check":{"label":"Supported","confidence":0.88,"tsver":"TechTimes 单源但具体细节符合 BOE 公开路线图"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.3,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"建议追加 BOE 公告交叉验证"}},
+    {"id":"M07","fact_check":{"label":"Supported","confidence":0.85,"tsver":"TrendForce 一手研究"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.2,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"Supported"}},
+    {"id":"M08","fact_check":{"label":"Supported","confidence":0.90,"tsver":"TrendForce + Tom's Hardware + Counterpoint 三源一致"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.2,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"Supported"}},
+    {"id":"M09","fact_check":{"label":"NotEnoughEvidence","confidence":0.55,"tsver":"Qualcomm 官方稿仅提及新平台但未披露具体型号"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.3,"value_concerns":[]},"synthesis":{"verdict":"warn","note":"具体型号待披露"}},
+    {"id":"M10","fact_check":{"label":"NotEnoughEvidence","confidence":0.55,"tsver":"AndroidCentral + FuturumGroup 双源但属推测"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.4,"value_concerns":[]},"synthesis":{"verdict":"warn","note":"工艺与时间均为预期"}},
+    {"id":"M11","fact_check":{"label":"ConflictingEvidence","confidence":0.50,"tsver":"自拍换 Sony 与主摄换 Sony 同时存在不同消息源"},"pseudo":{"hits":[]},"logic":{"fallacies":[{"type":"hasty-generalization","note":"避免把单一传感器变化推广为全相机线"}]},"sentiment":{"clickbait":0.5,"value_concerns":[]},"synthesis":{"verdict":"warn","note":"等待 Samsung 官方"}},
+    {"id":"M12","fact_check":{"label":"ConflictingEvidence","confidence":0.55,"tsver":"Fold 7 ≈ Fold 6 SE 与 Flip 7 详细规格来自同批爆料，但 Fold 创新性受质疑"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.45,"value_concerns":[]},"synthesis":{"verdict":"warn","note":"等待 Unpacked"}},
+    {"id":"M13","fact_check":{"label":"Supported","confidence":0.72,"tsver":"TrendForce 研究"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.3,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"工艺改良"}},
+    {"id":"M14","fact_check":{"label":"Supported","confidence":0.70,"tsver":"双源 + 与近期供应链消息一致"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.6,"value_concerns":["标题党风险"]},"synthesis":{"verdict":"pass","note":"标题党风险，但事实层可核"}},
+    {"id":"M15","fact_check":{"label":"Supported","confidence":0.72,"tsver":"五源一致"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.3,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"Supported"}},
+    {"id":"M16","fact_check":{"label":"Supported","confidence":0.88,"tsver":"Sony 官方 + Notebookcheck"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.2,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"Supported"}},
+    {"id":"M17","fact_check":{"label":"Supported","confidence":0.80,"tsver":"Gizmochina 多篇"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.3,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"Supported"}},
+    {"id":"M18","fact_check":{"label":"Supported","confidence":0.78,"tsver":"Gizmochina"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.3,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"Supported"}},
+    {"id":"M19","fact_check":{"label":"Supported","confidence":0.78,"tsver":"Gizmochina"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.25,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"Supported"}},
+    {"id":"M20","fact_check":{"label":"Supported","confidence":0.85,"tsver":"已发售可验证"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.4,"value_concerns":["120W 充电相关健康宣称需谨慎"]},"synthesis":{"verdict":"pass","note":"Supported"}},
+    {"id":"M21","fact_check":{"label":"Supported","confidence":0.82,"tsver":"Honor 官方"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.3,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"Supported"}},
+    {"id":"M22","fact_check":{"label":"Supported","confidence":0.84,"tsver":"四源 + 与 Sony 公开路线图一致"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.3,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"Supported"}},
+    {"id":"M23","fact_check":{"label":"NotEnoughEvidence","confidence":0.55,"tsver":"Gizmochina 单源，已上市但缺乏一手评测"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.4,"value_concerns":[]},"synthesis":{"verdict":"warn","note":"待更多评测"}},
+    {"id":"M24","fact_check":{"label":"Supported","confidence":0.62,"tsver":"Gizmochina + 与 Pura 系列发布周期一致"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.3,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"Pass"}},
+    {"id":"M25","fact_check":{"label":"Supported","confidence":0.60,"tsver":"HuaweiCentral"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.3,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"Pass"}},
+    {"id":"M26","fact_check":{"label":"NotEnoughEvidence","confidence":0.45,"tsver":"PhoneArena 单源 + 含糊全阵容"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.55,"value_concerns":[]},"synthesis":{"verdict":"warn","note":"具体规格未给出"}},
+    {"id":"M27","fact_check":{"label":"Refuted","confidence":0.40,"tsver":"TechAdvisor 用『可能』+ 比较框架不严谨"},"pseudo":{"hits":[]},"logic":{"fallacies":[{"type":"loaded-language","note":"『runt』为主观贬义"}]},"sentiment":{"clickbait":0.7,"value_concerns":["以情绪化标签描述未发布产品"]},"synthesis":{"verdict":"fail","note":"价值判断+未发布产品比较"}},
+    {"id":"M28","fact_check":{"label":"Supported","confidence":0.84,"tsver":"UploadVR + PCGamer + Gizmodo 三源一致"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.3,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"Supported"}},
+    {"id":"M29","fact_check":{"label":"Supported","confidence":0.85,"tsver":"Tom's Guide + GlassAlmanac + XRToday 三源"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.3,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"Google I/O 官方"}},
+    {"id":"M30","fact_check":{"label":"Supported","confidence":0.78,"tsver":"Smartprix"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.3,"value_concerns":[]},"synthesis":{"verdict":"pass","note":"具体日期 + 规格"}},
+    {"id":"M31","fact_check":{"label":"ConflictingEvidence","confidence":0.55,"tsver":"窗口反复传出，落地时间不一"},"pseudo":{"hits":[]},"logic":{"fallacies":[]},"sentiment":{"clickbait":0.4,"value_concerns":[]},"synthesis":{"verdict":"warn","note":"等待 Apple 官方"}},
+    {"id":"M32","fact_check":{"label":"Refuted","confidence":0.35,"tsver":"AppleInsider 单源 + 标题党『radical overhaul』"},"pseudo":{"hits":[]},"logic":{"fallacies":[{"type":"appeal-to-novelty"}]},"sentiment":{"clickbait":0.65,"value_concerns":["夸张词汇"]},"synthesis":{"verdict":"fail","note":"远期 + 单源 + 夸大"}}
+  ]
+}
