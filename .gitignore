@@ -31,3 +31,9 @@ node_modules/
 
 # 备份文件
 *.bak
+
+# 本机 LaunchAgent 守护日志（不入库）
+_meta/auto-push.log
+_meta/auto-push-launchd.log
+_meta/sync-sandbox.log
+_meta/.push-pending
