@@ -1,0 +1,367 @@
+{
+  "batch_id": "RC-20260524-E",
+  "run_type": "evening",
+  "collected_at": "2026-05-24T22:00:00+08:00",
+  "today": "2026-05-24",
+  "scope": "手机本体+智能硬件+上游产业链（参照 _meta/scope.md v1.1）",
+  "search_queries": [
+    "2026年5月 高通骁龙 8 Elite Gen 2 性能参数 发布",
+    "iPhone 17 Pro 影像系统 传感器 索尼 2026年",
+    "华为 Mate 70 麒麟 9020 芯片 7nm 工艺 2026",
+    "三星 Galaxy Z Fold 7 折叠屏 铰链 2026 价格",
+    "小米 15 Ultra 影像 徕卡 长焦 2026 评测",
+    "台积电 2nm 量产 2026 良率 苹果 高通",
+    "京东方 OLED 苹果 iPhone 17 屏幕 良率 2026",
+    "Apple Vision Pro 2 价格 发布 2026",
+    "硅碳负极电池 手机 续航 2026 厂商",
+    "OPPO Find X8 Ultra 影像 哈苏 联发科 天玑 2026",
+    "荣耀 Magic 7 Pro AI 端侧大模型 NPU 2026",
+    "手机辐射 SAR 致癌 谣言 2026 WHO 科学证据",
+    "手机充电过夜 损坏电池 谣言 真相 2026"
+  ],
+  "items": [
+    {
+      "id": "E-001",
+      "category": "SoC",
+      "title": "第五代骁龙8至尊版（Gen 5）发布：N3P工艺、单核+20%、220 tokens/s NPU",
+      "claim": "高通于 2025-09-25 发布第五代骁龙8至尊版，采用台积电 N3P 3nm 制程，大P核 4.6GHz，CPU 单核 +20%，多核 +17%，NPU 性能 +37%，每秒处理 220 tokens。",
+      "sources": [
+        {"name": "Qualcomm官网新闻", "url": "https://www.qualcomm.cn/news/releases/2025/11/releases-2025-11-260", "tier": "A"},
+        {"name": "中关村在线-AI频道", "url": "https://ai.zol.com.cn/965/9658308.html", "tier": "B"},
+        {"name": "量子位", "url": "https://www.qbitai.com/2025/09/336396.html", "tier": "B"},
+        {"name": "雷科技", "url": "https://www.leikeji.com/article/73151", "tier": "B"}
+      ],
+      "region": "全球"
+    },
+    {
+      "id": "E-002",
+      "category": "影像",
+      "title": "iPhone 17 Pro Max 主摄索尼 IMX903 1/1.28英寸，长焦改 4 倍光变",
+      "claim": "iPhone 17 Pro Max 主摄 4800万像素、采用 1/1.28 英寸索尼 IMX903 传感器；长焦从前代 5 倍光变改为 4 倍，支持 8 倍无损变焦；前置 1800 万像素方形传感器。",
+      "sources": [
+        {"name": "Apple官网", "url": "https://www.apple.com/iphone-17-pro/", "tier": "A"},
+        {"name": "九锋网", "url": "https://www.jiuphone.com/sjwt/43334.html", "tier": "C"},
+        {"name": "少数派", "url": "https://sspai.com/post/76639", "tier": "B"},
+        {"name": "中关村在线", "url": "https://mobile.zol.com.cn/1044/10444332.html", "tier": "B"}
+      ],
+      "region": "全球"
+    },
+    {
+      "id": "E-003",
+      "category": "影像/供应链",
+      "title": "索尼 CMOS 工厂良率问题，苹果或拓展 iPhone 17 传感器供应商",
+      "claim": "据腾讯新闻 2026-03 报道，索尼半导体长崎工厂出现 CMOS 良率波动，苹果正评估增加第二供应商，2027 款 iPhone 可能引入三星图像传感器。",
+      "sources": [
+        {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260318A04L3600", "tier": "B"},
+        {"name": "OFweek传感器网", "url": "https://sensor.ofweek.com/2025-07/ART-81012-8130-30665921.html", "tier": "B"}
+      ],
+      "region": "日本/美国"
+    },
+    {
+      "id": "E-004",
+      "category": "SoC/国产化",
+      "title": "华为麒麟 9020 采用 7nm N+2 工艺，跑分 ~125 万",
+      "claim": "华为 Mate 70 系列搭载麒麟 9020，工艺为中芯国际 7nm N+2（等效约 5nm），8 核 12 线程，大核 2.50GHz，安兔兔综合 ~125 万，性能较麒麟 9000S 提升约 30%。",
+      "sources": [
+        {"name": "电子工程专辑", "url": "https://www.eet-china.com/news/202412051738.html", "tier": "A"},
+        {"name": "芯智讯", "url": "https://www.icsmart.cn/86526/", "tier": "B"},
+        {"name": "中关村在线", "url": "https://news.zol.com.cn/925/9253949.html", "tier": "B"}
+      ],
+      "region": "中国大陆"
+    },
+    {
+      "id": "E-005",
+      "category": "折叠/铰链",
+      "title": "三星 Galaxy Z Fold7 国行 13999 元起，超薄精工装甲铰链",
+      "claim": "三星于 2025-07-09 正式发布 Galaxy Z Fold7，外屏盖板首次采用康宁大猩猩玻璃陶瓷 2，铰链升级为水滴形+多轨结构，电池 4400mAh，国行起售价 13999 元，美版 1999 美元。",
+      "sources": [
+        {"name": "三星官网", "url": "https://www.samsung.com.cn/news/product/z-fold7/", "tier": "A"},
+        {"name": "新华网", "url": "https://www.news.cn/tech/20250710/194d6852a3c24f1a8aefd6aaf8eb691b/c.html", "tier": "A"},
+        {"name": "新浪科技", "url": "https://finance.sina.com.cn/tech/mobile/n/n/2025-07-10/doc-infeyanw0525340.shtml", "tier": "B"}
+      ],
+      "region": "全球"
+    },
+    {
+      "id": "E-006",
+      "category": "影像",
+      "title": "小米 15 Ultra 徕卡超纯光学系统，HP9 长焦 95mm + 28 倍无损变焦",
+      "claim": "小米 15 Ultra 搭载 1 英寸主摄 + 徕卡 2 亿像素 HP9 长焦（95mm，f/2.6），实现 14-400mm 焦段覆盖、28 倍无损变焦；DXOMARK 159 分。",
+      "sources": [
+        {"name": "爱范儿评测", "url": "https://www.ifanr.com/1615835", "tier": "B"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/834/239.htm", "tier": "B"},
+        {"name": "安兔兔", "url": "https://www.antutu.com/doc/133807.htm", "tier": "B"},
+        {"name": "搜狐-DXOMARK报道", "url": "https://www.sohu.com/a/867285614_115511", "tier": "C"}
+      ],
+      "region": "全球"
+    },
+    {
+      "id": "E-007",
+      "category": "代工/工艺",
+      "title": "台积电 2nm 试产良率超 60%~70%，2026 苹果独占近半产能",
+      "claim": "台积电新竹宝山厂 2nm（N2）试产良率突破 60%，部分报道称已达 70%+，预计 2025 Q4 量产，2026 月产能 10~13 万片，苹果 A20 独占近 50%，将首发于 2026 下半年 iPhone 18 系列。",
+      "sources": [
+        {"name": "IT之家", "url": "https://www.ithome.com/0/878/433.htm", "tier": "B"},
+        {"name": "界面新闻", "url": "https://www.jiemian.com/article/12512546.html", "tier": "B"},
+        {"name": "EDN中国", "url": "https://www.ednchina.com/news/a14175.html", "tier": "B"},
+        {"name": "OFweek电子工程网", "url": "https://ee.ofweek.com/2025-04/ART-8420-2816-30660451.html", "tier": "B"}
+      ],
+      "region": "台湾/全球"
+    },
+    {
+      "id": "E-008",
+      "category": "屏幕/面板",
+      "title": "京东方因 LTPO 良率受阻，iPhone 17 Pro 订单转给三星",
+      "claim": "京东方原计划为 iPhone 17 Pro 中国版供应最多 1000 万块 LTPO OLED，但因可靠性与良率问题未达苹果标准，苹果将 Pro 订单转给三星；京东方仍在 iPhone 17 标准版与 iPhone Air 占约 60% 份额。",
+      "sources": [
+        {"name": "新浪科技", "url": "https://finance.sina.com.cn/tech/discovery/2025-11-21/doc-infycinm9083087.shtml", "tier": "B"},
+        {"name": "电子工程专辑", "url": "https://www.eet-china.com/mp/a454704.html", "tier": "A"},
+        {"name": "热点科技", "url": "https://www.itheat.com/view/57689.html", "tier": "C"}
+      ],
+      "region": "中国大陆"
+    },
+    {
+      "id": "E-009",
+      "category": "AR/VR",
+      "title": "Apple Vision Pro 2 预计 2026 春季发布，价格或腰斩至 $1500~2500",
+      "claim": "据 Mark Gurman 报道，搭载 M5 芯片的 Vision Pro 2 预计 2025 秋季~2026 春季上市，售价约为初代（$3500）的一半，介于 $1500~$2500；廉价款 N107 延后至 2027+。",
+      "sources": [
+        {"name": "华尔街见闻", "url": "https://wallstreetcn.com/articles/3717521", "tier": "B"},
+        {"name": "VR陀螺", "url": "https://www.vrtuoluo.cn/column/apple_mr_headset/541334.html", "tier": "B"},
+        {"name": "爱思助手", "url": "https://m.i4.cn/article/54436.html", "tier": "C"},
+        {"name": "新浪科技转IT之家", "url": "https://finance.sina.com.cn/tech/digi/2024-11-10/doc-incvraka1288084.shtml", "tier": "B"}
+      ],
+      "region": "全球"
+    },
+    {
+      "id": "E-010",
+      "category": "电池/续航",
+      "title": "硅碳负极电池快速普及，2026 旗舰 6000~10000mAh 起步",
+      "claim": "硅理论比容量 4200 mAh/g（约为石墨 10x），小米金沙江、荣耀青海湖、一加冰川、vivo 蓝海等已大规模采用硅碳负极；2026 年红米 Turbo5 Max、一加 Turbo6 推至 9000mAh，荣耀 WIN RT 达 10000mAh。",
+      "sources": [
+        {"name": "证券时报", "url": "https://www.stcn.com/article/detail/1595518.html", "tier": "A"},
+        {"name": "钛媒体", "url": "https://www.tmtpost.com/6902847.html", "tier": "B"},
+        {"name": "充电头网", "url": "https://www.chongdiantou.com/archives/387565.html", "tier": "B"},
+        {"name": "中关村在线", "url": "https://mobile.zol.com.cn/1132/11329624.html", "tier": "B"}
+      ],
+      "region": "中国大陆"
+    },
+    {
+      "id": "E-011",
+      "category": "电池/争议",
+      "title": "硅碳负极也有代价：高能量密度可能加速循环寿命衰减",
+      "claim": "澎湃新闻报道指出，硅碳负极在大电池+轻薄机身上虽显著提升能量密度，但因硅膨胀率高，循环寿命与高温稳定性面临挑战，被部分用户解读为'折寿换容量'。",
+      "sources": [
+        {"name": "澎湃新闻", "url": "https://www.thepaper.cn/newsDetail_forward_30770595", "tier": "B"},
+        {"name": "证券时报", "url": "https://stcn.com/article/detail/1596491.html", "tier": "A"}
+      ],
+      "region": "全球",
+      "needs_balance": true
+    },
+    {
+      "id": "E-012",
+      "category": "影像",
+      "title": "OPPO Find X8 Ultra LUMO 凝光影像系统 + 哈苏调色",
+      "claim": "OPPO Find X8 Ultra 搭载 LUMO 凝光影像系统、70mm 人像主摄、丹霞色准镜头、全链路 ProXDR；与哈苏合作的 Master 模式支持 16-bit RAW Max；同代 Find X8 标准版搭载天玑 9400。",
+      "sources": [
+        {"name": "OPPO官网规格", "url": "https://www.oppo.com/cn/smartphones/series-find-x/find-x8-ultra/specs/", "tier": "A"},
+        {"name": "中国摄影杂志", "url": "https://www.cphoto.com.cn/content/article/101140.html", "tier": "B"}
+      ],
+      "region": "中国大陆"
+    },
+    {
+      "id": "E-013",
+      "category": "AI/NPU",
+      "title": "荣耀 Magic7 系列首发 NPU+GPU 异构计算 + 端侧大模型",
+      "claim": "荣耀 Magic7/Magic7 Pro 搭载骁龙 8 Elite，业内首次采用 NPU+GPU 异构计算架构，部署 Magic 大模型端侧版本，AI 性能较上代提升 45%。",
+      "sources": [
+        {"name": "爱范儿", "url": "https://www.ifanr.com/1604753", "tier": "B"},
+        {"name": "21世纪经济报道", "url": "https://www.21jingji.com/article/20250726/herald/8f7787f597587916ac704716d6be8ef1.html", "tier": "A"},
+        {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20241101A028ED00", "tier": "B"}
+      ],
+      "region": "中国大陆"
+    },
+    {
+      "id": "E-014",
+      "category": "辟谣/健康",
+      "title": "WHO 委托荟萃分析：手机辐射与脑癌无关",
+      "claim": "WHO 委托的 2024 年荟萃分析（涵盖 5000+ 项研究）显示，手机射频辐射使用频率和时长与脑癌、头颈癌均无关联；IARC 2B 分类仅意味'可能致癌'，证据等级有限，并非确认致癌。",
+      "sources": [
+        {"name": "新华报业", "url": "https://www.xhby.net/content/s67d27adbe4b0ed4340775071.html", "tier": "A"},
+        {"name": "国家核安全局", "url": "https://nnsa.mee.gov.cn/ztzl/haqshmhsh/hyfsaqkp/kptw/202503/t20250313_1103932.html", "tier": "A"},
+        {"name": "中国计量科学研究院", "url": "https://www.nim.ac.cn/node/267", "tier": "A"}
+      ],
+      "region": "全球",
+      "verdict_hint": "Refuted"
+    },
+    {
+      "id": "E-015",
+      "category": "辟谣/电池",
+      "title": "智能手机充电过夜会'炸机/充坏电池'？过时说法",
+      "claim": "现代智能手机均配备 PMIC 电源管理芯片，充满后会自动断电或进入低电流补电，部分机型有'夜间优化充电'。'整夜充电=炸机/充坏电池'是过时说法；但长期保持 100% 满电存放确实会加速容量衰减。",
+      "sources": [
+        {"name": "电子发烧友网", "url": "https://www.elecfans.com/dianyuan/382253.html", "tier": "B"},
+        {"name": "光明网", "url": "https://m.gmw.cn/2025-07/18/content_38160277.htm", "tier": "A"},
+        {"name": "光明网2026", "url": "https://m.gmw.cn/2026-05/22/content_1304466482.htm", "tier": "A"}
+      ],
+      "region": "全球",
+      "verdict_hint": "Refuted"
+    },
+    {
+      "id": "E-016",
+      "category": "辟谣/工艺",
+      "title": "'5nm 实际是 16nm、3nm 实际是 14nm'传言",
+      "claim": "知乎 zhuanlan 一则热门贴提出'5nm 实际是 16nm、3nm 实际是 14nm'。事实上，工艺节点数字早已是营销命名，与栅极物理长度不等，但是台积电 N3/N5、三星 3GAE 在晶体管密度、能效上确有显著代际差异，并非'纯营销造假'。",
+      "sources": [
+        {"name": "知乎 zhuanlan", "url": "https://zhuanlan.zhihu.com/p/11270971695", "tier": "C"},
+        {"name": "电子工程专辑（对比）", "url": "https://www.eet-china.com/news/202412051738.html", "tier": "A"}
+      ],
+      "region": "中国大陆",
+      "verdict_hint": "ConflictingEvidence",
+      "needs_balance": true
+    },
+    {
+      "id": "E-017",
+      "category": "供应链",
+      "title": "2nm 价格高位：英伟达/高通考虑分流三星",
+      "claim": "据 ICViews 报道，因台积电 2nm 定价高（约 3 万美元/片）且产能紧张，英伟达、高通正在评估将部分 2nm 订单转给三星，但目前尚未官宣。",
+      "sources": [
+        {"name": "ICViews", "url": "https://www.icviews.cn/news/13662/7", "tier": "B"},
+        {"name": "知乎 zhuanlan（2nm定价）", "url": "https://zhuanlan.zhihu.com/p/1941201784325535462", "tier": "C"}
+      ],
+      "region": "全球",
+      "needs_balance": true
+    },
+    {
+      "id": "E-018",
+      "category": "智能硬件/手表",
+      "title": "OPPO Find X9 Ultra 7050mAh 冰川电池，骁龙 8 Gen5 起售 7499",
+      "claim": "IT 之家 2026 报道，OPPO Find X9 Ultra 旗舰发布，搭载第五代骁龙 8 至尊版、7050mAh 硅碳负极冰川电池，国行起售价 7499 元。",
+      "sources": [
+        {"name": "IT之家", "url": "https://www.ithome.com/0/941/820.htm", "tier": "B"}
+      ],
+      "region": "中国大陆"
+    },
+    {
+      "id": "E-019",
+      "category": "影像",
+      "title": "Apple 自研 LOFIC CMOS 传感器专利曝光",
+      "claim": "苹果发布 LOFIC（横向溢出积分电容）图像传感器新专利，目标在于减少对索尼传感器依赖，并提升手机摄影动态范围，向电影级 CMOS 看齐。",
+      "sources": [
+        {"name": "OFweek传感器网", "url": "https://sensor.ofweek.com/2025-07/ART-81012-8130-30665921.html", "tier": "B"},
+        {"name": "新浪财经", "url": "https://t.cj.sina.com.cn/articles/view/1931093993/731a27e900101ifi2", "tier": "B"}
+      ],
+      "region": "全球"
+    },
+    {
+      "id": "E-020",
+      "category": "面板/产能",
+      "title": "京东方扩建 OLED 产能争夺 iPhone 高端线",
+      "claim": "百度百科 TA 说：京东方加速建设新 OLED 产线（B16），目标在 LTPO/Tandem 工艺上追赶三星显示，争夺未来 iPhone Pro/Air 高端 OLED 订单。",
+      "sources": [
+        {"name": "百度百科TA说", "url": "https://baike.baidu.com/tashuo/browse/content?id=84a16c896fb76d4bf83ddea2", "tier": "C"},
+        {"name": "中关村在线", "url": "https://mobile.zol.com.cn/1045/10453776.html", "tier": "B"}
+      ],
+      "region": "中国大陆"
+    },
+    {
+      "id": "E-021",
+      "category": "营销/争议",
+      "title": "'2026 续航最佳3款手机超 9000mAh'榜单",
+      "claim": "腾讯新闻 2026-02 一则盘点称：荣耀 WIN RT 10000mAh、红米 Turbo5 Max 9000mAh、一加 Turbo6 9000mAh 为 2026 续航最佳。榜单未经独立续航测试验证，且'轻松用五年'等宣传缺乏客观依据。",
+      "sources": [
+        {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260215A06WLB00", "tier": "C"}
+      ],
+      "region": "中国大陆",
+      "verdict_hint": "NotEnoughEvidence",
+      "clickbait_risk": "high"
+    },
+    {
+      "id": "E-022",
+      "category": "影像评测",
+      "title": "OPPO Find X9 Pro 哈苏影像评测：'画质新王'",
+      "claim": "知乎 zhuanlan 2026 评测称 Find X9 Pro 影像达到 Ultra 级、哈苏画质'新王'。评测系单一渠道、缺少多机型同场对比，标题情绪化。",
+      "sources": [
+        {"name": "知乎 zhuanlan", "url": "https://zhuanlan.zhihu.com/p/1964014651391086906", "tier": "C"},
+        {"name": "爱范儿（参考）", "url": "https://www.ifanr.com/1661925", "tier": "B"}
+      ],
+      "region": "中国大陆",
+      "clickbait_risk": "medium"
+    },
+    {
+      "id": "E-023",
+      "category": "AI/大模型",
+      "title": "荣耀 MagicGUI 多模态大模型登场，手机厂商 AI 赛跑加速",
+      "claim": "据 21 世纪经济报道，荣耀发布 MagicGUI 多模态大模型，定位'手机自动驾驶'，可读取屏幕内容并代用户执行 GUI 操作；行业进入端侧 Agent 化竞争阶段。",
+      "sources": [
+        {"name": "21世纪经济报道", "url": "https://www.21jingji.com/article/20250726/herald/8f7787f597587916ac704716d6be8ef1.html", "tier": "A"}
+      ],
+      "region": "中国大陆"
+    },
+    {
+      "id": "E-024",
+      "category": "工艺/解读",
+      "title": "麒麟 9020 vs 国际旗舰：差距仍在工艺/功耗",
+      "claim": "麒麟 9020 在跑分（~125 万）上接近骁龙 8 Gen3，但功耗控制、高负载持续性能与世界最高水平仍有差距；快科技、ZOL 均指出其'国产化的战略价值大于绝对性能领先'。",
+      "sources": [
+        {"name": "快科技", "url": "https://news.mydrivers.com/1/1017/1017804.htm", "tier": "B"},
+        {"name": "中关村在线", "url": "https://news.zol.com.cn/925/9253949.html", "tier": "B"},
+        {"name": "知乎极客湾分析", "url": "https://www.zhihu.com/question/6107483894", "tier": "C"}
+      ],
+      "region": "中国大陆"
+    },
+    {
+      "id": "E-025",
+      "category": "营销/争议",
+      "title": "'小米 17 Ultra'已上手评测帖",
+      "claim": "知乎 zhuanlan 一则'先是手机，再是相机——小米17 Ultra上手评测'帖暗示该机型已发布。截至 2026-05，小米 17 Ultra 未获官方确认，应视为爆料/预测。",
+      "sources": [
+        {"name": "知乎 zhuanlan", "url": "https://zhuanlan.zhihu.com/p/1987521447187456175", "tier": "C"}
+      ],
+      "region": "中国大陆",
+      "verdict_hint": "NotEnoughEvidence",
+      "clickbait_risk": "high"
+    },
+    {
+      "id": "E-026",
+      "category": "供应链/材料",
+      "title": "硅碳负极放量在即，产业链降本压力加大",
+      "claim": "证券时报报道，硅碳负极材料 2026 年进入放量阶段，但成本仍比传统石墨高 3~5 倍，产业链降本是大规模渗透的关键。",
+      "sources": [
+        {"name": "证券时报", "url": "https://www.stcn.com/article/detail/1595518.html", "tier": "A"}
+      ],
+      "region": "中国大陆"
+    },
+    {
+      "id": "E-027",
+      "category": "辐射/科普",
+      "title": "电离辐射 vs 非电离辐射：手机/微波炉均属后者",
+      "claim": "中国计量院、福州疾控等指出，X 射线/γ 射线为电离辐射可致 DNA 损伤，而手机/微波炉/WiFi 等射频均为非电离辐射，能量低、致癌风险微乎其微。",
+      "sources": [
+        {"name": "中国计量科学研究院", "url": "https://www.nim.ac.cn/node/267", "tier": "A"},
+        {"name": "福州疾控", "url": "http://cdc.fuzhou.gov.cn/zz/jkjy/fsyzyws/202102/t20210209_4022885.htm", "tier": "A"}
+      ],
+      "region": "中国大陆",
+      "verdict_hint": "Supported"
+    }
+  ],
+  "stats": {
+    "total": 27,
+    "by_category": {
+      "SoC": 3,
+      "影像": 5,
+      "折叠/铰链": 1,
+      "代工/工艺": 2,
+      "屏幕/面板": 2,
+      "AR/VR": 1,
+      "电池": 3,
+      "AI/NPU": 2,
+      "供应链": 2,
+      "辟谣/科普": 3,
+      "营销争议": 3
+    },
+    "tier_A_count": 11,
+    "tier_B_count": 23,
+    "tier_C_count": 11,
+    "scope_compliance": "✅ 全部 27 条均落在手机硬件/智能硬件/上游产业链范围内"
+  }
+}

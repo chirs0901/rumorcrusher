@@ -1,0 +1,175 @@
+{
+  "batch_id": "RC-20260524-E",
+  "run_type": "evening",
+  "synthesized_at": "2026-05-24T22:15:00+08:00",
+  "schemas": {
+    "factcheck": "AVeriTeC 4-label (Supported / Refuted / NotEnoughEvidence / ConflictingEvidence) + TSVer 三源校验",
+    "pseudoscience": "skills/pseudoscience-patterns.md",
+    "logic": "skills/logical-fallacy-catalog.md",
+    "sentiment": "clickbait_0-3 + value_concerns_list"
+  },
+  "items": [
+    {
+      "id": "E-001",
+      "factcheck": {"verdict": "Supported", "tsver": "3/3", "confidence": 0.92, "evidence_notes": "Qualcomm 官方新闻 + 多家媒体一致；N3P 制程已第三方确认"},
+      "pseudo": {"flags": [], "score": 0},
+      "logic": {"fallacies": [], "score": 0},
+      "sentiment": {"clickbait": 1, "value_concerns": []}
+    },
+    {
+      "id": "E-002",
+      "factcheck": {"verdict": "Supported", "tsver": "3/3", "confidence": 0.88, "evidence_notes": "Apple 官网 + 多家媒体复核；'4 倍光变'细节存在不同表述需注意"},
+      "pseudo": {"flags": [], "score": 0},
+      "logic": {"fallacies": [], "score": 0},
+      "sentiment": {"clickbait": 1, "value_concerns": []}
+    },
+    {
+      "id": "E-003",
+      "factcheck": {"verdict": "ConflictingEvidence", "tsver": "2/3", "confidence": 0.55, "evidence_notes": "腾讯/OFweek 报道一致，但缺索尼/苹果官方确认"},
+      "pseudo": {"flags": [], "score": 0},
+      "logic": {"fallacies": [], "score": 0},
+      "sentiment": {"clickbait": 1, "value_concerns": ["供应链推测需谨慎"]}
+    },
+    {
+      "id": "E-004",
+      "factcheck": {"verdict": "Supported", "tsver": "3/3", "confidence": 0.86, "evidence_notes": "拆解证据 + 多家工艺分析；'等效 5nm'为业界估算"},
+      "pseudo": {"flags": [], "score": 0},
+      "logic": {"fallacies": ["民族主义诉诸（部分媒体）"], "score": 1},
+      "sentiment": {"clickbait": 2, "value_concerns": ["注意'纯国产'宣传与实际差距"]}
+    },
+    {
+      "id": "E-005",
+      "factcheck": {"verdict": "Supported", "tsver": "3/3", "confidence": 0.95, "evidence_notes": "三星官网 + 新华网 + 新浪三源一致"},
+      "pseudo": {"flags": [], "score": 0},
+      "logic": {"fallacies": [], "score": 0},
+      "sentiment": {"clickbait": 0, "value_concerns": []}
+    },
+    {
+      "id": "E-006",
+      "factcheck": {"verdict": "Supported", "tsver": "3/3", "confidence": 0.86, "evidence_notes": "DXOMARK 评分 + 多评测；'天花板'用语带主观色彩"},
+      "pseudo": {"flags": [], "score": 0},
+      "logic": {"fallacies": ["诉诸权威 (DXOMARK)"], "score": 1},
+      "sentiment": {"clickbait": 2, "value_concerns": []}
+    },
+    {
+      "id": "E-007",
+      "factcheck": {"verdict": "Supported", "tsver": "3/3", "confidence": 0.82, "evidence_notes": "良率数据存在区间 60-70%，多源相互佐证；具体产能数字有 10 万/13 万分歧"},
+      "pseudo": {"flags": [], "score": 0},
+      "logic": {"fallacies": [], "score": 0},
+      "sentiment": {"clickbait": 1, "value_concerns": []}
+    },
+    {
+      "id": "E-008",
+      "factcheck": {"verdict": "Supported", "tsver": "3/3", "confidence": 0.84, "evidence_notes": "新浪 + EET China + 多家媒体一致；订单转移已被苹果间接确认"},
+      "pseudo": {"flags": [], "score": 0},
+      "logic": {"fallacies": [], "score": 0},
+      "sentiment": {"clickbait": 1, "value_concerns": []}
+    },
+    {
+      "id": "E-009",
+      "factcheck": {"verdict": "NotEnoughEvidence", "tsver": "2/3", "confidence": 0.50, "evidence_notes": "依赖 Gurman 等记者预测，苹果未官宣；时间窗 2025秋-2026春 仍未到"},
+      "pseudo": {"flags": [], "score": 0},
+      "logic": {"fallacies": [], "score": 0},
+      "sentiment": {"clickbait": 1, "value_concerns": ["传闻类信息应明确标注"]}
+    },
+    {
+      "id": "E-010",
+      "factcheck": {"verdict": "Supported", "tsver": "3/3", "confidence": 0.90, "evidence_notes": "证券时报 + 钛媒体 + 中关村在线一致；各厂商产品已上市可验证"},
+      "pseudo": {"flags": [], "score": 0},
+      "logic": {"fallacies": [], "score": 0},
+      "sentiment": {"clickbait": 1, "value_concerns": []}
+    },
+    {
+      "id": "E-011",
+      "factcheck": {"verdict": "ConflictingEvidence", "tsver": "2/3", "confidence": 0.62, "evidence_notes": "硅膨胀确为物理事实，但'折寿换容量'的程度因厂商工艺而异；缺独立长期循环数据"},
+      "pseudo": {"flags": [], "score": 0},
+      "logic": {"fallacies": ["稻草人（部分自媒体）"], "score": 1},
+      "sentiment": {"clickbait": 2, "value_concerns": ["需平衡报道"]}
+    },
+    {
+      "id": "E-012",
+      "factcheck": {"verdict": "Supported", "tsver": "2/3", "confidence": 0.78, "evidence_notes": "OPPO 官网 + 中国摄影；具体光学参数已公布"},
+      "pseudo": {"flags": [], "score": 0},
+      "logic": {"fallacies": [], "score": 0},
+      "sentiment": {"clickbait": 1, "value_concerns": []}
+    },
+    {
+      "id": "E-013",
+      "factcheck": {"verdict": "Supported", "tsver": "3/3", "confidence": 0.80, "evidence_notes": "三源一致；'AI 性能 +45%' 系厂商口径"},
+      "pseudo": {"flags": ["厂商自报性能提升"], "score": 1},
+      "logic": {"fallacies": [], "score": 0},
+      "sentiment": {"clickbait": 2, "value_concerns": ["'手机自动驾驶'比喻易误导"]}
+    },
+    {
+      "id": "E-014",
+      "factcheck": {"verdict": "Refuted", "tsver": "3/3", "confidence": 0.95, "evidence_notes": "WHO 2024 荟萃分析覆盖 5000+ 研究；中国官方机构亦表态；'手机致癌'属错误说法"},
+      "pseudo": {"flags": ["伪科学：电磁过敏论"], "score": 2},
+      "logic": {"fallacies": ["相关混淆因果（早期研究）"], "score": 1},
+      "sentiment": {"clickbait": 0, "value_concerns": []}
+    },
+    {
+      "id": "E-015",
+      "factcheck": {"verdict": "Refuted", "tsver": "3/3", "confidence": 0.90, "evidence_notes": "PMIC 自动断电为现代手机标配；'炸机'谣言已被多家科普辟谣"},
+      "pseudo": {"flags": [], "score": 0},
+      "logic": {"fallacies": ["以偏概全（个别老旧机型起火事件）"], "score": 1},
+      "sentiment": {"clickbait": 1, "value_concerns": []}
+    },
+    {
+      "id": "E-016",
+      "factcheck": {"verdict": "ConflictingEvidence", "tsver": "2/3", "confidence": 0.60, "evidence_notes": "节点命名营销化属实，但'实际是 14nm/16nm'的对比缺密度/能效维度，过度简化"},
+      "pseudo": {"flags": ["稻草人简化"], "score": 1},
+      "logic": {"fallacies": ["以偏概全", "诉诸常识"], "score": 2},
+      "sentiment": {"clickbait": 2, "value_concerns": ["科普责任"]}
+    },
+    {
+      "id": "E-017",
+      "factcheck": {"verdict": "ConflictingEvidence", "tsver": "2/3", "confidence": 0.55, "evidence_notes": "媒体报道为'考虑'/'评估'级别，无任何官方公告"},
+      "pseudo": {"flags": [], "score": 0},
+      "logic": {"fallacies": [], "score": 0},
+      "sentiment": {"clickbait": 1, "value_concerns": ["供应链揣测"]}
+    },
+    {
+      "id": "E-023",
+      "factcheck": {"verdict": "Supported", "tsver": "1/3", "confidence": 0.70, "evidence_notes": "21 世纪经济报道单一权威源；荣耀官方亦有相关材料"},
+      "pseudo": {"flags": [], "score": 0},
+      "logic": {"fallacies": [], "score": 0},
+      "sentiment": {"clickbait": 2, "value_concerns": ["'手机自动驾驶'类比可能误导用户对自主性的预期"]}
+    },
+    {
+      "id": "E-024",
+      "factcheck": {"verdict": "Supported", "tsver": "3/3", "confidence": 0.84, "evidence_notes": "多家媒体一致；'差距'多维度可验证"},
+      "pseudo": {"flags": [], "score": 0},
+      "logic": {"fallacies": [], "score": 0},
+      "sentiment": {"clickbait": 1, "value_concerns": []}
+    },
+    {
+      "id": "E-026",
+      "factcheck": {"verdict": "Supported", "tsver": "1/3", "confidence": 0.65, "evidence_notes": "财经媒体单源，价格倍数为业内估算区间"},
+      "pseudo": {"flags": [], "score": 0},
+      "logic": {"fallacies": [], "score": 0},
+      "sentiment": {"clickbait": 0, "value_concerns": []}
+    },
+    {
+      "id": "E-027",
+      "factcheck": {"verdict": "Supported", "tsver": "2/3", "confidence": 0.92, "evidence_notes": "中国计量院 + 疾控官方科普；物理学基础充分"},
+      "pseudo": {"flags": [], "score": 0},
+      "logic": {"fallacies": [], "score": 0},
+      "sentiment": {"clickbait": 0, "value_concerns": []}
+    }
+  ],
+  "distribution": {
+    "Supported": 13,
+    "Refuted": 2,
+    "NotEnoughEvidence": 1,
+    "ConflictingEvidence": 4,
+    "Total_reviewed": 20
+  },
+  "metrics": {
+    "UnR": 0.25,
+    "avg_clickbait": 1.10,
+    "avg_pseudo_score": 0.20,
+    "avg_logic_score": 0.40,
+    "avg_confidence": 0.77,
+    "health_score": 78
+  }
+}

@@ -71,6 +71,26 @@
 - **过期预测当新闻（Stale Prediction Recycling）**：将数月前带"可能/预计/疑似"等限定词的预测报道，在官方确认事实出现后，不加时效标注地作为当前新闻二次传播。案例：RC-20260520-E-021（2月"小米18可能放弃SD8EG6 Pro"，3月官方首发已覆盖）。识别要点：报道日期 vs 事件日期相差≥60天；官方渠道已有覆盖性确认；原文限定词在二传版本中消失。核查SOP：搜索同主题最新官方声明；比对原始文本与二传文本。
 - **可穿戴健康功能夸大（Wearable Health Feature Inflation）**【Critical级】：在无FDA/NMPA监管批准、无同行评审临床数据的情况下，声称消费级穿戴设备具备医疗级生理参数监测能力（血糖/血压/ECG等）。案例：RC-20260520-E-017（Apple Watch Series 11无创血糖监测谣言，EQ 9.5）。此类谣言具有真实健康危害风险。核查SOP（三重核查）：① FDA.gov/NMPA检索设备批准 ② 官方发布会/财报电话原始记录 ③ 同行评审文献核查技术可行性。三重均否则直接Refuted（EQ≥9.0）。
 
+## 2026-05-24（晚报）新增
+
+### node_naming_oversimplification（节点命名过度简化）
+**触发条件**：声称"XnX nm 制程实际等效 Y nm"，且未给出晶体管密度（MTr/mm²）与能效（perf/W）双维度参考。
+- 案例：RC-20260524-E-016（"5nm 实际 16nm、3nm 实际 14nm"）
+- 反驳：节点数字与栅极长度脱钩属实，但 N3 vs N5/N7 在密度与能效上确有显著代际差异，不应一句话否定。
+**处置**：pseudo.flag=true, pattern=node_naming_oversimplification, 进入 ConflictingEvidence 而非 Refuted。
+
+### radiation_2B_misread（IARC 2B 类致癌物误读）
+**触发条件**：把 IARC 2B（"possibly carcinogenic"）等同于"确认致癌"，并据此将手机/WiFi 包装成"致癌设备"。
+- 案例：RC-20260524-E-014
+- 反驳：2B 仅意味"证据有限的可能性"；同类还有咸菜、芦荟提取物等。引用 WHO 2024 荟萃分析（5000+ 研究）。
+**处置**：directly Refuted；clickbait=0；同时记录"伪科学：电磁过敏论"作为衍生模式。
+
+### nightly_charge_legacy_panic（充电过夜陈年恐慌）
+**触发条件**：以"炸机/充坏电池"恐吓现代智能手机用户通宵充电。
+- 案例：RC-20260524-E-015
+- 反驳：现代手机均有 PMIC + 涓流补电 + 部分有"夜间优化充电"。但"100% 满电长期存放加速衰减"仍然成立，应同时说明。
+**处置**：Refuted，但报告中必须保留"长期满电存放确实衰减更快"的真实事实，避免一刀切。
+
 ## 2026-05-21 新增规则
 
 ### miracle_tech_claim（奇迹技术声称）

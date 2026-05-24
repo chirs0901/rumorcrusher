@@ -1,0 +1,49 @@
+{
+  "batch_id": "RC-20260524-E",
+  "run_type": "evening",
+  "scored_at": "2026-05-24T22:05:00+08:00",
+  "rubric": {
+    "factors": [
+      "claim_specificity (是否含可证伪具体数据/型号/日期)",
+      "public_impact (对消费者/行业影响)",
+      "source_quality (信源等级与多样性)",
+      "controversy (是否存在多源矛盾/爆料性质)"
+    ],
+    "scale": "0-5 per factor, total /20; threshold ≥ 12 for full 4-Agent review"
+  },
+  "items": [
+    {"id": "E-001", "spec": 5, "impact": 5, "src": 5, "ctrl": 1, "total": 16, "check_worthy": true},
+    {"id": "E-002", "spec": 5, "impact": 4, "src": 5, "ctrl": 1, "total": 15, "check_worthy": true},
+    {"id": "E-003", "spec": 3, "impact": 4, "src": 3, "ctrl": 4, "total": 14, "check_worthy": true},
+    {"id": "E-004", "spec": 5, "impact": 5, "src": 4, "ctrl": 3, "total": 17, "check_worthy": true},
+    {"id": "E-005", "spec": 5, "impact": 4, "src": 5, "ctrl": 1, "total": 15, "check_worthy": true},
+    {"id": "E-006", "spec": 5, "impact": 4, "src": 4, "ctrl": 2, "total": 15, "check_worthy": true},
+    {"id": "E-007", "spec": 4, "impact": 5, "src": 4, "ctrl": 2, "total": 15, "check_worthy": true},
+    {"id": "E-008", "spec": 4, "impact": 5, "src": 4, "ctrl": 3, "total": 16, "check_worthy": true},
+    {"id": "E-009", "spec": 3, "impact": 4, "src": 3, "ctrl": 3, "total": 13, "check_worthy": true},
+    {"id": "E-010", "spec": 4, "impact": 5, "src": 5, "ctrl": 2, "total": 16, "check_worthy": true},
+    {"id": "E-011", "spec": 3, "impact": 4, "src": 4, "ctrl": 3, "total": 14, "check_worthy": true},
+    {"id": "E-012", "spec": 4, "impact": 3, "src": 4, "ctrl": 1, "total": 12, "check_worthy": true},
+    {"id": "E-013", "spec": 4, "impact": 4, "src": 4, "ctrl": 1, "total": 13, "check_worthy": true},
+    {"id": "E-014", "spec": 4, "impact": 5, "src": 5, "ctrl": 4, "total": 18, "check_worthy": true},
+    {"id": "E-015", "spec": 4, "impact": 4, "src": 4, "ctrl": 3, "total": 15, "check_worthy": true},
+    {"id": "E-016", "spec": 3, "impact": 3, "src": 3, "ctrl": 5, "total": 14, "check_worthy": true},
+    {"id": "E-017", "spec": 3, "impact": 4, "src": 3, "ctrl": 4, "total": 14, "check_worthy": true},
+    {"id": "E-018", "spec": 5, "impact": 3, "src": 2, "ctrl": 1, "total": 11, "check_worthy": false, "reason": "单一信源，待后续多源验证"},
+    {"id": "E-019", "spec": 3, "impact": 3, "src": 3, "ctrl": 2, "total": 11, "check_worthy": false, "reason": "专利层级，影响时点未定"},
+    {"id": "E-020", "spec": 2, "impact": 3, "src": 2, "ctrl": 2, "total": 9, "check_worthy": false, "reason": "信源 C 级偏多"},
+    {"id": "E-021", "spec": 2, "impact": 3, "src": 2, "ctrl": 4, "total": 11, "check_worthy": false, "reason": "营销榜单，无独立验证"},
+    {"id": "E-022", "spec": 2, "impact": 3, "src": 2, "ctrl": 3, "total": 10, "check_worthy": false, "reason": "单评测、情绪化"},
+    {"id": "E-023", "spec": 3, "impact": 4, "src": 4, "ctrl": 2, "total": 13, "check_worthy": true},
+    {"id": "E-024", "spec": 3, "impact": 4, "src": 4, "ctrl": 3, "total": 14, "check_worthy": true},
+    {"id": "E-025", "spec": 2, "impact": 2, "src": 1, "ctrl": 4, "total": 9, "check_worthy": false, "reason": "爆料未官方确认"},
+    {"id": "E-026", "spec": 3, "impact": 4, "src": 4, "ctrl": 2, "total": 13, "check_worthy": true},
+    {"id": "E-027", "spec": 4, "impact": 4, "src": 5, "ctrl": 1, "total": 14, "check_worthy": true}
+  ],
+  "summary": {
+    "total": 27,
+    "check_worthy_count": 19,
+    "deferred_count": 8,
+    "threshold": 12
+  }
+}

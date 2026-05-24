@@ -138,6 +138,203 @@ var WIKI_MAP = {
 var DATA = {
 
   // ══════════════════════════════════
+  '2026-05-24': {
+    title: '全日合并：第五代骁龙8至尊版 · 京东方LTPO良率回流三星 · 台积电2nm良率破70% · 双谣言重击',
+    sub: '重点：第五代骁龙8至尊版 N3P 制程 NPU 220 tokens/s；iPhone 17 Pro Max IMX903 + 4x 长焦；Galaxy Z Fold7 13999元起；京东方 LTPO 良率受阻，iPhone 17 Pro OLED 订单回流三星；台积电 2nm 试产良率 60-70%+，苹果 A20 占 2026 半数产能；硅碳负极进入 10000mAh 时代。本次同时发布两条强辟谣：手机辐射致癌（WHO 2024 荟萃分析否定）、充电过夜炸机（PMIC 已普及）。',
+    stats: [
+      {v:'27', l:'晚报采集'},
+      {v:'2',  l:'强辟谣 Refuted'},
+      {v:'13', l:'Supported'},
+      {v:'78', l:'综合健康'}
+    ],
+    items: [
+      {
+        id: 'RC-20260524-E-001',
+        category: '芯片',
+        title: '第五代骁龙8至尊版：N3P 制程 · 大P核 4.6GHz · NPU 220 tokens/s',
+        text: '高通于 2025-09-25 发布第五代骁龙8至尊版（Snapdragon 8 Elite Gen 5），采用台积电 N3P 3nm 制程，大 P 核 4.6GHz、小 P 核 3.62GHz；CPU 单核 +20%、多核 +17%、响应 +32%；Adreno GPU 频率 1.2GHz、游戏性能 +23%、光追 +25%；NPU 12 标量 + 8 向量 + 1 张量核，整体 +37%，每秒处理 220 tokens；Adreno 独立 18MB 高速显存能效 +10%。',
+        tags: ['骁龙8 Elite Gen5','N3P','3nm','220 tokens/s','NPU'],
+        sources: [
+          {name:'Qualcomm 官网新闻', url:'https://www.qualcomm.cn/news/releases/2025/11/releases-2025-11-260', official:true},
+          {name:'中关村在线', url:'https://ai.zol.com.cn/965/9658308.html'},
+          {name:'量子位', url:'https://www.qbitai.com/2025/09/336396.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: 'snapdragon-8-elite-gen5'
+      },
+      {
+        id: 'RC-20260524-E-002',
+        category: '芯片',
+        title: 'iPhone 17 Pro Max 主摄 IMX903（1/1.28″）· 长焦 4x 光变 + 8x 无损',
+        text: 'iPhone 17 Pro Max 后置主摄 4800 万像素 1/1.28 英寸索尼 IMX903；长焦从前代 5x 光变改为 4x 光变 + 8x 无损变焦；前置首次采用 1800 万方形传感器（Center Stage），无论横拍竖拍均可裁出一致像素。索尼长崎工厂 CMOS 良率问题已被披露，苹果 2027 款 iPhone 可能引入三星图像传感器分散风险。',
+        tags: ['iPhone 17 Pro','IMX903','长焦','索尼','方形传感器'],
+        sources: [
+          {name:'Apple 官网', url:'https://www.apple.com/iphone-17-pro/', official:true},
+          {name:'少数派', url:'https://sspai.com/post/76639'},
+          {name:'中关村在线', url:'https://mobile.zol.com.cn/1044/10444332.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: '2026-flagship-imaging-war'
+      },
+      {
+        id: 'RC-20260524-E-003',
+        category: '屏幕',
+        title: '京东方 LTPO 良率受阻：iPhone 17 Pro OLED 订单回流三星',
+        text: '京东方原计划为中国版 iPhone 17 Pro 供应最多 1000 万块 LTPO OLED，但因可靠性与良率未达苹果标准，订单已被重新分配给三星显示；京东方目前仍是 iPhone 17 标准版与 iPhone Air 的主力供应商，份额约 60%。事件标志国产 OLED 在 LTPO/Tandem 高端工艺上仍待追赶。',
+        tags: ['京东方','LTPO','OLED','iPhone 17 Pro','三星显示','良率'],
+        sources: [
+          {name:'新浪科技', url:'https://finance.sina.com.cn/tech/discovery/2025-11-21/doc-infycinm9083087.shtml'},
+          {name:'电子工程专辑', url:'https://www.eet-china.com/mp/a454704.html', official:true},
+          {name:'热点科技', url:'https://www.itheat.com/view/57689.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260524-E-004',
+        category: '芯片',
+        title: '台积电 2nm 试产良率突破 60-70%，2026 苹果独占近 50% 产能',
+        text: '台积电新竹宝山厂 2nm（N2）试产良率突破 60%，部分报道称 70%+；2025 Q4 进入量产，2026 月产能 10~13 万片。苹果已预订 2026 年超过一半的 2nm 产能，A20 处理器有望首发 2026 下半年 iPhone 18 系列；AMD、高通、联发科、博通、英特尔等亦在年底前导入。',
+        tags: ['台积电','2nm','N2','量产','良率','A20','iPhone 18'],
+        sources: [
+          {name:'IT之家', url:'https://www.ithome.com/0/878/433.htm'},
+          {name:'界面新闻', url:'https://www.jiemian.com/article/12512546.html'},
+          {name:'EDN中国', url:'https://www.ednchina.com/news/a14175.html'},
+          {name:'OFweek 电子工程网', url:'https://ee.ofweek.com/2025-04/ART-8420-2816-30660451.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260524-E-005',
+        category: '电池',
+        title: '硅碳负极电池迈入 10000mAh 时代：金沙江 / 青海湖 / 冰川 / 蓝海全面铺开',
+        text: '硅理论比容量 4200 mAh/g（约为石墨 10 倍），小米金沙江、荣耀青海湖、一加冰川、vivo 蓝海等多家旗舰电池均采用硅碳负极；2026 红米 Turbo5 Max、一加 Turbo6 推至 9000mAh，荣耀 WIN RT 达 10000mAh。证券时报指出硅碳负极进入产业链放量阶段，但成本仍比石墨高 3-5 倍，降本是关键。⚠️ 注意：高能量密度可能加速循环寿命衰减，缺独立第三方长期数据。',
+        tags: ['硅碳负极','金沙江电池','青海湖','冰川','蓝海','10000mAh'],
+        sources: [
+          {name:'证券时报', url:'https://www.stcn.com/article/detail/1595518.html', official:true},
+          {name:'钛媒体', url:'https://www.tmtpost.com/6902847.html'},
+          {name:'充电头网', url:'https://www.chongdiantou.com/archives/387565.html'},
+          {name:'中关村在线', url:'https://mobile.zol.com.cn/1132/11329624.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: 'silicon-carbon-anode'
+      },
+      {
+        id: 'RC-20260524-E-006',
+        category: '屏幕',
+        title: '三星 Galaxy Z Fold7：13999 元起 · 水滴+多轨铰链 · 大猩猩玻璃陶瓷 2',
+        text: '三星于 2025-07-09 正式发布 Galaxy Z Fold7：超薄精工装甲铰链采用水滴+多轨结构，更轻薄并淡化折痕；外屏盖板首次采用康宁大猩猩玻璃陶瓷 2；电池 4400mAh；国行起售价 13999 元，美版起售 1999 美元。',
+        tags: ['Galaxy Z Fold7','三星','折叠屏','铰链','大猩猩玻璃陶瓷2'],
+        sources: [
+          {name:'三星官网新闻', url:'https://www.samsung.com.cn/news/product/z-fold7/', official:true},
+          {name:'新华网', url:'https://www.news.cn/tech/20250710/194d6852a3c24f1a8aefd6aaf8eb691b/c.html', official:true},
+          {name:'新浪科技', url:'https://finance.sina.com.cn/tech/mobile/n/n/2025-07-10/doc-infeyanw0525340.shtml'}
+        ],
+        verdict: 'Supported',
+        wikiId: 'foldable-2026'
+      },
+      {
+        id: 'RC-20260524-E-007',
+        category: '芯片',
+        title: '小米 15 Ultra：徕卡超纯光学系统 · 2 亿像素 HP9 长焦 · 28x 无损变焦',
+        text: '小米 15 Ultra 搭载 1 英寸主摄 + 徕卡 2 亿像素 HP9 长焦（95mm，f/2.6），实现 14-400mm 焦段覆盖、28 倍无损变焦；潜望式 5x 端配浮动棱镜 OIS，实测 5.8 档防抖补偿；DXOMARK 159 分。⚠️ "天花板"用语带主观色彩。',
+        tags: ['小米15 Ultra','徕卡','HP9','长焦','潜望','DXOMARK'],
+        sources: [
+          {name:'爱范儿评测', url:'https://www.ifanr.com/1615835'},
+          {name:'IT之家', url:'https://www.ithome.com/0/834/239.htm'},
+          {name:'安兔兔', url:'https://www.antutu.com/doc/133807.htm'}
+        ],
+        verdict: 'Supported',
+        wikiId: '2026-flagship-imaging-war'
+      },
+      {
+        id: 'RC-20260524-E-008',
+        category: 'AI创新',
+        title: '荣耀 Magic7 系列：业内首发 NPU+GPU 异构计算 + 端侧 Magic 大模型',
+        text: '荣耀 Magic7 / Magic7 Pro 搭载骁龙 8 Elite，业内首次采用 NPU+GPU 异构计算架构，部署 Magic 大模型端侧版本，AI 性能较上代提升 45%（厂商口径）；同期发布的多模态大模型 MagicGUI 定位"手机自动驾驶"，可读取屏幕并代替用户执行 GUI 操作，开启端侧 Agent 化竞争。⚠️ "手机自动驾驶"比喻易误导。',
+        tags: ['荣耀','Magic7','NPU+GPU','异构计算','MagicGUI','端侧大模型'],
+        sources: [
+          {name:'21 世纪经济报道', url:'https://www.21jingji.com/article/20250726/herald/8f7787f597587916ac704716d6be8ef1.html', official:true},
+          {name:'爱范儿', url:'https://www.ifanr.com/1604753'},
+          {name:'腾讯新闻', url:'https://news.qq.com/rain/a/20241101A028ED00'}
+        ],
+        verdict: 'Supported',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260524-E-009',
+        category: '芯片',
+        title: '麒麟 9020：中芯 7nm N+2 · 安兔兔 ~125 万 · Mate70 实现核心芯片 100% 国产',
+        text: '华为 Mate 70 系列搭载麒麟 9020，采用中芯国际 7nm N+2 工艺（业内估算等效约 5nm），8 核 12 线程，大核 2.50GHz；GPU 马良 920；安兔兔综合 ~125 万，相比麒麟 9000S 性能 +30%。Mate70 实现关键芯片 100% 国产化；与世界最高水平差距主要体现在功耗控制与高负载持续性能。',
+        tags: ['麒麟9020','华为Mate70','7nm','N+2','国产化'],
+        sources: [
+          {name:'电子工程专辑', url:'https://www.eet-china.com/news/202412051738.html', official:true},
+          {name:'芯智讯', url:'https://www.icsmart.cn/86526/'},
+          {name:'中关村在线', url:'https://news.zol.com.cn/925/9253949.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: 'huawei'
+      },
+      {
+        id: 'RC-20260524-E-010-REFUTED',
+        category: '辟谣',
+        title: '❌ "手机辐射致癌" · WHO 2024 荟萃分析 5000+ 研究否定关联',
+        text: '世界卫生组织委托 2024 年 8 月发表的荟萃分析（覆盖 5000+ 项研究）提供迄今最强证据：手机射频电磁辐射与脑癌、头颈癌均无关联；使用 10 年以上的人群亦未见癌症风险升高。IARC 将射频电磁波列为 2B 类"可能致癌"，仅意味"证据有限"，并非确认致癌。常被混淆的是电离辐射（X 射线、γ 射线）与非电离辐射（手机、WiFi、微波炉），后者能量低、致癌风险微乎其微。中国计量院与多地疾控均明确指出"防辐射贴"等产品无科学依据。',
+        tags: ['辟谣','手机辐射','WHO','IARC 2B','非电离辐射','科普'],
+        sources: [
+          {name:'新华报业 · WHO 新研究', url:'https://www.xhby.net/content/s67d27adbe4b0ed4340775071.html', official:true},
+          {name:'国家核安全局科普', url:'https://nnsa.mee.gov.cn/ztzl/haqshmhsh/hyfsaqkp/kptw/202503/t20250313_1103932.html', official:true},
+          {name:'中国计量科学研究院', url:'https://www.nim.ac.cn/node/267', official:true}
+        ],
+        verdict: 'Refuted',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260524-E-011-REFUTED',
+        category: '辟谣',
+        title: '❌ "充电过夜会炸机/充坏电池" · 现代手机 PMIC 早已自动断电',
+        text: '现代智能手机均配备 PMIC 电源管理芯片，充满后会自动断电或进入低电流涓流补电，部分机型还有"夜间优化充电"。整夜插着充电线不会导致"炸机"或显著损坏电池——但请注意区分另一个相对真实的事实：长期保持 100% 满电存放（如长时间不用且满电存放 1 年）确实会加速电池容量衰减 20-30%。日常使用建议：避免长期保持满电、不要在枕头/被褥上充电、使用原装/认证充电器。',
+        tags: ['辟谣','电池','PMIC','涓流充电','夜间优化充电','电池保养'],
+        sources: [
+          {name:'光明网 2026', url:'https://m.gmw.cn/2026-05/22/content_1304466482.htm', official:true},
+          {name:'光明网 2025', url:'https://m.gmw.cn/2025-07/18/content_38160277.htm', official:true},
+          {name:'电子发烧友网', url:'https://www.elecfans.com/dianyuan/382253.html'}
+        ],
+        verdict: 'Refuted',
+        wikiId: null
+      },
+      {
+        id: 'RC-20260524-E-012',
+        category: 'AI创新',
+        title: 'OPPO Find X8 Ultra：LUMO 凝光影像系统 + 70mm 哈苏 Master 16-bit RAW',
+        text: 'OPPO Find X8 Ultra 搭载 LUMO 凝光影像系统，含 70mm 人像主摄、丹霞色准镜头、全链路 ProXDR 与新一代计算光学虚化引擎；与哈苏合作的 Master 模式支持 16-bit RAW Max；同代标准版 Find X8 搭载天玑 9400，Ultra 版搭载新一代骁龙 8 至尊版。',
+        tags: ['OPPO Find X8 Ultra','LUMO','哈苏','70mm人像','RAW Max'],
+        sources: [
+          {name:'OPPO 官网规格', url:'https://www.oppo.com/cn/smartphones/series-find-x/find-x8-ultra/specs/', official:true},
+          {name:'中国摄影杂志', url:'https://www.cphoto.com.cn/content/article/101140.html'}
+        ],
+        verdict: 'Supported',
+        wikiId: '2026-flagship-imaging-war'
+      },
+      {
+        id: 'RC-20260524-E-013',
+        category: 'AI创新',
+        title: 'Apple Vision Pro 2 预计 2026 春季发布，价格或腰斩至 $1500-2500',
+        text: '据 Mark Gurman 报道，搭载 M5 芯片的下一代 Apple Vision Pro（Vision Pro 2）预计在 2025 秋季 - 2026 春季之间上市，售价区间约为初代（$3500）的一半，介于 $1500-$2500。外观与初代接近，主要升级集中在内部芯片与重量优化。代号 N107 的低价款已延后至 2027 年或更晚。⚠️ 苹果未官宣，目前依赖 Gurman 等记者预测。',
+        tags: ['Apple Vision Pro 2','M5','头显','MR','Gurman'],
+        sources: [
+          {name:'华尔街见闻', url:'https://wallstreetcn.com/articles/3717521'},
+          {name:'VR陀螺', url:'https://www.vrtuoluo.cn/column/apple_mr_headset/541334.html'},
+          {name:'新浪科技转 IT 之家', url:'https://finance.sina.com.cn/tech/digi/2024-11-10/doc-incvraka1288084.shtml'}
+        ],
+        verdict: 'ConflictingEvidence',
+        wikiId: null
+      }
+    ]
+  },
+
+  // ══════════════════════════════════
   '2026-05-23': {
     title: '晨报：Apple Q1 2026出货全球第一 · LPDDR5X Q2再涨80% · IDC中国AI手机占比突破53% · 30天新品前瞻',
     sub: '重点：Apple Q1 2026以21%份额跃居全球出货第一（同比+9%），三星紧随同为21%；LPDDR5X Q2 2026合约价再涨78-83%，12GB成旗舰主流（16GB回落）；IDC预测2026中国AI手机占比首破50%（达53%/1.47亿台）；国产厂商2026出货量预期下调15-20%；未来30天前瞻：荣耀600/小米17 Max同日5月25日登场，vivo S60系列5月29日，vivo X Fold6 6月发布。',
