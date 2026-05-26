@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RumorCrusher · 2026-05-26 · 晚报</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"Helvetica Neue","PingFang SC",sans-serif;background:#f2f2ef;color:#111;-webkit-font-smoothing:antialiased;line-height:1.6}
+a{color:#c8102e;text-decoration:none}
+a:hover{text-decoration:underline}
+
+.header{background:#111;color:#fff;padding:48px 28px 36px}
+.header-inner{max-width:1000px;margin:0 auto}
+.header-meta{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#c8102e;margin-bottom:12px}
+.header-title{font-size:clamp(26px,3.4vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-bottom:14px}
+.header-sub{font-size:14px;color:rgba(255,255,255,.65);max-width:760px}
+
+main{max-width:1000px;margin:0 auto;padding:28px}
+
+.window-banner{background:#fff;border-left:4px solid #c8102e;padding:18px 22px;margin-bottom:24px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.window-banner .label{font-size:11px;font-weight:700;letter-spacing:.12em;color:#c8102e;margin-bottom:4px}
+.window-banner .value{font-size:15px;font-weight:600;color:#111;line-height:1.6}
+
+.section{background:#fff;border-radius:6px;padding:24px;margin-bottom:18px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.section h2{font-size:18px;letter-spacing:-.01em;margin-bottom:14px;color:#111;display:flex;align-items:center;gap:8px}
+.section h2::before{content:'';width:3px;height:18px;background:#c8102e;border-radius:2px}
+
+.stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:24px}
+.stat-card{background:#fff;border-radius:6px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,.04);text-align:center}
+.stat-num{font-size:28px;font-weight:800;color:#111;letter-spacing:-.02em}
+.stat-label{font-size:11px;color:#888;margin-top:4px;font-weight:500}
+
+.news{border-top:1px solid #e8e8e4;padding:16px 0;display:flex;gap:14px}
+.news:first-of-type{border-top:none}
+.news-cat{flex-shrink:0;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;height:fit-content;margin-top:2px;letter-spacing:.04em}
+.cat-chip{background:rgba(10,102,194,.12);color:#0a66c2}
+.cat-mem{background:rgba(0,180,180,.12);color:#007a7a}
+.cat-mfr{background:rgba(200,16,46,.12);color:#c8102e}
+.cat-ai{background:rgba(130,60,200,.12);color:#6b36c8}
+.cat-disp{background:rgba(30,150,80,.12);color:#1a6b3a}
+.cat-batt{background:rgba(245,140,30,.15);color:#b06000}
+.news-body{flex:1}
+.news-title{font-size:15px;font-weight:700;color:#111;margin-bottom:5px;line-height:1.4}
+.news-text{font-size:13px;color:#444;line-height:1.65}
+.news-srcs{margin-top:8px;display:flex;flex-wrap:wrap;gap:8px}
+.src{font-size:11px;background:#f5f4f0;padding:2px 8px;border-radius:3px;color:#555;font-weight:500}
+.src.official{background:rgba(10,102,194,.08);color:#0a66c2}
+.src:hover{background:#e8e7e3}
+
+.launch-table{width:100%;border-collapse:collapse;font-size:13px}
+.launch-table th{text-align:left;padding:10px 12px;background:#f8f8f5;font-size:11px;font-weight:700;letter-spacing:.06em;color:#888;text-transform:uppercase;border-bottom:2px solid #e8e8e4}
+.launch-table td{padding:10px 12px;border-bottom:1px solid #f0f0ec;vertical-align:top}
+.launch-table td.model{font-weight:600}
+.launch-table tr:last-child td{border-bottom:none}
+.conf{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px}
+.conf-h{background:rgba(0,150,80,.15);color:#006633}
+.conf-m{background:rgba(245,166,35,.18);color:#a06800}
+.conf-l{background:rgba(200,16,46,.1);color:#c8102e}
+
+.ai-tag{display:inline-block;font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;background:rgba(130,60,200,.12);color:#6b36c8;margin-left:6px}
+
+.note{background:rgba(245,166,35,.08);border-left:3px solid #f5a623;padding:12px 16px;margin-top:14px;font-size:13px;color:#5c4500;border-radius:0 4px 4px 0}
+
+.evening-mark{background:#111;color:#fff;padding:4px 10px;border-radius:3px;font-size:11px;font-weight:700;display:inline-block;margin-bottom:16px;letter-spacing:.06em}
+
+footer{border-top:1px solid #d9d9d5;padding:24px;max-width:1000px;margin:0 auto;color:#999;font-size:11px}
+footer a{color:#c8102e;font-weight:600}
+
+@media(max-width:720px){
+  .header{padding:36px 20px 28px}
+  main{padding:20px}
+  .section{padding:18px}
+  .news{flex-direction:column;gap:10px}
+  .news-cat{width:fit-content}
+  .stats-grid{grid-template-columns:repeat(3,1fr)}
+  .launch-table{font-size:12px}
+  .launch-table th,.launch-table td{padding:8px 6px}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="header-meta">2026-05-26 · 每日简报 · 🌙 晚报版</div>
+    <h1 class="header-title">苹果锁定台积电2nm半壁江山 · 折叠屏年出货+30% · 存储短缺延续至2027 · HBM抢走23%DRAM产能</h1>
+    <p class="header-sub">本日晚跑采集30条经多Agent核查资讯，涵盖芯片代工博弈、折叠屏爆发、AI存储危机、电池快充迭代四大主线。AVeriTeC健康评分：8.6/10。</p>
+  </div>
+</div>
+
+<main>
+
+<!-- 统计数字块 -->
+<div class="stats-grid">
+  <div class="stat-card">
+    <div class="stat-num">30</div>
+    <div class="stat-label">采集条数</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">22</div>
+    <div class="stat-label">✅ Supported</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">4</div>
+    <div class="stat-label">⚠️ 冲突证据</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">8.6</div>
+    <div class="stat-label">综合健康评分</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">4.5</div>
+    <div class="stat-label">AVeriTeC均分/5</div>
+  </div>
+</div>
+
+<!-- 本日要点 -->
+<div class="window-banner">
+  <div class="label">🌙 晚报要点</div>
+  <div class="value">
+    1️⃣ 苹果已锁定台积电N2约50%初期产能；A20 Pro采用WL-MCM封装集成HBM，实现超低延迟本地LLM推理<br>
+    2️⃣ HBM占DRAM晶圆产能23%，数据中心消耗全球70%内存；Micron警告存储短缺持续至2027年<br>
+    3️⃣ SK海力士LPDDR6（14.4Gbps）2026年H2量产；LPDDR5X合约价2026年初再涨20%<br>
+    4️⃣ 2026年全球折叠屏出货+30%：moto razr fold已上市，苹果Fold三星OLED供货300万片，iPhone Fold预计9月发布<br>
+    5️⃣ 三星捆绑内存+代工优惠争取联发科；台积电N2P提前至2026年H2量产<br>
+    6️⃣ 硅碳电池全面普及：Realme P4 Power达10000mAh；240W快充9分半充满
+  </div>
+</div>
+
+<!-- 主新闻区块 -->
+<div class="section">
+  <h2>🔵 芯片代工与AI战略</h2>
+
+  <div class="news">
+    <span class="news-cat cat-chip">芯片</span>
+    <div class="news-body">
+      <div class="news-title">苹果锁定台积电2nm约50%初期产能，A20 Pro集成HBM支持本地LLM <span class="ai-tag">AI策略</span></div>
+      <div class="news-text">苹果已锁定台积电N2（2nm GAA工艺）约一半初期产能，用于A20系列芯片（iPhone 18）。A20 Pro将采用晶圆级多芯片封装（WL-MCM），将CPU/GPU与高带宽内存（HBM）直接集成，实现超低延迟本地生成式AI与LLM推理。这是安卓旗舰芯片（仍依赖LPDDR外置内存方案）无法比拟的硬件AI优势。<br><b>置信度：80%</b> | AVeriTeC: Supported</div>
+      <div class="news-srcs">
+        <a class="src" href="https://wccftech.com/apple-quietly-courts-intel-and-samsung-for-its-most-critical-chips-as-tsmcs-advanced-nodes-remain-choked-under-ai-demand/" target="_blank">WccFtech</a>
+        <a class="src" href="https://markets.financialcontent.com/wral/article/tokenring-2026-1-14-silicon-supremacy-apple-secures-lions-share-of-tsmc-2nm-output-to-power-the-ai-first-era" target="_blank">financialcontent</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-chip">芯片</span>
+    <div class="news-body">
+      <div class="news-title">三星捆绑内存+代工优惠争取联发科，AI需求挤压台积电先进产能</div>
+      <div class="news-text">三星电子会长李在镕2026年5月中旬与联发科高层会面，提供内存捆绑优惠争取代工订单从台积电转向三星代工SF2（2nm）。三星Galaxy S26首发Exynos 2600（SF2工艺）是关键验证机型。同期，苹果、高通等客户因台积电AI/HPC需求收紧，正探索三星/英特尔备用代工方案。<br><b>置信度：84%</b> | AVeriTeC: Supported</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.techtimes.com/articles/317022/20260522/samsung-bundles-memory-foundry-pitch-lure-mediatek-tsmc.htm" target="_blank">TechTimes（5月22日）</a>
+        <a class="src" href="https://www.digitimes.com/news/a20260518VL200/digitimes-asia-weekly-news-roundup-apple-intel-samsung-tsmc.html" target="_blank">Digitimes（5月18日）</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-chip">芯片</span>
+    <div class="news-body">
+      <div class="news-title">台积电N2P计划2026年H2量产（非2027年），高通/联发科或等待N2P</div>
+      <div class="news-text">台积电N2P（2nm精进版）量产时间线已从此前预估的2027年提前至2026年H2，苹果A20 Pro将首发N2P。由于苹果锁定主要N2标准版产能，高通和联发科可能被迫等待N2P版本，意味着2026年旗舰安卓机仍依赖3nm优化版。高通骁龙8 Elite Gen6/联发科天玑9600预计2026年9月随N2P同步发布。<br><b>置信度：75-85%</b> | AVeriTeC: Supported / NotEnoughEvidence（跳过N2部分为推断）</div>
+      <div class="news-srcs">
+        <a class="src" href="https://semiwiki.com/semiconductor-manufacturers/tsmc/366523-tsmc-vs-intel-foundry-vs-samsung-foundry-2026/" target="_blank">Semiwiki</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>🟣 存储内存与AI供应危机 <span class="ai-tag">AI策略重点</span></h2>
+
+  <div class="news">
+    <span class="news-cat cat-mem">存储供应</span>
+    <div class="news-body">
+      <div class="news-title">HBM占DRAM晶圆产能23%，AI需求引发消费级存储供应危机 <span class="ai-tag">AI策略</span></div>
+      <div class="news-text">2026年HBM已占三大存储厂DRAM晶圆总产能约23%，数据中心（微软/谷歌/Meta/亚马逊）消耗全球约70%内存芯片。每片用于英伟达GPU的HBM堆叠，就减少一片面向中端手机LPDDR5X的产能。三星/SK海力士/美光均优先服务AI企业级高毛利订单，手机BOM存储占比已升至20-30%，部分机型BOM上涨25%。<br><b>置信度：88%</b> | AVeriTeC: Supported</div>
+      <div class="news-srcs">
+        <a class="src" href="https://tech-insider.org/memory-chip-shortage-2026-ai-consumer-electronics/" target="_blank">tech-insider.org</a>
+        <a class="src official" href="https://www.idc.com/resource-center/blog/global-memory-shortage-crisis-market-analysis-and-the-potential-impact-on-the-smartphone-and-pc-markets-in-2026/" target="_blank">● IDC 官方</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-mem">存储供应</span>
+    <div class="news-body">
+      <div class="news-title">Micron CEO警告：存储短缺将持续超过2026年；2026年DRAM供应增速创历史低位 <span class="ai-tag">AI策略</span></div>
+      <div class="news-text">Micron CEO公开表示AI算力扩张速度超过任何类别存储的扩产速度，HBM/DRAM/NAND短缺将延续至2027年。IDC预计2026年DRAM供应增速+16%、NAND+17%，均低于历史均值。AI预计消耗全球DRAM晶圆产能20%，HBM与GDDR7主导所有新增产能（TrendForce）。<br><b>置信度：90%</b> | AVeriTeC: Supported</div>
+      <div class="news-srcs">
+        <a class="src" href="https://wccftech.com/micron-warns-memory-crunch-will-outlast-2026-as-ai-demand-outpaces-what-hbm-dram-and-nand-can-supply/" target="_blank">WccFtech（Micron CEO）</a>
+        <a class="src official" href="https://www.trendforce.com/news/2025/12/26/news-ai-reportedly-to-consume-20-of-global-dram-wafer-capacity-in-2026-hbm-gddr7-lead-demand/" target="_blank">● TrendForce 官方</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-mem">存储供应</span>
+    <div class="news-body">
+      <div class="news-title">SK海力士LPDDR6（14.4Gbps）2026年H2量产；三星同期推LPDDR6（12.8Gbps） <span class="ai-tag">AI策略</span></div>
+      <div class="news-text">SK海力士在ISSCC 2026发布LPDDR6规格：16Gb容量，14.4Gbps/pin传输速率（较LPDDR5X提升约50%以上），计划2026年上半年完成量产准备、下半年开始供应AI手机/平板。三星同期推出12.8Gbps版本（后续更高规格LPDDR6X在路线图中）。这是手机存储史上最大单代带宽跃升。<br><b>置信度：87%</b> | AVeriTeC: Supported</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.ithome.com/0/921/612.htm" target="_blank">IT之家（ISSCC 2026）</a>
+        <a class="src" href="https://news.mydrivers.com/1/1104/1104118.htm" target="_blank">快科技</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>🟢 折叠屏与显示技术</h2>
+
+  <div class="news">
+    <span class="news-cat cat-disp">屏显影像</span>
+    <div class="news-body">
+      <div class="news-title">2026折叠屏出货同比+30%，三星显示Q2为苹果Fold供货OLED首批300万片</div>
+      <div class="news-text">IDC/Counterpoint预测2026年全球折叠屏出货量同比激增30%，OLED面板总量突破10亿片。三星显示已确认在Q2向苹果首批供应折叠iPhone OLED面板约300万片，苹果iPhone Fold预计2026年9月26日与iPhone 18系列同台亮相（供应链爆料，非官方确认）。内屏7.8英寸，屏下摄像头，电池5400-5800mAh。<br><b>置信度：79-84%</b> | AVeriTeC: Supported（供货量）/ ConflictingEvidence（发布日期/电池容量）</div>
+      <div class="news-srcs">
+        <a class="src" href="https://finance.sina.com.cn/tech/roll/2026-04-09/doc-inhtxcuy0919373.shtml" target="_blank">新浪科技</a>
+        <a class="src" href="https://wallstreetcn.com/articles/3738619" target="_blank">华尔街见闻</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-mfr">手机厂商动态</span>
+    <div class="news-body">
+      <div class="news-title">联想moto razr fold 5月19日正式发布：8.1寸2K LTPO、骁龙8 Gen5、6000mAh、展开厚4.55mm</div>
+      <div class="news-text">联想摩托罗拉首款横向大折叠旗舰moto razr fold已于2026年5月19日发布，搭载骁龙8 Gen5，8.1英寸2K LTPO内屏（峰值亮度6200nits）+6.6英寸外屏（6000nits）。展开厚度仅4.55mm（折叠9.89mm），电池6000mAh。官方发布会数据，极高置信度。<br><b>置信度：92%</b> | AVeriTeC: Supported</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.tmtpost.com/7913256.html" target="_blank">钛媒体</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-disp">屏显影像</span>
+    <div class="news-body">
+      <div class="news-title">荣耀Magic V6：外屏6000nits/内屏5000nits，4320Hz高频PWM调光</div>
+      <div class="news-text">荣耀Magic V6 MWC 2026公布官方规格：外屏6000nits峰值亮度、内屏5000nits，支持4320Hz高频PWM调光，外屏6.52英寸，内屏7.95英寸，采用极简折痕技术。官方数据极高可信度。<br><b>置信度：90%</b> | AVeriTeC: Supported</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.ledinside.cn/showreport/20260304-61196.html" target="_blank">LED In-Line（MWC 2026）</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>🟡 电池与快充</h2>
+
+  <div class="news">
+    <span class="news-cat cat-batt">电池</span>
+    <div class="news-body">
+      <div class="news-title">小米17 Max通过CCC认证（8000mAh）；Realme P4 Power 10000mAh；硅碳电池全面普及</div>
+      <div class="news-text">2026年5月8日，小米17 Max通过工信部CCC官方认证，配备8000mAh硅碳电池，Max系列时隔多年回归。Realme P4 Power已搭载10000mAh硅碳电池量产，小米17 Ultra为6000mAh。中国主流旗舰至中端机型已全面普及硅碳负极电池，苹果/谷歌在该技术上明显落后。<br><b>置信度：82-90%</b> | AVeriTeC: Supported</div>
+      <div class="news-srcs">
+        <a class="src" href="https://c.m.163.com/news/a/KMD0V82J0511AKPC.html" target="_blank">网易（CCC认证）</a>
+        <a class="src" href="https://www.tomsguide.com/phones/i-interviewed-honor-and-oneplus-about-their-silicon-carbon-battery-tech-apple-and-google-are-quickly-falling-behind" target="_blank">Tom's Guide</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-batt">电池</span>
+    <div class="news-body">
+      <div class="news-title">Realme GT3 240W快充：9分30秒充满4600mAh；荣耀Magic7 Pro 100W有线+80W无线</div>
+      <div class="news-text">Realme GT3搭载240W超级快充，9分30秒完成0-100%充电（4600mAh），创行业纪录。Counterpoint数据：2026年全球15分钟内完成充电的用户需求同比增45%。荣耀Magic7 Pro以100W有线+80W无线与小米并列2026年最快无线充速度，80W无线快充正在走向旗舰标配。<br><b>置信度：78-85%</b> | AVeriTeC: Supported</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.gdwecent.com/fastest-charging-phones-2026-top-10-ranked-by-0-100-time/" target="_blank">Wecent</a>
+        <a class="src" href="https://www.ipowerup.com/2026-the-year-of-power-confidence/" target="_blank">iPowerUp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>🔴 AI芯片能力对比</h2>
+
+  <div class="news">
+    <span class="news-cat cat-ai">AI行业重磅</span>
+    <div class="news-body">
+      <div class="news-title">联发科天玑9400：首款支持端侧LoRA模型训练的移动SoC，NPU AI提速80% <span class="ai-tag">AI策略</span></div>
+      <div class="news-text">联发科天玑9400（NPU 890）是全球首款支持手机端侧LoRA模型微调训练和端侧视频生成的移动SoC，AI任务速度较上代提升80%，能效提升35%。高通骁龙8 Elite的Hexagon NPU同代AI提速45%，单/多核CPU基准测试领先天玑9400逾10%，但GPU部分天玑9400领先。两款芯片均已量产。<br><b>置信度：85-87%</b> | AVeriTeC: Supported</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.gsmarena.com/snapdragon_8_elite_vs_mediatek_9400_benchmark_showdown-news-65171.php" target="_blank">GSMArena</a>
+        <a class="src" href="https://nanoreview.net/en/soc-compare/qualcomm-snapdragon-8-gen-4-vs-mediatek-dimensity-9400-plus" target="_blank">Nanoreview</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 发布日程表 -->
+<div class="section">
+  <h2>📅 发布日程前瞻</h2>
+  <table class="launch-table">
+    <thead>
+      <tr>
+        <th>预计日期</th>
+        <th>机型</th>
+        <th>关键规格</th>
+        <th>置信度</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2026-05-19 ✅已发布</td>
+        <td class="model">联想moto razr fold</td>
+        <td>骁龙8 Gen5 / 8.1寸2K LTPO / 6000mAh</td>
+        <td><span class="conf conf-h">高置信</span></td>
+      </tr>
+      <tr>
+        <td>2026年Q3（爆料）</td>
+        <td class="model">联发科天玑9600首发机型</td>
+        <td>台积电N2P首发安卓旗舰SoC</td>
+        <td><span class="conf conf-m">中置信</span></td>
+      </tr>
+      <tr>
+        <td>2026年H2</td>
+        <td class="model">SK海力士LPDDR6量产供货</td>
+        <td>14.4Gbps/pin，专为AI手机设计</td>
+        <td><span class="conf conf-h">高置信</span></td>
+      </tr>
+      <tr>
+        <td>2026-09-26（供应链爆料）</td>
+        <td class="model">Apple iPhone Fold</td>
+        <td>7.8寸内屏 / 屏下摄像头 / 5400-5800mAh</td>
+        <td><span class="conf conf-m">中置信（待官方确认）</span></td>
+      </tr>
+      <tr>
+        <td>2026-09（预测）</td>
+        <td class="model">Apple iPhone 18 Pro（A20 Pro）</td>
+        <td>台积电N2P / WL-MCM封装 / 集成HBM</td>
+        <td><span class="conf conf-h">高置信</span></td>
+      </tr>
+      <tr>
+        <td>2026-09（预测）</td>
+        <td class="model">高通骁龙8 Elite Gen6</td>
+        <td>台积电N2P / 双旗舰策略</td>
+        <td><span class="conf conf-m">中置信</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 累计统计 -->
+<div class="section">
+  <h2>📈 累计统计（截至2026-05-26晚跑）</h2>
+  <table class="launch-table">
+    <thead>
+      <tr><th>指标</th><th>本批次</th><th>累计（05-14至今）</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>采集条数</td><td>30</td><td>约372条</td></tr>
+      <tr><td>Supported</td><td>22（73.3%）</td><td>约204条（54.8%）</td></tr>
+      <tr><td>ConflictingEvidence</td><td>4（13.3%）</td><td>约102条（27.4%）</td></tr>
+      <tr><td>NotEnoughEvidence</td><td>3（10.0%）</td><td>约44条（11.8%）</td></tr>
+      <tr><td>Refuted</td><td>0</td><td>约21条（5.6%）</td></tr>
+      <tr><td>AI策略标记</td><td>9条</td><td>—</td></tr>
+      <tr><td>平均健康评分</td><td><b>8.6/10</b></td><td>8.2/10</td></tr>
+      <tr><td>AVeriTeC均分</td><td><b>4.5/5</b></td><td>4.05/5</td></tr>
+    </tbody>
+  </table>
+</div>
+
+</main>
+
+<footer>
+  <a href="03-quality-report-102434.md">质检报告</a> ·
+  <a href="04-clean-report-102434.md">干净报告</a> ·
+  <a href="../knowledge-base/index.html">手机知识库</a> ·
+  <a href="../wiki/index.html">LLM Wiki</a>
+  <br><br>
+  RumorCrusher v0.7 · 2026-05-26 22:10 CST · 晚跑批次 RC-20260526-evening-102434 · 采集9次搜索 · AVeriTeC 4-Agent核查
+</footer>
+
+</body>
+</html>

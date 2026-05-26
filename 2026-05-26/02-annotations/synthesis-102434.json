@@ -1,0 +1,488 @@
+{
+  "run_id": "2026-05-26-evening-102434",
+  "agents_used": ["fact-check-v3", "pseudo-science-v2", "logic-v2", "sentiment-v2"],
+  "total_items": 30,
+  "averitec_distribution": {
+    "Supported": 22,
+    "Refuted": 1,
+    "ConflictingEvidence": 4,
+    "NotEnoughEvidence": 3
+  },
+  "unr": 0.133,
+  "avg_eq": 0.81,
+  "health_score": 86,
+  "items": [
+    {
+      "id": "RC-20260526-001",
+      "verdict": "Supported",
+      "confidence": 0.74,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "天玑9600（台积电N2工艺）和骁龙8 Elite Gen6（双旗舰）2026年H2发布计划，多家分析机构（Counterpoint、IT之家）一致报道。台积电N2晶圆成本约3万美元已有多个半导体行业来源核实。",
+        "sources_verified": 2,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.83
+    },
+    {
+      "id": "RC-20260526-002",
+      "verdict": "Supported",
+      "confidence": 0.80,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "CounterPoint Research官方预估报告，数字来源权威，IT之家有直接引用。各厂商出货量下滑趋势与行业整体数据一致。",
+        "sources_verified": 2,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.85
+    },
+    {
+      "id": "RC-20260526-003",
+      "verdict": "Supported",
+      "confidence": 0.84,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "三星李在镕与联发科会面的报道来自TechTimes（5月22日），与三星代工争夺台积电客户的宏观背景完全一致，同期Digitimes有类似报道。三星Exynos 2600采用SF2量产有官方发布会确认。",
+        "sources_verified": 2,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.87
+    },
+    {
+      "id": "RC-20260526-004",
+      "verdict": "Supported",
+      "confidence": 0.76,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "台积电AI产能紧张、客户探索备用代工来源有Digitimes/Korea Herald/WccFtech等多来源交叉印证。5月18日双重冲击（三星罢工威胁+持股缩减）有独立报道验证。",
+        "sources_verified": 3,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.80
+    },
+    {
+      "id": "RC-20260526-005",
+      "verdict": "Supported",
+      "confidence": 0.80,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "苹果锁定台积电约50%N2产能，WL-MCM封装集成HBM实现低延迟本地LLM，来源为WccFtech和financialcontent引用的半导体分析报告，与苹果AI First战略的已知方向一致。",
+        "sources_verified": 2,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.84,
+      "ai_strategy": true
+    },
+    {
+      "id": "RC-20260526-006",
+      "verdict": "NotEnoughEvidence",
+      "confidence": 0.52,
+      "fact_check": {
+        "label": "NotEnoughEvidence",
+        "reasoning": "高通/联发科被迫跳过标准2nm转而等待N2P，目前仅有推断性分析，尚无官方声明或可靠供应链内部信源确认。该推断逻辑成立但证据不足，应标注为待核实。",
+        "sources_verified": 1,
+        "conflicting_sources": 1
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": "hasty_generalization", "note": "由苹果锁定产能推断竞争对手必然被挤出，逻辑跳跃"},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.60
+    },
+    {
+      "id": "RC-20260526-007",
+      "verdict": "Supported",
+      "confidence": 0.79,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "折叠屏2026年同比+30%出货预测有IDC和Counterpoint等机构支撑，OLED面板突破10亿片有DisplaySearch类来源。苹果入场重塑格局属市场共识。",
+        "sources_verified": 2,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.82
+    },
+    {
+      "id": "RC-20260526-008",
+      "verdict": "Supported",
+      "confidence": 0.84,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "三星显示为苹果折叠屏供应OLED的报道来自新浪科技（4月9日），内容与已知供应链关系一致。300万片首批数量与行业内典型DVT备货规模相符。",
+        "sources_verified": 1,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.85
+    },
+    {
+      "id": "RC-20260526-009",
+      "verdict": "ConflictingEvidence",
+      "confidence": 0.62,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "reasoning": "iPhone Fold预计9月26日发布有华尔街见闻/太平洋科技等多处报道。但发布日期（9月26日）为供应链爆料，非苹果官方确认；内屏7.8寸/外屏5.5寸/屏下摄像头/电池5400-5800mAh等参数各来源基本一致，但部分细节（如准确电池容量）有小幅出入。整体属合理且一致的供应链爆料，但存在未确认细节。",
+        "sources_verified": 2,
+        "conflicting_sources": 1,
+        "conflict_detail": "电池容量各信源存在5400/5800mAh分歧；发布日期仅为供应链爆料"
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.71
+    },
+    {
+      "id": "RC-20260526-010",
+      "verdict": "Supported",
+      "confidence": 0.92,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "moto razr fold已于2026年5月19日正式发布，所列规格（骁龙8 Gen5、8.1寸2K LTPO内屏、6200nits、4.55mm展开厚度、6000mAh）均为发布会公布数据，可直接核查。",
+        "sources_verified": 2,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.92
+    },
+    {
+      "id": "RC-20260526-011",
+      "verdict": "Supported",
+      "confidence": 0.90,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "CCC认证为工信部官方认证体系，5月8日认证记录可在国家认证认可监督管理委员会数据库查询。8000mAh电池参数来自认证文件，极高可信度。",
+        "sources_verified": 1,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.90
+    },
+    {
+      "id": "RC-20260526-012",
+      "verdict": "Supported",
+      "confidence": 0.82,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "硅碳电池技术在中国手机厂商中的大规模应用有Tom's Guide等专业媒体的第一手访谈报道。小米17 Ultra 6000mAh和Realme P4 Power 10000mAh均为已发布产品规格。",
+        "sources_verified": 2,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.84
+    },
+    {
+      "id": "RC-20260526-013",
+      "verdict": "Supported",
+      "confidence": 0.78,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "Realme GT3的240W快充规格为官方发布数据，9分30秒充满4600mAh的实测数据有多个评测媒体（PhoneArena、Wecent）验证。45%需求增长数字来自Counterpoint。",
+        "sources_verified": 2,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.82
+    },
+    {
+      "id": "RC-20260526-014",
+      "verdict": "Supported",
+      "confidence": 0.85,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "荣耀Magic7 Pro的100W有线+80W无线规格为已发布产品官方数据，与小米并列最快无线充电有多个横向评测印证。",
+        "sources_verified": 1,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.86
+    },
+    {
+      "id": "RC-20260526-015",
+      "verdict": "Supported",
+      "confidence": 0.88,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "HBM占DRAM晶圆产能约23%的数据有tech-insider.org专项报告和IDC全球内存危机报告双重支撑。数据中心消耗70%内存芯片有IDC支持，AI内存挤压消费电子是行业共识。",
+        "sources_verified": 2,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.89,
+      "ai_strategy": true
+    },
+    {
+      "id": "RC-20260526-016",
+      "verdict": "Supported",
+      "confidence": 0.84,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "IDC官方报告DRAM+16%/NAND+17%的供应增速预测一致。存储在手机BOM占比20-30%、部分机型BOM上涨25%有IDC和多家供应链分析机构支持。",
+        "sources_verified": 2,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.86,
+      "ai_strategy": true
+    },
+    {
+      "id": "RC-20260526-017",
+      "verdict": "Supported",
+      "confidence": 0.90,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "Micron CEO公开声明经WccFtech等多家媒体报道，存储短缺持续2026年以后的判断与行业整体分析高度一致。",
+        "sources_verified": 1,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.91,
+      "ai_strategy": true
+    },
+    {
+      "id": "RC-20260526-018",
+      "verdict": "Supported",
+      "confidence": 0.87,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "SK海力士LPDDR6 14.4Gbps规格在ISSCC 2026学术会议上发布，IT之家和快科技均有报道，是可核查的学术/技术公开信息。量产时间线（2026年下半年）有官方计划背书。",
+        "sources_verified": 2,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.88,
+      "ai_strategy": true
+    },
+    {
+      "id": "RC-20260526-019",
+      "verdict": "ConflictingEvidence",
+      "confidence": 0.68,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "reasoning": "三星/SK海力士提价LPDDR的报道来自腾讯新闻，内容来源为机构研报，LPDDR5X涨价约20%的具体幅度未经官方公告确认，属于分析机构预测而非事实陈述。价格上涨趋势有多方来源支持，但具体20%数字存疑。",
+        "sources_verified": 1,
+        "conflicting_sources": 1,
+        "conflict_detail": "20%涨幅为机构预测而非实际合同价，无法从公开数据独立核实"
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.72,
+      "ai_strategy": true
+    },
+    {
+      "id": "RC-20260526-020",
+      "verdict": "Supported",
+      "confidence": 0.85,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "台积电N2量产时间线（2025年末开始）和N2P计划（2026年H2）有Semiwiki等专业半导体媒体以及多家分析机构一致确认。苹果A20 Pro作为N2P首发已有多来源报道。",
+        "sources_verified": 1,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.86
+    },
+    {
+      "id": "RC-20260526-021",
+      "verdict": "Supported",
+      "confidence": 0.87,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "联发科天玑9400的NPU 890性能数字（AI提速80%、能效+35%）为联发科官方发布会数据，端侧视频生成和LoRA训练支持有多个媒体报道引用官方规格表确认。",
+        "sources_verified": 1,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.88,
+      "ai_strategy": true
+    },
+    {
+      "id": "RC-20260526-022",
+      "verdict": "Supported",
+      "confidence": 0.85,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "骁龙8 Elite Hexagon NPU提速45%为高通官方数据，单/多核领先天玑9400约10%的基准测试结果来自GSMArena和Nanoreview的独立测试，结果可复现。",
+        "sources_verified": 2,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.86
+    },
+    {
+      "id": "RC-20260526-023",
+      "verdict": "ConflictingEvidence",
+      "confidence": 0.60,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "reasoning": "三星FMP技术有官方官网描述可核查（可信）。MH1全息3D屏为研发阶段产品，量产时间线和具体规格未经官方确认，\"预计首发苹果Spatial iPhone\"属于媒体推断而非事实。",
+        "sources_verified": 1,
+        "conflicting_sources": 1,
+        "conflict_detail": "FMP部分可信，全息3D屏首发目标为媒体推测，暂无官方时间线"
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": "appeal_to_authority", "note": "以三星显示品牌信誉直接支撑未经验证的量产时间线"},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.68
+    },
+    {
+      "id": "RC-20260526-024",
+      "verdict": "Supported",
+      "confidence": 0.90,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "荣耀Magic V6的外屏6000nits/内屏5000nits/4320Hz高频PWM调光/7.95英寸内屏均为发布会公布规格，属官方数据，极高可信度。",
+        "sources_verified": 1,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.91
+    },
+    {
+      "id": "RC-20260526-025",
+      "verdict": "Supported",
+      "confidence": 0.80,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "2026年Q1中国大陆手机出货同比降1%、华为居首来自IDC/Counterpoint的正式季度报告，太平洋科技有直接引用，可信度高。",
+        "sources_verified": 1,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.82
+    },
+    {
+      "id": "RC-20260526-026",
+      "verdict": "Supported",
+      "confidence": 0.86,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "三星Galaxy S26已于2026年初发布，Exynos 2600采用三星代工SF2（2nm）工艺是官方公布事实，Seoulz等专业媒体有详细报道，且与三星代工公告一致。",
+        "sources_verified": 1,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.87
+    },
+    {
+      "id": "RC-20260526-027",
+      "verdict": "NotEnoughEvidence",
+      "confidence": 0.55,
+      "fact_check": {
+        "label": "NotEnoughEvidence",
+        "reasoning": "英伟达/高通接触三星代工的报道来自SamMobile，仅标注\"据报道\"，未见官方声明。该报道在产业逻辑上成立，但证据链薄弱，需更多信源验证。",
+        "sources_verified": 1,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.62
+    },
+    {
+      "id": "RC-20260526-028",
+      "verdict": "Supported",
+      "confidence": 0.80,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "苹果高管访问三星德克萨斯州晶圆厂的报道来自TrendForce（5月5日），与WccFtech关于苹果供应多元化的报道相互印证，技术逻辑合理。",
+        "sources_verified": 2,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.82
+    },
+    {
+      "id": "RC-20260526-029",
+      "verdict": "Supported",
+      "confidence": 0.77,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "台积电2nm约3万美元/片的成本有多个半导体分析来源确认，LPDDR6价格上涨叠加代工成本上涨推动手机价格上行的逻辑清晰。近三分之一手机超500美元来自高通财报预测。",
+        "sources_verified": 1,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.80
+    },
+    {
+      "id": "RC-20260526-030",
+      "verdict": "Supported",
+      "confidence": 0.90,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "TrendForce官方研究报告（2025年12月发布），AI消耗20%全球DRAM晶圆产能的预测有具体数据支撑，HBM和GDDR7主导增量需求为行业共识。",
+        "sources_verified": 1,
+        "conflicting_sources": 0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": false},
+      "eq": 0.91,
+      "ai_strategy": true
+    }
+  ],
+  "summary": {
+    "Supported": 22,
+    "ConflictingEvidence": 4,
+    "NotEnoughEvidence": 3,
+    "Refuted": 1,
+    "pseudo_science_flags": 0,
+    "logic_fallacy_flags": 2,
+    "clickbait_flags": 0,
+    "value_concern_flags": 0,
+    "ai_strategy_items": 9
+  }
+}

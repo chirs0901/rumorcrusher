@@ -40,7 +40,7 @@
       </div>
       <div class="text-right text-sm text-slate-400">
         <div>收录周期：<span class="text-white font-semibold">2026-05-14 → 今日</span></div>
-        <div>最后更新：<span id="last-update" class="text-white font-semibold">2026-05-25</span></div>
+        <div>最后更新：<span id="last-update" class="text-white font-semibold">2026-05-26</span></div>
         <div class="mt-1"><a href="../index.html" class="text-rose-400 hover:text-rose-300 text-xs">← 返回首页</a></div>
       </div>
     </div>
@@ -933,6 +933,119 @@ const KB = [
       {name:"太平洋科技", url:"https://mobile.pconline.com.cn/2104/21043652.html"},
       {name:"36氪", url:"https://eu.36kr.com/zh/p/3725693176082951"},
       {name:"飞象网", url:"http://www.cctime.com/html/2026-2-2/1728192.htm"}
+    ]
+  }
+
+  ,
+  {
+    id: "chip-20260526-001",
+    date: "2026-05-26",
+    cat: "chip",
+    title: "苹果锁定台积电2nm约50%产能，A20 Pro集成HBM支持本地LLM推理",
+    summary: "苹果据报已锁定台积电N2（2nm GAA工艺）约一半初期产能，用于A20系列芯片（iPhone 18，预计2026年Q3/Q4发布）。A20 Pro将采用晶圆级多芯片封装（WL-MCM），直接将CPU/GPU Die与高带宽内存（HBM）集成于同一封装体，实现超低延迟本地生成式AI与LLM推理，无需云端回传。台积电N2P计划提前至2026年H2量产（非此前预期2027年），苹果A20 Pro将首发N2P。高通/联发科因苹果锁定N2主要产能，或被迫等待N2P才能量产旗舰2nm SoC。置信度：80%（来源：半导体分析报告，非官方确认）。",
+    verdict: "supported",
+    aiStrategy: true,
+    sources: [
+      {name:"WccFtech", url:"https://wccftech.com/apple-quietly-courts-intel-and-samsung-for-its-most-critical-chips-as-tsmcs-advanced-nodes-remain-choked-under-ai-demand/"},
+      {name:"financialcontent/TokenRing", url:"https://markets.financialcontent.com/wral/article/tokenring-2026-1-14-silicon-supremacy-apple-secures-lions-share-of-tsmc-2nm-output-to-power-the-ai-first-era"},
+      {name:"Semiwiki（N2P路线图）", url:"https://semiwiki.com/semiconductor-manufacturers/tsmc/366523-tsmc-vs-intel-foundry-vs-samsung-foundry-2026/"}
+    ]
+  },
+  {
+    id: "chip-20260526-002",
+    date: "2026-05-26",
+    cat: "chip",
+    title: "三星捆绑内存+代工优惠争取联发科订单；三星Galaxy S26首发Exynos 2600（SF2 2nm）",
+    summary: "三星电子会长李在镕2026年5月中旬亲赴联发科，提供内存捆绑优惠以争取代工订单从台积电转向三星代工SF2（2nm）工艺。三星Galaxy S26系列已首发搭载三星代工SF2工艺生产的Exynos 2600，是三星代工2nm的关键量产验证机型，对其代工业务市场公信力具决定性意义。台积电同期因AI/HPC需求持续收紧先进产能，苹果、高通等客户正探索三星/英特尔备用代工方案。5月18日三星工人罢工威胁及台积电持股缩减引发亚洲芯片股双重冲击。置信度：84%。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name:"TechTimes（5月22日）", url:"https://www.techtimes.com/articles/317022/20260522/samsung-bundles-memory-foundry-pitch-lure-mediatek-tsmc.htm"},
+      {name:"Seoulz（Exynos 2600）", url:"https://www.seoulz.com/samsung-foundry-chases-tsmc-2nm-chip-race/"},
+      {name:"Digitimes（5月18日）", url:"https://www.digitimes.com/news/a20260518VL200/digitimes-asia-weekly-news-roundup-apple-intel-samsung-tsmc.html"}
+    ]
+  },
+  {
+    id: "memory-20260526-001",
+    date: "2026-05-26",
+    cat: "memory",
+    title: "HBM占DRAM晶圆产能23%，数据中心消耗全球70%内存；手机BOM存储占比升至30%",
+    summary: "2026年HBM已占三大存储厂（三星/SK海力士/美光）DRAM晶圆总产能约23%，数据中心（微软、谷歌、Meta、亚马逊等超大规模云厂商）消耗全球约70%内存芯片产量。每片用于英伟达GPU的HBM堆叠，就减少一片面向中端手机LPDDR5X或消费级SSD的产能。手机整机BOM中存储芯片占比已升至20-30%，部分旗舰机型BOM成本上涨高达25%，2026年DRAM供应增速仅+16%、NAND+17%，均创历史低位。AI算力扩张速度超过任何存储类别的扩产速度，短缺将延续至2027年（Micron CEO公开声明）。置信度：88-90%。",
+    verdict: "supported",
+    aiStrategy: true,
+    sources: [
+      {name:"IDC（官方）", url:"https://www.idc.com/resource-center/blog/global-memory-shortage-crisis-market-analysis-and-the-potential-impact-on-the-smartphone-and-pc-markets-in-2026/", official: true},
+      {name:"tech-insider.org", url:"https://tech-insider.org/memory-chip-shortage-2026-ai-consumer-electronics/"},
+      {name:"WccFtech（Micron CEO）", url:"https://wccftech.com/micron-warns-memory-crunch-will-outlast-2026-as-ai-demand-outpaces-what-hbm-dram-and-nand-can-supply/"},
+      {name:"TrendForce（官方）", url:"https://www.trendforce.com/news/2025/12/26/news-ai-reportedly-to-consume-20-of-global-dram-wafer-capacity-in-2026-hbm-gddr7-lead-demand/", official: true}
+    ]
+  },
+  {
+    id: "memory-20260526-002",
+    date: "2026-05-26",
+    cat: "memory",
+    title: "SK海力士LPDDR6（14.4Gbps）2026年H2量产；三星同期推12.8Gbps版本",
+    summary: "SK海力士在ISSCC 2026学术会议发布LPDDR6技术规格：16Gb容量，14.4Gbps/pin传输速率，较LPDDR5X（典型8.5-9.6Gbps）提升约50%以上。计划2026年上半年完成量产准备，下半年开始向配备AI功能的智能手机和平板电脑供货。三星同期推出12.8Gbps版LPDDR6（后续升级至更高规格LPDDR6X）。LPDDR6是为端侧AI推理（本地LLM/多模态处理）设计的新一代移动存储标准，大幅降低AI任务的存储带宽瓶颈。两家厂商均对AI客户和企业级高毛利产品实施配额优先，消费级供应仍紧张。置信度：87%（来源：ISSCC 2026技术论文，高可信度）。",
+    verdict: "supported",
+    aiStrategy: true,
+    sources: [
+      {name:"IT之家（ISSCC 2026）", url:"https://www.ithome.com/0/921/612.htm"},
+      {name:"快科技", url:"https://news.mydrivers.com/1/1104/1104118.htm"},
+      {name:"cnBeta", url:"https://www.cnbeta.com.tw/articles/tech/1552900.htm"}
+    ]
+  },
+  {
+    id: "display-20260526-001",
+    date: "2026-05-26",
+    cat: "display",
+    title: "2026折叠屏出货同比+30%；三星显示Q2为苹果Fold首批OLED供货300万片",
+    summary: "IDC/Counterpoint预测2026年全球折叠屏智能手机出货量同比激增30%，智能手机及折叠屏设备OLED面板合计出货量预计突破10亿片大关。苹果iPhone Fold成为最大催化剂。三星显示已确认在2026年Q2向苹果首批供应折叠iPhone OLED面板约300万片，三星显示是苹果折叠屏的独家OLED供应商。苹果iPhone Fold预计2026年9月与iPhone 18系列同台发布（供应链爆料），内屏7.8英寸，外屏5.5英寸，屏下摄像头，电池5400-5800mAh（各来源存在小幅出入）。2026年国内折叠屏价格已下探至5000元档，华为/小米/OPPO/荣耀均有新品。置信度：79-84%。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name:"新浪科技", url:"https://finance.sina.com.cn/tech/roll/2026-04-09/doc-inhtxcuy0919373.shtml"},
+      {name:"IDC/Counterpoint（引用）", url:"https://mobile.pconline.com.cn/2033/20332653.html"},
+      {name:"华尔街见闻（发布时间线）", url:"https://wallstreetcn.com/articles/3738619"}
+    ]
+  },
+  {
+    id: "brands-20260526-001",
+    date: "2026-05-26",
+    cat: "brands",
+    title: "联想moto razr fold正式发布（5月19日）：骁龙8 Gen5、8.1寸2K LTPO、6000mAh",
+    summary: "联想摩托罗拉首款横向大折叠旗舰moto razr fold于2026年5月19日正式发布，搭载骁龙8 Gen5芯片，8.1英寸2K LTPO内屏（峰值亮度6200nits）配合6.6英寸外屏（6000nits）。展开厚度仅4.55mm（折叠9.89mm），配备6000mAh大电池。发布会官方数据，极高可信度（置信度92%）。这是联想首款横向大折叠旗舰，主打极致轻薄与旗舰影音体验。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name:"钛媒体", url:"https://www.tmtpost.com/7913256.html"},
+      {name:"ledinside.cn（MWC 2026规格表）", url:"https://www.ledinside.cn/showreport/20260304-61196.html"}
+    ]
+  },
+  {
+    id: "brands-20260526-002",
+    date: "2026-05-26",
+    cat: "brands",
+    title: "小米17 Max 2026年5月8日通过CCC认证，搭载8000mAh电池，Max系列回归",
+    summary: "2026年5月8日，小米17 Max通过国家强制认证（CCC/3C），认证文件显示该机配备8000mAh超大容量硅碳电池，标志着小米Max系列时隔多年正式回归。CCC认证是中国工信部官方强制认证体系，认证记录可在国家认监委数据库查询，数据来源极为可靠（置信度90%）。小米17 Ultra同期配备6000mAh硅碳电池，Realme P4 Power 10000mAh亦已量产，中国旗舰手机硅碳电池大容量时代全面开启。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name:"网易（CCC认证报道）", url:"https://c.m.163.com/news/a/KMD0V82J0511AKPC.html"},
+      {name:"Tom's Guide（硅碳电池访谈）", url:"https://www.tomsguide.com/phones/i-interviewed-honor-and-oneplus-about-their-silicon-carbon-battery-tech-apple-and-google-are-quickly-falling-behind"}
+    ]
+  },
+  {
+    id: "chip-20260526-003",
+    date: "2026-05-26",
+    cat: "chip",
+    title: "联发科天玑9400：首款支持端侧LoRA模型训练，AI提速80%；骁龙8 Elite CPU单核领先10%",
+    summary: "联发科天玑9400搭载NPU 890，AI任务速度较上代提升80%，能效提升35%。全球首款：①支持端侧高质量视频生成；②支持端侧LoRA模型微调训练（个性化AI功能）。高通骁龙8 Elite的Hexagon NPU同代AI提速45%，CPU单核和多核基准测试均领先天玑9400逾10%（GSMArena/Nanoreview独立测试），但GPU部分天玑9400领先。两款旗舰芯片均已大规模量产。置信度：85-87%（来源：官方规格+独立第三方基准测试）。",
+    verdict: "supported",
+    aiStrategy: true,
+    sources: [
+      {name:"GSMArena（独立基准测试）", url:"https://www.gsmarena.com/snapdragon_8_elite_vs_mediatek_9400_benchmark_showdown-news-65171.php"},
+      {name:"Nanoreview（独立测试）", url:"https://nanoreview.net/en/soc-compare/qualcomm-snapdragon-8-gen-4-vs-mediatek-dimensity-9400-plus"},
+      {name:"Cashify（AI能力对比）", url:"https://www.cashify.in/mediatek-dimensity-9400-vs-snapdragon-8-elite"}
     ]
   }
 

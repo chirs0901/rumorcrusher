@@ -21,17 +21,20 @@
 - ✅ [英伟达 NVIDIA](entities/brand/nvidia.md) — 黄仁勋访华事件 + 中国业务停滞 + 芯片出口管制立场（2026-05-15建档）
 - ✅ [Apple](entities/brand/apple.md) — iPhone 18 Pro预测：A20 Pro 2nm+可变光圈+屏下FaceID（分析师），苹果Q1 2026全球出货第一（2026-05-25建档）
 - ✅ [Samsung](entities/brand/samsung.md) — Galaxy Z Fold 8（7月22日待官确，4.1mm，$1999），HBM4E发布，重夺iPhone 18 Pro OLED（2026-05-25更新）
-- ⏳ Xiaomi / OPPO / vivo / Google — 待建档
+- ✅ [Xiaomi 小米](entities/brand/xiaomi.md) — 小米17 Ultra 6000mAh Si-C电池；小米17 Max 8000mAh CCC认证（2026-05-26建档）
+- ⏳ OPPO / vivo / Google — 待建档
 
 ### 技术
 - ✅ [硅碳负极电池](entities/tech/silicon-carbon-anode.md) — 硅含量 10%→16% 演进，7000mAh 已量产
 - ✅ [VC均热板散热](entities/tech/vc-vapor-chamber.md) — 修正VC vs石墨烯误导比较（2026-05-18建档）
+- ✅ [LPDDR6](entities/tech/lpddr6.md) — SK海力士14.4Gbps / 三星12.8Gbps，2026年H2量产，专为AI手机设计（2026-05-26建档）
+- ✅ [WL-MCM封装](entities/tech/wl-mcm-packaging.md) — 晶圆级多芯片模组，苹果A20 Pro首发，集成HBM实现本地LLM（2026-05-26建档）
 - ⏳ LPDDR5X / UFS 4 / 卫星通信 / 折叠铰链 / 端侧 LLM 加速 / 计算摄影
 
 ## 二、主题节点 / Topics
 
 - ✅ [2026 影像旗舰战](topics/2026-flagship-imaging-war.md) — vivo X300 Ultra / OPPO Find X9 Ultra / 小米 17 Max 三机集中
-- ✅ [2026 折叠形态](topics/foldable-2026.md) — 三星 50万次折叠 + Apple 液态金属
+- ✅ [2026 折叠形态](topics/foldable-2026.md) — 三星 50万次折叠 + Apple液态金属 + moto razr fold发布 + 苹果Fold OLED三星供货确认（2026-05-26更新）
 - ✅ [AI生成虚假信息 2026](topics/ai-misinformation-2026.md) — 工业化传播链 + 闭环AI引用 + 五批网信办典型案例（2026-05-15建档）
 - ✅ [Deepfake技术与治理 2026](topics/deepfake-2026.md) — 静态97%检测率 + 视频检测人类优于AI + 立法进展（2026-05-15建档）
 - ✅ [硅碳电池核查专题](topics/silicon-carbon-battery-2026.md) — 硅碳电池主流化完成核查（2026-05-18建档）
@@ -68,3 +71,4 @@
 - **2026-05-18**：新增实体 dimensity-9400.md / vc-vapor-chamber.md；新增主题 silicon-carbon-battery-2026.md
 - **2026-05-19**：新增主题 openai-hardware-timeline.md（OpenAI硬件战略追踪）
 - **2026-05-25**：新增实体 dimensity-9600.md / kirin-9030-pro.md / apple.md / samsung.md；新增主题 ai-dram-crisis-2026.md / tsmc-2nm-supply-2026.md / smic-process-evolution.md；更新索引
+- **2026-05-26**：新增实体 xiaomi.md / lpddr6.md / wl-mcm-packaging.md；更新主题 foldable-2026.md（moto razr fold发布+荣耀V6+苹果Fold OLED供货确认）/ ai-dram-crisis-2026.md（HBM23%产能+Micron警告+LPDDR6路线）/ tsmc-2nm-supply-2026.md（N2P提前至2026年H2量产+苹果WL-MCM+三星争夺联发科）

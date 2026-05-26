@@ -1,0 +1,305 @@
+{
+  "run_id": "2026-05-26-evening-102434",
+  "today": "2026-05-26",
+  "timestamp": "102434",
+  "run_type": "evening",
+  "date_verification": {
+    "CTX_DATE": "2026-05-26",
+    "SCHED_DATE": "2026-05-26",
+    "BASH_DATE": "2026-05-26",
+    "consensus": "three-source-match",
+    "drift_warning": null
+  },
+  "total_items": 30,
+  "sources_searched": [
+    "高通/联发科/SoC新品",
+    "TSMC/Samsung代工产业链",
+    "OLED/折叠屏技术",
+    "电池/快充技术",
+    "HBM/DRAM/NAND存储AI影响",
+    "iPhone Fold/华为/小米新机",
+    "Snapdragon vs Dimensity AI NPU",
+    "LPDDR6存储价格供应",
+    "Apple/TSMC 2nm AI战略"
+  ],
+  "items": [
+    {
+      "id": "RC-20260526-001",
+      "title": "高通骁龙8 Elite Gen6与联发科天玑9600预计2026年9月发布，均采用2nm工艺",
+      "body": "根据市场分析，高通将在2026年9月发布骁龙8 Elite Gen6（双旗舰策略），联发科同期推出首款2nm手机芯片天玑9600（台积电N2工艺）。台积电2nm晶圆代工单片成本约3万美元。",
+      "source_urls": ["https://www.eet-china.com/mp/a485351.html", "https://chinaflashmarket.com/a/179736"],
+      "lang": "zh",
+      "category": "chip",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-002",
+      "title": "CounterPoint预估2026全球手机芯片出货同比下滑：联发科-8%、高通-9%、苹果-6%",
+      "body": "CounterPoint Research预估2026年全球智能手机SoC市场出货量同比下降约7%，联发科降幅最大(-8%)，高通(-9%)，苹果(-6%)。",
+      "source_urls": ["https://www.ithome.com/0/917/353.htm"],
+      "lang": "zh",
+      "category": "chip",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-003",
+      "title": "三星捆绑内存优惠争取联发科代工订单，拟从台积电分流",
+      "body": "三星电子会长李在镕2026年5月中旬与联发科会面，提供内存捆绑优惠以争取代工订单，意图将部分订单从台积电转移到三星代工。三星代工2nm（SF2）已率先量产，搭载于Exynos 2600（Galaxy S26）。",
+      "source_urls": ["https://www.techtimes.com/articles/317022/20260522/samsung-bundles-memory-foundry-pitch-lure-mediatek-tsmc.htm"],
+      "lang": "en",
+      "category": "chip",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-004",
+      "title": "AI需求挤压台积电先进产能，高通/苹果探索三星/英特尔代工备用选项",
+      "body": "AI/HPC需求持续收紧台积电先进产能，Apple、Qualcomm等客户正为次旗舰/低优先级芯片探索英特尔或三星代工。5月18日三星罢工威胁及台积电持股缩减令亚洲芯片股受到双重冲击。",
+      "source_urls": ["https://www.digitimes.com/news/a20260518VL200/digitimes-asia-weekly-news-roundup-apple-intel-samsung-tsmc.html", "https://www.koreaherald.com/article/10424682"],
+      "lang": "en",
+      "category": "chip",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-005",
+      "title": "苹果锁定台积电2nm约50%初期产能，A20芯片采用WL-MCM封装集成HBM支持本地LLM",
+      "body": "苹果据报已锁定台积电N2约一半初期产能，用于A20系列芯片（iPhone 18）。A20 Pro将采用晶圆级多芯片封装（WL-MCM），集成CPU/GPU与高带宽内存，实现超低延迟本地生成式AI与LLM推理。",
+      "source_urls": ["https://markets.financialcontent.com/wral/article/tokenring-2026-1-14-silicon-supremacy-apple-secures-lions-share-of-tsmc-2nm-output-to-power-the-ai-first-era", "https://wccftech.com/apple-quietly-courts-intel-and-samsung-for-its-most-critical-chips-as-tsmcs-advanced-nodes-remain-choked-under-ai-demand/"],
+      "lang": "en",
+      "category": "chip",
+      "in_scope": true,
+      "ai_strategy_flag": true
+    },
+    {
+      "id": "RC-20260526-006",
+      "title": "高通/联发科或被迫跳过标准2nm节点，等待N2P变体（2026年H2量产）",
+      "body": "苹果锁定台积电N2主要产能后，高通和联发科可能被迫跳过标准2nm，等待台积电N2P（计划2026年下半年量产）。这意味着2026年旗舰安卓机可能仍依赖3nm优化版。",
+      "source_urls": ["https://wccftech.com/apple-quietly-courts-intel-and-samsung-for-its-most-critical-chips-as-tsmcs-advanced-nodes-remain-choked-under-ai-demand/"],
+      "lang": "en",
+      "category": "chip",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-007",
+      "title": "2026折叠屏爆发：全球出货量预计同比激增30%，苹果入场重塑格局",
+      "body": "2026年全球折叠屏出货量预计同比激增30%，华为、OPPO、小米、荣耀、三星等密集发布新品，苹果首款折叠屏iPhone Fold确认量产，IDC认为2026年将重塑折叠屏格局。OLED面板合计出货量预计突破10亿片。",
+      "source_urls": ["https://www.eet-china.com/mp/a464016.html", "https://mobile.pconline.com.cn/2033/20332653.html"],
+      "lang": "zh",
+      "category": "display",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-008",
+      "title": "三星显示2026年Q2为苹果折叠屏OLED首批供货300万片",
+      "body": "三星显示确认在2026年第二季度向苹果首批供应折叠屏OLED面板300万片，用于iPhone Fold量产。",
+      "source_urls": ["https://finance.sina.com.cn/tech/roll/2026-04-09/doc-inhtxcuy0919373.shtml"],
+      "lang": "zh",
+      "category": "display",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-009",
+      "title": "iPhone Fold预计2026年9月26日发布：7.8寸内屏、屏下摄像头、5400-5800mAh电池",
+      "body": "苹果首款折叠屏手机iPhone Fold已进入DVT阶段，预计2026年9月26日与iPhone 18系列同台发布。内屏7.8英寸、外屏5.5英寸，搭载屏下摄像头（2400万像素），电池5400-5800mAh，接近无折痕。",
+      "source_urls": ["https://wallstreetcn.com/articles/3738619", "https://mobile.pconline.com.cn/2025/20251472.html"],
+      "lang": "zh",
+      "category": "brands",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-010",
+      "title": "联想moto razr fold 2026年5月19日发布：骁龙8 Gen5、8.1寸2K内屏、6000mAh",
+      "body": "联想摩托罗拉首款横向大折叠旗舰moto razr fold于2026年5月19日正式发布，搭载骁龙8 Gen5芯片，8.1英寸2K LTPO内屏+6.6英寸外屏，内屏峰值亮度6200nits，展开厚度4.55mm，折叠9.89mm，电池6000mAh。",
+      "source_urls": ["https://www.tmtpost.com/7913256.html"],
+      "lang": "zh",
+      "category": "brands",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-011",
+      "title": "小米17 Max通过CCC认证，配备8000mAh电池，Max系列时隔多年回归",
+      "body": "2026年5月8日，小米17 Max通过国家3C（CCC）认证，该机配备8000mAh超大容量电池，标志着小米Max系列时隔多年正式回归。",
+      "source_urls": ["https://c.m.163.com/news/a/KMD0V82J0511AKPC.html"],
+      "lang": "zh",
+      "category": "brands",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-012",
+      "title": "硅碳电池成2026年手机主流：小米17 Ultra 6000mAh，Realme P4 Power 10000mAh",
+      "body": "硅碳（Si-C）电池技术在2026年手机市场实现大规模普及，中国主流旗舰与中端机型广泛搭载。小米17 Ultra配备6000mAh电池，Realme P4 Power达10000mAh，在不增加厚度的情况下大幅提升电量。",
+      "source_urls": ["https://www.tomsguide.com/phones/i-interviewed-honor-and-oneplus-about-their-silicon-carbon-battery-tech-apple-and-google-are-quickly-falling-behind", "https://techgenyz.com/smartphone-batteries-silicon-carbon-fast-charging/"],
+      "lang": "en",
+      "category": "battery",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-013",
+      "title": "Realme GT3创行业纪录：240W快充9分30秒充满4600mAh电池",
+      "body": "Realme GT3搭载240W超级快充，可将4600mAh电池从0充至100%仅需9分30秒，创下行业纪录。2026年全球用户对15分钟内完全充电需求同比激增45%。",
+      "source_urls": ["https://www.gdwecent.com/fastest-charging-phones-2026-top-10-ranked-by-0-100-time/", "https://techgenyz.com/smartphone-batteries-silicon-carbon-fast-charging/"],
+      "lang": "en",
+      "category": "battery",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-014",
+      "title": "荣耀Magic7 Pro：100W有线+80W无线充电，并列业界最快无线充速",
+      "body": "荣耀Magic7 Pro提供100W有线+80W无线快充，与小米并列2026年最快无线充电速度。2026年80W级别无线快充正走向主流。",
+      "source_urls": ["https://www.ipowerup.com/2026-the-year-of-power-confidence/"],
+      "lang": "en",
+      "category": "battery",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-015",
+      "title": "HBM占DRAM晶圆产能23%，AI需求引发消费级DRAM/NAND供应危机",
+      "body": "2026年HBM已占三星/SK海力士/美光三大存储厂DRAM晶圆总产能的约23%。超大规模数据中心（微软、谷歌、Meta、亚马逊）消耗全球约70%内存芯片。每片用于英伟达GPU的HBM堆叠，就减少了一片面向中端手机LPDDR5X或消费级SSD的产能。",
+      "source_urls": ["https://tech-insider.org/memory-chip-shortage-2026-ai-consumer-electronics/", "https://www.idc.com/resource-center/blog/global-memory-shortage-crisis-market-analysis-and-the-potential-impact-on-the-smartphone-and-pc-markets-in-2026/"],
+      "lang": "en",
+      "category": "memory",
+      "in_scope": true,
+      "ai_strategy_flag": true
+    },
+    {
+      "id": "RC-20260526-016",
+      "title": "2026年DRAM/NAND供应增速创历史低位（分别+16%/+17%），手机BOM成本存储占比升至30%",
+      "body": "IDC预计2026年DRAM和NAND供应增速分别为16%和17%（同比），低于历史均值。手机整机BOM中存储芯片占比已显著提升至20-30%，部分机型BOM成本上涨高达25%。",
+      "source_urls": ["https://www.idc.com/resource-center/blog/global-memory-shortage-crisis-market-analysis-and-the-potential-impact-on-the-smartphone-and-pc-markets-in-2026/", "https://www.neumonda.com/memory-market-2026-scarcity-strategy-and-security-of-supply/"],
+      "lang": "en",
+      "category": "memory",
+      "in_scope": true,
+      "ai_strategy_flag": true
+    },
+    {
+      "id": "RC-20260526-017",
+      "title": "Micron警告：HBM/DRAM/NAND短缺将持续超过2026年，结构性缺口难以弥合",
+      "body": "美光（Micron）CEO公开表示，HBM、NAND和DRAM的供应短缺将持续到2026年以后，AI算力扩张速度超过任何存储类别的生产扩产速度，结构性缺口将延续至2027年。",
+      "source_urls": ["https://wccftech.com/micron-warns-memory-crunch-will-outlast-2026-as-ai-demand-outpaces-what-hbm-dram-and-nand-can-supply/"],
+      "lang": "en",
+      "category": "memory",
+      "in_scope": true,
+      "ai_strategy_flag": true
+    },
+    {
+      "id": "RC-20260526-018",
+      "title": "SK海力士LPDDR6规格：14.4Gbps，2026年下半年量产，专为AI手机设计",
+      "body": "SK海力士计划推出16Gb规格LPDDR6模组，单Pin传输速率达14.4Gbps（三星同期推12.8Gbps版）。SK海力士计划2026年上半年完成量产准备，下半年开始向AI手机/平板供货。",
+      "source_urls": ["https://news.mydrivers.com/1/1104/1104118.htm", "https://www.ithome.com/0/921/612.htm"],
+      "lang": "zh",
+      "category": "memory",
+      "in_scope": true,
+      "ai_strategy_flag": true
+    },
+    {
+      "id": "RC-20260526-019",
+      "title": "三星/SK海力士大幅上调iPhone LPDDR价格，LPDDR5X合约价2026年初再涨20%",
+      "body": "三星和SK海力士据悉已大幅提高向苹果供应的iPhone LPDDR价格，机构预计LPDDR5X合约价在2026年初将进一步上涨约20%。两家厂商均对AI客户和企业级高毛利产品实施配额优先。",
+      "source_urls": ["https://news.qq.com/rain/a/20260127A07B0000", "https://www.stcn.com/article/detail/3656566.html"],
+      "lang": "zh",
+      "category": "memory",
+      "in_scope": true,
+      "ai_strategy_flag": true
+    },
+    {
+      "id": "RC-20260526-020",
+      "title": "台积电N2量产加速，N2P计划2026年H2量产，苹果A20 Pro首发",
+      "body": "台积电N2（2nm）工艺于2025年末进入量产，需求爬坡速度超过历史任何节点。N2P扩展版计划2026年下半年量产，苹果A20 Pro将是N2P首发芯片之一。",
+      "source_urls": ["https://semiwiki.com/semiconductor-manufacturers/tsmc/366523-tsmc-vs-intel-foundry-vs-samsung-foundry-2026/"],
+      "lang": "en",
+      "category": "chip",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-021",
+      "title": "联发科天玑9400：NPU 890 AI任务提速80%，首款支持端侧LoRA模型训练的移动芯片",
+      "body": "联发科天玑9400集成NPU 890，AI任务速度较上代提升80%，能效提升35%。天玑9400是首款支持手机直接生成高质量视频的移动芯片，同时首次支持端侧LoRA模型微调训练，实现个性化AI功能。",
+      "source_urls": ["https://www.gsmarena.com/snapdragon_8_elite_vs_mediatek_9400_benchmark_showdown-news-65171.php"],
+      "lang": "en",
+      "category": "chip",
+      "in_scope": true,
+      "ai_strategy_flag": true
+    },
+    {
+      "id": "RC-20260526-022",
+      "title": "高通骁龙8 Elite：Hexagon NPU AI任务提速45%，单核/多核基准测试领先天玑9400 10%+",
+      "body": "高通骁龙8 Elite（Gen4）的Hexagon NPU在AI任务上较前代提速45%。在CPU单核和多核基准测试中，骁龙8 Elite领先天玑9400超过10%，但GPU部分测试天玑9400领先。",
+      "source_urls": ["https://www.cashify.in/mediatek-dimensity-9400-vs-snapdragon-8-elite"],
+      "lang": "en",
+      "category": "chip",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-023",
+      "title": "三星显示推出FMP隐私OLED技术和MH1全息3D屏，MH1首发目标苹果Spatial iPhone",
+      "body": "三星显示推出Flex Magic Pixel（FMP）技术，通过像素级光线扩散控制实现侧面隐私保护。同时研发代号MH1的全息3D屏，采用眼球追踪实现裸眼立体显示，预计首发于苹果Spatial iPhone。",
+      "source_urls": ["https://www.samsungdisplay.com/chn/tech/oled-display.jsp", "https://www.ledinside.cn/showreport/20260304-61196.html"],
+      "lang": "zh",
+      "category": "display",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-024",
+      "title": "荣耀Magic V6折叠屏：外屏6000nits/内屏5000nits亮度，4320Hz高频PWM调光",
+      "body": "荣耀Magic V6折叠屏手机外屏峰值亮度达6000nits、内屏5000nits，支持4320Hz高频PWM调光。外屏从V5的6.43英寸扩大至6.52英寸，内屏7.95英寸，采用极简折痕技术。",
+      "source_urls": ["https://www.ledinside.cn/showreport/20260304-61196.html"],
+      "lang": "zh",
+      "category": "display",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-025",
+      "title": "2026年Q1中国大陆智能手机出货量同比降1%，华为位居榜首",
+      "body": "2026年第一季度中国大陆智能手机出货量同比下滑1%，华为以市场份额居首，显示其持续回归高端市场的战略效果。",
+      "source_urls": ["https://mobile.pconline.com.cn/2129/21296792.html"],
+      "lang": "zh",
+      "category": "brands",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-026",
+      "title": "三星Galaxy S26首发三星代工2nm Exynos 2600，三星代工迎关键验证时刻",
+      "body": "三星Galaxy S26系列将首发搭载三星代工SF2（2nm）工艺生产的Exynos 2600，成为三星代工2nm工艺的量产验证核心机型，对三星代工业务的市场公信力具有关键意义。",
+      "source_urls": ["https://www.seoulz.com/samsung-foundry-chases-tsmc-2nm-chip-race/"],
+      "lang": "en",
+      "category": "chip",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-027",
+      "title": "英伟达/高通寻求三星代工2nm芯片，三星代工争夺先进节点多元客户",
+      "body": "据报道英伟达和高通已与三星代工接触，寻求在三星2nm（SF2）工艺上制造芯片，三星代工谋求多元化先进节点客户，不再仅依赖三星内部订单。",
+      "source_urls": ["https://www.sammobile.com/news/nvidia-qualcomm-want-2nm-chips-samsung-foundry/"],
+      "lang": "en",
+      "category": "chip",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-028",
+      "title": "苹果探索三星/英特尔美国代工厂布局，因台积电先进节点供应紧张",
+      "body": "苹果高管已访问三星在德克萨斯州建设中的晶圆厂，探索为次优先级芯片采用三星或英特尔代工，以分散台积电集中度风险，并应对台积电先进节点因AI需求持续收紧的局面。",
+      "source_urls": ["https://www.trendforce.com/news/2026/05/05/news-apple-reportedly-eyes-samsung-intel-u-s-foundry-for-core-chips-amid-tsmc-constraints-supply-diversification/"],
+      "lang": "en",
+      "category": "chip",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-029",
+      "title": "内存与2nm代工成本双重上涨，高通联发科旗舰芯片2026年面临价格压力",
+      "body": "台积电2nm晶圆代工单片成本约3万美元，叠加LPDDR6 DRAM价格急剧上涨，导致高通和联发科旗舰手机SoC的整体成本显著增加，2026年旗舰手机价格上行压力明显，近三分之一手机售价将超500美元。",
+      "source_urls": ["https://cloud.tencent.com/developer/article/2643421"],
+      "lang": "zh",
+      "category": "chip",
+      "in_scope": true
+    },
+    {
+      "id": "RC-20260526-030",
+      "title": "AI算力需求预计2026年消耗全球DRAM晶圆产能20%，HBM与GDDR7主导增量",
+      "body": "TrendForce报告显示，AI应用预计将在2026年消耗全球DRAM晶圆总产能约20%，HBM和GDDR7将主导新增需求，进一步压缩面向消费电子（手机/PC）的LPDDR和DDR5供应空间。",
+      "source_urls": ["https://www.trendforce.com/news/2025/12/26/news-ai-reportedly-to-consume-20-of-global-dram-wafer-capacity-in-2026-hbm-gddr7-lead-demand/"],
+      "lang": "zh",
+      "category": "memory",
+      "in_scope": true,
+      "ai_strategy_flag": true
+    }
+  ]
+}

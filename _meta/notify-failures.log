@@ -4,3 +4,4 @@
   email_smtp: SKIPPED (no smtp config; no script in fallback)
   cause: 主仓库 /sessions/*/mnt/Claude/Projects/RumorCrusher 未挂载，使用 outputs fallback；
          scripts/daily_publish.sh 不存在，按 SKILL 要求显式记入失败日志，不伪造已发送。
+[2026-05-24T09:27:02Z] feishu skipped: sandbox-egress-blocked-or-no-webhook

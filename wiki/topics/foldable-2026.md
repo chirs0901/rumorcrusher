@@ -35,8 +35,37 @@
 - Apple 折叠 iPhone 实际上市时间和"无折痕"的量化指标
 - 售价区间（折叠 iPhone 预计 $2000+）
 
+### Lenovo moto razr fold（2026-05-19正式发布）
+- **内屏**：8.1英寸 2K LTPO，峰值亮度6200nits
+- **外屏**：6.6英寸，峰值亮度6000nits
+- **SoC**：骁龙8 Gen5
+- **电池**：6000mAh
+- **厚度**：展开4.55mm / 折叠9.89mm
+- **AVeriTeC标签**：Supported（置信度92%，官方发布会数据）
+
+### 荣耀 Magic V6
+- **外屏**：6.52英寸，峰值亮度6000nits；**内屏**：7.95英寸，峰值亮度5000nits
+- **调光**：4320Hz高频PWM，全球折叠屏最高刷新调光频率之一
+- **AVeriTeC标签**：Supported（置信度90%，MWC 2026官方发布数据）
+
+### Apple iPhone Fold（2026年9月预计）
+- **最新进展（2026-05-26晚跑更新）**：已进入DVT阶段，三星显示Q2首批OLED供货300万片确认
+- **内屏**：7.8英寸 / **外屏**：5.5英寸
+- **摄像头**：屏下摄像头（2400万像素）
+- **电池**：5400-5800mAh（各来源有出入，ConflictingEvidence）
+- **预计发布日期**：2026年9月26日（供应链爆料，非官方确认）
+- **AVeriTeC标签**：ConflictingEvidence（电池容量/发布日期存疑，核心规格有一定支持）
+
+## 市场数据（2026-05-26更新）
+- 全球折叠屏2026年出货量预计同比激增30%（IDC/Counterpoint）
+- OLED面板总出货量预计突破10亿片
+- 折叠屏市场均价高压：国内厂商价格已下探至5000元档
+
 ## 信源历史
 
-| 日期 | 关键事件 |
-|---|---|
-| 2026-05-14 | Z Fold 7 耐久声明（Samsung 官方）+ Apple 折叠 iPhone 供应链报道（TrendForce）|
+| 日期 | 信源 | AVeriTeC标签 | 内容 |
+|---|---|---|---|
+| 2026-05-14 | Samsung 官方 + TrendForce | NotEnoughEvidence | Z Fold 7 耐久声明 + Apple 折叠 iPhone 供应链报道 |
+| 2026-05-26 | 新浪科技（4月9日报道） | Supported (0.84) | 三星显示Q2为苹果折叠OLED首批供货300万片 |
+| 2026-05-26 | tmtpost.com / ledinside.cn | Supported (0.92/0.90) | moto razr fold发布；荣耀Magic V6折叠规格 |
+| 2026-05-26 | IDC/Counterpoint | Supported (0.79) | 2026折叠屏出货+30%，OLED突破10亿片 |

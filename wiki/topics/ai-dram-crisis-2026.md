@@ -56,3 +56,8 @@ TrendForce预计：DRAM价格有意义的缓解要等到**2027年底**。三星/
 | 2026-05-25 | [Wccftech](https://wccftech.com/you-can-blame-lpddr5x-for-smartphone-price-increases-in-2026/) | Supported (0.95) | 手机价格影响传导分析 |
 | 2026-05-25 | [AndroidHeadlines](https://www.androidheadlines.com/2026/05/mobile-dram-price-increase-q2-2026-report.html) | Supported (0.95) | Q2价格上涨即时报道 |
 | 2026-05-23 | [之前批次] | Supported | LPDDR5X首次Q2涨幅确认（见RC-20260523批次） |
+| 2026-05-26 | [tech-insider.org](https://tech-insider.org/memory-chip-shortage-2026-ai-consumer-electronics/) | Supported (0.88) | HBM占DRAM晶圆产能23%，数据中心消耗全球70%内存芯片 |
+| 2026-05-26 | [IDC](https://www.idc.com/resource-center/blog/global-memory-shortage-crisis-market-analysis-and-the-potential-impact-on-the-smartphone-and-pc-markets-in-2026/) | Supported (0.84) | 2026年DRAM+16%/NAND+17%供应增速，BOM成本存储占比升至20-30% |
+| 2026-05-26 | [WccFtech（Micron CEO）](https://wccftech.com/micron-warns-memory-crunch-will-outlast-2026-as-ai-demand-outpaces-what-hbm-dram-and-nand-can-supply/) | Supported (0.90) | Micron警告存储短缺持续超过2026年，延续至2027年 |
+| 2026-05-26 | [IT之家/快科技（ISSCC 2026）](https://news.mydrivers.com/1/1104/1104118.htm) | Supported (0.87) | SK海力士LPDDR6 14.4Gbps，2026年H2量产，专为AI手机设计 |
+| 2026-05-26 | [TrendForce](https://www.trendforce.com/news/2025/12/26/news-ai-reportedly-to-consume-20-of-global-dram-wafer-capacity-in-2026-hbm-gddr7-lead-demand/) | Supported (0.90) | AI预计消耗2026年全球DRAM晶圆产能20%，HBM与GDDR7主导增量 |
