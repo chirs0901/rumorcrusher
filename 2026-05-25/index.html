@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RumorCrusher · 2026-05-25 · 日报</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"Helvetica Neue","PingFang SC",sans-serif;background:#f2f2ef;color:#111;-webkit-font-smoothing:antialiased;line-height:1.6}
+a{color:#c8102e;text-decoration:none}
+a:hover{text-decoration:underline}
+
+.header{background:#111;color:#fff;padding:48px 28px 36px}
+.header-inner{max-width:1000px;margin:0 auto}
+.header-meta{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#c8102e;margin-bottom:12px}
+.header-title{font-size:clamp(26px,3.4vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-bottom:14px}
+.header-sub{font-size:14px;color:rgba(255,255,255,.65);max-width:760px}
+
+main{max-width:1000px;margin:0 auto;padding:28px}
+
+.window-banner{background:#fff;border-left:4px solid #c8102e;padding:18px 22px;margin-bottom:24px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.window-banner .label{font-size:11px;font-weight:700;letter-spacing:.12em;color:#c8102e;margin-bottom:4px}
+.window-banner .value{font-size:15px;font-weight:600;color:#111;line-height:1.6}
+
+.section{background:#fff;border-radius:6px;padding:24px;margin-bottom:18px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.section h2{font-size:18px;letter-spacing:-.01em;margin-bottom:14px;color:#111;display:flex;align-items:center;gap:8px}
+.section h2::before{content:'';width:3px;height:18px;background:#c8102e;border-radius:2px}
+
+/* news item */
+.news{border-top:1px solid #e8e8e4;padding:16px 0;display:flex;gap:14px}
+.news:first-of-type{border-top:none;padding-top:6px}
+.news-cat{flex-shrink:0;width:84px;font-size:10px;font-weight:700;letter-spacing:.06em;padding:3px 7px;border-radius:3px;height:fit-content;text-align:center}
+.cat-mfr{background:rgba(200,16,46,.1);color:#a8102e}
+.cat-mem{background:rgba(0,136,170,.1);color:#005e7c}
+.cat-ai{background:rgba(124,58,237,.1);color:#6c2bd9}
+.cat-chip{background:rgba(0,102,204,.1);color:#0055aa}
+.cat-disp{background:rgba(0,168,80,.1);color:#006633}
+.news-body{flex:1}
+.news-title{font-size:15px;font-weight:700;color:#111;margin-bottom:6px;line-height:1.4}
+.news-text{font-size:13.5px;color:#444;line-height:1.7;margin-bottom:6px}
+.news-srcs{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.src{font-size:10px;color:#666;padding:2px 7px;border:1px solid #e0e0dc;border-radius:3px}
+.src:hover{background:#111;color:#fff;border-color:#111}
+.src.official{border-color:#0066cc44;color:#0055aa;background:rgba(0,102,204,.04)}
+
+/* preview table */
+.launch-table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px}
+.launch-table th,.launch-table td{padding:9px 11px;border-bottom:1px solid #e8e8e4;text-align:left;vertical-align:top}
+.launch-table th{background:#f7f7f4;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#555}
+.launch-table td.date{font-weight:700;color:#c8102e;white-space:nowrap}
+.launch-table td.model{font-weight:600}
+.conf{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px}
+.conf-h{background:rgba(0,150,80,.15);color:#006633}
+.conf-m{background:rgba(245,166,35,.18);color:#a06800}
+
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:4px}
+.stat-box{background:#f7f7f4;border-radius:6px;padding:14px 16px;text-align:center}
+.stat-num{font-size:28px;font-weight:800;color:#c8102e;line-height:1.1}
+.stat-label{font-size:11px;color:#666;margin-top:4px;letter-spacing:.04em}
+
+.note{background:rgba(245,166,35,.08);border-left:3px solid #f5a623;padding:12px 16px;margin-top:14px;font-size:13px;color:#5c4500;border-radius:0 4px 4px 0}
+
+.report-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.report-btn{font-size:12px;font-weight:700;padding:6px 14px;border-radius:4px;border:1.5px solid #c8102e;color:#c8102e;background:#fff;cursor:pointer}
+.report-btn:hover{background:#c8102e;color:#fff}
+
+footer{border-top:1px solid #d9d9d5;padding:24px;max-width:1000px;margin:0 auto;color:#999;font-size:11px}
+footer a{color:#c8102e;font-weight:600}
+
+@media(max-width:720px){
+  .header{padding:36px 20px 28px}
+  main{padding:20px}
+  .section{padding:18px}
+  .news{flex-direction:column;gap:10px}
+  .news-cat{width:fit-content}
+  .launch-table{font-size:12px}
+  .launch-table th,.launch-table td{padding:8px 6px}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="header-meta">2026-05-25 · 每日简报 · 全天版</div>
+    <h1 class="header-title">台积电2nm五厂全产售罄 · 三星HBM4E发布 · 手机DRAM暴涨83% · 麒麟9030 Pro确认中芯N+3</h1>
+    <p class="header-sub">本日采集15条资讯，经4-Agent核查保留9条Supported、4条ConflictingEvidence。主线：台积电产能格局、AI内存危机对手机价格的冲击、三星Display重夺iPhone Pro订单，以及华为SMIC最新芯片工艺突破。</p>
+  </div>
+</div>
+
+<main>
+
+<div class="window-banner">
+  <div class="label">本日要点</div>
+  <div class="value">
+    1️⃣ 台积电同时运营五座2nm晶圆厂，2026年全部产能预订完毕，苹果A20 Pro占逾50%<br>
+    2️⃣ TrendForce：LPDDR5X合约价Q2 2026再涨78-83%，AI服务器需求直接挤压手机内存供应<br>
+    3️⃣ 三星HBM4E在NVIDIA GTC 2026发布：16Gbps/pin，4.0TB/s带宽，首发Vera Rubin平台<br>
+    4️⃣ TechInsights确认麒麟9030 Pro采用中芯N+3（7nm-5nm之间），Mate 80 Pro Max搭载<br>
+    5️⃣ 三星Display重夺iPhone 18 Pro OLED订单，京东方良率问题导致Pro份额全失<br>
+    6️⃣ 京东方8.6代AMOLED率先量产，全球首家进入该代际，三星Display晚数月跟进<br>
+    7️⃣ Q1 2026中国手机：华为第一，苹果+20%，小米-35%（CounterPoint官方数据）<br>
+    8️⃣ 骁龙8 Elite Gen2 TSMC N3P确认，超大核5.0GHz；天玑9600 N2P双超大核（待官宣）
+  </div>
+</div>
+
+<div class="section">
+  <h2>📊 本批次核查统计</h2>
+  <div class="stats-grid">
+    <div class="stat-box"><div class="stat-num">15</div><div class="stat-label">采集条数</div></div>
+    <div class="stat-box"><div class="stat-num" style="color:#006633">9</div><div class="stat-label">✅ Supported</div></div>
+    <div class="stat-box"><div class="stat-num" style="color:#a06800">4</div><div class="stat-label">⚠️ 冲突证据</div></div>
+    <div class="stat-box"><div class="stat-num" style="color:#999">2</div><div class="stat-label">❓ 证据不足</div></div>
+    <div class="stat-box"><div class="stat-num">8.4</div><div class="stat-label">健康评分/10</div></div>
+    <div class="stat-box"><div class="stat-num">4.1</div><div class="stat-label">AVeriTeC均分</div></div>
+  </div>
+  <div class="report-links">
+    <a class="report-btn" href="03-quality-report-175218.md">📋 查看质检报告</a>
+    <a class="report-btn" href="04-clean-report-175218.md">✅ 查看干净报告</a>
+  </div>
+</div>
+
+<div class="section">
+  <h2>📰 今日 9 条核查资讯</h2>
+
+  <div class="news">
+    <span class="news-cat cat-chip">芯片产业</span>
+    <div class="news-body">
+      <div class="news-title">台积电五座2nm晶圆厂同时运营，2026年全部产能售罄</div>
+      <div class="news-text">台积电高雄（Fab 20/22/23/24）及新竹Fab 25共五座N2节点晶圆厂已全面投入生产。2026年内每片晶圆均已预订完毕，苹果A20 Pro占逾50%产能，其余被NVIDIA、AMD、高通、联发科瓜分。N2较N3P性能提升约10-15%（同频同功耗），是智能手机芯片十年来最大工艺跃迁节点之一。</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.tomshardware.com/tech-industry/semiconductors/tsmc-begins-quietly-volume-production-of-2nm-class-chips-first-gaa-transistor-for-tsmc-claims-up-to-15-percent-improvement-at-iso-power" target="_blank">Tom's Hardware</a>
+        <a class="src" href="https://www.msn.com/en-us/news/technology/tsmc-is-now-running-five-2nm-chip-fabs-at-once-and-every-wafer-through-2026-is-already-sold/ar-AA22qxvI" target="_blank">MSN</a>
+        <a class="src" href="https://www.technetbooks.com/2026/02/tsmc-n2-roadmap-for-2nm-ai-and-mobile.html" target="_blank">TechNetbook</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-chip">芯片产业</span>
+    <div class="news-body">
+      <div class="news-title">TechInsights确认：麒麟9030 Pro采用中芯N+3制程，为中国迄今最先进量产工艺</div>
+      <div class="news-text">权威芯片拆解机构TechInsights对麒麟9030 Pro（华为Mate 80 Pro Max）进行拆解分析，确认由中芯国际N+3节点制造，性能介于7nm与5nm之间。该工艺依赖DUV光刻机四重曝光技术，在无EUV的情况下进一步突破密度极限。这是中芯国际首款投入商用的N+3节点芯片，标志着中国自主制程技术在出口管制背景下持续推进。</div>
+      <div class="news-srcs">
+        <a class="src official" href="https://www.techinsights.com/blog/smic-n3-confirmed-kirin-9030-analysis-reveals-how-close-smic-5nm" target="_blank">● TechInsights（权威）</a>
+        <a class="src" href="https://www.tomshardware.com/tech-industry/semiconductors/huaweis-latest-mobile-is-chinas-most-advanced-process-node-to-date-despite-using-blacklisted-chipmaker-huawei-kirin-9030-mobile-soc-made-on-smic-n-3-process-but-cant-compete-with-5nm-nodes" target="_blank">Tom's Hardware</a>
+        <a class="src" href="https://www.phonearena.com/news/kirin-9030-pro-built-using-multi-patterning_id176123" target="_blank">PhoneArena</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-chip">芯片产业</span>
+    <div class="news-body">
+      <div class="news-title">骁龙8 Elite Gen2采用台积电N3P，超大核主频5.0GHz；三星落选代工</div>
+      <div class="news-text">多家供应链报道确认骁龙8 Elite Gen2继续由台积电独家代工（N3P节点），2颗超大核主频5.0GHz，6颗性能核4.0GHz。三星虽争取代工订单未成，但据报已被高通选为骁龙8 Elite 3（2nm/2027年）的原型试产厂商，双方关系未断。高通同时推进骁龙X2 Elite面向AI PC，NPU算力达80TOPS。</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.chinaflashmarket.com/a/183265" target="_blank">CFM闪存市场</a>
+        <a class="src" href="https://news.mydrivers.com/1/1009/1009406.htm" target="_blank">快科技</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-mem">存储供应</span>
+    <div class="news-body">
+      <div class="news-title">LPDDR5X合约价Q2 2026暴涨70-83%，AI服务器产能挤压手机内存供应</div>
+      <div class="news-text">TrendForce官方报告：2026 Q2手机DRAM合约价LPDDR5X上涨78-83%、LPDDR4X上涨70-75%，当前合约价已达$10-21/GB区间。根本原因：NVIDIA AI服务器平台使用LPDDR5X，每GB HBM消耗晶圆产能约为普通DRAM的3倍，三星/SK海力士/美光产能优先分配给数据中心。TrendForce预计缓解要等到2027年底。手机整机BOM直接承压。</div>
+      <div class="news-srcs">
+        <a class="src official" href="https://www.trendforce.com/research/download/RP260430KC" target="_blank">● TrendForce官方</a>
+        <a class="src" href="https://www.tomshardware.com/pc-components/dram/nvidias-demand-for-lpddr5x-could-double-smartphone-and-server-memory-prices-in-2026-seismic-shift-means-even-smartphone-class-memory-isnt-safe-from-ai-induced-crunch" target="_blank">Tom's Hardware</a>
+        <a class="src" href="https://wccftech.com/you-can-blame-lpddr5x-for-smartphone-price-increases-in-2026/" target="_blank">Wccftech</a>
+        <a class="src" href="https://www.androidheadlines.com/2026/05/mobile-dram-price-increase-q2-2026-report.html" target="_blank">AndroidHeadlines</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-mem">存储供应</span>
+    <div class="news-body">
+      <div class="news-title">三星HBM4E亮相NVIDIA GTC 2026：16Gbps/pin，4.0TB/s，首发Vera Rubin</div>
+      <div class="news-text">三星官方新闻稿确认，在NVIDIA GTC 2026上发布HBM4E，规格16Gbps/pin、带宽4.0TB/s（较HBM4提升约25%），将作为NVIDIA下一代AI加速器Vera Rubin平台的核心内存。三星同时宣布将扩产50%以满足2026年AI内存需求。HBM4E产能持续向AI侧倾斜，对常规DRAM供给形成进一步挤压。</div>
+      <div class="news-srcs">
+        <a class="src official" href="https://news.samsung.com/global/samsung-unveils-hbm4e-showcasing-comprehensive-ai-solutions-nvidia-partnership-and-vision-at-nvidia-gtc-2026" target="_blank">● 三星官方新闻稿</a>
+        <a class="src" href="https://www.sammobile.com/news/samsung-start-mass-production-hbm4-memory-chips-february/" target="_blank">SamMobile</a>
+        <a class="src" href="https://www.tweaktown.com/news/109495/sk-hynix-samsung-and-micron-fighting-for-nvidia-supply-contracts-for-new-16-hi-hbm4-orders/index.html" target="_blank">TweakTown</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-disp">屏幕面板</span>
+    <div class="news-body">
+      <div class="news-title">京东方8.6代AMOLED全球率先量产，成都B16产线5月启动</div>
+      <div class="news-text">京东方成都B16工厂8.6代AMOLED面板产线于2026年5月开始量产，领先三星Display A6设施数月，成为全球首家进入8.6代AMOLED量产的面板厂。该代际面板尺寸更大、切割效率更高，有助于提升平板和电视OLED面板良率与成本控制。三星Display A6工厂亦于5月启动全面量产。</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.techtimes.com/articles/316600/20260514/boe-begins-gen-86-oled-production-this-month-beating-rival-samsung-display-market.htm" target="_blank">TechTimes</a>
+        <a class="src" href="https://www.oled-info.com/tags/boe" target="_blank">OLED-Info</a>
+        <a class="src" href="https://displaydaily.com/boe-yield-crisis-triggers-massive-iphone-oled-order-shift-to-samsung-display/" target="_blank">DisplayDaily</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-disp">屏幕面板</span>
+    <div class="news-body">
+      <div class="news-title">三星Display重夺iPhone 18 Pro OLED全部订单；同时成首款折叠iPhone独家供应商</div>
+      <div class="news-text">因京东方LTPO良率问题，苹果将iPhone 18 Pro系列全部OLED订单重新交由三星Display供应，三星在iPhone面板中份额达约60%。与此同时，三星Display成为苹果2026年首款折叠iPhone的独家OLED供应商，预计供应1000-1100万片折叠OLED面板。京东方的苹果供应主要限于中端机型（iPhone 17e等）约3500万片目标。</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.sammyfans.com/2026/05/07/samsung-takes-back-iphone-18-pro-oled-business-from-boe/" target="_blank">SammyFans</a>
+        <a class="src" href="https://www.macrumors.com/2026/01/21/apple-shifts-iphone-oled-orders-samsung/" target="_blank">MacRumors</a>
+        <a class="src" href="https://www.digitimes.com/news/a20260421PD221/sdc-oled-panel-boe-apple-iphone.html" target="_blank">Digitimes</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-mfr">手机厂商动态</span>
+    <div class="news-body">
+      <div class="news-title">Q1 2026中国手机出货：华为第一(+2%)，苹果+20%，小米暴跌35%</div>
+      <div class="news-text">CounterPoint Research官方季度报告：2026年Q1中国智能手机市场华为排名第一（同比+2%），苹果同比+20%（iPhone 17系列强劲），OPPO同比-5%，vivo +2%，荣耀-3%，小米同比-35%（主动削减中低端出货量、聚焦高端战略调整）。行业背景：全品类价格上涨推动销量结构性转变，换机周期延长至约3.5年。</div>
+      <div class="news-srcs">
+        <a class="src official" href="https://news.17173.com/content/04172026/160338388.shtml" target="_blank">● CounterPoint（via 17173）</a>
+        <a class="src" href="https://eu.36kr.com/zh/p/3646189831900801" target="_blank">36氪</a>
+        <a class="src" href="https://mobile.pconline.com.cn/2104/21043652.html" target="_blank">太平洋科技</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-mfr">手机厂商动态</span>
+    <div class="news-body">
+      <div class="news-title">2026中国手机价格全面上涨，OPPO/vivo/小米均已上调产品售价</div>
+      <div class="news-text">2026年Q1中国智能手机市场出现"价格普涨"现象：3月新品起步价较2025年同级别机型上涨约500-1500元，OPPO、vivo、小米均有调价动作。直接驱动因素：存储芯片（DRAM/NAND）成本上涨 + 高端SoC代工费用提升。国补政策在一定程度上对冲了消费侧压力。分析师预计价格上涨趋势将延续至2027年。</div>
+      <div class="news-srcs">
+        <a class="src" href="https://mobile.pconline.com.cn/2104/21043652.html" target="_blank">太平洋科技</a>
+        <a class="src" href="https://eu.36kr.com/zh/p/3725693176082951" target="_blank">36氪</a>
+        <a class="src" href="http://www.cctime.com/html/2026-2-2/1728192.htm" target="_blank">飞象网</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="section">
+  <h2>⏳ 冲突证据（待确认，4条）</h2>
+
+  <div class="news">
+    <span class="news-cat cat-mfr">手机厂商动态</span>
+    <div class="news-body">
+      <div class="news-title">【分析师预测】iPhone 18 Pro：A20 Pro 2nm + 可变光圈48MP + 屏下Face ID</div>
+      <div class="news-text">Ming-Chi Kuo、TrendForce、Bloomberg、The Information等多方分析师高度一致，预测iPhone 18 Pro将搭载台积电2nm A20 Pro芯片、可变光圈48MP主摄、首款屏下Face ID设计，预计2026年9月发布。但苹果官方未确认任何规格，标注"分析师预测"，待9月揭晓。</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.macrumors.com/2026/05/09/iphone-18-pro-10-new-features/" target="_blank">MacRumors</a>
+        <a class="src" href="https://www.notebookcheck.net/Confidential-iPhone-18-Pro-files-leak-4-months-early-Apple-s-first-display-redesign-since-iPhone-14-Pro.1288738.0.html" target="_blank">NotebookCheck</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-chip">芯片产业</span>
+    <div class="news-body">
+      <div class="news-title">【爆料】天玑9600采用台积电N2P，双超大核主频接近5GHz，Q3 2026发布</div>
+      <div class="news-text">多名可靠行业爆料者（包括Digital Chat Station）披露联发科天玑9600将采用TSMC N2P节点，CPU架构改为首次引入双超大核（2+3+3配置），性能接近5GHz。联发科尚未官宣，预计Q3 2026发布首款搭载机型。N2P在N2基础上进一步优化性能密度，功耗改善约5-10%。</div>
+      <div class="news-srcs">
+        <a class="src" href="https://wccftech.com/roundup/mediatek-dimensity-9600-chips-launch-price-architecture-and-specifications-here-is-everything-you-need-to-know/" target="_blank">Wccftech</a>
+        <a class="src" href="https://www.gizmochina.com/2026/04/01/mediatek-dimensity-9600-2nm-cpu-layout-leak/" target="_blank">Gizmochina</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-mfr">手机厂商动态</span>
+    <div class="news-body">
+      <div class="news-title">【未经官宣】Samsung Galaxy Z Fold 8：7月22日发布，4.1mm超薄，$1999起</div>
+      <div class="news-text">多家媒体广泛报道Galaxy Unpacked定于7月22日举办，Galaxy Z Fold 8展开厚度约4.1mm（行业最薄折叠旗舰），搭载骁龙8 Elite Gen5、200MP主摄、5000mAh，起售价$1999。三星同时推出"Z Fold 8 Wide"新形态。三星官方尚未确认任何日期或规格。</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.sammobile.com/news/samsung-galaxy-z-fold-8-everything-to-know/" target="_blank">SamMobile</a>
+        <a class="src" href="https://www.gizchina.com/samsung/samsung-galaxy-z-fold8-and-z-fold-wide-specs-leak-ahead-of-2026-launch" target="_blank">Gizchina</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-disp">屏幕面板</span>
+    <div class="news-body">
+      <div class="news-title">【目标存疑】京东方声称2026年向苹果供应3500万片OLED</div>
+      <div class="news-text">TechNode报道京东方目标2026年向苹果供应3500万片OLED面板，与苹果"深化合作"。但该数字与三星重夺Pro系列订单的报道形成矛盾：Pro系列已全部回归三星，3500万片目标主要依赖iPhone 17e等中端机型，实际达成存在不确定性。</div>
+      <div class="news-srcs">
+        <a class="src" href="https://technode.com/2026/05/07/apple-and-boe-reportedly-deepen-oled-partnership-as-boe-targets-35-million-iphone-display-shipments-in-2026/" target="_blank">TechNode</a>
+        <a class="src" href="https://www.oled-info.com/apple-signs-boe-supply-majority-its-ltps-amoled-panels-budget-2026-iphone-17e" target="_blank">OLED-Info</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="section">
+  <h2>📅 近期新品发布日程</h2>
+  <table class="launch-table">
+    <thead>
+      <tr><th>日期</th><th>厂商/机型</th><th>核心规格</th><th>价格</th><th>置信度</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="date">已发布</td>
+        <td class="model">荣耀 600 / 600 Pro</td>
+        <td>200MP主摄 + 8600mAh青海湖电池 + 磁吸副屏；Pro升级潜望长焦</td>
+        <td>Pro 4500+</td>
+        <td><span class="conf conf-h">已发布</span></td>
+      </tr>
+      <tr>
+        <td class="date">已开售</td>
+        <td class="model">小米 17 Max</td>
+        <td>骁龙8 Elite Gen5 + 8000mAh硅碳 + 2亿徕卡 + 6.9″ LTPO</td>
+        <td>4799/国补4299起</td>
+        <td><span class="conf conf-h">已发售</span></td>
+      </tr>
+      <tr>
+        <td class="date">2026-06月中</td>
+        <td class="model">vivo X Fold 6</td>
+        <td>折叠旗舰，规格未官宣</td>
+        <td>未公布</td>
+        <td><span class="conf conf-m">中</span></td>
+      </tr>
+      <tr>
+        <td class="date">2026-06-08~12</td>
+        <td class="model">Apple WWDC 2026</td>
+        <td>iOS 27 / iPadOS 27 / macOS Tahoe，软件向，无手机硬件</td>
+        <td>免费</td>
+        <td><span class="conf conf-h">高</span></td>
+      </tr>
+      <tr>
+        <td class="date">2026-07-22（待确认）</td>
+        <td class="model">Samsung Galaxy Z Fold 8</td>
+        <td>4.1mm超薄折叠 + SD8 Elite Gen5 + 200MP + 5000mAh</td>
+        <td>预计$1999+</td>
+        <td><span class="conf conf-m">中（未官确）</span></td>
+      </tr>
+      <tr>
+        <td class="date">2026-09月（预测）</td>
+        <td class="model">Apple iPhone 18 / 18 Pro</td>
+        <td>A20 Pro 2nm（预测）+ 可变光圈48MP + 屏下Face ID（分析师预测）</td>
+        <td>未公布</td>
+        <td><span class="conf conf-m">分析师预测</span></td>
+      </tr>
+      <tr>
+        <td class="date">2026-Q3（预测）</td>
+        <td class="model">联发科天玑9600首发机</td>
+        <td>TSMC N2P + 双超大核 + 接近5GHz（爆料）</td>
+        <td>未公布</td>
+        <td><span class="conf conf-m">爆料中</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    <strong>⚠️ 产业链重要事项：</strong>TSMC N2产能2026年全年售罄，2027年N2P（升级节点）正在接受预约。AI服务器内存占用持续挤压手机DRAM，旗舰手机BOM成本预计2026H2进一步上涨10-15%。
+  </div>
+</div>
+
+<div class="section">
+  <h2>🔬 核验方法</h2>
+  <p style="font-size:13.5px;color:#444;line-height:1.75">
+    <strong>采集：</strong>10轮WebSearch跨中英文+官方渠道；时间窗口聚焦2026-05-25当日及近7日最新动态。<br>
+    <strong>核验：</strong>① 官方来源（Samsung Newsroom / TechInsights / TrendForce / CounterPoint）直接引用 ② ≥2独立信源一致 ③ 关键数字（份额/价格/工艺节点/带宽）与官方数据交叉核对 ④ ConflictingEvidence条目明确标注"分析师预测"/"爆料"。<br>
+    <strong>排除：</strong>单一来源未经其他机构验证的爆料 / 官方未宣布的价格 / AI生成的虚假规格参数。<br>
+    <strong>自动化：</strong>每日22:00晚跑 + 07:00晨跑 + launchd autopush代理每5分钟推送GitHub Pages。
+  </p>
+</div>
+
+</main>
+
+<footer>
+  本日报由 RumorCrusher 多 Agent 委员会自动核查生成 · 仅Supported条目纳入知识库 · 核查方法：AVeriTeC 4标签 + MultiCW + TSVer · 批次 RC-20260525-175218<br>
+  <a href="../index.html">← 主站</a> &nbsp;·&nbsp; <a href="03-quality-report-175218.md">质检报告</a> &nbsp;·&nbsp; <a href="04-clean-report-175218.md">干净报告</a> &nbsp;·&nbsp; <a href="../knowledge-base/index.html">手机知识库</a> &nbsp;·&nbsp; <a href="../wiki/index.html">LLM Wiki</a> &nbsp;·&nbsp; <a href="https://github.com/chirs0901/rumorcrusher" target="_blank">GitHub</a>
+</footer>
+
+</body>
+</html>

@@ -10,15 +10,18 @@
 - ✅ [Snapdragon 8 Elite Gen 5](entities/soc/snapdragon-8-elite-gen5.md) — NPU +37%，可作端侧 LLM 推理（待量产实测验证）
 - ✅ [MediaTek Dimensity 9400](entities/soc/dimensity-9400.md) — Agentic AI 首发地位核查（2026-05-18建档）
 - ⏳ Snapdragon 6 Gen 5 / 4 Gen 5 — 待 2026-05-15 起逐日合并
-- ⏳ MediaTek Dimensity 9500 / 9600 — 待 9月发布会
-- ⏳ Apple A19 / A19 Pro
-- ⏳ Google Tensor G5
-- ⏳ Kirin 9030（华为）
+- ✅ [MediaTek Dimensity 9600](entities/soc/dimensity-9600.md) — TSMC N2P，首引双超大核（~5GHz），Q3 2026发布（爆料，官宣待确认）（2026-05-25建档）
+- ⏳ MediaTek Dimensity 9500 — 待建档
+- ⏳ Apple A19 / A19 Pro — 待建档
+- ⏳ Google Tensor G5 — 待建档
+- ✅ [Kirin 9030 Pro](entities/soc/kirin-9030-pro.md) — 中芯N+3制程，TechInsights确认，Mate 80 Pro Max搭载（2026-05-25建档）
 
 ### 品牌
 - ✅ [华为 Huawei](entities/brand/huawei.md) — Mate 80 系列 + 麒麟 9030 + 鸿蒙 6
 - ✅ [英伟达 NVIDIA](entities/brand/nvidia.md) — 黄仁勋访华事件 + 中国业务停滞 + 芯片出口管制立场（2026-05-15建档）
-- ⏳ Apple / Samsung / Xiaomi / OPPO / vivo / Google — 持续合并中
+- ✅ [Apple](entities/brand/apple.md) — iPhone 18 Pro预测：A20 Pro 2nm+可变光圈+屏下FaceID（分析师），苹果Q1 2026全球出货第一（2026-05-25建档）
+- ✅ [Samsung](entities/brand/samsung.md) — Galaxy Z Fold 8（7月22日待官确，4.1mm，$1999），HBM4E发布，重夺iPhone 18 Pro OLED（2026-05-25更新）
+- ⏳ Xiaomi / OPPO / vivo / Google — 待建档
 
 ### 技术
 - ✅ [硅碳负极电池](entities/tech/silicon-carbon-anode.md) — 硅含量 10%→16% 演进，7000mAh 已量产
@@ -37,6 +40,9 @@
 - ⏳ 端侧 AI 竞赛（75 TOPS 门槛与争议）
 - ⏳ 卫星通信普及（华为 700MHz / iPhone 卫星消息）
 - ⏳ Apple Vision Pro 之后的头显格局
+- ✅ [AI驱动的DRAM供应危机](topics/ai-dram-crisis-2026.md) — LPDDR5X Q2暴涨83%，HBM产能挤压手机内存，手机均价上涨传导链（2026-05-25建档）
+- ✅ [TSMC 2nm产能格局2026](topics/tsmc-2nm-supply-2026.md) — 五座N2晶圆厂，苹果占逾50%，AI硅片与手机芯片争产能（2026-05-25建档）
+- ✅ [中芯国际自主制程进展](topics/smic-process-evolution.md) — N+1→N+3演进路线，DUV多重曝光突破，麒麟9030 Pro确认N+3（2026-05-25建档）
 
 ## 三、自动更新规则
 
@@ -61,3 +67,4 @@
 - **2026-05-15**：新增实体页面 nvidia.md；新增主题页面 ai-misinformation-2026.md / deepfake-2026.md；更新索引
 - **2026-05-18**：新增实体 dimensity-9400.md / vc-vapor-chamber.md；新增主题 silicon-carbon-battery-2026.md
 - **2026-05-19**：新增主题 openai-hardware-timeline.md（OpenAI硬件战略追踪）
+- **2026-05-25**：新增实体 dimensity-9600.md / kirin-9030-pro.md / apple.md / samsung.md；新增主题 ai-dram-crisis-2026.md / tsmc-2nm-supply-2026.md / smic-process-evolution.md；更新索引

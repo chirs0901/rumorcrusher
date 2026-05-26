@@ -1,0 +1,230 @@
+{
+  "batch": "RC-20260525-175218",
+  "generated": "2026-05-25 17:52 CST",
+  "total_items": 15,
+  "agents": ["fact-check","pseudo-science","logic","sentiment"],
+
+  "averitec_distribution": {
+    "Supported": 9,
+    "ConflictingEvidence": 4,
+    "Refuted": 0,
+    "NotEnoughEvidence": 2
+  },
+
+  "unr": 0.133,
+  "avg_eq": 4.1,
+  "health_score": 8.4,
+
+  "items": [
+    {
+      "id": "R001",
+      "verdict": "Supported",
+      "confidence": 0.97,
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "TSMC officially confirmed 5 Fab 20/22/23/24/25 in Kaohsiung + Hsinchu. TrendForce, Nikkei Asia, Tom's Hardware cross-verified. Every 2nm wafer through 2026 pre-booked.",
+        "sources": ["TrendForce","Tom's Hardware","MSN","TechNetbook"],
+        "tsver_score": 4.7
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": null}
+    },
+    {
+      "id": "R002",
+      "verdict": "ConflictingEvidence",
+      "confidence": 0.72,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "evidence": "Multiple analysts (Kuo, TrendForce) expect A20 Pro on 2nm and variable aperture. However Apple has not officially confirmed any specs. Under-display Face ID reported by Bloomberg + The Information. Should be tagged 'analyst prediction'.",
+        "sources": ["MacRumors","TechTimes","NotebookCheck"],
+        "tsver_score": 3.2
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": null}
+    },
+    {
+      "id": "R003",
+      "verdict": "ConflictingEvidence",
+      "confidence": 0.78,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "evidence": "Multiple leakers (Digital Chat Station, reliable industry sources) consistently report N2P and dual prime core design. But MediaTek has not made official announcement. Q3 2026 timeline is credible given N2P capacity reservation.",
+        "sources": ["Wccftech","Gizmochina","TechNetbook","AndroidHeadlines"],
+        "tsver_score": 3.6
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": null}
+    },
+    {
+      "id": "R004",
+      "verdict": "Supported",
+      "confidence": 0.85,
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "Multiple industry sources confirm SD8 Elite Gen2 on TSMC N3P with 5.0GHz prime cores. Samsung losing the order confirmed by supply chain reports. SD8 Elite 3 (2nm) being prototyped at Samsung for 2027.",
+        "sources": ["ChinaFlashMarket","MyDrivers","AnandTech"],
+        "tsver_score": 4.1
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": null}
+    },
+    {
+      "id": "R005",
+      "verdict": "ConflictingEvidence",
+      "confidence": 0.75,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "evidence": "Galaxy Unpacked July 22 date widely reported but not officially confirmed by Samsung. Specs from multiple leakers consistent. $1999 pricing estimate varies by source ($1999-$2199). Note Z Fold 8 Wide as new variant confirmed.",
+        "sources": ["SamMobile","PhoneArena","SammyFans","Gizchina"],
+        "tsver_score": 3.4
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": null}
+    },
+    {
+      "id": "R006",
+      "verdict": "Supported",
+      "confidence": 0.96,
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "TechInsights (authoritative chip teardown lab) confirmed SMIC N+3 process. Tom's Hardware, PhoneArena, Wccftech all reported the findings. Process is between 7nm and 5nm equivalent, not true 5nm.",
+        "sources": ["TechInsights","Tom's Hardware","PhoneArena","Wccftech"],
+        "tsver_score": 4.8
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": null}
+    },
+    {
+      "id": "R007",
+      "verdict": "Supported",
+      "confidence": 0.95,
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "TrendForce official report + Wccftech + Tom's Hardware all consistently report 70-83% Q2 LPDDR5X price surge driven by NVIDIA AI server LPDDR5X consumption (3x wafer capacity vs regular DRAM). AndroidHeadlines confirmed with separate sourcing.",
+        "sources": ["TrendForce","Wccftech","Tom's Hardware","AndroidHeadlines"],
+        "tsver_score": 4.6
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": null}
+    },
+    {
+      "id": "R008",
+      "verdict": "Supported",
+      "confidence": 0.99,
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "Samsung official press release at NVIDIA GTC 2026. Primary source with full specs: 16Gbps/pin, 4.0TB/s bandwidth. Samsung and NVIDIA official partnership announced simultaneously.",
+        "sources": ["Samsung Newsroom (official)","SamMobile","TweakTown"],
+        "tsver_score": 5.0
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": null}
+    },
+    {
+      "id": "R009",
+      "verdict": "Supported",
+      "confidence": 0.91,
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "TechTimes reported equipment move-in at BOE Chengdu B16 Gen 8.6 OLED on May 2026, beating Samsung Display's A6 facility by several months to market. OLED-Info and DisplayDaily corroborated.",
+        "sources": ["TechTimes","OLED-Info","DisplayDaily"],
+        "tsver_score": 4.4
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": null}
+    },
+    {
+      "id": "R010",
+      "verdict": "Supported",
+      "confidence": 0.93,
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "SammyFans, MacRumors, Digitimes all confirm Apple shifted iPhone 18 Pro OLED back to Samsung after BOE yield issues. Digitimes data shows Samsung at ~60% iPhone panel share.",
+        "sources": ["SammyFans","MacRumors","Digitimes"],
+        "tsver_score": 4.5
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": null}
+    },
+    {
+      "id": "R011",
+      "verdict": "Supported",
+      "confidence": 0.88,
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "Apple foldable iPhone confirmed for 2026 launch with Samsung Display as exclusive OLED partner. 10-11M unit supply volume from analyst estimates aligned across sources.",
+        "sources": ["Apple Gadget Hacks","DisplayDaily","GadgetHacks"],
+        "tsver_score": 4.2
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": null}
+    },
+    {
+      "id": "R012",
+      "verdict": "Supported",
+      "confidence": 0.94,
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "CounterPoint Research official report cited in industry media. Huawei +2%, Apple +20%, Xiaomi -35% figures consistent with supply chain reports and Xiaomi's own guidance on mid-low end reduction.",
+        "sources": ["CounterPoint Research","17173.com","36kr"],
+        "tsver_score": 4.6
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": null}
+    },
+    {
+      "id": "R013",
+      "verdict": "Supported",
+      "confidence": 0.90,
+      "fact_check": {
+        "label": "Supported",
+        "evidence": "PConline, 36kr, multiple Chinese tech outlets confirm phone price hikes across all major brands in Q1 2026. Corroborated by DRAM price surge reports.",
+        "sources": ["太平洋科技","36kr","飞象网"],
+        "tsver_score": 4.3
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": null}
+    },
+    {
+      "id": "R014",
+      "verdict": "NotEnoughEvidence",
+      "confidence": 0.62,
+      "fact_check": {
+        "label": "NotEnoughEvidence",
+        "evidence": "TrendForce makes this prediction but it's a forecast, not confirmed by OEMs. Device configuration changes depend on brand decisions. Plausible but unverified.",
+        "sources": ["TrendForce","AndroidHeadlines"],
+        "tsver_score": 2.8
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": null}
+    },
+    {
+      "id": "R015",
+      "verdict": "ConflictingEvidence",
+      "confidence": 0.70,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "evidence": "BOE's 35M target is reported goal, not guaranteed. Conflicts with reports of BOE quality issues causing order shifts back to Samsung. Pro-level orders confirmed to Samsung; mid-range BOE supply is plausible.",
+        "sources": ["TechNode","OLED-Info","SammyFans"],
+        "tsver_score": 3.3
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"fallacy": null},
+      "sentiment": {"clickbait": false, "value_concerns": null}
+    }
+  ]
+}

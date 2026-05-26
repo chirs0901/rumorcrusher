@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RumorCrusher · 手机行业知识库</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+    .entry-card { transition: box-shadow .15s ease; }
+    .entry-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .ai-badge { background: linear-gradient(135deg, #6366f1, #8b5cf6); }
+    .src-pill { display: inline-flex; align-items: center; gap: 3px; font-size: 11px; padding: 2px 8px; border-radius: 20px; border: 1px solid #e2e8f0; color: #475569; background: #f8fafc; text-decoration: none; transition: all .12s; cursor: pointer; }
+    .src-pill:hover { background: #1e293b; color: #fff; border-color: #1e293b; }
+    .src-pill.official { border-color: #3b82f644; color: #1d4ed8; background: #eff6ff; }
+    .src-pill.official:hover { background: #1d4ed8; color: #fff; }
+    .cat-btn { transition: all .15s; cursor: pointer; }
+    .cat-btn.active { background: #0f172a; color: #fff; }
+    .entry-card { display: none; }
+    .entry-card.visible { display: block; }
+    #search-box:focus { outline: none; box-shadow: 0 0 0 2px #6366f1; }
+    .verdict-supported { background: #f0fdf4; border-left: 3px solid #22c55e; }
+    .verdict-refuted { background: #fff7ed; border-left: 3px solid #f97316; }
+    .verdict-conflicting { background: #fefce8; border-left: 3px solid #eab308; }
+    .ai-strategy-flag { background: #f5f3ff; border-left: 3px solid #8b5cf6; }
+    .section-header { position: sticky; top: 0; z-index: 10; background: #f8fafc; border-bottom: 1px solid #e2e8f0; padding: 8px 0; }
+    pre { white-space: pre-wrap; word-break: break-word; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+
+<!-- ───── HEADER ───── -->
+<header class="bg-[#0f172a] text-white">
+  <div class="max-w-5xl mx-auto px-6 py-8">
+    <div class="flex items-start justify-between flex-wrap gap-4">
+      <div>
+        <div class="text-xs font-bold tracking-widest text-rose-400 uppercase mb-2">RumorCrusher · 知识飞轮</div>
+        <h1 class="text-3xl font-black tracking-tight">手机行业知识库</h1>
+        <p class="text-slate-400 text-sm mt-2">严格限定手机行业 · 每日采集核查后自动归档 · 多源交叉验证</p>
+      </div>
+      <div class="text-right text-sm text-slate-400">
+        <div>收录周期：<span class="text-white font-semibold">2026-05-14 → 今日</span></div>
+        <div>最后更新：<span id="last-update" class="text-white font-semibold">2026-05-25</span></div>
+        <div class="mt-1"><a href="../index.html" class="text-rose-400 hover:text-rose-300 text-xs">← 返回首页</a></div>
+      </div>
+    </div>
+
+    <!-- Stats row -->
+    <div class="mt-6 grid grid-cols-4 gap-3 text-center">
+      <div class="bg-white/10 rounded-lg p-3">
+        <div class="text-2xl font-black" id="stat-total">0</div>
+        <div class="text-xs text-slate-400 mt-1">总条目</div>
+      </div>
+      <div class="bg-white/10 rounded-lg p-3">
+        <div class="text-2xl font-black text-green-400" id="stat-supported">0</div>
+        <div class="text-xs text-slate-400 mt-1">Supported</div>
+      </div>
+      <div class="bg-white/10 rounded-lg p-3">
+        <div class="text-2xl font-black text-purple-400" id="stat-ai-strategy">0</div>
+        <div class="text-xs text-slate-400 mt-1">AI供应策略</div>
+      </div>
+      <div class="bg-white/10 rounded-lg p-3">
+        <div class="text-2xl font-black text-orange-400" id="stat-refuted">0</div>
+        <div class="text-xs text-slate-400 mt-1">已辟谣</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ───── NAV + SEARCH ───── -->
+<div class="sticky top-0 z-20 bg-white border-b border-slate-200 shadow-sm">
+  <div class="max-w-5xl mx-auto px-6 pt-2.5 pb-2">
+    <!-- 日期筛选行 -->
+    <div class="flex flex-wrap gap-1.5 items-center mb-2">
+      <span class="text-xs text-slate-400 font-semibold shrink-0">日期：</span>
+      <div id="date-row" class="flex flex-wrap gap-1.5"></div>
+    </div>
+    <!-- 分类 + 搜索行 -->
+    <div class="flex flex-wrap gap-1.5 items-center">
+      <button class="cat-btn active text-xs px-2.5 py-1 rounded-full border border-slate-300 font-medium" data-cat="all">全部分类</button>
+      <button class="cat-btn text-xs px-2.5 py-1 rounded-full border border-slate-300 font-medium" data-cat="brands">📱 厂商</button>
+      <button class="cat-btn text-xs px-2.5 py-1 rounded-full border border-slate-300 font-medium" data-cat="chip">🔬 芯片</button>
+      <button class="cat-btn text-xs px-2.5 py-1 rounded-full border border-slate-300 font-medium" data-cat="display">🖥 屏显</button>
+      <button class="cat-btn text-xs px-2.5 py-1 rounded-full border border-slate-300 font-medium" data-cat="battery">🔋 电池</button>
+      <button class="cat-btn text-xs px-2.5 py-1 rounded-full border border-slate-300 font-medium" data-cat="thermal">🌡 散热</button>
+      <button class="cat-btn text-xs px-2.5 py-1 rounded-full border border-slate-300 font-medium" data-cat="memory">💾 存储</button>
+      <button class="cat-btn text-xs px-2.5 py-1 rounded-full border border-slate-300 font-medium" data-cat="ai">🤖 AI</button>
+      <input id="search-box" type="search" placeholder="搜索…" class="ml-auto text-xs px-2.5 py-1 rounded-full border border-slate-300 w-36">
+    </div>
+  </div>
+</div>
+
+<!-- ───── MAIN CONTENT ───── -->
+<main class="max-w-5xl mx-auto px-6 py-8" id="kb-main">
+
+  <div id="entries-container"></div>
+
+  <div id="no-results" class="hidden text-center text-slate-400 py-16">
+    <div class="text-4xl mb-3">🔍</div>
+    <div class="text-lg">没有符合条件的条目</div>
+  </div>
+</main>
+
+<!-- ───── SOURCE MANAGEMENT ENTRY ───── -->
+<section class="bg-slate-900 text-white mt-8">
+  <div class="max-w-5xl mx-auto px-6 py-8 flex items-center justify-between flex-wrap gap-4">
+    <div>
+      <h2 class="text-base font-black mb-1">📡 采集信源管理</h2>
+      <p class="text-slate-400 text-sm">查看全部 30 个采集信源 · 添加新信源使其纳入每日采集范围</p>
+    </div>
+    <a href="sources.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-purple-600 hover:bg-purple-500 text-white text-sm font-bold rounded-lg transition">
+      🔐 进入信源管理 →
+    </a>
+  </div>
+</section>
+
+<footer class="bg-slate-900 border-t border-white/10 text-center text-xs text-slate-500 py-4">
+  RumorCrusher Knowledge Base · 每日 05:00 + 22:00 自动更新 ·
+  <a href="../index.html" class="text-rose-400 hover:text-rose-300">← 主站</a> ·
+  <a href="../wiki/index.html" class="text-slate-400 hover:text-slate-300">LLM Wiki</a> ·
+  <a href="https://github.com/chirs0901/rumorcrusher" class="text-rose-400 hover:text-rose-300">GitHub</a>
+</footer>
+
+<!-- ───── DATA ───── -->
+<script>
+const KB = [
+
+  // ══════════════════════════════════════════════
+  // 手机厂商动态
+  // ══════════════════════════════════════════════
+  {
+    id: "brands-001", date: "2026-05-14", cat: "brands",
+    title: "小米17 Max / vivo X300 Ultra / OPPO Find X9 Ultra 旗舰三联发",
+    summary: "三家中国品牌集中发布超大杯旗舰：小米17 Max 8000mAh 硅碳大电池（同期被荣耀9000mAh超越）；vivo X300 Ultra 潜望长焦+超大底；OPPO Find X9 Ultra LUMO凝光影像+哈苏Master 16-bit RAW Max。三款均采用台积电3nm级SoC，竞争激烈。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"爱范儿", url:"https://www.ifanr.com/"},
+      {name:"IT之家", url:"https://www.ithome.com/"},
+      {name:"少数派", url:"https://sspai.com/"},
+      {name:"OPPO官方", url:"https://www.oppo.com/", official:true}
+    ]
+  },
+  {
+    id: "brands-002", date: "2026-05-14", cat: "brands",
+    title: "Samsung Galaxy Z Fold 7 铰链耐久达50万次 + Apple折叠iPhone 2026H2路线",
+    summary: "三星Galaxy Z Fold 7通过液氮低温测试，正式宣称可靠性达50万次开合；铰链采用多轨防尘结构。Apple折叠iPhone走液态金属（非晶合金）铰链路线，独家供应商东莞宜安科技；预计售价$2000-$2500，但铰链可靠性成为制约量产时间线的关键卡点。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"三星官方", url:"https://news.samsung.com/", official:true},
+      {name:"MacRumors", url:"https://www.macrumors.com/"},
+      {name:"The Verge", url:"https://www.theverge.com/"},
+      {name:"DigiTimes", url:"https://www.digitimes.com/"}
+    ]
+  },
+  {
+    id: "brands-003", date: "2026-05-17", cat: "brands",
+    title: "骁龙8 Elite Gen5 安兔兔跑分突破400万 + OPPO/Sony全球旗舰同期发布",
+    summary: "在量产测试设备上，骁龙8 Elite Gen5安兔兔综合跑分首次突破400万，单核/多核CPU分项大幅领先前代；OPPO Find X9 Pro与Sony Xperia 1 IX同期发布，两款均采用该SoC，搭配哈苏/索尼专业影像系统竞争影像旗舰宝座。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"安兔兔官方", url:"https://www.antutu.com/"},
+      {name:"GSMArena", url:"https://www.gsmarena.com/"},
+      {name:"OPPO官方", url:"https://www.oppo.com/", official:true},
+      {name:"索尼官方", url:"https://www.sony.com/", official:true}
+    ]
+  },
+  {
+    id: "brands-004", date: "2026-05-18", cat: "brands",
+    title: "摩托罗拉 Razr Ultra 2026 首款硅碳翻盖折叠屏，5月21日美国上市",
+    summary: "Razr Ultra 2026是全球首款搭载硅碳电池的翻盖折叠屏手机，5000mAh容量比前代增加300mAh。5月21日在美国Best Buy/Amazon/摩托罗拉官网发售，整机厚度9.89mm；Razr Fold版本电池达6000mAh。折叠屏与硅碳电池的结合突破了折叠形态的续航短板。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"摩托罗拉官方", url:"https://www.motorola.com/", official:true},
+      {name:"The Verge", url:"https://www.theverge.com/"},
+      {name:"Android Authority", url:"https://www.androidauthority.com/"},
+      {name:"爱范儿", url:"https://www.ifanr.com/"}
+    ]
+  },
+  {
+    id: "brands-005", date: "2026-05-19", cat: "brands",
+    title: "华为 Pura 90 系列 4月20日正式发布：麒麟9030S + HarmonyOS 6.1",
+    summary: "华为Pura 90系列于2026年4月20日发布，4699元起；Pro/Max版搭载麒麟9030S，标准版搭载麒麟9010S，全系直屏，运行HarmonyOS 6.1。Pura 90 Ultra搭载麒麟9030 Pro，配备2亿像素潜望长焦+1英寸可变光圈主摄，代表国产旗舰影像的最新高度。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"华为官方", url:"https://consumer.huawei.com/cn/", official:true},
+      {name:"IT之家", url:"https://www.ithome.com/"},
+      {name:"ZOL中关村在线", url:"https://www.zol.com.cn/"},
+      {name:"36氪", url:"https://www.36kr.com/"}
+    ]
+  },
+  {
+    id: "brands-006", date: "2026-05-20", cat: "brands",
+    title: "苹果暂停 Vision Pro 2 研发，转向轻量智能眼镜（2026-2027）",
+    summary: "苹果Vision Pro首年销量仅约40万台（远低于预期300万台），已暂停下一代Vision Pro开发，团队资源转向开发轻量级AI智能眼镜，预计2026年底至2027年发布。这一战略转向与Meta、Google走轻量路线形成呼应，标志着XR市场从高端沉浸转向日常可穿戴。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"The Information", url:"https://www.theinformation.com/"},
+      {name:"Bloomberg", url:"https://www.bloomberg.com/"},
+      {name:"AppleInsider", url:"https://appleinsider.com/"},
+      {name:"9to5Mac", url:"https://9to5mac.com/"}
+    ]
+  },
+  {
+    id: "brands-007", date: "2026-05-20", cat: "brands",
+    title: "三星 Galaxy XR 头显正式发布：1799美元，骁龙XR2+ Gen2",
+    summary: "三星Galaxy XR以1799美元切入市场，相比Apple Vision Pro（3499美元）定价更亲民；搭载骁龙XR2+ Gen2，16GB RAM，重约545g，运行Android XR系统。内置双眼4K+微OLED显示，支持空间视频播放和AI手势交互。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"三星官方", url:"https://news.samsung.com/", official:true},
+      {name:"The Verge", url:"https://www.theverge.com/"},
+      {name:"Engadget", url:"https://www.engadget.com/"},
+      {name:"CNET", url:"https://www.cnet.com/"}
+    ]
+  },
+  {
+    id: "brands-008", date: "2026-05-22", cat: "brands",
+    title: "❌ 苹果折叠iPhone铰链危机：量产落后1-2个月，秋季发布窗口仍维持",
+    summary: "苹果可折叠iPhone在试产阶段遭遇铰链可靠性问题，液态金属铰链在高频开合测试中持续失效，无法通过苹果QC标准。据DigiTimes，量产已比原计划落后1-2个月，但7月开始量产的目标仍维持，秋季发布窗口基本保留（部分报道指消费者到货可能推迟至12月）。注意：秋季发布与量产落后存在内在矛盾，需持续跟踪。",
+    verdict: "conflicting", aiStrategy: false,
+    sources: [
+      {name:"DigiTimes", url:"https://www.digitimes.com/"},
+      {name:"MacRumors", url:"https://www.macrumors.com/"},
+      {name:"AppleInsider", url:"https://appleinsider.com/"},
+      {name:"tweaktown", url:"https://www.tweaktown.com/"}
+    ]
+  },
+  {
+    id: "brands-009", date: "2026-05-22", cat: "brands",
+    title: "三星代工战略：李在镕秘访台湾 + AMD部分2nm订单转三星",
+    summary: "三星集团会长李在镕于5月21日低调赴台，与联发科CEO蔡明介会面，争取联发科将2nm代工订单交给三星。同期AMD已决定将部分2nm产品转移至三星代工（DigiTimes 5月11日报道），三星已获Tesla和NVIDIA的2nm代工订单。台积电2nm产能预订至2028年，为三星提供市场窗口。",
+    verdict: "supported", aiStrategy: true,
+    sources: [
+      {name:"DigiTimes", url:"https://www.digitimes.com/"},
+      {name:"Nikkei Asia", url:"https://asia.nikkei.com/"},
+      {name:"SemiAnalysis", url:"https://www.semianalysis.com/"},
+      {name:"IT之家", url:"https://www.ithome.com/"}
+    ]
+  },
+  {
+    id: "brands-010", date: "2026-05-22", cat: "brands",
+    title: "小米宣布年度自研SoC策略，为海外部署AI助手",
+    summary: "小米官方向CNBC确认，将推行年度自研SoC策略（澎湃系列），同步为海外市场部署AI助手功能。2026年小米将首次在单一设备上同时搭载自研芯片（澎湃）、自研OS（HyperOS）与自研AI（小爱/MiMo），成为继华为（麒麟+鸿蒙）之后，全球第二个完成手机技术栈垂直整合的品牌。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"CNBC采访", url:"https://www.cnbc.com/"},
+      {name:"小米官方", url:"https://www.mi.com/", official:true},
+      {name:"36氪", url:"https://www.36kr.com/"},
+      {name:"量子位", url:"https://www.qbitai.com/"}
+    ]
+  },
+  {
+    id: "brands-011", date: "2026-05-23", cat: "brands",
+    title: "OnePlus 13 Ultra 240W HyperCharge 方案确认",
+    summary: "第三方拆解验证OnePlus 13 Ultra充电板支持240W峰值功率，实测含热控限速约12分钟完成全充，无线充电50W，反向无线10W。此方案使OnePlus成为全球首款量产240W有线快充旗舰手机，打破此前OPPO/一加的125W峰值记录。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"ChargerLAB实测", url:"https://www.chargerlab.com/"},
+      {name:"iFixit拆解", url:"https://www.ifixit.com/"},
+      {name:"IT之家", url:"https://www.ithome.com/"},
+      {name:"GSMArena", url:"https://www.gsmarena.com/"}
+    ]
+  },
+  {
+    id: "brands-012", date: "2026-05-24", cat: "brands",
+    title: "Sony 官方确认 5 月发布新 Xperia：骁龙8 Elite Gen5 + 首次放弃垂直相机布局",
+    summary: "Sony官方通过多个渠道确认5月内发布新旗舰Xperia系列，搭载Snapdragon 8 Elite Gen5；最大变化是Xperia 1系列首次放弃标志性垂直相机布局，采用多镜头矩阵排列，以应对中国品牌在影像领域的激烈竞争。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"索尼官方", url:"https://www.sony.com/", official:true},
+      {name:"GSMArena", url:"https://www.gsmarena.com/"},
+      {name:"PhoneArena", url:"https://www.phonearena.com/"},
+      {name:"The Verge", url:"https://www.theverge.com/"}
+    ]
+  },
+  {
+    id: "brands-013", date: "2026-05-24", cat: "brands",
+    title: "Meta 推迟 Quest 4 至 2027，2026 主推 Puffin 超轻头显",
+    summary: "Meta正式推迟Quest 4至2027年，2026年主打Puffin头显：重量<110g，采用外接计算puck方案（算力与显示分离），无控制器（纯手势交互）。另外，之前计划中的Pismo Low/High两款产品已被砍掉。此举反映VR/MR行业普遍向轻量化转型的趋势。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"The Information", url:"https://www.theinformation.com/"},
+      {name:"Bloomberg", url:"https://www.bloomberg.com/"},
+      {name:"Road to VR", url:"https://www.roadtovr.com/"},
+      {name:"Engadget", url:"https://www.engadget.com/"}
+    ]
+  },
+  {
+    id: "brands-014", date: "2026-05-24", cat: "brands",
+    title: "Google I/O 2026 首秀 Android XR 智能眼镜：Google + Samsung 秋季发布",
+    summary: "Google I/O 2026正式展示'Intelligent Eyewear'——Google与Samsung合作的Android XR智能眼镜，预计2026年秋季发布；外观设计联合Gentle Monster与Warby Parker。同期Xreal推出Project Aura，70°视场角，相比Meta Ray-Ban更具沉浸感。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"Google官方", url:"https://blog.google/", official:true},
+      {name:"三星官方", url:"https://news.samsung.com/", official:true},
+      {name:"The Verge", url:"https://www.theverge.com/"},
+      {name:"Engadget", url:"https://www.engadget.com/"}
+    ]
+  },
+
+  // ══════════════════════════════════════════════
+  // 核心器件 · 芯片
+  // ══════════════════════════════════════════════
+  {
+    id: "chip-001", date: "2026-05-14", cat: "chip",
+    title: "高通官方发布 Snapdragon 6/4 Gen5 中低端双平台",
+    summary: "高通于2026年5月6日通过官网发布Snapdragon 4 Gen5与Snapdragon 6 Gen5：4 Gen5 GPU相比上代提升77%，支持最高90fps渲染（厂商口径）；6 Gen5八核架构，定位中端4G/5G。OEM签约：荣耀、OPPO、Realme、Redmi，将在2026年下半年中端新品上市。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"Qualcomm官方", url:"https://www.qualcomm.com/news", official:true},
+      {name:"GSMArena", url:"https://www.gsmarena.com/"},
+      {name:"Android Authority", url:"https://www.androidauthority.com/"}
+    ]
+  },
+  {
+    id: "chip-002", date: "2026-05-14", cat: "chip",
+    title: "联发科天玑9600 定档2026年9月：台积电2nm + 2+2+4三簇架构",
+    summary: "联发科天玑开发者大会预告9月推出天玑9600，采用台积电N2工艺（注：'2nm'是台积电命名，与三星3GAP/Intel 18A不可直接比较晶体管密度），CPU架构1×C2-Ultra+3×C2-Premium+4×C2-Pro，NPU算力大幅提升，支持Agentic AI本地推理。",
+    verdict: "supported", aiStrategy: true,
+    sources: [
+      {name:"联发科官方", url:"https://www.mediatek.com/news", official:true},
+      {name:"新浪科技", url:"https://tech.sina.com.cn/"},
+      {name:"IT之家", url:"https://www.ithome.com/"},
+      {name:"AnandTech(Archive)", url:"https://www.anandtech.com/"}
+    ]
+  },
+  {
+    id: "chip-003", date: "2026-05-17", cat: "chip",
+    title: "UFS 5.0 存储接口标准正式落地量产",
+    summary: "UFS 5.0标准正式在量产手机上落地，读取速度较UFS 4.0提升约一倍（顺序读取≥4.2GB/s），写入功耗降低约30%。首批支持机型将在2026年下半年旗舰中出现，对视频Pro模式RAW拍摄与AI应用加载速度有显著提升。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"JEDEC标准组织", url:"https://www.jedec.org/", official:true},
+      {name:"GSMArena", url:"https://www.gsmarena.com/"},
+      {name:"AnandTech(Archive)", url:"https://www.anandtech.com/"}
+    ]
+  },
+  {
+    id: "chip-004", date: "2026-05-18", cat: "chip",
+    title: "MediaTek Dimensity 9400：全球首个商业化 Agentic AI 旗舰 SoC",
+    summary: "MediaTek确认Dimensity 9400是全球首个将Agentic AI能力商业化的手机芯片，NPU专门优化Multi-agent推理任务（而非仅对话型AI）。Qualcomm随后在Snapdragon 8 Elite Gen5中跟进。这是AI手机从'功能叠加'到'架构级原生支持'的标志性转变，重塑了旗舰SoC的竞争维度。",
+    verdict: "supported", aiStrategy: true,
+    sources: [
+      {name:"联发科官方", url:"https://www.mediatek.com/news", official:true},
+      {name:"高通官方", url:"https://www.qualcomm.com/news", official:true},
+      {name:"机器之心", url:"https://www.jiqizhixin.com/"},
+      {name:"IEEE Spectrum", url:"https://spectrum.ieee.org/"}
+    ]
+  },
+  {
+    id: "chip-005", date: "2026-05-20", cat: "chip",
+    title: "骁龙8 Elite Gen6 + 天玑9600 双雄均定档 2026年9月，台积电N2主战场",
+    summary: "高通骁龙8 Elite Gen6采用台积电N2P（3nm+）工艺，'2+3+3'三簇架构，超大核频率预计突破5GHz，小米18首发全球。天玑9600同为台积电N2，9月22日亮相。两款SoC同台竞争，标志着旗舰SoC全面进入2nm节点，AI推理算力成为核心差异化指标。",
+    verdict: "supported", aiStrategy: true,
+    sources: [
+      {name:"高通官方", url:"https://www.qualcomm.com/news", official:true},
+      {name:"联发科官方", url:"https://www.mediatek.com/news", official:true},
+      {name:"IT之家", url:"https://www.ithome.com/"},
+      {name:"ZOL中关村在线", url:"https://www.zol.com.cn/"}
+    ]
+  },
+  {
+    id: "chip-006", date: "2026-05-20", cat: "chip",
+    title: "中芯国际月产能突破100万片（12英寸等效），仍以成熟节点为主力",
+    summary: "中芯国际12英寸等效月产能突破100万片，达到台积电约三分之一规模。但产能结构上仍以28nm及以上成熟工艺为主力，7nm仅有小批量（用于华为麒麟等），在先进制程上与台积电差距显著。国产化替代的核心仍然是成熟节点的规模化降本。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"中芯国际官方", url:"https://www.smics.com/", official:true},
+      {name:"SemiAnalysis", url:"https://www.semianalysis.com/"},
+      {name:"EET China", url:"https://www.eetimes.com.cn/"},
+      {name:"芯智讯", url:"https://www.芯智讯.com/"}
+    ]
+  },
+  {
+    id: "chip-007", date: "2026-05-21", cat: "chip",
+    title: "🤖 台积电 N2 良率已超 90%，月产能目标 10 万片，2028年前产能全预订",
+    summary: "多家半导体分析机构交叉确认：台积电N2工艺良率已达85-90%+区间，处于健康量产状态。2026年月产能计划扩充至10万片（同步五条产线），已预订至2028年。苹果、高通、联发科、AMD、NVIDIA均在名单上。AI芯片需求（GPU/NPU）是推动2nm快速爬坡的核心驱动力。",
+    verdict: "supported", aiStrategy: true,
+    sources: [
+      {name:"TrendForce", url:"https://www.trendforce.com/"},
+      {name:"Nikkei Asia", url:"https://asia.nikkei.com/"},
+      {name:"SemiAnalysis", url:"https://www.semianalysis.com/"},
+      {name:"界面新闻", url:"https://www.jiemian.com/"}
+    ]
+  },
+  {
+    id: "chip-008", date: "2026-05-21", cat: "chip",
+    title: "🤖 三星 SF2（2nm GAA）良率 55-60%，年底月产能 2.1 万片",
+    summary: "TrendForce权威报告显示三星2nm GAA工艺良率55-60%，已开启量产但良率显著低于台积电N2（90%+）。年底月产能目标2.1万片，约为台积电1/5。三星通过GAA早期布局寻求差异化，已获Tesla和部分NVIDIA AI训练芯片订单；AMD部分订单的转移是2026年最重要的产能格局变化之一。",
+    verdict: "supported", aiStrategy: true,
+    sources: [
+      {name:"TrendForce", url:"https://www.trendforce.com/"},
+      {name:"DigiTimes", url:"https://www.digitimes.com/"},
+      {name:"SemiAnalysis", url:"https://www.semianalysis.com/"},
+      {name:"IEEE Spectrum", url:"https://spectrum.ieee.org/"}
+    ]
+  },
+  {
+    id: "chip-009", date: "2026-05-22", cat: "chip",
+    title: "Q1 2026 全球 SoC 出货量同比-8%，苹果市场份额从15%升至19%",
+    summary: "Counterpoint Research数据：2026年Q1全球智能手机SoC出货量同比下降8%，但营收实现两位数增长（高端化）。苹果市场份额从15%升至19%；高通、联发科出货量两位数下滑。主因：存储价格Q1同比+50-55%，Android阵营供应链压力显著，部分品牌主动缩减低端SKU。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"Counterpoint Research", url:"https://www.counterpointresearch.com/"},
+      {name:"36氪", url:"https://www.36kr.com/"},
+      {name:"TechCrunch", url:"https://techcrunch.com/"}
+    ]
+  },
+  {
+    id: "chip-010", date: "2026-05-24", cat: "chip",
+    title: "🤖 TSMC 2nm 苹果 A20 独占近 50% 初期产能；3nm 月产能冲 18 万片",
+    summary: "台积电2nm产能分配：苹果A20 Pro独占近50%初期产能，首发iPhone 18 Pro系列（2026H2）；其余分配给高通骁龙8 EG6、联发科天玑9600、AMD、NVIDIA。同期台积电3nm月产能2026年目标冲18万片（同比+40%），AI数据中心GPU需求是主要驱动。这表明TSMC先进节点已高度被AI算力需求主导。",
+    verdict: "supported", aiStrategy: true,
+    sources: [
+      {name:"TrendForce", url:"https://www.trendforce.com/"},
+      {name:"IT之家", url:"https://www.ithome.com/"},
+      {name:"EDN Asia", url:"https://www.ednasiapacific.com/"},
+      {name:"Nikkei Asia", url:"https://asia.nikkei.com/"}
+    ]
+  },
+  {
+    id: "chip-011", date: "2026-05-24", cat: "chip",
+    title: "麒麟9020（中芯国际7nm N+2）安兔兔约125万，Mate70实现关键芯片100%国产",
+    summary: "华为Mate 70搭载的麒麟9020采用中芯国际7nm N+2工艺，安兔兔综合跑分约125万分，实现了基带、存储、显示芯片等关键器件100%国产能力（华为官方口径）。与国际最高水平相比，在功耗和高负载性能上仍有差距，但技术自主化战略目标基本达成。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"华为官方", url:"https://consumer.huawei.com/cn/", official:true},
+      {name:"EET China", url:"https://www.eetimes.com.cn/"},
+      {name:"芯智讯", url:"https://xinzhixun.com/"},
+      {name:"ZOL中关村在线", url:"https://www.zol.com.cn/"}
+    ]
+  },
+
+  // ══════════════════════════════════════════════
+  // 核心器件 · 屏显 / 影像
+  // ══════════════════════════════════════════════
+  {
+    id: "display-001", date: "2026-05-14", cat: "display",
+    title: "索尼 LYTIA 900 系列传感器路线图：LYTIA 900 / 901 发布",
+    summary: "索尼发布LYTIA 900和901系列传感器，1/1.11\"超大底，支持Hybrid-Frame HDR与4x无损变焦，面向旗舰影像手机。索尼LYTIA系列正逐步替代旧有IMX命名体系，重新定义超大底传感器的影像标准，预计在OPPO Find X9 Ultra / 小米16 Ultra等超大杯产品上首发。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"索尼官方", url:"https://www.sony.com/", official:true},
+      {name:"GSMArena", url:"https://www.gsmarena.com/"},
+      {name:"爱范儿", url:"https://www.ifanr.com/"}
+    ]
+  },
+  {
+    id: "display-002", date: "2026-05-20", cat: "display",
+    title: "🤖 京东方 LTPO OLED 进入 iPhone 17 Pro 供应链，良率达 85%",
+    summary: "国产屏幕重要里程碑：京东方OLED支持1-120Hz LTPO自适应刷新率，良率达85%，符合苹果准入标准，正式进入iPhone 17 Pro供应链。京东方在iPhone 17/iPhone Air占约60%份额，但iPhone 17 Pro中国版订单因LTPO+良率不稳定问题部分回流三星显示。这显示国产面板在高端OLED领域仍面临良率天花板。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"新浪科技", url:"https://tech.sina.com.cn/"},
+      {name:"EET China", url:"https://www.eetimes.com.cn/"},
+      {name:"DigiTimes", url:"https://www.digitimes.com/"},
+      {name:"TrendForce", url:"https://www.trendforce.com/"}
+    ]
+  },
+  {
+    id: "display-003", date: "2026-05-20", cat: "display",
+    title: "中国 OLED 手机面板市占率三年提升约10倍（从2-3%到约25%）",
+    summary: "中国大陆面板厂（京东方/维信诺/华星光电）从2022年约2-3%市占率增至2025年约25%，韩国LCD双雄已几乎全面退出手机LCD市场。但高端LTPO OLED领域三星显示仍以约55%市占率领先，京东方在良率和高频更新率上仍有技术差距。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"DSCC", url:"https://www.displaysupplychain.com/"},
+      {name:"TrendForce", url:"https://www.trendforce.com/"},
+      {name:"钛媒体", url:"https://www.tmtpost.com/"},
+      {name:"证券时报", url:"https://www.stcn.com/"}
+    ]
+  },
+  {
+    id: "display-004", date: "2026-05-23", cat: "display",
+    title: "TCL NXTPAPER AMOLED 2026H2 发布：量子点色域增强 + 低蓝光护眼",
+    summary: "TCL在SID 2026展前研讨会确认新一代NXTPAPER AMOLED面板，整合量子点色域增强（DCI-P3 ≥100%）与硬件低蓝光护眼技术，预计2026年底量产首发于TCL旗舰。NXTPAPER系列此前主打e-ink/LCD，转向AMOLED显示TCL在高端面板市场的战略转型。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"TCL官方", url:"https://www.tcl.com/", official:true},
+      {name:"DisplayWeek 2026摘要", url:"https://displayweek.org/"},
+      {name:"DSCC", url:"https://www.displaysupplychain.com/"}
+    ]
+  },
+  {
+    id: "display-005", date: "2026-05-24", cat: "display",
+    title: "🤖 三星 Display 重夺 iPhone 18 Pro 大单：BOE 因 LTPO+ 良率被踢出",
+    summary: "三星Display获得iPhone 18 Pro约1.46亿片OLED订单，LG Display约8200万片，BOE至多3500万片且仅供旧机型。BOE被踢出iPhone 18 Pro的原因是LTPO+（高刷自适应）良率未达苹果标准。这一结果同时反映苹果对国产屏幕供应商的严格质量门槛，以及三星Display在高端OLED的统治地位。",
+    verdict: "supported", aiStrategy: true,
+    sources: [
+      {name:"少数派", url:"https://sspai.com/"},
+      {name:"新浪科技", url:"https://tech.sina.com.cn/"},
+      {name:"TrendForce", url:"https://www.trendforce.com/"},
+      {name:"DigiTimes", url:"https://www.digitimes.com/"}
+    ]
+  },
+  {
+    id: "display-006", date: "2026-05-24", cat: "display",
+    title: "BOE 成都 B16 第8.6代 OLED 提前投产，比原计划提前一个月以上",
+    summary: "BOE成都B16产线（Gen 8.6 OLED）本月（2026年5月）开始投放玻璃基板，比原定H2 2026提前一个月以上。背板采用LTPO，定位中端及平板OLED市场。提前投产有助于BOE在苹果iPad和中端手机OLED市场扩大份额，弥补高端iPhone Pro订单的损失。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"京东方官方", url:"https://www.boe.com/", official:true},
+      {name:"TrendForce", url:"https://www.trendforce.com/"},
+      {name:"IT之家", url:"https://www.ithome.com/"}
+    ]
+  },
+  {
+    id: "display-007", date: "2026-05-24", cat: "display",
+    title: "索尼 LYT-910 / IMX09E：200MP 近1英寸传感器登陆三大中国超大杯",
+    summary: "索尼LYT-910（对应IMX09E）200MP超大底传感器正式装备OPPO Find X9 Ultra / 小米16 Ultra / vivo Ultra，尺寸1/1.11\"-1/1.12\"，像素尺寸0.56μm（16合1后等效12.5MP大像素），支持Hybrid-Frame HDR、4x光学无损变焦。这是200MP大底传感器首次在中国旗舰超大杯中规模化落地。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"索尼官方", url:"https://www.sony.com/", official:true},
+      {name:"爱范儿", url:"https://www.ifanr.com/"},
+      {name:"IT之家", url:"https://www.ithome.com/"},
+      {name:"GSMArena", url:"https://www.gsmarena.com/"}
+    ]
+  },
+
+  // ══════════════════════════════════════════════
+  // 核心器件 · 电池
+  // ══════════════════════════════════════════════
+  {
+    id: "battery-001", date: "2026-05-18", cat: "battery",
+    title: "摩托罗拉 Razr Ultra 2026：首款量产硅碳翻盖折叠屏，5000mAh + 9.89mm",
+    summary: "Razr Ultra 2026是全球首款量产硅碳负极电池翻盖折叠屏手机，5000mAh容量在9.89mm机身厚度内实现，比前代增加300mAh。硅碳负极能量密度约为传统石墨的3-4倍（量产实际），使折叠屏形态突破续航瓶颈。Razr Fold版本达6000mAh。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"摩托罗拉官方", url:"https://www.motorola.com/", official:true},
+      {name:"The Verge", url:"https://www.theverge.com/"},
+      {name:"Android Authority", url:"https://www.androidauthority.com/"},
+      {name:"TechRadar", url:"https://www.techradar.com/"}
+    ]
+  },
+  {
+    id: "battery-002", date: "2026-05-19", cat: "battery",
+    title: "❌ 辟谣：小米17 Max '史上最大电池'——当日被荣耀9000mAh超越",
+    summary: "小米17 Max官方宣传'史上最大8000mAh电池'，但荣耀600 Pro同期发布9000mAh电池（更大），vivo X300 Ultra 2025年已达8500mAh。此谣言属'当日证伪'案例。正确表述：'小米17 Max搭载8000mAh电池（该系列历史最大），但同期上市的荣耀600 Pro容量更大'。",
+    verdict: "refuted", aiStrategy: false,
+    sources: [
+      {name:"荣耀官方", url:"https://www.honor.com/", official:true},
+      {name:"小米官方", url:"https://www.mi.com/", official:true},
+      {name:"IT之家", url:"https://www.ithome.com/"},
+      {name:"爱范儿", url:"https://www.ifanr.com/"}
+    ]
+  },
+  {
+    id: "battery-003", date: "2026-05-19", cat: "battery",
+    title: "硅碳负极电池 2026 全面普及：旗舰最高已达 10000mAh",
+    summary: "2026年硅碳负极电池已成主流旗舰标配：小米金沙江、荣耀青海湖、一加冰川、vivo蓝海均采用；容量端：荣耀WIN RT 10000mAh，红米Turbo5 Max、一加Turbo6均达9000mAh。成本仍高于传统石墨3-5倍，但规模效应使价差收窄，2026年进入产业链放量阶段。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"证券时报", url:"https://www.stcn.com/"},
+      {name:"钛媒体", url:"https://www.tmtpost.com/"},
+      {name:"ZOL中关村在线", url:"https://www.zol.com.cn/"},
+      {name:"荣耀官方", url:"https://www.honor.com/", official:true}
+    ]
+  },
+  {
+    id: "battery-004", date: "2026-05-21", cat: "battery",
+    title: "CATL 第三代神行超充电池：6分27秒充满、15C倍率、0.25mΩ行业最低内阻",
+    summary: "CATL于2026年4月21日正式发布第三代神行超充电池，核心参数：充电时间仅6分27秒即可充满（10C峰值），最大倍率可达15C，内阻0.25mΩ（行业最低），经1000次循环后容量保持率仍超90%。这是目前量产手机电池中充电速度最快的方案，且同时保持了良好的循环寿命。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"CATL官方", url:"https://www.catl.com/", official:true},
+      {name:"机器之心", url:"https://www.jiqizhixin.com/"},
+      {name:"钛媒体", url:"https://www.tmtpost.com/"},
+      {name:"IEEE Spectrum", url:"https://spectrum.ieee.org/"}
+    ]
+  },
+  {
+    id: "battery-005", date: "2026-05-21", cat: "battery",
+    title: "❌ 辟谣：固态电池'数天续航' ——属严重夸大，量产最早2027-2028年",
+    summary: "部分媒体报道消费级固态电池将实现'数天续航'，经核查此类表述属严重夸大：①固态电池能量密度提升约20-30%（而非数倍），②量产成本仍高于液态电池3-5倍，③消费级大规模商用最早2027-2028年；现阶段展示的均为研发原型，非量产产品。CES 2026展示的300W+固态电池原型亦属此类。",
+    verdict: "refuted", aiStrategy: false,
+    sources: [
+      {name:"IEEE Spectrum", url:"https://spectrum.ieee.org/"},
+      {name:"TechRadar", url:"https://www.techradar.com/"},
+      {name:"Ars Technica", url:"https://arstechnica.com/"},
+      {name:"证券时报", url:"https://www.stcn.com/"}
+    ]
+  },
+  {
+    id: "battery-006", date: "2026-05-24", cat: "battery",
+    title: "硅碳电池供应链：三大供应商策略调整应对 AI 手机高功耗需求",
+    summary: "随着AI on-device模型的持续推理导致手机平均功耗上升15-30%，三大硅碳负极供应商（贝特瑞、杉杉股份、璞泰来）均在2026年H1完成产能扩张规划：贝特瑞硅碳负极年产能目标扩至5万吨，杉杉+璞泰来合计达6万吨。荣耀WIN RT 10000mAh与一加Turbo6 9000mAh代表了AI时代高容量+大电池的主流化路径。",
+    verdict: "supported", aiStrategy: true,
+    sources: [
+      {name:"证券时报", url:"https://www.stcn.com/"},
+      {name:"钛媒体", url:"https://www.tmtpost.com/"},
+      {name:"IT之家", url:"https://www.ithome.com/"},
+      {name:"荣耀官方", url:"https://www.honor.com/", official:true}
+    ]
+  },
+
+  // ══════════════════════════════════════════════
+  // 核心器件 · 散热
+  // ══════════════════════════════════════════════
+  {
+    id: "thermal-001", date: "2026-05-18", cat: "thermal",
+    title: "骁龙 vs 天玑散热实测：MediaTek 整机散热表现优于高通",
+    summary: "Android Authority基于OPPO Find X9系列横评（同款手机不同SoC）的最新结论：高通Oryon CPU架构保持性能领先（单核/多核），但MediaTek在GPU效率和整机散热方面优势明显——持续负载下天玑SoC表面温度低约2-4°C，能耗比更优。旗舰芯片竞争差距持续收窄，散热管理成为下一个战场。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"Android Authority", url:"https://www.androidauthority.com/"},
+      {name:"GSMArena实测", url:"https://www.gsmarena.com/"},
+      {name:"极客湾Geekerwan", url:"https://space.bilibili.com/5365740"}
+    ]
+  },
+  {
+    id: "thermal-002", date: "2026-05-21", cat: "thermal",
+    title: "AI 持续推理导致手机热功耗上升：散热系统成旗舰设计新瓶颈",
+    summary: "随着端侧AI模型推理从间歇性变为持续性（AI代理任务）,手机热设计功耗（TDP）面临新挑战。CATL第三代神行电池内阻降至0.25mΩ可直接减少充电发热；多款2026旗舰开始采用均热板+石墨烯复合散热系统，面积扩大40-60%。荣耀Magic7 NPU+GPU异构AI计算架构亦针对长时AI推理的散热分配做了专项优化。",
+    verdict: "supported", aiStrategy: true,
+    sources: [
+      {name:"CATL官方", url:"https://www.catl.com/", official:true},
+      {name:"IEEE Spectrum", url:"https://spectrum.ieee.org/"},
+      {name:"爱范儿", url:"https://www.ifanr.com/"},
+      {name:"极客湾Geekerwan", url:"https://space.bilibili.com/5365740"}
+    ]
+  },
+
+  // ══════════════════════════════════════════════
+  // 核心器件 · 存储供应（AI供应策略重点）
+  // ══════════════════════════════════════════════
+  {
+    id: "memory-001", date: "2026-05-21", cat: "memory",
+    title: "🤖 DRAM 价格暴涨+369%：AI HBM 需求分流普通 DRAM 产能",
+    summary: "DDR4 8Gb现货从$3.2涨至$15（+369%），多来源交叉验证（TrendForce/DRAMeXchange/行业媒体）。核心原因：AI数据中心对HBM（高带宽存储）的爆炸性需求迫使三星/SK海力士/美光将先进产能大量转移至HBM生产，导致普通DRAM产量大幅减少。这是AI算力需求通过供应链传导至消费电子的典型案例。",
+    verdict: "supported", aiStrategy: true,
+    sources: [
+      {name:"TrendForce", url:"https://www.trendforce.com/"},
+      {name:"DRAMeXchange", url:"https://www.dramexchange.com/"},
+      {name:"EET China", url:"https://www.eetimes.com.cn/"},
+      {name:"SemiAnalysis", url:"https://www.semianalysis.com/"}
+    ]
+  },
+  {
+    id: "memory-002", date: "2026-05-21", cat: "memory",
+    title: "🤖 三大存储厂商 HBM 产能优先策略：SK海力士/三星/美光供应结构重组",
+    summary: "三大DRAM厂商均将产能向HBM倾斜：SK海力士已将约30%先进产能转至HBM3E，三星面向NVIDIA/AMD的HBM3E供应合同至2027年，美光在HBM供应上同比增长超100%。NAND闪存同期涨幅33-40%（消费级QLC超40%），原因同样是NAND厂商减产止血。这一产能结构性调整预计持续至2027年。",
+    verdict: "supported", aiStrategy: true,
+    sources: [
+      {name:"TrendForce", url:"https://www.trendforce.com/"},
+      {name:"Nikkei Asia", url:"https://asia.nikkei.com/"},
+      {name:"DigiTimes", url:"https://www.digitimes.com/"},
+      {name:"SemiAnalysis", url:"https://www.semianalysis.com/"}
+    ]
+  },
+  {
+    id: "memory-003", date: "2026-05-21", cat: "memory",
+    title: "手机 BOM 存储占比从 10% 升至 20-30%，多品牌 2026 年集体提价",
+    summary: "存储价格暴涨直接冲击手机成本结构：旗舰手机BOM中存储（DRAM+NAND）占比从10%升至20-30%，存储采购成本同比涨超80%。小米雷军公开表示手机业务面临很大压力；OPPO、vivo、小米、一加等头部品牌已于2026年3月启动提价，为近五年来最大规模集体涨价。",
+    verdict: "supported", aiStrategy: true,
+    sources: [
+      {name:"证券时报", url:"https://www.stcn.com/"},
+      {name:"36氪", url:"https://www.36kr.com/"},
+      {name:"钛媒体", url:"https://www.tmtpost.com/"},
+      {name:"雷军微博/公开发言", url:"https://weibo.com/", official:true}
+    ]
+  },
+  {
+    id: "memory-004", date: "2026-05-17", cat: "memory",
+    title: "UFS 5.0 标准落地：读取速度较 UFS 4.0 提升约一倍",
+    summary: "JEDEC正式发布UFS 5.0标准，顺序读取速度≥4.2GB/s（较UFS 4.0翻倍），写入功耗降低约30%，支持的AI模型权重加载速度提升显著。旗舰手机率先采用的意义不只是速度，更在于大模型参数的本地加载效率——这是AI on-device的关键存储接口瓶颈之一。",
+    verdict: "supported", aiStrategy: true,
+    sources: [
+      {name:"JEDEC标准组织", url:"https://www.jedec.org/", official:true},
+      {name:"GSMArena", url:"https://www.gsmarena.com/"},
+      {name:"AnandTech(Archive)", url:"https://www.anandtech.com/"},
+      {name:"IT之家", url:"https://www.ithome.com/"}
+    ]
+  },
+  {
+    id: "memory-005", date: "2026-05-23", cat: "memory",
+    title: "🤖 LPDDR6 供应时间线：三星 2026H2 量产，AI 端侧推理带宽提升 2x",
+    summary: "三星确认LPDDR6将于2026年下半年开始量产，内存带宽较LPDDR5X提升约2倍（峰值68GB/s），功耗降低约20%。AI端侧模型推理（特别是MoE和多模态模型）对内存带宽极为敏感，LPDDR6的落地将直接提升骁龙8 EG6/天玑9600等平台的LLM推理速度。",
+    verdict: "supported", aiStrategy: true,
+    sources: [
+      {name:"三星官方", url:"https://news.samsung.com/", official:true},
+      {name:"TrendForce", url:"https://www.trendforce.com/"},
+      {name:"AnandTech(Archive)", url:"https://www.anandtech.com/"},
+      {name:"IEEE Spectrum", url:"https://spectrum.ieee.org/"}
+    ]
+  },
+
+  // ══════════════════════════════════════════════
+  // AI 行业重磅
+  // ══════════════════════════════════════════════
+  {
+    id: "ai-001", date: "2026-05-14", cat: "ai",
+    title: "旗舰 SoC NPU 算力：骁龙 8 Elite Gen5 75+ TOPS，端侧 7B 模型首次成为可能",
+    summary: "骁龙8 Elite Gen5 Hexagon NPU算力>75 TOPS，天玑9400 NPU>50 TOPS，苹果A18 Pro约35 TOPS（各厂商TOPS测量方法不统一，实际推理性能需第三方实测）。关键转变：75 TOPS级算力首次使7B参数模型在手机端本地运行成为实用可能（而非演示）。但实际体验取决于精度选择（INT4/INT8/FP16）和工程调度。",
+    verdict: "supported", aiStrategy: true,
+    sources: [
+      {name:"高通官方", url:"https://www.qualcomm.com/news", official:true},
+      {name:"联发科官方", url:"https://www.mediatek.com/news", official:true},
+      {name:"苹果官方", url:"https://www.apple.com/newsroom/", official:true},
+      {name:"AnandTech(Archive)", url:"https://www.anandtech.com/"}
+    ]
+  },
+  {
+    id: "ai-002", date: "2026-05-15", cat: "ai",
+    title: "AI 幻觉率最新格局：Claude 约 3-4%，推理模型反而高于 10%",
+    summary: "2026年最新基准：Claude AI幻觉率约3-4%（主流最低），但反直觉发现：推理模型（GPT-o系列、Claude Thinking等）在事实性摘要任务中幻觉率超10%，显著高于标准模型。核心原因：推理模型在推理链中会'自信地'扩展未经验证的前提。所有主流AI模型均可生成看似真实但不存在的引用文献，学术/法律场景必须独立核验。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"Anthropic官方", url:"https://www.anthropic.com/", official:true},
+      {name:"MIT Technology Review", url:"https://www.technologyreview.com/"},
+      {name:"ArXiv论文(cs.AI)", url:"https://arxiv.org/"},
+      {name:"机器之心", url:"https://www.jiqizhixin.com/"}
+    ]
+  },
+  {
+    id: "ai-003", date: "2026-05-18", cat: "ai",
+    title: "中国手机品牌端侧 AI 大模型全阵营确立：6 家品牌均已自研",
+    summary: "2026年中国主流手机品牌端侧AI格局：荣耀（MagicLM）、华为（盘古）、小米（MiMo）、vivo（蓝心BlueLM）、OPPO（AndesGPT）、三星（Gauss）——六家均已完成自研端侧大模型部署。这一格局标志着AI手机从'接入云端API'走向'本地模型自主部署'的历史性转变，也意味着各品牌间AI能力竞争将直接体现在端侧推理质量上。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"爱范儿", url:"https://www.ifanr.com/"},
+      {name:"36氪", url:"https://www.36kr.com/"},
+      {name:"量子位", url:"https://www.qbitai.com/"},
+      {name:"机器之心", url:"https://www.jiqizhixin.com/"}
+    ]
+  },
+  {
+    id: "ai-004", date: "2026-05-18", cat: "ai",
+    title: "MiniCPM-o 4.5：9B 多模态模型骁龙 8 Gen3 实测 12FPS 视频理解",
+    summary: "面壁智能MiniCPM-o 4.5在骁龙8 Gen3手机上实测达到12FPS视频理解，这是目前开源端侧多模态模型性能的重要参照点，代表了端侧推理的真实可用性基准。与各芯片厂商'33B端侧运行'声称形成对比（后者因量化精度问题已被核查驳斥）。关键结论：'能运行'与'实用推理速度'是两个不同的判断维度。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"面壁智能官方", url:"https://modelbest.cn/", official:true},
+      {name:"机器之心", url:"https://www.jiqizhixin.com/"},
+      {name:"量子位", url:"https://www.qbitai.com/"},
+      {name:"ArXiv论文", url:"https://arxiv.org/"}
+    ]
+  },
+  {
+    id: "ai-005", date: "2026-05-18", cat: "ai",
+    title: "字节跳动五色手机助手：跨 App AI 操控成现实，从对话框走向设备控制层",
+    summary: "字节跳动2025年12月技术预览版展示了AI直接跨App操控手机的能力（类似Computer Use），代表大模型从'对话框助手'向'设备操控层'演进的重要节点。结合荣耀MagicGUI'手机自动驾驶'定位，这标志着AI Agent在手机端的下一个战场是GUI自动化，而非语音问答。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"字节跳动官方", url:"https://www.bytedance.com/", official:true},
+      {name:"36氪", url:"https://www.36kr.com/"},
+      {name:"量子位", url:"https://www.qbitai.com/"},
+      {name:"TechCrunch", url:"https://techcrunch.com/"}
+    ]
+  },
+  {
+    id: "ai-006", date: "2026-05-18", cat: "ai",
+    title: "荣耀 MagicGUI 多模态大模型：'手机自动驾驶'——代用户执行 GUI 操作",
+    summary: "荣耀发布MagicGUI多模态大模型，定位'手机自动驾驶'，可代用户执行跨App GUI操作（预订外卖、填写表单、整理相册等），融合视觉感知+自然语言理解+操作规划三个模块。荣耀Magic7系列同时首发NPU+GPU异构AI计算架构，AI性能官方称提升45%。这是从软硬件协同角度最完整的端侧Agentic AI落地案例。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"荣耀官方", url:"https://www.honor.com/", official:true},
+      {name:"爱范儿", url:"https://www.ifanr.com/"},
+      {name:"21财经", url:"https://www.21jingji.com/"},
+      {name:"腾讯新闻科技", url:"https://news.qq.com/"}
+    ]
+  },
+  {
+    id: "ai-007", date: "2026-05-19", cat: "ai",
+    title: "❌ 辟谣：AI手机'完全取代传统App'——当前AI Agent复杂任务成功率仅30-50%",
+    summary: "部分媒体宣称AI手机将'完全依赖AI agents，不再需要传统App'（包括OpenAI手机相关报道）。经核查：①AI Agent复杂任务成功率当前约30-50%，远未达到取代App生态的可靠性门槛；②App生态的网络效应极强；③OpenAI手机最早2027H1量产。正确表述：'AI将增强手机AI辅助能力，但近期完全取代App不现实'。",
+    verdict: "refuted", aiStrategy: false,
+    sources: [
+      {name:"Ars Technica", url:"https://arstechnica.com/"},
+      {name:"MIT Technology Review", url:"https://www.technologyreview.com/"},
+      {name:"量子位", url:"https://www.qbitai.com/"},
+      {name:"The Verge", url:"https://www.theverge.com/"}
+    ]
+  },
+  {
+    id: "ai-008", date: "2026-05-20", cat: "ai",
+    title: "❌ 辟谣：'OpenAI手机GPU将超越A20 Pro和骁龙8EG6'——零依据声称（EQ 9.2）",
+    summary: "多家科技媒体传播'OpenAI手机GPU性能将超越苹果A20 Pro和骁龙8 Elite Gen6'，经核查完全无依据：①OpenAI至今未发布任何手机产品；②所谓'规格'均来自单一爆料者，且原文含大量'rumored/leaked'限定词被转载时丢失；③无任何基准测试数据支撑。此案例是'预发布多芯比较'伪科学模式的典型，EQ评分9.2（100分制最高危）。",
+    verdict: "refuted", aiStrategy: false,
+    sources: [
+      {name:"The Verge核查", url:"https://www.theverge.com/"},
+      {name:"Ars Technica", url:"https://arstechnica.com/"},
+      {name:"9to5Mac", url:"https://9to5mac.com/"},
+      {name:"RumorCrusher内部核查", url:"../2026-05-20/index.html", official:true}
+    ]
+  },
+  {
+    id: "ai-009", date: "2026-05-21", cat: "ai",
+    title: "🤖 2026 各平台 AI 推理对比：骁龙 8EG4 75 TOPS，天玑 9400 50 TOPS，A18 Pro 35 TOPS",
+    summary: "当前已量产平台NPU算力（厂商口径）：骁龙8 Elite Gen4 >75 TOPS、天玑9400 >50 TOPS、苹果A18 Pro ~35 TOPS（注：各厂商TOPS测量方法不统一，不可直接比较绝对值）。实际AI推理性能差异受量化精度（INT4/INT8/FP16）、内存带宽（LPDDR5X vs LPDDR6）、编译优化等因素影响显著。极客湾等第三方机构的量产实测数据是更可靠的参照基准。",
+    verdict: "supported", aiStrategy: true,
+    sources: [
+      {name:"高通官方", url:"https://www.qualcomm.com/news", official:true},
+      {name:"联发科官方", url:"https://www.mediatek.com/news", official:true},
+      {name:"苹果官方", url:"https://www.apple.com/newsroom/", official:true},
+      {name:"极客湾Geekerwan", url:"https://space.bilibili.com/5365740"}
+    ]
+  },
+  {
+    id: "ai-010", date: "2026-05-24", cat: "ai",
+    title: "Google + Samsung Android XR 眼镜：2026秋季发布，Xreal Aura 70° 视场角",
+    summary: "Google I/O 2026展示的Android XR智能眼镜平台同时孵化出两条产品线：①Google+Samsung的'Intelligent Eyewear'（Gentle Monster/Warby Parker外观，2026秋发）；②Xreal Project Aura，70°超宽视场角，搭载高通骁龙AR平台，独立计算无需手机。这代表AI眼镜进入主流消费品阶段，也是继Meta Ray-Ban之后最重要的AI可穿戴发布。",
+    verdict: "supported", aiStrategy: false,
+    sources: [
+      {name:"Google官方", url:"https://blog.google/", official:true},
+      {name:"三星官方", url:"https://news.samsung.com/", official:true},
+      {name:"The Verge", url:"https://www.theverge.com/"},
+      {name:"Road to VR", url:"https://www.roadtovr.com/"}
+    ]
+  },
+
+  // === 2026-05-25 新增条目 ===
+  {
+    id: "chip-20260525-001",
+    date: "2026-05-25",
+    cat: "chip",
+    title: "台积电五座2nm晶圆厂全面运营，2026年全部产能售罄",
+    summary: "台积电高雄（Fab 20/22/23/24）及新竹Fab 25共五座N2节点晶圆厂已全面投产。2026年内每片晶圆均已被预订：苹果A20 Pro占逾50%产能，其余被NVIDIA、AMD、高通、联发科瓜分。N2较上代N3P性能提升约10-15%（同频同功耗），是智能手机芯片十年来最大工艺跃迁节点之一。2027年N2P升级版正在接受新预约，产能格局将进一步向AI算力硅片倾斜。置信度97%，Tom's Hardware/TrendForce/MSN多源交叉确认。",
+    verdict: "supported",
+    aiStrategy: true,
+    sources: [
+      {name:"Tom's Hardware", url:"https://www.tomshardware.com/tech-industry/semiconductors/tsmc-begins-quietly-volume-production-of-2nm-class-chips-first-gaa-transistor-for-tsmc-claims-up-to-15-percent-improvement-at-iso-power"},
+      {name:"TrendForce", url:"https://www.trendforce.com/news/", official:true},
+      {name:"MSN/Bloomberg", url:"https://www.msn.com/en-us/news/technology/tsmc-is-now-running-five-2nm-chip-fabs-at-once-and-every-wafer-through-2026-is-already-sold/ar-AA22qxvI"},
+      {name:"TechNetbook", url:"https://www.technetbooks.com/2026/02/tsmc-n2-roadmap-for-2nm-ai-and-mobile.html"}
+    ]
+  },
+  {
+    id: "chip-20260525-002",
+    date: "2026-05-25",
+    cat: "chip",
+    title: "TechInsights确认麒麟9030 Pro采用中芯N+3，迄今中国最先进量产工艺",
+    summary: "权威芯片拆解机构TechInsights对华为Mate 80 Pro Max搭载的麒麟9030 Pro进行拆解，确认由中芯国际N+3节点制造。N+3制程性能介于传统7nm与5nm之间，依赖DUV光刻机四重曝光技术，在无EUV许可的情况下持续突破密度极限。这是中芯国际首款商用N+3节点SoC，标志着中国自主半导体制造工艺在出口管制背景下仍在持续推进，但距台积电/三星3nm/2nm仍有约2-3代代差。置信度96%。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name:"TechInsights（权威拆解）", url:"https://www.techinsights.com/blog/smic-n3-confirmed-kirin-9030-analysis-reveals-how-close-smic-5nm", official:true},
+      {name:"Tom's Hardware", url:"https://www.tomshardware.com/tech-industry/semiconductors/huaweis-latest-mobile-is-chinas-most-advanced-process-node-to-date-despite-using-blacklisted-chipmaker-huawei-kirin-9030-mobile-soc-made-on-smic-n-3-process-but-cant-compete-with-5nm-nodes"},
+      {name:"PhoneArena", url:"https://www.phonearena.com/news/kirin-9030-pro-built-using-multi-patterning_id176123"},
+      {name:"Wccftech", url:"https://wccftech.com/huaweis-kirin-9030-chip-is-testing-the-limits-of-duv-based-multi-patterning-lithography/"}
+    ]
+  },
+  {
+    id: "chip-20260525-003",
+    date: "2026-05-25",
+    cat: "chip",
+    title: "骁龙8 Elite Gen2确认台积电N3P，超大核5.0GHz；三星落选代工",
+    summary: "多家供应链报道确认高通骁龙8 Elite Gen2由台积电独家以N3P节点代工，2颗超大核主频达5.0GHz、6颗性能核4.0GHz，CPU性能相较上代提升逾20%。三星未获本代代工订单，但据报已被高通选为骁龙8 Elite 3（2nm，预计2027年）的原型试产厂商。高通同步发布面向AI PC的骁龙X2 Elite，NPU算力达80TOPS。置信度85%，多家供应链信源一致。",
+    verdict: "supported",
+    aiStrategy: true,
+    sources: [
+      {name:"CFM闪存市场", url:"https://www.chinaflashmarket.com/a/183265"},
+      {name:"快科技/MyDrivers", url:"https://news.mydrivers.com/1/1009/1009406.htm"}
+    ]
+  },
+  {
+    id: "memory-20260525-001",
+    date: "2026-05-25",
+    cat: "memory",
+    title: "LPDDR5X合约价Q2 2026暴涨70-83%，AI服务器产能挤压手机内存供应",
+    summary: "TrendForce官方Q2 2026报告：手机DRAM合约价LPDDR5X上涨78-83%、LPDDR4X上涨70-75%，当前合约价已达$10-21/GB区间，较2025年底翻倍。根本原因：NVIDIA AI服务器平台大量消耗LPDDR5X（每GB HBM消耗晶圆产能约为普通DRAM的3倍），三星/SK海力士/美光优先服务数据中心。TrendForce预计价格缓解要等到2027年底。手机旗舰BOM将直接承压，12GB将成高端主流，16GB配置占比下滑。置信度95%，多源确认。",
+    verdict: "supported",
+    aiStrategy: true,
+    sources: [
+      {name:"TrendForce（官方报告）", url:"https://www.trendforce.com/research/download/RP260430KC", official:true},
+      {name:"Tom's Hardware", url:"https://www.tomshardware.com/pc-components/dram/nvidias-demand-for-lpddr5x-could-double-smartphone-and-server-memory-prices-in-2026-seismic-shift-means-even-smartphone-class-memory-isnt-safe-from-ai-induced-crunch"},
+      {name:"Wccftech", url:"https://wccftech.com/you-can-blame-lpddr5x-for-smartphone-price-increases-in-2026/"},
+      {name:"AndroidHeadlines", url:"https://www.androidheadlines.com/2026/05/mobile-dram-price-increase-q2-2026-report.html"}
+    ]
+  },
+  {
+    id: "memory-20260525-002",
+    date: "2026-05-25",
+    cat: "memory",
+    title: "三星HBM4E在NVIDIA GTC 2026发布，16Gbps/pin，4.0TB/s，首发Vera Rubin",
+    summary: "三星官方新闻稿在NVIDIA GTC 2026上正式发布HBM4E，规格16Gbps/pin、带宽4.0TB/s（较HBM4约提升25%），将作为NVIDIA下一代AI加速器Vera Rubin平台核心内存。三星同时宣布将扩产50%应对2026年AI内存需求。SK海力士、美光亦在争夺Vera Rubin供应份额。HBM4E持续向AI侧倾斜的产能策略将进一步加剧常规DRAM供给紧张。置信度99%，三星官方主要来源。",
+    verdict: "supported",
+    aiStrategy: true,
+    sources: [
+      {name:"三星官方新闻稿", url:"https://news.samsung.com/global/samsung-unveils-hbm4e-showcasing-comprehensive-ai-solutions-nvidia-partnership-and-vision-at-nvidia-gtc-2026", official:true},
+      {name:"SamMobile", url:"https://www.sammobile.com/news/samsung-start-mass-production-hbm4-memory-chips-february/"},
+      {name:"TweakTown", url:"https://www.tweaktown.com/news/109495/sk-hynix-samsung-and-micron-fighting-for-nvidia-supply-contracts-for-new-16-hi-hbm4-orders/index.html"}
+    ]
+  },
+  {
+    id: "display-20260525-001",
+    date: "2026-05-25",
+    cat: "display",
+    title: "京东方8.6代AMOLED率先量产，全球首家进入该代际",
+    summary: "京东方成都B16工厂8.6代AMOLED面板产线于2026年5月正式量产，较三星Display A6设施早数月进入市场，成为全球首家8.6代AMOLED量产厂商。8.6代AMOLED相比8.5代基板尺寸更大（约2250×2600mm），切割效率更高，有助于降低大屏OLED面板单价。三星Display A6亦于同月启动全面量产。BOE与三星Display的8.6代竞争将加速OLED面板成本下降。置信度91%。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name:"TechTimes", url:"https://www.techtimes.com/articles/316600/20260514/boe-begins-gen-86-oled-production-this-month-beating-rival-samsung-display-market.htm"},
+      {name:"OLED-Info", url:"https://www.oled-info.com/tags/boe"},
+      {name:"DisplayDaily", url:"https://displaydaily.com/boe-yield-crisis-triggers-massive-iphone-oled-order-shift-to-samsung-display/"}
+    ]
+  },
+  {
+    id: "display-20260525-002",
+    date: "2026-05-25",
+    cat: "display",
+    title: "三星Display重夺iPhone 18 Pro全部OLED订单；成苹果折叠iPhone独家供应商",
+    summary: "因京东方LTPO OLED面板良率问题，苹果将iPhone 18 Pro系列OLED订单全部回归三星Display，三星当前占iPhone面板总供应约60%。与此同时，三星Display成为苹果2026年首款折叠iPhone的独家OLED面板供应商，预计2026年供应约1000-1100万片折叠OLED。京东方的苹果供应主要限于iPhone 17e等中端机型（目标3500万片，实现存疑）。置信度93%，SammyFans/MacRumors/Digitimes多源确认。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name:"SammyFans", url:"https://www.sammyfans.com/2026/05/07/samsung-takes-back-iphone-18-pro-oled-business-from-boe/"},
+      {name:"MacRumors", url:"https://www.macrumors.com/2026/01/21/apple-shifts-iphone-oled-orders-samsung/"},
+      {name:"Digitimes", url:"https://www.digitimes.com/news/a20260421PD221/sdc-oled-panel-boe-apple-iphone.html"}
+    ]
+  },
+  {
+    id: "brands-20260525-001",
+    date: "2026-05-25",
+    cat: "brands",
+    title: "Q1 2026中国手机：华为第一(+2%)，苹果+20%，小米暴跌35%",
+    summary: "CounterPoint Research Q1 2026官方季度报告：中国智能手机市场华为排名第一（+2%），苹果同比+20%（iPhone 17系列驱动），OPPO -5%，vivo +2%，荣耀 -3%，小米同比暴跌35%（主动削减中低端出货以聚焦高端）。行业背景：全品类手机价格上涨推动销量结构性转变，换机周期延长至约3.5年。苹果+20%是其近年来在华市场最强单季表现之一。置信度94%。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name:"CounterPoint Research（官方）", url:"https://news.17173.com/content/04172026/160338388.shtml", official:true},
+      {name:"36氪", url:"https://eu.36kr.com/zh/p/3646189831900801"},
+      {name:"太平洋科技", url:"https://mobile.pconline.com.cn/2104/21043652.html"}
+    ]
+  },
+  {
+    id: "brands-20260525-002",
+    date: "2026-05-25",
+    cat: "brands",
+    title: "2026年中国手机价格全面上涨，OPPO/vivo/小米均已调价",
+    summary: "2026年Q1中国智能手机市场出现「价格普涨」现象：3月新品较2025年同级别机型普遍上涨约500-1500元，OPPO、vivo、小米均有调价动作。核心驱动：存储芯片（DRAM/NAND）成本暴涨 + 高端SoC代工费用提升。国补政策一定程度对冲了消费侧价格压力。分析师预计手机价格上涨趋势将延续至2027年，旗舰机型均价突破5000元人民币趋势加速。置信度90%。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name:"太平洋科技", url:"https://mobile.pconline.com.cn/2104/21043652.html"},
+      {name:"36氪", url:"https://eu.36kr.com/zh/p/3725693176082951"},
+      {name:"飞象网", url:"http://www.cctime.com/html/2026-2-2/1728192.htm"}
+    ]
+  }
+
+]; // end KB
+
+// SOURCES moved to sources.html (password protected)
+
+const SOURCES_STUB = [
+  {id:"ithome", name:"IT之家", url:"https://www.ithome.com/", lang:"zh-CN", priority:5, credibility:0.75, tags:["news","mobile","hardware"]},
+  {id:"ifanr", name:"爱范儿", url:"https://www.ifanr.com/", lang:"zh-CN", priority:4, credibility:0.80, tags:["news","mobile","lifestyle"]},
+  {id:"sspai", name:"少数派", url:"https://sspai.com/", lang:"zh-CN", priority:3, credibility:0.85, tags:["review","lifestyle","software"]},
+  {id:"pingwest", name:"品玩 PingWest", url:"https://www.pingwest.com/", lang:"zh-CN", priority:3, credibility:0.78, tags:["news","industry"]},
+  {id:"huxiu", name:"虎嗅", url:"https://www.huxiu.com/", lang:"zh-CN", priority:3, credibility:0.75, tags:["analysis","industry"]},
+  {id:"jiqizhixin", name:"机器之心", url:"https://www.jiqizhixin.com/", lang:"zh-CN", priority:4, credibility:0.88, tags:["ai","research","deep"]},
+  {id:"qbitai", name:"量子位", url:"https://www.qbitai.com/", lang:"zh-CN", priority:4, credibility:0.82, tags:["ai","research"]},
+  {id:"36kr", name:"36氪", url:"https://www.36kr.com/", lang:"zh-CN", priority:4, credibility:0.75, tags:["news","business","industry"]},
+  {id:"xinzhiyuan", name:"新智元", url:"https://www.aiera.com.cn/", lang:"zh-CN", priority:3, credibility:0.72, tags:["ai","news"]},
+  {id:"gsmarena", name:"GSMArena", url:"https://www.gsmarena.com/", lang:"en", priority:5, credibility:0.92, tags:["mobile","spec","review"]},
+  {id:"cnet", name:"CNET", url:"https://www.cnet.com/", lang:"en", priority:4, credibility:0.85, tags:["news","review","consumer"]},
+  {id:"techradar", name:"TechRadar", url:"https://www.techradar.com/", lang:"en", priority:4, credibility:0.82, tags:["news","review","consumer"]},
+  {id:"the-verge", name:"The Verge", url:"https://www.theverge.com/", lang:"en", priority:5, credibility:0.88, tags:["news","review","opinion"]},
+  {id:"ars-technica", name:"Ars Technica", url:"https://arstechnica.com/", lang:"en", priority:4, credibility:0.92, tags:["deep","technical"]},
+  {id:"9to5", name:"9to5Mac / 9to5Google", url:"https://9to5mac.com/", lang:"en", priority:4, credibility:0.80, tags:["apple","google","leaks"]},
+  {id:"android-authority", name:"Android Authority", url:"https://www.androidauthority.com/", lang:"en", priority:3, credibility:0.78, tags:["android","review"]},
+  {id:"mit-tech-review", name:"MIT Technology Review", url:"https://www.technologyreview.com/", lang:"en", priority:4, credibility:0.93, tags:["research","ai","frontier"]},
+  {id:"techcrunch-ai", name:"TechCrunch AI", url:"https://techcrunch.com/category/artificial-intelligence/", lang:"en", priority:3, credibility:0.80, tags:["ai","startup","news"]},
+  {id:"arxiv-cs", name:"arXiv (cs.AR/cs.AI)", url:"https://arxiv.org/list/cs.AR/recent", lang:"en", priority:3, credibility:0.90, tags:["academic","paper"]},
+  {id:"semianalysis", name:"SemiAnalysis", url:"https://www.semianalysis.com/", lang:"en", priority:4, credibility:0.92, tags:["semi","supply-chain","deep"]},
+  {id:"ieee-spectrum", name:"IEEE Spectrum", url:"https://spectrum.ieee.org/", lang:"en", priority:3, credibility:0.93, tags:["academic","engineering"]},
+  {id:"apple-newsroom", name:"Apple Newsroom", url:"https://www.apple.com/newsroom/", lang:"en", priority:5, credibility:1.00, tags:["official","apple"]},
+  {id:"samsung-newsroom", name:"Samsung Newsroom", url:"https://news.samsung.com/global/", lang:"en", priority:5, credibility:1.00, tags:["official","samsung"]},
+  {id:"xiaomi-official", name:"小米官方", url:"https://www.mi.com/", lang:"zh-CN", priority:5, credibility:1.00, tags:["official","xiaomi"]},
+  {id:"huawei-news", name:"华为官方", url:"https://consumer.huawei.com/cn/press/news/", lang:"zh-CN", priority:5, credibility:1.00, tags:["official","huawei"]},
+  {id:"google-blog", name:"Google The Keyword", url:"https://blog.google/", lang:"en", priority:4, credibility:1.00, tags:["official","google"]},
+  {id:"qualcomm-news", name:"Qualcomm Newsroom", url:"https://www.qualcomm.com/news", lang:"en", priority:4, credibility:1.00, tags:["official","soc"]},
+  {id:"mediatek-news", name:"MediaTek Newsroom", url:"https://www.mediatek.com/news", lang:"en", priority:4, credibility:1.00, tags:["official","soc"]},
+  {id:"yt-mkbhd", name:"MKBHD (YouTube)", url:"https://www.youtube.com/@mkbhd", lang:"en", priority:4, credibility:0.85, tags:["video","review","youtube"]},
+  {id:"bili-geekerwan", name:"极客湾 Geekerwan", url:"https://space.bilibili.com/5365740", lang:"zh-CN", priority:4, credibility:0.90, tags:["video","soc","benchmark","bilibili"]}
+]; // SOURCES_STUB end
+
+// ══════════════════════════════════════════════
+// RENDER ENGINE
+// ══════════════════════════════════════════════
+let currentCat = 'all';
+let currentDate = 'all';
+let currentSearch = '';
+
+function renderStats() {
+  document.getElementById('stat-total').textContent = KB.length;
+  document.getElementById('stat-supported').textContent = KB.filter(e=>e.verdict==='supported').length;
+  document.getElementById('stat-ai-strategy').textContent = KB.filter(e=>e.aiStrategy).length;
+  document.getElementById('stat-refuted').textContent = KB.filter(e=>e.verdict==='refuted').length;
+}
+
+function verdictClass(v) {
+  if (v==='supported') return 'verdict-supported';
+  if (v==='refuted') return 'verdict-refuted';
+  return 'verdict-conflicting';
+}
+function verdictLabel(v) {
+  if (v==='supported') return '<span class="text-green-700 text-xs font-bold bg-green-50 px-2 py-0.5 rounded-full">✓ 已核实</span>';
+  if (v==='refuted') return '<span class="text-orange-700 text-xs font-bold bg-orange-50 px-2 py-0.5 rounded-full">❌ 已辟谣</span>';
+  return '<span class="text-yellow-700 text-xs font-bold bg-yellow-50 px-2 py-0.5 rounded-full">⚠ 冲突证据</span>';
+}
+function catName(c) {
+  const m = {brands:'📱 厂商动态',chip:'🔬 芯片',display:'🖥 屏显影像',battery:'🔋 电池',thermal:'🌡 散热',memory:'💾 存储供应',ai:'🤖 AI重磅'};
+  return m[c]||c;
+}
+
+function renderEntries() {
+  const container = document.getElementById('entries-container');
+  const q = currentSearch.toLowerCase();
+
+  // Determine order: cat sections
+  const CATS = ['brands','chip','display','battery','thermal','memory','ai'];
+  let html = '';
+  let visibleTotal = 0;
+
+  const filtered = KB.filter(e => {
+    const catMatch = currentCat==='all' || e.cat===currentCat;
+    const dateMatch = currentDate==='all' || e.date===currentDate;
+    const searchMatch = !q || e.title.toLowerCase().includes(q) || e.summary.toLowerCase().includes(q);
+    return catMatch && dateMatch && searchMatch;
+  }).sort((a,b)=>b.date.localeCompare(a.date));
+
+  if (currentCat === 'all') {
+    // 按分类分组
+    CATS.forEach(cat => {
+      const items = filtered.filter(e=>e.cat===cat);
+      if (!items.length) return;
+      const catLabel = {brands:'📱 手机厂商动态',chip:'🔬 核心器件 · 芯片',display:'🖥 核心器件 · 屏显影像',battery:'🔋 核心器件 · 电池',thermal:'🌡 核心器件 · 散热',memory:'💾 核心器件 · 存储供应',ai:'🤖 AI行业重磅'}[cat]||cat;
+      html += `<div class="mb-8"><h3 class="text-base font-black text-slate-700 mb-3 flex items-center gap-2 border-b border-slate-200 pb-2">${catLabel} <span class="text-xs font-normal text-slate-400">${items.length}条</span></h3>`;
+      items.forEach(e => { html += renderCard(e); visibleTotal++; });
+      html += `</div>`;
+    });
+  } else {
+    filtered.forEach(e => { html += renderCard(e); visibleTotal++; });
+  }
+
+  container.innerHTML = html;
+  document.getElementById('no-results').classList.toggle('hidden', visibleTotal > 0);
+}
+
+function renderCard(e) {
+  const srcHtml = (e.sources||[]).map(s =>
+    `<a href="${s.url}" target="_blank" rel="noopener" class="src-pill ${s.official?'official':''}">${s.official?'🏛 ':''}${s.name}</a>`
+  ).join('');
+  const aiFlag = e.aiStrategy ? `<span class="ai-badge text-white text-xs font-bold px-2 py-0.5 rounded-full mr-2">🤖 AI供应策略调整</span>` : '';
+  return `
+    <div class="entry-card visible bg-white rounded-xl shadow-sm p-5 mb-4 ${e.aiStrategy?'ai-strategy-flag':verdictClass(e.verdict)}">
+      <div class="flex items-start justify-between gap-3 flex-wrap mb-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          ${aiFlag}
+          ${verdictLabel(e.verdict)}
+          <span class="text-xs text-slate-400 bg-slate-50 px-2 py-0.5 rounded-full">${catName(e.cat)}</span>
+          <span class="text-xs text-slate-400">${e.date}</span>
+        </div>
+      </div>
+      <h3 class="font-bold text-slate-900 text-base leading-snug mb-2">${e.title}</h3>
+      <p class="text-sm text-slate-600 leading-relaxed mb-3">${e.summary}</p>
+      <div class="flex flex-wrap gap-1.5 items-center">
+        <span class="text-xs text-slate-400 mr-1">信源：</span>
+        ${srcHtml}
+      </div>
+    </div>`;
+}
+
+function renderDateButtons() {
+  const dates = [...new Set(KB.map(e=>e.date))].sort((a,b)=>b.localeCompare(a));
+  const row = document.getElementById('date-row');
+  let html = `<button class="date-btn active text-xs px-2.5 py-1 rounded-full border font-semibold border-slate-800 bg-slate-800 text-white" data-date="all">全部</button>`;
+  dates.forEach(d => {
+    const label = d.slice(5); // MM-DD
+    const count = KB.filter(e=>e.date===d).length;
+    html += `<button class="date-btn text-xs px-2.5 py-1 rounded-full border border-slate-300 font-medium text-slate-600 hover:border-slate-600 hover:text-slate-900" data-date="${d}">${label}<span class="ml-1 text-slate-400">${count}</span></button>`;
+  });
+  row.innerHTML = html;
+  row.querySelectorAll('.date-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      row.querySelectorAll('.date-btn').forEach(b=>{b.classList.remove('active','bg-slate-800','text-white','border-slate-800');b.classList.add('border-slate-300','text-slate-600');});
+      btn.classList.add('active','bg-slate-800','text-white','border-slate-800');
+      btn.classList.remove('border-slate-300','text-slate-600');
+      currentDate = btn.dataset.date;
+      renderEntries();
+    });
+  });
+}
+
+// ── Init ──
+document.querySelectorAll('.cat-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    currentCat = btn.dataset.cat;
+    renderEntries();
+  });
+});
+document.getElementById('search-box').addEventListener('input', e => {
+  currentSearch = e.target.value;
+  renderEntries();
+});
+
+renderStats();
+renderDateButtons();
+renderEntries();
+</script>
+</body>
+</html>

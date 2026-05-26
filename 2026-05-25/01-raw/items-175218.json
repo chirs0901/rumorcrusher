@@ -1,0 +1,137 @@
+[
+  {
+    "id": "R001",
+    "title": "TSMC同时运行五座2nm晶圆厂，2026年全部产能已预售完毕",
+    "source": "MSN/Tom's Hardware/TechNetbook",
+    "url": "https://www.msn.com/en-us/news/technology/tsmc-is-now-running-five-2nm-chip-fabs-at-once-and-every-wafer-through-2026-is-already-sold/ar-AA22qxvI",
+    "lang": "en",
+    "claim": "TSMC目前同时运营五座2nm制程晶圆厂，2026年所有产能均已被预订完毕，苹果A20 Pro占据逾50%份额",
+    "category": "chip"
+  },
+  {
+    "id": "R002",
+    "title": "iPhone 18 Pro将搭载A20 Pro 2nm芯片，可变光圈48MP主摄",
+    "source": "MacRumors/TechTimes/NotebookCheck",
+    "url": "https://www.macrumors.com/2026/05/09/iphone-18-pro-10-new-features/",
+    "lang": "en",
+    "claim": "iPhone 18 Pro搭载TSMC 2nm A20 Pro芯片、可变光圈48MP摄像头、屏下Face ID，预计2026年9月发布",
+    "category": "brands"
+  },
+  {
+    "id": "R003",
+    "title": "联发科天玑9600采用TSMC N2P制程，双超大核设计性能接近5GHz",
+    "source": "Wccftech/Gizmochina/TechNetbook",
+    "url": "https://wccftech.com/roundup/mediatek-dimensity-9600-chips-launch-price-architecture-and-specifications-here-is-everything-you-need-to-know/",
+    "lang": "en",
+    "claim": "天玑9600采用台积电N2P节点（2nm），2+3+3 CPU架构首引双超大核，性能接近5GHz，预计2026 Q3发布",
+    "category": "chip"
+  },
+  {
+    "id": "R004",
+    "title": "骁龙8 Elite Gen2采用TSMC N3P，超大核主频5.0GHz",
+    "source": "ChinaFlashMarket/MyDrivers",
+    "url": "https://www.chinaflashmarket.com/a/183265",
+    "lang": "zh",
+    "claim": "骁龙8 Elite Gen2仍采用台积电工艺（N3P），2颗超大核5.0GHz + 6颗性能核4.0GHz；三星未获代工订单",
+    "category": "chip"
+  },
+  {
+    "id": "R005",
+    "title": "三星Galaxy Z Fold 8规格曝光：7月22日发布，4.1mm超薄，售价$1999起",
+    "source": "SamMobile/PhoneArena/SammyFans",
+    "url": "https://www.sammobile.com/news/samsung-galaxy-z-fold-8-everything-to-know/",
+    "lang": "en",
+    "claim": "Galaxy Z Fold 8发布日期为2026年7月22日，展开厚度4.1mm，200MP主摄，SD 8 Elite Gen5，5000mAh，$1999",
+    "category": "brands"
+  },
+  {
+    "id": "R006",
+    "title": "华为麒麟9030 Pro由中芯N+3工艺制造，TechInsights确认",
+    "source": "TechInsights/Tom's Hardware/PhoneArena",
+    "url": "https://www.techinsights.com/blog/smic-n3-confirmed-kirin-9030-analysis-reveals-how-close-smic-5nm",
+    "lang": "en",
+    "claim": "TechInsights拆解确认麒麟9030 Pro采用中芯国际N+3制程（性能介于7nm与5nm之间），搭载Mate 80 Pro Max",
+    "category": "chip"
+  },
+  {
+    "id": "R007",
+    "title": "LPDDR5X合约价Q2 2026暴涨70-83%，AI服务器挤压手机内存供应",
+    "source": "TrendForce/Wccftech/Tom's Hardware/AndroidHeadlines",
+    "url": "https://www.trendforce.com/research/download/RP260430KC",
+    "lang": "en",
+    "claim": "受AI服务器LPDDR5X需求激增影响，TrendForce预测2026 Q2手机DRAM合约价上涨70-83%，手机售价将随之上扬",
+    "category": "memory"
+  },
+  {
+    "id": "R008",
+    "title": "三星推出HBM4E，16Gbps带宽，首发NVIDIA Vera Rubin平台",
+    "source": "Samsung Newsroom/SamMobile/TweakTown",
+    "url": "https://news.samsung.com/global/samsung-unveils-hbm4e-showcasing-comprehensive-ai-solutions-nvidia-partnership-and-vision-at-nvidia-gtc-2026",
+    "lang": "en",
+    "claim": "三星在NVIDIA GTC 2026发布HBM4E，16Gbps/pin，4.0TB/s带宽，将首发于NVIDIA Vera Rubin AI加速器",
+    "category": "memory"
+  },
+  {
+    "id": "R009",
+    "title": "BOE 8.6代AMOLED产线率先量产，抢在三星Display之前",
+    "source": "TechTimes/OLED-Info",
+    "url": "https://www.techtimes.com/articles/316600/20260514/boe-begins-gen-86-oled-production-this-month-beating-rival-samsung-display-market.htm",
+    "lang": "en",
+    "claim": "京东方8.6代AMOLED产线于2026年5月开始量产，比三星Display提前数月，成全球首家量产该代AMOLED面板的厂商",
+    "category": "display"
+  },
+  {
+    "id": "R010",
+    "title": "三星拿回iPhone 18 Pro OLED订单，京东方良率问题致份额下滑",
+    "source": "SammyFans/MacRumors/Digitimes",
+    "url": "https://www.sammyfans.com/2026/05/07/samsung-takes-back-iphone-18-pro-oled-business-from-boe/",
+    "lang": "en",
+    "claim": "因BOE OLED良率问题，苹果将iPhone 18 Pro OLED订单重新移回三星Display；三星已占iPhone面板约60%份额",
+    "category": "display"
+  },
+  {
+    "id": "R011",
+    "title": "三星首席折叠iPhone OLED供应商，2026年折叠屏供应量1000-1100万片",
+    "source": "Apple Gadget Hacks/DisplayDaily",
+    "url": "https://apple.gadgethacks.com/news/apple-oled-display-supply-chain-explained-samsung-lg-and-boe-roles/",
+    "lang": "en",
+    "claim": "三星Display成为苹果首款折叠iPhone的独家/主要OLED供应商，2026年计划供应1000-1100万片折叠屏面板",
+    "category": "display"
+  },
+  {
+    "id": "R012",
+    "title": "中国手机市场Q1 2026：华为第一，苹果增20%，小米降35%",
+    "source": "CounterPoint Research via 17173.com",
+    "url": "https://news.17173.com/content/04172026/160338388.shtml",
+    "lang": "zh",
+    "claim": "CounterPoint数据：2026 Q1中国手机市场华为排名第一（+2%）、苹果+20%、OPPO -5%、vivo +2%、小米-35%",
+    "category": "brands"
+  },
+  {
+    "id": "R013",
+    "title": "2026年国内手机价格普遍上涨，各品牌全价格段产品涨价",
+    "source": "太平洋科技/36kr",
+    "url": "https://mobile.pconline.com.cn/2104/21043652.html",
+    "lang": "zh",
+    "claim": "2026年3月新机最低涨价约千元，OPPO与vivo齐涨，整体手机均价上升，与零部件成本上涨直接相关",
+    "category": "brands"
+  },
+  {
+    "id": "R014",
+    "title": "手机DRAM价格上涨将推高12GB成主流，16GB占比下滑",
+    "source": "TrendForce/AndroidHeadlines",
+    "url": "https://www.androidheadlines.com/2026/05/mobile-dram-price-increase-q2-2026-report.html",
+    "lang": "en",
+    "claim": "TrendForce预测：DRAM涨价将使12GB成为高端旗舰标配；成本压力下16GB配置占比下滑，入门版将配8GB",
+    "category": "memory"
+  },
+  {
+    "id": "R015",
+    "title": "BOE计划2026年向苹果供应3500万片OLED，与苹果深化合作",
+    "source": "TechNode",
+    "url": "https://technode.com/2026/05/07/apple-and-boe-reportedly-deepen-oled-partnership-as-boe-targets-35-million-iphone-display-shipments-in-2026/",
+    "lang": "en",
+    "claim": "京东方目标2026年向苹果供应3500万片OLED，主要供应iPhone 17e等中端机型；Pro系列已被三星重新夺回",
+    "category": "display"
+  }
+]

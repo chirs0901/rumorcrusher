@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RumorCrusher · 信源管理</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+    #app { display: none; }
+    .src-card { transition: box-shadow .15s; }
+    .src-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    pre { white-space: pre-wrap; word-break: break-all; }
+  </style>
+</head>
+<body class="bg-slate-50 min-h-screen">
+
+<!-- ── 密码锁屏 ── -->
+<div id="lock" class="min-h-screen flex items-center justify-center bg-[#0f172a]">
+  <div class="bg-white rounded-2xl shadow-2xl p-10 w-full max-w-sm text-center">
+    <div class="text-4xl mb-4">🔐</div>
+    <h1 class="text-xl font-black text-slate-900 mb-1">信源管理</h1>
+    <p class="text-sm text-slate-500 mb-6">请输入访问密码</p>
+    <input id="pwd-input" type="password" maxlength="20" placeholder="密码"
+      class="w-full text-center text-xl tracking-widest border-2 border-slate-200 rounded-xl px-4 py-3 mb-3 focus:outline-none focus:border-purple-500 transition"
+      onkeydown="if(event.key==='Enter')checkPwd()">
+    <button onclick="checkPwd()" class="w-full py-3 bg-[#0f172a] hover:bg-slate-700 text-white font-bold rounded-xl transition">进入 →</button>
+    <p id="pwd-err" class="hidden text-red-500 text-sm mt-3">密码错误，请重试</p>
+  </div>
+</div>
+
+<!-- ── 主界面 ── -->
+<div id="app">
+
+  <header class="bg-[#0f172a] text-white">
+    <div class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
+      <div>
+        <div class="text-xs font-bold tracking-widest text-purple-400 uppercase mb-1">RumorCrusher · 信源管理</div>
+        <h1 class="text-2xl font-black">📡 采集信源管理</h1>
+        <p class="text-slate-400 text-sm mt-1">管理每日定时任务的采集信源 · 添加后纳入采集范围</p>
+      </div>
+      <a href="index.html" class="text-slate-400 hover:text-white text-sm transition">← 返回知识库</a>
+    </div>
+  </header>
+
+  <!-- Stats bar -->
+  <div class="bg-white border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-6 py-3 flex gap-6 text-sm">
+      <span class="text-slate-500">共 <strong id="src-count" class="text-slate-900">30</strong> 个信源</span>
+      <span class="text-slate-500">中文 <strong id="src-zh" class="text-slate-900">—</strong> 个</span>
+      <span class="text-slate-500">英文 <strong id="src-en" class="text-slate-900">—</strong> 个</span>
+      <span class="text-slate-500">官方 <strong id="src-official" class="text-slate-900">—</strong> 个</span>
+    </div>
+  </div>
+
+  <main class="max-w-5xl mx-auto px-6 py-8">
+
+    <!-- Filter -->
+    <div class="flex gap-2 mb-6 flex-wrap items-center">
+      <button class="filter-btn active text-xs px-3 py-1.5 rounded-full border border-slate-800 bg-slate-800 text-white font-medium" data-filter="all">全部</button>
+      <button class="filter-btn text-xs px-3 py-1.5 rounded-full border border-slate-300 text-slate-600 font-medium" data-filter="zh-CN">🇨🇳 中文</button>
+      <button class="filter-btn text-xs px-3 py-1.5 rounded-full border border-slate-300 text-slate-600 font-medium" data-filter="en">🌐 英文</button>
+      <button class="filter-btn text-xs px-3 py-1.5 rounded-full border border-slate-300 text-slate-600 font-medium" data-filter="official">🏛 官方</button>
+      <button class="filter-btn text-xs px-3 py-1.5 rounded-full border border-slate-300 text-slate-600 font-medium" data-filter="p5">⭐ 优先级5</button>
+      <input id="src-search" type="search" placeholder="搜索信源…" class="ml-auto text-xs px-3 py-1.5 rounded-full border border-slate-300 w-40">
+    </div>
+
+    <!-- Source grid -->
+    <div id="src-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10"></div>
+
+    <!-- Add source form -->
+    <div class="bg-[#0f172a] text-white rounded-2xl p-7">
+      <h2 class="text-lg font-black mb-1">➕ 添加新信源</h2>
+      <p class="text-slate-400 text-sm mb-5">添加后将生成 YAML 片段，复制到 <code class="text-purple-300">_meta/source-list.yaml</code>，下次定时任务自动纳入采集。</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
+        <div>
+          <label class="block text-xs text-slate-400 mb-1.5">信源名称 *</label>
+          <input id="n-name" type="text" placeholder="e.g. 半导体行业观察"
+            class="w-full text-sm px-3 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 transition">
+        </div>
+        <div>
+          <label class="block text-xs text-slate-400 mb-1.5">URL *</label>
+          <input id="n-url" type="url" placeholder="https://..."
+            class="w-full text-sm px-3 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 transition">
+        </div>
+        <div>
+          <label class="block text-xs text-slate-400 mb-1.5">语言</label>
+          <select id="n-lang" class="w-full text-sm px-3 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-purple-400">
+            <option value="zh-CN">🇨🇳 中文</option>
+            <option value="en">🌐 English</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs text-slate-400 mb-1.5">优先级（1-5，5最高）</label>
+          <input id="n-priority" type="number" min="1" max="5" value="3"
+            class="w-full text-sm px-3 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-purple-400">
+        </div>
+        <div>
+          <label class="block text-xs text-slate-400 mb-1.5">标签（逗号分隔）</label>
+          <input id="n-tags" type="text" placeholder="news, mobile, semi"
+            class="w-full text-sm px-3 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-slate-500 focus:outline-none focus:border-purple-400">
+        </div>
+        <div>
+          <label class="block text-xs text-slate-400 mb-1.5">初始可信度（0-1）</label>
+          <input id="n-cred" type="number" min="0" max="1" step="0.05" value="0.75"
+            class="w-full text-sm px-3 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-purple-400">
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-xs text-slate-400 mb-1.5">备注（可选）</label>
+          <input id="n-notes" type="text" placeholder="特殊说明、偏向、限制等"
+            class="w-full text-sm px-3 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-slate-500 focus:outline-none focus:border-purple-400">
+        </div>
+      </div>
+
+      <button onclick="genYaml()"
+        class="px-6 py-2.5 bg-purple-600 hover:bg-purple-500 text-white text-sm font-bold rounded-lg transition">
+        生成 YAML 片段 →
+      </button>
+
+      <div id="yaml-out" class="hidden mt-5">
+        <p class="text-xs text-slate-400 mb-2">📋 复制以下内容，追加到 <code class="text-purple-300">_meta/source-list.yaml</code> 的 <code class="text-purple-300">sources:</code> 列表末尾，然后保存文件。下次定时任务将自动采集此信源。</p>
+        <pre id="yaml-text" class="bg-black/50 text-green-300 text-xs p-4 rounded-xl overflow-x-auto mb-3"></pre>
+        <button onclick="copyYaml()" class="px-4 py-2 bg-green-600 hover:bg-green-500 text-white text-xs font-bold rounded-lg transition">📋 复制到剪贴板</button>
+        <span id="copy-ok" class="hidden ml-3 text-green-400 text-xs font-medium">✅ 已复制！</span>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="text-center text-xs text-slate-400 py-6 border-t border-slate-200">
+    RumorCrusher · 信源管理 · <a href="index.html" class="text-rose-500 hover:underline">返回知识库</a>
+  </footer>
+</div>
+
+<script>
+// ── 密码验证 ──
+function checkPwd() {
+  const v = document.getElementById('pwd-input').value;
+  if (v === '0901') {
+    document.getElementById('lock').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+    renderSources();
+    renderStats();
+  } else {
+    document.getElementById('pwd-err').classList.remove('hidden');
+    document.getElementById('pwd-input').value = '';
+    document.getElementById('pwd-input').focus();
+  }
+}
+
+// ── 信源数据 ──
+const SOURCES = [
+  {id:"ithome", name:"IT之家", url:"https://www.ithome.com/", lang:"zh-CN", priority:5, credibility:0.75, tags:["news","mobile","hardware"], notes:"速度快、覆盖全，标题党倾向偏强"},
+  {id:"ifanr", name:"爱范儿", url:"https://www.ifanr.com/", lang:"zh-CN", priority:4, credibility:0.80, tags:["news","mobile","lifestyle"]},
+  {id:"sspai", name:"少数派", url:"https://sspai.com/", lang:"zh-CN", priority:3, credibility:0.85, tags:["review","lifestyle","software"], notes:"评测质量高，偏软件/使用层面"},
+  {id:"pingwest", name:"品玩 PingWest", url:"https://www.pingwest.com/", lang:"zh-CN", priority:3, credibility:0.78, tags:["news","industry"]},
+  {id:"huxiu", name:"虎嗅", url:"https://www.huxiu.com/", lang:"zh-CN", priority:3, credibility:0.75, tags:["analysis","industry"]},
+  {id:"jiqizhixin", name:"机器之心", url:"https://www.jiqizhixin.com/", lang:"zh-CN", priority:4, credibility:0.88, tags:["ai","research","deep"], notes:"AI研究新闻准确度较高"},
+  {id:"qbitai", name:"量子位", url:"https://www.qbitai.com/", lang:"zh-CN", priority:4, credibility:0.82, tags:["ai","research"]},
+  {id:"36kr", name:"36氪", url:"https://www.36kr.com/", lang:"zh-CN", priority:4, credibility:0.75, tags:["news","business","industry"]},
+  {id:"xinzhiyuan", name:"新智元", url:"https://www.aiera.com.cn/", lang:"zh-CN", priority:3, credibility:0.72, tags:["ai","news"], notes:"部分标题偏煽动性，需注意核查"},
+  {id:"gsmarena", name:"GSMArena", url:"https://www.gsmarena.com/", lang:"en", priority:5, credibility:0.92, tags:["mobile","spec","review"], notes:"参数权威源，事实核查时优先引用"},
+  {id:"cnet", name:"CNET", url:"https://www.cnet.com/", lang:"en", priority:4, credibility:0.85, tags:["news","review","consumer"]},
+  {id:"techradar", name:"TechRadar", url:"https://www.techradar.com/", lang:"en", priority:4, credibility:0.82, tags:["news","review","consumer"]},
+  {id:"the-verge", name:"The Verge", url:"https://www.theverge.com/", lang:"en", priority:5, credibility:0.88, tags:["news","review","opinion"]},
+  {id:"ars-technica", name:"Ars Technica", url:"https://arstechnica.com/", lang:"en", priority:4, credibility:0.92, tags:["deep","technical"], notes:"技术深度高、事实核查严"},
+  {id:"anandtech", name:"AnandTech (archived)", url:"https://www.anandtech.com/", lang:"en", priority:3, credibility:0.95, tags:["deep","technical","semi"], notes:"2024年起停止运营，仅作历史参考"},
+  {id:"9to5", name:"9to5Mac / 9to5Google", url:"https://9to5mac.com/", lang:"en", priority:4, credibility:0.80, tags:["apple","google","leaks"]},
+  {id:"android-authority", name:"Android Authority", url:"https://www.androidauthority.com/", lang:"en", priority:3, credibility:0.78, tags:["android","review"]},
+  {id:"mit-tech-review", name:"MIT Technology Review", url:"https://www.technologyreview.com/", lang:"en", priority:4, credibility:0.93, tags:["research","ai","frontier"]},
+  {id:"techcrunch-ai", name:"TechCrunch AI", url:"https://techcrunch.com/category/artificial-intelligence/", lang:"en", priority:3, credibility:0.80, tags:["ai","startup","news"]},
+  {id:"arxiv-cs", name:"arXiv (cs.AR/cs.AI)", url:"https://arxiv.org/list/cs.AR/recent", lang:"en", priority:3, credibility:0.90, tags:["academic","paper"], notes:"预印本，质量参差，需结合引用与作者"},
+  {id:"semianalysis", name:"SemiAnalysis", url:"https://www.semianalysis.com/", lang:"en", priority:4, credibility:0.92, tags:["semi","supply-chain","deep"]},
+  {id:"ieee-spectrum", name:"IEEE Spectrum", url:"https://spectrum.ieee.org/", lang:"en", priority:3, credibility:0.93, tags:["academic","engineering"]},
+  {id:"apple-newsroom", name:"Apple Newsroom", url:"https://www.apple.com/newsroom/", lang:"en", priority:5, credibility:1.00, tags:["official","apple"], official:true},
+  {id:"samsung-newsroom", name:"Samsung Newsroom", url:"https://news.samsung.com/global/", lang:"en", priority:5, credibility:1.00, tags:["official","samsung"], official:true},
+  {id:"xiaomi-official", name:"小米官方", url:"https://www.mi.com/", lang:"zh-CN", priority:5, credibility:1.00, tags:["official","xiaomi"], official:true},
+  {id:"huawei-news", name:"华为官方", url:"https://consumer.huawei.com/cn/press/news/", lang:"zh-CN", priority:5, credibility:1.00, tags:["official","huawei"], official:true},
+  {id:"google-blog", name:"Google The Keyword", url:"https://blog.google/", lang:"en", priority:4, credibility:1.00, tags:["official","google"], official:true},
+  {id:"qualcomm-news", name:"Qualcomm Newsroom", url:"https://www.qualcomm.com/news", lang:"en", priority:4, credibility:1.00, tags:["official","soc"], official:true},
+  {id:"mediatek-news", name:"MediaTek Newsroom", url:"https://www.mediatek.com/news", lang:"en", priority:4, credibility:1.00, tags:["official","soc"], official:true},
+  {id:"yt-mkbhd", name:"MKBHD (YouTube)", url:"https://www.youtube.com/@mkbhd", lang:"en", priority:4, credibility:0.85, tags:["video","review","youtube"]},
+  {id:"bili-geekerwan", name:"极客湾 Geekerwan", url:"https://space.bilibili.com/5365740", lang:"zh-CN", priority:4, credibility:0.90, tags:["video","soc","benchmark","bilibili"], notes:"SoC实测权威，事实核查重要参照"}
+];
+
+let filterMode = 'all';
+let searchQ = '';
+
+function renderStats() {
+  document.getElementById('src-count').textContent = SOURCES.length;
+  document.getElementById('src-zh').textContent = SOURCES.filter(s=>s.lang==='zh-CN').length;
+  document.getElementById('src-en').textContent = SOURCES.filter(s=>s.lang==='en').length;
+  document.getElementById('src-official').textContent = SOURCES.filter(s=>s.official).length;
+}
+
+function renderSources() {
+  const q = searchQ.toLowerCase();
+  const filtered = SOURCES.filter(s => {
+    if (filterMode==='zh-CN') return s.lang==='zh-CN';
+    if (filterMode==='en') return s.lang==='en';
+    if (filterMode==='official') return s.official;
+    if (filterMode==='p5') return s.priority===5;
+    return true;
+  }).filter(s => !q || s.name.toLowerCase().includes(q) || (s.notes||'').toLowerCase().includes(q) || s.tags.join(' ').includes(q));
+
+  const grid = document.getElementById('src-grid');
+  grid.innerHTML = filtered.map(s => {
+    const cred = Math.round(s.credibility*100);
+    const credColor = cred>=95?'text-green-600 bg-green-50':cred>=80?'text-blue-600 bg-blue-50':'text-amber-600 bg-amber-50';
+    const tags = s.tags.map(t=>`<span class="text-xs bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">${t}</span>`).join('');
+    const officialBadge = s.official ? `<span class="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full font-semibold">🏛 官方</span>` : '';
+    const langFlag = s.lang==='zh-CN' ? '🇨🇳' : '🌐';
+    return `
+      <div class="src-card bg-white rounded-xl border border-slate-200 p-4">
+        <div class="flex items-start justify-between mb-2">
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="text-sm">${langFlag}</span>
+            <a href="${s.url}" target="_blank" class="font-bold text-slate-900 text-sm hover:text-purple-600 transition">${s.name}</a>
+            ${officialBadge}
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="text-xs font-bold px-2 py-0.5 rounded-full ${credColor}">${cred}%</span>
+            <span class="text-xs text-slate-400">P${s.priority}</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-1 mb-2">${tags}</div>
+        ${s.notes ? `<p class="text-xs text-slate-400 mt-1">${s.notes}</p>` : ''}
+        <p class="text-xs text-slate-300 mt-1 font-mono truncate">${s.url}</p>
+      </div>`;
+  }).join('');
+}
+
+function genYaml() {
+  const name = document.getElementById('n-name').value.trim();
+  const url  = document.getElementById('n-url').value.trim();
+  const lang = document.getElementById('n-lang').value;
+  const pri  = document.getElementById('n-priority').value;
+  const tags = document.getElementById('n-tags').value.trim();
+  const cred = document.getElementById('n-cred').value;
+  const notes= document.getElementById('n-notes').value.trim();
+
+  if (!name || !url) { alert('名称和 URL 为必填项'); return; }
+
+  const id = name.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9\-]/g,'').replace(/-+/g,'-');
+  const tagList = tags ? tags.split(/[,，\s]+/).filter(Boolean).join(', ') : 'news';
+  let yaml = `  - id: ${id}\n    name: ${name}\n    url: ${url}\n    lang: ${lang}\n    priority: ${pri}\n    credibility_baseline: ${cred}\n    tags: [${tagList}]`;
+  if (notes) yaml += `\n    notes: ${notes}`;
+
+  document.getElementById('yaml-text').textContent = yaml;
+  document.getElementById('yaml-out').classList.remove('hidden');
+  document.getElementById('yaml-out').scrollIntoView({behavior:'smooth'});
+}
+
+function copyYaml() {
+  navigator.clipboard.writeText(document.getElementById('yaml-text').textContent).then(() => {
+    const el = document.getElementById('copy-ok');
+    el.classList.remove('hidden');
+    setTimeout(()=>el.classList.add('hidden'), 3000);
+  });
+}
+
+// ── Event listeners ──
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b=>{
+      b.classList.remove('active','bg-slate-800','text-white','border-slate-800');
+      b.classList.add('border-slate-300','text-slate-600');
+    });
+    btn.classList.add('active','bg-slate-800','text-white','border-slate-800');
+    btn.classList.remove('border-slate-300','text-slate-600');
+    filterMode = btn.dataset.filter;
+    renderSources();
+  });
+});
+document.getElementById('src-search').addEventListener('input', e => {
+  searchQ = e.target.value;
+  renderSources();
+});
+</script>
+</body>
+</html>

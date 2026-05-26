@@ -116,7 +116,7 @@ a{color:inherit;text-decoration:none}
     <span>›</span>
     <span id="breadcrumbLabel">知识图谱</span>
   </div>
-  <a class="nav-back" href="../tech-digest/index.html" onclick="event.preventDefault();location.href='../tech-digest/index.html?t='+Date.now()">← 返回每日简报</a>
+  <a class="nav-back" href="../knowledge-base/index.html" onclick="event.preventDefault();location.href='../knowledge-base/index.html?t='+Date.now()">← 手机知识库</a>
 </nav>
 
 <div class="layout">
@@ -144,7 +144,7 @@ a{color:inherit;text-decoration:none}
 
 <div class="wiki-footer">
   <span>RumorCrusher LLM Wiki · 知识飞轮每日更新 · 所有事实均有信源可追溯</span>
-  <span><a href="../tech-digest/index.html" onclick="event.preventDefault();location.href='../tech-digest/index.html?t='+Date.now()">每日简报</a> · <a href="../index.html" onclick="event.preventDefault();location.href='../index.html?t='+Date.now()">主站</a> · <a href="https://github.com/chirs0901/rumorcrusher" target="_blank">GitHub</a></span>
+  <span><a href="../knowledge-base/index.html" onclick="event.preventDefault();location.href='../knowledge-base/index.html?t='+Date.now()">手机知识库</a> · <a href="../index.html" onclick="event.preventDefault();location.href='../index.html?t='+Date.now()">主站</a> · <a href="https://github.com/chirs0901/rumorcrusher" target="_blank">GitHub</a></span>
 </div>
 
 <script>
@@ -353,10 +353,312 @@ var WIKI = {
           ]
         }
       ]
+    },
+    {
+      id: 'kirin-9030-pro',
+      name: '麒麟 9030 Pro',
+      subtitle: '华为海思 · SMIC N+3 · DUV 四重曝光',
+      type: 'entity',
+      typeLabel: '芯片',
+      color: '#cf0a2c',
+      icon: 'K',
+      verdict: 'Supported',
+      firstDate: '2026-05-25',
+      relations: [
+        {id: 'huawei', label: '首发机型：Mate 80 Pro Max', kind: 'entity'},
+        {id: 'tsmc-2nm-supply-2026', label: '对比：TSMC N2 GAA 路线', kind: 'topic'}
+      ],
+      sections: [
+        {
+          title: '基本规格',
+          type: 'kv',
+          rows: [
+            ['型号', '麒麟 9030 Pro'],
+            ['设计厂商', '华为海思（HiSilicon）'],
+            ['代工厂', '中芯国际（SMIC）'],
+            ['制程节点', 'N+3（DUV 四重曝光，性能介于 7nm 和 5nm 之间）'],
+            ['首发机型', '华为 Mate 80 Pro Max'],
+            ['确认时间', '2025 年底（TechInsights 拆解报告）']
+          ]
+        },
+        {
+          title: '制程技术细节',
+          type: 'para',
+          text: '麒麟 9030 Pro 是中芯国际首款商用 N+3 节点芯片。由于无法获得 ASML EUV 光刻机授权，SMIC 使用深紫外（DUV）光刻机配合多重曝光技术（最多 4 次曝光）实现该密度。\n\n⚠️ 注意：部分报道将 N+3 称为「5nm」，TechInsights 明确指出这是不准确的——该节点性能位于 7nm 与 5nm 之间，不能与台积电/三星的商业 5nm 等同。'
+        },
+        {
+          title: 'SMIC 制程演进路线',
+          type: 'table',
+          headers: ['节点', '首发产品', '说明'],
+          rows: [
+            ['N+1', '麒麟 9000s（2023）', '7nm 级别，DUV 双重曝光'],
+            ['N+2', '麒麟 9010（2024）', '改进版，工艺进一步优化'],
+            ['N+3', '麒麟 9030 Pro（当前最新）', 'DUV 四重曝光，性能接近 5nm']
+          ]
+        },
+        {
+          title: '信源历史',
+          type: 'sources',
+          rows: [
+            ['2026-05-25', 'TechInsights 拆解报告', '权威确认 SMIC N+3 节点，明确「非 5nm」', 'Supported'],
+            ['2026-05-25', "Tom's Hardware", '报道 TechInsights 分析，阐明 5nm 区别', 'Supported'],
+            ['2026-05-25', 'Wccftech', 'DUV 多重曝光技术极限分析', 'Supported']
+          ]
+        }
+      ]
+    },
+    {
+      id: 'dimensity-9600',
+      name: 'Dimensity 9600',
+      subtitle: 'MediaTek · TSMC N2P · 双超大核 · 2026 Q3（爆料）',
+      type: 'entity',
+      typeLabel: '芯片',
+      color: '#0055cc',
+      icon: 'D',
+      verdict: 'Conflicting Evidence',
+      firstDate: '2026-05-25',
+      relations: [
+        {id: 'tsmc-2nm-supply-2026', label: 'TSMC N2P 产能博弈', kind: 'topic'},
+        {id: 'snapdragon-8-elite-gen5', label: '旗舰 SoC 竞争', kind: 'entity'}
+      ],
+      sections: [
+        {
+          title: '基本信息（爆料，待官宣）',
+          type: 'kv',
+          rows: [
+            ['型号', 'Dimensity 9600 / 9600 Pro'],
+            ['设计厂商', '联发科（MediaTek）'],
+            ['代工厂', '台积电（TSMC）'],
+            ['制程节点', 'N2P（2nm 优化版，爆料）'],
+            ['CPU 架构', '2 超大核 + 3 大核 + 3 小核（2+3+3，爆料）'],
+            ['超大核频率', '约 5GHz（爆料）'],
+            ['预计发布', '2026 Q3（爆料）']
+          ]
+        },
+        {
+          title: '关键技术亮点（爆料）',
+          type: 'list',
+          items: [
+            '首次双超大核设计：Dimensity 9 系列首次引入 2 颗超大核，打破此前单核格局',
+            'TSMC N2P 节点：比 N2 进一步优化密度，性能/瓦特改善约 5-10%',
+            'GPU 升级：新增神经网络着色器，增强 AI 与图形协同；支持帧插值、分辨率升缩、光线追踪',
+            '频率跃升：约 5GHz 超大核频率较 Dimensity 9400（3.62GHz）显著提升'
+          ]
+        },
+        {
+          title: '与前代对比',
+          type: 'table',
+          headers: ['项目', 'Dimensity 9400', 'Dimensity 9600（预测）'],
+          rows: [
+            ['制程', 'TSMC N3E', 'TSMC N2P'],
+            ['超大核数', '1 颗', '2 颗（首次）'],
+            ['最高频率', '约 3.62GHz', '约 5GHz'],
+            ['发布时间', '2025 Q4', '2026 Q3（预测）']
+          ]
+        },
+        {
+          title: '信源历史',
+          type: 'sources',
+          rows: [
+            ['2026-05-25', 'Wccftech（综合爆料）', 'N2P + 双超大核架构汇总', 'Conflicting Evidence'],
+            ['2026-05-25', 'Gizmochina', 'CPU 布局爆料：2+3+3', 'Conflicting Evidence'],
+            ['2026-05-25', 'AndroidHeadlines', 'N2P 制程独立消息来源', 'Conflicting Evidence']
+          ]
+        }
+      ]
+    },
+    {
+      id: 'apple',
+      name: 'Apple 苹果',
+      subtitle: 'iPhone 18 Pro · A20 Pro · TSMC N2 最大客户',
+      type: 'entity',
+      typeLabel: '品牌',
+      color: '#555555',
+      icon: 'A',
+      verdict: 'Supported',
+      firstDate: '2026-05-25',
+      relations: [
+        {id: 'tsmc-2nm-supply-2026', label: 'A20 Pro 占 TSMC N2 产能 50%+', kind: 'topic'},
+        {id: 'foldable-2026', label: 'iPhone Fold 传闻', kind: 'topic'}
+      ],
+      sections: [
+        {
+          title: '2026 关键动态',
+          type: 'kv',
+          rows: [
+            ['旗舰产品', 'iPhone 18 Pro（预计 2026 秋季发布）'],
+            ['SoC', 'A20 Pro（TSMC N2，确认）'],
+            ['TSMC N2 产能占比', '50%+（产能最大单一客户）'],
+            ['折叠产品', 'iPhone Fold（爆料，定价 $1,800-2,500）'],
+            ['Q1 市场地位', '中国市场出货量第二（同比 +42%），华为第一']
+          ]
+        },
+        {
+          title: '信源历史',
+          type: 'sources',
+          rows: [
+            ['2026-05-25', 'TechNetbook / Bloomberg', 'A20 Pro TSMC N2 产能分配确认', 'Supported'],
+            ['2026-05-25', 'CounterPoint Research', 'Q1 中国市场出货量排名', 'Supported']
+          ]
+        }
+      ]
+    },
+    {
+      id: 'samsung',
+      name: '三星 Samsung',
+      subtitle: 'Galaxy Z Fold 8 · HBM4E · OLED 全球供应',
+      type: 'entity',
+      typeLabel: '品牌',
+      color: '#1428a0',
+      icon: 'S',
+      verdict: 'Supported',
+      firstDate: '2026-05-25',
+      relations: [
+        {id: 'foldable-2026', label: 'Z Fold 8 折叠旗舰', kind: 'topic'},
+        {id: 'ai-dram-crisis-2026', label: 'SK 海力士/三星 HBM 挤占 LPDDR 产能', kind: 'topic'}
+      ],
+      sections: [
+        {
+          title: '2026 关键动态',
+          type: 'kv',
+          rows: [
+            ['折叠旗舰', 'Galaxy Z Fold 8（50 万次折叠耐久，爆料）'],
+            ['DRAM 战略', '优先生产 HBM4E（AI 服务器），LPDDR5X 供应受挤压'],
+            ['OLED 地位', '全球最大智能手机 OLED 面板供应商'],
+            ['存储扩产', '计划扩产 50%+，但 2028 年前新产能难以大规模释放']
+          ]
+        },
+        {
+          title: '信源历史',
+          type: 'sources',
+          rows: [
+            ['2026-05-25', 'TrendForce / Tom\'s Hardware', 'HBM 产能挤压 LPDDR5X 供应分析', 'Supported'],
+            ['2026-05-14', 'Samsung 官方 + TrendForce', 'Z Fold 8 耐久声明', 'Not Enough Evidence']
+          ]
+        }
+      ]
     }
   ],
 
   topics: [
+    {
+      id: 'ai-dram-crisis-2026',
+      name: 'AI 驱动的 DRAM 供应危机',
+      subtitle: 'LPDDR5X 暴涨 78-83% · 手机价格上调 · 缓解待 2027',
+      type: 'topic',
+      typeLabel: '主题',
+      color: '#c8102e',
+      icon: '💾',
+      verdict: 'Supported',
+      firstDate: '2026-05-25',
+      relations: [
+        {id: 'samsung', label: '三星/SK 海力士优先 HBM', kind: 'entity'},
+        {id: 'tsmc-2nm-supply-2026', label: 'AI 算力需求双重挤压供应链', kind: 'topic'}
+      ],
+      sections: [
+        {
+          title: '核心事件',
+          type: 'para',
+          text: '2026 年 Q2，手机 DRAM 合约价出现历史性暴涨。TrendForce 官方报告显示 LPDDR5X 涨幅 78-83%，LPDDR4X 涨幅 70-75%。根本原因是 AI 服务器（NVIDIA Vera Rubin / Grace Blackwell）大量消耗 LPDDR5X，每 GB HBM 消耗晶圆产能约为普通 DRAM 的 3 倍。'
+        },
+        {
+          title: '价格数据',
+          type: 'table',
+          headers: ['内存类型', 'Q2 涨幅', '合约价区间', '来源'],
+          rows: [
+            ['LPDDR5X', '78-83%', '$10-21/GB', 'TrendForce（官方）'],
+            ['LPDDR4X', '70-75%', '—', 'TrendForce（官方）'],
+            ['HBM vs DRAM 产能倍率', '约 3x', '—', "Tom's Hardware"]
+          ]
+        },
+        {
+          title: '对手机行业的传导链',
+          type: 'list',
+          items: [
+            '旗舰配置下调：16GB 占比下滑，12GB 成高端主流，8GB 巩固中端',
+            '整机涨价：中国市场 2026 Q1 全品类手机价格上涨 500-1500 元',
+            '出货量压力：小米/OPPO/vivo 主动下调全年出货目标 10-20%',
+            '结构调整：品牌加速向高端冲击（单台利润提升对冲量跌）'
+          ]
+        },
+        {
+          title: '缓解时间线',
+          type: 'para',
+          text: 'TrendForce 预计 DRAM 价格有意义的缓解要等到 2027 年底。三星/SK 海力士计划扩产 50% 以上，但新产能 2028 年前难以大规模释放。'
+        },
+        {
+          title: '信源历史',
+          type: 'sources',
+          rows: [
+            ['2026-05-25', 'TrendForce 官方报告', 'Q2 DRAM 价格预测报告（官方数据）', 'Supported'],
+            ['2026-05-25', "Tom's Hardware", 'AI 服务器 LPDDR5X 需求分析', 'Supported'],
+            ['2026-05-25', 'Wccftech', '手机价格影响传导分析', 'Supported'],
+            ['2026-05-25', 'AndroidHeadlines', 'Q2 价格上涨即时报道', 'Supported']
+          ]
+        }
+      ]
+    },
+    {
+      id: 'tsmc-2nm-supply-2026',
+      name: 'TSMC 2nm 产能格局 2026',
+      subtitle: '五厂齐开 · 产能售罄 · Apple 占 50%+',
+      type: 'topic',
+      typeLabel: '主题',
+      color: '#0066cc',
+      icon: '🏭',
+      verdict: 'Supported',
+      firstDate: '2026-05-25',
+      relations: [
+        {id: 'apple', label: 'A20 Pro 占 N2 产能 50%+', kind: 'entity'},
+        {id: 'dimensity-9600', label: 'Dimensity 9600 N2P 窗口极有限', kind: 'entity'},
+        {id: 'ai-dram-crisis-2026', label: 'AI 芯片双重挤压手机供应链', kind: 'topic'}
+      ],
+      sections: [
+        {
+          title: '2026 年产能现状',
+          type: 'para',
+          text: '台积电 N2 节点（2nm 级 GAA 晶体管）于 2025 年 Q4 正式进入量产，2026 年产能全面提速。目前五座晶圆厂同时运营，2026 年 N2 产能全部售罄，无余量。'
+        },
+        {
+          title: '晶圆厂分布',
+          type: 'table',
+          headers: ['工厂', '地点', '状态'],
+          rows: [
+            ['Fab 20', '高雄', '量产中'],
+            ['Fab 22', '高雄', '量产中'],
+            ['Fab 23', '高雄', '量产中'],
+            ['Fab 24', '高雄', '量产中'],
+            ['Fab 25', '新竹', '量产中']
+          ]
+        },
+        {
+          title: '客户产能分配',
+          type: 'table',
+          headers: ['客户', '占比', '主要芯片'],
+          rows: [
+            ['Apple', '50%+', 'A20 Pro（iPhone 18 Pro，2026 秋）'],
+            ['NVIDIA', '部分', 'Rubin GPU（AI 加速器）'],
+            ['AMD', '部分', 'Zen 6 PC 处理器'],
+            ['Qualcomm', '部分', 'Snapdragon 8 Elite Gen3（预计 2027）'],
+            ['MediaTek', '部分（极有限）', 'Dimensity 9600（2026 Q3，预测）']
+          ]
+        },
+        {
+          title: 'AI 芯片 vs 手机芯片的产能博弈',
+          type: 'para',
+          text: 'NVIDIA、AMD 等 AI 加速器芯片单颗面积大（200-800mm²），占用晶圆产能是手机 SoC（约 100mm²）的 2-8 倍。苹果 A20 Pro 以量取胜（数亿颗/年），NVIDIA 以面积取胜。两者共同将 2026 年 N2 产能「抢光」，中等规模客户（联发科、高通）可用窗口极有限。'
+        },
+        {
+          title: '信源历史',
+          type: 'sources',
+          rows: [
+            ['2026-05-25', "Tom's Hardware", 'N2 量产启动确认', 'Supported'],
+            ['2026-05-25', 'MSN / Bloomberg', '五座工厂同时运营，产能售罄', 'Supported'],
+            ['2026-05-25', 'TechNetbook', 'N2 客户产能分配路线图', 'Supported']
+          ]
+        }
+      ]
+    },
     {
       id: 'ai-misinformation-2026',
       name: 'AI 生成虚假信息 2026',
