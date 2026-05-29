@@ -1,0 +1,310 @@
+{
+  "batch_id": "RC-20260527-193256",
+  "run_type": "evening",
+  "date": "2026-05-27",
+  "timestamp": "19:32:56 CST",
+  "search_rounds": 8,
+  "total_items": 30,
+  "items": [
+    {
+      "id": "E001",
+      "title": "华为麒麟2026芯片官宣：LogicFolding技术，晶体管密度+53.5%，频率首超3GHz",
+      "date": "2026-05-25",
+      "category": "chip",
+      "source": "IT之家 / 新浪财经",
+      "url": "https://www.ithome.com/0/954/746.htm",
+      "summary": "华为在ISCAS 2026上官方剧透麒麟2026芯片采用逻辑折叠（LogicFolding）技术，晶体管密度238 MTr/mm²（+53.5%），P核能效+41%，峰值频率3.1GHz（首超3GHz）。预计今年秋季发布。",
+      "check_worthiness": "high"
+    },
+    {
+      "id": "E002",
+      "title": "骁龙8 Elite Gen5：台积电N3P，NPU 220TOPS，支持220 Tokens/s LLM推理",
+      "date": "2026-05-10",
+      "category": "chip",
+      "source": "雷科技 / 百度百科",
+      "url": "https://www.leikeji.com/article/73151",
+      "summary": "骁龙8 Elite Gen5采用台积电N3P制程，CPU单核+20%，能效+35%，NPU Hexagon整体+37%，端侧算力220TOPS，支持最新LLM设备端推理，处理速度达220 Tokens/s。",
+      "check_worthiness": "medium"
+    },
+    {
+      "id": "E003",
+      "title": "天玑9400+发布：MediaTek NPU升级，面向生成式推理与多模态模型",
+      "date": "2026-05-15",
+      "category": "chip",
+      "source": "太平洋科技",
+      "url": "https://mobile.pconline.com.cn/1913/19138932.html",
+      "summary": "联发科发布天玑9400+移动平台，旗舰级MediaTek NPU针对生成式推理、多模态模型进行专项优化，AI和性能体验全面升级，预计下半年搭载于OPPO、vivo旗舰机型。",
+      "check_worthiness": "medium"
+    },
+    {
+      "id": "E004",
+      "title": "台积电2nm产能售罄至2028年，月产能目标14万片，单价超$30,000/晶圆",
+      "date": "2026-03-31",
+      "category": "upstream",
+      "source": "Dataconomy / BigGo Finance",
+      "url": "https://dataconomy.com/2026/03/31/tsmcs-advanced-chip-capacity-is-booked-out-through-2028/",
+      "summary": "受AI芯片需求暴涨驱动，台积电2nm产能已全数预定至2028年。月产能目标约14万片晶圆（年底可达），单价超$30,000（高于3nm约$20,000）。手机AP厂商面临产能配额压力，Snapdragon 8 Elite Gen5已锁定3nm产能。",
+      "check_worthiness": "high"
+    },
+    {
+      "id": "E005",
+      "title": "三星2nm良率升至60%，量产在即，已获Tesla/NVIDIA大单",
+      "date": "2026-05-20",
+      "category": "upstream",
+      "source": "SemiWiki / Tweaktown",
+      "url": "https://semiwiki.com/forum/threads/tsmcs-2nm-chips-the-results-are-out.24329/",
+      "summary": "三星代工2nm GAA工艺良率提升至60%区间，下半年2026量产准备充分，较3nm GAA性能+5%、能效+8%。已签订Tesla AI6芯片$165亿代工合同（2025-2033），并获NVIDIA订单，2nm相关订单同比预计增长30%以上。",
+      "check_worthiness": "high"
+    },
+    {
+      "id": "E006",
+      "title": "iPhone 18 Pro OLED供应：Samsung+LG接管，BOE被排除Pro系列，采用LTPO+技术",
+      "date": "2026-05-07",
+      "category": "display",
+      "source": "MacRumors / The Elec / SamMobile",
+      "url": "https://www.macrumors.com/2026/05/06/iphone-18-pro-ltpo-display-upgrade-samsung/",
+      "summary": "iPhone 18 Pro及Pro Max的OLED面板供应商确认为Samsung Display（约1.46亿块）和LG Display（约8200万块），BOE因LTPO+技术能力不足被排除Pro系列，仅保留非Pro旧款订单。LTPO+技术可将氧化物TFT延伸至驱动TFT，改善精细电流控制和电池效率。",
+      "check_worthiness": "high"
+    },
+    {
+      "id": "E007",
+      "title": "BOE B16成都Gen 8.6 OLED工厂5月底开始量产，供MacBook Pro OLED面板",
+      "date": "2026-05-14",
+      "category": "display",
+      "source": "TechTimes / Digitimes",
+      "url": "https://www.techtimes.com/articles/316600/20260514/boe-begins-gen-86-oled-production-this-month-beating-rival-samsung-display-market.htm",
+      "summary": "京东方B16成都工厂（Gen 8.6 AMOLED）于2026年5月底率先开始量产，比原计划年底提前约6个月，首批供货苹果MacBook Pro 14英寸/16英寸OLED面板，还获华硕/宏碁订单。满产后月产能32,000张基板，预计2029年达满产。投资额630亿元。",
+      "check_worthiness": "high"
+    },
+    {
+      "id": "E008",
+      "title": "BOE 2026年目标iPhone屏幕出货3500万块，但被排除iPhone 18 Pro订单",
+      "date": "2026-05-07",
+      "category": "display",
+      "source": "TechNode / AppleInsider",
+      "url": "https://technode.com/2026/05/07/apple-and-boe-reportedly-deepen-oled-partnership-as-boe-targets-35-million-iphone-display-shipments-in-2026/",
+      "summary": "据报道苹果与BOE加深OLED合作，BOE 2026年iPhone屏幕出货目标3500万块，但仅覆盖iPhone 14/15/16e/17e/17标准版等非旗舰型号。BOE正扩张产能以弥补被排除Pro系列的缺口，并积极争取未来苹果旗舰订单。",
+      "check_worthiness": "medium"
+    },
+    {
+      "id": "E009",
+      "title": "Galaxy Z Fold 8预计7月22日伦敦Unpacked发布：200MP主摄，5000mAh，45W，$1999起",
+      "date": "2026-05-22",
+      "category": "foldable",
+      "source": "SamMobile / PhoneArena / Gadgetbridge",
+      "url": "https://www.sammobile.com/news/samsung-galaxy-z-fold-8-everything-to-know/",
+      "summary": "三星Galaxy Z Fold 8预计7月22日伦敦Unpacked发布，搭载骁龙8 Elite Gen5，内屏8英寸120Hz，200MP主摄+50MP超广+10MP长焦，电池从4400mAh升至5000mAh，快充从25W升至45W，起售价$1999。同场还将发布Z Flip 8和全新Z Fold 8 Wide。",
+      "check_worthiness": "high"
+    },
+    {
+      "id": "E010",
+      "title": "Galaxy Z Fold 8 Wide全新机型：4:3内屏比例，类平板折叠形态",
+      "date": "2026-05-20",
+      "category": "foldable",
+      "source": "SamMobile / TheZFoldCase",
+      "url": "https://www.sammobile.com/news/more-galaxy-z-fold-8-fold-8-wide-specifications-leak/",
+      "summary": "三星疑推出全新Galaxy Z Fold 8 Wide机型，采用4:3宽屏比例内屏，展开后更接近平板形态，设计理念不同于传统竖折手机。目前信源为单一泄露渠道TechManiacs，其他媒体为转载，尚未独立核实，定价未知。",
+      "check_worthiness": "medium"
+    },
+    {
+      "id": "E011",
+      "title": "DRAM合同价Q1暴涨90-95%，手机端存储涨幅60-70%，HBM产能挤压消费级",
+      "date": "2026-05-12",
+      "category": "memory",
+      "source": "新浪财经 / 证券时报",
+      "url": "https://finance.sina.cn/stock/jdts/2026-05-12/detail-inhxqzkq1700569.d.html",
+      "summary": "2026年Q1 DRAM合同价环比涨幅从预估55-60%上调至90-95%，手机应用端涨60-70%。核心原因：HBM4进入量产阶段，更多产能向高带宽内存倾斜，消费端供应被进一步挤压。OPPO、荣耀等品牌已将新机价格上调100-200元。",
+      "check_worthiness": "high"
+    },
+    {
+      "id": "E012",
+      "title": "NAND Flash价格Q1涨55-60%，整机BOM成本+25%，智能手机出货预计降8-13%",
+      "date": "2026-05-10",
+      "category": "memory",
+      "source": "证券时报 / IDC / Counterpoint",
+      "url": "https://www.stcn.com/article/detail/3681912.html",
+      "summary": "2026年Q1 NAND Flash合同价环比涨幅从33-38%上调至55-60%，叠加DRAM涨价，智能手机BOM成本预计上升25%。存储器件占手机成本从10-15%升至20%。IDC和Counterpoint预测2026年全球智能手机出货量下滑8-13%，部分厂商考虑下调入门机内存配置。",
+      "check_worthiness": "high"
+    },
+    {
+      "id": "E013",
+      "title": "HBM3e 2026年合约价同比下降，但产能配额仍优先分配给AI客户",
+      "date": "2026-05-08",
+      "category": "memory",
+      "source": "华尔街见闻 / 知乎",
+      "url": "https://wallstreetcn.com/articles/3762731",
+      "summary": "由于竞争格局趋于稳定（SK海力士/三星/美光三足鼎立）以及买方库存积累，HBM3e 2026年合约价预计同比下降。但三大存储厂仍将优先配给AI数据中心客户，消费端DRAM/NAND供应持续偏紧，形成高端存储价跌、消费存储价涨的分化格局。",
+      "check_worthiness": "medium"
+    },
+    {
+      "id": "E014",
+      "title": "DDR5 2026年在服务器市场成主流，渗透率快速提升",
+      "date": "2026-05-05",
+      "category": "memory",
+      "source": "知乎行业研究 / 证券研究报告",
+      "url": "https://zhuanlan.zhihu.com/p/1980584190652213172",
+      "summary": "2026年DDR5在服务器市场渗透率快速提升，预计成为主流标准，推动AI训练和推理服务器升级。HBM/企业级SSD成国际大厂竞争焦点，消费级DRAM/NAND逐渐成为产能剩余承接者，国产存储厂商（长鑫、长江存储）迎来进入高端市场的机遇窗口。",
+      "check_worthiness": "medium"
+    },
+    {
+      "id": "E015",
+      "title": "小米17 Max规格确认：8000mAh Si-C电池，100W有线，骁龙8 Elite Gen5，5月底发布",
+      "date": "2026-05-26",
+      "category": "brands",
+      "source": "澎湃新闻 / 中关村在线",
+      "url": "https://m.thepaper.cn/newsDetail_forward_33090599",
+      "summary": "小米17 Max配备8000mAh硅碳（Si-C）超大电池，支持100W有线+50W无线快充，搭载骁龙8 Elite Gen5，6.9英寸1.5K直屏，2亿像素主摄。国家CCC认证于5月8日完成，预计5月底正式发布，标志Max系列回归。",
+      "check_worthiness": "high"
+    },
+    {
+      "id": "E016",
+      "title": "moto razr fold 5月19日发布：联想首款横向大折叠旗舰",
+      "date": "2026-05-19",
+      "category": "foldable",
+      "source": "中关村在线",
+      "url": "https://mobile.zol.com.cn/more/3_506.shtml",
+      "summary": "联想官方宣布moto razr fold于2026年5月19日正式发布，定位旗舰级横向大折叠手机，为moto品牌首款此类产品。具体规格未完全披露，延续razr系列折叠形态路线。",
+      "check_worthiness": "medium"
+    },
+    {
+      "id": "E017",
+      "title": "vivo S60确认5月29日发布",
+      "date": "2026-05-27",
+      "category": "brands",
+      "source": "IT之家",
+      "url": "https://www.ithome.com",
+      "summary": "vivo官方宣布S60将于2026年5月29日正式发布，S系列主打影像与外观设计，具体参数尚未全面公布。",
+      "check_worthiness": "low"
+    },
+    {
+      "id": "E018",
+      "title": "华为Pura X Max：麒麟9030 Pro，整机性能+30%，10999元起",
+      "date": "2026-04-20",
+      "category": "foldable",
+      "source": "观察者网 / 证券时报",
+      "url": "https://www.guancha.cn/economy/2026_01_22_804722.shtml",
+      "summary": "华为Pura X Max搭载麒麟9030 Pro芯片，整机综合性能提升30%，标准版10999元起，典藏版12999元起。华为以71.8%市占率主导2025年全年折叠屏市场，2026年延续超70%份额优势。",
+      "check_worthiness": "medium"
+    },
+    {
+      "id": "E019",
+      "title": "2026年Q1中国智能手机出货量同比降1%，华为排名第一",
+      "date": "2026-05-10",
+      "category": "brands",
+      "source": "太平洋科技",
+      "url": "https://mobile.pconline.com.cn/2129/21296792.html",
+      "summary": "2026年Q1中国大陆智能手机出货量同比下降约1%，华为以约20%市占率排名第一，苹果凭借换机需求和以旧换新政策实现小幅逆势增长，小米/荣耀/vivo/OPPO等厂商市场份额相对稳定。",
+      "check_worthiness": "medium"
+    },
+    {
+      "id": "E020",
+      "title": "手机价格坐'过山车'：涨价后又降价，618前厂商加速清货",
+      "date": "2026-05-21",
+      "category": "brands",
+      "source": "新浪财经",
+      "url": "https://finance.sina.cn/stock/jdts/2026-05-21/detail-inhyshrk5813444.d.html",
+      "summary": "中国手机市场出现'先涨后降'现象：受存储成本上升影响，4月多款新机官方定价上调；但5月下旬临近618大促，厂商开始降价促销清退老款机型，为新机腾出市场空间。华为、小米、OPPO、vivo均参与这一价格博弈。",
+      "check_worthiness": "medium"
+    },
+    {
+      "id": "E021",
+      "title": "TSMC 2nm vs Samsung 2nm：代工市场竞争格局与手机AP布局",
+      "date": "2026-01-21",
+      "category": "upstream",
+      "source": "Digitimes / PatentPC",
+      "url": "https://www.digitimes.com/news/a20260121PD241/samsung-tsmc-capacity-ai-chip-demand.html",
+      "summary": "台积电2nm在良率和产能方面领先，苹果A20 Pro/骁龙旗舰等高端手机AP均选用台积电，三星代工2nm虽达60%良率但主要服务自身Exynos及Tesla/NVIDIA等AI客户。台积电产能挤压为三星代工提供差异化机会，但手机AP领域短期仍难撼动台积电主导地位。",
+      "check_worthiness": "medium"
+    },
+    {
+      "id": "E022",
+      "title": "骁龙8 Elite Gen6预计2026年9月发布，GPU大升级但CPU增幅有限",
+      "date": "2026-05-15",
+      "category": "chip",
+      "source": "PhoneArena",
+      "url": "https://www.phonearena.com/news/the-next-flagship-snapdragon-chipset-big-gpu-energy-petite-cpu-expectations_id179470",
+      "summary": "业界分析显示骁龙8 Elite Gen6预计2026年9月发布（或命名为Snapdragon 8 Elite 2），GPU性能大幅提升，但CPU性能增幅相对保守，与前代相比更注重AI算力和能效优化。预计仍采用台积电先进制程。",
+      "check_worthiness": "medium"
+    },
+    {
+      "id": "E023",
+      "title": "华为2026年手机芯片'逻辑折叠'技术：不依赖先进制程节点的密度突破路径",
+      "date": "2026-05-25",
+      "category": "chip",
+      "source": "新浪财经 / IT之家",
+      "url": "https://finance.sina.com.cn/stock/t/2026-05-25/doc-inhzasck5794217.shtml",
+      "summary": "华为麒麟2026的LogicFolding技术将单层芯片设计扩展至双层，在不依赖台积电/三星最先进制程节点的前提下实现晶体管密度大幅提升（+53.5%），这一技术路径被视为华为应对制程封锁的关键策略，也是业界首次成功量产验证。",
+      "check_worthiness": "high"
+    },
+    {
+      "id": "E024",
+      "title": "Galaxy Z TriFold三折叠手机：三星首款，5600mAh，10英寸内屏，19999元起",
+      "date": "2025-12-01",
+      "category": "foldable",
+      "source": "DoNews / 新浪财经",
+      "url": "https://www.donews.com/article/detail/0/95497.html",
+      "summary": "三星Galaxy Z TriFold为全球首款商用三折叠手机，双向内折设计，展开为10英寸Dynamic AMOLED内屏，6.49英寸外屏，骁龙8 Elite for Galaxy，三分体电池总计5600mAh，45W快充，2亿像素主摄，16GB+512GB版19999元，16GB+1TB版21999元。",
+      "check_worthiness": "medium"
+    },
+    {
+      "id": "E025",
+      "title": "苹果iPhone 18 Pro屏下FaceID技术路线：洪水投影仪vs结构光方案仍存争议",
+      "date": "2026-05-22",
+      "category": "display",
+      "source": "MacRumors",
+      "url": "https://www.macrumors.com/2026/05/06/iphone-18-pro-ltpo-display-upgrade-samsung/",
+      "summary": "多份报告显示iPhone 18 Pro将引入屏下FaceID，但技术路线存在争议：MacRumors援引供应链称采用'洪水投影仪（flood illuminator）'方案，另有分析师称苹果仍在测试'结构光（structured light）'技术，最终方案未确认，Dynamic Island尺寸缩小幅度（28%-35%）数据同样来源不一。",
+      "check_worthiness": "high"
+    },
+    {
+      "id": "E026",
+      "title": "国产存储厂商迎AI驱动黄金窗口：长鑫LPDDR5X、长江存储UFS 4.0加速推进",
+      "date": "2026-05-15",
+      "category": "memory",
+      "source": "澎湃新闻 / 一财",
+      "url": "https://www.thepaper.cn/newsDetail_forward_31636087",
+      "summary": "随着三星/SK海力士/美光产能向HBM集中，消费级DRAM/NAND供应收窄，长鑫存储LPDDR5X和长江存储UFS 4.0产品找到市场切入点，国产手机厂商（小米/vivo/荣耀）已有部分机型采用国产存储方案。",
+      "check_worthiness": "medium"
+    },
+    {
+      "id": "E027",
+      "title": "2026年5月手机处理器天梯：骁龙8 Elite Gen5、天玑9500、A19 Pro三足鼎立",
+      "date": "2026-05-01",
+      "category": "chip",
+      "source": "CashifyBlog / topcpu.net",
+      "url": "https://www.cashify.in/best-processor-for-mobile-phone-ranking-list",
+      "summary": "2026年5月主流旗舰SoC天梯格局：高通骁龙8 Elite Gen5位居综合第一，天玑9500系列紧随其后，苹果A19 Pro在单核及能效方面仍具优势，谷歌Tensor G5和三星Exynos 2500属第二梯队。中端市场天玑8400、骁龙7 Gen4表现突出。",
+      "check_worthiness": "low"
+    },
+    {
+      "id": "E028",
+      "title": "三星逆势拿下iPhone OLED：剑指年产1.46亿块面板，加强LTPO+研发投入",
+      "date": "2026-05-08",
+      "category": "display",
+      "source": "SamMobile / The Elec",
+      "url": "https://www.sammobile.com/2026/05/08/samsung-making-iphone-18-pro-oled-panels/",
+      "summary": "三星Display赢回iPhone 18 Pro主要OLED面板订单，全年供货约1.46亿块，采用LTPO+技术（Apple拟在iPhone 18 Pro系列中首次规模化部署）。三星持续加大LTPO+研发，拉大与BOE的技术差距，巩固其在高端手机OLED领域的主导地位。",
+      "check_worthiness": "high"
+    },
+    {
+      "id": "E029",
+      "title": "荣耀600超级版：骁龙7 Gen4，8600mAh，已正式发布",
+      "date": "2026-05-25",
+      "category": "brands",
+      "source": "IT之家",
+      "url": "https://www.ithome.com",
+      "summary": "荣耀600超级版正式发布，搭载骁龙7 Gen4处理器，配备8600mAh超大容量电池，在同价位中端手机中提供旗舰级续航，目标用户为重度用户和商务人群。",
+      "check_worthiness": "medium"
+    },
+    {
+      "id": "E030",
+      "title": "OPPO Find X9 Ultra印度市场首发：169999卢比，Dimensity 9500，哈苏调色",
+      "date": "2026-05-21",
+      "category": "brands",
+      "source": "多源",
+      "url": "https://www.ithome.com",
+      "summary": "OPPO Find X9 Ultra于2026年5月21日在印度上市，定价169999卢比（约合人民币14200元），搭载天玑9500旗舰芯片，配备哈苏联合调校影像系统，是OPPO在印度高端市场的战略布局机型。",
+      "check_worthiness": "medium"
+    }
+  ]
+}

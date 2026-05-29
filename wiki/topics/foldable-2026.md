@@ -61,6 +61,20 @@
 - OLED面板总出货量预计突破10亿片
 - 折叠屏市场均价高压：国内厂商价格已下探至5000元档
 
+### Samsung Galaxy Z Fold 8 / Fold 8 Wide（规格泄露，2026-05-18-19）
+
+**Fold 8**（多源确认，ConflictingEvidence）：
+- 芯片：骁龙8 Elite Gen 5
+- 主摄200MP保留，超广角升级至**50MP**
+- 电池：**5000mAh**（vs Fold 7的4400mAh，+14%）
+- 厚度展开：**4.1mm**，重量**210g**（减5g）
+- 发布时间：预计**7月22日伦敦Unpacked**
+
+**Fold 8 Wide**（新型号，单一来源）：
+- 内屏比例：**4:3**（宽屏，异于市场主流高纵比折叠）
+- 双50MP后置，4800mAh，重约200g
+- ⚠️ 信息来源单一（TechManiacs），待独立确认
+
 ## 信源历史
 
 | 日期 | 信源 | AVeriTeC标签 | 内容 |
@@ -69,3 +83,12 @@
 | 2026-05-26 | 新浪科技（4月9日报道） | Supported (0.84) | 三星显示Q2为苹果折叠OLED首批供货300万片 |
 | 2026-05-26 | tmtpost.com / ledinside.cn | Supported (0.92/0.90) | moto razr fold发布；荣耀Magic V6折叠规格 |
 | 2026-05-26 | IDC/Counterpoint | Supported (0.79) | 2026折叠屏出货+30%，OLED突破10亿片 |
+| 2026-05-27 | [9to5Google 2026-05-18](https://9to5google.com/2026/05/18/samsung-galaxy-z-fold-8-specs-leak/) | ConflictingEvidence (0.75) | Fold 8：5000mAh，50MP超广，4.1mm；Fold 8 Wide：4:3内屏，4800mAh |
+| 2026-05-27 | [Sammy Fans 2026-05-19](https://www.sammyfans.com/2026/05/19/galaxy-z-fold-8-and-fold8-wide-key-specs-leak/amp/) | ConflictingEvidence (0.75) | Fold 8/Wide规格补充确认（部分） |
+| 2026-05-27（晚） | [SamMobile](https://www.sammobile.com/news/samsung-galaxy-z-fold-8-everything-to-know/) / [PhoneArena](https://www.phonearena.com/galaxy-z-fold-8-release-date-price-features-news) / [Gadgetbridge](https://www.gadgetbridge.com/news/samsung-galaxy-z-unpacked-2026-is-rumoured-for-july-everything-you-need-to-know-about-galaxy-z-fold-8-and-galaxy-z-flip-8/) | Supported (0.86) | **Galaxy Z Fold 8 发布时间四方独立确认：7月22日伦敦Unpacked**；规格更新：200MP主摄、5000mAh、45W快充、骁龙8 Elite Gen5；起售$1999 |
+
+---
+### 更新：2026-05-29
+- **moto razr fold正式发布**：2026年5月19日，联想旗下moto品牌首款横向大折叠旗舰moto razr fold发布，骁龙8 Gen5，DXOMARK折叠屏影像全球第一，6000mAh。AVeriTeC：Supported（0.97）
+- **小米MIX Trifold认证通过**：小米首款三折叠手机通过认证，预计Q3 2026发布，将成第二款量产三折叠机型。AVeriTeC：Supported（0.80）
+- **华为折叠屏份额**：国内市场份额超70%（数字有CE不确定性，主导地位确认）。

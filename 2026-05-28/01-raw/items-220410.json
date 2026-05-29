@@ -1,0 +1,331 @@
+{
+  "meta": {
+    "date": "2026-05-28",
+    "timestamp": "220410",
+    "pipeline_version": "v0.7",
+    "search_rounds": 8,
+    "total_items": 32
+  },
+  "items": [
+    {
+      "id": "rc-20260528-001",
+      "title": "联发科天玑9500s将用于OPPO Reno16 Pro，搭载升级NPU",
+      "source": "腾讯新闻 / QQ News",
+      "url": "https://news.qq.com/rain/a/20260509A080TY00",
+      "lang": "zh-CN",
+      "category": "chip",
+      "raw_claim": "OPPO Reno16 Pro或搭载天玑9500s芯片，NPU性能再升级",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-002",
+      "title": "联发科天玑首款2nm芯片预计2026年下半年量产，命名天玑9600",
+      "source": "综合媒体",
+      "url": "https://news.qq.com/rain/a/20260107A0780H00",
+      "lang": "zh-CN",
+      "category": "chip",
+      "raw_claim": "联发科首款台积电2nm工艺芯片天玑9600将于2025年9月流片，2026年下半年量产",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-003",
+      "title": "内存涨价令高通与联发科2026年面临价格压力",
+      "source": "icsmart.cn",
+      "url": "https://www.icsmart.cn/",
+      "lang": "zh-CN",
+      "category": "chip",
+      "raw_claim": "2nm代工成本上涨+DRAM涨价，双重压力导致2026年手机SoC成本增加",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-004",
+      "title": "骁龙8 Elite Gen 5为2026年旗舰机首选SoC，性能领跑",
+      "source": "PhoneArena / Cashify / AnalyticsInsight",
+      "url": "https://www.cashify.in/best-processor-for-mobile-phone-ranking-list",
+      "lang": "en",
+      "category": "chip",
+      "raw_claim": "Snapdragon 8 Elite Gen 5 is the top-ranked mobile processor in May 2026, followed by Dimensity 9500",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-005",
+      "title": "骁龙8 Elite Gen 6（2026年9月）CPU性能提升有限，GPU能量大幅增加",
+      "source": "PhoneArena",
+      "url": "https://www.phonearena.com/news/the-next-flagship-snapdragon-chipset-big-gpu-energy-petite-cpu-expectations_id179470",
+      "lang": "en",
+      "category": "chip",
+      "raw_claim": "Next Snapdragon flagship (Gen 6) expected September 2026 with major GPU gains but modest CPU improvements",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-006",
+      "title": "三星Galaxy Tab S12系列可能搭载联发科天玑9500",
+      "source": "Sammy Fans",
+      "url": "https://www.sammyfans.com/2026/05/14/samsung-galaxy-tab-s12-series-may-run-on-dimensity-9500/",
+      "lang": "en",
+      "category": "chip",
+      "raw_claim": "Samsung Galaxy Tab S12 series may use MediaTek Dimensity 9500 instead of Snapdragon or Exynos",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-007",
+      "title": "BOE Gen 8.6 OLED产线已于2026年5月投产，比计划提前1个月",
+      "source": "TechTimes",
+      "url": "https://www.techtimes.com/articles/316600/20260514/boe-begins-gen-86-oled-production-this-month-beating-rival-samsung-display-market.htm",
+      "lang": "en",
+      "category": "display",
+      "raw_claim": "BOE began Gen 8.6 OLED production at Chengdu B16 factory in May 2026, over one month ahead of previously stated schedule",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-008",
+      "title": "苹果与BOE深化OLED合作，BOE目标2026年供应3500万块iPhone屏幕",
+      "source": "TechNode",
+      "url": "https://technode.com/2026/05/07/apple-and-boe-reportedly-deepen-oled-partnership-as-boe-targets-35-million-iphone-display-shipments-in-2026/",
+      "lang": "en",
+      "category": "display",
+      "raw_claim": "Apple and BOE reportedly deepening OLED partnership; BOE targets 35 million iPhone display shipments in 2026",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-009",
+      "title": "三星Display夺回iPhone 18 Pro OLED供货权，BOE仅保留标准版份额",
+      "source": "Sammy Fans",
+      "url": "https://www.sammyfans.com/2026/05/07/samsung-takes-back-iphone-18-pro-oled-business-from-boe/",
+      "lang": "en",
+      "category": "display",
+      "raw_claim": "Samsung Display has taken back iPhone 18 Pro OLED business from BOE",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-010",
+      "title": "BOE低价争取Galaxy S27系列OLED面板供货权，与三星Display竞争",
+      "source": "GSMArena / Neowin",
+      "url": "https://www.gsmarena.com/boe_is_trying_to_lure_samsung_with_lowerpriced_galaxy_s27_series_oled_panels-news-72950.php",
+      "lang": "en",
+      "category": "display",
+      "raw_claim": "BOE is trying to become Galaxy S27 display supplier with lower-priced OLED panels",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-011",
+      "title": "三星Display 8.6代OLED产线于2026年5月开始量产，专供苹果MacBook",
+      "source": "综合媒体",
+      "url": "https://apple.gadgethacks.com/news/apple-oled-display-supply-chain-explained-samsung-lg-and-boe-roles/",
+      "lang": "en",
+      "category": "display",
+      "raw_claim": "Samsung Display began mass production on Gen 8.6 OLED line this May, dedicated exclusively to Apple's first OLED MacBook Pro",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-012",
+      "title": "2026年固态电池量产元年：宁德时代能量密度突破500Wh/kg",
+      "source": "新浪 / NE时代",
+      "url": "https://www.sina.cn/news/detail/5278556240480103.html",
+      "lang": "zh-CN",
+      "category": "battery",
+      "raw_claim": "宁德时代硫化物全固态电池能量密度突破500Wh/kg，支持15分钟快充至80%",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-013",
+      "title": "比亚迪固态电池中试线深圳投产，重庆基地20GWh量产线Q3小批量",
+      "source": "TMT Post / NE时代",
+      "url": "https://www.tmtpost.com/7920519.html",
+      "lang": "zh-CN",
+      "category": "battery",
+      "raw_claim": "比亚迪2026年在深圳坪山区硫化物全固态电池中试线正式投产，重庆璧山20GWh量产线Q3小批量量产",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-014",
+      "title": "奇瑞犀牛S固态电池能量密度600Wh/kg，5分钟补能500公里",
+      "source": "综合媒体",
+      "url": "https://ne-time.cn/web/article/38154",
+      "lang": "zh-CN",
+      "category": "battery",
+      "raw_claim": "奇瑞汽车发布自研犀牛S全固态电池，600Wh/kg，5分钟补能500公里，2027年批量装车",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-015",
+      "title": "台积电3nm月产能2026年底将达18万片，同比增长逾40%",
+      "source": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026/04/27/news-tsmc-3nm-monthly-capacity-may-hit-180k-wafers-by-2026-up-over-40-yoy-on-ai-demand/",
+      "lang": "en",
+      "category": "chip",
+      "raw_claim": "TSMC 3nm monthly capacity may hit 180K wafers by end of 2026, up over 40% YoY, driven by AI demand",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-016",
+      "title": "台积电2nm月产能年底将达10万片，先进产能预订至2028年告罄",
+      "source": "TrendForce / Dataconomy",
+      "url": "https://dataconomy.com/2026/03/31/tsmcs-advanced-chip-capacity-is-booked-out-through-2028/",
+      "lang": "en",
+      "category": "chip",
+      "raw_claim": "TSMC 2nm monthly capacity expected to ramp to ~100K wafers by end of 2026; advanced capacity booked out through 2028",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-017",
+      "title": "台积电将上调sub-5nm晶圆价格3-5%，涵盖2/3/4/5nm节点",
+      "source": "Medium / TrendForce",
+      "url": "https://medium.com/@kumari.sushma661/tsmc-to-raise-sub-5nm-chip-prices-by-3-5-in-2026-what-it-means-for-nvidia-apple-and-the-ai-cacb8343fb40",
+      "lang": "en",
+      "category": "chip",
+      "raw_claim": "TSMC to raise sub-5nm chip prices by 3–5% in 2026 including 2nm, 3nm, 4nm, and 5nm nodes",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-018",
+      "title": "三星代工2nm月产能2026年底预计2.1万片，Exynos 2600已量产",
+      "source": "综合媒体",
+      "url": "https://markets.financialcontent.com/stocks/article/tokenring-2025-10-13-samsung-foundry-accelerates-2nm-and-3nm-chip-production-amidst-soaring-ai-and-hpc-demand",
+      "lang": "en",
+      "category": "chip",
+      "raw_claim": "Samsung's 2nm process expected to reach 21K wafers/month by end of 2026; Exynos 2600 in 2nm mass production since Dec 2025",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-019",
+      "title": "HBM已占三星/SK海力士先进晶圆产能的40%，DRAM/NAND供应收紧",
+      "source": "Tom's Hardware / TechInsider",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/samsung-and-sk-hynix-warn-ai-driven-memory-shortages-could-last-until-2027-and-beyond-as-hbm-demand-explodes-customers-already-reserving-supply-years-ahead-while-the-wider-dram-market-begins-to-tighten",
+      "lang": "en",
+      "category": "memory",
+      "raw_claim": "Samsung and SK Hynix reallocating up to 40% of advanced wafer capacity to HBM, causing DRAM/NAND supply tightening",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-020",
+      "title": "HBM供应短缺预计持续至2027年以上，手机市场受波及或萎缩5%",
+      "source": "Tom's Hardware / enki.ai",
+      "url": "https://enkiai.com/ai-market-intelligence/memory-shortage-2026-how-ai-will-cause-a-supply-crisis/",
+      "lang": "en",
+      "category": "memory",
+      "raw_claim": "HBM supply shortage may shrink smartphone market by 5% in 2026; shortages expected until at least 2027",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-021",
+      "title": "三星/SK海力士将HBM3E价格上调约20%，2026年继续领涨",
+      "source": "TrendForce",
+      "url": "https://www.trendforce.com/news/2025/12/24/news-samsung-sk-hynix-reportedly-plan-20-hbm3e-price-hike-for-2026-as-nvidia-h200-asic-demand-rises/",
+      "lang": "en",
+      "category": "memory",
+      "raw_claim": "Samsung and SK Hynix plan ~20% HBM3E price hike for 2026 as NVIDIA H200 and ASIC demand rises",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-022",
+      "title": "摩托罗拉moto razr fold 5月19日发布，首款横折旗舰搭载骁龙8 Gen5",
+      "source": "知乎/综合媒体",
+      "url": "https://mobile.pconline.com.cn/1850/18501308.html",
+      "lang": "zh-CN",
+      "category": "brands",
+      "raw_claim": "摩托罗拉首款横向大折叠手机moto razr fold于2026年5月19日发布，搭载骁龙8 Gen5和6000mAh电池",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-023",
+      "title": "小米MIX Fold 4有望2026年5月国内上市，四线折叠并行策略",
+      "source": "知乎",
+      "url": "https://zhuanlan.zhihu.com/p/662899673",
+      "lang": "zh-CN",
+      "category": "brands",
+      "raw_claim": "小米MIX Fold 4国内上市时间预计2026年5月，小米折叠屏已形成四条产品线",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-024",
+      "title": "无折痕折叠屏技术已突破量产，2026旗舰折叠机将搭载",
+      "source": "中关村在线",
+      "url": "https://mobile.zol.com.cn/1113/11135605.html",
+      "lang": "zh-CN",
+      "category": "brands",
+      "raw_claim": "无折痕折叠屏技术2026年正式量产，多款旗舰折叠手机将搭载此技术",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-025",
+      "title": "华为Mate 80 Pro Max搭载麒麟9030 Pro与HarmonyOS 6，性能提升42%",
+      "source": "太平洋科技",
+      "url": "https://mobile.pconline.com.cn/2119/21196734.html",
+      "lang": "zh-CN",
+      "category": "brands",
+      "raw_claim": "华为Mate 80 Pro Max首发主动散热和方舟内存引擎，搭载麒麟9030 Pro，性能提升42%",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-026",
+      "title": "华为Mate 90系列最快2026年9-10月发布，与iPhone 18同期亮相",
+      "source": "知乎",
+      "url": "https://zhuanlan.zhihu.com/p/2032210209402306816",
+      "lang": "zh-CN",
+      "category": "brands",
+      "raw_claim": "华为Mate90系列有望2026年9月发布，回归常规发布节奏",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-027",
+      "title": "苹果Ring传言：Apple已放弃该产品，与Mark Gurman报告矛盾",
+      "source": "TechRadar / AppleInsider",
+      "url": "https://www.techradar.com/health-fitness/will-we-get-an-apple-ring-in-2026-heres-what-the-rumors-say-so-far",
+      "lang": "en",
+      "category": "brands",
+      "raw_claim": "Mark Gurman reports Apple has abandoned the Apple Ring project; other analysts still expect a 2026 release",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-028",
+      "title": "联发科端侧AI ASIC收入2026年将突破10亿美元，手机业务战略收缩",
+      "source": "智东西 / 36氪",
+      "url": "https://zhidx.com/p/505555.html",
+      "lang": "zh-CN",
+      "category": "ai",
+      "raw_claim": "联发科2026年将数据中心AI ASIC收入目标定于10亿美元以上，手机业务核心重心转向AI新赛道",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-029",
+      "title": "高通2026财年Q2将手机芯片定位为\"个人AI入口\"，强化NPU生态",
+      "source": "知乎 / 综合媒体",
+      "url": "https://zhuanlan.zhihu.com/p/2024922708601763606",
+      "lang": "zh-CN",
+      "category": "ai",
+      "raw_claim": "高通将手机SoC重新定位为"个人AI入口"，通过强化NPU和本地大模型能力维持差异化",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-030",
+      "title": "天玑9500双NPU架构峰值性能暴涨111%，功耗下降56%",
+      "source": "智东西",
+      "url": "https://zhidx.com/p/487563.html",
+      "lang": "zh-CN",
+      "category": "ai",
+      "raw_claim": "联发科天玑9500采用双NPU架构，峰值性能比前代提升111%，同时峰值功耗下降56%",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-031",
+      "title": "2026年Q1中国大陆手机出货量同比降1%，华为位居榜首",
+      "source": "太平洋科技",
+      "url": "https://mobile.pconline.com.cn/2129/21296792.html",
+      "lang": "zh-CN",
+      "category": "brands",
+      "raw_claim": "2026年Q1中国大陆智能手机出货量同比下降1%，华为以市占率排名第一",
+      "retrieved": "2026-05-28"
+    },
+    {
+      "id": "rc-20260528-032",
+      "title": "SK海力士HBM供应已被AI客户预订数年，HBM4量产提速",
+      "source": "SK Hynix News / FinancialContent",
+      "url": "https://news.skhynix.com/2026-market-outlook-focus-on-the-hbm-led-memory-supercycle/",
+      "lang": "en",
+      "category": "memory",
+      "raw_claim": "SK Hynix customers already reserving HBM supply years ahead; HBM4 production ramping in 2026",
+      "retrieved": "2026-05-28"
+    }
+  ]
+}

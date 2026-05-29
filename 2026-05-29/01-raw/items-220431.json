@@ -1,0 +1,299 @@
+{
+  "meta": {
+    "run_date": "2026-05-29",
+    "timestamp": "220431",
+    "pipeline_version": "v0.7",
+    "run_type": "evening",
+    "total_collected": 32
+  },
+  "items": [
+    {
+      "id": "E-001",
+      "title": "骁龙8 Elite Gen 6将于2026年9月发布，采用台积电2nm工艺",
+      "body": "高通骁龙8 Elite Gen 6及Pro版本将在2026年9月亮相，采用TSMC 2nm节点，搭载新一代Oryon CPU（2+3+3核心架构），Adreno 845 GPU，支持LPDDR5X内存及UFS 5.0存储，X90 5G基带峰值下载速度或超15Gbps。",
+      "source_urls": ["https://www.gizmochina.com/2026/05/20/snapdragon-8-elite-gen-6-specs-benchmarks-and-more/", "https://wccftech.com/roundup/qualcomm-snapdragon-8-elite-gen-6-specifications-features-launch-roundup/"],
+      "source_names": ["Gizmochina", "Wccftech"],
+      "category": "chip",
+      "language": "en"
+    },
+    {
+      "id": "E-002",
+      "title": "联发科天玑9600采用2nm工艺，将于2026年秋季发布",
+      "body": "联发科天玑9600采用台积电2nm工艺，CPU采用2+3+3全大核架构（对标苹果），原生帧插值和超分，目标GPU性能超越苹果A20 Pro和骁龙8 Elite Gen 6。首发搭载机型预计于2026年秋季亮相。",
+      "source_urls": ["https://www.notebookcheck.net/2nm-SoC-in-ChatGPT-powered-AI-phone-to-beat-iPhone-18-Pro-s-A20-Pro-Galaxy-S27-Ultra-s-Snapdragon-8-Elite-Gen-6-in-GPU.1296104.0.html"],
+      "source_names": ["Notebookcheck"],
+      "category": "chip",
+      "language": "en"
+    },
+    {
+      "id": "E-003",
+      "title": "高通正式发布骁龙6 Gen5及骁龙4 Gen5，基于4nm工艺",
+      "body": "高通于2026年5月7日正式发布骁龙6 Gen5和骁龙4 Gen5移动平台，均基于4nm工艺制造，面向中端及入门机型，显著提升AI处理能力及5G性能。",
+      "source_urls": ["https://tech.news.am/eng/news/6838/qualcomm-mediatek-apple-and-samsung-how-do-the-top-smartphone-processors-of-2026-differ.html"],
+      "source_names": ["NEWS.am TECH"],
+      "category": "chip",
+      "language": "zh"
+    },
+    {
+      "id": "E-004",
+      "title": "苹果iPhone 18系列将首发搭载A20/A20 Pro 2nm芯片及WMCM封装",
+      "body": "苹果iPhone 18系列将搭载A20及A20 Pro芯片，采用台积电2nm工艺及全新WMCM（晶圆级多芯片模组）封装技术，集成12GB RAM。苹果锁定了台积电2026年2nm过半产能。WMCM封装产能预计年底达6万片/月，2027年翻倍至12万片/月以上。",
+      "source_urls": ["https://www.ithome.com/0/914/719.htm", "https://www.icsmart.cn/96471/"],
+      "source_names": ["IT之家", "芯智讯"],
+      "category": "chip",
+      "language": "zh"
+    },
+    {
+      "id": "E-005",
+      "title": "台积电2nm三座工厂订单排至2028年，CoWoS封装中期售罄",
+      "body": "台积电2nm节点三座晶圆厂全部满产，交货周期达78-104周，新订单已排至2028年。同时CoWoS先进封装产能中期售罄，产能从约8万片/月扩至12-13万片/月，NVIDIA占据约60%配额。",
+      "source_urls": ["https://www.paradoxintelligence.com/news/tsmc-2nm-three-layer-constraint-2026", "https://info.fusionww.com/blog/inside-the-ai-bottleneck-cowos-hbm-and-2-3nm-capacity-constraints-through-2027"],
+      "source_names": ["Paradox Intelligence Research", "FusionWW"],
+      "category": "chip",
+      "language": "en"
+    },
+    {
+      "id": "E-006",
+      "title": "SK海力士2026年全年HBM供应已售罄，含HBM3E",
+      "body": "SK海力士公开确认，其2026年度HBM（含HBM3E）供应已全部预售完毕。HBM已成为AI市场的决定性限制因素，HBM及DRAM价格预计2026年涨幅达高个位数至20%。三星和SK海力士已就合约重新定价发出信号。",
+      "source_urls": ["https://www.intelligentliving.co/hbm-ram-ai-datacenter-ddr5-supply-chain/"],
+      "source_names": ["Intelligent Living"],
+      "category": "memory",
+      "language": "en"
+    },
+    {
+      "id": "E-007",
+      "title": "苹果独占台积电2026年2nm近半产能，AI芯片厂商可用资源受限",
+      "body": "苹果消耗了台积电2026-2027年N2工艺约48-50%的晶圆量，主要用于iPhone A20、Mac M5/M6等消费设备而非AI专用芯片，导致其他AI芯片厂商可获配额严重受限。",
+      "source_urls": ["https://www.paradoxintelligence.com/news/tsmc-2nm-three-layer-constraint-2026"],
+      "source_names": ["Paradox Intelligence Research"],
+      "category": "chip",
+      "language": "en"
+    },
+    {
+      "id": "E-008",
+      "title": "三星夺回iPhone 18 Pro OLED供应商席位，BOE因质量问题出局",
+      "body": "三星显示已重新锁定iPhone 18 Pro的OLED面板主供应商地位，京东方（BOE）因LTPO面板制程不规范及质量问题，被排除出iPhone 18 Pro/Pro Max最高端供应商层级。三星显示和LG显示预计将主导iPhone 18 Pro和Pro Max的OLED面板出货，BOE仅保留普通版份额。",
+      "source_urls": ["https://www.sammyfans.com/2026/05/07/samsung-takes-back-iphone-18-pro-oled-business-from-boe/"],
+      "source_names": ["Sammy Fans"],
+      "category": "display",
+      "language": "en"
+    },
+    {
+      "id": "E-009",
+      "title": "BOE以每块少5美元价格争抢三星Galaxy S27 OLED供应订单",
+      "body": "京东方（BOE）以比三星显示每块便宜约5美元的价格，积极向三星MX争取Galaxy S27系列OLED面板订单。Galaxy S27、S27+、S27 Pro及S27 Ultra预计仍以三星显示为主供，BOE或获部分机型产能。",
+      "source_urls": ["https://www.digitimes.com/news/a20260524PD201/boe-oled-panel-sdc-galaxy-smartphone.html", "https://www.neowin.net/news/chinas-boe-might-dethrone-samsung-display-as-the-galaxy-s27-display-supplier/"],
+      "source_names": ["Digitimes", "Neowin"],
+      "category": "display",
+      "language": "en"
+    },
+    {
+      "id": "E-010",
+      "title": "BOE成都B16 8.6代IT AMOLED工厂将于2026年5月底开始量产",
+      "body": "京东方正在加速成都B16 8.6代IT AMOLED工厂建设进度，来自韩国的最新消息称该工厂将于2026年5月底开始量产。这将扩充BOE的中尺寸OLED产能，主要面向笔记本电脑和平板电脑市场。",
+      "source_urls": ["https://displaydaily.com/the-smartphone-panel-market-faces-a-reality-check-in-2026/"],
+      "source_names": ["Display Daily"],
+      "category": "display",
+      "language": "en"
+    },
+    {
+      "id": "E-011",
+      "title": "vivo X Fold6工程机曝光：天玑9500+8.02英寸2K屏+2亿像素+7000mAh",
+      "body": "vivo新款大折叠旗舰X Fold6工程机信息曝光，搭载联发科天玑9500芯片，8.02英寸2K柔性内屏，2亿像素主摄镜头，以及7000mAh超大电池，预计近期发布。",
+      "source_urls": ["https://m.sohu.com/a/985090642_546984"],
+      "source_names": ["搜狐网"],
+      "category": "brands",
+      "language": "zh"
+    },
+    {
+      "id": "E-012",
+      "title": "苹果首款折叠屏iPhone Ultra采用A20 Pro芯片+12GB内存",
+      "body": "关于苹果首款折叠屏iPhone Ultra的报道显示，该机将搭载台积电2nm工艺A20 Pro芯片，配备12GB内存，展开尺寸接近iPad mini。目前苹果折叠屏手机尚未官方公布发布时间表。",
+      "source_urls": ["https://mobile.pconline.com.cn/2033/20332653.html"],
+      "source_names": ["太平洋科技"],
+      "category": "brands",
+      "language": "zh"
+    },
+    {
+      "id": "E-013",
+      "title": "moto razr fold于2026年5月19日正式发布，骁龙8 Gen5+6000mAh",
+      "body": "联想旗下moto品牌首款横向大折叠旗舰moto razr fold于2026年5月19日正式发布，搭载骁龙8 Gen5芯片，5000万像素三摄（DXOMARK折叠屏影像全球第一），6000mAh大电池。",
+      "source_urls": ["https://mobile.zol.com.cn/more/3_506.shtml"],
+      "source_names": ["中关村在线"],
+      "category": "brands",
+      "language": "zh"
+    },
+    {
+      "id": "E-014",
+      "title": "小米MIX Trifold三折叠手机通过认证，预计Q3 2026发布",
+      "body": "小米首款三折叠手机Xiaomi MIX Trifold已通过相关认证，市场预计该机将于2026年第三季度亮相，成为继华为Mate XT Non-Standard之后第二款量产三折叠智能手机。",
+      "source_urls": ["https://www.sohu.com/a/984910271_120951518"],
+      "source_names": ["搜狐网"],
+      "category": "brands",
+      "language": "zh"
+    },
+    {
+      "id": "E-015",
+      "title": "三星Galaxy Z Fold 8配置细节逐渐明确，预计2026年7月22日发布",
+      "body": "三星Galaxy Z Fold 8系列的配置信息持续曝光，多源信息指向2026年7月22日发布，机身厚度仅4.1mm，起售价预计$1999。此前信息已在2026-05-27晚报中记录。",
+      "source_urls": ["https://www.sammobile.com/news/samsung-galaxy-s27-ultra-everything-to-know/"],
+      "source_names": ["SamMobile"],
+      "category": "brands",
+      "language": "en"
+    },
+    {
+      "id": "E-016",
+      "title": "2026年Q1全球手机出货：苹果包揽前三，红米A5跻身全球前十",
+      "body": "2026年Q1全球智能手机出货量榜单出炉，苹果旗下机型包揽前三名，红米A5凭借高性价比跻身全球出货量前十，显示出入门市场的量级潜力。",
+      "source_urls": ["https://mobile.pconline.com.cn/2143/21439371.html"],
+      "source_names": ["太平洋科技"],
+      "category": "brands",
+      "language": "zh"
+    },
+    {
+      "id": "E-017",
+      "title": "UFCS 2.0标准发布，支持40W无鉴权跨品牌互通快充",
+      "body": "UFCS协议标准2.0版本正式迭代，加入40W功率的无鉴权互通功能，强化不同品牌设备间的充电兼容性。华为、OPPO、vivo、荣耀四大国产手机厂商共同表态并签署UFCS互授权意向。",
+      "source_urls": ["https://m.thepaper.cn/newsDetail_forward_31928996"],
+      "source_names": ["澎湃新闻"],
+      "category": "battery",
+      "language": "zh"
+    },
+    {
+      "id": "E-018",
+      "title": "2026年硅碳负极材料全面普及，8000mAh电池可控制在8.5mm厚度内",
+      "body": "2026年硅碳负极材料已在旗舰机型中全面普及，能量密度较2025年提升约40%，8000mAh电池可控制在8.5mm机身厚度内。万毫安时电池有望在2026年成为中端机型标配，realme率先实现10000mAh电池量产。",
+      "source_urls": ["https://36kr.com/p/3660418070225545", "https://www.leikeji.com/article/71299"],
+      "source_names": ["36氪", "雷科技"],
+      "category": "battery",
+      "language": "zh"
+    },
+    {
+      "id": "E-019",
+      "title": "华为Mate 70系列最高快充突破100W，支持UFCS 44W互通快充",
+      "body": "华为Mate 70系列旗舰机型最高快充功率已突破100W，同时支持UFCS融合快充协议，可通过小米、OPPO、vivo等品牌充电器实现44W互通快充。",
+      "source_urls": ["https://news.qq.com/rain/a/20250503A036PZ00"],
+      "source_names": ["腾讯新闻"],
+      "category": "battery",
+      "language": "zh"
+    },
+    {
+      "id": "E-020",
+      "title": "端侧AI硬件市场2026年达307亿美元，NPU性能竞赛成主旋律",
+      "body": "Edge AI硬件市场规模2026年预计达到307亿美元，2031年将增至687亿美元。2026年各主要芯片商都将NPU专用加速定义为不可妥协的核心要素，旗舰SoC端侧推理能力快速演进。",
+      "source_urls": ["https://ai2.work/blog/on-device-ai-arrives-edge-inference-chips-hit-consumer-hardware"],
+      "source_names": ["AI2 Work"],
+      "category": "ai",
+      "language": "en"
+    },
+    {
+      "id": "E-021",
+      "title": "骁龙8 Gen5搭载NPU，AI推理吞吐量较上代提升46%，可达70 token/s",
+      "body": "搭载骁龙8 Gen5芯片的2026年旗舰机型，NPU AI推理吞吐量较上代提升46%，处理速度可达每秒70个token，支持端侧LLM推理应用。",
+      "source_urls": ["https://www.specser.com/on-device-ai-revolutionizing-smartphones-in-2026/"],
+      "source_names": ["Specser"],
+      "category": "ai",
+      "language": "en"
+    },
+    {
+      "id": "E-022",
+      "title": "端侧大模型参数量持续压缩，Llama 3.2（1B/3B）、Phi-4 mini（3.8B）已可运行于手机NPU",
+      "body": "2026年手机端侧AI模型规模持续压缩，Llama 3.2（1B/3B参数）、Gemma 3（最低270M参数）、Phi-4 mini（3.8B）等模型已可高效运行于主流手机NPU。手机NPU推理瓶颈在于内存带宽而非TOPS算力。",
+      "source_urls": ["https://www.edge-ai-vision.com/2026/01/on-device-llms-in-2026-what-changed-what-matters-whats-next/"],
+      "source_names": ["Edge AI and Vision Alliance"],
+      "category": "ai",
+      "language": "en"
+    },
+    {
+      "id": "E-023",
+      "title": "联发科MDDC 2026大会聚焦AI基础设施战略，展示天玑全域芯智能",
+      "body": "联发科将于2026年5月13日举办天玑开发者大会（MDDC 2026），发布全域芯智能新体验，展示其从手机芯片领导者转型为AI基础设施供应商的重大战略方向。",
+      "source_urls": ["https://m.sohu.com/a/985090642_546984"],
+      "source_names": ["搜狐网"],
+      "category": "ai",
+      "language": "zh"
+    },
+    {
+      "id": "E-024",
+      "title": "谷歌发布Coral NPU平台，提供全栈边缘AI开发工具",
+      "body": "谷歌发布Coral NPU作为全栈边缘AI平台，由Google Research和Google DeepMind联合开发，配备完整工具链，面向私有、高效的边缘AI设备开发。AI Edge Gallery App现已支持选定Gemma模型的NPU加速及内置基准测试。",
+      "source_urls": ["https://developers.googleblog.com/en/introducing-coral-npu-a-full-stack-platform-for-edge-ai/"],
+      "source_names": ["Google Developers Blog"],
+      "category": "ai",
+      "language": "en"
+    },
+    {
+      "id": "E-025",
+      "title": "2026年折叠屏市场持续增长，华为独占国内超70%市场份额",
+      "body": "2026年折叠屏智能手机市场维持正增长，多家厂商集体加码。华为凭借Pura X系列等产品在国内折叠屏市场独占超70%份额，小米、vivo、三星也将于近期推出年度折叠旗舰。",
+      "source_urls": ["https://www.guancha.cn/economy/2026_01_22_804722.shtml", "https://www.tmtpost.com/7913256.html"],
+      "source_names": ["观察者网", "钛媒体"],
+      "category": "brands",
+      "language": "zh"
+    },
+    {
+      "id": "E-026",
+      "title": "无折痕折叠屏实现量产突破，2026年旗舰折叠新机将采用",
+      "body": "无折痕折叠屏技术已实现量产突破，多家折叠旗舰机型将于2026年下半年搭载，进一步提升折叠屏产品体验。",
+      "source_urls": ["https://mobile.zol.com.cn/1113/11135605.html"],
+      "source_names": ["中关村在线"],
+      "category": "display",
+      "language": "zh"
+    },
+    {
+      "id": "E-027",
+      "title": "HBM产能挤占导致标准DDR5/LPDDR5内存供应趋紧，价格承压上涨",
+      "body": "AI数据中心对HBM的旺盛需求正在挤占全球DRAM产能，SK海力士和三星的产能重心向HBM倾斜，标准DDR5和LPDDR5（手机用）供应趋紧，全球DRAM价格面临高个位数至20%涨幅预期。",
+      "source_urls": ["https://www.intelligentliving.co/hbm-ram-ai-datacenter-ddr5-supply-chain/"],
+      "source_names": ["Intelligent Living"],
+      "category": "memory",
+      "language": "en"
+    },
+    {
+      "id": "E-028",
+      "title": "骁龙8 Elite Gen 5以多核及GPU性能首次超越苹果A19 Pro",
+      "body": "高通骁龙8 Elite Gen 5在多核性能及GPU性能上首次整体超越苹果A19 Pro，搭载第三代Oryon内核，最高主频4.6GHz，CPU性能提升35%，GPU提升23%，Hexagon NPU快37%。",
+      "source_urls": ["https://www.mobolist.net/en/blog/snapdragon-vs-mediatek-vs-apple-ultimate-smartphone-processor-guide-2026"],
+      "source_names": ["Mobolist"],
+      "category": "chip",
+      "language": "en"
+    },
+    {
+      "id": "E-029",
+      "title": "三星Galaxy S27系列预计2027年初发布，BOE OLED供应争议持续",
+      "body": "三星Galaxy S27系列目前预计于2027年初（2月至3月）全球发布，BOE正积极争取Galaxy S27 OLED面板订单，以每块较三星显示便宜5美元的报价进行竞争，但Galaxy S27系列仍预计以三星显示为主供。",
+      "source_urls": ["https://samlover.com/2026/05/24/boe-could-supply-oled-panels-for-samsung-galaxy-s27-series/", "https://memeburn.com/samsung-galaxy-s27-release-date-boe-display-controversy-rumored-specs/"],
+      "source_names": ["Samlover", "Memeburn"],
+      "category": "display",
+      "language": "en"
+    },
+    {
+      "id": "E-030",
+      "title": "2026年Q1中国大陆智能手机出货量同比降1%，华为位居第一",
+      "body": "2026年Q1中国大陆智能手机出货量同比下降约1%，华为以强势品牌力位居榜首。折叠屏市场增速弥补部分传统直板机销量压力。",
+      "source_urls": ["https://mobile.pconline.com.cn/2129/21296792.html"],
+      "source_names": ["太平洋科技"],
+      "category": "brands",
+      "language": "zh"
+    },
+    {
+      "id": "E-031",
+      "title": "2026年各主要厂商2nm旗舰芯片齐发，代工价格创历史新高",
+      "body": "2026年下半年苹果A20/A20 Pro、高通骁龙8 Elite Gen 6、联发科天玑9600将同期采用台积电2nm工艺量产。台积电2nm晶圆价格约3万美元/片，创历史新高，手机旗舰型号成本大幅上涨。",
+      "source_urls": ["https://finance.sina.com.cn/tech/roll/2025-12-20/doc-inhcmwzi1218207.shtml"],
+      "source_names": ["新浪财经"],
+      "category": "chip",
+      "language": "zh"
+    },
+    {
+      "id": "E-032",
+      "title": "OPPO快充峰值达200W，10分钟充满；各大品牌快充进入200W时代",
+      "body": "OPPO最新快充技术将峰值提升至200W，可在约10分钟内完成充电。与此同时，部分手机旗舰有望实现200W快充，实现20分钟满电。快充技术竞赛正全面进入200W时代。",
+      "source_urls": ["https://caifuhao.eastmoney.com/news/20260205115926605471240"],
+      "source_names": ["东方财富网"],
+      "category": "battery",
+      "language": "zh"
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "run_id": "RC-20260527-094937",
+  "annotated_at": "2026-05-27T09:49:37+08:00",
+  "agents": ["fact-check-v3", "pseudo-science-v2", "logic-v2", "sentiment-v2"],
+  "summary": {
+    "total": 12,
+    "Supported": 9,
+    "ConflictingEvidence": 2,
+    "NotEnoughEvidence": 1,
+    "Refuted": 0,
+    "ai_strategy_items": 1,
+    "avg_confidence": 0.83
+  },
+  "items": [
+    {
+      "id": "RC-20260527-001",
+      "verdict": "Supported",
+      "confidence": 0.90,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "荣耀600系列5月25日官方发布，多媒体同步报道，8600mAh（超级版）、2294元国补后价格、骁龙7 Gen4等核心规格来自官方发布会，数据一致，可信度高。",
+        "sources_verified": ["sina tech 2026-05-25", "sznews 2026-05-26"]
+      },
+      "pseudo_science": {
+        "flag": false,
+        "note": "无伪科学声明；8600mAh硅碳电池属当前量产技术范围"
+      },
+      "logic": {
+        "fallacy_detected": false,
+        "note": "无逻辑谬误；'业界中端最大容量之一'为相对陈述，留有余地"
+      },
+      "sentiment": {
+        "tone": "neutral-positive",
+        "bias_flag": false
+      }
+    },
+    {
+      "id": "RC-20260527-002",
+      "verdict": "ConflictingEvidence",
+      "confidence": 0.72,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "reasoning": "iPhone 18 Pro部分规格（Dynamic Island缩小35%、可变光圈）多家分析师报告一致，可信度较高；但屏下FaceID采用'洪水投影仪'技术系分析师推断，非官方确认；A20 Pro 2nm台积电工艺被多数来源支持但为预测；深樱桃色配色来自单一供应链信源。整体属高置信预测，但未经苹果官方确认。",
+        "sources_verified": ["MacRumors 2026-05-22", "MacRumors 2026-05-26"],
+        "conflicting_points": ["屏下FaceID具体实现方式（洪水投影仪 vs 结构光）仍有争议", "Dynamic Island缩小幅度不同分析师数据略有出入（28%-35%）"]
+      },
+      "pseudo_science": {
+        "flag": false,
+        "note": "屏下FaceID为成熟技术路线，无伪科学问题"
+      },
+      "logic": {
+        "fallacy_detected": false,
+        "note": "报道将分析师预测与已知事实并列，需在报告中明确区分"
+      },
+      "sentiment": {
+        "tone": "neutral",
+        "bias_flag": false
+      }
+    },
+    {
+      "id": "RC-20260527-003",
+      "verdict": "NotEnoughEvidence",
+      "confidence": 0.62,
+      "fact_check": {
+        "label": "NotEnoughEvidence",
+        "reasoning": "苹果15款新品路线图属预测性汇总，大量细节（iPad mini OLED规格、AirPods Ultra摄像头）缺乏独立验证来源；iPhone Ultra折叠屏信息较为一致但发布日期（9月vs10月）有出入；整体为高质量推测，未达Supported门槛。",
+        "sources_verified": ["MacRumors 2026-05-22"],
+        "missing": "苹果官方确认，多来源独立核实"
+      },
+      "pseudo_science": {
+        "flag": false,
+        "note": "无伪科学声明"
+      },
+      "logic": {
+        "fallacy_detected": true,
+        "note": "部分报道将'路线图汇总'等同于'确认信息'，存在混淆预测与事实的表述风险"
+      },
+      "sentiment": {
+        "tone": "positive",
+        "bias_flag": false
+      }
+    },
+    {
+      "id": "RC-20260527-004",
+      "verdict": "Supported",
+      "confidence": 0.85,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "Digitimes为领先供应链媒体，BOE竞标S27 OLED、RFI已发出、样品评估超一个月均属可信供应链报道；BOE Gen 8.6量产（5月14日）已被多方证实；单价差$5和月省$650万属测算数字，非直接官方披露，但测算逻辑合理。综合可信度高。",
+        "sources_verified": ["Digitimes 2026-05-24", "GSMArena 2026-05-22"]
+      },
+      "pseudo_science": {
+        "flag": false,
+        "note": "无伪科学声明"
+      },
+      "logic": {
+        "fallacy_detected": false,
+        "note": "测算逻辑透明（单价差×月采购量），无谬误"
+      },
+      "sentiment": {
+        "tone": "neutral",
+        "bias_flag": false
+      }
+    },
+    {
+      "id": "RC-20260527-005",
+      "verdict": "Supported",
+      "confidence": 0.87,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "华为官方预订页面 + notebookcheck + 5月27日多源爆料一致；麒麟9010S(Pro)/9020(Ultra)区分、7000mAh电池、鸿蒙6.1、IP68/69等规格被独立来源交叉印证；6月1日发布日期为官方公告。整体支持度高。",
+        "sources_verified": ["sina tech 2026-05-27", "huaweicentral.com", "notebookcheck 2026-05-26"]
+      },
+      "pseudo_science": {
+        "flag": false,
+        "note": "无伪科学声明"
+      },
+      "logic": {
+        "fallacy_detected": false,
+        "note": "无逻辑谬误"
+      },
+      "sentiment": {
+        "tone": "neutral-positive",
+        "bias_flag": false
+      }
+    },
+    {
+      "id": "RC-20260527-006",
+      "verdict": "Supported",
+      "confidence": 0.93,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "官方正式发布会，gizmochina/gizguide/gogi.in等多家媒体独立同步报道，Dimensity 9500s处理器、200MP三摄、7000mAh、IP69K、5月29日开售等所有关键数据高度一致，可信度极高。",
+        "sources_verified": ["gizmochina 2026-05-25", "gizguide 2026-05-25", "unboxdiaries 2026-05-25"]
+      },
+      "pseudo_science": {
+        "flag": false,
+        "note": "无伪科学声明；Dimensity 9500s为已公布芯片型号"
+      },
+      "logic": {
+        "fallacy_detected": false,
+        "note": "无逻辑谬误"
+      },
+      "sentiment": {
+        "tone": "neutral-positive",
+        "bias_flag": false
+      }
+    },
+    {
+      "id": "RC-20260527-007",
+      "verdict": "Supported",
+      "confidence": 0.90,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "小米官方确认5月28日发布；notebookcheck引用官方宣传材料确认规格；gagadget/gizmochina等多家媒体确认€999定价；Dimensity 9500/8500芯片型号已由联发科官方公布。所有信息高度一致。",
+        "sources_verified": ["gizmochina 2026-05-18", "notebookcheck 2026-05-20", "gagadget 2026-05-21"]
+      },
+      "pseudo_science": {
+        "flag": false,
+        "note": "无伪科学声明"
+      },
+      "logic": {
+        "fallacy_detected": false,
+        "note": "无逻辑谬误"
+      },
+      "sentiment": {
+        "tone": "positive",
+        "bias_flag": false
+      }
+    },
+    {
+      "id": "RC-20260527-008",
+      "verdict": "Supported",
+      "confidence": 0.91,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "OPPO官方印度新闻稿+GSMArena+republicworld多源一致；169999卢比售价、7050mAh电池、骁龙8 Elite Gen 5、双200MP系统均来自官方发布会，5月28日开售有确认销售渠道（Flipkart/Amazon）。可信度极高。",
+        "sources_verified": ["oppo.com/in newsroom 2026-05-21", "GSMArena 2026-05-21", "republicworld 2026-05-21"]
+      },
+      "pseudo_science": {
+        "flag": false,
+        "note": "无伪科学声明；哈苏合作为已知品牌战略"
+      },
+      "logic": {
+        "fallacy_detected": false,
+        "note": "无逻辑谬误"
+      },
+      "sentiment": {
+        "tone": "neutral-positive",
+        "bias_flag": false
+      }
+    },
+    {
+      "id": "RC-20260527-009",
+      "verdict": "Supported",
+      "confidence": 0.83,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "Counterpoint Research为权威第三方调研机构，五一期间手机销量数据具可信度；同比降16%与DRAM涨价推高手机均价的分析逻辑被其他独立报告（TrendForce等）旁证支持；华为第一与苹果+3%的具体数字可与其他机构报告交叉验证。",
+        "sources_verified": ["Counterpoint Research 2026-05-20"],
+        "caveats": "中国线下市场数据存在估算成分，误差±3%属正常范围"
+      },
+      "pseudo_science": {
+        "flag": false,
+        "note": "无伪科学声明；DRAM涨价→手机涨价传导链为成立的市场逻辑"
+      },
+      "logic": {
+        "fallacy_detected": false,
+        "note": "无逻辑谬误"
+      },
+      "sentiment": {
+        "tone": "neutral",
+        "bias_flag": false
+      }
+    },
+    {
+      "id": "RC-20260527-010",
+      "verdict": "ConflictingEvidence",
+      "confidence": 0.75,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "reasoning": "Fold 8核心规格（5000mAh、4.1mm、200+50MP后置）被9to5Google、Sammy Fans等多家独立确认，可信度较高；但Fold 8 Wide为全新型号，4:3内屏比例信息来自同一泄露源，独立确认不足；7月22日伦敦Unpacked日期被多源提及但三星未官方确认。",
+        "sources_verified": ["9to5google 2026-05-18", "sammyfans 2026-05-19"],
+        "conflicting_points": ["Fold 8 Wide与Fold 7厚度差异在不同来源略有出入", "Unpacked日期（7月22日vs7月初）存在不同版本"]
+      },
+      "pseudo_science": {
+        "flag": false,
+        "note": "无伪科学声明"
+      },
+      "logic": {
+        "fallacy_detected": false,
+        "note": "无逻辑谬误"
+      },
+      "sentiment": {
+        "tone": "neutral",
+        "bias_flag": false
+      }
+    },
+    {
+      "id": "RC-20260527-011",
+      "verdict": "Supported",
+      "confidence": 0.70,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "vivo官方宣布5月29日发布，GSMArena收录，发布时间节点可核查。规格信息极少，仅作时间节点记录价值，置信度中等。",
+        "sources_verified": ["GSMArena 2026-05-27"],
+        "caveats": "规格信息尚未完整披露，后续需跟进"
+      },
+      "pseudo_science": {
+        "flag": false,
+        "note": "无伪科学声明"
+      },
+      "logic": {
+        "fallacy_detected": false,
+        "note": "无逻辑谬误"
+      },
+      "sentiment": {
+        "tone": "neutral",
+        "bias_flag": false
+      }
+    },
+    {
+      "id": "RC-20260527-012",
+      "verdict": "Supported",
+      "confidence": 0.86,
+      "fact_check": {
+        "label": "Supported",
+        "reasoning": "GSMArena官方规格页（通常基于官方或高可信信源）+CCC认证记录（163.com转述）双重支持；8000mAh Si-C电池+骁龙8 Elite Gen 5+16GB/512GB均为具体可核查规格；与上一批次wiki记录一致。",
+        "sources_verified": ["GSMArena spec page", "163.com CCC认证报道 2026-05-08转载"]
+      },
+      "pseudo_science": {
+        "flag": false,
+        "note": "无伪科学声明；8000mAh Si-C属量产技术范围"
+      },
+      "logic": {
+        "fallacy_detected": false,
+        "note": "无逻辑谬误"
+      },
+      "sentiment": {
+        "tone": "neutral-positive",
+        "bias_flag": false
+      }
+    }
+  ]
+}

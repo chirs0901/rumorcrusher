@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "run_date": "2026-05-29",
+    "timestamp": "220431",
+    "total_input": 32,
+    "total_check_worthy": 28,
+    "total_excluded": 4,
+    "excluded_reason": "已在前日报告中记录或重复性内容"
+  },
+  "check_worthy_items": [
+    {"id": "E-001", "score": 0.92, "reason": "骁龙8 Elite Gen 6规格大量泄露，需核查准确性", "priority": "HIGH"},
+    {"id": "E-002", "score": 0.88, "reason": "天玑9600 2nm规格爆料，GPU性能超越苹果A20 Pro声明需核查", "priority": "HIGH"},
+    {"id": "E-003", "score": 0.95, "reason": "官方发布，参数明确，高核查价值", "priority": "HIGH"},
+    {"id": "E-004", "score": 0.93, "reason": "iPhone 18 A20芯片及WMCM封装，多源确认，核查价值极高", "priority": "HIGH"},
+    {"id": "E-005", "score": 0.90, "reason": "台积电产能约束对整个手机供应链影响重大", "priority": "HIGH"},
+    {"id": "E-006", "score": 0.91, "reason": "SK海力士HBM售罄影响DRAM/LPDDR5价格", "priority": "HIGH"},
+    {"id": "E-007", "score": 0.88, "reason": "苹果独占2nm产能影响竞争格局", "priority": "HIGH"},
+    {"id": "E-008", "score": 0.93, "reason": "BOE被排除iPhone 18 Pro供应链，事件重大", "priority": "HIGH"},
+    {"id": "E-009", "score": 0.90, "reason": "BOE vs Samsung Display价格竞争，可核查", "priority": "HIGH"},
+    {"id": "E-010", "score": 0.85, "reason": "BOE成都工厂量产时间点可验证", "priority": "MEDIUM"},
+    {"id": "E-011", "score": 0.80, "reason": "vivo X Fold6爆料规格，未官宣，需核查", "priority": "MEDIUM"},
+    {"id": "E-012", "score": 0.75, "reason": "苹果折叠屏规格流传，官方未确认", "priority": "MEDIUM"},
+    {"id": "E-013", "score": 0.95, "reason": "moto razr fold已官方发布，规格可直接核查", "priority": "HIGH"},
+    {"id": "E-014", "score": 0.82, "reason": "小米三折叠通过认证，Q3发布时间点需核查", "priority": "MEDIUM"},
+    {"id": "E-016", "score": 0.90, "reason": "Q1全球出货量榜单，可与多方数据交叉核查", "priority": "HIGH"},
+    {"id": "E-017", "score": 0.92, "reason": "UFCS 2.0标准多厂联合签署，技术参数可核查", "priority": "HIGH"},
+    {"id": "E-018", "score": 0.85, "reason": "硅碳负极性能提升40%声明，10000mAh薄机身需核查", "priority": "MEDIUM"},
+    {"id": "E-019", "score": 0.88, "reason": "华为Mate 70快充参数，官方已宣传可核查", "priority": "MEDIUM"},
+    {"id": "E-020", "score": 0.82, "reason": "Edge AI市场规模预测数字，需来源核查", "priority": "MEDIUM"},
+    {"id": "E-021", "score": 0.87, "reason": "骁龙8 Gen5 NPU性能提升46%，70 token/s声明可核查", "priority": "MEDIUM"},
+    {"id": "E-022", "score": 0.85, "reason": "端侧模型规格和NPU瓶颈分析可技术核查", "priority": "MEDIUM"},
+    {"id": "E-023", "score": 0.88, "reason": "MDDC 2026大会已举办，AI战略转型宣称可核查", "priority": "MEDIUM"},
+    {"id": "E-025", "score": 0.85, "reason": "华为折叠屏70%+份额声明，需多方数据确认", "priority": "MEDIUM"},
+    {"id": "E-026", "score": 0.70, "reason": "无折痕量产突破声明，信源较单一", "priority": "LOW"},
+    {"id": "E-027", "score": 0.90, "reason": "HBM挤占DRAM供应，价格影响链条可多源确认", "priority": "HIGH"},
+    {"id": "E-028", "score": 0.88, "reason": "骁龙8 Elite Gen 5超越A19 Pro的具体性能数据可核查", "priority": "MEDIUM"},
+    {"id": "E-029", "score": 0.85, "reason": "S27发布时间（2027初）+ BOE $5差价，两个具体声明可核查", "priority": "MEDIUM"},
+    {"id": "E-031", "score": 0.87, "reason": "台积电2nm晶圆价格3万美元可查，多品牌同步2nm可核查", "priority": "MEDIUM"}
+  ],
+  "excluded_items": [
+    {"id": "E-015", "reason": "Galaxy Z Fold 8发布日期已在2026-05-27晚报记录"},
+    {"id": "E-024", "reason": "Coral NPU属边缘AI开发工具，非手机消费品核心范围"},
+    {"id": "E-030", "reason": "Q1国内出货量数据与E-016存在重叠"},
+    {"id": "E-032", "reason": "OPPO 200W快充信息较为老旧，与E-017 UFCS 2.0内容重叠"}
+  ]
+}

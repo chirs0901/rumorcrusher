@@ -9,8 +9,10 @@
 ### SoC 芯片
 - ✅ [Snapdragon 8 Elite Gen 5](entities/soc/snapdragon-8-elite-gen5.md) — NPU +37%，可作端侧 LLM 推理（待量产实测验证）
 - ✅ [MediaTek Dimensity 9400](entities/soc/dimensity-9400.md) — Agentic AI 首发地位核查（2026-05-18建档）
-- ⏳ Snapdragon 6 Gen 5 / 4 Gen 5 — 待 2026-05-15 起逐日合并
+- ✅ Snapdragon 6 Gen 5 / 4 Gen 5 — 4nm工艺，2026-05-07高通官方发布（2026-05-29建档）
 - ✅ [MediaTek Dimensity 9600](entities/soc/dimensity-9600.md) — TSMC N2P，首引双超大核（~5GHz），Q3 2026发布（爆料，官宣待确认）（2026-05-25建档）
+- ✅ [Snapdragon 8 Elite Gen 6](entities/soc/snapdragon-8-elite-gen6.md) — TSMC 2nm，9月发布，Adreno 845 GPU，UFS 5.0，CPU提升幅度信源冲突（CE）（2026-05-29建档）
+- ✅ [麒麟2026 / Kirin 2026](entities/soc/kirin-2026.md) — LogicFolding技术，晶体管密度+53.5%，频率首超3GHz，今秋发布（2026-05-27建档）
 - ⏳ MediaTek Dimensity 9500 — 待建档
 - ⏳ Apple A19 / A19 Pro — 待建档
 - ⏳ Google Tensor G5 — 待建档
@@ -22,6 +24,7 @@
 - ✅ [Apple](entities/brand/apple.md) — iPhone 18 Pro预测：A20 Pro 2nm+可变光圈+屏下FaceID（分析师），苹果Q1 2026全球出货第一（2026-05-25建档）
 - ✅ [Samsung](entities/brand/samsung.md) — Galaxy Z Fold 8（7月22日待官确，4.1mm，$1999），HBM4E发布，重夺iPhone 18 Pro OLED（2026-05-25更新）
 - ✅ [Xiaomi 小米](entities/brand/xiaomi.md) — 小米17 Ultra 6000mAh Si-C电池；小米17 Max 8000mAh CCC认证（2026-05-26建档）
+- ✅ [BOE 京东方](entities/brand/boe.md) — Gen 8.6 OLED工厂5月底量产；iPhone 18 Pro被排除，MacBook Pro OLED主供（2026-05-27建档）
 - ⏳ OPPO / vivo / Google — 待建档
 
 ### 技术
@@ -29,6 +32,8 @@
 - ✅ [VC均热板散热](entities/tech/vc-vapor-chamber.md) — 修正VC vs石墨烯误导比较（2026-05-18建档）
 - ✅ [LPDDR6](entities/tech/lpddr6.md) — SK海力士14.4Gbps / 三星12.8Gbps，2026年H2量产，专为AI手机设计（2026-05-26建档）
 - ✅ [WL-MCM封装](entities/tech/wl-mcm-packaging.md) — 晶圆级多芯片模组，苹果A20 Pro首发，集成HBM实现本地LLM（2026-05-26建档）
+- ✅ [LTPO+](entities/tech/ltpo-plus.md) — 苹果iPhone 18 Pro首次规模化部署，BOE因此被排除旗舰供应链（2026-05-27建档）
+- ✅ [UFCS 2.0](entities/tech/ufcs-2.md) — 40W无鉴权跨品牌互通，华为/OPPO/vivo/荣耀联签（2026-05-29建档）
 - ⏳ LPDDR5X / UFS 4 / 卫星通信 / 折叠铰链 / 端侧 LLM 加速 / 计算摄影
 
 ## 二、主题节点 / Topics
@@ -72,3 +77,5 @@
 - **2026-05-19**：新增主题 openai-hardware-timeline.md（OpenAI硬件战略追踪）
 - **2026-05-25**：新增实体 dimensity-9600.md / kirin-9030-pro.md / apple.md / samsung.md；新增主题 ai-dram-crisis-2026.md / tsmc-2nm-supply-2026.md / smic-process-evolution.md；更新索引
 - **2026-05-26**：新增实体 xiaomi.md / lpddr6.md / wl-mcm-packaging.md；更新主题 foldable-2026.md（moto razr fold发布+荣耀V6+苹果Fold OLED供货确认）/ ai-dram-crisis-2026.md（HBM23%产能+Micron警告+LPDDR6路线）/ tsmc-2nm-supply-2026.md（N2P提前至2026年H2量产+苹果WL-MCM+三星争夺联发科）
+- **2026-05-27**（晚报）：新增实体 kirin-2026.md（华为LogicFolding技术首档）/ boe.md（京东方OLED供应链）/ ltpo-plus.md；更新实体 samsung.md（Z Fold 8七月22日确认+OLED供应）；更新主题 foldable-2026.md（Z Fold 8四源确认）/ ai-dram-crisis-2026.md（Q1 DRAM/NAND终版涨幅）
+- **2026-05-29**（晚报）：新增实体 snapdragon-8-elite-gen6.md / ufcs-2.md；更新实体 boe.md（iPhone 18 Pro出局+Galaxy S27竞标）/ samsung.md（重夺iPhone 18 Pro OLED+S27发布窗口）/ apple.md（A20 WMCM封装+2nm产能锁定）；更新主题 ai-dram-crisis-2026.md（HBM3E售罄确认+LPDDR5涨幅）/ foldable-2026.md（moto razr fold发布+小米MIX Trifold认证）

@@ -1,0 +1,91 @@
+{
+  "run_id": "RC-20260527-094937",
+  "annotated_at": "2026-05-27T09:49:37+08:00",
+  "schema": "CW score 0-1; claim_type: factual_spec|market_data|financial|prediction|announcement; priority: HIGH|MED|LOW",
+  "items": [
+    {
+      "id": "RC-20260527-001",
+      "cw_score": 0.88,
+      "claim_type": "announcement",
+      "priority": "HIGH",
+      "reason": "官方发布会发布，具体规格（8600mAh、2294元、骁龙7 Gen4）可独立核查，直接影响消费者决策"
+    },
+    {
+      "id": "RC-20260527-002",
+      "cw_score": 0.82,
+      "claim_type": "prediction",
+      "priority": "HIGH",
+      "reason": "分析师汇总，涉及A20 Pro 2nm制程、屏下FaceID等多项技术规格声明，需标注预测性质；Dynamic Island缩小35%为供应链信息，可信度中高"
+    },
+    {
+      "id": "RC-20260527-003",
+      "cw_score": 0.76,
+      "claim_type": "prediction",
+      "priority": "MED",
+      "reason": "MacRumors路线图汇总，多数为分析师预测，官方确认待秋季；整体可核查性适中，需标注预测与事实的分界"
+    },
+    {
+      "id": "RC-20260527-004",
+      "cw_score": 0.85,
+      "claim_type": "market_data",
+      "priority": "HIGH",
+      "reason": "Digitimes供应链报道，RFI事件、单价差$5、月省$650万均为可核查数字；BOE Gen 8.6已量产为已知事实，可交叉验证"
+    },
+    {
+      "id": "RC-20260527-005",
+      "cw_score": 0.87,
+      "claim_type": "announcement",
+      "priority": "HIGH",
+      "reason": "华为官网预订页面+多源5月27日爆料，芯片型号（麒麟9010S/9020）、电池（7000mAh）、发布日期（6月1日）均具体可查"
+    },
+    {
+      "id": "RC-20260527-006",
+      "cw_score": 0.93,
+      "claim_type": "announcement",
+      "priority": "HIGH",
+      "reason": "官方正式发布，多媒体同步报道，规格数据（Dimensity 9500s、200MP、7000mAh、IP69K）极高可查性"
+    },
+    {
+      "id": "RC-20260527-007",
+      "cw_score": 0.90,
+      "claim_type": "announcement",
+      "priority": "HIGH",
+      "reason": "小米官方确认发布时间（5月28日），规格由官方宣传材料泄露并被notebookcheck确认，€999售价已公布，可信度高"
+    },
+    {
+      "id": "RC-20260527-008",
+      "cw_score": 0.91,
+      "claim_type": "announcement",
+      "priority": "HIGH",
+      "reason": "OPPO官方印度发布会公告，价格（169999卢比）和规格均来自官方新闻稿，GSMArena同步收录，可信度极高"
+    },
+    {
+      "id": "RC-20260527-009",
+      "cw_score": 0.83,
+      "claim_type": "market_data",
+      "priority": "HIGH",
+      "reason": "Counterpoint是权威行业调研机构，同比降16%、苹果+3%等数据具体可核查，与DRAM涨价传导链推断可交叉验证"
+    },
+    {
+      "id": "RC-20260527-010",
+      "cw_score": 0.79,
+      "claim_type": "factual_spec",
+      "priority": "MED",
+      "reason": "规格泄露来自TechManiacs（非官方），但被9to5Google/Sammy Fans等多家独立确认；Fold Wide 4:3内屏为新型号声明，需标注ConflictingEvidence风险"
+    },
+    {
+      "id": "RC-20260527-011",
+      "cw_score": 0.65,
+      "claim_type": "announcement",
+      "priority": "LOW",
+      "reason": "信息极简（仅知晓发布日期），无完整规格可核查；作为时间节点记录有价值，但核查价值低"
+    },
+    {
+      "id": "RC-20260527-012",
+      "cw_score": 0.84,
+      "claim_type": "factual_spec",
+      "priority": "HIGH",
+      "reason": "GSMArena完整收录规格页，8000mAh Si-C电池+骁龙8 Elite Gen 5为可独立核查的具体技术规格；CCC认证记录可溯源"
+    }
+  ]
+}

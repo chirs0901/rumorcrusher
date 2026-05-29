@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RumorCrusher · 2026-05-29 · 晚报</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"Helvetica Neue","PingFang SC",sans-serif;background:#f2f2ef;color:#111;-webkit-font-smoothing:antialiased;line-height:1.6}
+a{color:#c8102e;text-decoration:none}
+a:hover{text-decoration:underline}
+
+.header{background:#111;color:#fff;padding:48px 28px 36px}
+.header-inner{max-width:1000px;margin:0 auto}
+.header-meta{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#c8102e;margin-bottom:12px}
+.header-title{font-size:clamp(26px,3.4vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-bottom:14px}
+.header-sub{font-size:14px;color:rgba(255,255,255,.65);max-width:760px}
+
+main{max-width:1000px;margin:0 auto;padding:28px}
+
+.window-banner{background:#fff;border-left:4px solid #c8102e;padding:18px 22px;margin-bottom:24px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.window-banner .label{font-size:11px;font-weight:700;letter-spacing:.12em;color:#c8102e;margin-bottom:4px}
+.window-banner .value{font-size:15px;font-weight:600;color:#111;line-height:1.8}
+
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:24px}
+.stat-card{background:#fff;border-radius:6px;padding:16px 18px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.stat-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#888;margin-bottom:4px}
+.stat-value{font-size:28px;font-weight:800;color:#111;letter-spacing:-.02em}
+.stat-value.green{color:#006633}
+.stat-value.orange{color:#a06800}
+.stat-value.red{color:#c8102e}
+
+.section{background:#fff;border-radius:6px;padding:24px;margin-bottom:18px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.section h2{font-size:18px;letter-spacing:-.01em;margin-bottom:14px;color:#111;display:flex;align-items:center;gap:8px}
+.section h2::before{content:'';width:3px;height:18px;background:#c8102e;border-radius:2px}
+
+.news{border-top:1px solid #e8e8e4;padding:16px 0;display:flex;gap:14px}
+.news:first-of-type{border-top:none;padding-top:6px}
+.news-cat{flex-shrink:0;width:84px;font-size:10px;font-weight:700;letter-spacing:.06em;padding:3px 7px;border-radius:3px;height:fit-content;text-align:center}
+.cat-mfr{background:rgba(200,16,46,.1);color:#a8102e}
+.cat-mem{background:rgba(0,136,170,.1);color:#005e7c}
+.cat-ai{background:rgba(124,58,237,.1);color:#6c2bd9}
+.cat-chip{background:rgba(0,102,204,.1);color:#0055aa}
+.cat-disp{background:rgba(0,160,80,.1);color:#005e30}
+.cat-battery{background:rgba(255,160,0,.15);color:#7a5000}
+.news-body{flex:1}
+.news-title{font-size:15px;font-weight:700;color:#111;margin-bottom:6px;line-height:1.4}
+.news-text{font-size:13.5px;color:#444;line-height:1.7;margin-bottom:6px}
+.news-meta{font-size:12px;color:#888;margin-top:4px}
+.verdict{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px;margin-right:6px}
+.v-supported{background:rgba(0,150,80,.12);color:#005e30}
+.v-ce{background:rgba(245,166,35,.18);color:#a06800}
+.v-nee{background:rgba(120,120,120,.12);color:#555}
+.v-refuted{background:rgba(200,16,46,.12);color:#c8102e}
+.news-srcs{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.src{font-size:10px;color:#666;padding:2px 7px;border:1px solid #e0e0dc;border-radius:3px}
+.src:hover{background:#111;color:#fff;border-color:#111}
+
+.launch-table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px}
+.launch-table th,.launch-table td{padding:9px 11px;border-bottom:1px solid #e8e8e4;text-align:left;vertical-align:top}
+.launch-table th{background:#f7f7f4;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#555}
+.launch-table td.date{font-weight:700;color:#c8102e;white-space:nowrap}
+.launch-table td.model{font-weight:600}
+.conf{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px}
+.conf-h{background:rgba(0,150,80,.15);color:#006633}
+.conf-m{background:rgba(245,166,35,.18);color:#a06800}
+
+.rumor-box{background:rgba(200,16,46,.04);border:1px solid rgba(200,16,46,.2);border-radius:6px;padding:16px;margin-top:8px}
+.rumor-label{font-size:11px;font-weight:700;color:#c8102e;letter-spacing:.08em;margin-bottom:6px}
+
+.note{background:rgba(245,166,35,.08);border-left:3px solid #f5a623;padding:12px 16px;margin-top:14px;font-size:13px;color:#5c4500;border-radius:0 4px 4px 0}
+
+footer{border-top:1px solid #d9d9d5;padding:24px;max-width:1000px;margin:0 auto;color:#999;font-size:11px}
+footer a{color:#c8102e;font-weight:600}
+
+@media(max-width:720px){
+  .header{padding:36px 20px 28px}
+  main{padding:20px}
+  .section{padding:18px}
+  .news{flex-direction:column;gap:10px}
+  .news-cat{width:fit-content}
+  .stats-grid{grid-template-columns:repeat(3,1fr)}
+  .launch-table{font-size:12px}
+  .launch-table th,.launch-table td{padding:8px 6px}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="header-meta">2026-05-29 · 每日简报 · 晚报版</div>
+    <h1 class="header-title">骁龙Gen 6 / 天玑9600 同期发布被辟谣 · 三星夺回iPhone 18 Pro OLED · HBM3E全年售罄 · UFCS 2.0发布</h1>
+    <p class="header-sub">本日采集32条资讯，28条经多Agent核查，首次出现Refuted辟谣条目。涵盖SoC芯片/OLED供应链/存储内存/端侧AI/快充标准五大主线。所有信源均经独立验证。</p>
+  </div>
+</div>
+
+<main>
+
+<!-- Stats grid -->
+<div class="stats-grid">
+  <div class="stat-card">
+    <div class="stat-label">本批采集</div>
+    <div class="stat-value">32</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">Supported</div>
+    <div class="stat-value green">18</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">冲突证据</div>
+    <div class="stat-value orange">5</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">健康评分</div>
+    <div class="stat-value green">83</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">AVeriTeC均分</div>
+    <div class="stat-value">0.74</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">今日辟谣</div>
+    <div class="stat-value red">1</div>
+  </div>
+</div>
+
+<!-- 今日要点 -->
+<div class="window-banner">
+  <div class="label">🌙 晚报要点</div>
+  <div class="value">
+    1️⃣ <strong>辟谣</strong>："苹果/高通/联发科2nm芯片同期发布"说法不成立——实际发布窗口差距超1个月（M-014新规）<br>
+    2️⃣ <strong>三星夺回iPhone 18 Pro OLED</strong>：BOE因LTPO质量问题被排除旗舰层级，三星SDC重回主供<br>
+    3️⃣ <strong>SK海力士HBM3E全年售罄</strong>：AI内存需求挤压消费端DRAM/LPDDR5，价格涨幅预期高个位数至20%<br>
+    4️⃣ <strong>UFCS 2.0标准</strong>：40W无鉴权跨品牌互通，华为/OPPO/vivo/荣耀四大品牌联合签署<br>
+    5️⃣ <strong>苹果锁定台积电2nm约50%产能</strong>，台积电2nm订单满至2028年，CoWoS中期售罄<br>
+    6️⃣ <strong>moto razr fold正式发布</strong>（5月19日），骁龙8 Gen5 + DXOMARK折叠屏影像全球第一
+  </div>
+</div>
+
+<!-- 芯片 -->
+<div class="section">
+  <h2>🔵 SoC 芯片</h2>
+
+  <div class="news">
+    <span class="news-cat cat-chip">芯片</span>
+    <div class="news-body">
+      <div class="news-title">高通骁龙6 Gen5 / 4 Gen5正式发布，基于4nm工艺</div>
+      <div class="news-text">高通于2026年5月7日正式发布骁龙6 Gen5和骁龙4 Gen5，均采用4nm工艺，面向中端和入门市场，显著提升AI处理及5G性能。</div>
+      <div class="news-meta"><span class="verdict v-supported">✅ Supported 0.95</span> 信源：Qualcomm官方 · NEWS.am TECH</div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-chip">芯片</span>
+    <div class="news-body">
+      <div class="news-title">骁龙8 Elite Gen 6九月亮相：2nm工艺 + Adreno 845 GPU + UFS 5.0</div>
+      <div class="news-text">多方泄露汇总：骁龙8 Elite Gen 6预计2026年9月发布，采用TSMC 2nm节点，搭载新Oryon 2+3+3核心架构，Adreno 845 GPU（12MB GMEM），支持LPDDR5X和UFS 5.0，X90基带峰值下载速度>15Gbps。</div>
+      <div class="news-meta"><span class="verdict v-ce">⚠️ CE 0.62</span> CPU性能提升幅度信源冲突（&lt;20% vs 35%+），待9月官方确认 · 信源：Gizmochina · Wccftech</div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-chip">芯片</span>
+    <div class="news-body">
+      <div class="news-title">苹果iPhone 18首发A20 2nm芯片 + WMCM先进封装 + 12GB RAM</div>
+      <div class="news-text">苹果A20/A20 Pro采用台积电2nm工艺，首发WMCM（晶圆级多芯片模组）封装技术；苹果锁定台积电2026年2nm产能约48-50%；WMCM产能年底达6万片/月，2027年翻倍。</div>
+      <div class="news-meta"><span class="verdict v-supported">✅ Supported 0.87</span> 信源：IT之家 · 芯智讯 · 台积电产能报告</div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-chip">芯片</span>
+    <div class="news-body">
+      <div class="news-title">台积电2nm三厂满产，订单排至2028年；CoWoS封装中期售罄</div>
+      <div class="news-text">台积电2nm节点三座晶圆厂全部满产，交货周期78-104周，新订单已排至2028年。CoWoS先进封装产能从约8万片/月扩至12-13万片/月，NVIDIA占据约60%配额。苹果消耗约50%的N2产能用于消费设备。</div>
+      <div class="news-meta"><span class="verdict v-supported">✅ Supported 0.88</span> 信源：Paradox Intelligence Research · FusionWW</div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-chip">芯片</span>
+    <div class="news-body">
+      <div class="news-title">骁龙8 Elite Gen 5多核/GPU首次整体超越苹果A19 Pro</div>
+      <div class="news-text">高通第三代Oryon内核，最高4.6GHz，多核+35%，GPU+23%，Hexagon NPU快37%。注：苹果A19 Pro单核性能仍具优势，"整体超越"需注意测试项权重。</div>
+      <div class="news-meta"><span class="verdict v-supported">✅ Supported 0.82</span> 信源：Mobolist · 多家评测媒体</div>
+    </div>
+  </div>
+</div>
+
+<!-- 显示 -->
+<div class="section">
+  <h2>🟢 显示屏幕与供应链</h2>
+
+  <div class="news">
+    <span class="news-cat cat-disp">显示</span>
+    <div class="news-body">
+      <div class="news-title">三星显示重夺iPhone 18 Pro OLED主供，BOE因LTPO质量问题出局</div>
+      <div class="news-text">三星显示（SDC）重新锁定iPhone 18 Pro/Pro Max旗舰OLED供应主位，联合LG显示（LGD）主导旗舰层级。BOE因LTPO制程不规范问题被排除旗舰供应层级，仅保留标准版份额。</div>
+      <div class="news-meta"><span class="verdict v-supported">✅ Supported 0.88</span> 信源：<a href="https://www.sammyfans.com/2026/05/07/samsung-takes-back-iphone-18-pro-oled-business-from-boe/">Sammy Fans 2026-05-07</a></div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-disp">显示</span>
+    <div class="news-body">
+      <div class="news-title">BOE以低5美元/块报价争抢三星Galaxy S27 OLED订单</div>
+      <div class="news-text">京东方向三星MX报价每块OLED面板较三星显示便宜约5美元，争取Galaxy S27系列部分机型供应资格。Galaxy S27系列仍预计以三星显示为主供，BOE可能获部分机型配额。</div>
+      <div class="news-meta"><span class="verdict v-supported">✅ Supported 0.85</span> 信源：<a href="https://www.digitimes.com/news/a20260524PD201/boe-oled-panel-sdc-galaxy-smartphone.html">Digitimes 2026-05-24</a> · Neowin</div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-disp">显示</span>
+    <div class="news-body">
+      <div class="news-title">三星Galaxy S27系列预计2027年2-3月全球发布</div>
+      <div class="news-text">多方分析确认Galaxy S27系列发布窗口为2027年2-3月，与三星旗舰年度节奏一致，BOE正积极争取部分OLED显示面板供应资格。</div>
+      <div class="news-meta"><span class="verdict v-supported">✅ Supported 0.83</span> 信源：Digitimes · SamMobile · PhoneArena</div>
+    </div>
+  </div>
+</div>
+
+<!-- 电池快充 -->
+<div class="section">
+  <h2>🟡 电池与快充</h2>
+
+  <div class="news">
+    <span class="news-cat cat-battery">电池</span>
+    <div class="news-body">
+      <div class="news-title">UFCS 2.0标准发布：40W无鉴权跨品牌互通，四大品牌联合签署</div>
+      <div class="news-text">UFCS协议2.0版本新增40W无鉴权互通功能，华为、OPPO、vivo、荣耀联合签署互授权意向，推动国内快充标准化。200W以上私有超高速协议不受约束。</div>
+      <div class="news-meta"><span class="verdict v-supported">✅ Supported 0.91</span> 信源：<a href="https://m.thepaper.cn/newsDetail_forward_31928996">澎湃新闻</a></div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-battery">电池</span>
+    <div class="news-body">
+      <div class="news-title">华为Mate 70系列快充突破100W，支持UFCS 44W互通</div>
+      <div class="news-text">华为Mate 70旗舰快充最高100W，通过UFCS协议实现与其他品牌充电器44W互通快充，结合硅碳负极电池实现高续航密度。</div>
+      <div class="news-meta"><span class="verdict v-supported">✅ Supported 0.90</span> 信源：腾讯新闻 · 华为官网</div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-battery">电池</span>
+    <div class="news-body">
+      <div class="news-title">硅碳负极电池全面普及，8000mAh可实现8.5mm超薄机身</div>
+      <div class="news-text">2026年硅碳负极材料在旗舰机型中全面普及，能量密度较2025年大幅提升，8000mAh电池已可控制在8.5mm厚度内，realme率先实现10000mAh量产。</div>
+      <div class="news-meta"><span class="verdict v-ce">⚠️ CE 0.65</span> 具体"40%提升"数字各信源不统一，硅碳普及趋势本身可信 · 信源：36氪 · 雷科技</div>
+    </div>
+  </div>
+</div>
+
+<!-- 存储内存 -->
+<div class="section">
+  <h2>🔷 存储与内存</h2>
+
+  <div class="news">
+    <span class="news-cat cat-mem">存储</span>
+    <div class="news-body">
+      <div class="news-title">SK海力士2026年全年HBM供应售罄（含HBM3E），AI成存储决定性约束</div>
+      <div class="news-text">SK海力士CEO公开确认2026年HBM及HBM3E产能已全部预售完毕，HBM成为AI市场决定性限制因素，DRAM及LPDDR5价格面临高个位数至20%涨幅。三星和SK Hynix已就合约重新定价发出信号。</div>
+      <div class="news-meta"><span class="verdict v-supported">✅ Supported 0.92</span> 信源：SK Hynix官方 · Intelligent Living</div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-mem">存储</span>
+    <div class="news-body">
+      <div class="news-title">HBM产能挤压标准DDR5/LPDDR5供应趋紧，手机内存成本上涨</div>
+      <div class="news-text">AI数据中心对HBM的旺盛需求使SK海力士和三星产能重心向HBM倾斜，消费端DRAM（含手机用LPDDR5）供应趋紧，全球价格涨幅预期高个位数至20%。</div>
+      <div class="news-meta"><span class="verdict v-supported">✅ Supported 0.87</span> 信源：Intelligent Living · 三星/SK Hynix官方</div>
+    </div>
+  </div>
+</div>
+
+<!-- AI -->
+<div class="section">
+  <h2>🟣 端侧AI与NPU</h2>
+
+  <div class="news">
+    <span class="news-cat cat-ai">AI</span>
+    <div class="news-body">
+      <div class="news-title">骁龙8 Gen5 NPU推理提升46%，端侧LLM可达70 token/s</div>
+      <div class="news-text">高通官方数据，骁龙8 Gen5 Hexagon NPU较上代AI吞吐量提升46%，处理端侧大语言模型推理可达每秒70个token，Snapdragon X2 Elite Extreme旗舰级达80 TOPS。</div>
+      <div class="news-meta"><span class="verdict v-supported">✅ Supported 0.85</span> 信源：Specser · Qualcomm官方</div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-ai">AI</span>
+    <div class="news-body">
+      <div class="news-title">端侧模型持续压缩：Llama 3.2/Gemma 3可运行于手机，推理瓶颈在内存带宽</div>
+      <div class="news-text">Llama 3.2（1B/3B）、Gemma 3（270M）、Phi-4 mini（3.8B）等轻量模型已可高效运行于主流手机NPU。学界工程界共识：手机NPU推理的主要瓶颈在于内存带宽，而非TOPS算力。</div>
+      <div class="news-meta"><span class="verdict v-supported">✅ Supported 0.88</span> 信源：Edge AI and Vision Alliance · 各模型官方</div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-ai">AI</span>
+    <div class="news-body">
+      <div class="news-title">联发科MDDC 2026：宣布"全域芯AI"战略，向AI基础设施供应商转型</div>
+      <div class="news-text">2026年5月13日联发科天玑开发者大会（MDDC 2026），正式发布全域芯AI新体验，联发科战略转型为AI基础设施供应商，天玑系列定位从手机芯片向AI核心基础设施演进。</div>
+      <div class="news-meta"><span class="verdict v-supported">✅ Supported 0.86</span> 信源：联发科官方MDDC 2026</div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-ai">AI</span>
+    <div class="news-body">
+      <div class="news-title">端侧AI硬件市场2026年达307亿美元，NPU成旗舰SoC核心配置</div>
+      <div class="news-text">市场研究数据：Edge AI硬件市场2026年约$30.7B，2031年增至$68.7B；NPU专用加速已成各大SoC厂商不可妥协的核心配置，推动2026年新一轮NPU性能竞赛。</div>
+      <div class="news-meta"><span class="verdict v-supported">✅ Supported 0.80</span> 信源：AI2 Work（市场研究报告）</div>
+    </div>
+  </div>
+</div>
+
+<!-- 整机品牌 -->
+<div class="section">
+  <h2>📱 整机与品牌</h2>
+
+  <div class="news">
+    <span class="news-cat cat-mfr">品牌</span>
+    <div class="news-body">
+      <div class="news-title">moto razr fold 5月19日正式发布：骁龙8 Gen5 + DXOMARK折叠影像全球第一</div>
+      <div class="news-text">联想旗下moto品牌首款横向大折叠旗舰moto razr fold于2026年5月19日发布，搭载骁龙8 Gen5，5000万三摄获DXOMARK折叠屏影像评分全球第一，6000mAh大电池。</div>
+      <div class="news-meta"><span class="verdict v-supported">✅ Supported 0.97</span> 信源：联想官方 · 中关村在线</div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-mfr">品牌</span>
+    <div class="news-body">
+      <div class="news-title">小米MIX Trifold三折叠手机通过认证，预计Q3 2026亮相</div>
+      <div class="news-text">小米首款三折叠手机Xiaomi MIX Trifold已通过相关认证，根据认证进度预计Q3 2026发布，将成为继华为Mate XT Non-Standard之后第二款量产三折叠智能手机。</div>
+      <div class="news-meta"><span class="verdict v-supported">✅ Supported 0.80</span> 信源：搜狐网 · Xiaomi认证库</div>
+    </div>
+  </div>
+
+  <div class="news">
+    <span class="news-cat cat-mfr">品牌</span>
+    <div class="news-body">
+      <div class="news-title">2026年Q1全球出货：苹果旗下机型包揽前三，红米A5跻身全球前十</div>
+      <div class="news-text">IDC/Counterpoint Q1 2026全球智能手机出货量榜单：苹果旗下机型包揽前三，展现Q1旗舰季强势表现；红米A5凭借超高性价比跻身全球出货量前十，显示入门市场量级潜力。</div>
+      <div class="news-meta"><span class="verdict v-supported">✅ Supported 0.88</span> 信源：太平洋科技（IDC/Counterpoint）</div>
+    </div>
+  </div>
+</div>
+
+<!-- 今日辟谣 -->
+<div class="section">
+  <h2>❌ 今日辟谣</h2>
+  <div class="rumor-box">
+    <div class="rumor-label">❌ Refuted · 置信度 0.70</div>
+    <p style="font-size:14px;font-weight:700;margin-bottom:6px">台积电2nm三大品牌"同期发布"说法不成立</p>
+    <p style="font-size:13.5px;color:#444;line-height:1.7">
+      <strong>原声称</strong>：苹果A20/A20 Pro、高通骁龙8 Elite Gen 6、联发科天玑9600将于2026年下半年"同期"量产，"代工价格创历史新高"。<br>
+      <strong>核查结论</strong>：苹果iPhone 18通常9月第二周发布→A20约9月初量产；高通骁龙Gen 6同在9月亮相；联发科天玑9600根据路线图为Q4（10-11月），实际时差超1个月。"同期"为媒体简化导致的误导性叙述，已触发新增规则M-014。台积电2nm晶圆价格约$28K-$32K/片，技术上正确但"历史最高"有夸大风险。
+    </p>
+  </div>
+</div>
+
+<!-- 发布日程 -->
+<div class="section">
+  <h2>📅 近期发布日程前瞻</h2>
+  <table class="launch-table">
+    <thead>
+      <tr>
+        <th>时间</th>
+        <th>机型/事件</th>
+        <th>置信度</th>
+        <th>要点</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="date">2026-05-19<br>（已发布）</td>
+        <td class="model">moto razr fold</td>
+        <td><span class="conf conf-h">高置信</span></td>
+        <td>骁龙8 Gen5 · 6000mAh · DXOMARK折叠屏影像全球第一</td>
+      </tr>
+      <tr>
+        <td class="date">2026-05-底</td>
+        <td class="model">BOE成都B16 AMOLED量产</td>
+        <td><span class="conf conf-m">中置信</span></td>
+        <td>8.6代IT AMOLED工厂，面向笔记本/平板（单源）</td>
+      </tr>
+      <tr>
+        <td class="date">2026-Q3</td>
+        <td class="model">小米MIX Trifold</td>
+        <td><span class="conf conf-m">中置信</span></td>
+        <td>首款三折叠认证通过，第二款量产三折叠</td>
+      </tr>
+      <tr>
+        <td class="date">2026-07-22</td>
+        <td class="model">三星 Galaxy Z Fold 8</td>
+        <td><span class="conf conf-h">高置信</span></td>
+        <td>4.1mm · $1999 · 多源确认（2026-05-27建档）</td>
+      </tr>
+      <tr>
+        <td class="date">2026-09</td>
+        <td class="model">Apple iPhone 18系列</td>
+        <td><span class="conf conf-h">高置信</span></td>
+        <td>A20/A20 Pro 2nm + WMCM封装 + 12GB RAM</td>
+      </tr>
+      <tr>
+        <td class="date">2026-09</td>
+        <td class="model">骁龙8 Elite Gen 6（发布）</td>
+        <td><span class="conf conf-h">高置信</span></td>
+        <td>2nm · Adreno 845 · UFS 5.0（CPU提升幅度CE）</td>
+      </tr>
+      <tr>
+        <td class="date">2026-Q4</td>
+        <td class="model">联发科天玑9600</td>
+        <td><span class="conf conf-m">中置信</span></td>
+        <td>TSMC 2nm · 2+3+3全大核 · GPU声称超A20 Pro（CE）</td>
+      </tr>
+      <tr>
+        <td class="date">2027-Q1</td>
+        <td class="model">三星 Galaxy S27系列</td>
+        <td><span class="conf conf-h">高置信</span></td>
+        <td>2027年2-3月发布 · BOE OLED供应谈判中</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="note">⚠️ 上表所有时间节点均来自公开爆料/分析师报告，仅供参考。置信度标注基于RumorCrusher AVeriTeC核查框架，非官方承诺。</div>
+</div>
+
+</main>
+
+<footer>
+  <p>RumorCrusher · 2026-05-29 晚报 · 流水线v0.7 · 采集32条 · 核查28条 · 健康评分83/100</p>
+  <p style="margin-top:8px">
+    <a href="03-quality-report-220431.md">质检报告</a> ·
+    <a href="04-clean-report-220431.md">干净报告</a> ·
+    <a href="../knowledge-base/index.html">手机知识库</a> ·
+    <a href="../wiki/index.html">LLM Wiki</a> ·
+    <a href="../index.html">归档首页</a>
+  </p>
+</footer>
+
+</body>
+</html>

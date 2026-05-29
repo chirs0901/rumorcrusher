@@ -1,0 +1,333 @@
+{
+  "batch_id": "RC-20260527-193256",
+  "run_type": "evening",
+  "date": "2026-05-27",
+  "agents_run": ["fact-check", "pseudo-science", "logic", "sentiment"],
+  "items": [
+    {
+      "id": "E001",
+      "title": "华为麒麟2026芯片：LogicFolding，晶体管密度+53.5%，频率首超3GHz",
+      "avritec_label": "Supported",
+      "confidence": 0.91,
+      "fact_check": {
+        "verdict": "Supported",
+        "evidence": "ISCAS 2026学术会议为华为官方发布渠道；IT之家、新浪财经、搜狐均独立报道，参数（238 MTr/mm²，3.1GHz）多次交叉核实。LogicFolding技术（逻辑折叠/双层逻辑设计）为华为专有概念，与现有芯片堆叠技术路线有别。",
+        "sources_verified": ["IT之家", "新浪财经", "华为ISCAS 2026大会"]
+      },
+      "pseudo_science": {"flag": false, "notes": "芯片密度提升基于工程优化，无伪科学成分"},
+      "logic": {"flag": false, "fallacies": []},
+      "sentiment": {"clickbait_score": 0.3, "value_concerns": [], "tone": "factual"},
+      "eq_score": 0.88
+    },
+    {
+      "id": "E004",
+      "title": "台积电2nm产能售罄至2028年，月产能目标14万片，单价超$30,000",
+      "avritec_label": "Supported",
+      "confidence": 0.87,
+      "fact_check": {
+        "verdict": "Supported",
+        "evidence": "Dataconomy（2026-03-31）和BigGo Finance均独立报道台积电2nm产能售罄状况。月产能14万片和$30,000+单价被SemiWiki/Dataconomy引用，与行业分析机构数字相符。台积电已公开确认N2产能紧张。",
+        "sources_verified": ["Dataconomy", "BigGo Finance", "SemiWiki"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false, "fallacies": []},
+      "sentiment": {"clickbait_score": 0.2, "value_concerns": [], "tone": "industry_analysis"},
+      "eq_score": 0.85
+    },
+    {
+      "id": "E005",
+      "title": "三星2nm良率升至60%，已获Tesla/NVIDIA大单",
+      "avritec_label": "Supported",
+      "confidence": 0.82,
+      "fact_check": {
+        "verdict": "Supported",
+        "evidence": "三星2nm GAA良率数据由SemiWiki论坛和Tweaktown独立引用；Tesla $165亿合同（2025-2033）为已公开新闻，多家科技媒体确认。良率从50%提升至60%的时间节点可信。需注意：三星官方未公开发布良率数字，信源均为行业分析师或供应链媒体。",
+        "sources_verified": ["SemiWiki", "Tweaktown", "Digitimes"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait_score": 0.2, "value_concerns": [], "tone": "factual"},
+      "eq_score": 0.80
+    },
+    {
+      "id": "E006",
+      "title": "iPhone 18 Pro OLED：Samsung+LG接管，BOE被排除，采用LTPO+",
+      "avritec_label": "Supported",
+      "confidence": 0.90,
+      "fact_check": {
+        "verdict": "Supported",
+        "evidence": "The Elec（韩国专业显示产业媒体，权威来源）+ MacRumors + SamMobile三路独立报道，供货数量（Samsung 1.46亿 / LG 8200万）均来源于The Elec产业链调研，可信度高。LTPO+技术说明与三星Display公开技术路线相符。",
+        "sources_verified": ["The Elec", "MacRumors", "SamMobile"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait_score": 0.15, "value_concerns": []},
+      "eq_score": 0.90
+    },
+    {
+      "id": "E007",
+      "title": "BOE B16成都Gen 8.6 OLED工厂5月底量产，供MacBook Pro OLED面板",
+      "avritec_label": "Supported",
+      "confidence": 0.86,
+      "fact_check": {
+        "verdict": "Supported",
+        "evidence": "TechTimes（2026-05-14）和Digitimes均确认BOE B16 Gen 8.6工厂开始量产，提前原定年底时间表。苹果MacBook Pro OLED客户关系已由AppleInsider和TechNode各自确认。投资额630亿元与早期公告吻合。",
+        "sources_verified": ["TechTimes", "Digitimes", "AppleInsider"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait_score": 0.1, "value_concerns": []},
+      "eq_score": 0.85
+    },
+    {
+      "id": "E008",
+      "title": "BOE 2026年iPhone屏目标3500万块，但被排除iPhone 18 Pro",
+      "avritec_label": "ConflictingEvidence",
+      "confidence": 0.72,
+      "fact_check": {
+        "verdict": "ConflictingEvidence",
+        "evidence": "TechNode报道苹果'加深'与BOE的OLED合作并有3500万块目标，但AppleInsider/MacRumors同期报道BOE被排除iPhone 18 Pro订单。矛盾点：'加深合作'与'被排除旗舰'并存。可能的解释：BOE获MacBook OLED（Gen 8.6线）订单弥补iPhone Pro损失，但手机端合作实际缩水。需等待苹果官方供应商名单确认。",
+        "sources_verified": ["TechNode", "AppleInsider", "MacRumors"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": true, "fallacies": ["信源选择性报道：TechNode标题强调'加深合作'而忽视BOE被排除Pro的事实"]},
+      "sentiment": {"clickbait_score": 0.45, "value_concerns": ["标题可能误导读者认为BOE整体关系改善"]},
+      "eq_score": 0.65
+    },
+    {
+      "id": "E009",
+      "title": "Galaxy Z Fold 8：7月22日伦敦Unpacked，200MP，5000mAh，45W，$1999起",
+      "avritec_label": "Supported",
+      "confidence": 0.86,
+      "fact_check": {
+        "verdict": "Supported",
+        "evidence": "7月22日伦敦Unpacked时间由SamMobile、PhoneArena、Gadgetbridge、Tech Advisor四方独立来源确认。规格（200MP主摄、5000mAh、45W）由多个泄露来源交叉验证，$1999起售为分析师估算，有合理历史基础。骁龙8 Elite Gen5搭载符合高通路线图。",
+        "sources_verified": ["SamMobile", "PhoneArena", "Gadgetbridge"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait_score": 0.2, "value_concerns": []},
+      "eq_score": 0.85
+    },
+    {
+      "id": "E010",
+      "title": "Galaxy Z Fold 8 Wide：4:3内屏比例全新机型",
+      "avritec_label": "NotEnoughEvidence",
+      "confidence": 0.52,
+      "fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "evidence": "仅TechManiacs一个来源，其他媒体（SamMobile/TheZFoldCase）均为转载，无第二独立信源。4:3屏幕比例为新概念，未获三星官方或主流供应链媒体确认。",
+        "sources_verified": ["SamMobile（转载）"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": true, "fallacies": ["单一信源谬误"]},
+      "sentiment": {"clickbait_score": 0.4, "value_concerns": []},
+      "eq_score": 0.50
+    },
+    {
+      "id": "E011",
+      "title": "DRAM合同价Q1暴涨90-95%，手机端涨60-70%，HBM产能挤压消费级",
+      "avritec_label": "Supported",
+      "confidence": 0.88,
+      "fact_check": {
+        "verdict": "Supported",
+        "evidence": "新浪财经（2026-05-12）引用多个行业分析机构数据；华尔街见闻独立报道一致。DRAM价格上涨被TrendForce、DRAMeXchange等专业机构持续跟踪，数据可信。HBM产能挤压消费端DRAM的逻辑被多个分析报告（东吴证券、长城证券）支持。",
+        "sources_verified": ["新浪财经", "证券时报", "华尔街见闻", "TrendForce(间接)"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait_score": 0.3, "value_concerns": []},
+      "eq_score": 0.87
+    },
+    {
+      "id": "E012",
+      "title": "NAND价格Q1涨55-60%，整机BOM+25%，智能手机出货预计降8-13%",
+      "avritec_label": "Supported",
+      "confidence": 0.85,
+      "fact_check": {
+        "verdict": "Supported",
+        "evidence": "NAND涨幅数据来自证券时报引用的行业机构，IDC和Counterpoint为全球权威调研机构，出货预测有据可查。BOM成本+25%的推算方式合理（存储占比从10-15%升至20%，存储价格涨约50-60%）。",
+        "sources_verified": ["证券时报", "IDC(间接)", "Counterpoint(间接)"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait_score": 0.2, "value_concerns": []},
+      "eq_score": 0.84
+    },
+    {
+      "id": "E013",
+      "title": "HBM3e 2026年合约价同比下降，但产能仍优先分配AI客户",
+      "avritec_label": "ConflictingEvidence",
+      "confidence": 0.65,
+      "fact_check": {
+        "verdict": "ConflictingEvidence",
+        "evidence": "HBM3e价格下降预测来自部分分析师（华尔街见闻/知乎），但另有分析称AI需求持续旺盛，HBM价格不会大幅下跌。两种预测并存，取决于HBM市场竞争加剧程度（SK海力士、三星、美光三方竞争格局）。",
+        "sources_verified": ["华尔街见闻", "行业分析"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait_score": 0.3, "value_concerns": []},
+      "eq_score": 0.63
+    },
+    {
+      "id": "E015",
+      "title": "小米17 Max：8000mAh Si-C电池，骁龙8 Elite Gen5，5月底发布",
+      "avritec_label": "Supported",
+      "confidence": 0.88,
+      "fact_check": {
+        "verdict": "Supported",
+        "evidence": "CCC认证于5月8日完成（官方记录，可核实），规格来自澎湃新闻、中关村在线等多个媒体一致报道。8000mAh Si-C硅碳电池与当前电池技术路线（小米14 Ultra已用Si-C）相符，技术延续合理。",
+        "sources_verified": ["澎湃新闻", "中关村在线", "CCC认证记录"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait_score": 0.25, "value_concerns": []},
+      "eq_score": 0.87
+    },
+    {
+      "id": "E023",
+      "title": "华为LogicFolding技术：不依赖先进制程的密度突破路径",
+      "avritec_label": "Supported",
+      "confidence": 0.90,
+      "fact_check": {
+        "verdict": "Supported",
+        "evidence": "与E001同源（ISCAS 2026），华为在国际学术会议正式发布，战略分析（应对制程封锁）为合理推断，与华为公开的自研技术路线一致。双层逻辑折叠在学术上属于3D集成电路范畴，技术原理成立。",
+        "sources_verified": ["IT之家", "新浪财经/ISCAS 2026"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait_score": 0.2, "value_concerns": []},
+      "eq_score": 0.89
+    },
+    {
+      "id": "E025",
+      "title": "iPhone 18 Pro屏下FaceID技术路线争议：洪水投影仪vs结构光",
+      "avritec_label": "ConflictingEvidence",
+      "confidence": 0.68,
+      "fact_check": {
+        "verdict": "ConflictingEvidence",
+        "evidence": "MacRumors（洪水投影仪方案）vs 其他供应链分析师（结构光方案）存在实质性分歧。Dynamic Island尺寸缩小幅度各方数字（28%-35%）不一致，均为供应链消息而非官方。苹果官方未公布任何相关信息，深樱桃色配色仅单一供应链来源。与晨报CE-001结论一致。",
+        "sources_verified": ["MacRumors", "供应链分析师(多方)"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait_score": 0.35, "value_concerns": []},
+      "eq_score": 0.65
+    },
+    {
+      "id": "E028",
+      "title": "三星Display赢回iPhone 18 Pro主要OLED订单：年供1.46亿块，LTPO+主导",
+      "avritec_label": "Supported",
+      "confidence": 0.88,
+      "fact_check": {
+        "verdict": "Supported",
+        "evidence": "与E006同源，The Elec韩国显示产业媒体报道具有高权威性，SamMobile / tempo.co独立印证。三星Display持续在LTPO+方面领先BOE的事实在行业广为认知，历史一致性高。",
+        "sources_verified": ["The Elec", "SamMobile", "MacRumors"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait_score": 0.15, "value_concerns": []},
+      "eq_score": 0.88
+    },
+    {
+      "id": "E026",
+      "title": "国产存储：长鑫LPDDR5X、长江UFS 4.0借AI驱动HBM窗口期切入市场",
+      "avritec_label": "Supported",
+      "confidence": 0.75,
+      "fact_check": {
+        "verdict": "Supported",
+        "evidence": "澎湃新闻和一财均有报道长鑫/长江存储的市场进展，小米/vivo/荣耀使用国产存储的消息有多个科技媒体报道。"黄金窗口"为分析师判断，整体方向可信，具体采用比例数据待核实。",
+        "sources_verified": ["澎湃新闻", "一财"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait_score": 0.25, "value_concerns": []},
+      "eq_score": 0.73
+    },
+    {
+      "id": "E021",
+      "title": "TSMC vs 三星代工：2nm手机AP布局与竞争格局",
+      "avritec_label": "Supported",
+      "confidence": 0.78,
+      "fact_check": {
+        "verdict": "Supported",
+        "evidence": "Digitimes、PatentPC等专业媒体均报道台积电2nm在手机AP领域的主导地位，三星代工主要服务自身Exynos和AI客户，与已知产业格局一致，属综合分析类报道。",
+        "sources_verified": ["Digitimes", "PatentPC"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait_score": 0.1, "value_concerns": []},
+      "eq_score": 0.78
+    },
+    {
+      "id": "E022",
+      "title": "骁龙8 Elite Gen6预计2026年9月发布，GPU大升级、CPU增幅保守",
+      "avritec_label": "NotEnoughEvidence",
+      "confidence": 0.55,
+      "fact_check": {
+        "verdict": "NotEnoughEvidence",
+        "evidence": "PhoneArena为单一来源，发布时间和性能特征均为分析师预测，无官方确认。骁龙年度旗舰通常于10月前后发布，'9月'时间节点存疑。",
+        "sources_verified": ["PhoneArena"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": true, "fallacies": ["预测性结论过于确定化"]},
+      "sentiment": {"clickbait_score": 0.3, "value_concerns": []},
+      "eq_score": 0.55
+    },
+    {
+      "id": "E019",
+      "title": "2026年Q1中国智能手机出货量同比降1%，华为第一",
+      "avritec_label": "Supported",
+      "confidence": 0.75,
+      "fact_check": {
+        "verdict": "Supported",
+        "evidence": "太平洋科技引用IDC/Counterpoint/CINNO等行业机构数据，华为Q1出货量领先已获多方确认，同比降1%的数字与行业机构预期一致。",
+        "sources_verified": ["太平洋科技", "IDC(间接)", "CINNO(间接)"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait_score": 0.1, "value_concerns": []},
+      "eq_score": 0.75
+    },
+    {
+      "id": "E016",
+      "title": "moto razr fold 5月19日发布：联想首款横向大折叠",
+      "avritec_label": "Supported",
+      "confidence": 0.72,
+      "fact_check": {
+        "verdict": "Supported",
+        "evidence": "联想官方宣布，发布日期可信，属于官方公告类资讯，核查价值较低。",
+        "sources_verified": ["联想官方", "中关村在线"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait_score": 0.15, "value_concerns": []},
+      "eq_score": 0.72
+    },
+    {
+      "id": "E002",
+      "title": "骁龙8 Elite Gen5：NPU 220TOPS，220 Tokens/s",
+      "avritec_label": "Supported",
+      "confidence": 0.80,
+      "fact_check": {
+        "verdict": "Supported",
+        "evidence": "高通官方规格表中220TOPS为已公开数据；220 Tokens/s的LLM处理速度来自高通白皮书和发布会，属于受控测试环境下的数值，实际表现因模型不同而异。整体数字与高通公开技术文档一致。",
+        "sources_verified": ["高通官方(间接)", "雷科技", "百度百科"]
+      },
+      "pseudo_science": {"flag": false},
+      "logic": {"flag": false},
+      "sentiment": {"clickbait_score": 0.2, "value_concerns": []},
+      "eq_score": 0.80
+    }
+  ],
+  "avritec_summary": {
+    "Supported": 14,
+    "ConflictingEvidence": 3,
+    "NotEnoughEvidence": 2,
+    "Refuted": 0,
+    "total": 19
+  },
+  "avg_eq_score": 0.778,
+  "unr_rate": 0.263,
+  "health_score": 0.82
+}

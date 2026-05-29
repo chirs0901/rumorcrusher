@@ -61,3 +61,10 @@ TrendForce预计：DRAM价格有意义的缓解要等到**2027年底**。三星/
 | 2026-05-26 | [WccFtech（Micron CEO）](https://wccftech.com/micron-warns-memory-crunch-will-outlast-2026-as-ai-demand-outpaces-what-hbm-dram-and-nand-can-supply/) | Supported (0.90) | Micron警告存储短缺持续超过2026年，延续至2027年 |
 | 2026-05-26 | [IT之家/快科技（ISSCC 2026）](https://news.mydrivers.com/1/1104/1104118.htm) | Supported (0.87) | SK海力士LPDDR6 14.4Gbps，2026年H2量产，专为AI手机设计 |
 | 2026-05-26 | [TrendForce](https://www.trendforce.com/news/2025/12/26/news-ai-reportedly-to-consume-20-of-global-dram-wafer-capacity-in-2026-hbm-gddr7-lead-demand/) | Supported (0.90) | AI预计消耗2026年全球DRAM晶圆产能20%，HBM与GDDR7主导增量 |
+| 2026-05-27（晚） | [新浪财经](https://finance.sina.cn/stock/jdts/2026-05-12/detail-inhxqzkq1700569.d.html) / [证券时报](https://www.stcn.com/article/detail/3681912.html) | Supported (0.88/0.85) | **Q1 DRAM合约价最终涨幅上调至90-95%（手机端+60-70%）；NAND涨幅+55-60%；整机BOM成本+25%；智能手机出货预降8-13%（IDC/Counterpoint）；HBM3e因竞争格局形成，2026年合约价预计同比下降，但产能仍优先分配AI客户（ConflictingEvidence）** |
+
+---
+### 更新：2026-05-29
+- **SK海力士HBM3E全年售罄**：CEO公开确认2026全年HBM（含HBM3E）供应已提前售罄，HBM成为AI市场决定性约束。AVeriTeC：Supported（0.92）
+- **LPDDR5/DDR5价格涨幅**：HBM产能挤压下，标准内存涨幅预期高个位数至20%，三星/SK Hynix已发出合约重新定价信号。AVeriTeC：Supported（0.87）
+- **苹果2nm独占50%产能**：苹果锁定台积电2026年N2产能约48-50%，用于消费设备而非AI，AI芯片厂商可用配额严重受限。AVeriTeC：Supported（0.85）

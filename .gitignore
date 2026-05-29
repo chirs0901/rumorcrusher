@@ -37,3 +37,6 @@ _meta/auto-push.log
 _meta/auto-push-launchd.log
 _meta/sync-sandbox.log
 _meta/.push-pending
+_meta/autopush.log
+_meta/autopush.stdout.log
+_meta/autopush.stderr.log

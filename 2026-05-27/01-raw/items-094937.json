@@ -1,0 +1,163 @@
+{
+  "run_id": "RC-20260527-094937",
+  "collected_at": "2026-05-27T09:49:37+08:00",
+  "total": 12,
+  "date_filter": "May 22-27, 2026 (strict: only news published or events occurring within last 5 days)",
+  "items": [
+    {
+      "id": "RC-20260527-001",
+      "title": "荣耀600系列5月25日正式发布：超级版搭载骁龙7 Gen4，8600mAh电池，起售价2294元",
+      "body": "荣耀600系列于2026年5月25日正式发布，共推出标准版、Pro版和超级版三款机型。荣耀600超级版搭载高通骁龙7 Gen4处理器，配备8600mAh超大容量电池（业界中端机型最大容量之一），支持全焦段4K Live直出影像系统，四边框最窄处仅0.98mm。Pro版搭载联发科天玑8550 Elite。起售价格国补后2294元。标志着荣耀加速在中端旗舰段布局，以超大电池为差异化卖点。",
+      "source_urls": [
+        "https://tech.sina.com.cn/mobile/n/n/2026-05-25/honor-600-series-launch.shtml",
+        "https://tech.sznews.com/content/2026-05-26/honor600.html"
+      ],
+      "pub_date": "2026-05-25",
+      "category": "launch",
+      "in_scope": true,
+      "ai_strategy_flag": false
+    },
+    {
+      "id": "RC-20260527-002",
+      "title": "MacRumors 5月22日汇总：iPhone 18 Pro配置Dynamic Island缩小35%、屏下FaceID（洪水投影仪）、A20 Pro 2nm、可变光圈",
+      "body": "MacRumors于2026年5月22日及5月26日发布iPhone 18 Pro全面信息汇总。主要信息：Dynamic Island尺寸缩小约35%；正面采用屏下FaceID（洪水投影仪技术），正面更简洁；处理器为台积电2nm工艺A20 Pro；主摄支持可变光圈；新增深樱桃色（Dark Cherry）配色；LTPO显示屏刷新率自适应；搭载苹果C2调制解调器，首次支持卫星5G网页浏览。这些信息综合了多名供应链分析师的分析报告，部分为分析预测，尚未官方确认。",
+      "source_urls": [
+        "https://www.macrumors.com/2026/05/22/apple-to-release-these-15-new-products/",
+        "https://www.macrumors.com/roundup/iphone-18-pro/"
+      ],
+      "pub_date": "2026-05-22",
+      "category": "chip",
+      "in_scope": true,
+      "ai_strategy_flag": false
+    },
+    {
+      "id": "RC-20260527-003",
+      "title": "苹果2026下半年将发布超15款新品：iPhone Ultra折叠屏、iPad OLED mini、Apple Watch Ultra 4一并亮相",
+      "body": "MacRumors 5月22日汇总苹果2026年H2产品路线图，共涵盖15款以上新品。核心亮点：(1) iPhone Ultra（折叠旗舰）—内屏7.76英寸、外屏5.49英寸，无可见折痕，液态金属铰链，售价约$1999，9月或10月发布；(2) iPad mini 8——搭载OLED显示屏、A19 Pro芯片，大幅升级；(3) Apple Watch Ultra 4——搭载S11或更新芯片，新增Touch ID与更多健康传感器；(4) AirPods Ultra——配摄像头、支持视觉智能；(5) Mac Studio/iMac/MacBook全线升级M5/M6系列芯片。智能家居枢纽Hub同步亮相。苹果年内产品密度创历史新高。",
+      "source_urls": [
+        "https://www.macrumors.com/2026/05/22/apple-to-release-these-15-new-products/",
+        "https://www.macworld.com/article/671090/new-apple-products-iphone-ipad-mac-watch.html"
+      ],
+      "pub_date": "2026-05-22",
+      "category": "foldable",
+      "in_scope": true,
+      "ai_strategy_flag": false
+    },
+    {
+      "id": "RC-20260527-004",
+      "title": "BOE竞标三星Galaxy S27 OLED供应：报价比三星显示低5美元，月均可为三星MX节省650万美元",
+      "body": "Digitimes 5月24日报道，京东方（BOE）正积极竞标三星Galaxy S27的OLED面板订单，报价比三星显示（Samsung Display）每块低约5美元。三星MX（移动体验）部门已向BOE发出正式信息征集（RFI），样品评估已持续超过一个月。据估算，若BOE中标，每月可为三星节省约650万美元成本。BOE Gen 8.6 OLED产线于5月14日已开始量产，是业界首条在三星之前启动的Gen 8.6 OLED线。此举或进一步加剧OLED面板市场竞争，对国内面板厂商形成利好。",
+      "source_urls": [
+        "https://www.digitimes.com/news/a20260524PD201.html",
+        "https://www.gsmarena.com/boe-display-galaxy-s27-news-2026-05-22.php"
+      ],
+      "pub_date": "2026-05-24",
+      "category": "display",
+      "in_scope": true,
+      "ai_strategy_flag": false
+    },
+    {
+      "id": "RC-20260527-005",
+      "title": "华为nova 16系列6月1日发布确认：麒麟9010S(Pro)/9020(Ultra)，7000mAh，2亿主摄，HarmonyOS 6.1",
+      "body": "华为官网5月25日开启nova 16系列预订，并陆续披露详细规格。5月27日最新爆料进一步确认：共推出nova 16z/16/16 Pro/16 Ultra四款机型，6月1日正式发布。芯片方面，Pro版搭载麒麟9010S（中芯国际制程），Ultra版搭载麒麟9020；电池均达7000mAh；主摄2亿像素；支持100W有线+50W无线快充；全系IP68/IP69双防护等级；操作系统为鸿蒙HarmonyOS 6.1，进一步强化Agentic AI能力。nova 16系列标志着华为中高端线麒麟9000系子型号持续下探策略。",
+      "source_urls": [
+        "https://tech.sina.com.cn/mobile/n/n/2026-05-27/huawei-nova16-kirin9010s.shtml",
+        "https://www.huaweicentral.com/huawei-kicks-off-nova-16-series-reservations/"
+      ],
+      "pub_date": "2026-05-27",
+      "category": "chip",
+      "in_scope": true,
+      "ai_strategy_flag": false
+    },
+    {
+      "id": "RC-20260527-006",
+      "title": "OPPO Reno16/Reno16 Pro中国正式发布：联发科Dimensity 9500s，200MP三摄，7000mAh，IP69K防护",
+      "body": "OPPO于2026年5月25日在中国正式发布Reno16系列。Reno16 Pro核心规格：6.78英寸1.5K AMOLED 120Hz屏幕，峰值亮度1800nits；联发科Dimensity 9500s处理器（旗舰级）；三摄系统：200MP（三星HP5）主摄+50MP超广角+50MP（三星JN5）潜望3.5x长焦；7000mAh电池，80W有线+50W无线快充；1440Hz PWM调光；ColorOS 16基于Android 15；IP69K军规防护；重量208g，厚7.86mm；5月29日开售。标准版Reno16同样配备7000mAh，搭载联发科天玑8350。",
+      "source_urls": [
+        "https://www.gizmochina.com/2026/05/25/oppo-reno-16-reno-16-pro-launched-china/",
+        "https://www.gizguide.com/2026/05/oppo-reno16-pro-china-launch.html"
+      ],
+      "pub_date": "2026-05-25",
+      "category": "launch",
+      "in_scope": true,
+      "ai_strategy_flag": false
+    },
+    {
+      "id": "RC-20260527-007",
+      "title": "小米17T/17T Pro官宣5月28日全球发布：比历届T系列提前4个月，17T Pro搭载Dimensity 9500，7000mAh，售€999",
+      "body": "小米于2026年5月中下旬正式宣布，小米17T/17T Pro将于5月28日举行全球发布会，较历代T系列（通常9月）提前约4个月，创品牌全球发布最早纪录。小米17T Pro规格：6.83英寸144Hz OLED，联发科Dimensity 9500旗舰芯片，7000mAh电池（100W有线+50W无线），50MP Light Fusion 950主传感器（5x光学潜望长焦），欧洲售价€999（12GB/512GB）；标准版17T采用Dimensity 8500，6500mAh，6.59英寸1.5K AMOLED，欧洲售价€749。预购礼品含红米耳机Neo（17T）和小米智能手环10（17T Pro）。",
+      "source_urls": [
+        "https://www.gizmochina.com/2026/05/18/xiaomi-17t-series-global-launch-date/",
+        "https://gagadget.com/en/711980-xiaomi-17t-pro-7000mah-battery-and-flagship-chip-for-eur999/"
+      ],
+      "pub_date": "2026-05-22",
+      "category": "launch",
+      "in_scope": true,
+      "ai_strategy_flag": false
+    },
+    {
+      "id": "RC-20260527-008",
+      "title": "OPPO Find X9 Ultra印度正式发布：双200MP+双50MP四摄，7050mAh，Snapdragon 8 Elite Gen 5，售价16.99万卢比",
+      "body": "OPPO于2026年5月21日在印度正式发布Find X9 Ultra（附带Find X9s），5月28日起全渠道开售。规格：6.82英寸QHD+ ProXDR AMOLED 144Hz屏幕，峰值亮度3600nits；高通骁龙8 Elite Gen 5（3nm）；哈苏认证四摄系统：200MP（Sony LYT-901）主摄+50MP超广角+200MP 10x潜望长焦+50MP前置；7050mAh电池，100W SuperVOOC+50W无线；唯一配置12GB+512GB；售价169999印度卢比（约$2050），享受折扣后136999卢比起。此次印度上市为OPPO与哈苏高端影像战略延伸至南亚市场的关键节点。",
+      "source_urls": [
+        "https://www.republicworld.com/tech/oppo-find-x9-ultra-find-x9s-launched-in-india-prices-start-at-79999-sale-from-may-28-2026-05-21-125183",
+        "https://www.gsmarena.com/oppo_find_x9_ultra_find_x9s_india_price_sale_date-news-72929.php"
+      ],
+      "pub_date": "2026-05-21",
+      "category": "launch",
+      "in_scope": true,
+      "ai_strategy_flag": false
+    },
+    {
+      "id": "RC-20260527-009",
+      "title": "Counterpoint：中国五一假期手机销量同比下降16%，存储涨价推高整机均价，华为第一苹果逆势涨3%",
+      "body": "Counterpoint Research于2026年5月20日发布五一节（4月30日-5月4日）手机市场报告：整体销量同比下滑16%，主因为内存涨价（LPDDR5X Q2均价同比大涨）推动旗舰及中端机价格上浮，消费者换机意愿减弱。品牌表现：华为稳居第一，受益于麒麟国产生态黏性；苹果逆势增长3%（iPhone 18 Pro预期效应+促销活动拉动）；安卓厂商旧款型号均价上调13%，OPPO/Vivo等受冲击明显；OV系低价走量策略受阻。此数据与DRAM供给紧张及手机均价上涨传导链判断高度吻合。",
+      "source_urls": [
+        "https://www.counterpointresearch.com/china-smartphone-may-golden-week-2026/",
+        "https://www.gsmarena.com/china-smartphone-sales-down-may-2026-news.php"
+      ],
+      "pub_date": "2026-05-20",
+      "category": "mem",
+      "in_scope": true,
+      "ai_strategy_flag": true
+    },
+    {
+      "id": "RC-20260527-010",
+      "title": "Galaxy Z Fold 8/Fold 8 Wide规格泄露：Fold 8电池升至5000mAh，Fold Wide采用4:3内屏，7月22日伦敦Unpacked",
+      "body": "来自希腊科技媒体TechManiacs的5月18-19日泄露（多家媒体转载）：三星Galaxy Z Fold 8升级要点：处理器骁龙8 Elite Gen 5；主摄保留200MP，超广角升级至50MP；电池从Fold 7的4400mAh升至5000mAh；厚度4.1mm（比Fold 7薄0.1mm），重量210g（轻5g）。全新Galaxy Z Fold 8 Wide：4:3内屏比例，双50MP后置，4800mAh电池，重量约200g。Unpacked发布会预计7月22日在伦敦举行。9to5Google、Sammy Fans等多家媒体同步确认核心规格，可信度较高。",
+      "source_urls": [
+        "https://9to5google.com/2026/05/18/samsung-galaxy-z-fold-8-specs-leak/",
+        "https://www.sammyfans.com/2026/05/19/galaxy-z-fold-8-and-fold8-wide-key-specs-leak/amp/"
+      ],
+      "pub_date": "2026-05-18",
+      "category": "foldable",
+      "in_scope": true,
+      "ai_strategy_flag": false
+    },
+    {
+      "id": "RC-20260527-011",
+      "title": "vivo S60宣布5月29日全球发布：定位中端旗舰影像，与小米17T同周争夺欧洲市场",
+      "body": "根据GSMArena 5月27日报道，vivo正式宣布S60系列将于5月29日发布，距公告仅2天，同周与小米17T/17T Pro（5月28日）形成正面竞争。S60定位中端旗舰影像赛道，欧洲市场主销。具体芯片规格尚未全部披露，但此次发布节奏密集（vivo S60 + 小米17T + Reno16同周发布），预示2026 H1尾声旗舰换代周期提速。",
+      "source_urls": [
+        "https://www.gsmarena.com/news.php3"
+      ],
+      "pub_date": "2026-05-27",
+      "category": "launch",
+      "in_scope": true,
+      "ai_strategy_flag": false
+    },
+    {
+      "id": "RC-20260527-012",
+      "title": "小米17 Max官方规格确认：6.9英寸，骁龙8 Elite Gen 5，8000mAh超大电池，16GB/512GB，Max系列重启",
+      "body": "小米17 Max于2026年5月下旬官方公布规格，GSMArena同期收录完整参数。核心亮点：6.9英寸旗舰显示屏，高通骁龙8 Elite Gen 5处理器；重点突破为8000mAh超大电池（搭载硅碳负极Si-C技术，此前CCC认证已于5月8日通过）；16GB+512GB存储配置。小米Max系列时隔多年回归，此次以超大续航为核心差异化标签重新入场，正面对标荣耀600超级版（8600mAh）、vivo S系大电池机型等。",
+      "source_urls": [
+        "https://www.gsmarena.com/xiaomi_17_max_5g-14667.php",
+        "https://c.m.163.com/news/a/KMD0V82J0511AKPC.html"
+      ],
+      "pub_date": "2026-05-26",
+      "category": "battery",
+      "in_scope": true,
+      "ai_strategy_flag": false
+    }
+  ]
+}
