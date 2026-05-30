@@ -143,7 +143,7 @@ a{color:inherit;text-decoration:none}
 </div>
 
 <div class="wiki-footer">
-  <span>RumorCrusher LLM Wiki · 知识飞轮每日更新 · 所有事实均有信源可追溯</span>
+  <span>RumorCrusher LLM Wiki · 知识飞轮每日更新 · 所有事实均有信源可追溯 · 最后更新：2026-05-30</span>
   <span><a href="../knowledge-base/index.html" onclick="event.preventDefault();location.href='../knowledge-base/index.html?t='+Date.now()">手机知识库</a> · <a href="../index.html" onclick="event.preventDefault();location.href='../index.html?t='+Date.now()">主站</a> · <a href="https://github.com/chirs0901/rumorcrusher" target="_blank">GitHub</a></span>
 </div>
 
@@ -534,6 +534,166 @@ var WIKI = {
           rows: [
             ['2026-05-25', 'TrendForce / Tom\'s Hardware', 'HBM 产能挤压 LPDDR5X 供应分析', 'Supported'],
             ['2026-05-14', 'Samsung 官方 + TrendForce', 'Z Fold 8 耐久声明', 'Not Enough Evidence']
+          ]
+        }
+      ]
+    },
+    {
+      id: 'apple-a19',
+      name: 'Apple A19',
+      subtitle: '苹果 · 台积电第三代3nm（N3E） · iPhone 17',
+      type: 'entity',
+      typeLabel: '芯片',
+      color: '#555555',
+      icon: 'A',
+      verdict: 'Supported',
+      firstDate: '2026-05-30',
+      relations: [
+        {id: 'tsmc-2nm-supply-2026', label: 'TSMC 3nm 生态', kind: 'topic'},
+        {id: 'apple', label: '品牌母体', kind: 'entity'}
+      ],
+      sections: [
+        {
+          title: '基本信息',
+          type: 'kv',
+          rows: [
+            ['制造商', '苹果（Apple Silicon）'],
+            ['代工厂', '台积电第三代3nm（N3E系列）'],
+            ['发布时间', '2025年9月'],
+            ['首发机型', 'iPhone 17（标准版）'],
+            ['CPU', '6核（2×高性能核 + 4×高能效核）'],
+            ['GPU', '5核'],
+            ['CPU性能提升', '1.5倍于A15 Bionic（苹果官方）'],
+            ['GPU性能提升', '2倍以上于A15 Bionic（苹果官方）'],
+            ['神经网络引擎', '支持苹果Apple Intelligence']
+          ]
+        },
+        {
+          title: '与前代对比',
+          type: 'table',
+          headers: ['SoC', '工艺', 'CPU核心', '参考机型'],
+          rows: [
+            ['A17 Pro', '台积电3nm（第一代）', '6核', 'iPhone 15 Pro'],
+            ['A18', '台积电3nm（第二代）', '6核', 'iPhone 16'],
+            ['A19', '台积电3nm（第三代）', '6核', 'iPhone 17']
+          ]
+        },
+        {
+          title: '信源历史',
+          type: 'sources',
+          rows: [
+            ['2026-05-30', 'apple.com/iphone-17/specs/（官方）', 'A19/N3E/6核CPU/5核GPU；120Hz ProMotion/3000nit；48MP双摄确认', 'Supported']
+          ]
+        }
+      ]
+    },
+    {
+      id: 'dimensity-9400-plus',
+      name: 'Dimensity 9400+',
+      subtitle: '联发科 · TSMC N3E · Agentic AI · DeepSeek-R1本地推理',
+      type: 'entity',
+      typeLabel: '芯片',
+      color: '#0055cc',
+      icon: 'D',
+      verdict: 'Supported',
+      firstDate: '2026-05-30',
+      relations: [
+        {id: 'dimensity-9600', label: '下一代天玑旗舰', kind: 'entity'},
+        {id: 'ai-dram-crisis-2026', label: '存储影响', kind: 'topic'}
+      ],
+      sections: [
+        {
+          title: '基本信息',
+          type: 'kv',
+          rows: [
+            ['制造商', '联发科（MediaTek）'],
+            ['发布时间', '2025年4月11日（MDDC 2025，深圳）'],
+            ['制程工艺', '台积电 N3E（3nm EUV）'],
+            ['CPU架构', '全大核：1×Cortex-X925 @3.73GHz + 3×Cortex-X4 + 4×Cortex-A720'],
+            ['GPU', 'Immortalis-G925'],
+            ['NPU', 'MediaTek APU 790（Agentic AI引擎）'],
+            ['AI推理提升', '+20% vs 天玑9400（SpD+加速）'],
+            ['蓝牙覆盖', 'LoS 10km（较9400提升6.6倍）']
+          ]
+        },
+        {
+          title: 'AI能力核心卖点',
+          type: 'list',
+          items: [
+            'SpD+（Speculative Decoding+）：Agentic AI性能较天玑9400提升20%',
+            'DeepSeek-R1-Distill系列：完整支持本地端侧推理（官方声明）',
+            '多模态AI效率增强',
+            'WiFi 7三频并发（2.4/5/6GHz同时）'
+          ]
+        },
+        {
+          title: '首发机型',
+          type: 'table',
+          headers: ['品牌', '型号'],
+          rows: [
+            ['OPPO', 'Find X8s 系列'],
+            ['vivo', 'X200s'],
+            ['Realme', 'GT7']
+          ]
+        },
+        {
+          title: '信源历史',
+          type: 'sources',
+          rows: [
+            ['2026-05-30', 'MediaTek官方 / 电子创新网', 'SpD+ +20%、DeepSeek-R1-Distill端侧支持、蓝牙10km；首发OPPO/vivo/Realme确认', 'Supported']
+          ]
+        }
+      ]
+    },
+    {
+      id: 'lytia-brand',
+      name: 'Sony LYTIA 品牌',
+      subtitle: '索尼移动传感器品牌 · 替代IMX命名 · 2026全线切换',
+      type: 'entity',
+      typeLabel: '技术',
+      color: '#000000',
+      icon: 'L',
+      verdict: 'Supported',
+      firstDate: '2026-05-30',
+      relations: [
+        {id: 'samsung', label: 'ISOCELL竞品', kind: 'entity'}
+      ],
+      sections: [
+        {
+          title: '基本信息',
+          type: 'kv',
+          rows: [
+            ['品牌所有者', '索尼半导体（Sony Semiconductor Solutions）'],
+            ['前身品牌', 'IMX系列（Exmor / STARVIS）'],
+            ['品牌转型完成时间', '2026年（计划全线切换）'],
+            ['定位', '手机移动图像传感器专属品牌'],
+            ['核心技术', '堆叠式BSI CMOS / AI摄影优化 / 高动态范围']
+          ]
+        },
+        {
+          title: '已知型号对照',
+          type: 'table',
+          headers: ['旧型号（IMX）', '新型号（LYT）', '主要规格'],
+          rows: [
+            ['IMX890', 'LYT-701', '旗舰主摄级'],
+            ['IMX882', 'LYT-600', '高端主摄级']
+          ]
+        },
+        {
+          title: '注意事项',
+          type: 'list',
+          items: [
+            'IMX系列并未消失：工业/安防/专业摄影传感器（如IMX947）仍使用IMX编号',
+            'LYTIA专指移动（手机/平板/穿戴）图像传感器',
+            '品牌转型不涉及核心技术变更，仅为市场定位调整',
+            '面对三星ISOCELL、豪威OV系列竞争，索尼通过品牌重塑提升认知度'
+          ]
+        },
+        {
+          title: '信源历史',
+          type: 'sources',
+          rows: [
+            ['2026-05-30', 'PhoneArena', 'LYTIA品牌战略报道，IMX890→LYT-701/IMX882→LYT-600映射确认，2026年全线转型', 'Supported']
           ]
         }
       ]
