@@ -1,0 +1,6 @@
+PUSH_FAILED
+first_failure: 
+last_failure: 2026-05-30 21:39:47 CST
+consecutive_failures: 3
+last_error: diverged, manual resolve needed
+fix_command: bash /Users/zhiqiao/Documents/Claude/Projects/RumorCrusher/scripts/push-now.sh
