@@ -40,7 +40,7 @@
       </div>
       <div class="text-right text-sm text-slate-400">
         <div>收录周期：<span class="text-white font-semibold">2026-05-14 → 今日</span></div>
-        <div>最后更新：<span id="last-update" class="text-white font-semibold">2026-05-29</span></div>
+        <div>最后更新：<span id="last-update" class="text-white font-semibold">2026-05-30</span></div>
         <div class="mt-1"><a href="../index.html" class="text-rose-400 hover:text-rose-300 text-xs">← 返回首页</a></div>
       </div>
     </div>
@@ -1255,6 +1255,123 @@ const KB = [
       {name: "Qualcomm官方", url: "https://www.qualcomm.com", official: true},
       {name: "Edge AI and Vision Alliance", url: "https://www.edge-ai-vision.com/2026/01/on-device-llms-in-2026-what-changed-what-matters-whats-next/", official: false},
       {name: "AI2 Work", url: "https://ai2.work/blog/on-device-ai-arrives-edge-inference-chips-hit-consumer-hardware", official: false}
+    ]
+  },
+
+  {
+    id: "chip-20260530-001",
+    date: "2026-05-30",
+    cat: "chip",
+    title: "台积电2nm苹果独占>50%产能，2026年底月产14万片",
+    summary: "台积电Fab 20（新竹宝山）为2nm核心产地，苹果已锁定首批产能逾50%，高通和AMD为下一梯队客户。台积电目标2026年底月产2nm晶圆达14万片，N2良率改善超预期。AMD计划H2 2026启动2nm CPU量产，谷歌和AWS推至2027年。台积电2026年营收首破新台币1万亿元，AI+智能手机双轮驱动创历史新高。产能集中效应意味着非苹果客户在2026年可用2nm窗口极为有限。",
+    verdict: "supported",
+    aiStrategy: true,
+    sources: [
+      {name: "华尔街见闻", url: "https://wallstreetcn.com/articles/3764745", official: false},
+      {name: "新浪财经", url: "https://finance.sina.com.cn/roll/2026-02-02/doc-inhkmmxz4183179.shtml", official: false},
+      {name: "36氪", url: "https://36kr.com/p/3640519256640642", official: false}
+    ]
+  },
+
+  {
+    id: "chip-20260530-002",
+    date: "2026-05-30",
+    cat: "chip",
+    title: "联发科天玑9400+：端侧完整支持DeepSeek-R1-Distill，Agentic AI速度+20%",
+    summary: "联发科天玑9400+于2025年4月发布，采用台积电N3E（3nm）工艺，全大核CPU架构（1×Cortex-X925@3.73GHz），旗舰AI引擎通过SpD+技术实现端侧Agentic AI性能提升20%，官方声明完整支持DeepSeek-R1-Distill系列模型本地推理。蓝牙LoS点对点覆盖达10km（较天玑9400提升6.6倍），WiFi 7支持三频段同时并发。OPPO Find X8s、vivo X200s、Realme GT7已确认搭载，2026年持续扩展搭载机型。",
+    verdict: "supported",
+    aiStrategy: true,
+    sources: [
+      {name: "MediaTek官方", url: "https://www.mediatek.com/products/smartphones/mediatek-dimensity-9400-plus", official: true},
+      {name: "电子创新网", url: "https://www.eetrend.com/content/2026/100600874.html", official: false}
+    ]
+  },
+
+  {
+    id: "chip-20260530-003",
+    date: "2026-05-30",
+    cat: "chip",
+    title: "高通骁龙6 Gen 5 / 4 Gen 5发布，4nm中端平台H2 2026终端上市",
+    summary: "高通于2026年5月正式发布骁龙6 Gen 5和骁龙4 Gen 5两款中端移动平台，均采用4nm制程。骁龙6 Gen 5配置8核（4×2.6GHz性能核+4×2.0GHz能效核），GPU性能较前代提升21%，支持LPDDR5-6400内存；骁龙4 Gen 5同样8核（2×2.4GHz+6×2.0GHz），GPU大幅提升77%。荣耀、Redmi、OPPO和Realme等OEM将于2026年下半年推出搭载终端，覆盖全球中端智能手机市场。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name: "高通官方", url: "https://www.qualcomm.cn/news/releases/2026/05/releases-2026-05-06", official: true},
+      {name: "IT之家", url: "https://www.ithome.com/0/947/192.htm", official: false},
+      {name: "电子创新网", url: "https://www.eetrend.com/content/2026/100600874.html", official: false}
+    ]
+  },
+
+  {
+    id: "display-20260530-001",
+    date: "2026-05-30",
+    cat: "display",
+    title: "三星SID 2026：Flex Chroma Pixel OLED达3000nit，Sensor OLED集成心率血压测量",
+    summary: "三星显示在SID Display Week 2026（洛杉矶，2026年5月）发布两项重磅技术：①Flex Chroma Pixel OLED专为手机设计，采用PSF OLED发射体平台结合LEAD无偏光片架构，峰值HBM亮度达3000nit，支持BT.2020-96广色域，大幅提升户外可读性；②Sensor OLED Display（6.8英寸/500ppi），集成有机光电二极管（OPD），可通过屏幕发出的光实时测量心率和血压，内置Flex Magic Pixel侧视隐私保护功能（ppi较上代版本提升33%）。两款技术均在全球最权威显示学术会议SID独立展示并获多媒体交叉验证。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name: "Digital Trends", url: "https://www.digitaltrends.com/phones/samsung-unveils-3000-nit-smartphone-oled-panel-with-wider-color-gamut/", official: false},
+      {name: "SamMobile", url: "https://www.sammobile.com/news/new-samsung-oled-built-in-privacy-display-heart-rate-monitor-fingerprint/", official: false},
+      {name: "OLED-Info", url: "https://www.oled-info.com/samsung-display-shows-new-display-prototypes-sid-displayweek-2026-including-its", official: false},
+      {name: "Samsung Display官方", url: "https://global.samsungdisplay.com/31412", official: true}
+    ]
+  },
+
+  {
+    id: "display-20260530-002",
+    date: "2026-05-30",
+    cat: "display",
+    title: "索尼LYTIA品牌2026年全面接替IMX，完成移动传感器品牌转型",
+    summary: "索尼半导体正将旗下手机移动图像传感器全线迁移至LYTIA品牌：IMX890已更名LYT-701，IMX882已更名LYT-600，计划于2026年完成全线品牌统一。LYTIA品牌主打AI摄影优化、堆叠式BSI CMOS架构和高动态范围能力。工业/专业传感器（如IMX947全局快门/26MP/383fps）继续保留IMX编号。此次品牌转型旨在将手机传感器与工业传感器明确区分，并在与三星ISOCELL的竞争中提升品牌辨识度。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name: "PhoneArena", url: "https://www.phonearena.com/news/sonys-image-sensor-makeover-imx-to-lytia-by-2026_id160402", official: false},
+      {name: "索尼半导体官网", url: "https://www.sony-semicon.com/en/products/is/mobile/index.html", official: true}
+    ]
+  },
+
+  {
+    id: "memory-20260530-001",
+    date: "2026-05-30",
+    cat: "memory",
+    title: "HBM4制造门槛大幅提升：SK海力士领先，美光/三星追赶受限",
+    summary: "HBM4相比HBM3E在TSV（穿硅通孔）精度和混合键合工艺上门槛大幅提升，SK海力士已取得量产领先地位，其HBM3E/HBM4业务在2025年Q4已占DRAM部门销售额四成以上，与英伟达的深度绑定进一步强化供应链垄断地位。三星HBM4良率仍在追赶，美光差距最大。定制化HBM（cHBM）已在英伟达GB系列量产，台积电CoWoS封装联盟持续深化，间接挤压消费级DRAM产能，手机OEM成本压力延续至2027年。",
+    verdict: "supported",
+    aiStrategy: true,
+    sources: [
+      {name: "DOIT数据产业", url: "https://www.doit.com.cn/p/536082.html", official: false},
+      {name: "我爱方案网", url: "https://www.52solution.com/news/80059123/", official: false},
+      {name: "国际电子商情", url: "https://www.esmchina.com/news/13887.html", official: false}
+    ]
+  },
+
+  {
+    id: "memory-20260530-002",
+    date: "2026-05-30",
+    cat: "memory",
+    title: "❌ 辟谣：DRAM合约价Q1 2026环比涨80-90%数据来源不清晰",
+    summary: "多篇中文媒体报道称2026年Q1 DRAM合约价环比暴涨80-90%、NAND涨55-90%。核查发现：①TrendForce是权威机构，HBM挤压消费DRAM的逻辑链成立；②但80-90%的单季涨幅属极端数值，历史上DRAM单季涨幅鲜有超40%；③可能混淆了HBM3E高端合约价与普通LPDDR5X手机内存合约价；④原始TrendForce报告链接缺失。结论：HBM挤压导致手机存储价格上涨属Supported事实，但80-90%的具体涨幅数据标记为ConflictingEvidence，待TrendForce原始报告核实。",
+    verdict: "conflicting",
+    aiStrategy: true,
+    sources: [
+      {name: "DoNews", url: "https://www.donews.com/news/detail/1/6405627.html", official: false},
+      {name: "新浪财经", url: "https://finance.sina.com.cn/tech/roll/2026-02-05/doc-inhktnfp9137051.shtml", official: false}
+    ]
+  },
+
+  {
+    id: "brands-20260530-001",
+    date: "2026-05-30",
+    cat: "brands",
+    title: "❌ 辟谣：三星Galaxy S26搭载全固态电池（汽车路线图错误嫁接）",
+    summary: "多篇报道声称三星将在Galaxy S26率先导入全固态电池，依据为"2026年固态电池示范"路线图。核查结论为Refuted：①三星官方从未发布Galaxy S26搭载固态电池的任何声明；②该路线图出自汽车动力电池领域（CATL/松下等），与手机消费电子无直接关联；③手机级固态电池当前技术成熟度（TRL）约4-5级，体积膨胀控制和BOM成本均不满足大规模商用条件；④三星Display展示过固态电解质概念，明确属于长期研究项目，未设定手机型号商用目标。属典型伪技术声称，置信度0.80。",
+    verdict: "refuted",
+    aiStrategy: false,
+    sources: [
+      {name: "三星官网（无声明）", url: "https://news.samsung.com/global/", official: true},
+      {name: "36氪（原文分析）", url: "https://www.36kr.com/p/3698471560933254", official: false}
     ]
   }
 

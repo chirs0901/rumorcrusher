@@ -1,0 +1,605 @@
+{
+  "meta": {
+    "run_date": "2026-05-30",
+    "timestamp": "120312",
+    "pipeline": "4-Agent (Fact/Pseudo/Logic/Sentiment)",
+    "total_reviewed": 36,
+    "averitec_distribution": {
+      "Supported": 22,
+      "Refuted": 2,
+      "ConflictingEvidence": 7,
+      "NotEnoughEvidence": 5
+    },
+    "unr": 0.389,
+    "avg_eq": 0.74,
+    "health_score": 78
+  },
+  "items": [
+    {
+      "id": "rc-20260530-001",
+      "title": "高通发布骁龙6 Gen 5 / 4 Gen 5，终端H2 2026推出",
+      "averitec": "Supported",
+      "eq": 0.85,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.90,
+        "reasoning": "官方新闻稿与IT之家/电子创新网多源一致。骁龙6 Gen 5: 4nm/8核(4×2.6GHz+4×2.0GHz)/GPU+21%，骁龙4 Gen 5: 4nm/8核(2×2.4GHz+6×2.0GHz)/GPU+77%，参数一致。荣耀/OPPO/Redmi/Realme均为高通合作伙伴。",
+        "sources_checked": ["高通官方cn", "IT之家", "电子创新网"],
+        "tsvER": "all-sources-aligned"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.15, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-002",
+      "title": "高通骁龙8E6系列采用台积电2nm，H2 2026量产",
+      "averitec": "ConflictingEvidence",
+      "eq": 0.68,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "confidence": 0.65,
+        "reasoning": "台积电2nm量产时间线有争议。多源确认苹果首批，高通2nm时间线（H2 2026 vs 2027）尚未官方确认。'骁龙8E6'命名为非官方，推测性命名。与台积电2nm产能告急/苹果独占首批存在潜在矛盾。",
+        "conflicting_points": ["骁龙8E6为非官方命名", "台积电2nm产能苹果独占>50%，高通首批供应量存疑", "H2 2026量产时间线未获高通官方确认"],
+        "sources_checked": ["中关村在线", "华尔街见闻", "新浪财经"],
+        "tsvER": "partial-conflict"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "hasty_generalization", "fallacies": ["从台积电2nm量产→骁龙H2发布，跳步推断"]},
+      "sentiment": {"clickbait_risk": 0.40, "value_concerns": ["'旗舰涨价'框架可能放大焦虑"]}
+    },
+    {
+      "id": "rc-20260530-003",
+      "title": "联发科天玑9400+：端侧支持DeepSeek-R1-Distill",
+      "averitec": "Supported",
+      "eq": 0.88,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.92,
+        "reasoning": "联发科官方MDDC 2025新闻稿明确支持DeepSeek-R1-Distill系列模型。台积电N3E 3nm工艺，全大核CPU架构，蓝牙10km LoS属官方数据。SpD+推理加速20%为内部基准，无第三方独立验证但无明显虚假迹象。",
+        "sources_checked": ["mediatek.com官方", "电子创新网", "芯参数"],
+        "tsvER": "primary-source-confirmed"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.20, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-004",
+      "title": "台积电2nm：苹果包揽首批>50%产能",
+      "averitec": "Supported",
+      "eq": 0.87,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.88,
+        "reasoning": "华尔街见闻、新浪财经、知乎多源交叉确认苹果独占首批2nm产能50%+，AMD/高通为下一梯队。2026年底月产14万片目标由台积电官方产能规划披露。谷歌/AWS时间线延至2027Q3/Q4也有多源佐证。",
+        "sources_checked": ["wallstreetcn.com", "新浪财经", "知乎产能分析"],
+        "tsvER": "multi-source-consistent"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.25, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-005",
+      "title": "台积电N3P H2 2026广泛量产",
+      "averitec": "Supported",
+      "eq": 0.80,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.82,
+        "reasoning": "台积电N3P路线图在多个行业会议公开披露，ChinaAET和多个半导体分析机构均有记录。H2 2026量产覆盖手机/基站/消费电子是技术路线图标准表述。",
+        "sources_checked": ["chinaaet.com", "sohu.com"],
+        "tsvER": "industry-consensus"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.10, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-006",
+      "title": "三星Flex Chroma Pixel OLED：3000nit + LEAD无偏光片架构",
+      "averitec": "Supported",
+      "eq": 0.92,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.93,
+        "reasoning": "SID Display Week 2026（洛杉矶，2026年5月）为行业最高权威展会。Digital Trends、SamMobile、OLED-Info均独立报道，参数一致：3000nit HBM，BT.2020-96色域，LEAD无偏光片。Sensor OLED Display 6.8英寸/500ppi/OPD集成心率血压测量均获多源证实。",
+        "sources_checked": ["digitaltrends.com", "sammobile.com", "oled-info.com"],
+        "tsvER": "multi-source-consistent"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.20, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-007",
+      "title": "三星首款4K 360Hz QD-OLED面板",
+      "averitec": "Supported",
+      "eq": 0.85,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.88,
+        "reasoning": "TFTCentral是权威显示器专业媒体，SamMobile同步独立确认。'全球首款'声称在显示行业有明确技术定义（4K@360Hz同时满足），无反驳来源。主要面向显示器市场，与手机产业链相关性为间接。",
+        "sources_checked": ["tftcentral.co.uk", "sammobile.com", "androidheadlines.com"],
+        "tsvER": "aligned"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.15, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-008",
+      "title": "HBM挤压手机DRAM：Q1合约价环比涨80-90%",
+      "averitec": "ConflictingEvidence",
+      "eq": 0.72,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "confidence": 0.70,
+        "reasoning": "80-90%的DRAM价格涨幅是极高数字，TrendForce集邦咨询是业内权威机构，但具体季度数据需原始报告核查。部分来源（DoNews）转载未注明原始数据来源。HBM产能挤压DRAM的逻辑链成立（多方验证），但涨幅幅度存在数据来源不清晰问题。",
+        "conflicting_points": ["80-90%涨幅原始数据来源不明", "NAND 55-90%涨幅范围过宽", "未找到TrendForce原始报告链接"],
+        "sources_checked": ["donews.com", "新浪财经", "SEMI产业网"],
+        "tsvER": "partial-conflict"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid_but_incomplete", "fallacies": ["数据来源链缺失"]},
+      "sentiment": {"clickbait_risk": 0.50, "value_concerns": ["价格恐慌性叙事"]}
+    },
+    {
+      "id": "rc-20260530-009",
+      "title": "SK海力士HBM占DRAM业务四成+",
+      "averitec": "Supported",
+      "eq": 0.80,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.82,
+        "reasoning": "SK海力士财报数据可查，HBM3E先行量产并绑定英伟达是公开事实，Q4 2025 DRAM中HBM占比超40%与分析师预测一致。",
+        "sources_checked": ["doit.com.cn", "esmchina.com"],
+        "tsvER": "aligned"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.20, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-010",
+      "title": "华为Pura X Max：麒麟9030 Pro + LTPO双屏120Hz",
+      "averitec": "Supported",
+      "eq": 0.86,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.87,
+        "reasoning": "华为4月20日发布会有多个中文财经/科技媒体同步报道。麒麟9030 Pro、LTPO 2.0、5300mAh+66W快充等参数在证券时报、财经网均一致。'大阔折'形态为华为独创。'性能提升30%'为官方声称，需独立测试验证。",
+        "sources_checked": ["stcn.com", "caijing.com.cn", "pconline.com.cn"],
+        "tsvER": "multi-source-consistent"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.20, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-011",
+      "title": "小米MIX Flip2：骁龙8至尊版大外屏翻盖折叠",
+      "averitec": "NotEnoughEvidence",
+      "eq": 0.60,
+      "fact_check": {
+        "label": "NotEnoughEvidence",
+        "confidence": 0.55,
+        "reasoning": "小米MIX Flip2信息主要来自知乎选购指南类文章，非官方发布渠道。骁龙8至尊版搭载可信，但'大外屏减少开合'设计理念属用户主观诠释，与官方卖点表述对应关系不明确。待官方发布确认。",
+        "conflicting_points": ["来源为用户综述，非官方"],
+        "sources_checked": ["zhuanlan.zhihu.com"],
+        "tsvER": "single-source-unverified"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.20, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-012",
+      "title": "索尼LYTIA品牌全面替代IMX，2026年完成",
+      "averitec": "Supported",
+      "eq": 0.82,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.83,
+        "reasoning": "PhoneArena于2025年起即报道索尼LYTIA品牌战略，IMX890→LYT-701和IMX882→LYT-600的具体映射关系得到多个技术媒体确认，2026年完成转型的时间线与索尼官方路线图一致。",
+        "sources_checked": ["phonearena.com", "sony-semicon.com官网"],
+        "tsvER": "aligned"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.10, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-013",
+      "title": "索尼IMX06A-AJ1R-J 50MP传感器对齐旗舰手机需求",
+      "averitec": "ConflictingEvidence",
+      "eq": 0.65,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "confidence": 0.60,
+        "reasoning": "Y.M.Cinema Magazine的分析为主观推断：索尼官方将IMX06A定位为工业传感器，并非手机传感器。'规格对齐旗舰手机需求'是分析师推断，缺乏OEM采用证据。MIPI接口兼容性是技术事实，但商用路径不确定。",
+        "conflicting_points": ["官方定位工业，非手机", "无OEM采用迹象"],
+        "sources_checked": ["ymcinema.com", "sony-semicon.com"],
+        "tsvER": "partial-conflict"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "false_implication", "fallacies": ["规格匹配≠商用采用"]},
+      "sentiment": {"clickbait_risk": 0.30, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-014",
+      "title": "iPhone 17：A19芯片（3nm第三代）+ 6.3英寸120Hz ProMotion",
+      "averitec": "Supported",
+      "eq": 0.95,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.97,
+        "reasoning": "苹果官方Spec页面直接确认：A19芯片/第三代3nm/6核CPU/5核GPU；6.3英寸Super Retina XDR/120Hz ProMotion/3000nit峰值亮度；Ceramic Shield 2；48MP双摄Fusion系统。2025年9月发布，属历史事实。",
+        "sources_checked": ["apple.com/iphone-17/specs/（官方）", "macrumors.com", "gsmarena.com"],
+        "tsvER": "official-source-confirmed"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.05, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-015",
+      "title": "DRAM合约价Q1 2026环比涨80-90%",
+      "averitec": "ConflictingEvidence",
+      "eq": 0.68,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "confidence": 0.65,
+        "reasoning": "TrendForce确为权威机构，但80-90%的单季度环比涨幅属极端数值，历史上DRAM单季涨幅鲜有超过30%。可能为特定细分品类（如HBM3E合约价）而非整体DRAM合约价，原文可能存在混淆。需TrendForce原始报告核实。",
+        "conflicting_points": ["80-90%数值极端，历史罕见", "是否指特定品类不清晰", "引用链路不完整"],
+        "sources_checked": ["新浪财经", "SEMI产业网"],
+        "tsvER": "needs-primary-source"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "data_without_source", "fallacies": ["缺乏原始数据来源链接"]},
+      "sentiment": {"clickbait_risk": 0.55, "value_concerns": ["恐慌性涨价叙事"]}
+    },
+    {
+      "id": "rc-20260530-016",
+      "title": "手机电池突破10000mAh，CVD硅碳占比超50%",
+      "averitec": "Supported",
+      "eq": 0.78,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.80,
+        "reasoning": "10000mAh手机电池已有具体机型实装（荣耀WIN系列等），新浪科技有产品评测参考。CVD硅碳负极>50%为GGII行业预测，合理但非实测数据。'突破'一词夸张，实为特定高容量机型而非行业整体。",
+        "sources_checked": ["新浪科技", "澎湃新闻"],
+        "tsvER": "mostly-aligned"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "overgeneralization", "fallacies": ["特定机型突破→行业普遍突破"]},
+      "sentiment": {"clickbait_risk": 0.35, "value_concerns": ["'续航焦虑终结'夸张表述"]}
+    },
+    {
+      "id": "rc-20260530-017",
+      "title": "三星S26全固态电池首发声称",
+      "averitec": "Refuted",
+      "eq": 0.35,
+      "fact_check": {
+        "label": "Refuted",
+        "confidence": 0.80,
+        "reasoning": "三星官方从未正式宣布Galaxy S26将搭载全固态电池。固态电池行业路线图（2026示范→2030商业化）语境是汽车电动化领域，并非手机领域。手机级固态电池能量密度/体积/成本当前不满足商用要求。三星Display此前展示固态电池概念，但明确未设定S26目标。该声称为媒体过度解读。",
+        "refutation_evidence": ["三星官方未发布S26固态电池声明", "行业路线图出自汽车电池领域", "手机固态电池技术成熟度（TRL）约4-5级"],
+        "sources_checked": ["36氪", "澎湃新闻", "三星官网"],
+        "tsvER": "refuted-by-official-absence"
+      },
+      "pseudo_science": {"label": "pseudo_tech", "flags": ["将汽车电池路线图移植到手机领域"]},
+      "logic": {"label": "category_error", "fallacies": ["汽车固态电池路线→手机固态电池"]},
+      "sentiment": {"clickbait_risk": 0.75, "value_concerns": ["技术期望管理失当"]}
+    },
+    {
+      "id": "rc-20260530-018",
+      "title": "台积电2026年营收首破新台币1万亿",
+      "averitec": "Supported",
+      "eq": 0.88,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.90,
+        "reasoning": "台积电财报为公开披露数据，36氪引用有据。1万亿新台币里程碑在2026年Q1财报会上已被提及，AI+智能手机双驱动的归因也是管理层官方表述。",
+        "sources_checked": ["36kr.com", "台积电投资者关系"],
+        "tsvER": "financial-report-based"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.15, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-019",
+      "title": "高通骁龙X2 Plus发布（PC平台）",
+      "averitec": "Supported",
+      "eq": 0.78,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.82,
+        "reasoning": "高通官方中文网站发布声明，属直接来源。骁龙X2 Plus为PC/笔记本平台，与手机核心范围相关性较低。",
+        "sources_checked": ["qualcomm.cn官方"],
+        "tsvER": "primary-source"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.10, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-020",
+      "title": "MWC 2026个人AI主题",
+      "averitec": "Supported",
+      "eq": 0.72,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.75,
+        "reasoning": "MWC 2026巴塞罗那于2026年3月举行，新浪科技现场报道，个人AI为官方主题，属事件新闻。",
+        "sources_checked": ["新浪科技"],
+        "tsvER": "event-news"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.15, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-021",
+      "title": "索尼IMX947：26MP全局快门/383fps",
+      "averitec": "Supported",
+      "eq": 0.80,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.82,
+        "reasoning": "Y.M.Cinema Magazine为专业传感器媒体，IMX947参数（26MP/Type 2.5/383fps/全局快门）可与索尼半导体官网产品页交叉验证。主要为工业/专业摄影市场。",
+        "sources_checked": ["ymcinema.com", "sony-semicon.com"],
+        "tsvER": "aligned"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.10, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-022",
+      "title": "三星/LG领先中国OLED竞争者",
+      "averitec": "Supported",
+      "eq": 0.75,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.77,
+        "reasoning": "韩国先驱报为主流媒体，SID 2026技术展示客观支持韩系领先的判断。BOE等中国厂商在手机OLED市占率上升是事实，但技术差距（无偏光片/传感器集成）仍明显。",
+        "sources_checked": ["koreaherald.com"],
+        "tsvER": "mostly-aligned"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.15, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-023",
+      "title": "美光/SK海力士加速HBM扩产",
+      "averitec": "Supported",
+      "eq": 0.82,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.83,
+        "reasoning": "两家公司资本开支转向HBM已在财报和产业媒体多次确认，18-24个月扩产周期为行业标准估算，2027年缓解预测属合理推断。",
+        "sources_checked": ["esmchina.com"],
+        "tsvER": "industry-consensus"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.15, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-024",
+      "title": "2nm制程推升旗舰机售价",
+      "averitec": "Supported",
+      "eq": 0.76,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.78,
+        "reasoning": "2nm晶圆成本高于3nm是行业共识（台积电定价结构公开），成本传导到终端的逻辑合理。具体涨幅未量化，属分析预测而非实测数据。",
+        "sources_checked": ["中关村在线"],
+        "tsvER": "logical-extrapolation"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid_inference", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.30, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-025",
+      "title": "三星OLED裸眼3D技术演示",
+      "averitec": "NotEnoughEvidence",
+      "eq": 0.62,
+      "fact_check": {
+        "label": "NotEnoughEvidence",
+        "confidence": 0.55,
+        "reasoning": "技术演示为早期概念，无量产时间表。中文报道来源（EET-China）可信但内容较简短，缺乏SID官方展示资料链接。三星Display常在展会展示概念技术，距商用化路径不明。",
+        "sources_checked": ["eet-china.com"],
+        "tsvER": "single-source-demo"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.20, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-026",
+      "title": "三星Galaxy S26或采用自研2nm Exynos",
+      "averitec": "Refuted",
+      "eq": 0.40,
+      "fact_check": {
+        "label": "Refuted",
+        "confidence": 0.70,
+        "reasoning": "'或采用'属推测性报道，非官方信息。三星代工2nm良率问题长期存在，分析师普遍认为三星S26系列主要市场仍将搭载骁龙8E6系列（高通+台积电2nm），自研Exynos在全球旗舰的恢复路径存疑。电子元件技术网原文仅为一则短讯，无具体信源引用。",
+        "refutation_evidence": ["三星代工2nm良率低于台积电N2", "分析师预测S26主要采用骁龙8E6", "三星Exynos在旗舰段战略已受限"],
+        "sources_checked": ["ep.cntronics.com"],
+        "tsvER": "speculative-refuted-by-analysis"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "weak_evidence", "fallacies": ["单一来源推测→标题化事实"]},
+      "sentiment": {"clickbait_risk": 0.65, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-027",
+      "title": "HBM4制造门槛大幅提升，SK海力士领先",
+      "averitec": "Supported",
+      "eq": 0.82,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.84,
+        "reasoning": "HBM4的TSV精度要求和混合键合技术是业界公认的技术挑战，SK海力士领先地位已在多家分析机构报告中确认。三星HBM4良率追赶进度为行业跟踪热点，基本一致。",
+        "sources_checked": ["doit.com.cn", "52solution.com"],
+        "tsvER": "industry-consensus"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.20, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-028",
+      "title": "全球重估中国芯片：DeepSeek推动替代需求",
+      "averitec": "ConflictingEvidence",
+      "eq": 0.62,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "confidence": 0.58,
+        "reasoning": "DeepSeek影响力属事实，但'全球重估中国芯片'属宏观评论。手机端NPU运行Distill模型的能力因芯片型号差异巨大，笼统化有过度概括之嫌。OFweek文章为观点类，非数据类。",
+        "conflicting_points": ["端侧AI能力差异巨大，不宜笼统化", "属宏观观点而非具体事实"],
+        "sources_checked": ["ofweek.com"],
+        "tsvER": "opinion-piece"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "overgeneralization", "fallacies": ["个别案例→整体能力评估"]},
+      "sentiment": {"clickbait_risk": 0.45, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-029",
+      "title": "三星Display CES 2026 AI时代OLED创新",
+      "averitec": "Supported",
+      "eq": 0.78,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.80,
+        "reasoning": "三星Display官方网站确认CES 2026展示，属一手来源。内容为方向性产品展示，技术细节需进一步规格确认。",
+        "sources_checked": ["global.samsungdisplay.com（官方）"],
+        "tsvER": "primary-source"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.15, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-030",
+      "title": "华为Mate XTs：麒麟9020三折叠+手写笔",
+      "averitec": "NotEnoughEvidence",
+      "eq": 0.62,
+      "fact_check": {
+        "label": "NotEnoughEvidence",
+        "confidence": 0.58,
+        "reasoning": "知乎购机指南类文章属用户整理，非官方渠道。麒麟9020型号和手写笔支持尚待华为官方发布确认，现有信息基于规律预期而非官方数据。",
+        "sources_checked": ["zhuanlan.zhihu.com"],
+        "tsvER": "unverified-user-content"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.20, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-031",
+      "title": "全球折叠屏2026年出货增长20%预测",
+      "averitec": "NotEnoughEvidence",
+      "eq": 0.65,
+      "fact_check": {
+        "label": "NotEnoughEvidence",
+        "confidence": 0.62,
+        "reasoning": "20%增长预测无明确来源机构（IDC/Counterpoint/DSCC均未在原文引用）。中国市场折叠屏渗透率上升是事实，但全球20%增长预测需原始报告核实。",
+        "conflicting_points": ["无明确研究机构来源"],
+        "sources_checked": ["zhuanlan.zhihu.com"],
+        "tsvER": "missing-source"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.20, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-032",
+      "title": "台积电CEO：2026产能爬坡快于2025",
+      "averitec": "Supported",
+      "eq": 0.78,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.80,
+        "reasoning": "台积电财报会CEO言论有多方记录，N2良率改善超预期的表述符合台积电一贯对外沟通口径，属有据可查的管理层陈述。",
+        "sources_checked": ["知乎台积电分析"],
+        "tsvER": "executive-statement-aligned"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.10, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-033",
+      "title": "天玑9400系列覆盖主要旗舰，双雄竞争格局",
+      "averitec": "Supported",
+      "eq": 0.80,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.82,
+        "reasoning": "OPPO Find X8/X8s、vivo X200/X200s采用天玑9400系列均已发布，Beebom有完整机型列表。与骁龙8至尊版竞争是市场格局描述，多媒体认可。",
+        "sources_checked": ["beebom.com", "mediatek.com"],
+        "tsvER": "aligned"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.10, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-034",
+      "title": "内存成本成手机BOM最大变量，中端机降规格",
+      "averitec": "ConflictingEvidence",
+      "eq": 0.68,
+      "fact_check": {
+        "label": "ConflictingEvidence",
+        "confidence": 0.65,
+        "reasoning": "'内存超越屏幕成BOM最大变量'是分析性结论，缺乏具体BOM数据支撑。'从12GB降至8GB'为举例说明，非系统性数据。中端机降规格压力属合理推断但需实例核查。",
+        "conflicting_points": ["BOM排名结论缺乏量化支撑", "降规格举例非系统数据"],
+        "sources_checked": ["新浪财经"],
+        "tsvER": "analytical-inference"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid_inference", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.35, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-035",
+      "title": "全球半导体TOP10 Q1创新高",
+      "averitec": "Supported",
+      "eq": 0.78,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.80,
+        "reasoning": "Q1 2026各大半导体公司财报已公开，台积电、英伟达、SK海力士营收创历史新高有公开数据支撑，观察者网引用合理。",
+        "sources_checked": ["guancha.cn/风闻"],
+        "tsvER": "financial-data"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.20, "value_concerns": []}
+    },
+    {
+      "id": "rc-20260530-036",
+      "title": "定制化HBM技术爆发：台积电联盟重塑供应链",
+      "averitec": "Supported",
+      "eq": 0.80,
+      "fact_check": {
+        "label": "Supported",
+        "confidence": 0.82,
+        "reasoning": "CoWoS+HBM封装联盟是行业公开事实，cHBM（定制化HBM）路线已在英伟达GB系列中应用。我爱方案网分析为综述类，技术细节基本准确。间接推高消费级DRAM成本的逻辑链成立。",
+        "sources_checked": ["52solution.com"],
+        "tsvER": "mostly-aligned"
+      },
+      "pseudo_science": {"label": "clean", "flags": []},
+      "logic": {"label": "valid", "fallacies": []},
+      "sentiment": {"clickbait_risk": 0.15, "value_concerns": []}
+    }
+  ]
+}

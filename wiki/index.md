@@ -10,6 +10,8 @@
 - ✅ [Snapdragon 8 Elite Gen 5](entities/soc/snapdragon-8-elite-gen5.md) — NPU +37%，可作端侧 LLM 推理（待量产实测验证）
 - ✅ [MediaTek Dimensity 9400](entities/soc/dimensity-9400.md) — Agentic AI 首发地位核查（2026-05-18建档）
 - ✅ Snapdragon 6 Gen 5 / 4 Gen 5 — 4nm工艺，2026-05-07高通官方发布（2026-05-29建档）
+- ✅ [MediaTek Dimensity 9400+](entities/soc/dimensity-9400-plus.md) — 3nm N3E，SpD+端侧AI+20%，DeepSeek-R1-Distill支持（2026-05-30建档）
+- ✅ [Apple A19](entities/soc/apple-a19.md) — 台积电第三代3nm，iPhone 17搭载，6核CPU/5核GPU（2026-05-30建档）
 - ✅ [MediaTek Dimensity 9600](entities/soc/dimensity-9600.md) — TSMC N2P，首引双超大核（~5GHz），Q3 2026发布（爆料，官宣待确认）（2026-05-25建档）
 - ✅ [Snapdragon 8 Elite Gen 6](entities/soc/snapdragon-8-elite-gen6.md) — TSMC 2nm，9月发布，Adreno 845 GPU，UFS 5.0，CPU提升幅度信源冲突（CE）（2026-05-29建档）
 - ✅ [麒麟2026 / Kirin 2026](entities/soc/kirin-2026.md) — LogicFolding技术，晶体管密度+53.5%，频率首超3GHz，今秋发布（2026-05-27建档）
@@ -34,6 +36,7 @@
 - ✅ [WL-MCM封装](entities/tech/wl-mcm-packaging.md) — 晶圆级多芯片模组，苹果A20 Pro首发，集成HBM实现本地LLM（2026-05-26建档）
 - ✅ [LTPO+](entities/tech/ltpo-plus.md) — 苹果iPhone 18 Pro首次规模化部署，BOE因此被排除旗舰供应链（2026-05-27建档）
 - ✅ [UFCS 2.0](entities/tech/ufcs-2.md) — 40W无鉴权跨品牌互通，华为/OPPO/vivo/荣耀联签（2026-05-29建档）
+- ✅ [索尼LYTIA品牌](entities/tech/lytia-brand.md) — IMX系列移动传感器品牌全面转型LYTIA，2026年完成（2026-05-30建档）
 - ⏳ LPDDR5X / UFS 4 / 卫星通信 / 折叠铰链 / 端侧 LLM 加速 / 计算摄影
 
 ## 二、主题节点 / Topics
@@ -51,6 +54,10 @@
 - ✅ [AI驱动的DRAM供应危机](topics/ai-dram-crisis-2026.md) — LPDDR5X Q2暴涨83%，HBM产能挤压手机内存，手机均价上涨传导链（2026-05-25建档）
 - ✅ [TSMC 2nm产能格局2026](topics/tsmc-2nm-supply-2026.md) — 五座N2晶圆厂，苹果占逾50%，AI硅片与手机芯片争产能（2026-05-25建档）
 - ✅ [中芯国际自主制程进展](topics/smic-process-evolution.md) — N+1→N+3演进路线，DUV多重曝光突破，麒麟9030 Pro确认N+3（2026-05-25建档）
+
+## 三、变更日志
+
+- **2026-05-30**：新增实体 Dimensity 9400+ / Apple A19 / 索尼LYTIA品牌；更新主题 AI-DRAM危机（HBM4+cHBM）/ TSMC 2nm产能（AMD加入+台积电万亿营收）
 
 ## 三、自动更新规则
 

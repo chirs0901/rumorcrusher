@@ -68,3 +68,10 @@ TrendForce预计：DRAM价格有意义的缓解要等到**2027年底**。三星/
 - **SK海力士HBM3E全年售罄**：CEO公开确认2026全年HBM（含HBM3E）供应已提前售罄，HBM成为AI市场决定性约束。AVeriTeC：Supported（0.92）
 - **LPDDR5/DDR5价格涨幅**：HBM产能挤压下，标准内存涨幅预期高个位数至20%，三星/SK Hynix已发出合约重新定价信号。AVeriTeC：Supported（0.87）
 - **苹果2nm独占50%产能**：苹果锁定台积电2026年N2产能约48-50%，用于消费设备而非AI，AI芯片厂商可用配额严重受限。AVeriTeC：Supported（0.85）
+
+### 更新：2026-05-30
+- **SK海力士HBM3E/HBM4占DRAM业务逾40%**：Q4 2025财报确认HBM在DRAM部门销售额超四成，HBM高价与消费级低价形成"双轨制"，SK海力士盈利能力持续优于三星。AVeriTeC：Supported（0.82）
+- **HBM4制造门槛提升**：HBM4在TSV精度和混合键合工艺门槛大幅提升，进一步强化SK海力士在AI存储供应链的垄断地位，三星和美光追赶进度受限。AVeriTeC：Supported（0.84）
+- **定制化HBM（cHBM）爆发**：台积电CoWoS联盟推动cHBM量产，英伟达GB系列已采用，间接挤占消费级DRAM产能的问题延续。AVeriTeC：Supported（0.82）
+- **美光/SK海力士加速扩产**：HBM扩产周期18-24个月，消费级DRAM/NAND价格压力预计延续至2027年。AVeriTeC：Supported（0.83）
+- **注意**：Q1 2026 DRAM合约价"环比涨80-90%"数据存疑（ConflictingEvidence，0.65）——可能混淆HBM合约价与普通LPDDR5X合约价，待TrendForce原始报告核实。

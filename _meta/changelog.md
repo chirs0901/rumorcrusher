@@ -1,5 +1,27 @@
 # RumorCrusher Changelog
 
+## 2026-05-30 晚报（RC-20260530-120312）
+- **采集**：36条原始采集，9轮搜索，覆盖芯片/显示/存储/折叠屏/电池/供应链
+- **AVeriTeC**：Supported=22, CE=7, NEE=5, Refuted=2；综合健康打分78
+- **辟谣条目**：
+  - 三星Galaxy S26全固态电池声称（汽车电池路线图错误迁移，Refuted，置信度0.80）
+  - 三星Galaxy S26自研2nm Exynos（单源无证据推测，Refuted，置信度0.70）
+- **新增方法论规则**：
+  - R-2026-05-30-01：汽车电池路线图迁移谬误识别
+  - R-2026-05-30-02：非官方芯片命名标注规则
+  - R-2026-05-30-03：存储价格数据原始来源链要求
+  - R-2026-05-30-04：工业传感器≠手机传感器推断
+- **Wiki更新**：
+  - 新建实体页：`entities/soc/dimensity-9400-plus.md`（天玑9400+建档，DeepSeek-R1-Distill支持）
+  - 新建实体页：`entities/soc/apple-a19.md`（iPhone 17 A19芯片建档）
+  - 新建技术页：`entities/tech/lytia-brand.md`（索尼LYTIA品牌建档）
+  - 更新：`topics/ai-dram-crisis-2026.md`（HBM4挤压LPDDR5X+台积电联盟cHBM新进展）
+  - 更新：`topics/tsmc-2nm-supply-2026.md`（苹果>50%产能锁定确认+AMD H2 2026加入）
+  - 更新：`wiki/index.md`（新增3实体，2主题更新）
+- **知识库**：追加8条（chip×4, display×2, memory×2），知识库总计95条
+- **日期校验**：CTX=SCHED=BASH=2026-05-30，三源全部一致，无漂移
+- **Git**：仅commit，autopush接管推送
+
 ## 2026-05-24 · 05:05 CST 晨跑（v0.5）
 
 - 首次会话化产出，仓库以 session outputs 作为 fallback
