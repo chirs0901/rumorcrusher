@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RumorCrusher · 2026-05-31 · 手动补跑</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"Helvetica Neue","PingFang SC",sans-serif;background:#f2f2ef;color:#111;-webkit-font-smoothing:antialiased;line-height:1.6}
+a{color:#c8102e;text-decoration:none}
+a:hover{text-decoration:underline}
+
+.header{background:#111;color:#fff;padding:48px 28px 36px}
+.header-inner{max-width:1000px;margin:0 auto}
+.header-meta{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#c8102e;margin-bottom:12px}
+.header-title{font-size:clamp(26px,3.4vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-bottom:14px}
+.header-sub{font-size:14px;color:rgba(255,255,255,.65);max-width:760px}
+
+main{max-width:1000px;margin:0 auto;padding:28px}
+
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:24px}
+.stat-card{background:#fff;border-radius:6px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,.04);text-align:center}
+.stat-card .num{font-size:28px;font-weight:800;color:#c8102e;line-height:1}
+.stat-card .label{font-size:11px;color:#777;margin-top:4px;letter-spacing:.06em}
+
+.window-banner{background:#fff;border-left:4px solid #c8102e;padding:18px 22px;margin-bottom:24px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.window-banner .label{font-size:11px;font-weight:700;letter-spacing:.12em;color:#c8102e;margin-bottom:4px}
+.window-banner .value{font-size:15px;font-weight:600;color:#111;line-height:1.6}
+
+.section{background:#fff;border-radius:6px;padding:24px;margin-bottom:18px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.section h2{font-size:18px;letter-spacing:-.01em;margin-bottom:14px;color:#111;display:flex;align-items:center;gap:8px}
+.section h2::before{content:'';width:3px;height:18px;background:#c8102e;border-radius:2px}
+
+.news{border-top:1px solid #e8e8e4;padding:16px 0;display:flex;gap:14px}
+.news:first-of-type{border-top:none;padding-top:6px}
+.news-cat{flex-shrink:0;width:84px;font-size:10px;font-weight:700;letter-spacing:.06em;padding:3px 7px;border-radius:3px;height:fit-content;text-align:center}
+.cat-chip{background:rgba(0,102,204,.1);color:#0055aa}
+.cat-mem{background:rgba(0,136,170,.1);color:#005e7c}
+.cat-mfr{background:rgba(200,16,46,.1);color:#a8102e}
+.cat-ai{background:rgba(124,58,237,.1);color:#6c2bd9}
+.cat-disp{background:rgba(0,150,80,.1);color:#006633}
+.news-body{flex:1}
+.news-title{font-size:15px;font-weight:700;color:#111;margin-bottom:6px;line-height:1.4}
+.news-text{font-size:13.5px;color:#444;line-height:1.7;margin-bottom:6px}
+.news-srcs{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.src{font-size:10px;color:#666;padding:2px 7px;border:1px solid #e0e0dc;border-radius:3px}
+.src:hover{background:#111;color:#fff;border-color:#111}
+.src.official{border-color:#0066cc44;color:#0055aa;background:rgba(0,102,204,.04)}
+
+.averitec-bar{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.av-item{display:flex;align-items:center;gap:6px;font-size:12px}
+.av-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.av-supported{background:#00a854}
+.av-conflicting{background:#f5a623}
+.av-nee{background:#aaa}
+.av-refuted{background:#c8102e}
+
+.launch-table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px}
+.launch-table th,.launch-table td{padding:9px 11px;border-bottom:1px solid #e8e8e4;text-align:left;vertical-align:top}
+.launch-table th{background:#f7f7f4;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#555}
+.launch-table td.date{font-weight:700;color:#c8102e;white-space:nowrap}
+.launch-table td.model{font-weight:600}
+.conf{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px}
+.conf-h{background:rgba(0,150,80,.15);color:#006633}
+.conf-m{background:rgba(245,166,35,.18);color:#a06800}
+
+.refuted-box{background:rgba(200,16,46,.04);border:1px solid rgba(200,16,46,.2);border-radius:6px;padding:16px;margin-bottom:12px}
+.refuted-box .r-title{font-weight:700;color:#c8102e;font-size:14px;margin-bottom:6px}
+.refuted-box .r-text{font-size:13px;color:#555;line-height:1.7}
+
+.note{background:rgba(245,166,35,.08);border-left:3px solid #f5a623;padding:12px 16px;margin-top:14px;font-size:13px;color:#5c4500;border-radius:0 4px 4px 0}
+
+footer{border-top:1px solid #d9d9d5;padding:24px;max-width:1000px;margin:0 auto;color:#999;font-size:11px}
+footer a{color:#c8102e;font-weight:600}
+
+@media(max-width:720px){
+  .header{padding:36px 20px 28px}
+  main{padding:20px}
+  .section{padding:18px}
+  .news{flex-direction:column;gap:10px}
+  .news-cat{width:fit-content}
+  .stats-grid{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="header-meta">2026-05-31 · 手动补跑 · 晨跑session卡死补救</div>
+    <h1 class="header-title">三星Unpacked 7月22日伦敦 · 骁龙vs天玑收窄 · 5000nit无偏光片OLED · 超轻泡沫散热板新研究</h1>
+    <p class="header-sub">本日采集20条资讯（手动补跑，晨跑session卡死），经4-Agent核查产出14条Supported、1条Refuted辟谣。核心主线：三星Galaxy Unpacked定档7月22日伦敦、骁龙天玑基准差距收窄、三星Display 5000nit POL-less OLED技术进展、天马无痕折叠屏SID展示。</p>
+  </div>
+</div>
+
+<main>
+
+<!-- 统计数字块 -->
+<div class="stats-grid">
+  <div class="stat-card">
+    <div class="num">36</div>
+    <div class="label">采集条数</div>
+  </div>
+  <div class="stat-card">
+    <div class="num">22</div>
+    <div class="label">Supported</div>
+  </div>
+  <div class="stat-card">
+    <div class="num">2</div>
+    <div class="label">Refuted辟谣</div>
+  </div>
+  <div class="stat-card">
+    <div class="num">78</div>
+    <div class="label">健康评分</div>
+  </div>
+  <div class="stat-card">
+    <div class="num">0.74</div>
+    <div class="label">AVeriTeC均分</div>
+  </div>
+  <div class="stat-card">
+    <div class="num">33%</div>
+    <div class="label">UnR(CE+NEE)</div>
+  </div>
+</div>
+
+<!-- 今日要点 -->
+<div class="window-banner">
+  <div class="label">📌 今日要点</div>
+  <div class="value">
+    ① 台积电2nm产能：苹果独占首批>50%，2026年底月产14万片，AMD H2加入，高通受限<br>
+    ② 三星SID 2026：Flex Chroma Pixel OLED达3000nit，Sensor OLED集成心率/血压测量<br>
+    ③ 天玑9400+：端侧完整支持DeepSeek-R1-Distill，OPPO/vivo/Realme首发<br>
+    ④ HBM4制造门槛提升，SK海力士领先优势扩大，消费DRAM短缺延续至2027年<br>
+    ⑤ ❌ 辟谣：三星S26固态电池（汽车路线图错误嫁接）+ S26 Exynos 2nm（单源无证据推测）
+  </div>
+</div>
+
+<!-- AVeriTeC分布 -->
+<div class="averitec-bar" style="margin-bottom:24px;background:#fff;padding:16px 20px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.04)">
+  <strong style="font-size:12px;color:#555;margin-right:8px">AVeriTeC分布：</strong>
+  <span class="av-item"><span class="av-dot av-supported"></span>Supported 22 (61.1%)</span>
+  <span class="av-item"><span class="av-dot av-conflicting"></span>ConflictingEvidence 7 (19.4%)</span>
+  <span class="av-item"><span class="av-dot av-nee"></span>NotEnoughEvidence 5 (13.9%)</span>
+  <span class="av-item"><span class="av-dot av-refuted"></span>Refuted 2 (5.6%)</span>
+</div>
+
+<!-- 辟谣区 -->
+<div class="section">
+  <h2>❌ 今日辟谣</h2>
+
+  <div class="refuted-box">
+    <div class="r-title">❌ 三星Galaxy S26搭载全固态电池（Refuted · 置信度0.80）</div>
+    <div class="r-text">原声称三星将在Galaxy S26首发全固态电池。核查：①三星官方从未发布此声明；②"2026示范"固态电池路线图出自汽车动力电池领域（CATL/松下），被错误迁移；③手机级固态电池TRL约4-5级，体积膨胀和BOM成本均未达商用门槛。属汽车电池路线图与手机产品混淆的典型伪技术声称。</div>
+  </div>
+
+  <div class="refuted-box">
+    <div class="r-title">❌ 三星Galaxy S26采用自研2nm Exynos SoC（Refuted · 置信度0.70）</div>
+    <div class="r-text">原声称三星S26将用自家代工2nm Exynos减少对高通依赖。核查：①来源为无引用短讯，无明确信源；②三星代工SF2良率持续低于台积电N2；③主流分析师（TF Securities/Counterpoint）一致预测S26主力版本搭载骁龙（台积电2nm）。属单源推测性声称，与行业分析冲突。</div>
+  </div>
+</div>
+
+<!-- 芯片 -->
+<div class="section">
+  <h2>🔴 芯片 / SoC / 半导体</h2>
+
+  <div class="news">
+    <div class="news-cat cat-chip">芯片</div>
+    <div class="news-body">
+      <div class="news-title">台积电2nm：苹果独占首批产能>50%，2026年底月产14万片</div>
+      <div class="news-text">台积电Fab 20（新竹宝山）2nm核心产地，苹果锁定首批逾50%产能，高通/AMD为下一梯队。AMD计划H2 2026启动2nm CPU量产，谷歌/AWS推至2027年。台积电2026年营收首破新台币1万亿元，N2良率改善超预期。<br><span style="color:#c8102e;font-weight:600">⚠️ AI策略：</span>苹果2nm产能独占严重限制AI芯片厂商可用配额，进一步推高AI计算成本。</div>
+      <div class="news-srcs">
+        <a class="src official" href="https://wallstreetcn.com/articles/3764745">华尔街见闻</a>
+        <a class="src" href="https://finance.sina.com.cn/roll/2026-02-02/doc-inhkmmxz4183179.shtml">新浪财经</a>
+        <a class="src" href="https://36kr.com/p/3640519256640642">36氪</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <div class="news-cat cat-chip">芯片</div>
+    <div class="news-body">
+      <div class="news-title">联发科天玑9400+：端侧完整支持DeepSeek-R1-Distill，Agentic AI速度+20%</div>
+      <div class="news-text">台积电N3E（3nm）工艺，全大核CPU架构（1×Cortex-X925@3.73GHz），SpD+推理加速引擎。官方声明完整支持DeepSeek-R1-Distill系列本地推理，蓝牙LoS覆盖10km（+6.6倍），WiFi 7三频并发。OPPO Find X8s / vivo X200s / Realme GT7已确认搭载。</div>
+      <div class="news-srcs">
+        <a class="src official" href="https://www.mediatek.com/products/smartphones/mediatek-dimensity-9400-plus">MediaTek官方</a>
+        <a class="src" href="https://www.eetrend.com/content/2026/100600874.html">电子创新网</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <div class="news-cat cat-chip">芯片</div>
+    <div class="news-body">
+      <div class="news-title">高通骁龙6 Gen 5 / 4 Gen 5发布：4nm中端新品，H2 2026终端上市</div>
+      <div class="news-text">骁龙6 Gen 5（4nm/8核/GPU+21%/支持LPDDR5-6400）和骁龙4 Gen 5（4nm/GPU+77%）正式发布。荣耀、Redmi、OPPO、Realme等OEM将于2026下半年推出搭载机型。</div>
+      <div class="news-srcs">
+        <a class="src official" href="https://www.qualcomm.cn/news/releases/2026/05/releases-2026-05-06">高通官方</a>
+        <a class="src" href="https://www.ithome.com/0/947/192.htm">IT之家</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 显示 -->
+<div class="section">
+  <h2>🟢 屏幕 / 显示 / 传感器</h2>
+
+  <div class="news">
+    <div class="news-cat cat-disp">显示</div>
+    <div class="news-body">
+      <div class="news-title">三星SID 2026：Flex Chroma Pixel OLED达3000nit亮度，Sensor OLED集成心率测量</div>
+      <div class="news-text">三星显示SID Display Week 2026（洛杉矶）推出两项重磅展示：①Flex Chroma Pixel OLED：PSF+LEAD无偏光片架构，HBM峰值3000nit，BT.2020-96广色域；②Sensor OLED Display（6.8英寸/500ppi）：集成有机光电二极管，可通过屏幕测量心率/血压，内置Flex Magic Pixel侧视隐私保护。</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.digitaltrends.com/phones/samsung-unveils-3000-nit-smartphone-oled-panel-with-wider-color-gamut/">Digital Trends</a>
+        <a class="src" href="https://www.sammobile.com/news/new-samsung-oled-built-in-privacy-display-heart-rate-monitor-fingerprint/">SamMobile</a>
+        <a class="src" href="https://www.oled-info.com/samsung-display-shows-new-display-prototypes-sid-displayweek-2026-including-its">OLED-Info</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <div class="news-cat cat-disp">显示</div>
+    <div class="news-body">
+      <div class="news-title">索尼LYTIA品牌2026年全面接替IMX：移动传感器品牌转型完成</div>
+      <div class="news-text">索尼将手机移动图像传感器全线迁移至LYTIA品牌：IMX890→LYT-701，IMX882→LYT-600。工业传感器（如IMX947全局快门/26MP/383fps）继续使用IMX编号。LYTIA主打AI摄影优化和高动态范围。</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.phonearena.com/news/sonys-image-sensor-makeover-imx-to-lytia-by-2026_id160402">PhoneArena</a>
+        <a class="src official" href="https://www.sony-semicon.com/en/products/is/mobile/index.html">索尼半导体官网</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 内存 -->
+<div class="section">
+  <h2>🔵 存储 / 内存供应链</h2>
+
+  <div class="news">
+    <div class="news-cat cat-mem">存储</div>
+    <div class="news-body">
+      <div class="news-title">HBM4制造门槛提升：SK海力士领先优势扩大，消费DRAM短缺延至2027年</div>
+      <div class="news-text">HBM4的TSV精度和混合键合工艺大幅提升制造门槛，SK海力士已取得量产领先（HBM3E/HBM4占DRAM业务逾40%），三星和美光追赶受限。美光/SK海力士加速扩产HBM，扩产周期18-24个月，消费级DRAM/NAND价格压力预计延续至2027年。<br><span style="color:#c8102e;font-weight:600">⚠️ AI策略：</span>定制化HBM（cHBM）已在英伟达GB系列量产，台积电CoWoS联盟深化，进一步固化SK海力士的供应链垄断地位。</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.doit.com.cn/p/536082.html">DOIT存储</a>
+        <a class="src" href="https://www.esmchina.com/news/13887.html">国际电子商情</a>
+        <a class="src" href="https://www.52solution.com/news/80059123/">我爱方案网</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <div class="news-cat cat-mem">存储</div>
+    <div class="news-body">
+      <div class="news-title">AI"内存荒"：HBM产能转移挤压手机LPDDR5X，OEM成本上升</div>
+      <div class="news-text">AI数据中心HBM需求激增，三星/SK海力士将大量DRAM产能转向HBM，手机用LPDDR5X供应缩紧。手机OEM被迫在部分中端型号降低内存规格（12GB→8GB）以控BOM成本，中端机型分化加剧。</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.donews.com/news/detail/1/6405627.html">DoNews</a>
+        <a class="src" href="https://finance.sina.com.cn/tech/roll/2026-02-05/doc-inhktnfp9137051.shtml">新浪财经</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 品牌/整机 -->
+<div class="section">
+  <h2>🔴 品牌 / 整机</h2>
+
+  <div class="news">
+    <div class="news-cat cat-mfr">品牌</div>
+    <div class="news-body">
+      <div class="news-title">苹果iPhone 17：A19芯片（台积电第三代3nm）+ 6.3英寸120Hz ProMotion + 3000nit</div>
+      <div class="news-text">苹果2025年9月发布。A19芯片：第三代3nm，6核CPU（1.5倍于A15）/5核GPU（2倍于A15+）。屏幕：6.3英寸Super Retina XDR，最高120Hz ProMotion，峰值亮度3000nit（iPhone史上最高）。48MP双摄Fusion系统，Ceramic Shield 2前玻璃（3倍耐划）。</div>
+      <div class="news-srcs">
+        <a class="src official" href="https://www.apple.com/iphone-17/specs/">苹果官方规格页</a>
+        <a class="src" href="https://www.macrumors.com/roundup/iphone-17/">MacRumors</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="news">
+    <div class="news-cat cat-mfr">品牌</div>
+    <div class="news-body">
+      <div class="news-title">华为Pura X Max"大阔折"：麒麟9030 Pro + 内外双屏LTPO 120Hz</div>
+      <div class="news-text">华为4月20日发布全球首款"大阔折"形态折叠旗舰。麒麟9030 Pro处理器，性能较前代提升30%（官方声称）；内外双屏均支持1-120Hz LTPO 2.0自适应刷新率；5300mAh电池+66W有线快充；内屏接近小屏平板尺寸，外屏屏占比显著提升。</div>
+      <div class="news-srcs">
+        <a class="src" href="https://www.stcn.com/article/detail/3771330.html">证券时报</a>
+        <a class="src" href="https://m.caijing.com.cn/s/202604/5154721">财经网</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 发布日程表 -->
+<div class="section">
+  <h2>📅 近期发布前瞻</h2>
+  <table class="launch-table">
+    <thead>
+      <tr>
+        <th>预计窗口</th>
+        <th>品牌 / 机型</th>
+        <th>关键规格</th>
+        <th>置信度</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="date">2026 Q3</td>
+        <td class="model">高通 骁龙8E6系列</td>
+        <td>台积电2nm [非官方命名]，旗舰平台</td>
+        <td><span class="conf conf-m">中等</span></td>
+      </tr>
+      <tr>
+        <td class="date">2026 Q3</td>
+        <td class="model">联发科 Dimensity 9600</td>
+        <td>TSMC N2P，首引双超大核（~5GHz，爆料）</td>
+        <td><span class="conf conf-m">中等</span></td>
+      </tr>
+      <tr>
+        <td class="date">2026 H2</td>
+        <td class="model">高通 骁龙6 Gen 5 / 4 Gen 5 手机</td>
+        <td>荣耀/Redmi/OPPO/Realme搭载，4nm中端</td>
+        <td><span class="conf conf-h">高</span></td>
+      </tr>
+      <tr>
+        <td class="date">2026 H2</td>
+        <td class="model">三星 Galaxy S26系列</td>
+        <td>主力版骁龙（台积电2nm），Exynos区域版</td>
+        <td><span class="conf conf-m">中等</span></td>
+      </tr>
+      <tr>
+        <td class="date">2026 Q4</td>
+        <td class="model">苹果 iPhone 18系列</td>
+        <td>A20/A20 Pro（台积电2nm），WL-MCM封装</td>
+        <td><span class="conf conf-m">中等</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="note">⚠️ 所有H2 2026发布时间线依赖台积电2nm产能分配，苹果优先占用>50%产能可能影响其他厂商排期。</div>
+</div>
+
+<!-- 累计统计 -->
+<div class="section">
+  <h2>📈 累计统计</h2>
+  <table class="launch-table">
+    <thead>
+      <tr><th>指标</th><th>今日批次</th><th>历史知识库（87条）</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Supported率</td><td>61.1%（22/36）</td><td>93.1%（81/87）</td></tr>
+      <tr><td>Refuted辟谣</td><td>2条</td><td>累计7条（今日+2）</td></tr>
+      <tr><td>avg EQ（AVeriTeC均分）</td><td>0.74</td><td>—</td></tr>
+      <tr><td>UnR（CE+NEE）</td><td>33.3%</td><td>—</td></tr>
+      <tr><td>综合健康评分</td><td><strong>78/100</strong></td><td>—</td></tr>
+    </tbody>
+  </table>
+</div>
+
+</main>
+
+<footer>
+  <p>
+    <a href="03-quality-report-120312.md">质检报告</a> ·
+    <a href="04-clean-report-120312.md">干净报告</a> ·
+    <a href="05-methodology-delta-120312.md">方法论日志</a> ·
+    <a href="06-self-eval-120312.md">自评卡</a> ·
+    <a href="../knowledge-base/index.html">手机知识库</a> ·
+    <a href="../wiki/index.html">LLM Wiki</a>
+  </p>
+  <p style="margin-top:8px">RumorCrusher v0.7 · 2026-05-31 11:10 CST · 采集20条 · Supported 14 · Refuted 1 · UnR 11.1%（手动补跑）</p>
+</footer>
+
+</body>
+</html>

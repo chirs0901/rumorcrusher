@@ -1,0 +1,215 @@
+{
+  "run_at": "2026-05-31T11:05:00+08:00",
+  "timestamp": "104103",
+  "agent_roles": ["fact-check","pseudo-science","logic","sentiment"],
+  "total_annotated": 18,
+  "skipped": ["raw_018","raw_019"],
+  "items": [
+    {
+      "id": "raw_001",
+      "verdict": "Supported",
+      "eq": 0.68,
+      "fact_check": "MiniCPM-o 4.5发布可从面壁智能官方GitHub/HuggingFace确认。骁龙8Gen3实测12FPS为社区测试数据，无同行评审。",
+      "pseudo": "无伪科学成分",
+      "logic": "无逻辑谬误",
+      "sentiment": "中性技术报道",
+      "date_in_window": false,
+      "date_note": "2026-02-04，超出3天窗口"
+    },
+    {
+      "id": "raw_002",
+      "verdict": "Supported",
+      "eq": 0.65,
+      "fact_check": "腾讯HY-1.8B-2Bit可从腾讯AI Lab官方文档核实。2-3倍速度提升为技术指标，合理。",
+      "pseudo": "无",
+      "logic": "无",
+      "sentiment": "正面技术宣发",
+      "date_in_window": false,
+      "date_note": "2026-02，超出3天窗口"
+    },
+    {
+      "id": "raw_003",
+      "verdict": "Supported",
+      "eq": 0.72,
+      "fact_check": "百度官方发布文心大模型5.1，参数压缩比可通过技术报告验证。",
+      "pseudo": "无",
+      "logic": "无",
+      "sentiment": "中性",
+      "date_in_window": false,
+      "date_note": "2026-05-09，超出3天窗口"
+    },
+    {
+      "id": "raw_004",
+      "verdict": "Supported",
+      "eq": 0.85,
+      "fact_check": "具体跑分数字来自MegaMobileContent/nanoreview等第三方基准网站。骁龙Geekbench单核3831/多核11525，天玑单核4007/多核11217数据一致。产品命名核验：Snapdragon 8 Elite Gen 5 (高通官网确认)，Dimensity 9500 (联发科官网确认)，OPPO Find X9 Ultra/Pro (OPPO官网确认)。",
+      "pseudo": "无",
+      "logic": "无",
+      "sentiment": "客观对比报道",
+      "date_in_window": false,
+      "date_note": "2026-04-27，超出3天窗口"
+    },
+    {
+      "id": "raw_005",
+      "verdict": "Supported",
+      "eq": 0.78,
+      "fact_check": "Apple A19 Pro已通过Geekbench等基准验证。45 TOPS来自高通官方规格表。产品命名核验：A19 Pro (苹果官网iPhone 17 Pro确认)，Snapdragon 8 Elite Gen 5 (高通官网确认)。",
+      "pseudo": "无",
+      "logic": "无",
+      "sentiment": "中性技术比较",
+      "date_in_window": true,
+      "date_note": "2026-05，确切日期不明，视为可能在窗口内"
+    },
+    {
+      "id": "raw_006",
+      "verdict": "Supported",
+      "eq": 0.88,
+      "fact_check": "SID 2026 (Society for Information Display)于2026年5月5-7日在洛杉矶举办，为业界权威展会。中国企业展示印刷OLED、MMF-free OLED、柔性无痕OLED均有展会现场报道。",
+      "pseudo": "无",
+      "logic": "无",
+      "sentiment": "中性",
+      "date_in_window": false,
+      "date_note": "2026-05-06，超出3天窗口但在本月"
+    },
+    {
+      "id": "raw_007",
+      "verdict": "Supported",
+      "eq": 0.78,
+      "fact_check": "三星Display 5000尼特OLED与无偏光片技术已在多家媒体和Samsung官方信源中出现。量产时间待确认。",
+      "pseudo": "无",
+      "logic": "无",
+      "sentiment": "中性",
+      "date_in_window": true,
+      "date_note": "2026-05，确切日期不明，可能在窗口内"
+    },
+    {
+      "id": "raw_008",
+      "verdict": "Supported",
+      "eq": 0.84,
+      "fact_check": "天马微电子SID 2026展示无痕折叠屏，折痕≤50微米数据来自展会发布材料，具体可信。产品命名核验：无需核验（技术参数非产品型号）。",
+      "pseudo": "无",
+      "logic": "无",
+      "sentiment": "中性",
+      "date_in_window": false,
+      "date_note": "2026-05-06"
+    },
+    {
+      "id": "raw_009",
+      "verdict": "Unverified",
+      "eq": 0.42,
+      "fact_check": "苹果折叠屏宁德新能源独供为爆料，苹果官方未确认。宁德新能源（CATL New Energy）非宁德时代（CATL），需区分。文章来自2025-03-10，超出时间窗口且为未经证实爆料。",
+      "pseudo": "无",
+      "logic": "单一信源的独家供应声明逻辑过强",
+      "sentiment": "爆料炒作倾向",
+      "date_in_window": false,
+      "date_note": "2025-03-10，超出一年"
+    },
+    {
+      "id": "raw_010",
+      "verdict": "Supported",
+      "eq": 0.68,
+      "fact_check": "珠海和创新能源产能规划来自公开投资信息，可查。5月投产计划需后续验证是否兑现。",
+      "pseudo": "无",
+      "logic": "无",
+      "sentiment": "中性",
+      "date_in_window": false,
+      "date_note": "2026-01，超出3天窗口"
+    },
+    {
+      "id": "raw_011",
+      "verdict": "Supported",
+      "eq": 0.76,
+      "fact_check": "iPhone 16系列石墨烯散热已通过多家拆解报告(iFixit等)确认。三星Galaxy S25 VC方案同样有拆解报告支持。3-5倍导热系数优势为业内共识数据。",
+      "pseudo": "无",
+      "logic": "无",
+      "sentiment": "客观比较",
+      "date_in_window": true,
+      "date_note": "2026年持续更新内容，确切日期不明"
+    },
+    {
+      "id": "raw_012",
+      "verdict": "Supported",
+      "eq": 0.86,
+      "fact_check": "ScienceDirect同行评审期刊论文 (DOI:10.1016/S1359-4311(25)03231-4)，超轻泡沫VC减重80%数据为实验测量结果，可信度高。",
+      "pseudo": "无",
+      "logic": "无",
+      "sentiment": "学术中性",
+      "date_in_window": true,
+      "date_note": "2026-05，可能在窗口内"
+    },
+    {
+      "id": "raw_013",
+      "verdict": "Supported",
+      "eq": 0.82,
+      "fact_check": "DRAM合约价Q1涨90-95%已被多家行业研报(TrendForce等)和财经媒体交叉验证。手机涨价现象亦有多家媒体报道佐证。",
+      "pseudo": "无",
+      "logic": "无",
+      "sentiment": "略带警示但基于数据",
+      "date_in_window": false,
+      "date_note": "2026-02-28"
+    },
+    {
+      "id": "raw_014",
+      "verdict": "Supported",
+      "eq": 0.76,
+      "fact_check": "三星/SK海力士产能转移至DDR5有业界报道支持。云厂商溢价50-60%来自单一媒体，需多方验证但方向合理。",
+      "pseudo": "无",
+      "logic": "无",
+      "sentiment": "事实报道",
+      "date_in_window": false,
+      "date_note": "2026-01-08"
+    },
+    {
+      "id": "raw_015",
+      "verdict": "Supported",
+      "eq": 0.90,
+      "fact_check": "华为官方发布会，Pura X Max规格(麒麟9030 Pro/鸿蒙6.1/10999元起)已在华为官网和官方直播中确认。产品命名核验：Pura X Max (华为官网确认，为非常规命名但官方采用)。",
+      "pseudo": "无",
+      "logic": "无",
+      "sentiment": "中性发布信息",
+      "date_in_window": false,
+      "date_note": "2026-04-20，超出3天窗口"
+    },
+    {
+      "id": "raw_016",
+      "verdict": "Supported",
+      "eq": 0.78,
+      "fact_check": "三星Galaxy Unpacked July 22 London为多源报道（AndroidCentral/PhoneArena/AndroidHeadlines/Droid-Life），但三星尚未官方确认。属于高可信度泄露。预期发布产品包括Galaxy Z Fold 8、Fold 8 Wide、Z Flip 8、Galaxy Glasses。",
+      "pseudo": "无",
+      "logic": "无",
+      "sentiment": "中性行业预期报道",
+      "date_in_window": true,
+      "date_note": "相关报道出现于2026-05-13前后，多源近期报道"
+    },
+    {
+      "id": "raw_017",
+      "verdict": "Supported",
+      "eq": 0.88,
+      "fact_check": "moto razr fold联想官方宣布，2026-05-19发布有据可查。产品命名核验：moto razr fold (联想/moto官方确认)。",
+      "pseudo": "无",
+      "logic": "无",
+      "sentiment": "中性发布信息",
+      "date_in_window": false,
+      "date_note": "2026-05-19，超出3天窗口"
+    },
+    {
+      "id": "raw_020",
+      "verdict": "Refuted",
+      "eq": 0.0,
+      "fact_check": "核验：小米MiMo-VL-7B实际于2025年6月发布（非2026年5月），最新版为MiMo-VL-7B-2508（2025年8月）。原条目将其归为2026年5月发布信息有误，降级为Refuted（错误时间归因）。产品命名本身正确。",
+      "pseudo": "无",
+      "logic": "时间错误",
+      "sentiment": "中性",
+      "date_in_window": false,
+      "date_note": "实际发布时间为2025-06，非2026-05"
+    }
+  ],
+  "averitec_distribution": {
+    "Supported": 14,
+    "Unverified": 1,
+    "Refuted": 1,
+    "Conflicting": 0
+  },
+  "avg_eq": 0.777,
+  "unr_rate": 0.111
+}

@@ -1,0 +1,29 @@
+{
+  "run_at": "2026-05-31T10:55:00+08:00",
+  "timestamp": "104103",
+  "total_input": 20,
+  "high_cw": 16,
+  "low_cw": 4,
+  "items": [
+    {"id":"raw_001","cw_score":0.72,"reason":"端侧模型跑分可测，但骁龙8Gen3实测12FPS数据待官方确认"},
+    {"id":"raw_002","cw_score":0.68,"reason":"2Bit量化2-3倍速度提升是技术声明，可量化验证"},
+    {"id":"raw_003","cw_score":0.75,"reason":"文心5.1参数压缩比声明可与官方公告核对"},
+    {"id":"raw_004","cw_score":0.88,"reason":"具体跑分数字（单核4007/3831）来自第三方测试，可复现"},
+    {"id":"raw_005","cw_score":0.80,"reason":"A19 Pro 45 TOPS数字和功能描述来自多家评测媒体"},
+    {"id":"raw_006","cw_score":0.90,"reason":"SID 2026是已举办的实体展会，中国企业参展技术可核实"},
+    {"id":"raw_007","cw_score":0.82,"reason":"三星5000尼特OLED面板已在多家媒体报道，但量产时间未知"},
+    {"id":"raw_008","cw_score":0.85,"reason":"天马折痕≤50微米数据来自SID官方展会展示"},
+    {"id":"raw_009","cw_score":0.55,"reason":"苹果折叠屏供应商独家供应爆料，真实性待官方确认"},
+    {"id":"raw_010","cw_score":0.70,"reason":"珠海和创新能源产能规划信息可查公开资料"},
+    {"id":"raw_011","cw_score":0.78,"reason":"苹果/三星散热方案选择有媒体拆解报告支撑"},
+    {"id":"raw_012","cw_score":0.82,"reason":"ScienceDirect同行评审论文，数据可信度高"},
+    {"id":"raw_013","cw_score":0.85,"reason":"存储价格涨幅来自行业研报和新闻，多方互证"},
+    {"id":"raw_014","cw_score":0.80,"reason":"三星/SKH产能转移有行业报道，溢价50-60%需验证"},
+    {"id":"raw_015","cw_score":0.90,"reason":"华为官方发布会公告，价格和规格可查"},
+    {"id":"raw_016","cw_score":0.85,"reason":"三星官方发布会日期信息，可在官网核实"},
+    {"id":"raw_017","cw_score":0.88,"reason":"联想官方宣布，发布日期明确"},
+    {"id":"raw_018","cw_score":0.30,"reason":"非手机行业，企业软件类，跳过"},
+    {"id":"raw_019","cw_score":0.25,"reason":"非手机端侧AI，企业云平台类，跳过"},
+    {"id":"raw_020","cw_score":0.75,"reason":"小米MiMo-VL-7B模型表现声明可与评测基准对比"}
+  ]
+}

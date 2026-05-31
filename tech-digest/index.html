@@ -138,6 +138,96 @@ var WIKI_MAP = {
 var DATA = {
 
   // ══════════════════════════════════
+  '2026-05-31': {
+    title: '三星Unpacked定档7月22日 · 骁龙vs天玑差距收窄 · 5000nit无偏光片OLED量产在望',
+    sub: '重点：三星Galaxy Unpacked 7月22日伦敦发布（Z Fold 8/Flip 8/Galaxy Glasses预期亮相）；骁龙8 Elite Gen 5与Dimensity 9500基准对决，天玑单核反超高通；三星Display下代OLED峰值亮度5000尼特+无偏光片技术；天马无痕折叠屏折痕深度≤50微米亮相SID 2026；超轻泡沫均热板研究：重量减轻80%散热表现相当；旗舰存储成本BoM占比超20%压力持续。',
+    stats: [
+      {v:'20', l:'条采集'},
+      {v:'1', l:'条 Refuted 剔除'},
+      {v:'14', l:'条 Supported'},
+      {v:'5', l:'大器件分类'}
+    ],
+    items: [
+      {
+        id: 'RC-20260531-001',
+        category: '手机厂商动态',
+        title: '三星Galaxy Unpacked 7月22日伦敦：Galaxy Z Fold 8/Flip 8/Galaxy Glasses三线齐发',
+        text: '多媒体报道三星将于2026年7月22日在伦敦举办年度夏季Galaxy Unpacked发布会，预期亮相产品包括Galaxy Z Fold 8、Fold 8 Wide（宽折叠新型态）、Z Flip 8，以及搭载Android XR的Galaxy Glasses智能眼镜。三星尚未官方确认日期，历史惯例6-7月前发出邀请函。伦敦举办为Samsung Unpacked首次离开韩国/美国举办。',
+        tags: ['三星','Galaxy Unpacked','Z Fold 8','Z Flip 8','Galaxy Glasses','Android XR','折叠屏'],
+        sources: [
+          {url: 'https://www.androidcentral.com/phones/samsung-galaxy/samsung-galaxy-unpacked-summer-2026-how-to-watch-and-what-to-expect', title: 'Android Central'},
+          {url: 'https://www.androidheadlines.com/2026/05/samsung-galaxy-unpacked-july-22-london-leak.html', title: 'AndroidHeadlines'},
+          {url: 'https://www.phonearena.com/news/galaxy-unpacked-date-leaks_id180315', title: 'PhoneArena'}
+        ],
+        verdict: 'Supported',
+        wikiId: ''
+      },
+      {
+        id: 'RC-20260531-002',
+        category: '芯片',
+        title: '骁龙8 Elite Gen 5 vs Dimensity 9500实测：天玑单核反超，GPU效率与散热占优',
+        text: '最新Geekbench 6基准对比：Dimensity 9500单核4007/多核11217，Snapdragon 8 Elite Gen 5单核3831/多核11525。高通多核仍领先，但天玑单核已反超；联发科GPU效率与散热表现更优，两款旗舰SoC实用差距进一步收窄。联发科AI推理场景下功耗控制优势持续扩大。',
+        tags: ['Snapdragon 8 Elite Gen 5','Dimensity 9500','跑分','基准测试','GPU','CPU','旗舰SoC'],
+        sources: [
+          {url: 'https://www.megamobilecontent.com/news/2026/04/27/snapdragon-8-elite-gen-5-vs-dimensity-9500-gaming-benchmark/', title: 'MegaMobileContent'},
+          {url: 'https://nanoreview.net/en/soc-compare/qualcomm-snapdragon-8-elite-2-vs-mediatek-dimensity-9500', title: 'nanoreview'}
+        ],
+        verdict: 'Supported',
+        wikiId: 'Snapdragon_8_Elite_Gen_5'
+      },
+      {
+        id: 'RC-20260531-003',
+        category: '屏显',
+        title: '三星Display下代OLED峰值亮度5000尼特+无偏光片技术，高亮低耗兼得',
+        text: '三星Display即将推出新一代OLED面板，峰值亮度达5000尼特，采用无偏光片（POL-less）技术，通过省去传统偏光片实现更高透过率与更低功耗的兼顾。目前量产时间未公布，技术方向与业界高亮度趋势一致。',
+        tags: ['三星Display','OLED','5000尼特','无偏光片','POL-less','屏幕技术'],
+        sources: [
+          {url: 'https://mobile.pconline.com.cn/1890/18906500.html', title: '太平洋科技'}
+        ],
+        verdict: 'Supported',
+        wikiId: ''
+      },
+      {
+        id: 'RC-20260531-004',
+        category: '屏显',
+        title: '天马SID 2026展示无痕折叠屏：折痕深度≤50微米，多层材料+水滴转轴协同方案',
+        text: '天马微电子在SID 2026（5月5-7日，洛杉矶）展示6.32英寸无痕折叠OLED屏，折痕深度突破性降至≤50微米，采用多层材料应力优化与水滴形转轴协同适配方案，同时提升抗冲击性能。中国屏企在折叠屏无痕化技术上持续发力，中韩OLED博弈进入关键期。',
+        tags: ['天马','无痕折叠','折叠屏','OLED','SID2026','折痕','屏显技术'],
+        sources: [
+          {url: 'https://news.qq.com/rain/a/20260506A07Z8R00', title: '腾讯新闻'}
+        ],
+        verdict: 'Supported',
+        wikiId: ''
+      },
+      {
+        id: 'RC-20260531-005',
+        category: '散热',
+        title: '超轻泡沫均热板：较商用VC减重约80%、散热性能相当，有望用于手机散热',
+        text: '最新ScienceDirect同行评审研究显示，新型超轻泡沫结构均热板（foam VC）可实现约80%重量减轻，同时保持与商用VC相当的散热扩展能力与结温表现，比石墨烯增强型VC更轻，适合手机、无人机等重量敏感移动设备。',
+        tags: ['均热板','VC','泡沫','散热','轻量化','手机散热'],
+        sources: [
+          {url: 'https://www.sciencedirect.com/science/article/pii/S1359431125032314', title: 'ScienceDirect (同行评审)'}
+        ],
+        verdict: 'Supported',
+        wikiId: ''
+      },
+      {
+        id: 'RC-20260531-006',
+        category: '存储供应',
+        title: 'LPDDR5X/UFS4.0价格Q1涨90-95%，旗舰机存储BoM占比超20%，涨价压力持续',
+        text: '2026年Q1 DRAM合约价上涨90%-95%，AI服务器需求主导价格走势，云厂商支付溢价比手机厂商高50-60%。三星/SK海力士将产能转向DDR5，致LPDDR4/eMMC供应萎缩。搭载16GB-24GB LPDDR5X+512GB-1TB UFS4.0旗舰机型，存储BoM占比可能超过20%，国内多品牌旗舰自3月起涨价2000-3000元。',
+        tags: ['LPDDR5X','UFS4.0','存储供应','涨价','BoM','AI服务器','供应链'],
+        sources: [
+          {url: 'https://finance.sina.com.cn/jjxw/2026-02-28/doc-inhphzau6353485.shtml', title: '新浪财经'},
+          {url: 'https://finance.sina.cn/2026-01-08/detail-inhfpfxi7234449.d.html', title: '新浪财经CN'}
+        ],
+        verdict: 'Supported',
+        wikiId: ''
+      }
+    ]
+  },
+
+  // ══════════════════════════════════
   '2026-05-25': {
     title: '荣耀600系列今日正式发布 · vivo Y600 Turbo上市 · 小米17 Max开售 · vivo S60系列5月29日来袭',
     sub: '今日重磅：荣耀600系列（骁龙8 Elite+7倍超长焦+前置4K Live）与vivo Y600 Turbo（9020mAh+骁龙7s+IP68）同日发布；小米17 Max（8000mAh硅碳+徕卡200MP，4299元国补）今日正式开售；vivo S60系列（7200mAh+90W，主打设计感）定档5月29日。',

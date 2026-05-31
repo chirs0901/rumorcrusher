@@ -81,3 +81,7 @@
   - 更新：`topics/foldable-2026.md`（moto razr fold发布确认+小米MIX Trifold认证）
 - **日期校验**：CTX=BASH=SCHED=2026-05-29，三源一致，无漂移
 - **Git**：仅commit，autopush接管推送
+## 2026-05-31 手动补跑（晨跑session卡死补救）
+- 采集20条，Supported 14，Refuted 1（小米MiMo时间归因错误）
+- tech-digest 新增6条：三星Unpacked/骁龙天玑跑分/三星5000nit OLED/天马无痕折叠屏/超轻泡沫VC/存储BoM超20%
+- 问题记录：07:05 晨跑session (local_1ced4167) 卡死3+小时，原因疑为凌晨网络断连导致WebSearch超时

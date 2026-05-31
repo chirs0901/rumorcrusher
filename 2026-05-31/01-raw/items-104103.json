@@ -1,0 +1,221 @@
+{
+  "collected_at": "2026-05-31T10:41:03+08:00",
+  "timestamp": "104103",
+  "run_type": "manual-trigger",
+  "source_queries": [
+    "手机品牌 端侧大模型 AI功能 2026年5月 最新",
+    "smartphone SoC AI performance Snapdragon Dimensity Apple A19 May 2026",
+    "OLED屏幕新技术 折叠屏 亮度 刷新率 2026年5月",
+    "硅碳负极电池 手机 供应商 量产 2026年5月",
+    "smartphone thermal cooling VC vapor chamber graphene 2026",
+    "UFS LPDDR 内存 存储 价格 供应链 手机 2026年5月",
+    "AI行业重磅 手机端侧大模型 Agent 2026年5月 最新发布",
+    "Snapdragon 8 Elite Gen 5 Dimensity 9500 benchmark announcement May 2026",
+    "折叠屏手机 新品发布 三星 华为 2026年5月"
+  ],
+  "total_raw": 35,
+  "items": [
+    {
+      "id": "raw_001",
+      "title": "MiniCPM-o 4.5 端侧多模态模型发布，骁龙8Gen3实测12FPS视频理解",
+      "text": "面壁智能发布开源通用多模态模型MiniCPM-o 4.5，参数9B，支持全双工多模态实时流，手机端侧实测骁龙8Gen3下12FPS视频理解。",
+      "source_url": "https://zhuanlan.zhihu.com/p/670574382",
+      "source_date": "2026-02-04",
+      "category": "AI行业重磅",
+      "tags": ["端侧大模型", "MiniCPM", "多模态", "手机AI"],
+      "check_worthy": true
+    },
+    {
+      "id": "raw_002",
+      "title": "腾讯HY-1.8B-2Bit端侧大模型量化，生成速度提升2-3倍",
+      "text": "腾讯2月发布HY-1.8B-2Bit端侧大模型，业内首个面向产业场景的2Bit量化端侧模型，真实端侧设备生成速度比原精度提升2-3倍。",
+      "source_url": "https://zhuanlan.zhihu.com/p/670574382",
+      "source_date": "2026-02",
+      "category": "AI行业重磅",
+      "tags": ["端侧大模型", "腾讯", "量化", "2Bit"],
+      "check_worthy": true
+    },
+    {
+      "id": "raw_003",
+      "title": "文心大模型5.1发布，参数压缩至5.0的1/3，激活参数压缩至1/2",
+      "text": "5月9日百度正式发布文心大模型5.1，采用多维弹性预训练技术，参数压缩至文心5.0的1/3，激活参数压缩至1/2。",
+      "source_url": "https://cloud.tencent.com/developer/article/2668857",
+      "source_date": "2026-05-09",
+      "category": "AI行业重磅",
+      "tags": ["文心大模型", "百度", "端侧AI", "压缩"],
+      "check_worthy": true
+    },
+    {
+      "id": "raw_004",
+      "title": "Snapdragon 8 Elite Gen 5 vs Dimensity 9500 基准对比：高通CPU领先，联发科GPU效率反超",
+      "text": "基于OPPO Find X9 Ultra（骁龙8 Elite Gen 5）与Find X9 Pro（Dimensity 9500）的跑分对比：Dimensity 9500 Geekbench 6单核4007/多核11217，骁龙单核3831/多核11525。联发科GPU效率和散热占优，高通CPU仍有优势。",
+      "source_url": "https://www.megamobilecontent.com/news/2026/04/27/snapdragon-8-elite-gen-5-vs-dimensity-9500-gaming-benchmark/",
+      "source_date": "2026-04-27",
+      "category": "芯片",
+      "tags": ["Snapdragon 8 Elite Gen 5", "Dimensity 9500", "跑分", "GPU", "CPU"],
+      "check_worthy": true
+    },
+    {
+      "id": "raw_005",
+      "title": "Apple A19 Pro AI引擎领跑HDR与实时相机处理，45 TOPS NPU骁龙对标",
+      "text": "Apple A19 Pro在HDR处理、人像深度检测、AI增强视频方面领先，Snapdragon 8 Elite Gen 5以45 TOPS AI加速器紧随，两者均入选2026年度最强手机AI芯片。",
+      "source_url": "https://www.mobolist.net/en/blog/snapdragon-vs-mediatek-vs-apple-ultimate-smartphone-processor-guide-2026",
+      "source_date": "2026-05",
+      "category": "芯片",
+      "tags": ["Apple A19 Pro", "Snapdragon 8 Elite Gen 5", "NPU", "AI加速"],
+      "check_worthy": true
+    },
+    {
+      "id": "raw_006",
+      "title": "SID 2026：中国企业展示印刷折叠OLED、无金属掩膜版OLED、柔性无痕OLED",
+      "text": "2026年5月5-7日SID显示周（洛杉矶），中国企业展示印刷折叠OLED、无金属掩膜版OLED（MMF-free）、柔性无痕OLED等创新方案，中韩OLED博弈进入关键期。",
+      "source_url": "https://news.qq.com/rain/a/20260506A07Z8R00",
+      "source_date": "2026-05-06",
+      "category": "屏显",
+      "tags": ["OLED", "SID2026", "印刷OLED", "无痕折叠", "中韩竞争"],
+      "check_worthy": true
+    },
+    {
+      "id": "raw_007",
+      "title": "三星下一代OLED面板最大亮度达5000尼特，采用无偏光片技术",
+      "text": "三星Display即将推出新一代OLED面板，峰值亮度5000尼特，采用无偏光片（POL-less）技术实现更高亮度与更低功耗。",
+      "source_url": "https://mobile.pconline.com.cn/1890/18906500.html",
+      "source_date": "2026-05",
+      "category": "屏显",
+      "tags": ["三星Display", "OLED", "5000尼特", "无偏光片"],
+      "check_worthy": true
+    },
+    {
+      "id": "raw_008",
+      "title": "天马6.32英寸无痕折叠屏折痕深度≤50微米，SID 2026展出",
+      "text": "天马在SID 2026展示6.32英寸无痕折叠屏，折痕深度小于等于50微米，采用多层材料应力优化与水滴形转轴协同适配，并提升抗冲击性能。",
+      "source_url": "https://news.qq.com/rain/a/20260506A07Z8R00",
+      "source_date": "2026-05-06",
+      "category": "屏显",
+      "tags": ["天马", "无痕折叠", "折叠屏", "OLED", "SID2026"],
+      "check_worthy": true
+    },
+    {
+      "id": "raw_009",
+      "title": "苹果折叠屏将搭载宁德新能源独供硅碳负极电池",
+      "text": "爆料称苹果首款折叠屏iPhone将搭载硅碳负极电池，由宁德新能源独家供应，能量密度显著高于传统石墨负极。",
+      "source_url": "https://www.guancha.cn/economy/2025_03_10_767899.shtml",
+      "source_date": "2025-03-10",
+      "category": "电池",
+      "tags": ["苹果折叠屏", "硅碳负极", "宁德新能源", "电池供应"],
+      "check_worthy": true
+    },
+    {
+      "id": "raw_010",
+      "title": "珠海和创新能源2000吨硅碳负极产线5月投产",
+      "text": "珠海和创新能源年产2000吨硅碳负极材料项目计划2026年5月投产，属本年度新增硅碳负极供应产能之一。",
+      "source_url": "https://www.itdcw.com/news/ycnews/022Q540552026.html",
+      "source_date": "2026-01",
+      "category": "电池",
+      "tags": ["硅碳负极", "和创新能源", "量产", "供应链"],
+      "check_worthy": true
+    },
+    {
+      "id": "raw_011",
+      "title": "Apple iPhone 16采用石墨烯散热片，三星继续使用VC均热板",
+      "text": "Apple在iPhone 16系列选用石墨烯散热片（成本低、更薄），而三星Galaxy S25系列保持VC均热板方案（导热系数高3-5倍）。3D打印超薄均热板可构建复杂三维毛细结构，提升端侧AI负载下的被动散热效率。",
+      "source_url": "https://lipolytim.com/graphene-instead-vapor-chamber/",
+      "source_date": "2026",
+      "category": "散热",
+      "tags": ["石墨烯", "VC均热板", "苹果", "三星", "散热"],
+      "check_worthy": true
+    },
+    {
+      "id": "raw_012",
+      "title": "超轻泡沫均热板研究：重量减轻80%同时保持同等散热效果",
+      "text": "ScienceDirect发表新研究，超轻泡沫均热板比商用VC重量减轻约80%，散热扩展与结温表现相当，甚至比石墨烯增强型均热板更轻，有望用于手机与无人机等移动设备。",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S1359431125032314",
+      "source_date": "2026-05",
+      "category": "散热",
+      "tags": ["泡沫均热板", "VC", "轻量化", "散热", "研究"],
+      "check_worthy": true
+    },
+    {
+      "id": "raw_013",
+      "title": "LPDDR5X与UFS4.0价格Q1上涨90-95%，手机厂商BoM承压",
+      "text": "2026年Q1 DRAM合约价上涨90%-95%，NAND同步大涨。16GB-24GB LPDDR5X+512GB-1TB UFS4.0旗舰配置，存储成本占BoM比例可能超过20%。国内手机厂商自3月起开始涨价，部分旗舰涨幅2000-3000元。",
+      "source_url": "https://finance.sina.com.cn/jjxw/2026-02-28/doc-inhphzau6353485.shtml",
+      "source_date": "2026-02-28",
+      "category": "存储供应",
+      "tags": ["LPDDR5X", "UFS4.0", "涨价", "存储供应链", "手机BoM"],
+      "check_worthy": true
+    },
+    {
+      "id": "raw_014",
+      "title": "云服务商存储溢价超手机厂商50-60%，LPDDR4/eMMC供应萎缩",
+      "text": "三星、SK海力士将产能转向服务器DDR5，导致LPDDR4和eMMC老一代产品供应快速萎缩。云服务商支付的存储溢价比手机厂商高50-60%，AI服务器需求主导了存储价格走势。",
+      "source_url": "https://finance.sina.cn/2026-01-08/detail-inhfpfxi7234449.d.html",
+      "source_date": "2026-01-08",
+      "category": "存储供应",
+      "tags": ["DDR5", "LPDDR4", "eMMC", "存储供应", "云服务商", "三星", "SK海力士"],
+      "check_worthy": true
+    },
+    {
+      "id": "raw_015",
+      "title": "华为Pura X Max大阔折发布，麒麟9030 Pro+鸿蒙6.1，售价10999元起",
+      "text": "华为4月20日发布Pura X Max，全球首款大阔折折叠屏，搭载麒麟9030 Pro，鸿蒙6.1芯软协同，整机性能提升30%，售价10999元起。",
+      "source_url": "https://digi.china.com/articles/20260515/202605151869999.html",
+      "source_date": "2026-04-20",
+      "category": "手机厂商动态",
+      "tags": ["华为", "Pura X Max", "折叠屏", "麒麟9030 Pro", "鸿蒙"],
+      "check_worthy": true
+    },
+    {
+      "id": "raw_016",
+      "title": "三星Galaxy Unpacked定档2026年7月22日，或推三折叠手机+AI眼镜",
+      "text": "三星宣布2026年7月22日在伦敦举办Galaxy Unpacked发布会，计划推出三折叠手机、AI智能眼镜及新一代智能手表。",
+      "source_url": "https://chinaflashmarket.com/newsflash/37545",
+      "source_date": "2026-05",
+      "category": "手机厂商动态",
+      "tags": ["三星", "Galaxy Unpacked", "三折叠", "AI眼镜", "发布会"],
+      "check_worthy": true
+    },
+    {
+      "id": "raw_017",
+      "title": "moto razr fold横向大折叠旗舰2026年5月19日发布",
+      "text": "联想官方宣布旗下moto首款横向大折叠旗舰moto razr fold于2026年5月19日正式发布。",
+      "source_url": "https://www.tmtpost.com/7913256.html",
+      "source_date": "2026-05-19",
+      "category": "手机厂商动态",
+      "tags": ["联想", "moto", "razr fold", "横向折叠", "发布"],
+      "check_worthy": true
+    },
+    {
+      "id": "raw_018",
+      "title": "字节发布企业级AI助手字节智助，覆盖会议纪要/文档/邮件三场景",
+      "text": "5月8日字节正式发布企业级AI办公助手字节智助，核心覆盖智能会议纪要、文档自动生成、邮件智能回复三大场景。",
+      "source_url": "https://cloud.tencent.com/developer/article/2668857",
+      "source_date": "2026-05-08",
+      "category": "AI行业重磅",
+      "tags": ["字节跳动", "AI助手", "企业AI", "智能体"],
+      "check_worthy": false,
+      "skip_reason": "非手机行业相关，属企业软件类"
+    },
+    {
+      "id": "raw_019",
+      "title": "火山引擎发布Agent Plan全模态智能体套餐，从编程引擎升级至全场景平台",
+      "text": "5月11日火山引擎发布业界首个全模态智能体套餐包Agent Plan，实现从编程引擎到全场景智能体平台升级。",
+      "source_url": "https://cloud.tencent.com/developer/article/2668857",
+      "source_date": "2026-05-11",
+      "category": "AI行业重磅",
+      "tags": ["火山引擎", "AI Agent", "智能体"],
+      "check_worthy": false,
+      "skip_reason": "非手机端侧AI，企业云平台类"
+    },
+    {
+      "id": "raw_020",
+      "title": "小米MiMo-VL-7B视觉语言大模型，7B参数超越OpenAI o1-mini数学推理",
+      "text": "小米推出MiMo-VL-7B端侧视觉语言模型，7B参数量在数学推理和代码竞赛评测上超越OpenAI o1-mini。",
+      "source_url": "https://36kr.com/p/3552738263334017",
+      "source_date": "2026-05",
+      "category": "AI行业重磅",
+      "tags": ["小米", "MiMo", "端侧大模型", "视觉语言", "数学推理"],
+      "check_worthy": true
+    }
+  ]
+}
