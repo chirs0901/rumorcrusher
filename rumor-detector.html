@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RumorCrusher · 实时谣言检测器</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .search-input:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+    }
+    .verdict-supported {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+    }
+    .verdict-refuted {
+      background: linear-gradient(135deg, #ef4444, #dc2626);
+      color: white;
+    }
+    .verdict-uncertain {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: white;
+    }
+    .agent-card {
+      transition: all 0.3s ease;
+    }
+    .agent-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .loading-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+    .fade-in {
+      animation: fadeIn 0.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .progress-bar {
+      transition: width 0.5s ease;
+    }
+  </style>
+</head>
+<body class="p-4 md:p-8">
+
+<div class="max-w-5xl mx-auto">
+  
+  <!-- Header -->
+  <header class="text-center mb-8 text-white">
+    <h1 class="text-4xl md:text-5xl font-black mb-2">
+      <i class="fas fa-shield-alt mr-3"></i>RumorCrusher
+    </h1>
+    <p class="text-lg opacity-90">实时谣言检测器 · 基于多Agent审核委员会</p>
+  </header>
+
+  <!-- Search Panel -->
+  <div class="glass-panel rounded-2xl shadow-2xl p-6 md:p-8 mb-6">
+    <div class="mb-4">
+      <label class="block text-sm font-semibold text-gray-700 mb-2">
+        <i class="fas fa-question-circle mr-2 text-indigo-600"></i>输入您要验证的问题或声称
+      </label>
+      <div class="relative">
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="例如：iPhone 18将搭载固态电池 / 骁龙8 Gen6性能提升200%..."
+          class="search-input w-full px-6 py-4 text-lg border-2 border-gray-200 rounded-xl transition-all"
+          onkeypress="if(event.key==='Enter') startVerification()"
+        >
+        <button 
+          onclick="startVerification()"
+          class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+        >
+          <i class="fas fa-search mr-2"></i>验证
+        </button>
+      </div>
+    </div>
+    
+    <div class="flex flex-wrap gap-2 text-sm text-gray-600">
+      <span class="font-semibold">热门示例：</span>
+      <button onclick="setExample('三星Galaxy S26将搭载全固态电池')" class="hover:text-indigo-600 cursor-pointer underline">三星S26固态电池</button>
+      <button onclick="setExample('台积电2nm产能被苹果独占')" class="hover:text-indigo-600 cursor-pointer underline">台积电2nm苹果独占</button>
+      <button onclick="setExample('天玑9600 GPU性能超越A20 Pro')" class="hover:text-indigo-600 cursor-pointer underline">天玑9600超越A20 Pro</button>
+    </div>
+  </div>
+
+  <!-- Progress Panel (Hidden by default) -->
+  <div id="progressPanel" class="hidden glass-panel rounded-2xl shadow-2xl p-6 mb-6">
+    <h3 class="text-lg font-bold text-gray-800 mb-4">
+      <i class="fas fa-cogs mr-2 text-indigo-600"></i>验证进度
+    </h3>
+    
+    <div class="space-y-4">
+      <div class="step-item" id="step-kb">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-semibold text-gray-700">
+            <i class="fas fa-database mr-2"></i>步骤 1/5: 检索本地知识库
+          </span>
+          <span class="status-icon text-gray-400"><i class="fas fa-circle-notch fa-spin"></i></span>
+        </div>
+        <div class="w-full bg-gray-200 rounded-full h-2">
+          <div class="progress-bar bg-indigo-600 h-2 rounded-full" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <div class="step-item hidden" id="step-web">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-semibold text-gray-700">
+            <i class="fas fa-globe mr-2"></i>步骤 2/5: 网络搜索采集信息
+          </span>
+          <span class="status-icon text-gray-400"><i class="fas fa-circle-notch fa-spin"></i></span>
+        </div>
+        <div class="w-full bg-gray-200 rounded-full h-2">
+          <div class="progress-bar bg-indigo-600 h-2 rounded-full" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <div class="step-item hidden" id="step-fact">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-semibold text-gray-700">
+            <i class="fas fa-check-double mr-2"></i>步骤 3/5: Fact-Check Agent 核查
+          </span>
+          <span class="status-icon text-gray-400"><i class="fas fa-circle-notch fa-spin"></i></span>
+        </div>
+        <div class="w-full bg-gray-200 rounded-full h-2">
+          <div class="progress-bar bg-indigo-600 h-2 rounded-full" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <div class="step-item hidden" id="step-pseudo">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-semibold text-gray-700">
+            <i class="fas fa-flask mr-2"></i>步骤 4/5: Pseudo-Science Agent 检测
+          </span>
+          <span class="status-icon text-gray-400"><i class="fas fa-circle-notch fa-spin"></i></span>
+        </div>
+        <div class="w-full bg-gray-200 rounded-full h-2">
+          <div class="progress-bar bg-indigo-600 h-2 rounded-full" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <div class="step-item hidden" id="step-logic">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-semibold text-gray-700">
+            <i class="fas fa-brain mr-2"></i>步骤 5/5: Logic Coherence Agent 分析
+          </span>
+          <span class="status-icon text-gray-400"><i class="fas fa-circle-notch fa-spin"></i></span>
+        </div>
+        <div class="w-full bg-gray-200 rounded-full h-2">
+          <div class="progress-bar bg-indigo-600 h-2 rounded-full" style="width: 0%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Result Panel (Hidden by default) -->
+  <div id="resultPanel" class="hidden fade-in">
+    
+    <!-- Verdict Hero Card -->
+    <div id="verdictCard" class="rounded-2xl shadow-2xl p-8 mb-6 text-center">
+      <div class="text-6xl mb-4" id="verdictIcon">
+        <i class="fas fa-question-circle"></i>
+      </div>
+      <h2 class="text-3xl font-black mb-2" id="verdictTitle">验证中...</h2>
+      <p class="text-lg opacity-90 mb-4" id="verdictDescription">请稍候</p>
+      
+      <!-- Confidence Gauge -->
+      <div id="confidenceBadge" class="mt-2">
+        <div class="inline-flex items-center gap-2 bg-white/20 rounded-full px-5 py-2">
+          <span class="text-sm">置信度</span>
+          <span class="text-2xl font-black" id="confPct">--%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Warnings -->
+    <div id="warningsList" class="hidden mb-6"></div>
+
+    <!-- Stats Dashboard -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6" id="statsDashboard">
+      <div class="glass-panel rounded-xl p-4 text-center">
+        <div class="text-2xl font-black text-indigo-600" id="statKB">0</div>
+        <div class="text-xs text-gray-500 mt-1">📄 知识库命中</div>
+      </div>
+      <div class="glass-panel rounded-xl p-4 text-center">
+        <div class="text-2xl font-black text-amber-600" id="statWeb">0</div>
+        <div class="text-xs text-gray-500 mt-1">🌐 网络采集</div>
+      </div>
+      <div class="glass-panel rounded-xl p-4 text-center">
+        <div class="text-2xl font-black text-purple-600" id="statAgents">0</div>
+        <div class="text-xs text-gray-500 mt-1">🤖 Agent通过</div>
+      </div>
+      <div class="glass-panel rounded-xl p-4 text-center">
+        <div class="text-2xl font-black text-green-600" id="statIssues">0</div>
+        <div class="text-xs text-gray-500 mt-1">🔍 发现问题</div>
+      </div>
+    </div>
+
+    <!-- Evidence Summary -->
+    <div class="glass-panel rounded-2xl shadow-2xl p-6 mb-6">
+      <h3 class="text-xl font-bold text-gray-800 mb-4">
+        <i class="fas fa-file-alt mr-2 text-indigo-600"></i>证据摘要
+      </h3>
+      <div id="evidenceContent" class="prose max-w-none text-gray-700 leading-relaxed">
+        <!-- Dynamic content -->
+      </div>
+    </div>
+
+    <!-- Agent Reports -->
+    <div class="grid md:grid-cols-3 gap-4 mb-6">
+      
+      <div class="agent-card glass-panel rounded-xl p-5">
+        <div class="flex items-center mb-3">
+          <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+            <i class="fas fa-check-circle text-blue-600"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Fact-Check Agent</h4>
+            <p class="text-xs text-gray-500">事实核查</p>
+          </div>
+        </div>
+        <div id="factCheckResult" class="text-sm text-gray-700">
+          <i class="fas fa-circle-notch fa-spin text-gray-400"></i> 等待中...
+        </div>
+      </div>
+
+      <div class="agent-card glass-panel rounded-xl p-5">
+        <div class="flex items-center mb-3">
+          <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+            <i class="fas fa-flask text-purple-600"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Pseudo-Science Agent</h4>
+            <p class="text-xs text-gray-500">伪科学检测</p>
+          </div>
+        </div>
+        <div id="pseudoScienceResult" class="text-sm text-gray-700">
+          <i class="fas fa-circle-notch fa-spin text-gray-400"></i> 等待中...
+        </div>
+      </div>
+
+      <div class="agent-card glass-panel rounded-xl p-5">
+        <div class="flex items-center mb-3">
+          <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3">
+            <i class="fas fa-brain text-green-600"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Logic Coherence Agent</h4>
+            <p class="text-xs text-gray-500">逻辑一致性</p>
+          </div>
+        </div>
+        <div id="logicResult" class="text-sm text-gray-700">
+          <i class="fas fa-circle-notch fa-spin text-gray-400"></i> 等待中...
+        </div>
+      </div>
+
+    </div>
+
+    <!-- AVeriTeC Label -->
+    <div id="averitecBar" class="hidden glass-panel rounded-xl p-4 mb-6">
+      <div class="flex items-center justify-between">
+        <span class="text-sm font-semibold text-gray-600">📋 AVeriTeC 标准判定</span>
+        <span class="text-sm font-bold px-4 py-1.5 rounded-full" id="averitecLabel">--</span>
+      </div>
+    </div>
+
+    <!-- Sources -->
+    <div class="glass-panel rounded-2xl shadow-2xl p-6">
+      <h3 class="text-xl font-bold text-gray-800 mb-4">
+        <i class="fas fa-link mr-2 text-indigo-600"></i>参考信源
+      </h3>
+      <div id="sourcesList" class="space-y-2">
+        <!-- Dynamic content -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-white/80 text-sm mt-8 pb-4">
+    <p>Powered by RumorCrusher Multi-Agent Verification System</p>
+    <p class="mt-1">基于 AVeriTeC 标准 · 四重审核机制 · 知识飞轮持续进化</p>
+  </footer>
+
+</div>
+
+<script>
+// ── API 配置 ──
+// 本地开发: http://127.0.0.1:5000
+// 云端部署: 加载 rc-config.js（OSS 自动生成）
+(function() {
+  var s = document.createElement('script');
+  s.src = 'rc-config.js';
+  s.onerror = function() { /* 本地开发，无配置文件 */ };
+  document.head.appendChild(s);
+})();
+
+// 等 rc-config.js 加载后，使用 window.RC_API_BASE
+setTimeout(function() {
+  window.RC_API_BASE = window.RC_API_BASE || (
+    (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost')
+      ? 'http://127.0.0.1:5000'
+      : 'http://127.0.0.1:5000'
+  );
+}, 100);
+
+const getAPIBase = () => window.RC_API_BASE || 'http://127.0.0.1:5000';
+
+// Set example query
+function setExample(text) {
+  document.getElementById('searchInput').value = text;
+  document.getElementById('searchInput').focus();
+}
+
+// Start verification process
+async function startVerification() {
+  const query = document.getElementById('searchInput').value.trim();
+  if (!query) {
+    alert('请输入要验证的问题或声称');
+    return;
+  }
+
+  // Reset UI
+  document.getElementById('resultPanel').classList.add('hidden');
+  document.getElementById('progressPanel').classList.remove('hidden');
+  
+  // Reset all steps
+  resetSteps();
+
+  try {
+    // Call backend API
+    const response = await fetch(`${getAPIBase()}/api/verify`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query })
+    });
+
+    if (!response.ok) {
+      throw new Error('验证请求失败');
+    }
+
+    const result = await response.json();
+    displayResult(result);
+
+  } catch (error) {
+    console.error('Verification error:', error);
+    showError('验证过程中出现错误，请稍后重试');
+  }
+}
+
+// Reset progress steps
+function resetSteps() {
+  const steps = ['step-kb', 'step-web', 'step-fact', 'step-pseudo', 'step-logic'];
+  steps.forEach((stepId, index) => {
+    const step = document.getElementById(stepId);
+    if (index === 0) {
+      step.classList.remove('hidden');
+    } else {
+      step.classList.add('hidden');
+    }
+    step.querySelector('.progress-bar').style.width = '0%';
+    step.querySelector('.status-icon').innerHTML = '<i class="fas fa-circle-notch fa-spin"></i>';
+    step.querySelector('.status-icon').className = 'status-icon text-gray-400';
+  });
+}
+
+// Update step progress
+function updateStep(stepId, progress, status) {
+  const step = document.getElementById(stepId);
+  step.classList.remove('hidden');
+  step.querySelector('.progress-bar').style.width = progress + '%';
+  
+  if (status === 'complete') {
+    step.querySelector('.status-icon').innerHTML = '<i class="fas fa-check-circle"></i>';
+    step.querySelector('.status-icon').className = 'status-icon text-green-500';
+  } else if (status === 'error') {
+    step.querySelector('.status-icon').innerHTML = '<i class="fas fa-times-circle"></i>';
+    step.querySelector('.status-icon').className = 'status-icon text-red-500';
+  }
+}
+
+// Display verification result - 增强版可视化
+function displayResult(result) {
+  document.getElementById('progressPanel').classList.add('hidden');
+  document.getElementById('resultPanel').classList.remove('hidden');
+
+  // ── Verdict Hero Card ──
+  const verdictCard = document.getElementById('verdictCard');
+  const verdictIcon = document.getElementById('verdictIcon');
+  const verdictTitle = document.getElementById('verdictTitle');
+  const verdictDesc = document.getElementById('verdictDescription');
+
+  const verdictConfig = {
+    'supported': { cls: 'verdict-supported', icon: 'fa-check-circle', title: '✅ 真实可信', desc: '该声称通过了多重验证，有充分证据支持', color: '#22c55e' },
+    'refuted': { cls: 'verdict-refuted', icon: 'fa-times-circle', title: '❌ 不实谣言', desc: '该声称已被证伪，存在明显错误或误导', color: '#ef4444' },
+    'not_enough_evidence': { cls: 'verdict-uncertain', icon: 'fa-exclamation-triangle', title: '⚠️ 证据不足', desc: '当前证据不足以做出明确判断', color: '#f59e0b' },
+    'conflicting_evidence': { cls: 'verdict-uncertain', icon: 'fa-exchange-alt', title: '🔄 证据冲突', desc: '不同信源给出矛盾结论', color: '#8b5cf6' },
+  };
+  
+  const cfg = verdictConfig[result.verdict] || verdictConfig['not_enough_evidence'];
+  verdictCard.className = `${cfg.cls} rounded-2xl shadow-2xl p-8 mb-6 text-center`;
+  verdictIcon.innerHTML = `<i class="fas ${cfg.icon}"></i>`;
+  verdictTitle.textContent = cfg.title;
+  verdictDesc.textContent = cfg.desc;
+  
+  // ── Confidence Gauge ──
+  const pct = Math.round(result.confidence * 100);
+  document.getElementById('confPct').textContent = pct + '%';
+
+  // ── Stats Dashboard ──
+  const kbCount = result.sources.filter(s => ['knowledge_base','wiki','skill'].includes(s.type)).length;
+  const webCount = result.sources.filter(s => s.type === 'web').length;
+  const agents = result.agents || {};
+  const agentPassCount = Object.values(agents).filter(a => a && a.status === 'pass').length;
+  const allIssues = [];
+  Object.values(agents).forEach(a => { if (a && a.issues) allIssues.push(...a.issues); });
+  
+  document.getElementById('statKB').textContent = kbCount;
+  document.getElementById('statWeb').textContent = webCount;
+  document.getElementById('statAgents').textContent = agentPassCount + '/' + Object.keys(agents).length;
+  document.getElementById('statIssues').textContent = allIssues.length;
+
+  // ── AVeriTeC Bar ──
+  if (result.averitec_label) {
+    const avBar = document.getElementById('averitecBar');
+    avBar.classList.remove('hidden');
+    const avLabel = document.getElementById('averitecLabel');
+    const avColors = {
+      'Supported': 'bg-green-100 text-green-700 border border-green-300',
+      'Refuted': 'bg-red-100 text-red-700 border border-red-300',
+      'Not Enough Evidence': 'bg-amber-100 text-amber-700 border border-amber-300',
+      'Conflicting Evidence': 'bg-purple-100 text-purple-700 border border-purple-300',
+    };
+    avLabel.className = 'text-sm font-bold px-4 py-1.5 rounded-full ' + (avColors[result.averitec_label] || 'bg-gray-100 text-gray-700');
+    avLabel.textContent = result.averitec_label;
+  }
+
+  // ── Evidence Summary (Markdown → HTML) ──
+  document.getElementById('evidenceContent').innerHTML = parseMarkdown(result.evidence_summary || '');
+
+  // ── Agent Cards (增强版) ──
+  document.getElementById('factCheckResult').innerHTML = renderAgentCard(result.agents.fact_check, 'Fact-Check', '事实核查', 'text-blue-600', 'bg-blue-50');
+  document.getElementById('pseudoScienceResult').innerHTML = renderAgentCard(result.agents.pseudo_science, 'Pseudo-Science', '伪科学检测', 'text-purple-600', 'bg-purple-50');
+  document.getElementById('logicResult').innerHTML = renderAgentCard(result.agents.logic_coherence, 'Logic Coherence', '逻辑一致性', 'text-green-600', 'bg-green-50');
+
+  // ── Sources (增强版) ──
+  document.getElementById('sourcesList').innerHTML = result.sources.length > 0 
+    ? result.sources.map(src => renderSourceCard(src)).join('')
+    : '<div class="text-center text-gray-400 py-6"><i class="fas fa-search text-3xl mb-2"></i><p>未找到相关信源</p></div>';
+
+  // ── 警告列表 ──
+  const warnDiv = document.getElementById('warningsList');
+  if (result.warnings && result.warnings.length > 0) {
+    warnDiv.innerHTML = result.warnings.map(w => `
+      <div class="flex items-start p-3 bg-amber-50 border-l-4 border-amber-500 rounded mb-2">
+        <i class="fas fa-exclamation-triangle text-amber-600 mr-2 mt-0.5"></i>
+        <span class="text-sm text-amber-800">${w}</span>
+      </div>
+    `).join('');
+    warnDiv.classList.remove('hidden');
+  } else {
+    warnDiv.classList.add('hidden');
+  }
+
+  document.getElementById('resultPanel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ── 渲染 Agent 卡片 ──
+function renderAgentCard(agent, name, label, iconColor, bgColor) {
+  if (!agent) return '<span class="text-gray-400 text-sm">未执行</span>';
+  
+  const statusConfig = {
+    'pass': { icon: 'fa-check-circle', cls: 'text-green-600', bg: 'bg-green-50 border-green-200', label: '✅ 通过' },
+    'warn': { icon: 'fa-exclamation-triangle', cls: 'text-amber-600', bg: 'bg-amber-50 border-amber-200', label: '⚠️ 警告' },
+    'fail': { icon: 'fa-times-circle', cls: 'text-red-600', bg: 'bg-red-50 border-red-200', label: '❌ 未通过' },
+  };
+  const sc = statusConfig[agent.status] || statusConfig['pass'];
+  
+  let html = `<div class="border rounded-lg p-3 ${sc.bg}">`;
+  html += `<div class="flex items-center justify-between mb-2">`;
+  html += `<span class="text-sm font-bold ${sc.cls}"><i class="fas ${sc.icon} mr-1"></i>${sc.label}</span>`;
+  if (agent.weight) html += `<span class="text-xs text-gray-400">权重 ${Math.round(agent.weight*100)}%</span>`;
+  html += `</div>`;
+  
+  if (agent.claims_checked) html += `<div class="text-xs text-gray-500 mb-1">核查 ${agent.claims_checked} 项 | 支持:${agent.supported || 0} 反驳:${agent.refuted || 0}</div>`;
+  if (agent.matched_patterns && agent.matched_patterns.length > 0) {
+    html += `<div class="text-xs text-red-600 mb-1">🔍 匹配 ${agent.matched_patterns.length} 个伪科学模式</div>`;
+  }
+  if (agent.fallacies && agent.fallacies.length > 0) {
+    html += `<div class="text-xs text-amber-600 mb-1">🧠 检测 ${agent.fallacies.length} 个逻辑谬误</div>`;
+  }
+  if (agent.details) {
+    html += `<div class="text-xs text-gray-600 mt-1 leading-relaxed" style="max-height:120px;overflow-y:auto;">${escapeHtml(agent.details).replace(/\n/g, '<br>')}</div>`;
+  }
+  html += `</div>`;
+  return html;
+}
+
+// ── 渲染信源卡片 ──
+function renderSourceCard(src) {
+  const credColors = { 'knowledge_base': '#6366f1', 'wiki': '#8b5cf6', 'skill': '#a78bfa', 'web': '#f59e0b', 'news': '#ef4444', 'research': '#22c55e', 'benchmark': '#06b6d4' };
+  const typeLabels = { 'knowledge_base': '📄 KB', 'wiki': '📚 Wiki', 'skill': '🔧 Skill', 'web': '🌐 Web', 'news': '📰 新闻', 'research': '📊 研究', 'benchmark': '📈 基准' };
+  const color = credColors[src.type] || '#6b7280';
+  const label = typeLabels[src.type] || src.type;
+  const cred = src.credibility ? Math.round(src.credibility * 100) : 50;
+  
+  return `
+    <a href="${src.url}" target="_blank" class="block p-3 bg-white rounded-lg hover:shadow-md transition-all border border-gray-200 hover:border-indigo-300">
+      <div class="flex items-start gap-3">
+        <span class="text-xs font-bold px-2 py-0.5 rounded-full whitespace-nowrap" style="background:${color}15;color:${color};border:1px solid ${color}30">${label}</span>
+        <div class="flex-1 min-w-0">
+          <div class="font-semibold text-indigo-700 text-sm truncate">${src.title}</div>
+          <div class="flex items-center gap-2 mt-1">
+            <span class="text-xs text-gray-400">${src.domain}</span>
+            <div class="flex items-center gap-1">
+              <div class="w-12 h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full rounded-full" style="width:${cred}%;background:${cred >= 70 ? '#22c55e' : cred >= 50 ? '#f59e0b' : '#ef4444'}"></div>
+              </div>
+              <span class="text-xs text-gray-400">${cred}%</span>
+            </div>
+          </div>
+          ${src.snippet ? `<div class="text-xs text-gray-500 mt-1 line-clamp-2">${escapeHtml(src.snippet).substring(0, 150)}</div>` : ''}
+        </div>
+        <i class="fas fa-external-link-alt text-gray-300 text-xs mt-1"></i>
+      </div>
+    </a>
+  `;
+}
+
+// ── 简单 Markdown 解析 ──
+function parseMarkdown(md) {
+  if (!md) return '<p class="text-gray-400">暂无证据摘要</p>';
+  let html = md
+    .replace(/^### (.+)$/gm, '<h4 class="font-bold text-gray-800 mt-4 mb-2 text-lg">$1</h4>')
+    .replace(/^## (.+)$/gm, '<h3 class="font-bold text-gray-900 mt-4 mb-3 text-xl">$1</h3>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong class="text-gray-900">$1</strong>')
+    .replace(/^- (.+)$/gm, '<li class="ml-4 text-gray-700 text-sm">$1</li>')
+    .replace(/\|(.+)\|/g, (m) => '<span class="text-gray-500 text-xs">' + m + '</span>')
+    .replace(/\n\n/g, '</p><p class="text-gray-700 text-sm mb-2">')
+    .replace(/⚠️/g, '<span class="text-amber-600 font-bold">⚠️</span>')
+    .replace(/❌/g, '<span class="text-red-600 font-bold">❌</span>')
+    .replace(/✅/g, '<span class="text-green-600 font-bold">✅</span>')
+    .replace(/🚨/g, '<span class="text-red-600 font-bold">🚨</span>');
+  return '<p class="text-gray-700 text-sm mb-2">' + html + '</p>';
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// Show error message
+function showError(message) {
+  document.getElementById('progressPanel').classList.add('hidden');
+  document.getElementById('resultPanel').classList.remove('hidden');
+  
+  document.getElementById('verdictCard').className = 'verdict-refuted rounded-2xl shadow-2xl p-8 mb-6 text-center';
+  document.getElementById('verdictIcon').innerHTML = '<i class="fas fa-exclamation-circle"></i>';
+  document.getElementById('verdictTitle').textContent = '验证失败';
+  document.getElementById('verdictDescription').textContent = message;
+}
+</script>
+
+</body>
+</html>

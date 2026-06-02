@@ -1,0 +1,5 @@
+# RumorCrusher Python API 依赖
+flask>=2.0
+flask-cors>=4.0
+duckduckgo-search>=7.0
+lxml>=5.0
