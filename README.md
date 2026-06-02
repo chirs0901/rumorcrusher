@@ -1,55 +1,155 @@
 # RumorCrusher · 粉碎谣言，侦测事实真伪
 
-> 一个每日运行的手机硬件类资讯**事实核查 + 知识沉淀**系统。
-> 每天 22:00 自动采集中英文+官方+学术+视频多源内容，由多 Agent 审核委员会做事实/伪科学/逻辑/三观核查，产出两份报告：
->
-> - **质检报告**：本日发现的有问题内容清单 + 证据 + 方法论
-> - **干净分析报告**：剔除所有问题内容后的洞察分析
->
-> 同时驱动两个**知识飞轮**：
->
-> 1. **个人技能库** (`skills/`)：每日新发现的核查方法持续追加
-> 2. **LLM Wiki** (`wiki/`)：Karpathy 风格的实体+主题混合图谱
+> 一个全自动运行的手机硬件类资讯**事实核查 + 知识沉淀**系统。
+> 每天 05:00（早班）和 22:00（晚班）自动采集中英文多源内容，由多 Agent 审核委员会完成事实核查、伪科学检测、逻辑一致性分析、情感/价值观过滤，产出双份报告并驱动知识飞轮持续沉淀。
 
-## 公开报告地址
+**公开地址：** [`https://chirs0901.github.io/rumorcrusher/`](https://chirs0901.github.io/rumorcrusher/)
 
-> 部署到 GitHub Pages 后，公开访问链接为：
-> `https://chirs0901.github.io/rumorcrusher/`
->
-> （首次发布后此链接生效）
+---
+
+## 核心价值
+
+| 维度 | 说明 |
+|------|------|
+| 📰 新闻时效性 | **只采集近 3–5 天发布的新闻**，宁缺毋滥，拒绝以旧充新 |
+| 🔍 多维核查 | 事实 / 伪科学 / 逻辑谬误 / 情感价值观，四审叠加 |
+| 🏷 AVeriTeC 标签 | Supported / ConflictingEvidence / Refuted / NotEnoughEvidence |
+| 🧠 知识积累 | 每日产出喂入知识飞轮，方法论和实体图谱持续成长 |
+| 🌐 公开透明 | 所有核查报告和知识库部署至 GitHub Pages，可公开访问 |
+
+---
+
+## 每日工作流程
+
+```
+每天 05:00（早班）& 22:00（晚班）自动触发
+                    ↓
+  ① Collector Agent — 采集近 3–5 天中英文资讯
+     信源：科技媒体 / OEM 官方 / 学术预印本 / 视频元信息
+     铁律：发布日期超过 5 天的内容一律丢弃
+                    ↓
+  ② Check-Worthiness Filter — 对每条素材打 0~1 可查证分
+     高分 → 全量四 Agent 审核
+     中分 → 事实 + 逻辑两 Agent 审核
+     低分 → 仅记录存档
+                    ↓
+  ③ 审核委员会（四 Agent 并行）
+     • Fact-Check Agent     — 交叉信源验证 + 时序追问（TSVer）
+     • Pseudo-Science Agent — 对照伪科学模式库检测
+     • Logic Coherence Agent— 识别逻辑谬误 + 内部矛盾
+     • Sentiment/Values Agent — 标注标题党、煽动性表达
+                    ↓
+  ④ Synthesizer Agent — 综合判定
+     任一 fail → 进质检报告（不进干净报告）
+     多个 warn → 双报告均收录（干净版带 warning 标注）
+     全 pass   → 仅进干净报告
+                    ↓
+  ⑤ Report Writer — 写入当日目录
+     03-quality-report.md   问题内容清单 + 证据链
+     04-clean-report.md     剔除问题后的洞察分析
+     05-methodology-delta.md 本次发现的新核查方法
+     06-self-eval.md        AVeriTeC 标签分布 / UnR 率 / 质量评分
+                    ↓
+  ⑥ 知识飞轮 Agents
+     • Skill Updater  → 追加新方法论到 skills/
+     • Wiki Updater   → 更新实体图谱 wiki/ 及 wiki/index.html
+     • KB Updater     → 将干净报告推入 knowledge-base/index.html
+     • Visualizer     → 生成/刷新 tech-digest/index.html 日报汇总
+     • Publisher      → git commit + push 到 GitHub Pages
+```
+
+---
 
 ## 目录结构
 
 ```
 RumorCrusher/
-├── README.md                     # 本文件
-├── .gitignore                    # 排除密钥
+├── README.md                        # 本文件
+├── index.html                       # 项目入口（GitHub Pages 首页）
+│
+├── tech-digest/
+│   └── index.html                   # 📰 每日资讯汇总（按日期倒序）
+│
+├── knowledge-base/
+│   └── index.html                   # 🗂 可浏览知识库（7 大品类过滤）
+│                                    #   brands / chip / display / battery
+│                                    #   thermal / memory / ai
+│
+├── wiki/
+│   ├── index.html                   # 🧠 LLM 知识图谱可视化（实体 + 话题）
+│   ├── entities/
+│   │   ├── soc/                     # 芯片实体（骁龙/天玑/麒麟/A系列…）
+│   │   ├── brand/                   # 品牌实体（苹果/三星/华为/联发科…）
+│   │   └── tech/                    # 技术实体（硅碳负极/均热板…）
+│   └── topics/                      # 行业话题文件（供应链/影像战…）
+│
+├── skills/                          # ⚙️ 核查技能库（飞轮①）
+│   ├── fact-check-playbook.md       # 核查通用手册
+│   ├── pseudoscience-patterns.md    # 伪科学模式库
+│   ├── logical-fallacy-catalog.md   # 逻辑谬误目录
+│   ├── source-credibility.md        # 信源可信度分级
+│   ├── date-triple-source-fallback.md # 日期三源校验方法
+│   ├── oem-codename-disambiguation.md # OEM 代号消歧手册
+│   ├── foundry-competition-tracker.md # 晶圆代工竞争追踪
+│   ├── apple-foldable-tracker.md    # 苹果折叠屏追踪
+│   └── pseudoscience-patterns.md    # 伪科学模式库
+│
 ├── _meta/
-│   ├── scope.md                  # 采集范围定义
-│   ├── source-list.yaml          # 信源清单（含可信度）
-│   ├── agents-architecture.md    # 多Agent架构
-│   ├── changelog.md              # 项目演进日志
-│   ├── secrets.example.yaml      # 密钥模板（不含真实值）
-│   └── secrets.local.yaml        # 真实密钥（被gitignore忽略）
-├── skills/                       # 个人技能库（飞轮①）
-│   ├── fact-check-playbook.md
-│   ├── pseudoscience-patterns.md
-│   ├── source-credibility.md
-│   └── logical-fallacy-catalog.md
-├── wiki/                         # LLM Wiki（飞轮②）
-│   ├── _index.md
-│   ├── entities/{soc,brand,tech}/
-│   └── topics/
-└── YYYY-MM-DD/                   # 每日产出
-    ├── 01-raw/
-    ├── 02-annotations/
-    ├── 03-quality-report.md
-    ├── 04-clean-report.md
-    ├── 05-methodology-delta.md
-    └── index.html                # 仪表盘可视化
+│   ├── scope.md                     # 采集范围定义（含明确排除清单）
+│   ├── agents-architecture.md       # 多 Agent 架构图 + 输入输出契约
+│   └── source-list.yaml             # 信源清单（含可信度分级）
+│
+├── scripts/                         # 历史脚本 / 任务注册文档
+│
+└── YYYY-MM-DD/                      # 每日产出目录（自动创建）
+    ├── 03-quality-report-*.md       # 问题内容清单
+    ├── 04-clean-report-*.md         # 干净洞察报告
+    ├── 05-methodology-delta-*.md    # 新方法论
+    └── 06-self-eval-*.md            # 自评估
 ```
 
+---
+
+## 采集范围（核心）
+
+**优先采集：**
+- SoC / 芯片：高通、联发科、苹果 A/M 系列、麒麟、Exynos、谷歌 Tensor
+- 影像系统：CMOS 传感器、ISP、计算摄影
+- 显示屏幕：OLED / Micro-OLED / Mini-LED
+- 电池与快充：硅碳负极、快充协议
+- 半导体制造：台积电 / 三星代工 / 中芯国际，工艺节点进展
+- 面板与供应链：BOE / 三星显示 / LPDDR / HBM 动态
+- AI 端侧硬件：NPU、大模型手机适配
+
+**明确排除：** 纯软件评测、手游、政治地缘、人物私生活、与硬件无关的财经八卦
+
+---
+
+## 质量控制指标
+
+| 指标 | 目标区间 |
+|------|---------|
+| Unknown Rate (UnR) | 5% – 25% |
+| avg explanation_quality | ≥ 3.5 / 5 |
+| TSVer 时序触发比例 | 记录，不设硬性上限 |
+| 新闻时效窗口 | ≤ 5 天（铁律，不可绕过） |
+
+---
+
+## 定时任务
+
+| 任务名 | 时间 | 说明 |
+|--------|------|------|
+| `rumorcrusher-morning` | 每天 05:00 | 早班采集，覆盖隔夜境外科技媒体更新 |
+| `rumorcrusher-daily` | 每天 22:00 | 晚班采集，覆盖国内当日媒体动态 |
+
+两个任务共享同一套 SKILL.md 工作流，产出写入对应日期目录，完成后自动 git push 到 GitHub Pages。
+
+---
+
 ## 项目方
+
 - 负责人：Croesuszn Perrygi
 - GitHub：[@chirs0901](https://github.com/chirs0901)
 - 启动日期：2026-05-14
+- 当前版本：v0.8（2026-05 · 双班次 + 新闻时效铁律）
