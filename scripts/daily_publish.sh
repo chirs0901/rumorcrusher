@@ -7,7 +7,7 @@
 DATE="${1:-$(date +%Y-%m-%d)}"
 NOTIFY_LOG="$(dirname "$0")/../_meta/notify-failures.log"
 TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S %Z")
-REPO_PATH="${HOME}/Documents/Claude/Projects/RumorCrusher"
+REPO_PATH="${HOME}/Documents/Qoder/RumorCrusher-qoder"
 cd "$(dirname "$0")/.."
 
 # [1/3] git commit + push（失败只记录，不中断后续步骤）

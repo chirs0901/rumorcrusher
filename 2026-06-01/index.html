@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RumorCrusher · 2026-06-01</title>
+<style>
+body{font-family:-apple-system,"PingFang SC",sans-serif;background:#f2f2ef;color:#111;line-height:1.6}
+.header{background:#111;color:#fff;padding:48px 28px 36px;text-align:center}
+.header-title{font-size:36px;font-weight:800}
+.header-sub{font-size:14px;color:#999;margin-top:8px}
+main{max-width:800px;margin:0 auto;padding:28px}
+.card{background:#fff;border-radius:8px;padding:24px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.card h2{font-size:18px;margin-bottom:12px}
+.status-ok{color:#22c55e}
+.status-warn{color:#f59e0b}
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="header-title">RumorCrusher</div>
+  <div class="header-sub">2026-06-01 · 晨跑流水线</div>
+</div>
+<main>
+  <div class="card">
+    <h2 class="status-warn">⚠️ 流水线状态</h2>
+    <p>晨跑定时任务于 05:01 触发但被 push-failure.flag 阻塞，已于 20:50 手动补跑。</p>
+    <p>Git 推送因 GitHub 网络不通暂时跳过，autopush LaunchAgent 已暂停。</p>
+  </div>
+  <div class="card">
+    <h2 class="status-ok">✅ 目录结构</h2>
+    <pre>2026-06-01/
+├── 01-raw/
+├── 02-annotations/
+└── 03-reports/</pre>
+  </div>
+  <div class="card">
+    <h2>📋 待办</h2>
+    <p>采集器/四Agent审核/报告生成等模块仍在开发中（morning-task.sh 中 TODO）。</p>
+  </div>
+</main>
+</body>
+</html>
