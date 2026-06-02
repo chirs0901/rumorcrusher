@@ -305,24 +305,8 @@
 <script>
 // ── API 配置 ──
 // 本地开发: http://127.0.0.1:5000
-// 云端部署: 加载 rc-config.js（OSS 自动生成）
-(function() {
-  var s = document.createElement('script');
-  s.src = 'rc-config.js';
-  s.onerror = function() { /* 本地开发，无配置文件 */ };
-  document.head.appendChild(s);
-})();
-
-// 等 rc-config.js 加载后，使用 window.RC_API_BASE
-setTimeout(function() {
-  window.RC_API_BASE = window.RC_API_BASE || (
-    (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost')
-      ? 'http://127.0.0.1:5000'
-      : 'http://127.0.0.1:5000'
-  );
-}, 100);
-
-const getAPIBase = () => window.RC_API_BASE || 'http://127.0.0.1:5000';
+// 部署到云端时: 修改为你的服务器地址
+const API_BASE = 'http://127.0.0.1:5000';
 
 // Set example query
 function setExample(text) {
@@ -347,7 +331,7 @@ async function startVerification() {
 
   try {
     // Call backend API
-    const response = await fetch(`${getAPIBase()}/api/verify`, {
+    const response = await fetch(`${API_BASE}/api/verify`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ query })
