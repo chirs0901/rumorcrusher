@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-06-03T15:26:25.503288",
+  "category": "brand",
+  "queries": [
+    "华为 Mate 80 最新 动态 2026",
+    "Apple iPhone 18 Pro 最新 预测",
+    "小米 17 Ultra OPPO Find X9 vivo X300",
+    "三星 Galaxy S26 Galaxy Z Fold 最新",
+    "荣耀 OV 传音 手机 2026"
+  ],
+  "results_count": 0,
+  "entities": {
+    "soc": [],
+    "brand": [],
+    "tech": [],
+    "supplier": [],
+    "display": [],
+    "camera": [],
+    "battery": [],
+    "other": []
+  },
+  "results": []
+}

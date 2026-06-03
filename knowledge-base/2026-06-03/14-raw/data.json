@@ -1,0 +1,101 @@
+{
+  "timestamp": "2026-06-03T14:26:22.027070",
+  "category": "ai-phone",
+  "queries": [
+    "端侧AI 手机 NPU TOPS 2026",
+    "on-device AI smartphone LLM",
+    "AI手机 功能 芯片 2026 最新",
+    "手机AI Agent 智能体 2026",
+    "DeepSeek 手机端 部署 2026"
+  ],
+  "results_count": 10,
+  "entities": {
+    "soc": [],
+    "brand": [
+      "小米",
+      "华为",
+      "HUAWEI",
+      "荣耀",
+      "OPPO",
+      "HONOR"
+    ],
+    "tech": [],
+    "supplier": [],
+    "display": [],
+    "camera": [],
+    "battery": [],
+    "other": []
+  },
+  "results": [
+    {
+      "title": "【手机大全】手机报价及图片大全-ZOL中关村在线",
+      "url": "https://detail.zol.com.cn/cell_phone_index/subcate57_list_1.html",
+      "domain": "detail.zol.com.cn",
+      "snippet": "小米手机 (187) 一加手机 (142) 魅族手机 (54) 真我手机 (248) 努比亚手机 (175) 红米手机 (319) Moto手机 (112) 联想手机 (24) 中兴手 …",
+      "query": "手机AI Agent 智能体 2026"
+    },
+    {
+      "title": "华为手机 - 华为官网 - HUAWEI",
+      "url": "https://consumer.huawei.com/cn/phones/",
+      "domain": "consumer.huawei.com",
+      "snippet": "3. 仅部分搭载 HarmonyOS 5 及以上的华为手机、平板、电脑支持该功能，使用该功能时，手机、平板、电脑需登录同一华为账 …",
+      "query": "手机AI Agent 智能体 2026"
+    },
+    {
+      "title": "【手机】手机报价_2026最新手机品牌大全-太平洋产品库",
+      "url": "https://product.pconline.com.cn/mobile/",
+      "domain": "product.pconline.com.cn",
+      "snippet": "荣耀600 Pro评测：4K实况之King，同价位拍人像最好看的手机！ 2026年5月25日，荣耀发布荣耀600系列手机，这一次我们体验了 …",
+      "query": "手机AI Agent 智能体 2026"
+    },
+    {
+      "title": "OPPO 智能手机 | OPPO 官方网站",
+      "url": "https://www.oppo.com/cn/smartphones/",
+      "domain": "www.oppo.com",
+      "snippet": "OPPO 官网为您提供 OPPO Find N 系列、OPPO Find X 系列、OPPO Reno 系列、OPPO A 系列、OPPO K 系列手机产品图片 …",
+      "query": "手机AI Agent 智能体 2026"
+    },
+    {
+      "title": "荣耀手机-HONOR新款手机-系列-型号 | 荣耀官网",
+      "url": "https://www.honor.com/cn/phones/",
+      "domain": "www.honor.com",
+      "snippet": "欢迎访问荣耀官网！ 荣耀WIN Turbo、荣耀600系列、荣耀畅玩80m、荣耀Play11 Plus、荣耀Magic V6、荣耀Magic8 Pro Air、荣 …",
+      "query": "手机AI Agent 智能体 2026"
+    },
+    {
+      "title": "DeepSeek | 深度求索",
+      "url": "https://www.deepseek.com/",
+      "domain": "www.deepseek.com",
+      "snippet": "基于自研训练框架、自建智算集群和万卡算力等资源，深度求索团队仅用半年时间便已发布并开源多个百亿级参数大模型，如DeepSeek-LLM通用大语言模型 …",
+      "query": "DeepSeek 手机端 部署 2026"
+    },
+    {
+      "title": "DeepSeek - Into the Unknown",
+      "url": "https://chat.deepseek.com/sign_in",
+      "domain": "chat.deepseek.com",
+      "snippet": "Chat with DeepSeek AI – your intelligent assistant for coding, content creation, file reading, and more.",
+      "query": "DeepSeek 手机端 部署 2026"
+    },
+    {
+      "title": "DeepSeek Chat - Free AI Assistant",
+      "url": "https://deep-seek.com/chat",
+      "domain": "deep-seek.com",
+      "snippet": "Chat with DeepSeek AI for free. Get instant help with writing, coding, math, research, and more.",
+      "query": "DeepSeek 手机端 部署 2026"
+    },
+    {
+      "title": "DeepSeek - AI Assistant & V3 Chat",
+      "url": "https://deepseek.net/",
+      "domain": "deepseek.net",
+      "snippet": "DeepSeek is a Chinese company specializing in artificial intelligence, particularly in natural language processing (NLP) and large language …",
+      "query": "DeepSeek 手机端 部署 2026"
+    },
+    {
+      "title": "DeepSeek - Free AI Chat",
+      "url": "https://deep-seek.com/",
+      "domain": "deep-seek.com",
+      "snippet": "Chat with DeepSeek AI for free. Get instant help with writing, coding, math, research, and more. No signup required.",
+      "query": "DeepSeek 手机端 部署 2026"
+    }
+  ]
+}
