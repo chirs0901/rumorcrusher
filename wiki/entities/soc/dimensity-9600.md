@@ -39,3 +39,14 @@
 | 2026-05-25 | [Wccftech](https://wccftech.com/roundup/mediatek-dimensity-9600-chips-launch-price-architecture-and-specifications-here-is-everything-you-need-to-know/) | ConflictingEvidence (0.78) | 综合多爆料汇总，N2P+双超大核架构 |
 | 2026-05-25 | [Gizmochina](https://www.gizmochina.com/2026/04/01/mediatek-dimensity-9600-2nm-cpu-layout-leak/) | ConflictingEvidence (0.78) | CPU布局爆料：2+3+3 |
 | 2026-05-25 | [AndroidHeadlines](https://www.androidheadlines.com/2026/04/new-leak-claims-mediateks-dimensity-9600-will-use-tsmcs-2nm-n2p-process.html) | ConflictingEvidence (0.78) | N2P制程独立消息来源 |
+
+---
+### 更新：2026-06-03（日常流水线）
+- **Pro版规格补全**：5GHz主频，Geekbench 6 单核4200-4300 / 多核12000-12500（工程样品），LPDDR6 + UFS 5.0。
+- **Arm Magni GPU**：新一代 GPU 架构，硬件帧插入、硬件光追加速。
+- **双NPU + SME2**：Neural Shader Scheduler + Arm SME2 矩阵扩展。
+- **OpenAI定制版**：OpenAI 据报与 MediaTek 合作定制天玑9600双NPU架构，用于首款 AI Agent 手机（Wccftech单源，ConflictingEvidence，需追踪）。
+
+| 日期 | 信源 | AVeriTeC | 摘要 |
+|------|------|---------|------|
+| 2026-06-03 | Gizmochina / Nokiamob / Wccftech / PCPai | Supported | Pro规格：TSMC N2P，5GHz，GB6单核4200-4300/多核12000-12500，LPDDR6，UFS 5.0，Arm Magni GPU，双NPU |

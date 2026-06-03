@@ -92,3 +92,17 @@
 - **moto razr fold正式发布**：2026年5月19日，联想旗下moto品牌首款横向大折叠旗舰moto razr fold发布，骁龙8 Gen5，DXOMARK折叠屏影像全球第一，6000mAh。AVeriTeC：Supported（0.97）
 - **小米MIX Trifold认证通过**：小米首款三折叠手机通过认证，预计Q3 2026发布，将成第二款量产三折叠机型。AVeriTeC：Supported（0.80）
 - **华为折叠屏份额**：国内市场份额超70%（数字有CE不确定性，主导地位确认）。
+
+---
+### 更新：2026-06-03（日常流水线）
+- **iPhone Fold 规格最终汇聚**：书本式，内屏7.7-7.8寸，外屏5.3-5.5寸，Samsung Display独家3年OLED，~1100万片，$2000+，Touch ID，无长焦，9-10月发布。
+- **OPPO Find N6 量产里程碑**：天穹记忆玻璃+钛合金铰链，60万次折叠无折痕，TÜV莱茵认证。
+- **2026年折叠屏市场**：同比+15%，华为66.6%国内份额，荣耀10.9%；618折叠旗舰：OPPO Find N6/荣耀Magic V5/三星Z Fold7/小米MIX Fold4。
+- **无折痕折叠屏量产突破**：天马等国产面板厂商跟进量产。
+- **Samsung三折叠传闻**：Galaxy Z Tri-Fold 2026年供应链传闻（NEE，单源）。
+
+| 日期 | 信源 | AVeriTeC | 摘要 |
+|------|------|---------|------|
+| 2026-06-03 | MacRumors / The Gadgeteer | Supported | iPhone Fold：书本式，内屏7.7-7.8寸，SDC独家OLED，$2000+，Touch ID |
+| 2026-06-03 | 中关村在线 / 钛媒体 | Supported | OPPO Find N6无折痕量产+TÜV认证；天马等跟进量产 |
+| 2026-06-03 | 新浪 | Supported | 折叠屏市场+15%；华为66.6%国内份额 |

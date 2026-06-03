@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RumorCrusher · 2026-06-03 · 晚报</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"Helvetica Neue","PingFang SC",sans-serif;background:#f2f2ef;color:#111;-webkit-font-smoothing:antialiased;line-height:1.6}
+a{color:#c8102e;text-decoration:none}
+a:hover{text-decoration:underline}
+.header{background:#111;color:#fff;padding:48px 28px 36px}
+.header-inner{max-width:1000px;margin:0 auto}
+.header-meta{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#c8102e;margin-bottom:12px}
+.header-title{font-size:clamp(26px,3.4vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-bottom:14px}
+.header-sub{font-size:14px;color:rgba(255,255,255,.65);max-width:760px}
+main{max-width:1000px;margin:0 auto;padding:28px}
+.window-banner{background:#fff;border-left:4px solid #c8102e;padding:18px 22px;margin-bottom:24px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.window-banner .label{font-size:11px;font-weight:700;letter-spacing:.12em;color:#c8102e;margin-bottom:4px}
+.window-banner .value{font-size:15px;font-weight:600;color:#111;line-height:1.6}
+.section{background:#fff;border-radius:6px;padding:24px;margin-bottom:18px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.section h2{font-size:18px;letter-spacing:-.01em;margin-bottom:14px;color:#111;display:flex;align-items:center;gap:8px}
+.section h2::before{content:'';width:3px;height:18px;background:#c8102e;border-radius:2px}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin-bottom:20px}
+.stat{background:#f7f7f4;border-radius:6px;padding:14px;text-align:center}
+.stat-num{font-size:28px;font-weight:800;color:#c8102e;line-height:1}
+.stat-label{font-size:11px;color:#666;margin-top:4px;font-weight:500}
+.news{border-top:1px solid #e8e8e4;padding:16px 0;display:flex;gap:14px}
+.news:first-of-type{border-top:none;padding-top:6px}
+.news-cat{flex-shrink:0;width:84px;font-size:10px;font-weight:700;letter-spacing:.06em;padding:3px 7px;border-radius:3px;height:fit-content;text-align:center}
+.cat-chip{background:rgba(0,102,204,.1);color:#0055aa}
+.cat-mem{background:rgba(0,136,170,.1);color:#005e7c}
+.cat-mfr{background:rgba(200,16,46,.1);color:#a8102e}
+.cat-ai{background:rgba(124,58,237,.1);color:#6c2bd9}
+.cat-disp{background:rgba(0,150,80,.1);color:#005533}
+.cat-bat{background:rgba(245,166,35,.15);color:#a06800}
+.news-body{flex:1}
+.news-title{font-size:15px;font-weight:700;color:#111;margin-bottom:6px;line-height:1.4}
+.news-text{font-size:13.5px;color:#444;line-height:1.7;margin-bottom:6px}
+.news-srcs{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.src{font-size:10px;color:#666;padding:2px 7px;border:1px solid #e0e0dc;border-radius:3px}
+.src:hover{background:#111;color:#fff;border-color:#111}
+.src.official{border-color:#0066cc44;color:#0055aa;background:rgba(0,102,204,.04)}
+.launch-table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px}
+.launch-table th,.launch-table td{padding:9px 11px;border-bottom:1px solid #e8e8e4;text-align:left;vertical-align:top}
+.launch-table th{background:#f7f7f4;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#555}
+.launch-table td.date{font-weight:700;color:#c8102e;white-space:nowrap}
+.launch-table td.model{font-weight:600}
+.conf{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px}
+.conf-h{background:rgba(0,150,80,.15);color:#006633}
+.conf-m{background:rgba(245,166,35,.18);color:#a06800}
+.conf-l{background:rgba(200,16,46,.1);color:#a8102e}
+.warning{background:rgba(245,166,35,.08);border-left:3px solid #f5a623;padding:12px 16px;margin-top:14px;font-size:13px;color:#5c4500;border-radius:0 4px 4px 0}
+footer{border-top:1px solid #d9d9d5;padding:24px;max-width:1000px;margin:0 auto;color:#999;font-size:11px}
+footer a{color:#c8102e;font-weight:600}
+@media(max-width:720px){
+  .header{padding:36px 20px 28px}
+  main{padding:20px}
+  .section{padding:18px}
+  .news{flex-direction:column;gap:10px}
+  .news-cat{width:fit-content}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="header-meta">2026-06-03 · 每日简报 · 晚报版 · 22:00 Run</div>
+    <h1 class="header-title">骁龙/天玑双2nm旗舰规格揭晓 · BOE Gen8.6量产 · iPhone Fold书本式汇聚 · OPPO无折痕里程碑</h1>
+    <p class="header-sub">本日采集 32 条资讯，19 条通过 AVeriTeC Supported 核查，覆盖芯片/显示/折叠屏/AI/电池五大板块。信源均经多 Agent 交叉验证。</p>
+  </div>
+</div>
+
+<main>
+
+  <!-- 统计数字 -->
+  <div class="stats-grid">
+    <div class="stat"><div class="stat-num">32</div><div class="stat-label">采集条数</div></div>
+    <div class="stat"><div class="stat-num">19</div><div class="stat-label">Supported</div></div>
+    <div class="stat"><div class="stat-num">7</div><div class="stat-label">冲突证据</div></div>
+    <div class="stat"><div class="stat-num">81</div><div class="stat-label">健康打分</div></div>
+    <div class="stat"><div class="stat-num">76.0</div><div class="stat-label">AVeriTeC EQ均分</div></div>
+    <div class="stat"><div class="stat-num">8</div><div class="stat-label">新增知识库</div></div>
+  </div>
+
+  <!-- 要点 -->
+  <div class="window-banner">
+    <div class="label">📌 今日要点</div>
+    <div class="value">
+      · 骁龙8 EG6 Pro（Adreno 850/18MB GMEM/LPDDR6/$300-320）与 天玑9600 Pro（N2P/5GHz/双NPU）规格同期曝光，2nm旗舰芯片战格局清晰<br>
+      · BOE B16 Gen 8.6 IT AMOLED（成都）5月底量产，比计划提前逾1个月，首客华硕/宏碁<br>
+      · iPhone Fold 规格汇聚：书本式，内屏7.7-7.8寸，三星Display独家3年OLED，约1100万片，起售$2000+<br>
+      · OPPO Find N6 无折痕折叠里程碑：钛合金铰链+天穹记忆玻璃，60万次折叠测试+TÜV认证<br>
+      · ⚠️ 核查警告：OpenAI AI手机合作方（MediaTek vs Qualcomm）存在信源冲突，勿单独引用
+    </div>
+  </div>
+
+  <!-- 芯片 -->
+  <div class="section">
+    <h2>🔵 芯片与 SoC</h2>
+
+    <div class="news">
+      <div class="news-cat cat-chip">骁龙</div>
+      <div class="news-body">
+        <div class="news-title">骁龙8 Elite Gen 6 系列规格浮现：Pro 版 Adreno 850/18MB GMEM，标准版 Adreno 845/12MB GMEM</div>
+        <div class="news-text">Qualcomm 骁龙8 Elite Gen 6（SM8950）与 Gen 6 Pro（SM8975）均采用 TSMC 2nm N2P 工艺，2+3+3 CPU 架构。关键差距在 GPU 缓存：Pro 版 18MB GMEM（+50%），且升至 LPDDR6 内存。Pro 版售价约 $300-320/片，为历史最贵手机 SoC 之一。两款均预计9月 Snapdragon Summit 发布。</div>
+        <div class="news-srcs">
+          <a class="src" href="https://www.gizmochina.com/2026/03/25/snapdragon-8-elite-gen-6-8-elite-gen-6-pro-specs-leak/">Gizmochina</a>
+          <a class="src" href="https://wccftech.com/roundup/">Wccftech</a>
+          <a class="src" href="https://gadgets.beebom.com/news/snapdragon-8-elite-gen-6-specs-leak-in-detail">Beebom</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="news">
+      <div class="news-cat cat-chip">天玑</div>
+      <div class="news-body">
+        <div class="news-title">天玑9600 Pro：TSMC N2P，5GHz主频，Arm Magni GPU，双NPU + Arm SME2</div>
+        <div class="news-text">MediaTek 天玑9600 Pro 工程样品 Geekbench 6 跑分单核4200-4300 / 多核12000-12500（工程样品，非量产数字）。GPU 升至 Arm Magni 架构，内置硬件帧插入（60→120+ FPS）和硬件光追加速。双NPU + Neural Shader Scheduler + Arm SME2，AI 算力显著提升。支持 LPDDR6 + UFS 5.0，预计9月首发。</div>
+        <div class="news-srcs">
+          <a class="src" href="https://www.gizmochina.com/2026/05/29/mediatek-dimensity-9600-series-specs-benchmark-score-and-more/">Gizmochina</a>
+          <a class="src" href="https://nokiamob.net/2026/05/29/mediatek-dimensity-9600-pro-full-specs-of-the-2nm-chip-targeting-apple/">Nokiamob</a>
+          <a class="src" href="https://wccftech.com/roundup/mediatek-dimensity-9600-chips-launch-price-architecture-and-specifications-here-is-everything-you-need-to-know/">Wccftech</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="news">
+      <div class="news-cat cat-chip">产业链</div>
+      <div class="news-body">
+        <div class="news-title">TSMC N2 量产确认：Apple 占大头，2026年秋三大旗舰芯片同步进入2nm时代</div>
+        <div class="news-text">台积电 N2（GAA 2nm）于 2025Q4 正式量产，Fab 22（高雄）为主，Fab 20 跟进。Apple 锁定最大初期份额。2026年秋，Apple A20（N2）、天玑9600 Pro（N2P）、骁龙8 EG6 Pro（N2P）三大旗舰芯片同步采用2nm，芯片制程竞争进入新纪元。N2 vs N3：等功耗下性能提升约15%。</div>
+        <div class="news-srcs">
+          <a class="src" href="https://www.techspot.com/news/110755-tsmc-2nm-n2-process-officially-enters-volume-production.html">TechSpot</a>
+          <a class="src" href="https://www.tomshardware.com/tech-industry/semiconductors/tsmc-begins-quietly-volume-production-of-2nm-class-chips-first-gaa-transistor-for-tsmc-claims-up-to-15-percent-improvement-at-iso-power">Tom's Hardware</a>
+          <a class="src" href="https://semiwiki.com/forum/threads/tsmc-quietly-begins-volume-production-of-2nm-class-chips.24283/">SemiWiki</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 显示面板 -->
+  <div class="section">
+    <h2>🖥️ 显示面板与产业链</h2>
+
+    <div class="news">
+      <div class="news-cat cat-disp">BOE</div>
+      <div class="news-body">
+        <div class="news-title">BOE B16 Gen 8.6 IT AMOLED（成都）提前量产，首批14寸笔电OLED供华硕/宏碁</div>
+        <div class="news-text">BOE 成都 B16 Gen 8.6 IT AMOLED 于2026年5月底完成量产，比原H2计划提前逾1个月，率先超越三星Display A6。B16 采用 LTPO 背板技术，支持柔性和刚性面板（三星A6仅支持刚性）。首批为14英寸笔电OLED面板（ASUS/Acer），消费品预计2027年初上架。同期BOE以低$5报价竞标Galaxy S27 OLED，三星评估近一个月、接近通过质检。</div>
+        <div class="news-srcs">
+          <a class="src" href="https://www.techtimes.com/articles/316600/20260514/boe-begins-gen-86-oled-production-this-month-beating-rival-samsung-display-market.htm">TechTimes</a>
+          <a class="src" href="https://www.digitimes.com/news/a20260524PD201/boe-oled-panel-sdc-galaxy-smartphone.html">Digitimes</a>
+          <a class="src" href="https://www.oled-info.com/boe-oled">OLED-Info</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="news">
+      <div class="news-cat cat-disp">三星显示</div>
+      <div class="news-body">
+        <div class="news-title">SDC 重夺 iPhone 18 Pro OLED + 获 iPhone Fold 3年独家折叠OLED合同</div>
+        <div class="news-text">三星显示（SDC）+ LG Display 主导 iPhone 18 Pro/Max OLED 供应，BOE 因三代连续质量问题出局高端层级。同时 SDC 获 Apple iPhone Fold 三年独家折叠 OLED 合同，采用新型铰链层压结构，首年约1100万片备货。市场数据：Q1 2026全球OLED手机出货量2.02亿台，同比+4.7%。</div>
+        <div class="news-srcs">
+          <a class="src" href="https://www.sammyfans.com/2026/05/07/samsung-takes-back-iphone-18-pro-oled-business-from-boe/">Sammy Fans</a>
+          <a class="src" href="https://apple.gadgethacks.com/news/apple-oled-display-supply-chain-explained-samsung-lg-and-boe-roles/">Gadget Hacks</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 折叠屏 -->
+  <div class="section">
+    <h2>📱 折叠屏与新形态</h2>
+
+    <div class="news">
+      <div class="news-cat cat-mfr">Apple</div>
+      <div class="news-body">
+        <div class="news-title">iPhone Fold 规格汇聚：书本式 7.7-7.8寸，SDC独家3年OLED，$2000+，Touch ID，无长焦</div>
+        <div class="news-text">多个独立信源汇聚：书本式横向内折（同三星Z Fold形态），内屏7.7-7.8寸，外屏5.3-5.5寸。三星Display 3年独家折叠OLED合同，首年约1100万片。无长焦摄像头，Touch ID指纹识别回归（电源键集成），无TrueDepth摄像头。起售价$2,000+，高配版$2,600-2,900。量产8月启动，发布9月（或推至10月，存在不确定性）。</div>
+        <div class="news-srcs">
+          <a class="src" href="https://www.macrumors.com/roundup/iphone-fold/">MacRumors</a>
+          <a class="src" href="https://the-gadgeteer.com/2026/05/26/iphone-fold-2026-release-date-price-rumors/">The Gadgeteer</a>
+          <a class="src" href="https://appleinsider.com/articles/26/04/24/iphone-fold-or-iphone-ultra-what-to-expect-from-the-folding-iphone">AppleInsider</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="news">
+      <div class="news-cat cat-mfr">OPPO</div>
+      <div class="news-body">
+        <div class="news-title">OPPO Find N6 无折痕里程碑：钛合金铰链 + 天穹记忆玻璃，60万次折叠 + TÜV莱茵认证</div>
+        <div class="news-text">OPPO Find N6 以"天穹记忆玻璃"和钛合金天穹铰链实现无折痕量产突破，60万次折叠测试后屏幕依然平整，获德国莱茵TÜV"全球最平整折叠手机"认证。2026年618折叠旗舰格局：OPPO Find N6（无折痕）/ 荣耀Magic V5（轻薄）/ 三星Z Fold7（屏幕品牌）/ 小米MIX Fold4（徕卡影像）。市场：华为66.6%国内折叠份额，荣耀10.9%，折叠屏整体+15%。</div>
+        <div class="news-srcs">
+          <a class="src" href="https://mobile.zol.com.cn/1113/11135605.html">中关村在线</a>
+          <a class="src" href="https://news.sina.cn/bignews/insight/2026-02-27/detail-inhphcxh3665621.d.html">新浪</a>
+          <a class="src" href="https://www.tmtpost.com/7913256.html">钛媒体</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI -->
+  <div class="section">
+    <h2>🤖 端侧 AI 与产业策略</h2>
+
+    <div class="news">
+      <div class="news-cat cat-ai">冲突证据</div>
+      <div class="news-body">
+        <div class="news-title">⚠️ OpenAI AI手机合作方存在信源冲突：MediaTek vs Qualcomm，勿单独引用</div>
+        <div class="news-text">两个并行报道：(A) Wccftech 称 OpenAI 选择 MediaTek，定制天玑9600双NPU；(B) Yahoo Finance 称 OpenAI 与 Qualcomm 建立AI手机联盟。两者明显矛盾，均非 OpenAI 官方声明。核查结论：ConflictingEvidence，可能存在不同层面合作或多方谈判。规模目标300-400M年产/2028量产计划为单源，置信度低。</div>
+        <div class="news-srcs">
+          <a class="src" href="https://wccftech.com/openai-picks-mediatek-over-qualcomm-for-its-first-smartphone-customizing-the-dimensity-9600-with-a-dual-npu-architecture-to-challenge-the-iphone/">Wccftech(MediaTek说)</a>
+          <a class="src" href="https://finance.yahoo.com/sectors/technology/articles/openai-qualcomm-tie-signals-ai-154048274.html">Yahoo Finance(Qualcomm说)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 发布日程 -->
+  <div class="section">
+    <h2>📅 近期发布前瞻</h2>
+    <table class="launch-table">
+      <thead><tr><th>时间</th><th>产品</th><th>关键参数</th><th>置信度</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="date">2026-06<br>618</td>
+          <td class="model">折叠旗舰 618 集结</td>
+          <td>OPPO Find N6 / 荣耀Magic V5 / 三星Z Fold7 / 小米MIX Fold4</td>
+          <td><span class="conf conf-h">高</span></td>
+        </tr>
+        <tr>
+          <td class="date">2026-09</td>
+          <td class="model">Apple iPhone 18 系列</td>
+          <td>A20 Pro TSMC 2nm，iPhone 18 Pro/Max 发布</td>
+          <td><span class="conf conf-h">高</span></td>
+        </tr>
+        <tr>
+          <td class="date">2026-09</td>
+          <td class="model">Snapdragon Summit</td>
+          <td>骁龙8 EG6 / EG6 Pro 发布（TSMC 2nm，Adreno 845/850）</td>
+          <td><span class="conf conf-h">高</span></td>
+        </tr>
+        <tr>
+          <td class="date">2026-09</td>
+          <td class="model">MediaTek 天玑9600</td>
+          <td>N2P，5GHz，双NPU，Arm Magni GPU；首款机型同期</td>
+          <td><span class="conf conf-h">高</span></td>
+        </tr>
+        <tr>
+          <td class="date">2026-09~10</td>
+          <td class="model">Apple iPhone Fold</td>
+          <td>书本式，7.7-7.8寸，SDC独家OLED，$2000+，Touch ID</td>
+          <td><span class="conf conf-m">中（9月vs10月存争议）</span></td>
+        </tr>
+        <tr>
+          <td class="date">2027-Q1</td>
+          <td class="model">Samsung Galaxy S27 系列</td>
+          <td>Exynos 2700(SF2P)+骁龙EG6；Ultra 5500mAh硅碳；新增Pro型号</td>
+          <td><span class="conf conf-m">中（无官方确认）</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 质检 -->
+  <div class="section">
+    <h2>🔬 质检摘要</h2>
+    <p style="font-size:13.5px;color:#444;line-height:1.8;">
+      本批次 32 条采集，AVeriTeC：Supported 19（59.4%）/ ConflictingEvidence 7（21.9%）/ NotEnoughEvidence 4（12.5%）/ Refuted 2（6.3%）。UnR=0.406，AVeriTeC EQ均分=76.0，综合健康打分=<strong>81/100</strong>。
+      <br>主要冲突：OpenAI合作方（E-022/E-023 MediaTek vs Qualcomm 互斥）；iPhone Fold发布时间（9月vs10月）；NPU TOPS代际对应不精确。
+      <br>新增方法论规则：M-015（多方合作声明交叉核查）/ M-016（NPU TOPS代际核查）。
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  <a href="03-quality-report-040549.md">质检报告</a> ·
+  <a href="04-clean-report-040549.md">干净报告</a> ·
+  <a href="../knowledge-base/index.html">手机知识库</a> ·
+  <a href="../wiki/index.html">LLM Wiki</a> ·
+  <a href="../index.html">归档主页</a>
+  <span style="float:right">2026-06-03 · RumorCrusher v0.9</span>
+</footer>
+
+</body>
+</html>

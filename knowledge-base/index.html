@@ -40,7 +40,7 @@
       </div>
       <div class="text-right text-sm text-slate-400">
         <div>收录周期：<span class="text-white font-semibold">2026-05-14 → 今日</span></div>
-        <div>最后更新：<span id="last-update" class="text-white font-semibold">2026-05-31</span></div>
+        <div>最后更新：<span id="last-update" class="text-white font-semibold">2026-06-03</span></div>
         <div class="mt-1"><a href="../index.html" class="text-rose-400 hover:text-rose-300 text-xs">← 返回首页</a></div>
       </div>
     </div>
@@ -1462,6 +1462,122 @@ const KB = [
     sources: [
       {name: "小米MiMo GitHub", url: "https://github.com/XiaoMi/MiMo", official: true},
       {name: "CSDN", url: "https://blog.csdn.net/weixin_41446370/article/details/148364122", official: false}
+    ]
+  }
+
+
+  {
+    id: "chip-20260603-001",
+    date: "2026-06-03",
+    cat: "chip",
+    title: "骁龙8 EG6 Pro vs 标准版规格差距：Adreno 850/18MB GMEM/LPDDR6 vs Adreno 845/12MB GMEM",
+    summary: "Qualcomm 骁龙8 Elite Gen 6 系列分为 SM8975 Pro 和 SM8950 标准版，均采用 TSMC 2nm N2P 工艺，CPU 架构相同（2+3+3）。关键差距在 GPU：Pro 版 Adreno 850 拥有 18MB 图形缓存（GMEM），标准版 Adreno 845 仅 12MB（差距 50%）；内存支持方面 Pro 版升至 LPDDR6，标准版为 LPDDR5X。Pro 版售价约 $300-320/片，高于标准版。两款均预计9月 Snapdragon Summit 正式发布，搭载手机最快年底上市。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name: "Gizmochina", url: "https://www.gizmochina.com/2026/03/25/snapdragon-8-elite-gen-6-8-elite-gen-6-pro-specs-leak/"},
+      {name: "Wccftech", url: "https://wccftech.com/roundup/"},
+      {name: "Beebom", url: "https://gadgets.beebom.com/news/snapdragon-8-elite-gen-6-specs-leak-in-detail"},
+      {name: "Technetbook", url: "https://www.technetbooks.com/2026/05/qualcomm-snapdragon-8-elite-gen-6-pro.html"}
+    ]
+  },
+  {
+    id: "chip-20260603-002",
+    date: "2026-06-03",
+    cat: "chip",
+    title: "天玑9600 Pro 规格：TSMC N2P，5GHz主频，GB6单核4200+，双NPU+Arm Magni GPU",
+    summary: "MediaTek 天玑9600 Pro 采用 TSMC N2P（2nm）工艺，CPU 为全新 2+3+3 架构，Prime 核峰值主频达 5.0GHz。工程样品 Geekbench 6 跑分：单核 4,200-4,300，多核 12,000-12,500（注：工程样品，量产性能可能不同）。GPU 升至 Arm Magni 架构，内置硬件帧插入模块（60→120+ FPS）和硬件实时光线追踪加速。NPU 为双核心设计，集成 Arm SME2（Scalable Matrix Extension 2）硬件支持。支持 LPDDR6 内存和 UFS 5.0 存储。首款搭载机型预计 2026 年9月上市。",
+    verdict: "supported",
+    aiStrategy: true,
+    sources: [
+      {name: "Gizmochina", url: "https://www.gizmochina.com/2026/05/29/mediatek-dimensity-9600-series-specs-benchmark-score-and-more/"},
+      {name: "Nokiamob", url: "https://nokiamob.net/2026/05/29/mediatek-dimensity-9600-pro-full-specs-of-the-2nm-chip-targeting-apple/"},
+      {name: "Wccftech", url: "https://wccftech.com/roundup/mediatek-dimensity-9600-chips-launch-price-architecture-and-specifications-here-is-everything-you-need-to-know/"},
+      {name: "PCPai", url: "https://www.pcpai.com/news/mediatek-dimensity-9600-specs-leaked-tsmc-2nm-process-lpddr6-poised-to-dominate-chinese-flagship-lineups.html"}
+    ]
+  },
+  {
+    id: "display-20260603-001",
+    date: "2026-06-03",
+    cat: "display",
+    title: "BOE B16 Gen 8.6 IT AMOLED 成都工厂提前量产，首批14英寸笔电OLED供华硕宏碁",
+    summary: "BOE 京东方成都 B16 工厂于 2026 年5月底完成 Gen 8.6 IT AMOLED 量产，比原定 H2 2026 目标提前逾1个月，率先超越同期开始量产的三星 Display A6 线。B16 采用 LTPO 背板技术，同时支持柔性（聚酰亚胺基板）和刚性面板（区别于三星 A6 仅支持刚性玻璃基板），更具工艺灵活性。首批产品为 14 英寸笔记本电脑 OLED 面板，初期客户为华硕（ASUS）和宏碁（Acer）；受限于基板装载到产品出货的时间差，首批消费者产品预计 2027 年初上架。同期 BOE 还以低于三星 Display $5/片的报价竞标三星 Galaxy S27 标准版 OLED，三星评估已超一个月且接近通过质检。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name: "TechTimes", url: "https://www.techtimes.com/articles/316600/20260514/boe-begins-gen-86-oled-production-this-month-beating-rival-samsung-display-market.htm"},
+      {name: "OLED-Info", url: "https://www.oled-info.com/boe-oled"},
+      {name: "Digitimes", url: "https://www.digitimes.com/news/a20260524PD201/boe-oled-panel-sdc-galaxy-smartphone.html"}
+    ]
+  },
+  {
+    id: "display-20260603-002",
+    date: "2026-06-03",
+    cat: "display",
+    title: "三星显示重夺 iPhone 18 Pro OLED；Q1 2026 全球OLED手机出货2.02亿台+4.7%",
+    summary: "三星显示（SDC）联合 LG Display 主导 iPhone 18 Pro/Pro Max OLED 供应，BOE 因 iPhone 15/16/17 三代连续质量问题被排除出苹果高端层级。同时，三星显示还获得苹果 iPhone Fold 三年独家折叠 OLED 面板合同，首年备货约 1,100 万片，是三星 OLED 业务的重要增量。市场数据方面：2026 年 Q1 全球 OLED 智能手机出货量达 2.02 亿台，同比增长 4.7%，主要增量来自苹果、三星及中国品牌的柔性 AMOLED 需求。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name: "Sammy Fans", url: "https://www.sammyfans.com/2026/05/07/samsung-takes-back-iphone-18-pro-oled-business-from-boe/", official: false},
+      {name: "MacRumors", url: "https://www.macrumors.com/roundup/iphone-fold/"},
+      {name: "Gadget Hacks", url: "https://apple.gadgethacks.com/news/apple-oled-display-supply-chain-explained-samsung-lg-and-boe-roles/"}
+    ]
+  },
+  {
+    id: "brands-20260603-001",
+    date: "2026-06-03",
+    cat: "brands",
+    title: "iPhone Fold 书本式折叠确认：内屏7.7-7.8寸，$2000+，三星显示3年独家OLED",
+    summary: "苹果 iPhone Fold（候选名 iPhone Ultra）规格趋于明朗：书本式横向内折设计，内屏 7.7-7.8 英寸，外屏 5.3-5.5 英寸，与三星 Galaxy Z Fold 系列形态相似。三星 Display 获得苹果三年独家折叠 OLED 供应合同，首年备货约 1,100 万片，采用专为消除折痕设计的新型铰链和层压结构。摄像头删减：仅保留主摄+超广，去掉长焦；生物识别回归 Touch ID（电源键集成）。起售价多数独立信源指向 $2,000+，高配版可能达 $2,600-2,900。量产预计 8 月启动，发布在 9 月（随 iPhone 18）或推至 10 月（存在供应链限制可能），官方发布时间仍有不确定性。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name: "MacRumors", url: "https://www.macrumors.com/roundup/iphone-fold/"},
+      {name: "The Gadgeteer", url: "https://the-gadgeteer.com/2026/05/26/iphone-fold-2026-release-date-price-rumors/"},
+      {name: "AppleInsider", url: "https://appleinsider.com/articles/26/04/24/iphone-fold-or-iphone-ultra-what-to-expect-from-the-folding-iphone"},
+      {name: "GSMArena specs", url: "https://www.gsmarena.com/apple_iphone_fold_5g-13804.php"}
+    ]
+  },
+  {
+    id: "brands-20260603-002",
+    date: "2026-06-03",
+    cat: "brands",
+    title: "OPPO Find N6 无折痕量产：钛合金铰链+天穹记忆玻璃，TÜV莱茵认证60万次折叠",
+    summary: "OPPO Find N6 实现折叠屏无折痕量产里程碑：搭载自研"天穹记忆玻璃"和钛合金天穹铰链，通过 60 万次折叠测试后屏幕依然平整（超过行业标准）；获德国莱茵 TÜV 颁发"全球最平整折叠手机"认证。2026 年折叠屏整体市场同比增长约 15%，华为以 66.6% 份额稳居中国折叠屏市场第一，荣耀以 10.9% 居第二，两者合计约 80%。618 折叠旗舰格局：OPPO Find N6（无折痕技术）、荣耀 Magic V5（轻薄跨平台）、三星 Galaxy Z Fold7（屏幕品牌力）、小米 MIX Fold4（徕卡影像）。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name: "中关村在线", url: "https://mobile.zol.com.cn/1113/11135605.html"},
+      {name: "新浪新闻", url: "https://news.sina.cn/bignews/insight/2026-02-27/detail-inhphcxh3665621.d.html"},
+      {name: "钛媒体", url: "https://www.tmtpost.com/7913256.html"}
+    ]
+  },
+  {
+    id: "chip-20260603-003",
+    date: "2026-06-03",
+    cat: "chip",
+    title: "TSMC N2量产确认：Apple占大头，2026年秋三大手机旗舰芯片同步进入2nm时代",
+    summary: "台积电 N2（2nm GAA）工艺于 2025 年 Q4 正式量产，苹果锁定首批最大份额（A20/A20 Pro 采用 N2/N2P）。初期产能集中在高雄 Fab 22，Fab 20 跟进量产。2026 年将加速扩产，同时满足智能手机和 HPC/AI 芯片需求。2026 年秋季手机旗舰芯片将首次实现三大阵营同步 2nm：Apple A20（N2）、MediaTek 天玑9600 Pro（N2P）、Qualcomm 骁龙8 Elite Gen 6 Pro（N2P），芯片制程竞争进入全面 2nm 时代。N2 相比 N3 在等功耗下性能提升约 15%。",
+    verdict: "supported",
+    aiStrategy: true,
+    sources: [
+      {name: "TechSpot", url: "https://www.techspot.com/news/110755-tsmc-2nm-n2-process-officially-enters-volume-production.html"},
+      {name: "Tom's Hardware", url: "https://www.tomshardware.com/tech-industry/semiconductors/tsmc-begins-quietly-volume-production-of-2nm-class-chips-first-gaa-transistor-for-tsmc-claims-up-to-15-percent-improvement-at-iso-power"},
+      {name: "SemiWiki", url: "https://semiwiki.com/forum/threads/tsmc-quietly-begins-volume-production-of-2nm-class-chips.24283/"}
+    ]
+  },
+  {
+    id: "ai-20260603-001",
+    date: "2026-06-03",
+    cat: "ai",
+    title: "❌ 辟谣：OpenAI AI手机合作方声称存在信源冲突，勿引用任一独家说法",
+    summary: "流传说法：(A) OpenAI 确定选择 MediaTek，定制天玑9600 双 NPU 架构，打造首款 AI Agent 手机（Wccftech，单源）；(B) OpenAI 与 Qualcomm 建立 AI 手机联盟（Yahoo Finance/247WallSt）。两个叙事存在明显矛盾，且均不来自 OpenAI 官方声明。核查结论：两者均为 ConflictingEvidence 级别，不排除 OpenAI 同时与多方谈判或合作层面不同（硬件定制 vs 软件平台）。规模目标 300-400M 年产量的 2028 量产计划同样为单源，置信度低。**不可将任何一方描述为"OpenAI确认独家合作伙伴"。**",
+    verdict: "conflicting",
+    aiStrategy: true,
+    sources: [
+      {name: "Wccftech (MediaTek方)", url: "https://wccftech.com/openai-picks-mediatek-over-qualcomm-for-its-first-smartphone-customizing-the-dimensity-9600-with-a-dual-npu-architecture-to-challenge-the-iphone/"},
+      {name: "Yahoo Finance (Qualcomm方)", url: "https://finance.yahoo.com/sectors/technology/articles/openai-qualcomm-tie-signals-ai-154048274.html"}
     ]
   }
 

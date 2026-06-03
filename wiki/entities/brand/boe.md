@@ -79,3 +79,14 @@ BOE被排除iPhone 18 Pro系列的核心原因：**LTPO+技术能力不足**。
 - **iPhone 18 Pro出局**：三星显示重夺iPhone 18 Pro/Pro Max OLED主供，BOE因LTPO制程不规范被排除旗舰层级（保留标准版份额）。信源：Sammy Fans 2026-05-07，AVeriTeC：Supported（0.88）
 - **Galaxy S27竞标**：BOE以低5美元/块报价争取三星Galaxy S27系列OLED订单。信源：Digitimes 2026-05-24，AVeriTeC：Supported（0.85）
 - **成都B16工厂**：B16 8.6代IT AMOLED工厂预计2026年5月底开始量产（面向IT/平板市场）。信源：Display Daily，AVeriTeC：NEE（单源，待确认）
+
+---
+### 更新：2026-06-03（日常流水线）
+- **B16 Gen 8.6 量产确认**：成都 B16 工厂于2026年5月底正式量产（提前逾1个月），首批14英寸笔电 OLED 面板供华硕/宏碁，消费品预计2027年初上架。采用 LTPO 背板技术（区别于三星Display A6仅支持刚性玻璃面板）。
+- **早期供应链风险解除**：此前有上游供应商财务风险报告（OLED-Info），已被量产新消息覆盖。
+- **Galaxy S27 竞标最新进展**：BOE低$5/片报价，三星已评估逾一个月，接近通过质检（Supported）。
+
+| 日期 | 信源 | AVeriTeC | 摘要 |
+|------|------|---------|------|
+| 2026-06-03 | TechTimes / IBTimes / OLED-Info | Supported | B16 Gen 8.6 5月底量产确认，提前1个月+，首客ASUS/宏碁，14英寸笔电OLED |
+| 2026-06-03 | Digitimes / GSMArena | Supported | BOE低$5竞标Galaxy S27 OLED，三星接近通过质检 |

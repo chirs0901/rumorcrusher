@@ -85,3 +85,29 @@
 - 采集20条，Supported 14，Refuted 1（小米MiMo时间归因错误）
 - tech-digest 新增6条：三星Unpacked/骁龙天玑跑分/三星5000nit OLED/天马无痕折叠屏/超轻泡沫VC/存储BoM超20%
 - 问题记录：07:05 晨跑session (local_1ced4167) 卡死3+小时，原因疑为凌晨网络断连导致WebSearch超时
+## 2026-06-03 晚报（22:00 Run, Timestamp=040549）
+- **采集**：32条原始采集，8轮 WebSearch，覆盖芯片/显示/折叠屏/AI/电池/产业链
+- **AVeriTeC**：Supported=19, CE=7, NEE=4, Refuted=2；综合健康打分81
+- **主要核查发现**：
+  - 骁龙8 EG6 Pro（SM8975）完整规格确认：Adreno 850/18MB GMEM/LPDDR6/$300-320（Supported）
+  - 天玑9600 Pro完整规格：TSMC N2P/5GHz/Arm Magni GPU/双NPU+SME2/LPDDR6（Supported，工程样品）
+  - TSMC N2量产2025Q4确认，Apple大头，Fab22高雄主产（Supported，高权威）
+  - BOE B16 Gen8.6 5月底量产，比计划提前1个月以上，ASUS/宏碁首客（Supported）
+  - iPhone Fold多源汇聚：书本式/7.7-7.8寸/SDC独家3年OLED/1100万片/$2000+/Touch ID（Supported）
+  - OPPO Find N6无折痕量产+TÜV莱茵认证+60万次折叠（Supported）
+  - OpenAI AI手机合作方冲突：MediaTek(Wccftech) vs Qualcomm(Yahoo Finance)，标注CE
+- **新增方法论规则**：
+  - M-015：多方合作声明交叉核查规范（OpenAI/MediaTek/Qualcomm案例）
+  - M-016：NPU TOPS数字代际核查规范
+- **Wiki更新**：
+  - 更新：`entities/soc/snapdragon-8-elite-gen6.md`（Pro版规格补全：Adreno 850/18MB GMEM/LPDDR6）
+  - 更新：`entities/soc/dimensity-9600.md`（Arm Magni GPU/双NPU+SME2/OpenAI合作传闻CE）
+  - 更新：`entities/brand/boe.md`（B16 Gen8.6量产确认/S27竞标最新进展）
+  - 更新：`entities/brand/samsung.md`（S27 Exynos 2700+骁龙双芯/Ultra硅碳电池/SDC iPhone Fold独家）
+  - 更新：`entities/brand/apple.md`（iPhone Fold多源汇聚/TSMC N2大头）
+  - 更新：`topics/foldable-2026.md`（iPhone Fold书本式确认/OPPO N6里程碑/折叠屏+15%市场）
+  - 更新：`topics/tsmc-2nm-supply-2026.md`（N2量产确认+三大2nm旗舰芯片对比）
+  - wiki/index.html：追加6个实体信源历史行，更新footer日期至2026-06-03
+- **知识库**：新增8条（chip×3/display×2/brands×2/ai×1，含1条CE辟谣条目），总计约112条
+- **日期校验**：CTX=BASH=SCHED=2026-06-03，三源一致，无漂移
+- **Git**：仅commit，autopush接管推送

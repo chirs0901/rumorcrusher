@@ -66,3 +66,14 @@
 ### 更新：2026-05-29
 - **重夺iPhone 18 Pro OLED**：三星显示（SDC）重新锁定iPhone 18 Pro/Pro Max旗舰OLED供应主位，配合LGD分担余量。信源：Sammy Fans，AVeriTeC：Supported（0.88）
 - **Galaxy S27发布窗口**：Galaxy S27系列预计2027年2-3月全球发布，BOE正争取部分显示供应。信源：Digitimes/SamMobile，AVeriTeC：Supported（0.83）
+
+---
+### 更新：2026-06-03（日常流水线）
+- **Galaxy S27 规格汇聚**：S27/S27+ 采用 Exynos 2700（SF2P 2nm，三星Foundry）；美国版及 Ultra/Pro 采用骁龙8 Elite Gen 6。新增 Pro 型号（6.47寸，无S Pen）。Ultra 搭载 5,500mAh 硅碳电池（+10%容量），200MP ISOCELL HP6主摄+LOFIC。
+- **S27 发布时间**：2027年1-2月 Unpacked，零售2月中旬（多源，NotEnoughEvidence——无官方确认）。
+- **iPhone Fold OLED**：三星显示（SDC）获 Apple iPhone Fold 3年独家折叠 OLED 供应合同，首年约1100万片。
+
+| 日期 | 信源 | AVeriTeC | 摘要 |
+|------|------|---------|------|
+| 2026-06-03 | Tech.SportsKeeda / Memeburn / AndroidHeadlines | Supported | S27双芯：Exynos 2700(SF2P 2nm)+骁龙EG6；新增Pro 6.47寸；Ultra 5500mAh硅碳+200MP HP6 |
+| 2026-06-03 | MacRumors / The Gadgeteer | Supported | SDC独家3年iPhone Fold OLED合同，~1100万折叠面板/首年 |
