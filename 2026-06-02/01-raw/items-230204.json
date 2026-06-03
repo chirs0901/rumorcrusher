@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "title": "苹果/高通/联发科三家2026年同步迁移2nm制程，规格竞争力减弱促使OEM转向AI体验差异化",
+    "source": "digitimes.com",
+    "url": "https://www.digitimes.com/news/a20260120PD205/mediatek-qualcomm-smartphone-2nm-technology.html",
+    "lang": "en",
+    "category": "chip",
+    "claim": "苹果、高通、联发科在2026年同步推进2nm芯片，规格参数对消费者的吸引力下降，OEM转向AI体验作为主要卖点",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 2,
+    "title": "三星Exynos 2600：全球首款2nm GAA AP，AI性能提升113%，良率爬坡至约50%",
+    "source": "trendforce.com / androidheadlines.com / semiwiki.com",
+    "url": "https://www.trendforce.com/news/2025/12/19/news-samsung-officially-unveils-exynos-2600-industry-first-2nm-gaa-ap-with-113-ai-performance-uplift",
+    "lang": "en",
+    "category": "chip",
+    "claim": "三星Exynos 2600是全球首款2nm GAA工艺AP，AI性能比上代提升113%；2026年初良率约30%，后改善至约50%；已在三星官网标注量产状态",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 3,
+    "title": "OpenAI联合高通/联发科开发AI手机芯片，2028年量产；最新报道倾向联发科天玑9600定制版",
+    "source": "decrypt.co / cnbc.com / thenextweb.com / business-standard.com",
+    "url": "https://decrypt.co/365726/openai-smartphone-chip-qualcomm-mediatek",
+    "lang": "en",
+    "category": "chip",
+    "claim": "OpenAI正与高通和联发科合作开发AI智能手机专用芯片，Luxshare负责系统联合设计与制造；目标2028年量产，年出货量3~4亿部；最新报道称OpenAI倾向选择联发科天玑9600定制版；高通股价当日上涨12%",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 4,
+    "title": "OpenAI AI手机定位：以AI Agent取代App，轻推理本地处理，重推理卸载云端",
+    "source": "thenextweb.com",
+    "url": "https://thenextweb.com/news/openai-qualcomm-ai-phone-agents-replace-apps",
+    "lang": "en",
+    "category": "chip",
+    "claim": "OpenAI AI手机核心理念是以AI Agent完全取代传统App；设备端负责上下文感知、记忆管理和小模型推理，复杂推理卸载至云端；目标3~4亿部/年出货量",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 5,
+    "title": "小米玄戒O1芯片出货超100万颗，将用于小米汽车；玄戒O2预计2026年8月上市",
+    "source": "guancha.cn / citnews.com.cn / finance.sina.com.cn",
+    "url": "https://www.guancha.cn/economy/2026_04_28_815212.shtml",
+    "lang": "zh",
+    "category": "chip",
+    "claim": "雷军2026年4月27日宣布小米玄戒O1出货超100万颗，搭载于小米15S Pro/平板7 Ultra/平板7S Pro；后续将覆盖手机+平板+汽车+穿戴全生态；玄戒O1采用台积电第二代3nm制程；玄戒O2预计2026年8月发布",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 6,
+    "title": "苹果折叠iPhone铰链缺陷致量产延迟，从6月推至8月；供价$2000~$2500",
+    "source": "apple.gadgethacks.com / appleinsider.com / macrumors.com",
+    "url": "https://apple.gadgethacks.com/news/foldable-iphone-hinge-issues-whats-stalling-apples-2026-plans/",
+    "lang": "en",
+    "category": "brands",
+    "claim": "苹果折叠iPhone铰链在高频开合耐久测试中持续未达质控标准，量产开始时间从2026年6月推迟至8月；外屏5.5英寸/内屏7.8英寸；Amphenol确认为主要铰链供应商；液态金属铰链+结构玻璃中框；SDC准备700~800万片折叠屏；预计售价$2000~$2500",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 7,
+    "title": "苹果折叠iPhone屏幕折痕问题已解决，与三星合作重构面板结构",
+    "source": "appleinsider.com / apple.gadgethacks.com",
+    "url": "https://appleinsider.com/articles/25/11/24/iphone-fold-nears-mass-production-screen-crease-issue-rumored-to-be-solved",
+    "lang": "en",
+    "category": "brands",
+    "claim": "苹果已通过与SDC深度合作重构面板层叠结构，从根本上消除折叠屏折痕，相关制造技术有望改变整个行业折叠屏构造方式",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 8,
+    "title": "vivo宣布2026年3月18日起涨价；OPPO跟进；行业高成本周期预计持续2~3年",
+    "source": "eastmoney.com / stcn.com / guancha.cn",
+    "url": "https://finance.eastmoney.com/a/202603163673103682.html",
+    "lang": "zh",
+    "category": "brands",
+    "claim": "vivo于2026年3月16日宣布涨价，3月18日起执行；OPPO随后跟进；全行业主流品牌3月后新机均价上调15~25%；内存成本占BOM从10~15%升至20%+，部分低端机超40%；行业预计进入2~3年高成本周期",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 9,
+    "title": "DDR4 16GB价格从$12.8暴涨至$79（2025年6月→2026年2月），AI抢占存储产能",
+    "source": "guancha.cn / bjnews.com.cn",
+    "url": "https://www.guancha.cn/economy/2026_03_16_810233.html",
+    "lang": "zh",
+    "category": "memory",
+    "claim": "DDR4 16GB现货价从2025年6月的$12.8暴涨至2026年2月的$79；手机存储采购成本较去年同期增超80%；AI服务器吞噬存储产能是根本原因",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 10,
+    "title": "苹果AR眼镜推迟至2027年底，供应链已按'苹果量级'扩产",
+    "source": "appleinsider.com / wareable.com",
+    "url": "https://appleinsider.com/articles/26/05/31/longtime-leaker-joins-others-in-saying-apple-glasses-wont-arrive-until-late-2027",
+    "lang": "en",
+    "category": "brands",
+    "claim": "多位知名爆料人士（5月31日）确认苹果AR眼镜发布延至2027年底；但台湾供应链已按苹果量级扩大产能和光学元件研发投入",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 11,
+    "title": "三星Exynos 2600良率争议：从初期30%爬坡至50%，是否足以支撑Galaxy S26全球量产",
+    "source": "semiwiki.com / androidheadlines.com / sammyfans.com",
+    "url": "https://semiwiki.com/forum/threads/samsungs-exynos-2600-hits-30-yield-on-2nm-process-a-step-toward-closing-the-gap-with-tsmc.22100/",
+    "lang": "en",
+    "category": "chip",
+    "claim": "三星Exynos 2600 2nm SF2工艺良率从初期约30%改善至约50%；三星官网标注量产状态；但50%良率相比台积电N2的70%+仍有差距，能否支撑Galaxy S26全球量产存在争议",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 12,
+    "title": "谷歌/三星 Intelligent Eyewear 2026年秋季发布，Gentle Monster/Warby Parker设计",
+    "source": "glassalmanac.com / idc.com",
+    "url": "https://glassalmanac.com/7-ar-glasses-releasing-in-2026-that-could-finally-make-wearable-ar-mainstream/",
+    "lang": "en",
+    "category": "brands",
+    "claim": "谷歌和三星合作的'Intelligent Eyewear'智能眼镜定于2026年秋季发布，由Gentle Monster和Warby Parker提供外观设计；Google/XReal联合打造的Project Aura同步推进",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 13,
+    "title": "联发科Agentic AI手机：天玑9400系列率先商业化，高通骁龙8 Elite Gen 5随后跟进",
+    "source": "digitimes.com / mactech.com",
+    "url": "https://www.digitimes.com/news/a20260120PD205/mediatek-qualcomm-smartphone-2nm-technology.html",
+    "lang": "en",
+    "category": "chip",
+    "claim": "联发科天玑9400系列成为全球首个商业化Agentic AI能力的手机芯片；高通骁龙8 Elite Gen 5及Gen 5 Pro紧随其后",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 14,
+    "title": "苹果Agentic AI手机计划：AI Agent深度融合iPhone生态，或重塑智能手机市场格局",
+    "source": "mactech.com",
+    "url": "https://www.mactech.com/2026/05/14/apples-introduction-of-an-agentic-ai-smartphone-could-significantly-reshape-the-market/",
+    "lang": "en",
+    "category": "chip",
+    "claim": "苹果计划推出Agentic AI iPhone，AI Agent深度融合iOS生态，MacTech分析认为可能显著重塑智能手机市场竞争格局",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 15,
+    "title": "千元机天塌：内存涨价重创低价手机，部分低端机内存成本占BOM超40%",
+    "source": "guancha.cn（远川科技评论）",
+    "url": "https://www.guancha.cn/yuanchuankejipinglun/2026_03_02_808437.shtml",
+    "lang": "zh",
+    "category": "memory",
+    "claim": "内存大涨对千元价位手机冲击最大，部分低端机存储成本已占BOM超40%；千元机利润空间几近清零，部分品牌被迫砍掉低端SKU",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 16,
+    "title": "Acer发布新款AI+AR智能眼镜，Q4 2026在美欧上市",
+    "source": "tomsguide.com",
+    "url": "https://www.tomsguide.com/computing/smart-glasses/acer-just-unveiled-new-ai-and-ar-smart-glasses-putting-more-pressure-on-meta-heres-why",
+    "lang": "en",
+    "category": "brands",
+    "claim": "Acer发布新款AI+AR智能眼镜，2026年Q4在美国和欧洲上市，加大对Meta Ray-Ban等产品的竞争压力",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 17,
+    "title": "涨价背景下Q1 2026全球智能手机出货量微增1%，渠道提前备货是主因",
+    "source": "stcn.com",
+    "url": "https://www.stcn.com/article/detail/3742734.html",
+    "lang": "zh",
+    "category": "brands",
+    "claim": "2026年Q1全球智能手机出货量在涨价预期下微增1%，主因是渠道商提前大规模备货锁定旧价库存",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 18,
+    "title": "三星Exynos 2600 2nm GAA架构详解：TSMC 1.6nm进入台积电2026年规划视野",
+    "source": "sammyfans.com",
+    "url": "https://www.sammyfans.com/2026/01/15/samsung-improves-2nm-exynos-2600-yields/",
+    "lang": "en",
+    "category": "chip",
+    "claim": "台积电已将1.6nm（N16）工艺提上2026年规划，预计2027年量产；三星同步提升Exynos 2600良率以支撑Galaxy S26",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 19,
+    "title": "OpenAI AI手机未获任何已提及公司官方确认；高通Luxshare合作细节存疑",
+    "source": "decrypt.co / qz.com",
+    "url": "https://decrypt.co/365726/openai-smartphone-chip-qualcomm-mediatek",
+    "lang": "en",
+    "category": "chip",
+    "claim": "OpenAI智能手机项目相关报道均未获OpenAI、高通、联发科或Luxshare官方确认；高通否认回应请求",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 20,
+    "title": "京东方BOE展示Micro LED+衍射光波导AR骑行眼镜S7，预计2026年6月联合车厂发布",
+    "source": "abnotebook.com",
+    "url": "https://www.abnotebook.com/a/17818",
+    "lang": "zh",
+    "category": "brands",
+    "claim": "BOE在2026年中国家电博览会展出S7 AI+AR骑行眼镜，采用Micro LED+衍射光波导技术，预计2026年6月与车厂联合发布",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 21,
+    "title": "3月后中国市场新机均价上调15~25%，为五年来最大规模手机行业涨价潮",
+    "source": "esmchina.com / guancha.cn",
+    "url": "https://www.esmchina.com/news/14008.html",
+    "lang": "zh",
+    "category": "brands",
+    "claim": "OPPO、vivo接连宣布调价后，Counterpoint预测2026年3月后中国市场新机均价较2025年同类机型上调15~25%，为近五年最大规模涨价潮",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 22,
+    "title": "小米15S Pro搭载玄戒O1，自研芯片+HyperOS+自研大模型三大技术2026年规模化落地",
+    "source": "news.pconline.com.cn",
+    "url": "https://news.pconline.com.cn/2139/21393572.html",
+    "lang": "zh",
+    "category": "chip",
+    "claim": "小米2026年在核心终端实现三大自研技术（玄戒芯片+HyperOS+自研AI大模型）规模化落地；玄戒O1出货超百万后，玄戒O2预计8月发布，仍采用台积电N3E工艺",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 23,
+    "title": "苹果折叠iPhone预计2026年秋季随iPhone 18系列同步发布，起售价逾$2000",
+    "source": "macrumors.com / the-gadgeteer.com / zeerawireless.com",
+    "url": "https://www.macrumors.com/guide/foldable-iphone/",
+    "lang": "en",
+    "category": "brands",
+    "claim": "苹果折叠iPhone（或命名iPhone Fold/iPhone Ultra）预计2026年秋季与iPhone 18系列同步发布；分析师郭明錤预测售价$2000~$2500；Ming-Chi Kuo等主要分析师预期一致",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 24,
+    "title": "2026年约三分之一智能手机售价超$500，苹果高通两家越卖越少但越赚越多",
+    "source": "androidauthority.com",
+    "url": "https://www.androidauthority.com/smartphone-soc-shipments-declining-in-2026-3636273/",
+    "lang": "en",
+    "category": "chip",
+    "claim": "2026年约1/3智能手机售价超$500；苹果和高通出货量下滑但因高端溢价营收反增；整体市场价格带上移",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 25,
+    "title": "台积电1.6nm（N16）已进入2026年技术路线图，三星SF2良率追赶但仍落后",
+    "source": "sammyfans.com",
+    "url": "https://www.sammyfans.com/2026/01/15/samsung-improves-2nm-exynos-2600-yields/",
+    "lang": "en",
+    "category": "chip",
+    "claim": "台积电1.6nm制程已进入官方路线图，预计2027年量产；三星SF2（2nm）良率仍落后于台积电N2（>70%），差距在缩小",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 26,
+    "title": "苹果折叠iPhone铰链供应商Amphenol（美国）确定，竞争来自韩国和中国厂商",
+    "source": "trendforce.com / apple.gadgethacks.com",
+    "url": "https://www.trendforce.com/news/2025/08/25/news-apples-first-foldable-iphone-set-for-2026-as-hinge-suppliers-from-korea-u-s-and-china-compete/",
+    "lang": "en",
+    "category": "brands",
+    "claim": "苹果折叠iPhone铰链供应商已缩小至Amphenol（美国）为主要供应商，此前曾有韩国和中国厂商参与竞标",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 27,
+    "title": "2026年Q1涨价预期下渠道备货导致出货微增，但Q2~Q3高库存风险上升",
+    "source": "stcn.com",
+    "url": "https://www.stcn.com/article/detail/3742734.html",
+    "lang": "zh",
+    "category": "brands",
+    "claim": "Q1出货微增主因是渠道商涨价前大规模备货，实际消费需求并未显著改善，Q2~Q3存在渠道高库存压力",
+    "collected_at": "2026-06-02T23:02:00Z"
+  },
+  {
+    "id": 28,
+    "title": "Meta正开发四款AR/MR头显及一款智能手表，生态卡位竞争加剧",
+    "source": "glassalmanac.com",
+    "url": "https://glassalmanac.com/7-ar-moves-shaping-2026-that-could-upend-the-smart-glasses-market/",
+    "lang": "en",
+    "category": "brands",
+    "claim": "Meta正同步开发四款AR/MR头显产品线及一款智能手表，在可穿戴AI硬件赛道加大生态布局",
+    "collected_at": "2026-06-02T23:02:00Z"
+  }
+]

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RumorCrusher ☀️ 晨报 2026-06-02</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Helvetica Neue',Arial,sans-serif;background:#f5f5f5;color:#222;font-size:14px}
+  .header{background:#111;color:#fff;padding:18px 28px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .header-meta{background:#e63946;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;letter-spacing:.5px}
+  .header-meta.makeup{background:#7c3aed}
+  .header-title{font-size:22px;font-weight:800;letter-spacing:-.3px}
+  .header-sub{font-size:12px;color:#aaa;margin-left:auto}
+  .container{max-width:1100px;margin:24px auto;padding:0 16px}
+  .drift-banner{background:#fff3cd;border:1px solid #ffc107;border-radius:8px;padding:12px 16px;margin-bottom:18px;font-size:12px;color:#856404}
+  .drift-banner strong{color:#533f03}
+  .stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:24px}
+  .stat-card{background:#fff;border-radius:8px;padding:16px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+  .stat-num{font-size:28px;font-weight:800;color:#111}
+  .stat-label{font-size:11px;color:#777;margin-top:4px}
+  .stat-card.ok .stat-num{color:#2a9d8f}
+  .stat-card.warn .stat-num{color:#e76f51}
+  .window-banner{background:#fff;border-left:4px solid #e63946;border-radius:0 8px 8px 0;padding:14px 18px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+  .window-banner h3{font-size:13px;font-weight:700;margin-bottom:8px}
+  .window-banner ul{padding-left:16px;color:#444;font-size:13px;line-height:1.9}
+  .section-title{font-size:13px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:.8px;margin:20px 0 10px}
+  .items-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+  .item-card{background:#fff;border-radius:8px;padding:14px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+  .item-header{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+  .cat-chip{background:#1a73e8;color:#fff;font-size:10px;padding:2px 7px;border-radius:3px;font-weight:600}
+  .cat-mem{background:#00b4d8;color:#fff;font-size:10px;padding:2px 7px;border-radius:3px;font-weight:600}
+  .cat-ai{background:#7c3aed;color:#fff;font-size:10px;padding:2px 7px;border-radius:3px;font-weight:600}
+  .cat-disp{background:#10b981;color:#fff;font-size:10px;padding:2px 7px;border-radius:3px;font-weight:600}
+  .cat-bat{background:#f59e0b;color:#fff;font-size:10px;padding:2px 7px;border-radius:3px;font-weight:600}
+  .cat-brand{background:#e040fb;color:#fff;font-size:10px;padding:2px 7px;border-radius:3px;font-weight:600}
+  .verdict-s{color:#2a9d8f;font-size:10px;font-weight:700}
+  .verdict-c{color:#e76f51;font-size:10px;font-weight:700}
+  .item-title{font-size:13px;font-weight:600;line-height:1.4;margin-bottom:6px}
+  .item-body{font-size:12px;color:#555;line-height:1.6}
+  .item-src{font-size:10px;color:#999;margin-top:6px}
+  .launch-table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.07);margin-bottom:24px}
+  .launch-table th{background:#222;color:#fff;text-align:left;padding:10px 14px;font-size:11px;font-weight:700;text-transform:uppercase}
+  .launch-table td{padding:10px 14px;border-bottom:1px solid #f0f0f0;font-size:12px}
+  .launch-table tr:last-child td{border:none}
+  .conf-h{background:#d1fae5;color:#065f46;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px}
+  .conf-m{background:#fef3c7;color:#92400e;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px}
+  .conf-l{background:#fee2e2;color:#991b1b;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px}
+  .warn-box{background:#fffbeb;border:1px solid #fcd34d;border-radius:8px;padding:14px 18px;margin-bottom:24px}
+  .warn-box h4{color:#92400e;font-size:13px;font-weight:700;margin-bottom:6px}
+  .warn-box p{font-size:12px;color:#555;line-height:1.6}
+  footer{background:#111;color:#777;text-align:center;padding:16px;font-size:11px;margin-top:40px}
+  footer a{color:#aaa;text-decoration:none;margin:0 6px}
+  footer a:hover{color:#fff}
+  @media(max-width:700px){.stats-grid{grid-template-columns:repeat(2,1fr)}.items-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <span class="header-meta">☀️ 晨报版</span>
+  <span class="header-meta" style="background:#333">2026-06-02</span>
+  <span class="header-meta makeup">补跑</span>
+  <span class="header-title">RumorCrusher · 手机行业情报核查</span>
+  <span class="header-sub">批次 morning-230204 · v0.7</span>
+</div>
+
+<div class="container">
+
+  <!-- 日期漂移修复说明 -->
+  <div class="drift-banner">
+    <strong>🔧 日期漂移已修复：</strong>上次执行时沙盒时钟（BASH_DATE）落后约22小时，误将2026-06-02的数据写入2026-06-01目录。已修复为强制使用系统注入 CTX_DATE，本次为正确的2026-06-02补跑产出。
+  </div>
+
+  <!-- 统计数字块 -->
+  <div class="stats-grid">
+    <div class="stat-card ok">
+      <div class="stat-num">28</div>
+      <div class="stat-label">采集条数</div>
+    </div>
+    <div class="stat-card ok">
+      <div class="stat-num">14</div>
+      <div class="stat-label">Supported</div>
+    </div>
+    <div class="stat-card warn">
+      <div class="stat-num">4</div>
+      <div class="stat-label">冲突证据</div>
+    </div>
+    <div class="stat-card ok">
+      <div class="stat-num">84</div>
+      <div class="stat-label">健康评分</div>
+    </div>
+    <div class="stat-card ok">
+      <div class="stat-num">0.80</div>
+      <div class="stat-label">AVeriTeC 均分</div>
+    </div>
+  </div>
+
+  <!-- 本日要点 -->
+  <div class="window-banner">
+    <h3>📋 今日核心动向</h3>
+    <ul>
+      <li>三星Exynos 2600：全球首款2nm GAA AP，良率从30%爬坡至约50%，但仍落后台积电N2（70%+）</li>
+      <li>小米玄戒O1出货超100万颗（雷军官宣），将扩展至汽车；玄戒O2预计8月发布</li>
+      <li>苹果折叠iPhone铰链质控问题致量产延至8月，秋季发布不变，起售价$2000~$2500</li>
+      <li>vivo/OPPO官宣涨价，3月后新机均价+15~25%，为五年最大规模涨价潮</li>
+      <li>OpenAI+高通/联发科AI手机芯片曝光，2028年量产目标，无官方确认，供应商选择报道相互冲突</li>
+      <li>苹果AR眼镜延至2027年底；谷歌/三星Intelligent Eyewear 2026年秋季发布</li>
+    </ul>
+  </div>
+
+  <!-- 关键时间节点 -->
+  <div class="section-title">🗓️ 关键时间节点</div>
+  <table class="launch-table">
+    <thead>
+      <tr><th>时间</th><th>事件</th><th>类别</th><th>置信度</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2026年4月27日</td>
+        <td>小米玄戒O1出货超100万颗（雷军官宣）</td>
+        <td><span class="cat-chip">芯片</span></td>
+        <td><span class="conf-h">官方确认</span></td>
+      </tr>
+      <tr>
+        <td>2026年8月</td>
+        <td>苹果折叠iPhone量产开始（从6月延迟）</td>
+        <td><span class="cat-brand">品牌</span></td>
+        <td><span class="conf-h">高置信</span></td>
+      </tr>
+      <tr>
+        <td>2026年秋季</td>
+        <td>苹果折叠iPhone正式发布，$2000~$2500</td>
+        <td><span class="cat-brand">品牌</span></td>
+        <td><span class="conf-h">高置信</span></td>
+      </tr>
+      <tr>
+        <td>2026年秋季</td>
+        <td>谷歌/三星 Intelligent Eyewear 发布</td>
+        <td><span class="cat-brand">品牌</span></td>
+        <td><span class="conf-m">中置信</span></td>
+      </tr>
+      <tr>
+        <td>2026年8月</td>
+        <td>小米玄戒O2发布（N3E，第三方预测）</td>
+        <td><span class="cat-chip">芯片</span></td>
+        <td><span class="conf-m">中置信</span></td>
+      </tr>
+      <tr>
+        <td>2027年底</td>
+        <td>苹果AR智能眼镜（从2026推迟）</td>
+        <td><span class="cat-brand">品牌</span></td>
+        <td><span class="conf-h">高置信</span></td>
+      </tr>
+      <tr>
+        <td>2028年</td>
+        <td>OpenAI AI手机芯片量产（无官方确认）</td>
+        <td><span class="cat-ai">AI</span></td>
+        <td><span class="conf-l">低置信</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 芯片动态 -->
+  <div class="section-title">🔵 芯片 / SoC</div>
+  <div class="items-grid">
+    <div class="item-card">
+      <div class="item-header"><span class="cat-chip">芯片</span><span class="verdict-s">✅ Supported</span></div>
+      <div class="item-title">三星Exynos 2600：全球首款2nm GAA AP，AI性能+113%，良率约50%</div>
+      <div class="item-body">TrendForce+SemiWiki+AndroidHeadlines+三星官网四源印证。良率从初期30%改善至50%，仍落后台积电N2的70%+。Galaxy S26全球量产支撑能力受到业界关注。</div>
+      <div class="item-src">trendforce.com · semiwiki.com · semiconductor.samsung.com</div>
+    </div>
+    <div class="item-card">
+      <div class="item-header"><span class="cat-chip">芯片</span><span class="verdict-s">✅ Supported（官方）</span></div>
+      <div class="item-title">小米玄戒O1出货超100万颗，扩展至汽车生态；台积电第二代3nm制程</div>
+      <div class="item-body">雷军2026年4月27日投资者日官方宣布。搭载：小米15S Pro / 平板7 Ultra / 平板7S Pro。后续将用于小米汽车。玄戒O2预计8月上市（第三方预测）。</div>
+      <div class="item-src">guancha.cn · finance.sina.com.cn（官方）</div>
+    </div>
+    <div class="item-card">
+      <div class="item-header"><span class="cat-chip">芯片</span><span class="verdict-s">✅ Supported</span></div>
+      <div class="item-title">台积电1.6nm（A16）进入官方路线图，2027年量产；三星SF2差距缩小但持续存在</div>
+      <div class="item-body">台积电将于2027年推出A16（1.6nm）工艺，进一步扩大制程领先优势。三星SF2 50% vs TSMC N2 70%+，差距在缩小但尚未追平。</div>
+      <div class="item-src">sammyfans.com（台积电官方路线图）</div>
+    </div>
+    <div class="item-card">
+      <div class="item-header"><span class="cat-ai">AI芯片</span><span class="verdict-c">⚠️ ConflictingEvidence</span></div>
+      <div class="item-title">OpenAI AI手机芯片：高通/联发科合作，2028量产目标——供应商选择相互冲突，无官方确认</div>
+      <div class="item-body">CNBC/Decrypt/TheNextWeb报道高通+联发科双供应商；Business Standard（5月5日）称倾向仅联发科天玑9600定制版。高通股价+12%为情绪反应。所有公司均未确认。</div>
+      <div class="item-src">cnbc.com · decrypt.co · business-standard.com（官方未确认）</div>
+    </div>
+  </div>
+
+  <!-- 品牌/折叠屏 -->
+  <div class="section-title">📱 折叠手机 / AR眼镜</div>
+  <div class="items-grid">
+    <div class="item-card">
+      <div class="item-header"><span class="cat-brand">品牌</span><span class="verdict-s">✅ Supported</span></div>
+      <div class="item-title">苹果折叠iPhone铰链延迟量产至8月；$2000~$2500；Amphenol铰链+SDC 700~800万折叠面板</div>
+      <div class="item-body">外屏5.5"/内屏7.8"；液态金属铰链铰链质控不达标导致从6月延至8月量产；秋季发布不变；郭明錤等多分析师确认$2000~$2500定价。</div>
+      <div class="item-src">appleinsider.com · macrumors.com · trendforce.com</div>
+    </div>
+    <div class="item-card">
+      <div class="item-header"><span class="cat-brand">品牌</span><span class="verdict-s">✅ Supported</span></div>
+      <div class="item-title">苹果AR眼镜推至2027年底；谷歌/三星Intelligent Eyewear 2026年秋季发布</div>
+      <div class="item-body">多位知名爆料人5月31日一致确认苹果眼镜2027年底；台湾供应链已按苹果量级扩产。谷歌/三星合作眼镜秋季发布，Gentle Monster/Warby Parker设计。</div>
+      <div class="item-src">appleinsider.com · wareable.com · glassalmanac.com</div>
+    </div>
+  </div>
+
+  <!-- 内存/涨价 -->
+  <div class="section-title">💰 手机涨价 / 内存</div>
+  <div class="items-grid">
+    <div class="item-card">
+      <div class="item-header"><span class="cat-brand">品牌</span><span class="verdict-s">✅ Supported</span></div>
+      <div class="item-title">vivo/OPPO官宣涨价，3月后新机均价+15~25%，为五年最大规模涨价潮</div>
+      <div class="item-body">vivo 3月18日起执行，OPPO跟进。Counterpoint预测均价+15~25%。内存占BOM升至20%+（低端机超40%）。高成本周期预计持续2~3年。</div>
+      <div class="item-src">eastmoney.com（vivo官方）· Counterpoint via esmchina.com</div>
+    </div>
+    <div class="item-card">
+      <div class="item-header"><span class="cat-mem">内存</span><span class="verdict-c">⚠️ 注意框架</span></div>
+      <div class="item-title">DDR4 内存价格数据：现货价$12.8→$79≠OEM实际采购成本</div>
+      <div class="item-body">⚠️ 多媒体引用的$12.8→$79为消费市场零售现货价，非OEM长约采购价。OEM实际采购成本涨幅约40~80%（TrendForce）。两者混用存在误导性框架问题。</div>
+      <div class="item-src">guancha.cn · bjnews.com.cn（附逻辑谬误标注）</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  RumorCrusher v0.7 · ☀️ 晨报版（补跑）· 2026-06-02 23:02 CST
+  <br style="margin-top:6px">
+  <a href="03-quality-report-morning-230204.md">质检报告</a> ·
+  <a href="04-clean-report-morning-230204.md">干净报告</a> ·
+  <a href="../knowledge-base/index.html">手机知识库</a> ·
+  <a href="../wiki/index.html">LLM Wiki</a>
+</footer>
+
+</body>
+</html>

@@ -3,41 +3,242 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RumorCrusher · 2026-06-01</title>
+<title>RumorCrusher ☀️ 晨报 2026-06-01</title>
 <style>
-body{font-family:-apple-system,"PingFang SC",sans-serif;background:#f2f2ef;color:#111;line-height:1.6}
-.header{background:#111;color:#fff;padding:48px 28px 36px;text-align:center}
-.header-title{font-size:36px;font-weight:800}
-.header-sub{font-size:14px;color:#999;margin-top:8px}
-main{max-width:800px;margin:0 auto;padding:28px}
-.card{background:#fff;border-radius:8px;padding:24px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
-.card h2{font-size:18px;margin-bottom:12px}
-.status-ok{color:#22c55e}
-.status-warn{color:#f59e0b}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Helvetica Neue',Arial,sans-serif;background:#f5f5f5;color:#222;font-size:14px}
+  .header{background:#111;color:#fff;padding:18px 28px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .header-meta{background:#e63946;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;letter-spacing:.5px}
+  .header-title{font-size:22px;font-weight:800;letter-spacing:-.3px}
+  .header-sub{font-size:12px;color:#aaa;margin-left:auto}
+  .container{max-width:1100px;margin:24px auto;padding:0 16px}
+  .stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:24px}
+  .stat-card{background:#fff;border-radius:8px;padding:16px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+  .stat-num{font-size:28px;font-weight:800;color:#111}
+  .stat-label{font-size:11px;color:#777;margin-top:4px}
+  .stat-card.ok .stat-num{color:#2a9d8f}
+  .stat-card.warn .stat-num{color:#e76f51}
+  .stat-card.flag .stat-num{color:#e63946}
+  .window-banner{background:#fff;border-left:4px solid #e63946;border-radius:0 8px 8px 0;padding:14px 18px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+  .window-banner h3{font-size:13px;font-weight:700;margin-bottom:8px;color:#111}
+  .window-banner ul{padding-left:16px;color:#444;font-size:13px;line-height:1.8}
+  .section-title{font-size:13px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:.8px;margin:20px 0 10px}
+  .items-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+  .item-card{background:#fff;border-radius:8px;padding:14px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+  .item-header{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .cat-chip{background:#1a73e8;color:#fff;font-size:10px;padding:2px 7px;border-radius:3px;font-weight:600}
+  .cat-mem{background:#00b4d8;color:#fff;font-size:10px;padding:2px 7px;border-radius:3px;font-weight:600}
+  .cat-mfr{background:#e040fb;color:#fff;font-size:10px;padding:2px 7px;border-radius:3px;font-weight:600}
+  .cat-ai{background:#7c3aed;color:#fff;font-size:10px;padding:2px 7px;border-radius:3px;font-weight:600}
+  .cat-disp{background:#10b981;color:#fff;font-size:10px;padding:2px 7px;border-radius:3px;font-weight:600}
+  .cat-bat{background:#f59e0b;color:#fff;font-size:10px;padding:2px 7px;border-radius:3px;font-weight:600}
+  .verdict-s{color:#2a9d8f;font-size:10px;font-weight:700}
+  .verdict-c{color:#e76f51;font-size:10px;font-weight:700}
+  .verdict-r{color:#e63946;font-size:10px;font-weight:700}
+  .item-title{font-size:13px;font-weight:600;line-height:1.4;margin-bottom:6px}
+  .item-body{font-size:12px;color:#555;line-height:1.6}
+  .item-src{font-size:10px;color:#999;margin-top:6px}
+  .launch-table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.07);margin-bottom:24px}
+  .launch-table th{background:#222;color:#fff;text-align:left;padding:10px 14px;font-size:11px;font-weight:700;text-transform:uppercase}
+  .launch-table td{padding:10px 14px;border-bottom:1px solid #f0f0f0;font-size:12px}
+  .launch-table tr:last-child td{border:none}
+  .conf-h{background:#d1fae5;color:#065f46;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px}
+  .conf-m{background:#fef3c7;color:#92400e;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px}
+  .conf-l{background:#fee2e2;color:#991b1b;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px}
+  .refuted-box{background:#fff5f5;border:1px solid #fca5a5;border-radius:8px;padding:14px 18px;margin-bottom:24px}
+  .refuted-box h4{color:#e63946;font-size:13px;font-weight:700;margin-bottom:8px}
+  .refuted-box p{font-size:12px;color:#555;line-height:1.6}
+  footer{background:#111;color:#777;text-align:center;padding:16px;font-size:11px;margin-top:40px}
+  footer a{color:#aaa;text-decoration:none;margin:0 6px}
+  footer a:hover{color:#fff}
+  @media(max-width:700px){.stats-grid{grid-template-columns:repeat(2,1fr)}.items-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+
 <div class="header">
-  <div class="header-title">RumorCrusher</div>
-  <div class="header-sub">2026-06-01 · 晨跑流水线</div>
+  <span class="header-meta">☀️ 晨报版</span>
+  <span class="header-meta" style="background:#333">2026-06-01</span>
+  <span class="header-title">RumorCrusher · 手机行业情报核查</span>
+  <span class="header-sub">批次 morning-014729 · v0.7</span>
 </div>
-<main>
-  <div class="card">
-    <h2 class="status-warn">⚠️ 流水线状态</h2>
-    <p>晨跑定时任务于 05:01 触发但被 push-failure.flag 阻塞，已于 20:50 手动补跑。</p>
-    <p>Git 推送因 GitHub 网络不通暂时跳过，autopush LaunchAgent 已暂停。</p>
+
+<div class="container">
+
+  <!-- 统计数字块 -->
+  <div class="stats-grid">
+    <div class="stat-card ok">
+      <div class="stat-num">28</div>
+      <div class="stat-label">采集条数</div>
+    </div>
+    <div class="stat-card ok">
+      <div class="stat-num">15</div>
+      <div class="stat-label">Supported</div>
+    </div>
+    <div class="stat-card warn">
+      <div class="stat-num">3</div>
+      <div class="stat-label">冲突证据</div>
+    </div>
+    <div class="stat-card ok">
+      <div class="stat-num">82</div>
+      <div class="stat-label">健康评分</div>
+    </div>
+    <div class="stat-card ok">
+      <div class="stat-num">0.79</div>
+      <div class="stat-label">AVeriTeC 均分</div>
+    </div>
   </div>
-  <div class="card">
-    <h2 class="status-ok">✅ 目录结构</h2>
-    <pre>2026-06-01/
-├── 01-raw/
-├── 02-annotations/
-└── 03-reports/</pre>
+
+  <!-- 本日要点 -->
+  <div class="window-banner">
+    <h3>📋 今日核心动向</h3>
+    <ul>
+      <li>台积电N2月产能已量产，2026年底目标14万片；苹果独占初期约50%产能</li>
+      <li>BOE以$5/片价差争夺Galaxy S27基础款OLED，测试超1个月，技术无重大障碍</li>
+      <li>HBM占DRAM晶圆产出达23%，AI需求挤压消费内存；Q1价格涨幅40-50%</li>
+      <li>硅碳电池2026年在中国旗舰机全面普及：荣耀Magic Win 10001mAh/8.3mm创新纪录</li>
+      <li>Qualcomm+CXMT 3D DRAM独立NPU方案浮现，目标2027年突破移动AI内存瓶颈</li>
+      <li>❌ 已辟谣：英伟达/高通将2nm订单转投三星，仅见单一非权威信源，与已知事实相悖</li>
+    </ul>
   </div>
-  <div class="card">
-    <h2>📋 待办</h2>
-    <p>采集器/四Agent审核/报告生成等模块仍在开发中（morning-task.sh 中 TODO）。</p>
+
+  <!-- 关键新品/事件发布日程 -->
+  <div class="section-title">🗓️ 产品/工艺关键时间节点</div>
+  <table class="launch-table">
+    <thead>
+      <tr><th>时间</th><th>事件</th><th>类别</th><th>置信度</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2025 Q4</td>
+        <td>台积电 N2 正式量产（苹果A20独占初期50%产能）</td>
+        <td><span class="cat-chip">芯片</span></td>
+        <td><span class="conf-h">高置信</span></td>
+      </tr>
+      <tr>
+        <td>2026年5月底</td>
+        <td>BOE成都B16 8.6代IT AMOLED产线量产</td>
+        <td><span class="cat-disp">显示</span></td>
+        <td><span class="conf-h">高置信</span></td>
+      </tr>
+      <tr>
+        <td>2026 H2</td>
+        <td>台积电 N2P 量产（性能再+5~10%）</td>
+        <td><span class="cat-chip">芯片</span></td>
+        <td><span class="conf-h">高置信</span></td>
+      </tr>
+      <tr>
+        <td>2026年</td>
+        <td>联发科天玑9600（首款2nm手机芯片）量产</td>
+        <td><span class="cat-chip">芯片</span></td>
+        <td><span class="conf-m">中置信</span></td>
+      </tr>
+      <tr>
+        <td>2026年底~2027</td>
+        <td>三星评估引入硅碳电池（Galaxy系列）</td>
+        <td><span class="cat-bat">电池</span></td>
+        <td><span class="conf-m">中置信</span></td>
+      </tr>
+      <tr>
+        <td>2027年</td>
+        <td>Qualcomm+CXMT 3D DRAM NPU模组（官方未确认）</td>
+        <td><span class="cat-ai">AI</span></td>
+        <td><span class="conf-l">低置信</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 芯片动态 -->
+  <div class="section-title">🔵 芯片 / SoC</div>
+  <div class="items-grid">
+    <div class="item-card">
+      <div class="item-header"><span class="cat-chip">芯片</span><span class="verdict-s">✅ Supported</span></div>
+      <div class="item-title">台积电N2量产：月产能目标14万片，苹果独占50%</div>
+      <div class="item-body">Q4 2025量产，初期3.5万片/月→2026底14万片；$30k/片；N2P将于H2 2026量产，性能再+5~10%；试产良率已超70%。</div>
+      <div class="item-src">eet-china.com · finance.sina.com.cn · c114.net.cn</div>
+    </div>
+    <div class="item-card">
+      <div class="item-header"><span class="cat-chip">芯片</span><span class="verdict-s">✅ Supported</span></div>
+      <div class="item-title">联发科天玑9600：首款2nm手机芯片</div>
+      <div class="item-body">联发科跳过N3直接采用台积电N2，天玑9600将成为首款2nm量产手机SoC，与骁龙8 Elite Gen 6同期竞争2026年旗舰市场。</div>
+      <div class="item-src">news.qq.com</div>
+    </div>
+    <div class="item-card">
+      <div class="item-header"><span class="cat-chip">芯片</span><span class="verdict-s">✅ Supported</span></div>
+      <div class="item-title">2026年手机SoC：联发科34%领跑，出货-7%但营收正增长</div>
+      <div class="item-body">联发科(34%)>高通(24.7%)>苹果(18.3%)。出货量同比降7%，AI旗舰溢价推动营收两位数增长；先进制程占市值约50%。</div>
+      <div class="item-src">Counterpoint Research via sohu.com</div>
+    </div>
+    <div class="item-card">
+      <div class="item-header"><span class="cat-ai">AI芯片</span><span class="verdict-c">⚠️ ConflictingEvidence</span></div>
+      <div class="item-title">Qualcomm+CXMT：3D DRAM独立NPU模组，目标2027年突破移动AI内存瓶颈</div>
+      <div class="item-body">约40 TOPS AI算力，4GB堆叠内存（TSV+混合键合）。多媒体报道但高通官方未确认；BOM成本增加、地缘合规风险存疑。</div>
+      <div class="item-src">SemiWiki · Digitimes · WCCFTech（官方未确认）</div>
+    </div>
   </div>
-</main>
+
+  <!-- 显示屏动态 -->
+  <div class="section-title">🟢 显示屏 / OLED</div>
+  <div class="items-grid">
+    <div class="item-card">
+      <div class="item-header"><span class="cat-disp">显示</span><span class="verdict-s">✅ Supported</span></div>
+      <div class="item-title">BOE以$5/片价差争夺Galaxy S27基础款OLED，测试超1个月</div>
+      <div class="item-body">Digitimes 5月24日报道，三星MX测试BOE OLED样品逾一个月，技术无重大障碍。S27月出货约130万台，$5差价=月省约650万美元。S27+/Ultra仍用SDC。</div>
+      <div class="item-src">digitimes.com · gsmarena.com · androidheadlines.com</div>
+    </div>
+    <div class="item-card">
+      <div class="item-header"><span class="cat-disp">显示</span><span class="verdict-s">✅ Supported</span></div>
+      <div class="item-title">三星Display收回iPhone 18 Pro OLED业务；BOE苹果供应链份额承压</div>
+      <div class="item-body">SDC重新主供iPhone 18 Pro；2026年苹果OLED分工：SDC ~1.2亿，LGD ~8500万，BOE ~5500万；SDC独家供折叠屏~1000万片。</div>
+      <div class="item-src">sammyfans.com · oled-info.com (UBI Research)</div>
+    </div>
+  </div>
+
+  <!-- 内存动态 -->
+  <div class="section-title">🔴 内存 / DRAM</div>
+  <div class="items-grid">
+    <div class="item-card">
+      <div class="item-header"><span class="cat-mem">内存</span><span class="verdict-s">✅ Supported</span></div>
+      <div class="item-title">HBM占DRAM晶圆23%，AI数据中心消耗全球70%内存——消费DRAM结构性短缺</div>
+      <div class="item-body">三星/SK海力士/美光（全球95%+DRAM产能）系统性向HBM转产；Q1 2026内存价格涨幅40~50%；手机BOM内存成本占比升至>20%；IDC预测手机市场萎缩5%。</div>
+      <div class="item-src">fortune.com · IDC · TrendForce · tech-insider.org</div>
+    </div>
+  </div>
+
+  <!-- 电池动态 -->
+  <div class="section-title">🟡 电池 / 快充</div>
+  <div class="items-grid">
+    <div class="item-card">
+      <div class="item-header"><span class="cat-bat">电池</span><span class="verdict-s">✅ Supported</span></div>
+      <div class="item-title">硅碳电池中国旗舰已普及：荣耀Magic Win 10001mAh/8.3mm创新纪录</div>
+      <div class="item-body">OnePlus 15(7300mAh)、iQOO 15 Ultra(7400mAh)、荣耀Magic Win(10001mAh/8.3mm超薄)均已量产。三星2026年2月承认评估硅碳，最早2026底或2027跟进。苹果未采用。</div>
+      <div class="item-src">technerdo.com · phonearena.com · androidheadlines.com</div>
+    </div>
+    <div class="item-card">
+      <div class="item-header"><span class="cat-bat">电池</span><span class="verdict-s">✅ Supported</span></div>
+      <div class="item-title">240W快充成中国旗舰标配：Realme GT3 9分30秒充满4600mAh</div>
+      <div class="item-body">240W有线快充已在Realme、Xiaomi等中国品牌旗舰机型普及，PhoneArena实测数据，多个测评网站独立验证。</div>
+      <div class="item-src">phonearena.com · gdwecent.com</div>
+    </div>
+  </div>
+
+  <!-- 辟谣区块 -->
+  <div class="section-title">❌ 辟谣</div>
+  <div class="refuted-box">
+    <h4>❌ 辟谣：英伟达/高通欲将2nm订单从台积电转投三星</h4>
+    <p><strong>原声称：</strong>英伟达和高通正考虑将先进2nm制程订单从台积电迁移至三星。<br>
+    <strong>核查结论：</strong>被辟谣（置信度 0.70）。仅见于icviews.cn单一小型中文媒体，无Digitimes/TechInsights/Reuters等权威信源印证；高通已公开确认台积电N2合作；三星SF2历史良率显著低于台积电N2；该传言符合竞争性舆论操控的周期性传播特征。</p>
+  </div>
+
+</div><!-- /container -->
+
+<footer>
+  <span>RumorCrusher v0.7 · ☀️ 晨报版 · 2026-06-01 05:00 CST</span><br>
+  <a href="03-quality-report-morning-014729.md">质检报告</a> ·
+  <a href="04-clean-report-morning-014729.md">干净报告</a> ·
+  <a href="../knowledge-base/index.html">手机知识库</a> ·
+  <a href="../wiki/index.html">LLM Wiki</a>
+</footer>
+
 </body>
 </html>
