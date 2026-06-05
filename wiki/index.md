@@ -79,6 +79,10 @@
   3. 30 天内无新证据则迁移到"历史争议"子区
 
 ## 五、变更日志
+- **2026-06-05**：自动采集新增/更新实体 Google Honor Oppo Samsung Xiaomi（共5个）
+- **2026-06-04**：自动采集新增/更新实体 Apple Google 苹果（共3个）
+
+- **2026-06-05**：自动采集新增/更新实体 Google Honor Oppo Samsung Xiaomi（共5个）
 
 - **2026-05-14**：初始化索引 + 5 个种子页面（snapdragon-8-elite-gen5 / huawei / silicon-carbon-anode / 2026-flagship-imaging-war / foldable-2026）
 - **2026-05-15**：新增实体页面 nvidia.md；新增主题页面 ai-misinformation-2026.md / deepfake-2026.md；更新索引

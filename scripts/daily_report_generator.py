@@ -250,42 +250,122 @@ def generate_self_eval(date_str: str, ts: str, results: List[Dict],
 
 
 def update_wiki(date_str: str, results: List[Dict]):
-    """从日报数据更新 wiki 知识图谱"""
+    """从日报数据更新 wiki 知识图谱 —— 创建/更新实体文件 + 变更日志"""
     wiki_index = WIKI_PATH / "index.md"
+    entities_dir = WIKI_PATH / "entities"
     if not wiki_index.exists():
         return
 
-    # 简单实体检测
     all_text = " ".join(r.get("title", "") + " " + r.get("snippet", "")
                         for r in results)
 
-    new_entities = []
-    # SoC
-    for m in re.finditer(r'(骁龙\s*[\d\w\s]*Gen\s*[\d\w]+|Snapdragon\s*[\d\w\s]*Gen\s*[\d\w]+|天玑\s*\d{4}\+?|Dimensity\s*\d{4}\+?|麒麟\s*\d{3,4}|Kirin\s*\d{3,4}|Apple\s*A\d{2})', all_text, re.IGNORECASE):
-        name = m.group(0).strip()
-        if name not in new_entities:
-            new_entities.append(name)
-    # 技术
-    for m in re.finditer(r'(LPDDR\d[EX]?|UFS\s*[\d.]+|LTPO\+?|硅碳负极|固态电池)', all_text):
-        name = m.group(0).strip()
-        if name not in new_entities:
-            new_entities.append(name)
+    # ── 多类别实体检测 ──
+    patterns = [
+        # SoC
+        (r'(骁龙\s*[\d\w\s]*Gen\s*[\d\w\+]+)', "soc"),
+        (r'(Snapdragon\s*[\d\w\s]*Gen\s*[\d\w\+]+)', "soc"),
+        (r'(天玑\s*\d{4}\+?)', "soc"),
+        (r'(Dimensity\s*\d{4}\+?)', "soc"),
+        (r'(麒麟\s*\d{3,4}\+?)', "soc"),
+        (r'(Kirin\s*\d{4}\+?)', "soc"),
+        (r'(Apple\s*A\d{2}\s*(?:Pro|Ultra)?)', "soc"),
+        (r'(Exynos\s*\d{4}\+?)', "soc"),
+        (r'(Tensor\s*G\d\+?)', "soc"),
+        # 品牌
+        (r'(华为|Huawei)', "brand"),
+        (r'(苹果|Apple)', "brand"),
+        (r'(小米|Xiaomi)', "brand"),
+        (r'(OPPO)', "brand"),
+        (r'(vivo)', "brand"),
+        (r'(三星|Samsung)', "brand"),
+        (r'(荣耀|Honor)', "brand"),
+        (r'(传音|Tecno)', "brand"),
+        (r'(摩托罗拉|Motorola)', "brand"),
+        (r'(Google|谷歌)', "brand"),
+        # 技术/供应链
+        (r'(TSMC|台积电)', "supply-chain"),
+        (r'(中芯国际|SMIC)', "supply-chain"),
+        (r'(BOE|京东方)', "display"),
+        (r'(LTPO\+?)', "display"),
+        (r'(LPDDR\d[EX]?)', "memory"),
+        (r'(UFS\s*[\d\.]+)', "memory"),
+        (r'(HBM\d[E]?)', "memory"),
+        (r'(硅碳负极)', "battery"),
+        (r'(固态电池)', "battery"),
+        (r'(LYTIA\s*\d+)', "camera"),
+        (r'(ISOCELL\s*\w+)', "camera"),
+        (r'(UTG|超薄玻璃)', "display"),
+    ]
 
-    if not new_entities:
+    entities_found = {}
+    for pattern, category in patterns:
+        for m in re.finditer(pattern, all_text, re.IGNORECASE):
+            name = m.group(0).strip()
+            key = f"{category}/{name.lower().replace(' ','-')}"
+            if key not in entities_found:
+                entities_found[key] = {"name": name, "category": category, "titles": set()}
+
+    # 关联新闻标题
+    for r in results:
+        title = r.get("title", "")
+        snippet = r.get("snippet", "")
+        combined = title + " " + snippet
+        for key, info in entities_found.items():
+            if info["name"].lower() in combined.lower():
+                info["titles"].add(title[:80])
+
+    if not entities_found:
+        print("  无新增实体")
         return
 
-    # 更新 index.md
-    content = wiki_index.read_text(encoding="utf-8")
-    entry = f"\n- **{date_str}**：自动采集发现新实体"
-    for e in new_entities[:10]:
-        entry += f" {e}"
-    entry += "（待建档）"
+    # ── 创建/更新实体 wiki 文件 ──
+    created = 0
+    updated = 0
+    for key, info in entities_found.items():
+        entity_file = entities_dir / f"{key}.md"
+        entity_file.parent.mkdir(parents=True, exist_ok=True)
 
-    if "## 三、变更日志" in content:
-        content = content.replace("## 三、变更日志", f"## 三、变更日志{entry}")
+        news_items = "\n".join(f"- {t}" for t in list(info["titles"])[:5])
+
+        if entity_file.exists():
+            content = entity_file.read_text(encoding="utf-8")
+            if f"## {date_str}" not in content:
+                content += f"\n\n## {date_str}\n{news_items}\n"
+                entity_file.write_text(content, encoding="utf-8")
+                updated += 1
+        else:
+            content = f"""# {info['name']}
+
+> 分类：{info['category']} | 自动采集入库：{date_str}
+
+## 基本信息
+
+待人工补充。
+
+## 信源历史
+
+### {date_str}
+{news_items}
+
+## 相关实体
+
+待关联。
+"""
+            entity_file.write_text(content, encoding="utf-8")
+            created += 1
+
+    # ── 更新 index.md 变更日志 ──
+    content = wiki_index.read_text(encoding="utf-8")
+    entry = f"\n- **{date_str}**：自动采集新增/更新实体"
+    for key, info in sorted(entities_found.items()):
+        entry += f" {info['name']}"
+    entry += f"（共{len(entities_found)}个）"
+
+    if "## 五、变更日志" in content:
+        content = content.replace("## 五、变更日志", f"## 五、变更日志{entry}")
     wiki_index.write_text(content, encoding="utf-8")
 
-    print(f"  wiki/index.md 已更新 ({len(new_entities)} 个新实体)")
+    print(f"  wiki 更新: {created} 新建 + {updated} 增量 ({len(entities_found)} 个实体)")
 
 
 def run(date_str: str = None):

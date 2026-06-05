@@ -55,3 +55,8 @@
 | 2026-05-27 | [OPPO India官方新闻稿](https://www.oppo.com/in/newsroom/press/) | Supported (0.91) | Find X9 Ultra印度发布，169999卢比，5月28日开售 |
 | 2026-05-27 | [Gizmochina 2026-05-25](https://www.gizmochina.com/2026/05/25/oppo-reno-16-reno-16-pro-launched-china/) | Supported (0.93) | Reno16/Pro中国发布，Dimensity 9500s，7000mAh，IP69K |
 | 2026-05-27 | [GSMArena 2026-05-21](https://www.gsmarena.com/oppo_find_x9_ultra_find_x9s_india_price_sale_date-news-72929.php) | Supported (0.91) | Find X9 Ultra印度规格确认 |
+
+
+## 2026-06-05
+- KIRIN | The KIRIN Group corporate information website
+- Điện thoại, Smartphone chính hãng, giảm đến 4 triệu, góp 0%

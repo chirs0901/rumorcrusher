@@ -66,3 +66,11 @@
 ### 更新：2026-05-29
 - **重夺iPhone 18 Pro OLED**：三星显示（SDC）重新锁定iPhone 18 Pro/Pro Max旗舰OLED供应主位，配合LGD分担余量。信源：Sammy Fans，AVeriTeC：Supported（0.88）
 - **Galaxy S27发布窗口**：Galaxy S27系列预计2027年2-3月全球发布，BOE正争取部分显示供应。信源：Digitimes/SamMobile，AVeriTeC：Supported（0.83）
+
+
+## 2026-06-05
+- Điện thoại, Smartphone chính hãng, giảm đến 4 triệu, góp 0%
+- Samsung Thailand | มือถือ สมาร์ทโฟน ทีวี และเครื่องใช้ไฟฟ้าต่างๆ
+- มือถือ Samsung (ซัมซุง) ทุกรุ่น ออกใหม่ล่าสุดพร้อมราคา
+- มือถือ Samsung (ซัมซุง) ทุกรุ่น ออกใหม่ล่าสุด ราคามือถือ สมาร์ทโฟน ...
+- Mua Điện Thoại, Smartphone Chính Hãng | Giá Tốt, Trả Góp 0%
