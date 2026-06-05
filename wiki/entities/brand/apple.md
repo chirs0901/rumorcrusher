@@ -9,3 +9,13 @@
 |------|------|---------|------|
 | 2026-06-03 | MacRumors / The Gadgeteer / AppleInsider | Supported | iPhone Fold规格汇聚：内屏7.7-7.8寸，SDC独家3年OLED，1100万片，$2000+ |
 | 2026-06-03 | TechSpot / Tom's Hardware | Supported | Apple锁定TSMC N2首批大份额产能 |
+
+### 更新：2026-06-04（iPhone 18 / A20）
+- **A20芯片**：TSMC N2工艺，A20 Pro首用WMCM封装，锁定N2超50%产能
+- **iPhone 18 Pro电池**：eSIM版4,288mAh，国行版4,056mAh（泄露，CE）
+- **iPhone 18 Pro Max**：5,100-5,200mAh（多leaker，CE）；45W快充传言（低置信度，CE）
+- **发布时间**：2026年9月（多源确认，Supported）
+
+| 日期 | 信源 | AVeriTeC标签 | 事实摘要 |
+|------|------|-------------|---------|
+| 2026-06-04 | 9to5Mac / MacRumors / Notebookcheck / PhoneArena / GulfNews | 综合CE/Sup | A20 WMCM封装Supported；电池容量CE；45W快充CE低置信 |

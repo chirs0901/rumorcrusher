@@ -143,7 +143,7 @@ a{color:inherit;text-decoration:none}
 </div>
 
 <div class="wiki-footer">
-  <span>RumorCrusher LLM Wiki · 知识飞轮每日更新 · 所有事实均有信源可追溯 · 最后更新：2026-06-03</span>
+  <span>RumorCrusher LLM Wiki · 知识飞轮每日更新 · 所有事实均有信源可追溯 · 最后更新：2026-06-04</span>
   <span><a href="../knowledge-base/index.html" onclick="event.preventDefault();location.href='../knowledge-base/index.html?t='+Date.now()">手机知识库</a> · <a href="../index.html" onclick="event.preventDefault();location.href='../index.html?t='+Date.now()">主站</a> · <a href="https://github.com/chirs0901/rumorcrusher" target="_blank">GitHub</a></span>
 </div>
 
@@ -242,7 +242,9 @@ var WIKI = {
           title: '信源历史',
           type: 'sources',
           rows: [
-            ['2026-05-14', '04-clean-report.md', 'Mate 80 发布后续报道（性能声明）', 'Conflicting Evidence'],
+            ['2026-05-14', '04-clean-report.md', 'Mate 80 发布后续报道（性能声明）', 'Conflicting Evidence'
+          ['2026-06-04', '证券时报 / 观察者网 / 搜狐科技', '华为Pura X Max大阔折+玄武铰链火箭钢 Supported；华为71.8%市占 Supported；折叠30%增长预测CE', 'Supported']
+          ],
             ['2026-05-15', '04-clean-report-220330.md', '中国市场出货量第一；HarmonyOS DJI 联动', 'Supported']
               ['2026-06-03', 'MacRumors/The Gadgeteer/新浪', 'iPhone Fold书本式内屏7.7-7.8寸+SDC独家3年OLED+$2000+; OPPO N6无折痕TÜV认证; 折叠屏+15%', 'Supported'],
           ]
@@ -463,7 +465,9 @@ var WIKI = {
           title: '信源历史',
           type: 'sources',
           rows: [
-            ['2026-05-25', 'Wccftech（综合爆料）', 'N2P + 双超大核架构汇总', 'Conflicting Evidence'],
+            ['2026-05-25', 'Wccftech（综合爆料）', 'N2P + 双超大核架构汇总', 'Conflicting Evidence'
+          ['2026-06-04', 'Notebookcheck / androidheadlines.com', '天玑9600 2+3+3全大核；GPU超A20/SD8EG6声明（CE单源）；与OpenAI AI手机关联', 'Conflicting Evidence']
+          ],
             ['2026-05-25', 'Gizmochina', 'CPU 布局爆料：2+3+3', 'Conflicting Evidence'],
             ['2026-05-25', 'AndroidHeadlines', 'N2P 制程独立消息来源', 'Conflicting Evidence']
               ['2026-06-03', 'Gizmochina/Nokiamob/Wccftech', 'Pro: TSMC N2P, 5GHz, GB6单核4200-4300/多核12000-12500, Arm Magni GPU, 双NPU+SME2, LPDDR6, UFS5.0', 'Supported'],
@@ -704,6 +708,76 @@ var WIKI = {
         }
       ]
     }
+    {
+      id: 'apple-a20',
+      name: 'Apple A20 / A20 Pro',
+      subtitle: 'TSMC N2 · WMCM封装 · iPhone 18 Pro 2026年9月',
+      type: 'entity',
+      typeLabel: '芯片',
+      color: '#0055cc',
+      icon: 'A',
+      verdict: 'Supported',
+      firstDate: '2026-06-04',
+      relations: [
+        {id: 'tsmc-n2', label: 'TSMC N2代工', kind: 'entity'},
+        {id: 'iphone-18-2026', label: '搭载机型', kind: 'topic'},
+        {id: 'wl-mcm-packaging', label: 'WMCM封装', kind: 'entity'}
+      ],
+      sections: [
+        {title: '基本信息', type: 'kv', rows: [
+          ['型号', 'Apple A20 / A20 Pro'],
+          ['代工厂', 'TSMC'],
+          ['制程', 'N2（2nm GAAFET）'],
+          ['封装', 'WMCM（A20 Pro首用，晶圆级多芯片集成）'],
+          ['预计发布', '2026年9月随iPhone 18 Pro'],
+          ['苹果产能占比', 'N2节点超50%']
+        ]},
+        {title: '关键技术', type: 'list', items: [
+          'WMCM封装：SoC与DRAM晶圆级直接集成，AI算力大幅提升',
+          'TSMC N2 GAAFET架构，同代竞品：SD8EG6 N2P / 天玑9600 N2',
+          '苹果锁定TSMC N2超50%初期产能，影响其他厂商分配',
+          'AI推理能力增强，支持更大参数量端侧LLM'
+        ]},
+        {title: '信源历史', type: 'sources', rows: [
+          ['2026-06-04', '9to5Mac / Notebookcheck / MacRumors', 'A20 Pro采用WMCM封装，苹果锁定TSMC N2超50%产能；2026年9月随iPhone 18 Pro发布', 'Supported']
+        ]}
+      ]
+    },
+    {
+      id: 'solid-state-battery',
+      name: '固态电池技术',
+      subtitle: '320-360 Wh/kg · 2026年汽车量产 · 手机端2027+',
+      type: 'entity',
+      typeLabel: '技术',
+      color: '#555555',
+      icon: 'S',
+      verdict: 'Not Enough Evidence',
+      firstDate: '2026-06-04',
+      relations: [
+        {id: 'silicon-carbon-battery', label: '上代锂电技术', kind: 'entity'},
+        {id: 'silicon-carbon-battery-2026', label: '相关趋势', kind: 'topic'}
+      ],
+      sections: [
+        {title: '基本信息', type: 'kv', rows: [
+          ['技术名称', '全固态电池（All-Solid-State Battery）'],
+          ['主要电解质', '硫化物 / 卤化物 / 氧化物'],
+          ['当前能量密度', '320-360 Wh/kg（小批量）'],
+          ['汽车端量产', '欣旺达/亿纬锂能：2026年'],
+          ['手机端量产预期', '2027-2029年（尚无明确路线图）'],
+          ['代表厂商', '欣旺达、宁德时代、亿纬锂能、三星SDI']
+        ]},
+        {title: '关键技术', type: 'list', items: [
+          '硫化物复合陶瓷电解质：原料成本降低80%',
+          '金属锂负极：比硅碳负极便宜45%，能量密度可达500Wh/kg',
+          '手机挑战：薄型化、循环寿命、低温性能仍有技术壁垒',
+          '宁德时代目前仍在实验室阶段，国内最激进为欣旺达'
+        ]},
+        {title: '信源历史', type: 'sources', rows: [
+          ['2026-06-04', '新浪财经 / OFweek锂电网', '欣旺达2026年量产320/360Wh/kg固态电池，主要面向汽车；手机端无明确时间表', 'Not Enough Evidence']
+        ]}
+      ]
+    },
+
   ],
 
   topics: [
@@ -1027,12 +1101,83 @@ var WIKI = {
           title: '信源历史',
           type: 'sources',
           rows: [
-            ['2026-05-14', '2026-05-14 干净报告', '初始建档，三机集中评测', 'Supported'],
+            ['2026-05-14', '2026-05-14 干净报告', '初始建档，三机集中评测', 'Supported'
+          ['2026-06-04', 'homescreen.pl / Digital Camera World / DXOMARK', '华为Pura 90 Pro Max 200MP RYYB潜望官方发布；索尼LYT-910首款200MP传感器；小米17 Ultra DXOMARK测试', 'Supported']
+          ],
             ['2026-05-16', '品玩 · 爱搞机', '小米磁吸镜头量产计划；vivo Vlog 相机立项', 'Supported']
           ]
         }
       ]
     }
+    {
+      id: 'iphone-18-2026',
+      name: 'iPhone 18系列前瞻',
+      subtitle: 'A20芯片 · 2nm WMCM · 5000mAh+ · 2026年9月',
+      type: 'topic',
+      typeLabel: '趋势',
+      color: '#555555',
+      icon: 'i',
+      verdict: 'Conflicting Evidence',
+      firstDate: '2026-06-04',
+      relations: [
+        {id: 'apple-a20', label: '搭载芯片', kind: 'entity'},
+        {id: 'tsmc-n2', label: '制程节点', kind: 'entity'},
+        {id: 'apple', label: '品牌', kind: 'entity'}
+      ],
+      sections: [
+        {title: '背景', type: 'kv', rows: [
+          ['预计发布', '2026年9月'],
+          ['芯片', 'A20 / A20 Pro（TSMC N2，WMCM封装）'],
+          ['iPhone 18 Pro电池(eSIM)', '4,288 mAh（泄露，CE）'],
+          ['iPhone 18 Pro电池(国行SIM)', '4,056 mAh（泄露，CE）'],
+          ['iPhone 18 Pro Max电池', '5,100-5,200 mAh（多leaker，CE）'],
+          ['有线快充', '~45W（传言，低置信度，CE）']
+        ]},
+        {title: '时间线', type: 'timeline', items: [
+          {date: '2026-05-08', text: '9to5Mac报道A20 WMCM封装+AI能力两大升级', verdict: 'Supported', sup: true},
+          {date: '2026-06-02', text: 'MacRumors泄露iPhone 18 Pro两版本电池容量差异', verdict: 'Conflicting Evidence', sup: false},
+          {date: '2026-06-04', text: '多源汇总Pro Max 5000mAh+传言；45W快充单源传言', verdict: 'Conflicting Evidence', sup: false}
+        ]},
+        {title: '信源历史', type: 'sources', rows: [
+          ['2026-06-04', '9to5Mac / MacRumors / Notebookcheck / PhoneArena / GulfNews', 'A20芯片2nm Supported；电池容量CE；45W快充CE低置信度', 'Conflicting Evidence'
+          ['2026-06-04', 'Digitimes / markets.financialcontent.com', 'CoWoS 2026底扩至13万片/月；$560亿capex历史最高，N2+A16优先', 'Supported']
+          ]
+        ]}
+      ]
+    },
+    {
+      id: 'sensor-oled-2026',
+      name: 'Samsung Sensor OLED · 2026',
+      subtitle: '500ppi生物传感 · PSF 3000nit · SID Displayweek 2026',
+      type: 'topic',
+      typeLabel: '趋势',
+      color: '#006633',
+      icon: 'S',
+      verdict: 'Supported',
+      firstDate: '2026-06-04',
+      relations: [
+        {id: 'samsung', label: '展出厂商', kind: 'entity'},
+        {id: 'boe', label: '竞争对手面板厂', kind: 'entity'}
+      ],
+      sections: [
+        {title: '背景', type: 'kv', rows: [
+          ['展示场合', 'SID Display Week 2026，洛杉矶'],
+          ['厂商', '三星显示 Samsung Display'],
+          ['Sensor OLED ppi', '500 ppi（+33% vs 前代374ppi）'],
+          ['Sensor OLED尺寸', '6.8英寸'],
+          ['内置传感器', '心率、血压（全屏感应，无需独立模组）'],
+          ['PSF OLED亮度', '3,000 nits（HBM模式）'],
+          ['PSF OLED色彩', 'BT.2020-96（无偏振片架构）']
+        ]},
+        {title: '时间线', type: 'timeline', items: [
+          {date: '2026-05', text: 'SID Displayweek 2026展示Sensor OLED（500ppi/生物传感）和PSF OLED（3000nit）', verdict: 'Supported', sup: true}
+        ]},
+        {title: '信源历史', type: 'sources', rows: [
+          ['2026-06-04', 'TechRadar / OLED-Info / SamMobile', 'Sensor OLED 500ppi+心率血压；PSF OLED 3000nits BT.2020-96；SID 2026官方展示', 'Supported']
+        ]}
+      ]
+    }
+
   ]
 };
 

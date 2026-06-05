@@ -42,3 +42,12 @@ Android Authority 2026 民调（约 4500 票）显示，最多读者认为**"AI 
 | 日期 | 关键事件 |
 |---|---|
 | 2026-05-14 | vivo X300 Ultra + OPPO Find X9 Ultra + 小米17 Max 三机集中亮相 |
+
+### 更新：2026-06-04
+- **华为Pura 90 Pro Max**：2026年4月20日官方发布，200MP RYYB 1/1.28寸潜望+f/1.4-4.0可变光圈主摄（首款量产机械可变光圈手机）
+- **索尼LYT-910**：首款200MP LYTIA传感器，挑战三星ISOCELL HM系列
+- **Xiaomi 17 Ultra**：DXOMARK测试确认在榜
+
+| 日期 | 信源 | AVeriTeC标签 | 事实摘要 |
+|------|------|-------------|---------|
+| 2026-06-04 | homescreen.pl / Gizmochina / Digital Camera World / DXOMARK | Supported | Pura 90 ProMax 200MP RYYB潜望+可变光圈官方发布；LYT-910索尼首款200MP传感器发布 |

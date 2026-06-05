@@ -1,0 +1,47 @@
+{
+  "run_date": "2026-06-04",
+  "timestamp": "135016",
+  "total_evaluated": 30,
+  "check_worthy_count": 28,
+  "excluded_count": 2,
+  "excluded_ids": ["rc025","rc026"],
+  "excluded_reasons": {
+    "rc025": "DXOMARK测试页存在但分数未公开，内容不足以核查",
+    "rc026": "欣旺达固态电池明确面向汽车，非手机供应链范围内容"
+  },
+  "priority_tiers": {
+    "tier1_high": ["rc001","rc004","rc005","rc006","rc007","rc009","rc013","rc018","rc019","rc024","rc027"],
+    "tier2_medium": ["rc002","rc003","rc008","rc010","rc011","rc014","rc021","rc022","rc023","rc028","rc030"],
+    "tier3_low": ["rc012","rc015","rc016","rc017","rc020","rc029"]
+  },
+  "check_worthy_items": [
+    {"id":"rc001","cw_score":0.95,"reason":"Apple 2nm封装技术路线重大变化，多源印证"},
+    {"id":"rc002","cw_score":0.88,"reason":"骁龙旗舰芯片性能声明，GPU vs CPU失衡需核查"},
+    {"id":"rc003","cw_score":0.85,"reason":"联发科GPU第一声明具体且可验证"},
+    {"id":"rc004","cw_score":0.92,"reason":"供应链影响直接影响消费者选购"},
+    {"id":"rc005","cw_score":0.90,"reason":"具体价格数字，影响整机定价判断"},
+    {"id":"rc006","cw_score":0.91,"reason":"CoWoS产能具体数字，多源可核查"},
+    {"id":"rc007","cw_score":0.93,"reason":"Sensor OLED官方展示，ppi数字可核查"},
+    {"id":"rc008","cw_score":0.87,"reason":"PSF OLED首次亮相，亮度/色域参数"},
+    {"id":"rc009","cw_score":0.90,"reason":"索尼首款200MP传感器，直接竞争声明"},
+    {"id":"rc010","cw_score":0.88,"reason":"iPhone电池泄露容量，两版本差异值得核查"},
+    {"id":"rc011","cw_score":0.83,"reason":"Pro Max 5000mAh+为苹果重大变化"},
+    {"id":"rc012","cw_score":0.75,"reason":"45W快充为传言，低置信度"},
+    {"id":"rc013","cw_score":0.94,"reason":"iPhone 18 A20芯片时间线关键事实"},
+    {"id":"rc014","cw_score":0.88,"reason":"NPU性能倍数声明可量化核查"},
+    {"id":"rc015","cw_score":0.82,"reason":"Exynos 2700是否实际量产仍存疑"},
+    {"id":"rc016","cw_score":0.78,"reason":"Galaxy S27显示规格为早期传言"},
+    {"id":"rc017","cw_score":0.80,"reason":"S27发布时间2027年与通常预期相符"},
+    {"id":"rc018","cw_score":0.91,"reason":"铰链材料新声明可工程核查"},
+    {"id":"rc019","cw_score":0.93,"reason":"市占率数字高度可查"},
+    {"id":"rc020","cw_score":0.72,"reason":"折叠屏增长30%为预测"},
+    {"id":"rc021","cw_score":0.89,"reason":"OPPO官方发布规格"},
+    {"id":"rc022","cw_score":0.90,"reason":"小米官方发布规格"},
+    {"id":"rc023","cw_score":0.90,"reason":"vivo官方发布规格"},
+    {"id":"rc024","cw_score":0.94,"reason":"华为官方2026年4月发布，200MP RYYB首款量产"},
+    {"id":"rc027","cw_score":0.92,"reason":"TSMC $56B capex为公司官方数字"},
+    {"id":"rc028","cw_score":0.85,"reason":"三星Taylor厂量产进度直接影响供应格局"},
+    {"id":"rc029","cw_score":0.68,"reason":"铰链市场规模预测数字"},
+    {"id":"rc030","cw_score":0.83,"reason":"QD-OLED面板规格可核查，属上游技术"}
+  ]
+}
