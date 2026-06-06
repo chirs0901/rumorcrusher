@@ -84,6 +84,11 @@
 - **2026-06-06**：自动采集新增/更新实体 Apple Google Samsung 三星 BOE UTG HBM4 LPDDR5X LPDDR6 LPDDR6X UFS 2.2 UFS 3.1（共12个）
 - **2026-06-05**：自动采集新增/更新实体 Google Honor Oppo Samsung Xiaomi（共5个）
 - **2026-06-04**：自动采集新增/更新实体 Apple Google 苹果（共3个）
+- **2026-06-03**：自动采集新增/更新实体 Apple Google HONOR HUAWEI OPPO Samsung Vivo Xiaomi 华为 小米 荣耀 中芯国际 台积电（共13个）
+- **2026-06-06**：自动采集新增/更新实体 Apple Google Samsung 三星 BOE UTG HBM4 LPDDR5X LPDDR6 LPDDR6X UFS 2.2 UFS 3.1（共12个）
+- **2026-06-06**：自动采集新增/更新实体 Apple Google Samsung 三星 BOE UTG HBM4 LPDDR5X LPDDR6 LPDDR6X UFS 2.2 UFS 3.1（共12个）
+- **2026-06-05**：自动采集新增/更新实体 Google Honor Oppo Samsung Xiaomi（共5个）
+- **2026-06-04**：自动采集新增/更新实体 Apple Google 苹果（共3个）
 
 
 - **2026-05-14**：初始化索引 + 5 个种子页面（snapdragon-8-elite-gen5 / huawei / silicon-carbon-anode / 2026-flagship-imaging-war / foldable-2026）

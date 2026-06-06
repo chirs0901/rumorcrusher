@@ -44,3 +44,8 @@
 
 ## 2026-06-05
 - Mua Điện Thoại, Smartphone Chính Hãng | Giá Tốt, Trả Góp 0%
+
+
+## 2026-06-03
+- Mua Điện Thoại, Smartphone Chính Hãng | Giá Tốt, Trả Góp 0%
+- Điện thoại, Smartphone chính hãng, giảm đến 4 triệu, góp 0%

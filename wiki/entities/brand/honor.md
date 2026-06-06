@@ -42,3 +42,10 @@
 
 ## 2026-06-05
 - Điện thoại, Smartphone chính hãng, giảm đến 4 triệu, góp 0%
+
+
+## 2026-06-03
+- 荣耀手机-HONOR新款手机-系列-型号 | 荣耀官网
+- Điện thoại, Smartphone chính hãng, giảm đến 4 triệu, góp 0%
+- Android手機 | Fortress 豐澤
+- Android手機 | Fortress 丰泽

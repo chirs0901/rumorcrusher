@@ -82,3 +82,11 @@
 - โทรศัพท์ Samsung ราคาล่าสุด มือถือซัมซุง กาแลคซี่ รุ่นใหม่ ผ่อน 0%*
 - โทรศัพท์ Samsung ทุกรุ่นใหม่ล่าสุด 2026 เช็กสเปกและราคาได้ที่นี่
 - โทรศัพท์ Samsung (ซัมซุง) ราคาล่าสุด ครบทุกรุ่นใหม่ ดีลคุ้ม
+
+
+## 2026-06-03
+- Điện thoại, Smartphone chính hãng, giảm đến 4 triệu, góp 0%
+- Mua Điện Thoại, Smartphone Chính Hãng | Giá Tốt, Trả Góp 0%
+- HBM Pricing & Market Share (2026) — SK Hynix, Samsung, Micron
+- Điện thoại Samsung Galaxy [A, S, Z] giảm đến 13tr, góp 0%
+- XTmobile.vn - Điện Thoại, iPad, MacBook, Phụ Kiện Chính Hãng TP.HCM

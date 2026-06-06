@@ -60,3 +60,10 @@
 ## 2026-06-05
 - KIRIN | The KIRIN Group corporate information website
 - Điện thoại, Smartphone chính hãng, giảm đến 4 triệu, góp 0%
+
+
+## 2026-06-03
+- Điện thoại smartphone giá rẻ, chính hãng, cũ đổi mới, mua trả chậm …
+- Điện thoại, Smartphone chính hãng, giảm đến 4 triệu, góp 0%
+- OPPO 智能手机 | OPPO 官方网站
+- KIRIN | The KIRIN Group corporate information website

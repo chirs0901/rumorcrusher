@@ -22,3 +22,11 @@
 
 ## 2026-06-06
 - Log in to your Canva account to start creating beautiful designs
+
+
+## 2026-06-03
+- Apple (ประเทศไทย)
+- Apple chính hãng mới nhất 06/2026 | Trả góp 0%, thu cũ
+- Mac - Apple (TH)
+- Apple
+- iCloud
