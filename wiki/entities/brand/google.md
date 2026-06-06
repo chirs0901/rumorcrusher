@@ -22,3 +22,9 @@
 
 ## 2026-06-04
 - Apple Music - Apps on Google Play
+
+
+## 2026-06-06
+- ‎Google Gemini
+- Log in to your Canva account to start creating beautiful designs
+- DeepSeek - AI Assistant - Apps on Google Play

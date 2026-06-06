@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-06-06T09:12:07.967826",
+  "category": "soc",
+  "queries": [
+    "Snapdragon 8 Elite Gen 6 latest news 2026",
+    "Dimensity 9600 天玑9600 最新消息",
+    "Apple A20 Pro chip TSMC 2nm",
+    "Kirin 麒麟 2026 芯片 最新",
+    "手机芯片 制程 2nm 3nm 最新动态"
+  ],
+  "results_count": 0,
+  "entities": {
+    "soc": [],
+    "brand": [],
+    "tech": [],
+    "supplier": [],
+    "display": [],
+    "camera": [],
+    "battery": [],
+    "other": []
+  },
+  "results": []
+}

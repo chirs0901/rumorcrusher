@@ -18,3 +18,7 @@
 ## 相关实体
 
 待关联。
+
+
+## 2026-06-06
+- Log in to your Canva account to start creating beautiful designs
