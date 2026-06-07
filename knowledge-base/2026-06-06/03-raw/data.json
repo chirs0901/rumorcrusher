@@ -1,0 +1,80 @@
+{
+  "timestamp": "2026-06-06T03:11:40.845150",
+  "category": "battery",
+  "queries": [
+    "硅碳负极电池 手机 2026 最新",
+    "手机快充 无线充电 功率 2026",
+    "固态电池 手机 最新进展 2026",
+    "ATL 新能源 手机电池 供应商",
+    "SiC battery smartphone 2026"
+  ],
+  "results_count": 8,
+  "entities": {
+    "soc": [],
+    "brand": [],
+    "tech": [],
+    "supplier": [],
+    "display": [],
+    "camera": [],
+    "battery": [],
+    "other": []
+  },
+  "results": [
+    {
+      "title": "The official website of Hartsfield-Jackson Atlanta International ...",
+      "url": "https://www.atl.com/",
+      "domain": "www.atl.com",
+      "snippet": "For the most up-to-date information on weather-related impacts at ATL, follow our Twitter feed @ATLairport. For flight information, please monitor your airline's communication channels.",
+      "query": "ATL 新能源 手机电池 供应商"
+    },
+    {
+      "title": "Hartsfield–Jackson Atlanta International Airport - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hartsfield–Jackson_Atlanta_International_Airport",
+      "domain": "en.wikipedia.org",
+      "snippet": "Hartsfield–Jackson Atlanta International Airport (IATA: ATL, ICAO: KATL, FAA LID: ATL) is the primary international airport serving Atlanta and its surrounding metropolitan area in the U.S. state of Georgia.",
+      "query": "ATL 新能源 手机电池 供应商"
+    },
+    {
+      "title": "ATLauncher - Download",
+      "url": "https://atlauncher.com/downloads",
+      "domain": "atlauncher.com",
+      "snippet": "Download ATLauncher today, available for Windows, Linux and OSX. Installation is simple and you can get up and running and playing modpacks quickly.",
+      "query": "ATL 新能源 手机电池 供应商"
+    },
+    {
+      "title": "Amperex Technology Limited - atlbattery.com",
+      "url": "https://www.atlbattery.com/en/index.html",
+      "domain": "www.atlbattery.com",
+      "snippet": "Apr 2, 2026 · ATL is the world's leading producer and innovator of lithium-ion batteries. We are known worldwide for our high-tech, high-volume prowess in developing, producing and packaging high quality …",
+      "query": "ATL 新能源 手机电池 供应商"
+    },
+    {
+      "title": "ATL Jamaica",
+      "url": "https://atljamaica.com/",
+      "domain": "atljamaica.com",
+      "snippet": "Shop the world's best brands for your home or business. Give us a call today! 888 ATL SERV Mon - Fri 8:00 am to 5:00 pm Sat 10:00 am to 4:00 pm Get to know us About Us Our Divisions Aftersales FAQs …",
+      "query": "ATL 新能源 手机电池 供应商"
+    },
+    {
+      "title": "ATL | Aero Tec Laboratories | World Leader in Safety Fuel Cells & Bladders",
+      "url": "https://atlinside.com/",
+      "domain": "atlinside.com",
+      "snippet": "ATL: Global leader in FIA-approved fuel cells & bladders. Supplying every F1 team for 30+ years. Custom solutions for motorsport and beyond.",
+      "query": "ATL 新能源 手机电池 供应商"
+    },
+    {
+      "title": "ATL (2006) - IMDb",
+      "url": "https://www.imdb.com/title/tt0466856/",
+      "domain": "www.imdb.com",
+      "snippet": "ATL: Directed by Chris Robinson. With Tip 'T.I.' Harris, Lauren London, Evan Ross, Greg Andrews. As four friends prepare for life after high school, different challenges bring about turning points in each of their …",
+      "query": "ATL 新能源 手机电池 供应商"
+    },
+    {
+      "title": "ATL (film) - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/ATL_(film)",
+      "domain": "en.wikipedia.org",
+      "snippet": "ATL was the first feature film for its director and the majority of its cast. Filmed in Atlanta, Georgia in summer 2005, many celebrities from the city make cameo appearances, including Bone Crusher, Jazze …",
+      "query": "ATL 新能源 手机电池 供应商"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "timestamp": "2026-06-06T04:11:43.607767",
+  "category": "supply-chain",
+  "queries": [
+    "TSMC 2nm 产能 苹果 高通 2026",
+    "中芯国际 SMIC 制程 进展 2026",
+    "Samsung Foundry 2nm GAA 2026",
+    "手机芯片 代工 产能 供应 2026",
+    "semiconductor foundry smartphone 2026"
+  ],
+  "results_count": 8,
+  "entities": {
+    "soc": [],
+    "brand": [
+      "Samsung",
+      "SAMSUNG",
+      "samsung"
+    ],
+    "tech": [],
+    "supplier": [],
+    "display": [],
+    "camera": [],
+    "battery": [],
+    "other": []
+  },
+  "results": [
+    {
+      "title": "Samsung Thailand | มือถือ สมาร์ทโฟน ทีวี …",
+      "url": "https://www.samsung.com/th/?msockid=184c8ebc70dd66751ac199d3713a67a1",
+      "domain": "www.samsung.com",
+      "snippet": "พบกับเทคโนโลยีเครื่องใช้ไฟฟ้า ทีวี ตู้เย็น เครื่องซักผ้า และโทรศัพท์มือถือ สุดล้ำจากซัมซุง ประเทศไทย ดูโปรโมชั่นและเลือก ...",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    },
+    {
+      "title": "มือถือ Samsung (ซัมซุง) ทุกรุ่น ออกใหม่ล่าสุด ราคามือถือ …",
+      "url": "https://www.siamphone.com/spec/samsung/index.htm",
+      "domain": "www.siamphone.com",
+      "snippet": "แคตตาล็อกมือถือ Samsung (ซัมซุง) โทรศัพท์มือถือ สมาร์ทโฟน แท็บเล็ต ทุกรุ่น คลิกเพื่อเลือกดูรายละเอียดตัวเครื่องในแต่ละรุ่น ...",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    },
+    {
+      "title": "โทรศัพท์ Samsung (ซัมซุง) ราคาล่าสุด ครบทุกรุ่นใหม่ ดีลคุ้ม",
+      "url": "https://www.bnn.in.th/th/p/smartphone-and-accessories/smartphone/samsung-smartphone",
+      "domain": "www.bnn.in.th",
+      "snippet": "โทรศัพท์ซัมซุง ในรุ่น Samsung Galaxy S Series ที่ถือเป็นโทรศัพท์รุ่นท็อปของแบรนด์ตั้งแต่วันเปิดตัวรุ่นแรกจนถึงปัจจุบันนี้ได้ผ่านมา ...",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    },
+    {
+      "title": "โทรศัพท์ Samsung ทุกรุ่นใหม่ล่าสุด 2026 …",
+      "url": "https://tech.kapook.com/view299202.html",
+      "domain": "tech.kapook.com",
+      "snippet": "Mar 10, 2026 · โทรศัพท์ Samsung รุ่นใหม่ล่าสุด 2026 มีโทรศัพท์มือถือ Samsung ทุกรุ่นให้เลือกหลายสเปก เช็กราคามือถือซัมซุงได้ที่นี่",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    },
+    {
+      "title": "โทรศัพท์ Samsung ราคาล่าสุด มือถือซัมซุง กาแลคซี่ รุ่นใหม่ …",
+      "url": "https://www.powerbuy.co.th/th/category/phone-and-tablet/android-phone/samsung",
+      "domain": "www.powerbuy.co.th",
+      "snippet": "เปรียบเทียบ Shop 5,000 save 200 ผ่อน 0% SAMSUNG Galaxy A34 5G (RAM 8GB, 128GB, Awesome Violet) ฿11,999 จัดส่ง เปรียบเทียบ",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    },
+    {
+      "title": "Samsung | Bangkok - Facebook",
+      "url": "https://www.facebook.com/SamsungThailand/",
+      "domain": "www.facebook.com",
+      "snippet": "🛍️ ช้อปง่าย มั่นใจ ได้ของชัวร์ ส่งฟรีถึงหน้าบ้าน พร้อมรับสิทธิพิเศษและพอยท์สะสมมากมาย แวะไปช้อปกันต่อได้ที่ 🌐 samsung.com เลยค่ะ!",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    },
+    {
+      "title": "มือถือ Samsung (ซัมซุง) ทุกรุ่น ออกใหม่ล่าสุดพร้อมราคา",
+      "url": "https://www.thaimobilecenter.com/catalog/Samsung.asp",
+      "domain": "www.thaimobilecenter.com",
+      "snippet": "มือถือ Samsung แค็ตตาล็อกโทรศัพท์มือถือ - ซัมซุง ออกใหม่ล่าสุด ราคากลางมือถือ อัพเดททุกสัปดาห์",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    },
+    {
+      "title": "Thai Samsung Electronics Co., Ltd. บริษัท ไทยซัมซุง …",
+      "url": "https://thaisamsung.co.th/home",
+      "domain": "thaisamsung.co.th",
+      "snippet": "Thai Samsung Driving business in Thailand with care First electronics manufacturing base outside of South Korea and the largest in the world It has the most product types in 28 factories around the world …",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+# 科技新闻采集 · 2026-06-04 02:00
+
+> 类别: camera · 采集时间: 2026-06-04 02:56:02
+
+## 搜索结果
+
+- [铃盛（RingCentral）是一家怎样的公司？ - 知乎](https://www.zhihu.com/question/342644820) · `www.zhihu.com`
+  > RingCentral 早在 2003年就创立了，一直在北美深耕企业级的云通讯这一块，已经有16年。 它们在13年上市之后，一直到去年公司股价6年涨 …
+- [铃盛（RingCentral）是一家怎样的公司？ - 知乎](https://www.zhihu.com/question/342644820/answers/updated) · `www.zhihu.com`
+  > 铃盛（RingCentral）是一家怎样的公司？ 已工作五年一直从事前端，想换个公司，有猎头推荐铃盛（RingCentral），有人了解这家公司吗？  …
+- [在RingCentral铃盛上班是一种什么体验？ - 知乎](https://www.zhihu.com/question/264282876/answers/updated) · `www.zhihu.com`
+  > 最后一次更新： 裁员，被一波带走了。 我只能说大礼包还不错，不过裁起来也很迅速。 有跟几个同事好好地告别，毕竟以后可能很难再见了， …
+- [有问题，就会有答案 - 知乎](https://www.zhihu.com/topic/23682716/top-answers) · `www.zhihu.com`
+  > 知乎，中文互联网高质量的问答社区和创作者聚集的原创内容平台，于 2011 年 1 月正式上线，以「让人们更好的分享知识、经验和见解，找到 …
+- [RingCentral铃盛是一家怎么样的公司？ - 知乎](https://www.zhihu.com/question/318589307/answers/updated) · `www.zhihu.com`
+  > 内部薪资严重不公平，我一个男同学做测试一开始进去还觉得不错，由于不会怎么讲工资，底薪低，结果3年后涨薪少，今年才涨300，果断跳 …
+- [往届生怎么求职？计算机类？ - 知乎](https://www.zhihu.com/question/40991260) · `www.zhihu.com`
+  > 十上海、成都、杭州 RingCentral铃盛 通信类，15-20天年假，外企风格，不用打卡，远程办公;氛围轻松，有各种员工活动、还有FRE的外教培 …
+- [往届生想找工作，社招有哪些渠道？ - 知乎](https://www.zhihu.com/question/365552337/answers/updated) · `www.zhihu.com`
+  > 十上海、成都、杭州 RingCentral铃盛 通信类，15-20天年假，外企风格，不用打卡，远程办公;氛围轻松，有各种员工活动、还有FRE的外教培 …
+- [圆圈序号像这样能复制的㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵ ㊶㊷，50以上的打出 …](https://www.zhihu.com/question/28603708) · `www.zhihu.com`
+  > 在此给大家奉上1到99 的带圈数字，格式统一且美观，写论文、报告或文书都能用上，直接复制粘贴即可使用。建议点赞收藏，以备不时之 …
+
+
+## 提取实体
+

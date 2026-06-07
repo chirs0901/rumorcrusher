@@ -1,0 +1,43 @@
+# 科技新闻采集 · 2026-06-05 07:00
+
+> 类别: memory · 采集时间: 2026-06-05 07:27:00
+
+## 搜索结果
+
+- [SD Card Formatter 5.0.2 SD卡U盘格式化工具 - 吾爱破解 - 52pojie.cn](https://www.52pojie.cn/thread-1642699-1-1.html) · `www.52pojie.cn`
+  > May 29, 2022 · SD Card Formatter SD 5.0.2某些卡、U盘用系统自带格式化是不会成功的，尝试一下这个软件，或许有新的收获！因为在折 …
+- [内存卡无法删除，无法格式化，无法存入，怎么办 - 吾爱破解](https://www.52pojie.cn/thread-1663574-1-1.html) · `www.52pojie.cn`
+  > Jul 20, 2022 · [经验求助] 内存卡无法删除，无法格式化，无法存入，怎么办 [复制链接]
+- [TF卡不管什么格式都无法格式化，目前电脑能检测到盘符，无法读取 …](https://www.52pojie.cn/thread-2101820-1-1.html) · `www.52pojie.cn`
+  > Apr 7, 2026 · [其他求助] TF卡不管什么格式都无法格式化，目前电脑能检测到盘符，无法读取数据 [复制链接]
+- [sd卡怎么格式化成FAT32格式? - 知乎](https://www.zhihu.com/question/324791651) · `www.zhihu.com`
+  > May 17, 2019 · 想把SD卡放手机里，但是sd卡插手机不显示，说是要格式化，可是我的格式化属性里没有fat32这个选项，请教…
+- [抢救你的U盘，U盘格式化工具 - 吾爱破解 - 52pojie.cn](https://www.52pojie.cn/thread-1017100-1-1.html) · `www.52pojie.cn`
+  > Aug 31, 2019 · 我的U盘之前中了病毒，插入电脑之后就显示需要格式化，然后点击格式化之后没有任何反应，卡死，今天下载了一个U盘格式 …
+- [윈도우 포럼 - 자 료 실 - SD Card Formatter](https://windowsforum.kr/data/9779581) · `windowsforum.kr`
+  > Feb 8, 2018 · SD 카드 연합체인 SD Association에서 배포하는 SD, SDHC, SDXC, microSD 등 모든 SD 카드 포멧 프로그램입니다. SD Card Formatter로 …
+- [4款u盘修复工具喔单文件绿色版 - 吾爱破解 - 52pojie.cn](https://www.52pojie.cn/thread-1241369-1-1.html) · `www.52pojie.cn`
+  > Aug 7, 2020 · 拷贝资料，u盘必带，我可不信你没揣着块u盘，嘿嘿。难免有学姐找你修电脑嘛，这时候万一要装个系统，没块好u盘可不行 …
+- [SD卡被写入保护，无法清除和格式化 - 吾爱破解 - 52pojie.cn](https://www.52pojie.cn/thread-1936319-1-1.html) · `www.52pojie.cn`
+  > Jun 19, 2024 · SD卡被写入保护，无法清除和格式化
+- [शब्दसखा - नेपाली शब्दकोश र वर्णविन्यास](https://sabdasakha.com/) · `sabdasakha.com`
+  > शब्दसखा: बृहत् नेपाली शब्दकोश र प्रज्ञा नेपाली बृहत् शब्दकोशमा आधारित नेपाली शब्दकोश र वर्णविन्यास …
+- [Nepali Shabdakosh | English Nepali Dictionary | Nepali Rhymes](https://nepalishabdakosh.com/) · `nepalishabdakosh.com`
+  > नेपाली तथा अङ्गेजी शब्दका अर्थ खोज्नका लागि नेपाली शब्दकोशको वेवसाइट र मोवाईल एप्सको निर्माण गरिएको …
+- [नेपाली-नेपाली शब्दकोश - विक्सनरी](https://ne.wiktionary.org/wiki/नेपाली-नेपाली_शब्दकोश) · `ne.wiktionary.org`
+  > नेपाल २ वर्षमा ३ सरकार, देश विकासको लागि राजनीतिक गरेको हैन प्रधानमन्त्री हुने र सत्ता हात पार्ने आफ्नो …
+- [शब्दकोश नेपाल - Dictionary Nepal | Find Words in Multiple …](https://dictionarynepal.com/) · `dictionarynepal.com`
+  > Free online Nepali dictionary with translations to English, Newari, Limbu, and Rai. Search for words, meanings, and pronunciations in …
+- [Nepali Dictionary - नेपाली शब्दकोश, शब्दहरूको अर्थ र प्रयोग](https://wapnepal.com.np/dictionary/) · `wapnepal.com.np`
+  > Nepali Dictionary (नेपाली शब्दकोश) to find meanings, definitions, and translations of Nepali words. Perfect for students, teachers, …
+- [Google Translate](https://translate.google.co.in/?hl=hi) · `translate.google.co.in`
+  > इसकी मदद से शब्दों, वाक्यांशों, और वेब पेजों का हिन्दी और 100 से ज़्यादा अन्य भाषाओं में तुरंत अनुवाद …
+- [Google अनुवादक](https://translate.google.com/?hl=ne) · `translate.google.com`
+  > Google ले निःशुल्क उपलब्ध गराएको यो सेवा प्रयोग गरी शब्द, पदावली ...
+- [शब्दकोश | Language Commission,](https://languagecommission.gov.np/category/dictionary/) · `languagecommission.gov.np`
+  > “सूचना प्रविधिको विस्तार: दिगो विकासको आधार” — राष्ट्रिय सञ्चार तथा सूचना प्रविधि दिवस २०२६ भव्यताका …
+
+
+## 提取实体
+
+- **brand**: Google

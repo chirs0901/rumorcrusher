@@ -27,3 +27,10 @@
 | 日期 | 事件 | 标签 |
 |---|---|---|
 | 2026-05-14 | Mate 80 发布后续报道（+42% 性能声明）| Conflicting Evidence |
+
+
+## 2026-06-03
+- HUAWEI 手機 - 華為香港
+- 华为手机 - 华为官网 - HUAWEI
+- Android手機 | Fortress 豐澤
+- Android手機 | Fortress 丰泽

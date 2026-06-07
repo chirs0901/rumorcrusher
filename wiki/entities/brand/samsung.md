@@ -77,3 +77,29 @@
 |------|------|---------|------|
 | 2026-06-03 | Tech.SportsKeeda / Memeburn / AndroidHeadlines | Supported | S27双芯：Exynos 2700(SF2P 2nm)+骁龙EG6；新增Pro 6.47寸；Ultra 5500mAh硅碳+200MP HP6 |
 | 2026-06-03 | MacRumors / The Gadgeteer | Supported | SDC独家3年iPhone Fold OLED合同，~1100万折叠面板/首年 |
+
+---
+## 自动采集信源历史
+
+## 2026-06-05
+- Điện thoại, Smartphone chính hãng, giảm đến 4 triệu, góp 0%
+- Samsung Thailand | มือถือ สมาร์ทโฟน ทีวี และเครื่องใช้ไฟฟ้าต่างๆ
+- มือถือ Samsung (ซัมซุง) ทุกรุ่น ออกใหม่ล่าสุดพร้อมราคา
+- มือถือ Samsung (ซัมซุง) ทุกรุ่น ออกใหม่ล่าสุด ราคามือถือ สมาร์ทโฟน ...
+- Mua Điện Thoại, Smartphone Chính Hãng | Giá Tốt, Trả Góp 0%
+
+
+## 2026-06-06
+- Samsung Thailand | มือถือ สมาร์ทโฟน ทีวี และเครื่องใช้ไฟฟ้าต่างๆ
+- มือถือ Samsung (ซัมซุง) ทุกรุ่น ออกใหม่ล่าสุดพร้อมราคา
+- โทรศัพท์ Samsung ราคาล่าสุด มือถือซัมซุง กาแลคซี่ รุ่นใหม่ ผ่อน 0%*
+- โทรศัพท์ Samsung ทุกรุ่นใหม่ล่าสุด 2026 เช็กสเปกและราคาได้ที่นี่
+- โทรศัพท์ Samsung (ซัมซุง) ราคาล่าสุด ครบทุกรุ่นใหม่ ดีลคุ้ม
+
+
+## 2026-06-03
+- Điện thoại, Smartphone chính hãng, giảm đến 4 triệu, góp 0%
+- Mua Điện Thoại, Smartphone Chính Hãng | Giá Tốt, Trả Góp 0%
+- HBM Pricing & Market Share (2026) — SK Hynix, Samsung, Micron
+- Điện thoại Samsung Galaxy [A, S, Z] giảm đến 13tr, góp 0%
+- XTmobile.vn - Điện Thoại, iPad, MacBook, Phụ Kiện Chính Hãng TP.HCM

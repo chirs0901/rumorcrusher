@@ -1912,20 +1912,180 @@
 致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
 [2026-05-31 10:21:50 CST] fetch failed (consecutive=1)
 [2026-05-31 10:26:52 CST] network OK (no commits to push), clearing failure flag
+[2026-05-31 11:52:34 CST] WARN: stale lock (age=669s), removing
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
+[2026-05-31 12:09:07 CST] fetch failed (consecutive=3)
+[2026-05-31 12:14:08 CST] network OK (no commits to push), clearing failure flag
 错误：RPC 失败。curl 52 Empty reply from server
 致命错误：在引用列表之后应该有一个 flush 包
-[2026-05-31 10:39:14 CST] fetch failed (consecutive=1)
-致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
-[2026-05-31 10:45:42 CST] fetch failed (consecutive=2)
-[2026-05-31 10:50:43 CST] network OK (no commits to push), clearing failure flag
+[2026-05-31 12:21:28 CST] fetch failed (consecutive=1)
 致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
-[2026-05-31 11:07:16 CST] fetch failed (consecutive=1)
-[2026-05-31 11:12:17 CST] network OK (no commits to push), clearing failure flag
+[2026-05-31 12:27:59 CST] fetch failed (consecutive=2)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
+[2026-05-31 12:34:24 CST] fetch failed (consecutive=3)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
+[2026-05-31 12:40:54 CST] fetch failed (consecutive=4)
+[2026-05-31 12:45:56 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 13:17:35 CST] fetch failed (consecutive=1)
+[2026-05-31 13:22:36 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 13:34:08 CST] fetch failed (consecutive=1)
 错误：RPC 失败。curl 56 Recv failure: Operation timed out
 致命错误：在引用列表之后应该有一个 flush 包
-[2026-05-31 11:19:48 CST] fetch failed (consecutive=1)
-[2026-05-31 11:24:50 CST] network OK (no commits to push), clearing failure flag
+[2026-05-31 13:41:05 CST] fetch failed (consecutive=2)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：SSL connection timeout
+[2026-05-31 13:51:06 CST] fetch failed (consecutive=3)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 13:57:36 CST] fetch failed (consecutive=4)
 致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
-[2026-05-31 11:31:18 CST] fetch failed (consecutive=1)
+[2026-05-31 14:04:06 CST] fetch failed (consecutive=5)
+[2026-05-31 14:09:38 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 14:16:44 CST] fetch failed (consecutive=1)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 14:23:15 CST] fetch failed (consecutive=2)
+[2026-05-31 14:28:17 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 14:39:50 CST] fetch failed (consecutive=1)
+[2026-05-31 14:44:51 CST] network OK (no commits to push), clearing failure flag
+错误：RPC 失败。curl 52 Empty reply from server
+致命错误：在引用列表之后应该有一个 flush 包
+[2026-05-31 15:11:59 CST] fetch failed (consecutive=1)
 致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
-[2026-05-31 11:37:47 CST] fetch failed (consecutive=2)
+[2026-05-31 15:18:30 CST] fetch failed (consecutive=2)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：SSL connection timeout
+[2026-05-31 15:28:30 CST] fetch failed (consecutive=3)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
+[2026-05-31 15:35:02 CST] fetch failed (consecutive=4)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 15:41:33 CST] fetch failed (consecutive=5)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：SSL connection timeout
+[2026-05-31 15:51:33 CST] fetch failed (consecutive=6)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
+[2026-05-31 15:58:06 CST] fetch failed (consecutive=7)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 16:04:37 CST] fetch failed (consecutive=8)
+[2026-05-31 16:09:38 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 16:16:10 CST] fetch failed (consecutive=1)
+[2026-05-31 16:21:12 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
+[2026-05-31 16:27:39 CST] fetch failed (consecutive=1)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 16:34:10 CST] fetch failed (consecutive=2)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
+[2026-05-31 16:40:38 CST] fetch failed (consecutive=3)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 16:47:09 CST] fetch failed (consecutive=4)
+[2026-05-31 16:52:11 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 16:58:41 CST] fetch failed (consecutive=1)
+[2026-05-31 17:03:43 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 17:15:15 CST] fetch failed (consecutive=1)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 17:21:47 CST] fetch failed (consecutive=2)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 17:28:18 CST] fetch failed (consecutive=3)
+[2026-05-31 17:33:20 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
+[2026-05-31 17:44:51 CST] fetch failed (consecutive=1)
+[2026-05-31 17:49:53 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
+[2026-05-31 18:01:25 CST] fetch failed (consecutive=1)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 18:07:55 CST] fetch failed (consecutive=2)
+[2026-05-31 18:12:57 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 18:34:33 CST] fetch failed (consecutive=1)
+[2026-05-31 18:39:34 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
+[2026-05-31 19:11:11 CST] fetch failed (consecutive=1)
+[2026-05-31 19:16:12 CST] network OK (no commits to push), clearing failure flag
+错误：RPC 失败。curl 52 Empty reply from server
+致命错误：在引用列表之后应该有一个 flush 包
+[2026-05-31 19:23:48 CST] fetch failed (consecutive=1)
+[2026-05-31 19:28:49 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
+[2026-05-31 19:35:20 CST] fetch failed (consecutive=1)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
+[2026-05-31 19:41:50 CST] fetch failed (consecutive=2)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
+[2026-05-31 19:48:20 CST] fetch failed (consecutive=3)
+[2026-05-31 19:53:22 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
+[2026-05-31 19:59:51 CST] fetch failed (consecutive=1)
+[2026-05-31 20:04:52 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
+[2026-05-31 20:16:23 CST] fetch failed (consecutive=1)
+[2026-05-31 20:21:54 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 20:38:28 CST] fetch failed (consecutive=1)
+[2026-05-31 20:43:30 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 21:10:07 CST] fetch failed (consecutive=1)
+[2026-05-31 21:15:09 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 21:21:39 CST] fetch failed (consecutive=1)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 21:28:10 CST] fetch failed (consecutive=2)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：SSL connection timeout
+[2026-05-31 21:38:10 CST] fetch failed (consecutive=3)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：SSL connection timeout
+[2026-05-31 21:48:10 CST] fetch failed (consecutive=4)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
+[2026-05-31 21:54:40 CST] fetch failed (consecutive=5)
+[2026-05-31 21:59:43 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 22:11:15 CST] fetch failed (consecutive=1)
+[2026-05-31 22:16:16 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 22:22:46 CST] fetch failed (consecutive=1)
+[2026-05-31 22:27:48 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 22:39:21 CST] fetch failed (consecutive=1)
+[2026-05-31 22:44:22 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：SSL connection timeout
+[2026-05-31 22:54:22 CST] fetch failed (consecutive=1)
+[2026-05-31 22:59:24 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：SSL connection timeout
+[2026-05-31 23:24:29 CST] fetch failed (consecutive=1)
+[2026-05-31 23:29:30 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-05-31 23:46:09 CST] fetch failed (consecutive=1)
+[2026-05-31 23:51:10 CST] network OK (no commits to push), clearing failure flag
+错误：RPC 失败。curl 56 Recv failure: Operation timed out
+致命错误：在引用列表之后应该有一个 flush 包
+[2026-05-31 23:58:09 CST] fetch failed (consecutive=1)
+[2026-06-01 00:03:11 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-06-01 00:09:42 CST] fetch failed (consecutive=1)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-06-01 00:16:12 CST] fetch failed (consecutive=2)
+[2026-06-01 00:21:14 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
+[2026-06-01 01:08:02 CST] fetch failed (consecutive=1)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Recv failure: Operation timed out
+[2026-06-01 02:40:48 CST] fetch failed (consecutive=2)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-06-01 12:48:26 CST] fetch failed (consecutive=3)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-06-01 12:54:57 CST] fetch failed (consecutive=4)
+[2026-06-01 12:59:59 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-06-01 13:06:29 CST] fetch failed (consecutive=1)
+[2026-06-01 13:11:30 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-06-01 13:28:04 CST] fetch failed (consecutive=1)
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-06-01 13:34:35 CST] fetch failed (consecutive=2)
+[2026-06-01 13:39:36 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-06-01 13:46:07 CST] fetch failed (consecutive=1)
+[2026-06-01 13:51:09 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-06-01 14:02:40 CST] fetch failed (consecutive=1)
+[2026-06-01 14:07:42 CST] network OK (no commits to push), clearing failure flag
+致命错误：无法访问 'https://github.com/chirs0901/rumorcrusher.git/'：Empty reply from server
+[2026-06-01 14:14:12 CST] fetch failed (consecutive=1)

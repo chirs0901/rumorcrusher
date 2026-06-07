@@ -38,3 +38,14 @@
 |---|---|---|---|
 | 2026-05-27 | [新浪科技2026-05-25](https://tech.sina.com.cn) | Supported (0.90) | 荣耀600系列正式发布，超级版8600mAh，骁龙7 Gen4，2294元 |
 | 2026-05-27 | [深圳新闻网2026-05-26](https://tech.sznews.com) | Supported (0.90) | 荣耀600参数核实 |
+
+
+## 2026-06-05
+- Điện thoại, Smartphone chính hãng, giảm đến 4 triệu, góp 0%
+
+
+## 2026-06-03
+- 荣耀手机-HONOR新款手机-系列-型号 | 荣耀官网
+- Điện thoại, Smartphone chính hãng, giảm đến 4 triệu, góp 0%
+- Android手機 | Fortress 豐澤
+- Android手機 | Fortress 丰泽

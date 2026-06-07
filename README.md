@@ -16,6 +16,7 @@
 | 🏷 AVeriTeC 标签 | Supported / ConflictingEvidence / Refuted / NotEnoughEvidence |
 | 🧠 知识积累 | 每日产出喂入知识飞轮，方法论和实体图谱持续成长 |
 | 🌐 公开透明 | 所有核查报告和知识库部署至 GitHub Pages，可公开访问 |
+| 💬 实时检测 | **新增交互式谣言检测器**，用户可随时提交声称进行验证 |
 
 ---
 
@@ -66,6 +67,7 @@
 RumorCrusher/
 ├── README.md                        # 本文件
 ├── index.html                       # 项目入口（GitHub Pages 首页）
+├── rumor-detector.html              # 💬 实时谣言检测器（交互式界面）
 │
 ├── tech-digest/
 │   └── index.html                   # 📰 每日资讯汇总（按日期倒序）
@@ -100,6 +102,12 @@ RumorCrusher/
 │   └── source-list.yaml             # 信源清单（含可信度分级）
 │
 ├── scripts/                         # 历史脚本 / 任务注册文档
+│   ├── rumor_detector_api.py        # 💬 谣言检测器 API 服务器
+│   ├── start-rumor-detector.sh      # 💬 启动谣言检测器
+│   ├── RUMOR-DETECTOR-README.md     # 💬 谣言检测器详细文档
+│   ├── install-scheduled-tasks.sh   # 定时任务安装脚本
+│   ├── test-scheduled-tasks.sh      # 定时任务测试脚本
+│   └── SCHEDULED-TASKS-GUIDE.md     # 定时任务配置指南
 │
 └── YYYY-MM-DD/                      # 每日产出目录（自动创建）
     ├── 03-quality-report-*.md       # 问题内容清单
@@ -136,14 +144,83 @@ RumorCrusher/
 
 ---
 
+## 💬 实时谣言检测器（新功能）
+
+RumorCrusher 现在提供**交互式谣言检测服务**，用户可以随时提交任何声称进行验证。
+
+### 快速开始
+
+```bash
+# 1. 启动 API 服务器
+bash scripts/start-rumor-detector.sh
+
+# 2. 在浏览器中打开
+open rumor-detector.html
+```
+
+### 功能特点
+
+- 🔍 **智能搜索**：支持自然语言输入，提供热门示例
+- 📚 **双源检索**：优先检索本地知识库，不足时自动网络搜索
+- 🤖 **多Agent审核**：Fact-Check + Pseudo-Science + Logic Coherence 三重验证
+- 📊 **可视化结果**：明确的判定（真实/谣言/证据不足）+ 置信度评分
+- 📝 **详细报告**：各Agent独立报告 + 证据摘要 + 参考信源
+
+### 使用示例
+
+```
+输入：iPhone 18将搭载固态电池
+输入：天玑9600 GPU性能超越A20 Pro
+输入：台积电2nm产能被苹果独占50%
+```
+
+系统会自动：
+1. 检索本地知识库和Wiki图谱
+2. （如需要）执行网络搜索采集信息
+3. 通过三Agent审核委员会深度验证
+4. 给出最终判定和置信度
+
+详细文档请参考：[scripts/RUMOR-DETECTOR-README.md](scripts/RUMOR-DETECTOR-README.md)
+
+---
+
 ## 定时任务
 
-| 任务名 | 时间 | 说明 |
-|--------|------|------|
-| `rumorcrusher-morning` | 每天 05:00 | 早班采集，覆盖隔夜境外科技媒体更新 |
-| `rumorcrusher-daily` | 每天 22:00 | 晚班采集，覆盖国内当日媒体动态 |
+### macOS LaunchAgent 配置（✅ 已激活）
 
-两个任务共享同一套 SKILL.md 工作流，产出写入对应日期目录，完成后自动 git push 到 GitHub Pages。
+RumorCrusher 使用 macOS LaunchAgent 实现自动化定时任务：
+
+| 任务名 | 时间 | 频率 | 说明 |
+|--------|------|------|------|
+| `com.rumorcrusher.morning` | 每天 05:00 | 每日 | 早班采集，覆盖隔夜境外科技媒体更新 |
+| `com.rumorcrusher.evening` | 每天 22:00 | 每日 | 晚班采集，覆盖国内当日媒体动态 |
+| `com.rumorcrusher.autopush` | - | 每5分钟 | 自动检测并推送未同步的 commits |
+
+**安装命令：**
+```bash
+cd /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder
+bash scripts/install-scheduled-tasks.sh
+```
+
+**验证状态：**
+```bash
+launchctl list | grep rumorcrusher
+```
+
+**查看日志：**
+```bash
+tail -f _meta/morning-stdout.log   # 晨跑日志
+tail -f _meta/evening-stdout.log   # 晚跑日志
+tail -f _meta/autopush.stdout.log  # 推送日志
+```
+
+详细配置说明请参考：[scripts/SCHEDULED-TASKS-GUIDE.md](scripts/SCHEDULED-TASKS-GUIDE.md)
+
+### 任务工作流程
+
+两个班次任务共享同一套 SKILL.md 工作流，产出写入对应日期目录，完成后自动 git push 到 GitHub Pages。
+
+**注意：** 当前的任务脚本 (`morning-task.sh` / `evening-task.sh`) 是框架版本，包含 TODO 标记。需要根据实际的 Agent 实现来填充具体的执行逻辑。详见 [scripts/TIMED-TASKS-FIX-REPORT.md](scripts/TIMED-TASKS-FIX-REPORT.md)。
 
 ---
 

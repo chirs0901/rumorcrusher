@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-06-06T13:12:26.511096",
+  "category": "supply-chain",
+  "queries": [
+    "TSMC 2nm 产能 苹果 高通 2026",
+    "中芯国际 SMIC 制程 进展 2026",
+    "Samsung Foundry 2nm GAA 2026",
+    "手机芯片 代工 产能 供应 2026",
+    "semiconductor foundry smartphone 2026"
+  ],
+  "results_count": 0,
+  "entities": {
+    "soc": [],
+    "brand": [],
+    "tech": [],
+    "supplier": [],
+    "display": [],
+    "camera": [],
+    "battery": [],
+    "other": []
+  },
+  "results": []
+}

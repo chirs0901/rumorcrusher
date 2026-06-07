@@ -13,4 +13,6 @@
 [2026-05-31 11:38:52 CST] [git] push失败（sandbox代理不通，本机守护进程将自动重试）
 [2026-05-31 11:38:52 CST] [feishu] FAILED（sandbox内webhook不可达，需用户本机执行）
 [2026-05-31 11:38:52 CST] [email] FAILED（sandbox无SMTP配置）
+[2026-05-31 22:00:02 CST] [feishu] FAILED（sandbox内webhook不可达，需用户本机执行）
+[2026-05-31 22:00:02 CST] [email] FAILED（sandbox无SMTP配置）
 [2026-06-03T04:39:18Z] feishu skipped: sandbox-egress-blocked

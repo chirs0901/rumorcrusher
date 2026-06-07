@@ -1,0 +1,12 @@
+[2026-06-01 05:01:17 CST] 🌅 开始晨跑 RumorCrusher 流水线...
+[2026-06-01 05:01:17 CST] ⚠️ 检测到推送失败标志，中止本次运行
+PUSH_FAILED
+first_failure: 
+last_failure: 2026-06-01 02:40:48 CST
+consecutive_failures: 2
+last_error: git fetch failed
+fix_command: bash /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/push-now.sh
+[2026-06-01 20:50:51 CST] 🌅 手动补跑晨跑流水线（git推送因网络跳过）
+[2026-06-01 20:50:51 CST] ✅ 目录创建完成: 2026-06-01/{01-raw,02-annotations,03-reports}
+[2026-06-01 20:50:51 CST] ⚠️ git push 跳过（GitHub网络不通）
+

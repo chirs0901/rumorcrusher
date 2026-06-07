@@ -40,3 +40,12 @@
 | 2026-05-26 | [Tom's Guide](https://www.tomsguide.com/phones/i-interviewed-honor-and-oneplus-about-their-silicon-carbon-battery-tech-apple-and-google-are-quickly-falling-behind) | Supported (0.82) | 小米17 Ultra 6000mAh硅碳电池，品牌级全面普及 |
 | 2026-05-27 | [GSMArena spec page](https://www.gsmarena.com/xiaomi_17_max_5g-14667.php) | Supported (0.86) | 小米17 Max：8000mAh Si-C，骁龙8 Elite Gen 5，16GB+512GB，Max系列回归 |
 | 2026-05-27 | [Gizmochina 2026-05-18](https://www.gizmochina.com/2026/05/18/xiaomi-17t-series-global-launch-date/) | Supported (0.90) | 小米17T/Pro全球5月28日发布，Dimensity 9500/8500，€999/€749 |
+
+
+## 2026-06-05
+- Mua Điện Thoại, Smartphone Chính Hãng | Giá Tốt, Trả Góp 0%
+
+
+## 2026-06-03
+- Mua Điện Thoại, Smartphone Chính Hãng | Giá Tốt, Trả Góp 0%
+- Điện thoại, Smartphone chính hãng, giảm đến 4 triệu, góp 0%

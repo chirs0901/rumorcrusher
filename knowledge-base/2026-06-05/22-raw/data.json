@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-06-05T22:30:01.990374",
+  "category": "supply-chain",
+  "queries": [
+    "TSMC 2nm 产能 苹果 高通 2026",
+    "中芯国际 SMIC 制程 进展 2026",
+    "Samsung Foundry 2nm GAA 2026",
+    "手机芯片 代工 产能 供应 2026",
+    "semiconductor foundry smartphone 2026"
+  ],
+  "results_count": 5,
+  "entities": {
+    "soc": [],
+    "brand": [
+      "Samsung"
+    ],
+    "tech": [],
+    "supplier": [],
+    "display": [],
+    "camera": [],
+    "battery": [],
+    "other": []
+  },
+  "results": [
+    {
+      "title": "Samsung Thailand | มือถือ สมาร์ทโฟน ทีวี และเครื่องใช้ไฟฟ้าต่างๆ",
+      "url": "https://www.samsung.com/th/",
+      "domain": "www.samsung.com",
+      "snippet": "พบกับเทคโนโลยีเครื่องใช้ไฟฟ้า ทีวี ตู้เย็น เครื่องซักผ้า และโทรศัพท์มือถือ …",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    },
+    {
+      "title": "มือถือ Samsung (ซัมซุง) ทุกรุ่น ออกใหม่ล่าสุด ราคามือถือ สมาร์ทโฟน ...",
+      "url": "https://www.siamphone.com/spec/samsung/index.htm",
+      "domain": "www.siamphone.com",
+      "snippet": "แคตตาล็อกมือถือ Samsung (ซัมซุง) โทรศัพท์มือถือ สมาร์ทโฟน แท็บเล็ต ทุกรุ่น …",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    },
+    {
+      "title": "Samsung shop in shop",
+      "url": "https://www.bnn.in.th/th/pages/samsung-shop",
+      "domain": "www.bnn.in.th",
+      "snippet": "สมาร์ทโฟน Samsung Galaxy Note 20 Ultra (12+256GB) Mystic …",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    },
+    {
+      "title": "Samsung - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Samsung",
+      "domain": "en.wikipedia.org",
+      "snippet": "It formed several electronics-related divisions, such as …",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    },
+    {
+      "title": "มือถือ Samsung (ซัมซุง) ทุกรุ่น ออกใหม่ล่าสุดพร้อมราคา",
+      "url": "https://www.thaimobilecenter.com/catalog/Samsung.asp",
+      "domain": "www.thaimobilecenter.com",
+      "snippet": "มือถือ Samsung แค็ตตาล็อกโทรศัพท์มือถือ - ซัมซุง ออกใหม่ล่าสุด …",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    }
+  ]
+}

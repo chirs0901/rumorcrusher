@@ -1,0 +1,705 @@
+[2026-06-03 07:25:41] ==================================================
+[2026-06-03 07:25:41] 🕐 开始每小时采集 · 2026-06-03 07:00
+[2026-06-03 07:25:41] 📋 主题: memory · 5 个查询
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 07:25:42]   'LPDDR6 手机内存 量产 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 07:25:42]   'UFS 5.0 手机存储 最新 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 07:25:42]   'SK Hynix Samsung memory smartphone...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 07:25:43]   'HBM 手机 AI 内存 需求 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 07:25:43]   '手机存储 芯片 涨价 供应链 2026...' → 0 条
+[2026-06-03 07:25:43] 📊 去重后: 0 条
+[2026-06-03 07:25:41] ==================================================
+[2026-06-03 07:25:41] 🕐 开始每小时采集 · 2026-06-03 07:00
+[2026-06-03 07:25:41] 📋 主题: memory · 5 个查询
+[2026-06-03 07:25:42]   'LPDDR6 手机内存 量产 2026...' → 0 条
+[2026-06-03 07:25:42]   'UFS 5.0 手机存储 最新 2026...' → 0 条
+[2026-06-03 07:25:42]   'SK Hynix Samsung memory smartphone...' → 0 条
+[2026-06-03 07:25:43]   'HBM 手机 AI 内存 需求 2026...' → 0 条
+[2026-06-03 07:25:43]   '手机存储 芯片 涨价 供应链 2026...' → 0 条
+[2026-06-03 07:25:43] 📊 去重后: 0 条
+Traceback (most recent call last):
+  File "/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py", line 346, in <module>
+    run()
+  File "/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py", line 332, in run
+    entities = extract_entities(unique_results)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py", line 198, in extract_entities
+    for m in re.finditer(pat, all_text, re.IGNORECASE):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/re/__init__.py", line 223, in finditer
+    return _compile(pattern, flags).finditer(string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/re/__init__.py", line 294, in _compile
+    p = _compiler.compile(pattern, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/re/_compiler.py", line 745, in compile
+    p = _parser.parse(p, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/re/_parser.py", line 989, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/re/_parser.py", line 464, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/re/_parser.py", line 874, in _parse
+    raise source.error("missing ), unterminated subpattern",
+re.error: missing ), unterminated subpattern at position 0
+[2026-06-03 07:26:24] ==================================================
+[2026-06-03 07:26:24] 🕐 开始每小时采集 · 2026-06-03 07:00
+[2026-06-03 07:26:24] 📋 主题: memory · 5 个查询
+[2026-06-03 07:26:24]   'LPDDR6 手机内存 量产 2026...' → 0 条
+[2026-06-03 07:26:25]   'UFS 5.0 手机存储 最新 2026...' → 0 条
+[2026-06-03 07:26:25]   'SK Hynix Samsung memory smartphone...' → 8 条
+[2026-06-03 07:26:26]   'HBM 手机 AI 内存 需求 2026...' → 0 条
+[2026-06-03 07:26:26]   '手机存储 芯片 涨价 供应链 2026...' → 0 条
+[2026-06-03 07:26:26] 📊 去重后: 8 条
+[2026-06-03 07:26:26]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/07-raw/data.json (8 条结果, 0 个实体)
+[2026-06-03 07:26:26] ✅ 每小时采集完成 · 8 条新闻 · 0 个实体
+[2026-06-03 07:26:26] 
+[2026-06-03 08:25:43] ==================================================
+[2026-06-03 08:25:43] 🕐 开始每小时采集 · 2026-06-03 08:00
+[2026-06-03 08:25:43] 📋 主题: general · 5 个查询
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 08:25:44]   'smartphone technology breakthrough 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 08:25:44]   '手机 新技术 黑科技 2026 最新...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 08:25:45]   'mobile phone component supplier 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 08:25:45]   '手机行业 趋势 报告 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 08:25:50]   '手机 产业链 供应商 动态 2026...' → 5 条
+[2026-06-03 08:25:50] 📊 去重后: 5 条
+[2026-06-03 08:25:50]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/08-raw/data.json (5 条结果, 5 个实体)
+[2026-06-03 08:25:50] ✅ 每小时采集完成 · 5 条新闻 · 5 个实体
+[2026-06-03 08:25:50] 
+[2026-06-03 08:25:43] ==================================================
+[2026-06-03 08:25:43] 🕐 开始每小时采集 · 2026-06-03 08:00
+[2026-06-03 08:25:43] 📋 主题: general · 5 个查询
+[2026-06-03 08:25:44]   'smartphone technology breakthrough 2026...' → 0 条
+[2026-06-03 08:25:44]   '手机 新技术 黑科技 2026 最新...' → 0 条
+[2026-06-03 08:25:45]   'mobile phone component supplier 2026...' → 0 条
+[2026-06-03 08:25:45]   '手机行业 趋势 报告 2026...' → 0 条
+[2026-06-03 08:25:50]   '手机 产业链 供应商 动态 2026...' → 5 条
+[2026-06-03 08:25:50] 📊 去重后: 5 条
+[2026-06-03 08:25:50]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/08-raw/data.json (5 条结果, 5 个实体)
+[2026-06-03 08:25:50] ✅ 每小时采集完成 · 5 条新闻 · 5 个实体
+[2026-06-03 08:25:50] 
+[2026-06-03 09:25:50] ==================================================
+[2026-06-03 09:25:50] 🕐 开始每小时采集 · 2026-06-03 09:00
+[2026-06-03 09:25:50] 📋 主题: soc · 5 个查询
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 09:25:51]   'Snapdragon 8 Elite Gen 6 latest news 202...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 09:25:51]   'Dimensity 9600 天玑9600 最新消息...' → 8 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 09:25:52]   'Apple A20 Pro chip TSMC 2nm...' → 8 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 09:25:52]   'Kirin 麒麟 2026 芯片 最新...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 09:25:52]   '手机芯片 制程 2nm 3nm 最新动态...' → 0 条
+[2026-06-03 09:25:52] 📊 去重后: 16 条
+[2026-06-03 09:25:52]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/09-raw/data.json (16 条结果, 2 个实体)
+[2026-06-03 09:25:52] ✅ 每小时采集完成 · 16 条新闻 · 2 个实体
+[2026-06-03 09:25:52] 
+[2026-06-03 09:25:50] ==================================================
+[2026-06-03 09:25:50] 🕐 开始每小时采集 · 2026-06-03 09:00
+[2026-06-03 09:25:50] 📋 主题: soc · 5 个查询
+[2026-06-03 09:25:51]   'Snapdragon 8 Elite Gen 6 latest news 202...' → 0 条
+[2026-06-03 09:25:51]   'Dimensity 9600 天玑9600 最新消息...' → 8 条
+[2026-06-03 09:25:52]   'Apple A20 Pro chip TSMC 2nm...' → 8 条
+[2026-06-03 09:25:52]   'Kirin 麒麟 2026 芯片 最新...' → 0 条
+[2026-06-03 09:25:52]   '手机芯片 制程 2nm 3nm 最新动态...' → 0 条
+[2026-06-03 09:25:52] 📊 去重后: 16 条
+[2026-06-03 09:25:52]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/09-raw/data.json (16 条结果, 2 个实体)
+[2026-06-03 09:25:52] ✅ 每小时采集完成 · 16 条新闻 · 2 个实体
+[2026-06-03 09:25:52] 
+[2026-06-03 10:25:53] ==================================================
+[2026-06-03 10:25:53] 🕐 开始每小时采集 · 2026-06-03 10:00
+[2026-06-03 10:25:53] 📋 主题: display · 5 个查询
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 10:25:53]   '折叠屏手机 2026 最新 出货 铰链...' → 8 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 10:25:54]   'Samsung foldable display OLED 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 10:25:54]   'BOE 京东方 OLED 手机面板 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 10:25:54]   'LTPO OLED 手机屏幕 供应商...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 10:25:55]   'UTG 超薄玻璃 折叠屏 供应链...' → 0 条
+[2026-06-03 10:25:55] 📊 去重后: 8 条
+[2026-06-03 10:25:55]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/10-raw/data.json (8 条结果, 0 个实体)
+[2026-06-03 10:25:55] ✅ 每小时采集完成 · 8 条新闻 · 0 个实体
+[2026-06-03 10:25:55] 
+[2026-06-03 10:25:53] ==================================================
+[2026-06-03 10:25:53] 🕐 开始每小时采集 · 2026-06-03 10:00
+[2026-06-03 10:25:53] 📋 主题: display · 5 个查询
+[2026-06-03 10:25:53]   '折叠屏手机 2026 最新 出货 铰链...' → 8 条
+[2026-06-03 10:25:54]   'Samsung foldable display OLED 2026...' → 0 条
+[2026-06-03 10:25:54]   'BOE 京东方 OLED 手机面板 2026...' → 0 条
+[2026-06-03 10:25:54]   'LTPO OLED 手机屏幕 供应商...' → 0 条
+[2026-06-03 10:25:55]   'UTG 超薄玻璃 折叠屏 供应链...' → 0 条
+[2026-06-03 10:25:55] 📊 去重后: 8 条
+[2026-06-03 10:25:55]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/10-raw/data.json (8 条结果, 0 个实体)
+[2026-06-03 10:25:55] ✅ 每小时采集完成 · 8 条新闻 · 0 个实体
+[2026-06-03 10:25:55] 
+[2026-06-03 11:25:55] ==================================================
+[2026-06-03 11:25:55] 🕐 开始每小时采集 · 2026-06-03 11:00
+[2026-06-03 11:25:55] 📋 主题: camera · 5 个查询
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 11:25:56]   'Sony LYTIA sensor 手机 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 11:25:56]   'Samsung ISOCELL 手机相机传感器...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 11:25:57]   '潜望式长焦 手机 2026 最新...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 11:25:57]   '手机影像 计算摄影 AI 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 11:25:57]   '可变光圈 手机 相机 2026...' → 8 条
+[2026-06-03 11:25:57] 📊 去重后: 8 条
+[2026-06-03 11:25:57]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/11-raw/data.json (8 条结果, 0 个实体)
+[2026-06-03 11:25:57] ✅ 每小时采集完成 · 8 条新闻 · 0 个实体
+[2026-06-03 11:25:57] 
+[2026-06-03 11:25:55] ==================================================
+[2026-06-03 11:25:55] 🕐 开始每小时采集 · 2026-06-03 11:00
+[2026-06-03 11:25:55] 📋 主题: camera · 5 个查询
+[2026-06-03 11:25:56]   'Sony LYTIA sensor 手机 2026...' → 0 条
+[2026-06-03 11:25:56]   'Samsung ISOCELL 手机相机传感器...' → 0 条
+[2026-06-03 11:25:57]   '潜望式长焦 手机 2026 最新...' → 0 条
+[2026-06-03 11:25:57]   '手机影像 计算摄影 AI 2026...' → 0 条
+[2026-06-03 11:25:57]   '可变光圈 手机 相机 2026...' → 8 条
+[2026-06-03 11:25:57] 📊 去重后: 8 条
+[2026-06-03 11:25:57]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/11-raw/data.json (8 条结果, 0 个实体)
+[2026-06-03 11:25:57] ✅ 每小时采集完成 · 8 条新闻 · 0 个实体
+[2026-06-03 11:25:57] 
+[2026-06-03 12:25:58] ==================================================
+[2026-06-03 12:25:58] 🕐 开始每小时采集 · 2026-06-03 12:00
+[2026-06-03 12:25:58] 📋 主题: battery · 5 个查询
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 12:25:58]   '硅碳负极电池 手机 2026 最新...' → 8 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 12:25:59]   '手机快充 无线充电 功率 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 12:26:00]   '固态电池 手机 最新进展 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 12:26:00]   'ATL 新能源 手机电池 供应商...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 12:26:00]   'SiC battery smartphone 2026...' → 0 条
+[2026-06-03 12:26:00] 📊 去重后: 8 条
+[2026-06-03 12:26:00]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/12-raw/data.json (8 条结果, 0 个实体)
+[2026-06-03 12:26:00]   无新增实体需要加入图谱
+[2026-06-03 12:26:00] ✅ 每小时采集完成 · 8 条新闻 · 0 个实体
+[2026-06-03 12:26:00] 
+[2026-06-03 12:25:58] ==================================================
+[2026-06-03 12:25:58] 🕐 开始每小时采集 · 2026-06-03 12:00
+[2026-06-03 12:25:58] 📋 主题: battery · 5 个查询
+[2026-06-03 12:25:58]   '硅碳负极电池 手机 2026 最新...' → 8 条
+[2026-06-03 12:25:59]   '手机快充 无线充电 功率 2026...' → 0 条
+[2026-06-03 12:26:00]   '固态电池 手机 最新进展 2026...' → 0 条
+[2026-06-03 12:26:00]   'ATL 新能源 手机电池 供应商...' → 0 条
+[2026-06-03 12:26:00]   'SiC battery smartphone 2026...' → 0 条
+[2026-06-03 12:26:00] 📊 去重后: 8 条
+[2026-06-03 12:26:00]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/12-raw/data.json (8 条结果, 0 个实体)
+[2026-06-03 12:26:00]   无新增实体需要加入图谱
+[2026-06-03 12:26:00] ✅ 每小时采集完成 · 8 条新闻 · 0 个实体
+[2026-06-03 12:26:00] 
+[2026-06-03 13:26:01] ==================================================
+[2026-06-03 13:26:01] 🕐 开始每小时采集 · 2026-06-03 13:00
+[2026-06-03 13:26:01] 📋 主题: supply-chain · 5 个查询
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 13:26:01]   'TSMC 2nm 产能 苹果 高通 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 13:26:02]   '中芯国际 SMIC 制程 进展 2026...' → 8 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 13:26:05]   'Samsung Foundry 2nm GAA 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 13:26:06]   '手机芯片 代工 产能 供应 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 13:26:07]   'semiconductor foundry smartphone 2026...' → 0 条
+[2026-06-03 13:26:07] 📊 去重后: 8 条
+[2026-06-03 13:26:07]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/13-raw/data.json (8 条结果, 3 个实体)
+[2026-06-03 13:26:07] ✅ 每小时采集完成 · 8 条新闻 · 3 个实体
+[2026-06-03 13:26:07] 
+[2026-06-03 13:26:01] ==================================================
+[2026-06-03 13:26:01] 🕐 开始每小时采集 · 2026-06-03 13:00
+[2026-06-03 13:26:01] 📋 主题: supply-chain · 5 个查询
+[2026-06-03 13:26:01]   'TSMC 2nm 产能 苹果 高通 2026...' → 0 条
+[2026-06-03 13:26:02]   '中芯国际 SMIC 制程 进展 2026...' → 8 条
+[2026-06-03 13:26:05]   'Samsung Foundry 2nm GAA 2026...' → 0 条
+[2026-06-03 13:26:06]   '手机芯片 代工 产能 供应 2026...' → 0 条
+[2026-06-03 13:26:07]   'semiconductor foundry smartphone 2026...' → 0 条
+[2026-06-03 13:26:07] 📊 去重后: 8 条
+[2026-06-03 13:26:07]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/13-raw/data.json (8 条结果, 3 个实体)
+[2026-06-03 13:26:07] ✅ 每小时采集完成 · 8 条新闻 · 3 个实体
+[2026-06-03 13:26:07] 
+[2026-06-03 14:26:07] ==================================================
+[2026-06-03 14:26:07] 🕐 开始每小时采集 · 2026-06-03 14:00
+[2026-06-03 14:26:07] 📋 主题: ai-phone · 5 个查询
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 14:26:08]   '端侧AI 手机 NPU TOPS 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 14:26:10]   'on-device AI smartphone LLM...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 14:26:11]   'AI手机 功能 芯片 2026 最新...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 14:26:16]   '手机AI Agent 智能体 2026...' → 5 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 14:26:22]   'DeepSeek 手机端 部署 2026...' → 5 条
+[2026-06-03 14:26:22] 📊 去重后: 10 条
+[2026-06-03 14:26:22]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/14-raw/data.json (10 条结果, 6 个实体)
+[2026-06-03 14:26:22] ✅ 每小时采集完成 · 10 条新闻 · 6 个实体
+[2026-06-03 14:26:22] 
+[2026-06-03 14:26:07] ==================================================
+[2026-06-03 14:26:07] 🕐 开始每小时采集 · 2026-06-03 14:00
+[2026-06-03 14:26:07] 📋 主题: ai-phone · 5 个查询
+[2026-06-03 14:26:08]   '端侧AI 手机 NPU TOPS 2026...' → 0 条
+[2026-06-03 14:26:10]   'on-device AI smartphone LLM...' → 0 条
+[2026-06-03 14:26:11]   'AI手机 功能 芯片 2026 最新...' → 0 条
+[2026-06-03 14:26:16]   '手机AI Agent 智能体 2026...' → 5 条
+[2026-06-03 14:26:22]   'DeepSeek 手机端 部署 2026...' → 5 条
+[2026-06-03 14:26:22] 📊 去重后: 10 条
+[2026-06-03 14:26:22]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/14-raw/data.json (10 条结果, 6 个实体)
+[2026-06-03 14:26:22] ✅ 每小时采集完成 · 10 条新闻 · 6 个实体
+[2026-06-03 14:26:22] 
+[2026-06-03 15:26:21] ==================================================
+[2026-06-03 15:26:21] 🕐 开始每小时采集 · 2026-06-03 15:00
+[2026-06-03 15:26:21] 📋 主题: brand · 5 个查询
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 15:26:22]   '华为 Mate 80 最新 动态 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 15:26:23]   'Apple iPhone 18 Pro 最新 预测...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 15:26:23]   '小米 17 Ultra OPPO Find X9 vivo X300...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 15:26:24]   '三星 Galaxy S26 Galaxy Z Fold 最新...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 15:26:25]   '荣耀 OV 传音 手机 2026...' → 0 条
+[2026-06-03 15:26:25] 📊 去重后: 0 条
+[2026-06-03 15:26:25]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/15-raw/data.json (0 条结果, 0 个实体)
+[2026-06-03 15:26:25] ✅ 每小时采集完成 · 0 条新闻 · 0 个实体
+[2026-06-03 15:26:25] 
+[2026-06-03 15:26:21] ==================================================
+[2026-06-03 15:26:21] 🕐 开始每小时采集 · 2026-06-03 15:00
+[2026-06-03 15:26:21] 📋 主题: brand · 5 个查询
+[2026-06-03 15:26:22]   '华为 Mate 80 最新 动态 2026...' → 0 条
+[2026-06-03 15:26:23]   'Apple iPhone 18 Pro 最新 预测...' → 0 条
+[2026-06-03 15:26:23]   '小米 17 Ultra OPPO Find X9 vivo X300...' → 0 条
+[2026-06-03 15:26:24]   '三星 Galaxy S26 Galaxy Z Fold 最新...' → 0 条
+[2026-06-03 15:26:25]   '荣耀 OV 传音 手机 2026...' → 0 条
+[2026-06-03 15:26:25] 📊 去重后: 0 条
+[2026-06-03 15:26:25]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/15-raw/data.json (0 条结果, 0 个实体)
+[2026-06-03 15:26:25] ✅ 每小时采集完成 · 0 条新闻 · 0 个实体
+[2026-06-03 15:26:25] 
+[2026-06-03 16:26:25] ==================================================
+[2026-06-03 16:26:25] 🕐 开始每小时采集 · 2026-06-03 16:00
+[2026-06-03 16:26:25] 📋 主题: memory · 5 个查询
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 16:26:28]   'LPDDR6 手机内存 量产 2026...' → 8 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 16:26:29]   'UFS 5.0 手机存储 最新 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 16:26:29]   'SK Hynix Samsung memory smartphone...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 16:26:30]   'HBM 手机 AI 内存 需求 2026...' → 8 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 16:26:31]   '手机存储 芯片 涨价 供应链 2026...' → 0 条
+[2026-06-03 16:26:31] 📊 去重后: 16 条
+[2026-06-03 16:26:31]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/16-raw/data.json (16 条结果, 3 个实体)
+[2026-06-03 16:26:31] ✅ 每小时采集完成 · 16 条新闻 · 3 个实体
+[2026-06-03 16:26:31] 
+[2026-06-03 16:26:25] ==================================================
+[2026-06-03 16:26:25] 🕐 开始每小时采集 · 2026-06-03 16:00
+[2026-06-03 16:26:25] 📋 主题: memory · 5 个查询
+[2026-06-03 16:26:28]   'LPDDR6 手机内存 量产 2026...' → 8 条
+[2026-06-03 16:26:29]   'UFS 5.0 手机存储 最新 2026...' → 0 条
+[2026-06-03 16:26:29]   'SK Hynix Samsung memory smartphone...' → 0 条
+[2026-06-03 16:26:30]   'HBM 手机 AI 内存 需求 2026...' → 8 条
+[2026-06-03 16:26:31]   '手机存储 芯片 涨价 供应链 2026...' → 0 条
+[2026-06-03 16:26:31] 📊 去重后: 16 条
+[2026-06-03 16:26:31]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/16-raw/data.json (16 条结果, 3 个实体)
+[2026-06-03 16:26:31] ✅ 每小时采集完成 · 16 条新闻 · 3 个实体
+[2026-06-03 16:26:31] 
+[2026-06-03 17:26:31] ==================================================
+[2026-06-03 17:26:31] 🕐 开始每小时采集 · 2026-06-03 17:00
+[2026-06-03 17:26:31] 📋 主题: general · 5 个查询
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 17:26:35]   'smartphone technology breakthrough 2026...' → 8 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 17:26:39]   '手机 新技术 黑科技 2026 最新...' → 5 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 17:26:40]   'mobile phone component supplier 2026...' → 8 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 17:26:40]   '手机行业 趋势 报告 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 17:26:41]   '手机 产业链 供应商 动态 2026...' → 0 条
+[2026-06-03 17:26:41] 📊 去重后: 19 条
+[2026-06-03 17:26:41]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/17-raw/data.json (19 条结果, 12 个实体)
+[2026-06-03 17:26:41] ✅ 每小时采集完成 · 19 条新闻 · 12 个实体
+[2026-06-03 17:26:41] 
+[2026-06-03 17:26:31] ==================================================
+[2026-06-03 17:26:31] 🕐 开始每小时采集 · 2026-06-03 17:00
+[2026-06-03 17:26:31] 📋 主题: general · 5 个查询
+[2026-06-03 17:26:35]   'smartphone technology breakthrough 2026...' → 8 条
+[2026-06-03 17:26:39]   '手机 新技术 黑科技 2026 最新...' → 5 条
+[2026-06-03 17:26:40]   'mobile phone component supplier 2026...' → 8 条
+[2026-06-03 17:26:40]   '手机行业 趋势 报告 2026...' → 0 条
+[2026-06-03 17:26:41]   '手机 产业链 供应商 动态 2026...' → 0 条
+[2026-06-03 17:26:41] 📊 去重后: 19 条
+[2026-06-03 17:26:41]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/17-raw/data.json (19 条结果, 12 个实体)
+[2026-06-03 17:26:41] ✅ 每小时采集完成 · 19 条新闻 · 12 个实体
+[2026-06-03 17:26:41] 
+[2026-06-03 18:26:41] ==================================================
+[2026-06-03 18:26:41] 🕐 开始每小时采集 · 2026-06-03 18:00
+[2026-06-03 18:26:41] 📋 主题: soc · 5 个查询
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 18:26:42]   'Snapdragon 8 Elite Gen 6 latest news 202...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 18:26:43]   'Dimensity 9600 天玑9600 最新消息...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 18:26:50]   'Apple A20 Pro chip TSMC 2nm...' → 5 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 18:26:55]   'Kirin 麒麟 2026 芯片 最新...' → 5 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 18:26:57]   '手机芯片 制程 2nm 3nm 最新动态...' → 8 条
+[2026-06-03 18:26:57] 📊 去重后: 18 条
+[2026-06-03 18:26:57]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/18-raw/data.json (18 条结果, 2 个实体)
+[2026-06-03 18:26:57]   发现 1 个新实体: oppo
+[2026-06-03 18:26:57]   wiki/index.md 已更新
+[2026-06-03 18:26:57] ✅ 每小时采集完成 · 18 条新闻 · 2 个实体
+[2026-06-03 18:26:57] 
+[2026-06-03 18:26:41] ==================================================
+[2026-06-03 18:26:41] 🕐 开始每小时采集 · 2026-06-03 18:00
+[2026-06-03 18:26:41] 📋 主题: soc · 5 个查询
+[2026-06-03 18:26:42]   'Snapdragon 8 Elite Gen 6 latest news 202...' → 0 条
+[2026-06-03 18:26:43]   'Dimensity 9600 天玑9600 最新消息...' → 0 条
+[2026-06-03 18:26:50]   'Apple A20 Pro chip TSMC 2nm...' → 5 条
+[2026-06-03 18:26:55]   'Kirin 麒麟 2026 芯片 最新...' → 5 条
+[2026-06-03 18:26:57]   '手机芯片 制程 2nm 3nm 最新动态...' → 8 条
+[2026-06-03 18:26:57] 📊 去重后: 18 条
+[2026-06-03 18:26:57]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/18-raw/data.json (18 条结果, 2 个实体)
+[2026-06-03 18:26:57]   发现 1 个新实体: oppo
+[2026-06-03 18:26:57]   wiki/index.md 已更新
+[2026-06-03 18:26:57] ✅ 每小时采集完成 · 18 条新闻 · 2 个实体
+[2026-06-03 18:26:57] 
+[2026-06-03 19:26:57] ==================================================
+[2026-06-03 19:26:57] 🕐 开始每小时采集 · 2026-06-03 19:00
+[2026-06-03 19:26:57] 📋 主题: display · 5 个查询
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 19:26:59]   '折叠屏手机 2026 最新 出货 铰链...' → 8 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 19:27:00]   'Samsung foldable display OLED 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 19:27:01]   'BOE 京东方 OLED 手机面板 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 19:27:02]   'LTPO OLED 手机屏幕 供应商...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 19:27:03]   'UTG 超薄玻璃 折叠屏 供应链...' → 0 条
+[2026-06-03 19:27:03] 📊 去重后: 8 条
+[2026-06-03 19:27:03]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/19-raw/data.json (8 条结果, 1 个实体)
+[2026-06-03 19:27:03] ✅ 每小时采集完成 · 8 条新闻 · 1 个实体
+[2026-06-03 19:27:03] 
+[2026-06-03 19:26:57] ==================================================
+[2026-06-03 19:26:57] 🕐 开始每小时采集 · 2026-06-03 19:00
+[2026-06-03 19:26:57] 📋 主题: display · 5 个查询
+[2026-06-03 19:26:59]   '折叠屏手机 2026 最新 出货 铰链...' → 8 条
+[2026-06-03 19:27:00]   'Samsung foldable display OLED 2026...' → 0 条
+[2026-06-03 19:27:01]   'BOE 京东方 OLED 手机面板 2026...' → 0 条
+[2026-06-03 19:27:02]   'LTPO OLED 手机屏幕 供应商...' → 0 条
+[2026-06-03 19:27:03]   'UTG 超薄玻璃 折叠屏 供应链...' → 0 条
+[2026-06-03 19:27:03] 📊 去重后: 8 条
+[2026-06-03 19:27:03]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/19-raw/data.json (8 条结果, 1 个实体)
+[2026-06-03 19:27:03] ✅ 每小时采集完成 · 8 条新闻 · 1 个实体
+[2026-06-03 19:27:03] 
+[2026-06-03 20:27:03] ==================================================
+[2026-06-03 20:27:03] 🕐 开始每小时采集 · 2026-06-03 20:00
+[2026-06-03 20:27:03] 📋 主题: camera · 5 个查询
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 20:27:08]   'Sony LYTIA sensor 手机 2026...' → 5 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 20:27:08]   'Samsung ISOCELL 手机相机传感器...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 20:27:08]   '潜望式长焦 手机 2026 最新...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 20:27:09]   '手机影像 计算摄影 AI 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 20:27:09]   '可变光圈 手机 相机 2026...' → 8 条
+[2026-06-03 20:27:09] 📊 去重后: 13 条
+[2026-06-03 20:27:09]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/20-raw/data.json (13 条结果, 0 个实体)
+[2026-06-03 20:27:09] ✅ 每小时采集完成 · 13 条新闻 · 0 个实体
+[2026-06-03 20:27:09] 
+[2026-06-03 20:27:03] ==================================================
+[2026-06-03 20:27:03] 🕐 开始每小时采集 · 2026-06-03 20:00
+[2026-06-03 20:27:03] 📋 主题: camera · 5 个查询
+[2026-06-03 20:27:08]   'Sony LYTIA sensor 手机 2026...' → 5 条
+[2026-06-03 20:27:08]   'Samsung ISOCELL 手机相机传感器...' → 0 条
+[2026-06-03 20:27:08]   '潜望式长焦 手机 2026 最新...' → 0 条
+[2026-06-03 20:27:09]   '手机影像 计算摄影 AI 2026...' → 0 条
+[2026-06-03 20:27:09]   '可变光圈 手机 相机 2026...' → 8 条
+[2026-06-03 20:27:09] 📊 去重后: 13 条
+[2026-06-03 20:27:09]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/20-raw/data.json (13 条结果, 0 个实体)
+[2026-06-03 20:27:09] ✅ 每小时采集完成 · 13 条新闻 · 0 个实体
+[2026-06-03 20:27:09] 
+[2026-06-03 21:27:09] ==================================================
+[2026-06-03 21:27:09] 🕐 开始每小时采集 · 2026-06-03 21:00
+[2026-06-03 21:27:09] 📋 主题: battery · 5 个查询
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 21:27:10]   '硅碳负极电池 手机 2026 最新...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 21:27:10]   '手机快充 无线充电 功率 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 21:27:11]   '固态电池 手机 最新进展 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 21:27:11]   'ATL 新能源 手机电池 供应商...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 21:27:15]   'SiC battery smartphone 2026...' → 5 条
+[2026-06-03 21:27:15] 📊 去重后: 5 条
+[2026-06-03 21:27:15]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/21-raw/data.json (5 条结果, 4 个实体)
+[2026-06-03 21:27:15] ✅ 每小时采集完成 · 5 条新闻 · 4 个实体
+[2026-06-03 21:27:15] 
+[2026-06-03 21:27:09] ==================================================
+[2026-06-03 21:27:09] 🕐 开始每小时采集 · 2026-06-03 21:00
+[2026-06-03 21:27:09] 📋 主题: battery · 5 个查询
+[2026-06-03 21:27:10]   '硅碳负极电池 手机 2026 最新...' → 0 条
+[2026-06-03 21:27:10]   '手机快充 无线充电 功率 2026...' → 0 条
+[2026-06-03 21:27:11]   '固态电池 手机 最新进展 2026...' → 0 条
+[2026-06-03 21:27:11]   'ATL 新能源 手机电池 供应商...' → 0 条
+[2026-06-03 21:27:15]   'SiC battery smartphone 2026...' → 5 条
+[2026-06-03 21:27:15] 📊 去重后: 5 条
+[2026-06-03 21:27:15]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/21-raw/data.json (5 条结果, 4 个实体)
+[2026-06-03 21:27:15] ✅ 每小时采集完成 · 5 条新闻 · 4 个实体
+[2026-06-03 21:27:15] 
+[2026-06-03 21:27:20] ==================================================
+[2026-06-03 21:27:20] 🕐 开始每小时采集 · 2026-06-03 21:00
+[2026-06-03 21:27:20] 📋 主题: battery · 5 个查询
+[2026-06-03 21:27:21]   '硅碳负极电池 手机 2026 最新...' → 0 条
+[2026-06-03 21:27:21]   '手机快充 无线充电 功率 2026...' → 0 条
+[2026-06-03 21:27:22]   '固态电池 手机 最新进展 2026...' → 8 条
+[2026-06-03 21:27:22]   'ATL 新能源 手机电池 供应商...' → 0 条
+[2026-06-03 21:27:23]   'SiC battery smartphone 2026...' → 0 条
+[2026-06-03 21:27:23] 📊 去重后: 8 条
+[2026-06-03 21:27:23]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/21-raw/data.json (8 条结果, 0 个实体)
+[2026-06-03 21:27:23] ✅ 每小时采集完成 · 8 条新闻 · 0 个实体
+[2026-06-03 21:27:23] 
+[2026-06-03 22:28:48] ==================================================
+[2026-06-03 22:28:48] 🕐 开始每小时采集 · 2026-06-03 22:00
+[2026-06-03 22:28:48] 📋 主题: supply-chain · 5 个查询
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 22:28:48]   'TSMC 2nm 产能 苹果 高通 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 22:28:48]   '中芯国际 SMIC 制程 进展 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 22:28:49]   'Samsung Foundry 2nm GAA 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 22:28:49]   '手机芯片 代工 产能 供应 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-03 22:28:49]   'semiconductor foundry smartphone 2026...' → 0 条
+[2026-06-03 22:28:49] 📊 去重后: 0 条
+[2026-06-03 22:28:49]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/22-raw/data.json (0 条结果, 0 个实体)
+[2026-06-03 22:28:49] ✅ 每小时采集完成 · 0 条新闻 · 0 个实体
+[2026-06-03 22:28:49] 
+[2026-06-03 22:28:48] ==================================================
+[2026-06-03 22:28:48] 🕐 开始每小时采集 · 2026-06-03 22:00
+[2026-06-03 22:28:48] 📋 主题: supply-chain · 5 个查询
+[2026-06-03 22:28:48]   'TSMC 2nm 产能 苹果 高通 2026...' → 0 条
+[2026-06-03 22:28:48]   '中芯国际 SMIC 制程 进展 2026...' → 0 条
+[2026-06-03 22:28:49]   'Samsung Foundry 2nm GAA 2026...' → 0 条
+[2026-06-03 22:28:49]   '手机芯片 代工 产能 供应 2026...' → 0 条
+[2026-06-03 22:28:49]   'semiconductor foundry smartphone 2026...' → 0 条
+[2026-06-03 22:28:49] 📊 去重后: 0 条
+[2026-06-03 22:28:49]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-03/22-raw/data.json (0 条结果, 0 个实体)
+[2026-06-03 22:28:49] ✅ 每小时采集完成 · 0 条新闻 · 0 个实体
+[2026-06-03 22:28:49] 
+[2026-06-04 00:23:27] ==================================================
+[2026-06-04 00:23:27] 🕐 开始每小时采集 · 2026-06-04 00:00
+[2026-06-04 00:23:27] 📋 主题: soc · 5 个查询
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-04 00:23:38]   DDG 搜索失败: https://www.bing.com/search TimeoutError: error sending request for url (https://www.bing.com/search?q=Snapdragon+8+Elite+Gen+6+latest+news+2026) > operation timed out
+[2026-06-04 00:23:38]   'Snapdragon 8 Elite Gen 6 latest news 202...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-04 00:23:39]   'Dimensity 9600 天玑9600 最新消息...' → 8 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-04 00:23:40]   'Apple A20 Pro chip TSMC 2nm...' → 8 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-04 00:23:40]   'Kirin 麒麟 2026 芯片 最新...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-04 00:23:41]   '手机芯片 制程 2nm 3nm 最新动态...' → 0 条
+[2026-06-04 00:23:41] 📊 去重后: 16 条
+[2026-06-04 00:23:41]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-04/00-raw/data.json (16 条结果, 4 个实体)
+[2026-06-04 00:23:41]   发现 1 个新实体: sic
+[2026-06-04 00:23:41]   wiki/index.md 已更新
+[2026-06-04 00:23:41] ✅ 每小时采集完成 · 16 条新闻 · 4 个实体
+[2026-06-04 00:23:41] 
+[2026-06-04 00:23:27] ==================================================
+[2026-06-04 00:23:27] 🕐 开始每小时采集 · 2026-06-04 00:00
+[2026-06-04 00:23:27] 📋 主题: soc · 5 个查询
+[2026-06-04 00:23:38]   DDG 搜索失败: https://www.bing.com/search TimeoutError: error sending request for url (https://www.bing.com/search?q=Snapdragon+8+Elite+Gen+6+latest+news+2026) > operation timed out
+[2026-06-04 00:23:38]   'Snapdragon 8 Elite Gen 6 latest news 202...' → 0 条
+[2026-06-04 00:23:39]   'Dimensity 9600 天玑9600 最新消息...' → 8 条
+[2026-06-04 00:23:40]   'Apple A20 Pro chip TSMC 2nm...' → 8 条
+[2026-06-04 00:23:40]   'Kirin 麒麟 2026 芯片 最新...' → 0 条
+[2026-06-04 00:23:41]   '手机芯片 制程 2nm 3nm 最新动态...' → 0 条
+[2026-06-04 00:23:41] 📊 去重后: 16 条
+[2026-06-04 00:23:41]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-04/00-raw/data.json (16 条结果, 4 个实体)
+[2026-06-04 00:23:41]   发现 1 个新实体: sic
+[2026-06-04 00:23:41]   wiki/index.md 已更新
+[2026-06-04 00:23:41] ✅ 每小时采集完成 · 16 条新闻 · 4 个实体
+[2026-06-04 00:23:41] 
+[2026-06-04 02:55:59] ==================================================
+[2026-06-04 02:55:59] 🕐 开始每小时采集 · 2026-06-04 02:00
+[2026-06-04 02:55:59] 📋 主题: camera · 5 个查询
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-04 02:56:00]   'Sony LYTIA sensor 手机 2026...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-04 02:56:01]   'Samsung ISOCELL 手机相机传感器...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-04 02:56:01]   '潜望式长焦 手机 2026 最新...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-04 02:56:02]   '手机影像 计算摄影 AI 2026...' → 8 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-04 02:56:02]   '可变光圈 手机 相机 2026...' → 0 条
+[2026-06-04 02:56:02] 📊 去重后: 8 条
+[2026-06-04 02:56:02]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-04/02-raw/data.json (8 条结果, 0 个实体)
+[2026-06-04 02:56:02] ✅ 每小时采集完成 · 8 条新闻 · 0 个实体
+[2026-06-04 02:56:02] 
+[2026-06-04 02:55:59] ==================================================
+[2026-06-04 02:55:59] 🕐 开始每小时采集 · 2026-06-04 02:00
+[2026-06-04 02:55:59] 📋 主题: camera · 5 个查询
+[2026-06-04 02:56:00]   'Sony LYTIA sensor 手机 2026...' → 0 条
+[2026-06-04 02:56:01]   'Samsung ISOCELL 手机相机传感器...' → 0 条
+[2026-06-04 02:56:01]   '潜望式长焦 手机 2026 最新...' → 0 条
+[2026-06-04 02:56:02]   '手机影像 计算摄影 AI 2026...' → 8 条
+[2026-06-04 02:56:02]   '可变光圈 手机 相机 2026...' → 0 条
+[2026-06-04 02:56:02] 📊 去重后: 8 条
+[2026-06-04 02:56:02]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-04/02-raw/data.json (8 条结果, 0 个实体)
+[2026-06-04 02:56:02] ✅ 每小时采集完成 · 8 条新闻 · 0 个实体
+[2026-06-04 02:56:02] 
+[2026-06-04 18:17:33] ==================================================
+[2026-06-04 18:17:33] 🕐 开始每小时采集 · 2026-06-04 18:00
+[2026-06-04 18:17:33] 📋 主题: soc · 5 个查询
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-04 18:17:34]   'Snapdragon 8 Elite Gen 6 latest news 202...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-04 18:17:35]   'Dimensity 9600 天玑9600 最新消息...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-04 18:17:35]   'Apple A20 Pro chip TSMC 2nm...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-04 18:17:36]   'Kirin 麒麟 2026 芯片 最新...' → 0 条
+/Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/scripts/hourly_collector.py:141: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[2026-06-04 18:17:36]   '手机芯片 制程 2nm 3nm 最新动态...' → 0 条
+[2026-06-04 18:17:36] 📊 去重后: 0 条
+[2026-06-04 18:17:36]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-04/18-raw/data.json (0 条结果, 0 个实体)
+[2026-06-04 18:17:36]   无新增实体需要加入图谱
+[2026-06-04 18:17:36] ✅ 每小时采集完成 · 0 条新闻 · 0 个实体
+[2026-06-04 18:17:36] 
+[2026-06-04 18:17:33] ==================================================
+[2026-06-04 18:17:33] 🕐 开始每小时采集 · 2026-06-04 18:00
+[2026-06-04 18:17:33] 📋 主题: soc · 5 个查询
+[2026-06-04 18:17:34]   'Snapdragon 8 Elite Gen 6 latest news 202...' → 0 条
+[2026-06-04 18:17:35]   'Dimensity 9600 天玑9600 最新消息...' → 0 条
+[2026-06-04 18:17:35]   'Apple A20 Pro chip TSMC 2nm...' → 0 条
+[2026-06-04 18:17:36]   'Kirin 麒麟 2026 芯片 最新...' → 0 条
+[2026-06-04 18:17:36]   '手机芯片 制程 2nm 3nm 最新动态...' → 0 条
+[2026-06-04 18:17:36] 📊 去重后: 0 条
+[2026-06-04 18:17:36]   已保存: /Users/zhiqiao/Documents/Qoder/RumorCrusher-qoder/knowledge-base/2026-06-04/18-raw/data.json (0 条结果, 0 个实体)
+[2026-06-04 18:17:36]   无新增实体需要加入图谱
+[2026-06-04 18:17:36] ✅ 每小时采集完成 · 0 条新闻 · 0 个实体
+[2026-06-04 18:17:36] 

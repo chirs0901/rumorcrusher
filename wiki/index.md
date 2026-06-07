@@ -35,6 +35,11 @@
 
 - **2026-06-01**：新增实体 台积电N2 / 天玑9600 / 硅碳电池；新增主题 HBM内存危机 / BOE Galaxy S27；首次建立Wiki结构
 - **2026-06-02**：新增实体 Exynos 2600 / 小米玄戒O1 / 苹果折叠iPhone；新增主题 OpenAI AI手机芯片 / 2026涨价潮；修复日期漂移记录
+- **2026-05-30**：新增实体 Dimensity 9400+ / Apple A19 / 索尼LYTIA品牌；更新主题 AI-DRAM危机（HBM4+cHBM）/ TSMC 2nm产能（AMD加入+台积电万亿营收）
+- **2026-06-03**：每小时采集新增实体 oppo（待建档）；自动采集新增/更新实体 Apple Google HONOR HUAWEI OPPO Samsung Vivo Xiaomi 华为 小米 荣耀 中芯国际 台积电（共13个）
+- **2026-06-04**：每小时采集新增实体 sic（待建档）；自动采集新增/更新实体 Apple Google 苹果（共3个）
+- **2026-06-05**：自动采集新增/更新实体 Google Honor Oppo Samsung Xiaomi（共5个）
+- **2026-06-06**：自动采集新增/更新实体 Apple Google Samsung 三星 BOE UTG HBM4 LPDDR5X LPDDR6 LPDDR6X UFS 2.2 UFS 3.1（共12个）
 
 ## 2026-06-06 更新摘要
 
