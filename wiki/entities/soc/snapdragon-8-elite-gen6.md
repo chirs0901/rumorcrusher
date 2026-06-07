@@ -37,3 +37,7 @@
 | 日期 | 信源 | AVeriTeC | 摘要 |
 |------|------|---------|------|
 | 2026-06-03 | Gizmochina / Wccftech / Beebom / Technetbook | Supported | Pro版规格补全：Adreno 850/18MB GMEM/LPDDR6/$300-320；两款均2+3+3 CPU，9月发布 |
+
+| 2026-06-06 | GSMArena / Android Authority / Gizmochina | Supported | 骁龙8 Elite Gen6双版本规格泄露：Pro版SM8975（Adreno 850 GPU+18MB GMEM+LPDDR6），标准版SM8950（Adreno 845+12MB GMEM），均采用台积电2nm，预计9月发布 |
+
+| 2026-06-07 | GSMArena · Gizchina · Beebom · Android Authority | Supported | 骁龙8 Elite Gen6 SM8950标准版：台积电2nm、Oryon 2P+3HP+3P、Adreno 845、12MB GMEM、LPDDR5X/UFS 5.0，9月Snapdragon Summit发布；Pro版SM8975 LPDDR6支持仍为泄露（ConflictingEvidence） |

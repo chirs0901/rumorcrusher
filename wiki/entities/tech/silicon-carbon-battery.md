@@ -24,3 +24,5 @@
 | 日期 | 信源 | AVeriTeC标签 | 事实摘要 |
 |------|------|-------------|---------|
 | 2026-06-01 | technerdo.com / phonearena.com / androidheadlines.com | Supported | 中国品牌旗舰2026年已普及硅碳电池；荣耀Magic Win 10001mAh/8.3mm；三星评估中；苹果未采用 |
+
+| 2026-06-06 | 澎湃新闻 / GGII / 中关村在线 | Supported | CVD硅碳负极2026年3C市场占比有望超50%，出货5000吨级；荣耀WIN RT搭载8800mAh硅碳+100W快充；小米17 Max 8000mAh（硅含量16%）；硅含量目标30%，比容量1200mAh/g |

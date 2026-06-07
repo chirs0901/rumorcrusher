@@ -41,7 +41,7 @@
 <div class="header">
   <span class="header-title">📚 手机知识库</span>
   <span>RumorCrusher</span>
-  <span class="last-update">更新：<span id="last-update">2026-06-04</span></span>
+  <span class="last-update">更新：<span id="last-update">2026-06-07</span></span>
   <span class="header-sub">已核查条目 · 仅Supported/Refuted</span>
 </div>
 
@@ -383,6 +383,105 @@ const KB = [
       {name: "Gizmochina", url: "https://www.gizmochina.com/2026/05/01/huawei-pura-90-pro-vs-xiaomi-17-pro-comparison/"}
     ]
   },
+  ,
+  {
+    id: "chip-20260607-001",
+    date: "2026-06-07",
+    cat: "chip",
+    title: "台积电2nm量产100K WPM，产能全数预订至2028年",
+    summary: "台积电N2工艺节点于2026年正式量产，月产能目标10万片晶圆，苹果A20芯片占据初始产能50%以上。全部先进节点产能已被预订至2028年，AI算力需求是主要驱动。台积电3nm同期月产能达20万片，2027年扩至25万片。三星2nm（GAA工艺）良率突破50%，年底月产能预计2.1万片，为Exynos及外部代工客户提供替代供应路径。",
+    verdict: "supported",
+    aiStrategy: true,
+    sources: [
+      {name: "Digitimes", url: "https://www.digitimes.com/news/a20260416PD240/tsmc-production-capacity-3nm-capacity-expansion.html"},
+      {name: "Dataconomy", url: "https://dataconomy.com/2026/03/31/tsmcs-advanced-chip-capacity-is-booked-out-through-2028/"},
+      {name: "TrendForce", url: "https://www.trendforce.com/news/2025/11/25/news-samsung-reportedly-hits-55-60-2nm-yields-eyeing-an-edge-through-early-gaa-deployment/"}
+    ]
+  },
+  {
+    id: "chip-20260607-002",
+    date: "2026-06-07",
+    cat: "chip",
+    title: "骁龙8 Elite Gen6（SM8950）+ 天玑9600（N2P），9月2nm旗舰对决",
+    summary: "高通骁龙8 Elite Gen6：台积电2nm，Oryon CPU 2P+3HP+3P核，Adreno 845 GPU（12MB GMEM），LPDDR5X/UFS 5.0，9月Snapdragon Summit发布。Pro版SM8975升级Adreno 850（18MB GMEM），LPDDR6支持待确认（CE）。联发科天玑9600选用台积电N2P（优于N2约5-10%），首次双Prime核架构，首批量产机型vivo X500和OPPO Find X10，同样9月发布，形成同台竞技。",
+    verdict: "supported",
+    aiStrategy: true,
+    sources: [
+      {name: "GSMArena", url: "https://www.gsmarena.com/snapdragon_8_elite_gen_6_8_elite_gen_6_pro_specifications_leak-news-72097.php"},
+      {name: "AndroidHeadlines", url: "https://www.androidheadlines.com/2026/04/new-leak-claims-mediateks-dimensity-9600-will-use-tsmcs-2nm-n2p-process.html"},
+      {name: "Nokiamob", url: "https://nokiamob.net/2026/05/29/mediatek-dimensity-9600-pro-full-specs-of-the-2nm-chip-targeting-apple/"}
+    ]
+  },
+  {
+    id: "memory-20260607-001",
+    date: "2026-06-07",
+    cat: "memory",
+    title: "HBM占DRAM晶圆23%，三星/SK海力士警告短缺延续2027年以上",
+    summary: "AI算力需求驱动HBM产能扩张，三星、SK海力士、美光已将23%的DRAM晶圆转向HBM（每片收益为普通DRAM的3-5倍）。三星内存负责人2026年4月财报警告重大短缺延续至2027年以上，HBM全年售罄。2026年HBM市场预计达546亿美元（+58%，美银证券）。结构性挤占推高消费级DDR4/LPDDR价格，导致2026年手机硬件成本上升。",
+    verdict: "supported",
+    aiStrategy: true,
+    sources: [
+      {name: "Tom's Hardware", url: "https://www.tomshardware.com/tech-industry/artificial-intelligence/samsung-and-sk-hynix-warn-ai-driven-memory-shortages-could-last-until-2027-and-beyond-as-hbm-demand-explodes"},
+      {name: "Tech-Insider", url: "https://tech-insider.org/memory-chip-shortage-2026-ai-consumer-electronics/"},
+      {name: "S&P Global", url: "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/01/ai-memory-boom-squeezes-legacy-dram-supply-pushing-prices-higher"}
+    ]
+  },
+  {
+    id: "display-20260607-001",
+    date: "2026-06-07",
+    cat: "display",
+    title: "三星夺回iPhone 18 Pro OLED，BOE iPhone 17份额仅~1%，旗舰地位终结",
+    summary: "三星显示重新成为iPhone 18 Pro主要OLED供应商，LG主攻标准机型；BOE因三代品控问题iPhone 17份额降至约1%，退出旗舰供应序列。2026年预测：三星~1.2亿（含iPhone Fold约1000万折叠面板）、LG ~8500万、BOE ~5500万（仅入门款）。三星8代OLED产线2026年5月启动量产，初期200万块全供苹果MacBook Pro OLED。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name: "Sammy Fans", url: "https://www.sammyfans.com/2026/05/07/samsung-takes-back-iphone-18-pro-oled-business-from-boe/"},
+      {name: "AppleInsider", url: "https://appleinsider.com/articles/25/11/19/boe-takes-another-hit-iphone-17-screen-orders-shifted-to-samsung"},
+      {name: "UBI Research", url: "https://en.ubiresearchnet.com/2026-iphone-panel-supply-outlook-samsung-expands-foldable-lg-targets-bar-type-boe-aims-to-prove-technology-and-expand-supply/"}
+    ]
+  },
+  {
+    id: "battery-20260607-001",
+    date: "2026-06-07",
+    cat: "battery",
+    title: "CATL神行Gen3：6分27秒满电，1000次循环>90%；硅碳电池全面旗舰化",
+    summary: "宁德时代神行超充Gen3量产：内阻0.25mΩ，支持10C/15C倍率，6分27秒满电，1000次循环容量>90%，化学体系为硅碳负极液态锂离子（非固态）。硅碳电池2026年在旗舰手机全面落地，能量密度较石墨+20-30%；全固态电池量产现实窗口为2027-2028年。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name: "TechGenyz", url: "https://techgenyz.com/smartphone-batteries-silicon-carbon-fast-charging/"},
+      {name: "Unbox Future", url: "https://www.unboxfuture.com/2026/03/the-silicon-anode-revolution.html"},
+      {name: "Technerdo", url: "https://www.technerdo.com/post/silicon-carbon-batteries-smartphones-2026"}
+    ]
+  },
+  {
+    id: "brands-20260607-001",
+    date: "2026-06-07",
+    cat: "brands",
+    title: "iPhone Fold试产启动：5.5/7.8英寸书本折，A20+Touch ID，9-10月发布",
+    summary: "苹果首款折叠屏iPhone于富士康启动试产，三星显示提供约1000万块折叠OLED面板。书本式折叠，合拢5.5英寸，展开7.8英寸；A20芯片；Touch ID电源键（无Face ID）；广角+超广角双摄（无长焦）；起售价或超$2000；9-10月与iPhone 18 Pro系列同期或紧随发布。"零折痕"材料声称来自单一爆料渠道，待实物验证（CE）。",
+    verdict: "supported",
+    aiStrategy: false,
+    sources: [
+      {name: "MacRumors", url: "https://www.macrumors.com/roundup/iphone-fold/"},
+      {name: "AppleInsider", url: "https://appleinsider.com/articles/26/04/24/iphone-fold-or-iphone-ultra-what-to-expect-from-the-folding-iphone"},
+      {name: "PConline", url: "https://mobile.pconline.com.cn/2033/20333015.html"}
+    ]
+  },
+  {
+    id: "display-20260607-002",
+    date: "2026-06-07",
+    cat: "display",
+    title: "❌ 辟谣：BOE仍为iPhone 18 Pro主力OLED供应商",
+    summary: "原声称：BOE已完成认证，将稳定供应iPhone 18 Pro OLED。核查结论：不实。三星显示已夺回iPhone 18 Pro主要供应权（Sammy Fans 2026-05-07）；BOE在iPhone 15/16/17三代品控问题累积，iPhone 17份额仅约1%；UBI Research预测BOE 2026年iPhone供货集中在入门款，旗舰供应商地位不成立。",
+    verdict: "refuted",
+    aiStrategy: false,
+    sources: [
+      {name: "Sammy Fans", url: "https://www.sammyfans.com/2026/05/07/samsung-takes-back-iphone-18-pro-oled-business-from-boe/"},
+      {name: "AppleInsider", url: "https://appleinsider.com/articles/25/11/19/boe-takes-another-hit-iphone-17-screen-orders-shifted-to-samsung"},
+      {name: "UBI Research", url: "https://en.ubiresearchnet.com/2026-iphone-panel-supply-outlook-samsung-expands-foldable-lg-targets-bar-type-boe-aims-to-prove-technology-and-expand-supply/"}
+    ]
+  }
 ]; // end KB
 
 function renderKB(items) {

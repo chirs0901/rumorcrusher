@@ -33,3 +33,7 @@ AI数据中心对高带宽内存（HBM）的需求爆炸式增长，导致三星
 | 日期 | 信源 | AVeriTeC标签 | 事实摘要 |
 |------|------|-------------|---------|
 | 2026-06-01 | fortune.com / IDC / tech-insider.org / TrendForce | Supported | HBM占DRAM晶圆23%；AI消耗全球70%内存；Q1涨价40-50%；手机市场萎缩5%预测 |
+
+| 2026-06-06 | Tom's Hardware / Tech-Insider / IDC / Fortune | Supported | HBM占全球DRAM晶圆产能23%（2025年19%），数据中心消耗70%内存产出。三星/SK海力士警告短缺持续至2027年+，客户已预订多年产能。手机均价因此达$523历史峰值，同比涨14% |
+
+| 2026-06-07 | Tom's Hardware · Samsung Earnings 2026-04 · Tech-Insider | Supported | HBM占全球DRAM晶圆23%；三星内存负责人金在俊警告短缺延至2027年以上；2026年HBM市场546亿美元（BofA预测，+58%）；DDR4/LPDDR4供应趋紧推高手机DRAM成本 |

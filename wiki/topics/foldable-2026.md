@@ -117,3 +117,5 @@
 | 日期 | 信源 | AVeriTeC标签 | 事实摘要 |
 |------|------|-------------|---------|
 | 2026-06-04 | 证券时报 / 观察者网 / 搜狐科技 | Supported/CE | Pura X Max铰链Supported；市占71.8% Supported；增长30%预测CE |
+
+| 2026-06-06 | 新浪科技 / Notebookcheck-cn / 163.com | Supported | 三星确认7月22日伦敦Unpacked发布Fold8+Flip8+Fold8 Wide三款折叠机；苹果iPhone Fold下半年压轴但初期供应短缺；三星CES 2026展示无折痕面板技术；三星Wide Fold 4:3宽屏7.6英寸（部分信源，CE） |

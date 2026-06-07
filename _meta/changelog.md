@@ -27,3 +27,23 @@
 - 新增 skills/market-share-dimension-check.md
 - 新增 skills/gpu-benchmark-claim-check.md
 - 知识库新增5条（chip×2, display×1, brands×2）
+
+## 2026-06-06 ☀️ 晨报运行（TIMESTAMP=061658）
+
+### 采集统计
+- 搜索次数：10次（WebSearch）
+- 总采集：30条，Supported 22 / CE 4 / NEE 3 / Refuted 0
+- UnR: 0.233 | 综合健康打分: 82/100
+
+### Wiki更新
+- 新增实体页：sony-lyt-910.md, samsung-z-fold8.md
+- 更新实体：dimensity-9600, tsmc-n2, snapdragon-8-elite-gen6, apple-iphone-fold, silicon-carbon-battery
+- 更新主题：hbm-squeezes-consumer-dram, tsmc-2nm-supply-2026, foldable-2026, openai-ai-phone, sensor-oled-2026, smartphone-price-hike-2026, silicon-carbon-battery-2026
+
+### 知识库更新
+- 新增KB条目：10条（详见第8步）
+
+### 方法论增量
+- 产品泄露规格单源问题识别
+- 中文媒体比例数字引入误差的识别规则
+

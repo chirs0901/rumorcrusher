@@ -35,3 +35,5 @@
 | 日期 | 信源 | AVeriTeC标签 | 事实摘要 |
 |------|------|-------------|---------|
 | 2026-06-04 | TechRadar / OLED-Info / SamMobile | Supported | Sensor OLED 500ppi内置生物传感器；PSF OLED 3000nits+BT.2020-96，SID 2026官方展示 |
+
+| 2026-06-06 | Digital Camera World / Y.M.Cinema / Notebookcheck | Supported | 索尼LYT-910（约200MP，QQBC设计）正式发布；索尼与台积电合作开发下一代传感器；三星200MP HPA传感器在研（2026底-2027初量产）；苹果拟2027年转向三星供货（NEE） |

@@ -29,3 +29,8 @@
 | 日期 | 信源 | AVeriTeC标签 | 事实摘要 |
 |------|------|-------------|---------|
 | 2026-06-04 | Notebookcheck / androidheadlines.com | CE | 天玑9600声称GPU超A20/SD8EG6；2+3+3全大核架构；与OpenAI AI手机关联报道 |
+
+| 2026-06-06 | TMTPost / IT之家 / eet-china | Supported | 天玑9600确认为全球首款2nm量产手机AP，台积电N2工艺已进入量产阶段，该款芯片为首批客户之一 |
+
+| 2026-06-07 | AndroidHeadlines 2026-04 · Nokiamob 2026-05 · PCPai | Supported | 天玑9600采用台积电N2P工艺（优于N2 5-10%），双Prime核架构（业界首次），Q3/9月发布确认；首批量产机型为vivo X500和OPPO Find X10；天玑9600 Pro宣称5GHz峰值频率（CE，单源Gizmochina） |
+| 2026-06-07 | 腾讯新闻/知乎（2026-01） | Refuted | ❌ Q4发布说法被驳倒：多份2026年4-5月来源确认Q3/9月发布窗口，该说法为过期预测 |

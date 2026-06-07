@@ -23,3 +23,5 @@ DDR4 16GB现货价$12.8→$79（涨幅约518%）**不代表OEM采购成本**。O
 | 日期 | 信源 | AVeriTeC标签 | 事实摘要 |
 |------|------|-------------|---------|
 | 2026-06-02 | eastmoney.com（vivo官方）/ Counterpoint via esmchina.com / stcn.com | Supported | vivo 3月18日官宣涨价，OPPO跟进，3月后均价+15~25%，五年最大涨价潮，高成本周期2~3年 |
+
+| 2026-06-06 | IDC / TechTimes / Fortune | Supported | 2026年全球手机均价达$523历史峰值（同比+14%），主因AI内存成本上涨；手机市场萎缩5%；AI内存短缺延续至2027年以上；HBM占DRAM产能23%是核心结构性驱动 |

@@ -26,3 +26,8 @@
 |------|------|-------------|---------|
 | 2026-06-02 | appleinsider.com / macrumors.com / apple.gadgethacks.com / trendforce.com | Supported | 铰链延迟量产至8月；外屏5.5"/内屏7.8"；Amphenol铰链；SDC 700~800万片折叠屏；$2000~$2500定价 |
 | 2026-06-02 | appleinsider.com（2025-11） | ConflictingEvidence | 折痕问题"已解决"声称（未实机验证，折痕≠铰链问题）|
+
+| 2026-06-06 | 163.com / PConline / 太平洋科技 | Supported | 苹果iPhone Fold确认2026年下半年发布；因无折痕面板产能有限，2026年底前将处于供应短缺状态；三星显示已在CES 2026展示无折痕面板 |
+
+| 2026-06-07 | MacRumors Roundup · AppleInsider 2026-04 · Gadgeteer 2026-05 · PConline | Supported | 试产在富士康启动；三星显示供约1000万折叠面板；书本式大折5.5/7.8英寸；A20芯片；Touch ID电源键（无Face ID）；双摄（无长焦）；售价或超$2000；9-10月发布 |
+| 2026-06-07 | AppleInsider/多来源 | ConflictingEvidence | "新材料特性"实现零折痕声称：多源引用但均回溯单一供应链爆料渠道，无独立实物测试，CE |

@@ -23,3 +23,5 @@
 | 日期 | 信源 | AVeriTeC标签 | 事实摘要 |
 |------|------|-------------|---------|
 | 2026-06-02 | cnbc.com / decrypt.co / thenextweb.com / business-standard.com | ConflictingEvidence | 多源报道OpenAI AI手机芯片计划，2028量产，但供应商选择相互冲突，无官方确认 |
+
+| 2026-06-06 | TheNextWeb / 247WallSt | Supported | OpenAI+高通+联发科联合设计AI手机定制处理器，以AI Agent取代传统App，规格2026底至2027初确定，2028年量产，目标3-4亿部年出货 |

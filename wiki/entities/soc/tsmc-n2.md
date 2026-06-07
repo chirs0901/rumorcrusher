@@ -27,3 +27,7 @@
 | 2026-06-01 | finance.sina.com.cn / eet-china.com / c114.net.cn | Supported | N2 Q4 2025量产，初期3.5万片/月，2026底14万片；苹果50%；$30k/晶圆；良率>70% |
 | 2026-06-01 | eet-china.com | Supported | N2P H2 2026量产，性能+5~10%，功耗-5~10% |
 | 2026-06-04 | Digitimes / markets.financialcontent.com | Supported | CoWoS产能2026底扩至13万片/月（Nvidia预订>50%）；2026年capex $560亿历史最高，N2+A16优先 |
+
+| 2026-06-06 | Android Headlines / Tom's Hardware / SDxCentral | Supported | 台积电2026年同步开建5座N2工厂，月产能目标10万片，全部预订；晶圆报价3万美元/片；苹果A20占初期产能50%+ |
+
+| 2026-06-07 | Digitimes 2026-04 · Dataconomy 2026-03 · Global Semi Research | Supported | N2月产能10万片，全数预订至2028年；苹果A20占初始产能逾半；台积电2nm已正式进入量产阶段，AI算力需求是产能预订的主要驱动力 |
