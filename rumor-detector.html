@@ -304,9 +304,10 @@
 
 <script>
 // ── API 配置 ──
-// 本地开发: http://127.0.0.1:5000
-// 部署到云端时: 修改为你的服务器地址
-const API_BASE = 'http://127.0.0.1:5000';
+// 智能检测：file:// 协议时直连本地API，http:// 协议时使用同源相对路径
+const API_BASE = (window.location.protocol === 'file:') 
+  ? 'http://127.0.0.1:5000' 
+  : '';
 
 // Set example query
 function setExample(text) {

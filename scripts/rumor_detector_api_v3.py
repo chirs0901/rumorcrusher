@@ -996,6 +996,23 @@ def create_app():
             "timestamp": datetime.now().isoformat(),
         })
 
+    @app.route("/", methods=["GET"])
+    @app.route("/rumor-detector", methods=["GET"])
+    def serve_frontend():
+        """直接提供前端页面，避免 file:// 协议跨域问题"""
+        from flask import send_file
+        import os
+        # 优先查找当前工作目录下的 rumor-detector.html
+        candidates = [
+            os.path.join(os.getcwd(), "rumor-detector.html"),
+            os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "rumor-detector.html"),
+            os.path.expanduser("~/Documents/Claude/Projects/RumorCrusher/rumor-detector.html"),
+        ]
+        for path in candidates:
+            if os.path.exists(path):
+                return send_file(path, mimetype="text/html")
+        return "<h2>rumor-detector.html 未找到</h2>", 404
+
     return app
 
 
