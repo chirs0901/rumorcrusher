@@ -1,0 +1,143 @@
+{
+  "timestamp": "2026-06-06T18:12:58.943449",
+  "category": "soc",
+  "queries": [
+    "Snapdragon 8 Elite Gen 6 latest news 2026",
+    "Dimensity 9600 天玑9600 最新消息",
+    "Apple A20 Pro chip TSMC 2nm",
+    "Kirin 麒麟 2026 芯片 最新",
+    "手机芯片 制程 2nm 3nm 最新动态"
+  ],
+  "results_count": 16,
+  "entities": {
+    "soc": [
+      "Snapdragon 4s Gen 2",
+      "Snapdragon 8 Gen 5"
+    ],
+    "brand": [
+      "Samsung",
+      "Xiaomi",
+      "Apple"
+    ],
+    "tech": [],
+    "supplier": [],
+    "display": [],
+    "camera": [],
+    "battery": [],
+    "other": []
+  },
+  "results": [
+    {
+      "title": "Snapdragon Processors = Extraordinary Experiences | Qualcomm",
+      "url": "https://www.qualcomm.com/snapdragon/overview",
+      "domain": "www.qualcomm.com",
+      "snippet": "Jun 19, 2025 · Snapdragon processors give your smartphone the ability to create extraordinary experiences in camera, gaming, and audio. Learn how we do it and how the best devices are …",
+      "query": "Snapdragon 8 Elite Gen 6 latest news 2026"
+    },
+    {
+      "title": "Chip Snapdragon: Tất tần tật thông tin cần biết",
+      "url": "https://www.thegioididong.com/hoi-dap/chip-snapdragon-1580214",
+      "domain": "www.thegioididong.com",
+      "snippet": "Oct 27, 2025 · Snapdragon và Exynos đều dùng kiến trúc ARM, nhưng Snapdragon thường cho hiệu suất và khả năng tối ưu game tốt hơn, đặc biệt trên các dòng Galaxy S và Note bản Mỹ, Hàn Quốc.",
+      "query": "Snapdragon 8 Elite Gen 6 latest news 2026"
+    },
+    {
+      "title": "Qualcomm Snapdragon - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Qualcomm_Snapdragon",
+      "domain": "en.wikipedia.org",
+      "snippet": "Snapdragon is the brandname for Qualcomm 's integrated circuit (IC) products. These include systems on chip (SoCs), standalone cellular modems, and wireless network interface controllers (NICs).",
+      "query": "Snapdragon 8 Elite Gen 6 latest news 2026"
+    },
+    {
+      "title": "Bảng xếp hạng chip Qualcomm Snapdragon mới nhất 2025",
+      "url": "https://mobileworld.com.vn/bang-xep-hang-chip-qualcomm-snapdragon-moi-nhat.html",
+      "domain": "mobileworld.com.vn",
+      "snippet": "Aug 14, 2025 · Tìm hiểu bảng xếp hạng chip Qualcomm Snapdragon 2025, từ Snapdragon 8 Elite (Gen 4) đến Snapdragon 4s Gen 2. Khám phá chip mạnh nhất cho Samsung S25 series, Xiaomi 15, …",
+      "query": "Snapdragon 8 Elite Gen 6 latest news 2026"
+    },
+    {
+      "title": "Tổng hợp bảng xếp hạng chip Snapdragon cập nhật mới nhâ· 2024",
+      "url": "https://fptshop.com.vn/tin-tuc/danh-gia/bang-xep-hang-chip-snapdragon-158377",
+      "domain": "fptshop.com.vn",
+      "snippet": "Xem ngay bảng xếp hạng chip Snapdragon cập nhật năm 2024 mang đến cái nhìn tổng quan các dòng chip từ Qualcomm. Tìm hiểu hiệu năng từ các dòng chip Snapdragon phổ biến trong bài viết này.",
+      "query": "Snapdragon 8 Elite Gen 6 latest news 2026"
+    },
+    {
+      "title": "Tổng thông tin về chip Snapdragon, dòng chip nào mạnh nhất",
+      "url": "https://cellphones.com.vn/sforum/chip-snapdragon-la-gi",
+      "domain": "cellphones.com.vn",
+      "snippet": "Sep 17, 2024 · Chip Snapdragon là một dòng chip được sử dụng rất phổ biến trong sản xuất smartphone hiện nay. Vậy dòng chip Snapdragon của hãng nào sản xuất, có tính năng gì mà lại …",
+      "query": "Snapdragon 8 Elite Gen 6 latest news 2026"
+    },
+    {
+      "title": "Bảng xếp hạng chip Snapdragon Update 2025 - Viettel Store",
+      "url": "https://viettelstore.vn/tin-tuc/chip-snapdragon-manh-nhat-hien-nay",
+      "domain": "viettelstore.vn",
+      "snippet": "Jul 25, 2025 · Bảng xếp hạng các con chip Snapdragon sẽ là công cụ hữu ích giúp bạn nhận biết dòng chip nào mạnh nhất, phù hợp nhất với nhu cầu của mình – từ chơi game, quay phim, chỉnh sửa ảnh …",
+      "query": "Snapdragon 8 Elite Gen 6 latest news 2026"
+    },
+    {
+      "title": "Qualcomm Snapdragon 8 Gen 5: specs and benchmarks - NanoReview",
+      "url": "https://nanoreview.net/en/soc/qualcomm-snapdragon-8-gen-5",
+      "domain": "nanoreview.net",
+      "snippet": "Qualcomm Snapdragon 8 Gen 5: performance tests in benchmarks (AnTuTu 11, GeekBench 6). Battery life and full specifications.",
+      "query": "Snapdragon 8 Elite Gen 6 latest news 2026"
+    },
+    {
+      "title": "Apple (ประเทศไทย)",
+      "url": "https://www.apple.com/th/",
+      "domain": "www.apple.com",
+      "snippet": "พบกับโลกนวัตกรรมของ Apple และเลือกซื้อทุกสิ่งตั้งแต่ iPhone, iPad, Apple Watch, Mac และ Apple TV พร้อมสำรวจอุปกรณ์เสริม ความบันเทิง และบริการ ...",
+      "query": "Apple A20 Pro chip TSMC 2nm"
+    },
+    {
+      "title": "iCloud",
+      "url": "https://www.icloud.com/",
+      "domain": "www.icloud.com",
+      "snippet": "Log in to iCloud to access your photos, mail, notes, documents and more. Sign in with your Apple Account or create a new account to start using Apple services.",
+      "query": "Apple A20 Pro chip TSMC 2nm"
+    },
+    {
+      "title": "Apple Inc. - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Apple_Inc.",
+      "domain": "en.wikipedia.org",
+      "snippet": "Apple's product lineup includes portable and home hardware like the iPhone, iPad, Mac, Apple Watch, and AirPods; several in-house operating systems such as iOS, iPadOS, and macOS; and various …",
+      "query": "Apple A20 Pro chip TSMC 2nm"
+    },
+    {
+      "title": "Everything Apple announced at its big event: iPhone Air, iPhone 17, …",
+      "url": "https://www.cnn.com/2025/09/09/tech/new-apple-devices-announcement-event",
+      "domain": "www.cnn.com",
+      "snippet": "Sep 9, 2025 · Apple announced the first major redesign of the iPhone in years on Tuesday when it confirmed the launch of a new, thinner model called the iPhone Air.",
+      "query": "Apple A20 Pro chip TSMC 2nm"
+    },
+    {
+      "title": "Apple Devices - Free download and install on Windows | Microsoft Store",
+      "url": "https://apps.microsoft.com/detail/9np83lwlpz9k",
+      "domain": "apps.microsoft.com",
+      "snippet": "Screenshots Description Manage Apple devices from your Windows PC using the Apple Devices app.",
+      "query": "Apple A20 Pro chip TSMC 2nm"
+    },
+    {
+      "title": "Upcoming Apple products 2026: Every new iPhone, Mac, iPad & Watch ...",
+      "url": "https://www.macworld.com/article/671090/new-apple-products-iphone-ipad-mac-watch.html",
+      "domain": "www.macworld.com",
+      "snippet": "2 days ago · From the next iPhone to new Macs, here are all the Apple products rumored to arrive in 2026.",
+      "query": "Apple A20 Pro chip TSMC 2nm"
+    },
+    {
+      "title": "MacRumors: Apple News and Rumors",
+      "url": "https://www.macrumors.com/",
+      "domain": "www.macrumors.com",
+      "snippet": "Apple is reportedly redesigning Image Playground with a simpler interface and new models producing more lifelike images.",
+      "query": "Apple A20 Pro chip TSMC 2nm"
+    },
+    {
+      "title": "Apple (中国大陆) - 官方网站",
+      "url": "https://www.apple.com.cn/",
+      "domain": "www.apple.com.cn",
+      "snippet": "探索 Apple 的创新世界，选购各式 iPhone、iPad、Apple Watch 和 Mac，浏览各类配件、娱乐产品，并获得相关产品的专家服务支持。",
+      "query": "Apple A20 Pro chip TSMC 2nm"
+    }
+  ]
+}

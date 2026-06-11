@@ -1,0 +1,139 @@
+{
+  "timestamp": "2026-06-06T22:13:11.128290",
+  "category": "supply-chain",
+  "queries": [
+    "TSMC 2nm 产能 苹果 高通 2026",
+    "中芯国际 SMIC 制程 进展 2026",
+    "Samsung Foundry 2nm GAA 2026",
+    "手机芯片 代工 产能 供应 2026",
+    "semiconductor foundry smartphone 2026"
+  ],
+  "results_count": 16,
+  "entities": {
+    "soc": [],
+    "brand": [
+      "Samsung",
+      "华为"
+    ],
+    "tech": [],
+    "supplier": [],
+    "display": [],
+    "camera": [],
+    "battery": [],
+    "other": []
+  },
+  "results": [
+    {
+      "title": "Samsung Thailand | มือถือ สมาร์ทโฟน ทีวี และเครื่องใช้ไ…",
+      "url": "https://www.samsung.com/th/",
+      "domain": "www.samsung.com",
+      "snippet": "พบกับเทคโนโลยีเครื่องใช้ไฟฟ้า ทีวี ตู้เย็น เครื่องซักผ้า และโทรศัพท์มือถือ สุดล้ำจากซัมซุง …",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    },
+    {
+      "title": "มือถือ Samsung (ซัมซุง) ทุกรุ่น ออกใหม่ล่าสุด ราคามื…",
+      "url": "https://www.siamphone.com/spec/samsung/index.htm",
+      "domain": "www.siamphone.com",
+      "snippet": "แคตตาล็อกมือถือ Samsung (ซัมซุง) โทรศัพท์มือถือ สมาร์ทโฟน แท็บเล็ต ทุกรุ่น …",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    },
+    {
+      "title": "Samsung shop in shop",
+      "url": "https://www.bnn.in.th/th/pages/samsung-shop",
+      "domain": "www.bnn.in.th",
+      "snippet": "สมาร์ทโฟน Samsung Galaxy Note 20 Ultra (12+256GB) Mystic Bronze (5G) ฿32,900 เลือกซื้อ",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    },
+    {
+      "title": "Samsung - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Samsung",
+      "domain": "en.wikipedia.org",
+      "snippet": "It formed several electronics-related divisions, such as Samsung Electronics Devices, Samsung Electro-Mechanics, …",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    },
+    {
+      "title": "มือถือ Samsung (ซัมซุง) ทุกรุ่น ออกใหม่ล่าสุดพร้อมร…",
+      "url": "https://www.thaimobilecenter.com/catalog/Samsung.asp",
+      "domain": "www.thaimobilecenter.com",
+      "snippet": "มือถือ Samsung แค็ตตาล็อกโทรศัพท์มือถือ - ซัมซุง ออกใหม่ล่าสุด ราคากลางมือถือ …",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    },
+    {
+      "title": "Stan究竟表达的是什么意思？_百度知道",
+      "url": "https://zhidao.baidu.com/question/540254743.html",
+      "domain": "zhidao.baidu.com",
+      "snippet": "Stan究竟表达的是什么意思？《Stan》这首歌表达的意思是EMINEM希望他的歌迷们不要像STAN那样，要好好地活着。《Stan》是 …",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    },
+    {
+      "title": "阿姆的stan表达的是什么意思和什么情感? - 知乎",
+      "url": "https://www.zhihu.com/question/21406253",
+      "domain": "www.zhihu.com",
+      "snippet": "STAN（Stanley的简写,MV的开头那个女人在厕所门口喊的就是Stanley）是EMEINEM的忠实歌迷 因为给他写了几封信EMINEM没回 …",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    },
+    {
+      "title": "stan这首歌里的故事是真的么？ - 知乎",
+      "url": "https://www.zhihu.com/question/304338413",
+      "domain": "www.zhihu.com",
+      "snippet": "Dec 1, 2018 · 我之前觉得是假的，我刚才看cctv10的《人物》早期有 Eminem 的一期，然后里面也提到了stan，好像是真的，他的 …",
+      "query": "Samsung Foundry 2nm GAA 2026"
+    },
+    {
+      "title": "Steam Community",
+      "url": "https://steamcommunity.com/",
+      "domain": "steamcommunity.com",
+      "snippet": "Community Hubs are collections of all the best community and official game content as rated by users.",
+      "query": "手机芯片 代工 产能 供应 2026"
+    },
+    {
+      "title": "LEGO® Forum Italia",
+      "url": "https://legoforum.forumcommunity.net/",
+      "domain": "legoforum.forumcommunity.net",
+      "snippet": "May 6, 2026 · LEGO®, la configurazione del mattoncino, e la minifigura sono marchi del gruppo di società LEGO®, il quale non …",
+      "query": "手机芯片 代工 产能 供应 2026"
+    },
+    {
+      "title": "【乐高LEGO选购指南】机械组超级旗舰系列盘点推荐（是比旗舰版更稀有的超跑套装！）",
+      "url": "https://www.zhihu.com/tardis/zm/art/308692757",
+      "domain": "www.zhihu.com",
+      "snippet": "Jun 23, 2022 · 乐高LEGO - 42143 法拉利 Daytona SP3 发行年份：2022 体积：长59cm x 宽25cm x 高14cm 颗粒数：3778 关键词：法拉利、超级跑车、 …",
+      "query": "手机芯片 代工 产能 供应 2026"
+    },
+    {
+      "title": "Crash on launch : fixed :: LEGO® MARVEL's Avengers General Discus…",
+      "url": "https://steamcommunity.com/app/405310/discussions/0/4693405245807533865/",
+      "domain": "steamcommunity.com",
+      "snippet": "For fix the crash go to : AppData\\\\Roaming\\\\Warner Bros. Interactive Entertainment\\\\LEGO MARVEL's …",
+      "query": "手机芯片 代工 产能 供应 2026"
+    },
+    {
+      "title": "史上最全 | 乐高LEGO积木玩具全系列最新吐血整理推荐（2023.3更新）",
+      "url": "https://www.zhihu.com/tardis/landing/m/360/art/339741381",
+      "domain": "www.zhihu.com",
+      "snippet": "乐高LEGO是什么？ “LEGO”来自丹麦语“leg godt”，意思是“玩得开心”~ 在20世纪30年代的丹麦，有一个技艺精湛的木匠叫克里斯琴森（Ole Kirk …",
+      "query": "手机芯片 代工 产能 供应 2026"
+    },
+    {
+      "title": "腾讯会议有网页版登录入口吗? 在线等，急！！？ - 知乎",
+      "url": "https://www.zhihu.com/question/392915812",
+      "domain": "www.zhihu.com",
+      "snippet": "Oct 10, 2023 · 从技术上讲是可以实现网页登录加入会议的，但是，就是没有。 以下是官方的说明内容： 腾讯会议目前已上架国内部分应用市场（AppStore、华为 …",
+      "query": "手机芯片 代工 产能 供应 2026"
+    },
+    {
+      "title": "腾讯会议录制的视频保存在哪里 - 百度经验",
+      "url": "https://jingyan.baidu.com/article/e8cdb32b197ccc76052badf5.html",
+      "domain": "jingyan.baidu.com",
+      "snippet": "Aug 3, 2022 · 电脑腾讯会议录制的视频其默认是保存在C:\\Users\\Administrator\\Documents\\TencentMeeting中的。 具体可以通过进入到该软件的设置界面中查看 …",
+      "query": "手机芯片 代工 产能 供应 2026"
+    },
+    {
+      "title": "腾讯会议宣布「AI 纪要」功能全新升级，升级后用户使用体验 ...",
+      "url": "https://www.zhihu.com/question/1943692038911525430",
+      "domain": "www.zhihu.com",
+      "snippet": "腾讯会议升级“AI纪要”功能，实现会中每2分钟实时刷新，还原会议真实氛围，会后纪要可沉淀至腾讯元宝。…",
+      "query": "手机芯片 代工 产能 供应 2026"
+    }
+  ]
+}

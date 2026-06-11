@@ -1,0 +1,80 @@
+{
+  "timestamp": "2026-06-06T14:12:33.760467",
+  "category": "ai-phone",
+  "queries": [
+    "端侧AI 手机 NPU TOPS 2026",
+    "on-device AI smartphone LLM",
+    "AI手机 功能 芯片 2026 最新",
+    "手机AI Agent 智能体 2026",
+    "DeepSeek 手机端 部署 2026"
+  ],
+  "results_count": 8,
+  "entities": {
+    "soc": [],
+    "brand": [],
+    "tech": [],
+    "supplier": [],
+    "display": [],
+    "camera": [],
+    "battery": [],
+    "other": []
+  },
+  "results": [
+    {
+      "title": "On | Swiss Performance Running Shoes & Clothing",
+      "url": "https://www.on.com/en-us/?msockid=232a934ebaf56cf025be843ebb106db1",
+      "domain": "www.on.com",
+      "snippet": "Born in the Swiss Alps, On running shoes feature the first patented cushioning system which is activated only when you need it - during the landing.",
+      "query": "on-device AI smartphone LLM"
+    },
+    {
+      "title": "ON Live",
+      "url": "https://www.onlive.vn/",
+      "domain": "www.onlive.vn",
+      "snippet": "ON Live is a platform for esports, live streaming, and entertainment content in Vietnam.",
+      "query": "on-device AI smartphone LLM"
+    },
+    {
+      "title": "Ôn luyện",
+      "url": "https://www.onluyen.vn/",
+      "domain": "www.onluyen.vn",
+      "snippet": "Ôn luyện sẽ giúp bạn xác định chính xác kiến thức bị hổng để tập trung đào sâu, làm đúng làm tiếp câu khó hơn, làm sai có hướng dẫn giải chi tiết. Bạn có thể ôn luyện tất các môn Toán, Ngữ văn, Tiếng …",
+      "query": "on-device AI smartphone LLM"
+    },
+    {
+      "title": "Microsoft OneDrive",
+      "url": "https://onedrive.live.com/login/",
+      "domain": "onedrive.live.com",
+      "snippet": "Sign in to Microsoft OneDrive to access your files and collaborate with others securely.",
+      "query": "on-device AI smartphone LLM"
+    },
+    {
+      "title": "ON Plus - Xem trực tiếp bóng đá, thể thao, tin tức số 1 Việt Nam",
+      "url": "https://onplus.com.vn/",
+      "domain": "onplus.com.vn",
+      "snippet": "ON Plus tin tức thể thao mới nhất - Thông tin nhanh & chính xác được cập nhật hàng giờ. Đọc báo thể thao online Việt Nam & Thế giới nóng nhất trong ngày về thể thao,...",
+      "query": "on-device AI smartphone LLM"
+    },
+    {
+      "title": "On Running Chính Hãng | On Cloud Collection 2026",
+      "url": "https://supersports.com.vn/collections/on-running",
+      "domain": "supersports.com.vn",
+      "snippet": "Giày Chạy Bộ On Running chính hãng với công nghệ CloudTec® độc quyền. Siêu nhẹ, đàn hồi tốt, cảm giác chân tự nhiên. Mới nhất 2026 - Ưu đãi tháng này!",
+      "query": "on-device AI smartphone LLM"
+    },
+    {
+      "title": "On (company) - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/On_(company)",
+      "domain": "en.wikipedia.org",
+      "snippet": "On was first incorporated as a sporting goods company in 2010. The company was founded by former Swiss Ironman champion Olivier Bernhard with David Allemann and Caspar Coppetti. In 2012, On …",
+      "query": "on-device AI smartphone LLM"
+    },
+    {
+      "title": "ON | English meaning - Cambridge Dictionary",
+      "url": "https://dictionary.cambridge.org/dictionary/english/on",
+      "domain": "dictionary.cambridge.org",
+      "snippet": "ON definition: 1. used to show that something is in a position above something else and touching it, or that…. Learn more.",
+      "query": "on-device AI smartphone LLM"
+    }
+  ]
+}

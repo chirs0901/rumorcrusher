@@ -1,0 +1,82 @@
+{
+  "timestamp": "2026-06-06T20:13:05.048002",
+  "category": "camera",
+  "queries": [
+    "Sony LYTIA sensor 手机 2026",
+    "Samsung ISOCELL 手机相机传感器",
+    "潜望式长焦 手机 2026 最新",
+    "手机影像 计算摄影 AI 2026",
+    "可变光圈 手机 相机 2026"
+  ],
+  "results_count": 8,
+  "entities": {
+    "soc": [],
+    "brand": [
+      "Google"
+    ],
+    "tech": [],
+    "supplier": [],
+    "display": [],
+    "camera": [],
+    "battery": [],
+    "other": []
+  },
+  "results": [
+    {
+      "title": "‎Google Gemini",
+      "url": "https://gemini.google.com/?hl=pt-PT",
+      "domain": "gemini.google.com",
+      "snippet": "Conheça o Gemini, o assistente de IA da Google. Receba ajuda para escrever, planear, debater ideias e muito mais. Experimente o poder da IA generativa.",
+      "query": "潜望式长焦 手机 2026 最新"
+    },
+    {
+      "title": "‎Google Gemini",
+      "url": "https://gemini.google.com/",
+      "domain": "gemini.google.com",
+      "snippet": "Meet Gemini, Google’s AI assistant. Get help with writing, planning, brainstorming, and more. Experience the power of generative AI.",
+      "query": "潜望式长焦 手机 2026 最新"
+    },
+    {
+      "title": "‎Google Gemini",
+      "url": "https://gemini.google.com/?hl=fr",
+      "domain": "gemini.google.com",
+      "snippet": "Voici Gemini, l'assistant IA de Google. Faites-vous aider pour rédiger, planifier, trouver des idées et plus encore. Découvrez la puissance de l'IA générative.",
+      "query": "潜望式长焦 手机 2026 最新"
+    },
+    {
+      "title": "‎Google Gemini",
+      "url": "https://gemini.google.com/?hl=vi",
+      "domain": "gemini.google.com",
+      "snippet": "Làm quen với Gemini, trợ lý AI của Google. Gemini có thể giúp bạn viết nội dung, lên kế hoạch, học tập và nhiều việc khác. Trải nghiệm sức mạnh của AI tạo sinh.",
+      "query": "潜望式长焦 手机 2026 最新"
+    },
+    {
+      "title": "‎Google Gemini",
+      "url": "https://gemini.google.com/?hl=cs",
+      "domain": "gemini.google.com",
+      "snippet": "Seznamte se s Gemini, AI asistentem od Googlu. Dokáže pomoct s psaním, plánováním, brainstormingem a spoustou dalších aktivit. Zažijte sílu generativní umělé inteligence.",
+      "query": "潜望式长焦 手机 2026 最新"
+    },
+    {
+      "title": "‎Google Gemini",
+      "url": "https://gemini.google.com/?hl=it",
+      "domain": "gemini.google.com",
+      "snippet": "Ecco Gemini, l'assistente AI di Google. Ricevi aiuto per scrivere, pianificare, fare brainstorming e molto altro. Prova la potenza dell'AI generativa.",
+      "query": "潜望式长焦 手机 2026 最新"
+    },
+    {
+      "title": "‎Google Gemini",
+      "url": "https://gemini.google.com/?hl=zh-TW",
+      "domain": "gemini.google.com",
+      "snippet": "認識 Google AI 助理 Gemini，輕鬆撰寫內容、擬訂計畫、腦力激盪等。體驗生成式 AI 的強大功能。",
+      "query": "潜望式长焦 手机 2026 最新"
+    },
+    {
+      "title": "‎Google Gemini",
+      "url": "https://gemini.google.com/?hl=de",
+      "domain": "gemini.google.com",
+      "snippet": "Chatte mit Gemini, dem KI-Assistenten von Google. Lass dich beim Schreiben, Planen, Sammeln von Ideen und vielem mehr von der leistungsfähigen generativen KI von Google unterstützen.",
+      "query": "潜望式长焦 手机 2026 最新"
+    }
+  ]
+}

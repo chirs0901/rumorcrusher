@@ -1,0 +1,26 @@
+# 科技新闻采集 · 2026-06-07 11:00
+
+> 类别: camera · 采集时间: 2026-06-07 11:14:02
+
+## 搜索结果
+
+- [TikTok 运营之——东南亚本土小店篇，这一篇，绝对够了，也绝对值得 …](https://www.zhihu.com/tardis/bd/art/589192392) · `www.zhihu.com`
+  > TikTok Shop 上传店铺 Logo E. 填写收货、发货地址 地址可以在下面的这个网站上生成。 马来西亚地址生成器 - 马来西亚身份生成器 - 马来西亚信用卡生成器 TikTok 仓库地址设置 注意，名称随便起，电 …
+- [【干货】TikTok东南亚市场报告，TikTok东南亚市场报告](https://www.zhihu.com/tardis/bd/art/498989210) · `www.zhihu.com`
+  > 据TikTok官网信息，TikTok将在4月25日正式上线东南亚四国（泰国、越南、马来西亚、菲律宾）的TikTok Shop跨境电商业务。 这意味着到了本月25日，商家们就可以正式入驻东南亚4国的TikTok …
+- [【干货】TikTok Shop东南亚4国本月25号上线，附申请方式和常见问题](https://www.zhihu.com/tardis/bd/art/498457345) · `www.zhihu.com`
+  > 字节官方重磅消息不断， TikTok Shop东南亚4国本月25号上线， TikTok圈内掀起了一阵申请小店的热潮！ 为了方便大家尽快申请到小店，我整理到目前申请TikTok小店的最新准确消息， 有需要的朋友转发 …
+- [新手TikTok小店第一次出单？那你需要轻易这份最新汇总的小店发货流程](https://www.zhihu.com/tardis/bd/art/534952511) · `www.zhihu.com`
+  > 在Tk开店的跨境商家肯定都非常想了解关于Tk Shop发货这块的问题。 订单准时送达、包装完好无损至关重要，能够极大程度提升用户满意度。 那么TK商家出单了该如何进行发货？ 今天轻易就给大家梳理 …
+- [Tiktok墨西哥市场未来发展前景怎么样？ - 知乎](https://www.zhihu.com/question/1976218465095418655) · `www.zhihu.com`
+  > TikTok Shop需在如此激烈的竞争中找准自身定位。 2. 物流与达人资源的瓶颈 物流是拉美市场的老大难问题，墨西哥也存在清关环节多、物流时效低等挑战。 同时，优质的达人资源高度集中于美妆、时尚 …
+- [【干货】为什么大批TikTok卖家店铺被封？](https://www.zhihu.com/tardis/zm/art/509793175) · `www.zhihu.com`
+  > 谁能想到， TikTok 也迎来了封店潮。 前几天很多英国小店的卖家发现，称自己的TikTok店铺在没有接到任何违规提示的情况下突然被封。 消息一出马上引发许多卖家的关注，毕竟毫无征兆的封停店铺实 …
+- [一文说清楚Tiktok开户，材料/流程/代理手把手操作教程](https://www.zhihu.com/tardis/zm/art/1938657108095632594) · `www.zhihu.com`
+  > Sep 3, 2025 · 商家要想在TikTok平台上投放广告，开户是第一步。需要准备哪些材料？开户的流程是怎样？有哪些需要注意的“踩坑点”？今天就用一篇文章带你搞定TikTok广告开户！ 一、TK广告开户的两 …
+- [跨境电商，ACCU店和POP店有什么差别？ - 知乎](https://www.zhihu.com/question/13545784642) · `www.zhihu.com`
+  > Feb 27, 2025 · 说的是 TikTok Shop 吗？TikTok Shop的ACCU和POP店区别主要有这些： ACCU：美区中资美企本土店，本质上是美国本土店，但由中国“ 美区跨境店铺 ”管理，需要美国企业执照入驻， …
+
+
+## 提取实体
+
